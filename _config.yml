@@ -1,27 +1,25 @@
-# Welcome to Amplified for Jekyll!
-#
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Awesome Site Title
-email: your-email@domain.com
+title: Crushing C.O.D.E
+email: nisrulz@gmail.com
 description: >
-  Awesome site description here
+  43 72 75 73 68 69 6e 67 20 43 2e 4f 2e 44 2e 45
 logo: "/assets/images/logo.jpg"
+about_image: "/assets/images/about.jpg"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://crushingcode.co" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
 
-name: 'Your Name'
+name: 'Nishant Srivastava'
 bio: >
-  Mea suas vituperatoribus et, virtute corpora quaestio cum ut.
-  Ne solet nostrum complectitur pri, vis ut inani populo.
+  Creative sleeper. Avid dreamer. 
 author_image: "/assets/images/author.jpg"
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: nisrulz
+github_username:  nisrulz
 
 # Build settings
 markdown: kramdown
