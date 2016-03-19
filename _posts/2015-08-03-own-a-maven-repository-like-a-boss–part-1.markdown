@@ -75,8 +75,7 @@ git remote add origin https://github.com/<username>/mavenrepo.git
 
 Note : you can get the url from Github under the settings tab when at your repository page
 
-[![Copy Github URL](/assets/images/posts/2015-08-03-own-a-maven-repository-like-a-boss–part-1/copygithuburl.png "Copy Github URL")](/assets/images/posts/2015-08-03-own-a-maven-repository-like-a-boss–part-1/copygithuburl.png)
-
+<amp-img width="392" height="166" layout="responsive" src="{{ site.baseurl }}/assets/images/posts/copygithuburl.png"></amp-img>
 
 **Step 5** :  Create 2 directories under mavenrepo, namely releases and snapshots
 

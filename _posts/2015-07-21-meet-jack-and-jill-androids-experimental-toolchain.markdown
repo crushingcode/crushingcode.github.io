@@ -36,7 +36,7 @@ Basically the Android Gradle plugin and JACK collect any .jack library files, al
 
 The complete process explained in a diagram
 
-[![Jack & Jill Application Build](/assets/images/posts/2015-07-21-meet-jack-and-jill-androids-experimental-toolchain/jacksitesdiagram.png "Jack & Jill Application Build")](/assets/images/posts/2015-07-21-meet-jack-and-jill-androids-experimental-toolchain/jacksitesdiagram.png)
+<amp-img width="673" height="612" layout="responsive" src="{{ site.baseurl }}/assets/images/posts/jacksitesdiagram.png"></amp-img>
 
 **Why all the hassle for compiler ?**
 Google believes in optimizing the whole process of  compilation of android apps. The faster that happens the better, maybe involve incremental compilation for the same(still under development)! :D
