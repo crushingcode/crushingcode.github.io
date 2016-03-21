@@ -21,16 +21,22 @@ Goto your maven repository on github and open up your releases folder via the br
 
 + ### **Step 2**
 Copy the URL in the address bar. It should look like below
-{% highlight bash %}https://github.com/<username>/<mavenrepo>/tree/master/releases{% endhighlight %}
+{% highlight bash %}
+https://github.com/<username>/<mavenrepo>/tree/master/releases
+{% endhighlight %}
 
 + ### **Step 3**
 Now replace the `tree` word in the url with `raw`
-    
-    From ```https://github.com/<username>/<mavenrepo>/tree/master/releases```
 
-    to ```https://github.com/<username>/<mavenrepo>/raw/master/releases```
+    {% highlight bash %}
+    # From 
+    https://github.com/<username>/<mavenrepo>/tree/master/releases
 
-    and copy this new url.
+    # to
+    https://github.com/<username>/<mavenrepo>/raw/master/releases
+
+    # and copy this new url.
+    {% endhighlight %}
 
 + ### **Step 4**
 Now goto your Android Project and open up your `build.gradle` file for the module where you want to include the artifact (i.e app/library).
