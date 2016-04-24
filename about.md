@@ -4,27 +4,61 @@ title: About
 permalink: /about/
 ---
 
+```json
+{
+    "_id": "43 72 75 73 68 69 6e 67 20 43 2e 4f 2e 44 2e 45",
+    "isActive": true,
+    "age": "young",
+    "eyeColor": "black",
+    "name": {
+      "first": "Nishant",
+      "last": "Srivastava"
+    },
+    "company": "Omnilabs, Inc.",
+    "email": "nisrulz@gmail.com",
+    "phone": "+91-8800616269",
+    "address": "Gurgaon, India",
+    "about": "Software Engineer (3+ yrs experience) dabbling a 
+	    lot in android sdk engineering, audio engineering and 
+	    interaction design.In between if I get time I contribute 
+	    to open source projects, blog, procrastinate about how the 
+	    world be better of with better designs.",
+    "latitude": "28.446394",
+    "longitude": "77.043777",
+    "technical-skills": ["java", "android","ui","ux",
+    	"nodejs","web developent","c"],
+    "social":
+      {
+        "twitter": "@nisrulz",
+        "facebook": "NishantRulez",
+        "google+": "+NishantSrivastava26",
+        "behance": "nisrulz",
+        "slides": "nisrulz",
+        "linkedin": "nisrulz",
+        "instagram": "nisrulz",
+        "stackoverflow": "radix",
+        "github": "nisrulz",
+        "dribbble": "nisrulz",
+        "blog" : "crushingcode.co"
+      },
+    "hobbies": ["doodle", "aesthete","dance", "soccer"],
+    "greeting": "Hello, World! You have 2.6 projects to finish..",
+    "favoriteFruit": "apple",
+    "picture": "https://avatars2.githubusercontent.com/u/2096087?v=3&s=460"
+  }
+```
+
+
 <amp-img width="600" height="450" layout="responsive" src="{{ site.baseurl }}{{site.about_image}}"></amp-img>
 
-My name is Nishant Srivastava and I am a software engineer. I specializes in android developement, dabbling into audio engineering once in a while and creating intutive/dynamic user experineces. I have been in the field for nearly 3.5 years, and have been loving every minute of it. I am a blogger, entrepreneur, designer, developer, and overall thinker..
+<a  style="text-decoration: none; color: white;" class="about-link" href="https://github.com/nisrulz" target="_blank">Github</a>
+<a  style="text-decoration: none; color: white;" class="about-link" href="http://stackoverflow.com/users/2745762/radix" target="_blank">Stackoverflow</a>
+<a  style="text-decoration: none; color: white;" class="about-link" href="https://dribbble.com/nisrulz" target="_blank">Dribbble</a>
+<a  style="text-decoration: none; color: white;" class="about-link" href="https://in.linkedin.com/in/nisrulz" target="_blank">Linkedin</a>
+<a  style="text-decoration: none; color: white;" class="about-link" href="https://www.behance.net/nisrulz" target="_blank">Behance</a>
+<a  style="text-decoration: none; color: white;" class="about-link" href="https://slides.com/nisrulz" target="_blank">Slides</a>
+<a  style="text-decoration: none; color: white;" class="about-link" href="https://twitter.com/nisrulz" target="_blank">Twitter</a>
+<a  style="text-decoration: none; color: white;" class="about-link" href="https://instagram.com/nisrulz/" target="_blank">Instagram</a>
+<a  style="text-decoration: none; color: white;" class="about-link" href="https://plus.google.com/+NishantSrivastava26" target="_blank">Google +</a>
+<a  style="text-decoration: none; color: white;" class="about-link" href="https://www.facebook.com/NishantRulez" target="_blank">Facebook</a>
 
-Simply put i am ..
-
->Split Personality. Doodler. Musicophile. Creative. Chatterbox. Ingenious.
-
-BOOM !! thats me :P
-
-## Contact
-
-If you want to get in touch with me you can email me on ***nisrulz@gmail.com*** or find me on 
-
-<ul class="list-inline">
-  <li><a class="btn btn-warning btn-xs" href="http://stackoverflow.com/users/2745762/radix" target="_blank">Stackoverflow</a></li>
-  <li><a class="btn btn-linkedin btn-xs" href="https://in.linkedin.com/in/nisrulz" target="_blank">Linkedin</a></li>
-  <li><a class="btn btn-behance btn-xs"  href="https://www.behance.net/nisrulz" target="_blank">Behance</a></li>
-  <li><a class="btn btn-slide btn-xs"  href="https://slides.com/nisrulz" target="_blank">Slides</a></li>
-  <li><a class="btn btn-info btn-xs"  href="https://twitter.com/nisrulz" target="_blank">Twitter</li>
-  <li><a class="btn btn-warning btn-xs"  href="https://instagram.com/nisrulz/" target="_blank">Instagram</a></li>
-  <li><a class="btn btn-danger btn-xs"  href="https://plus.google.com/+NishantSrivastava26" target="_blank">Google +</a></li>
-  <li><a class="btn btn-primary btn-xs"  href="https://www.facebook.com/NishantRulez" target="_blank">Facebook</a></li>
-</ul>
