@@ -18,11 +18,11 @@ permalink: /about/
     "email": "nisrulz@gmail.com",
     "phone": "+91-8800616269",
     "address": "Gurgaon, India",
-    "about": "Software Engineer (3+ yrs experience) dabbling a 
-	    lot in android sdk engineering, audio engineering and 
-	    interaction design.In between if I get time I contribute 
-	    to open source projects, blog, procrastinate about how the 
-	    world be better of with better designs.",
+    "about": "Software Engineer (3+ yrs experience) working constantly 
+    in the field of Android SDK development, Audio Engineering and 
+    Interaction Design. Avid dreamer, doodler and a caffeine dependent 
+    life-form. Keen observer of interfaces and their design. FOSS lover.
+    Recommended by 4 out of 5 people that recommend things.",
     "latitude": "28.446394",
     "longitude": "77.043777",
     "technical-skills": ["java", "android","ui","ux",
