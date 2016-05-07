@@ -46,6 +46,7 @@ You'll want to set your site's title, your name, your twitter username, etc.
 [just like any other Jekyll site](https://jekyllrb.com/docs/deployment-methods/).
 
 
+This is a fork of [amplify](https://github.com/ageitgey/amplify) project.
 
 License
 =======
