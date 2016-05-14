@@ -11,7 +11,7 @@ I am pretty sure you would agree to the fact that the usual javadoc is not a som
 
 Well look no more.... TADAAAAAAA !!
 
-Introducing **[Javadoc-Themer](http://crushingcode.byethost5.com/)** (..insert suppperrr happy smiley here).
+Introducing **[Javadoc-Themer](http://javadocthemer.crushingcode.co/)** (..insert suppperrr happy smiley here).
 
 <amp-img width="600" height="700" layout="responsive" src="/assets/images/posts/javadocthemer.png"></amp-img>
 
@@ -25,7 +25,7 @@ Here is a comparison of both
 
 <amp-img width="600" height="800" layout="responsive" src="/assets/images/posts/javadocdiff.png"></amp-img>
 
-The code for Javadoc-Themer is open sourced on [github](https://github.com/nisrulz/javadoc-themer) and you can find the webapp [here](http://crushingcode.byethost5.com/)
+The code for Javadoc-Themer is open sourced on [github](https://github.com/nisrulz/javadoc-themer) and you can find the webapp [here](http://javadocthemer.crushingcode.co/)
 
 
 Star it, fork it or simply use it to build better looking javadocs.
