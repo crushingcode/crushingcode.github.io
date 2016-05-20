@@ -1,18 +1,16 @@
 <script type="text/javascript">
-function downloadStylesheetAtOnload(href) {
-    var element = document.createElement("link");
-    element.href = href;
-    element.rel = 'stylesheet';
-    element.type = 'text/css';
-    document.body.appendChild(element);
-}
-
 function loadAfterContentLoaded(href) {
-    if (window.addEventListener)
-        window.addEventListener("load", downloadStylesheetAtOnload(href), false);
-    else if (window.attachEvent)
-        window.attachEvent("onload", downloadStylesheetAtOnload(href));
-    else window.onload = downloadStylesheetAtOnload(href);
+    var cb = function() {
+        var l = document.createElement('link');
+        l.rel = 'stylesheet';
+        l.href = href;
+        var h = document.getElementsByTagName('head')[0];
+        h.parentNode.insertBefore(l, h);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);
 }
 
 loadAfterContentLoaded('https://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
