@@ -7,26 +7,29 @@ date: 2016-07-12 02:20:36 +0530
 author: "Nishant"
 ---
 
-Developers are a different kind of people altogether. __They tend to be lazy but strive to be super efficient__ at the same time.
-A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or just making the whole flow of the process easier. 
-I have a certain knack for re-using code blocks just to avoid repeative tasks and to facilitate that I usually end up 
-converting them into an android library. The code is almost never open sourced as I use it all internally and for use by myself.
+Developers are a different kind of people altogether. __They tend to be lazy but strive to be super efficient at the same time__.
+A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or  to make the complex processes simpler.
 
-> But what if I wanted to share it with the world?
+I have a certain knack for re-using code blocks just to avoid repeative tasks and to facilitate this I usually end up converting those codeblocks into an android library.
 
-Well simplest steps to follow are as below
+> But what if I wanted to share my android library with the world?
 
-+ First of all I need to open source, which should be easy as you can push it to [Github](https://github.com/).
+Well in a nutshell the steps to follow would be as below :
 
-+ Next I need to push the android library as an maven artifact (aar/jar with a POM) to all of the/one of the below central repositories
++ First of all I need to open source the andorid library, which should be easy as you can push it to [Github](https://github.com/) or any other public git repository.
++ Next I need to push the android library as a maven artifact (aar/jar with a POM) to all of the or one of the below central repositories
 
-	- [JCenter/Bintray](https://bintray.com/) 
-	- [Maven Central](https://search.maven.org/)
-	- [Jitpack](https://www.jitpack.io/)
+	+ [JCenter/Bintray](https://bintray.com/) 
+	+ [Maven Central](https://search.maven.org/)
+	+ [Jitpack](https://www.jitpack.io/)
 
-This is first post in the series where we will cover publishing the android library to all of these central repositories one by one. 
+We will walkthrough the process of publishing to each if these central repositories in the upcoming posts of this series. 
 
-The process as it seems is not direct. So I will walk you through the steps to publish your android library to JCenter/Bintray
+For now lets lookup the steps to publish your android library to JCenter/Bintray.
+
+
+##### Creating your Android "Awesome" Library
+> You can skip to the next part if you already have this built
 
 + Create an Android project or open an existing one in [Android Studio](https://en.wikipedia.org/wiki/Android_Studio)
 + Init the project with git and also create a repo on Github for the same. Each step here onwards represent a commit and should be pushed to github.
@@ -55,7 +58,9 @@ The process as it seems is not direct. So I will walk you through the steps to p
    
    <amp-img width="320" height="80" layout="responsive" src="/assets/images/posts/uploadtojcenter/addmodule.jpeg"></amp-img>
    
-+ Once project is synced, add the required plugins to classpath in build.gradle file at root project level, as shown below
+##### Publishing your Android "Awesome" Library
+
++ Once project is synced, add the required plugins to classpath in `build.gradle` file at root project level, as shown below
 
 ```gradle
  dependencies {
@@ -138,8 +143,8 @@ bintray.apikey=<your_bintray_apikey>
 
   <amp-img width="400" height="100" layout="responsive" src="/assets/images/posts/uploadtojcenter/addtojcenter.jpeg"></amp-img>
 
-+ Your code is available 
-+ through the private repo at bintray
+##### Using your Android "Awesome" Library in other projects
++ Your code is available through the private repo at bintray
 
 ```gradle
 repositories { 
@@ -162,14 +167,13 @@ dependencies {
   compile 'com.github.nisrulz:awesomelib:1.0'
 }
 ```
-    
-+ through JCenter if you have received the mail with confirmation
+  
++ Your code is available through JCenter if you have received the mail with confirmation
 
     <amp-img width="400" height="20" layout="responsive" src="/assets/images/posts/uploadtojcenter/finalmail.jpeg"></amp-img>
 
 Few things to note when you received the final email.
-
-  + Goto your maven repo at bintray and verify that you have Jcenter under the **Linked to** section
+	+ Goto your maven repo at bintray and verify that you have Jcenter under the **Linked to** section
 
     <amp-img width="400" height="160" layout="responsive" src="/assets/images/posts/uploadtojcenter/linked.jpeg"></amp-img>
 
@@ -179,7 +183,7 @@ Few things to note when you received the final email.
 
   + Once you hit sync you would see as below. Wait for few hours for the sync to occur.
 
-    <amp-img width="400" height="200" layout="responsive" src="/assets/images/posts/uploadtojcenter/syncstatus.jpeg"></amp-img>
+    <amp-img width="400" height="150" layout="responsive" src="/assets/images/posts/uploadtojcenter/syncstatus.jpeg"></amp-img>
 
 You can use the lib now as follows
 
@@ -211,7 +215,9 @@ dependencies {
 
 The code for the AwesomeLibrary and this guide itself is open sourced abd available on [github](https://github.com/nisrulz/UploadToBintray)
 
-Star it and fork it. 
+The `bintray` and `install` plugins are also available on [github](https://github.com/nisrulz/JCenter). You may fork it and use it in your namespace.
+
+Star it or just fork it to use it.
 
 This post is first in parts of a series
 
