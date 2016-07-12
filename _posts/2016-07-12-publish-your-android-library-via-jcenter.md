@@ -213,7 +213,7 @@ dependencies {
   > + Add screenshots if possible in your readme.
 
 
-The code for the AwesomeLibrary and this guide itself is open sourced abd available on [github](https://github.com/nisrulz/UploadToBintray)
+The code for the AwesomeLibrary and this guide itself is open sourced and available on [github](https://github.com/nisrulz/UploadToBintray)
 
 The `bintray` and `install` plugins are also available on [github](https://github.com/nisrulz/JCenter). You may fork it and use it in your namespace.
 
