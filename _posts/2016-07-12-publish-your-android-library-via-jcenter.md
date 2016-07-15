@@ -173,17 +173,18 @@ dependencies {
     <amp-img width="400" height="20" layout="responsive" src="/assets/images/posts/uploadtojcenter/finalmail.jpeg"></amp-img>
 
 Few things to note when you received the final email.
-	+ Goto your maven repo at bintray and verify that you have Jcenter under the **Linked to** section
 
-    <amp-img width="400" height="160" layout="responsive" src="/assets/images/posts/uploadtojcenter/linked.jpeg"></amp-img>
++ Goto your maven repo at bintray and verify that you have Jcenter under the **Linked to** section
 
-  + Now you would also want to sync the artifact to [MavenCentral](https://search.maven.org/), for that you need to hit the **Maven Central** tab and sync
+  <amp-img width="400" height="160" layout="responsive" src="/assets/images/posts/uploadtojcenter/linked.jpeg"></amp-img>
 
-    <amp-img width="400" height="160" layout="responsive" src="/assets/images/posts/uploadtojcenter/synctomaven.jpeg"></amp-img>
++ Now you would also want to sync the artifact to [MavenCentral](https://search.maven.org/), for that you need to hit the **Maven Central** tab and sync
 
-  + Once you hit sync you would see as below. Wait for few hours for the sync to occur.
+  <amp-img width="400" height="160" layout="responsive" src="/assets/images/posts/uploadtojcenter/synctomaven.jpeg"></amp-img>
 
-    <amp-img width="400" height="150" layout="responsive" src="/assets/images/posts/uploadtojcenter/syncstatus.jpeg"></amp-img>
++ Once you hit sync you would see as below. Wait for few hours for the sync to occur.
+
+  <amp-img width="400" height="150" layout="responsive" src="/assets/images/posts/uploadtojcenter/syncstatus.jpeg"></amp-img>
 
 You can use the lib now as follows
 
