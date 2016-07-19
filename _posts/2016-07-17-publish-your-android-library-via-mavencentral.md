@@ -21,29 +21,6 @@ The first step need you to create and build your Android "Awesome" Library and c
 Assuming you already have your Android "Awesome" Library built , I will jump directly to steps involved in publishing your library to MavenCentral
 
 ##### Publishing your Android "Awesome" Library
-Add the plugin by Chris Banes to your library's `build.gradle`.
-
-> NOTE:  Below is a fork of the orginal script written by Chris Banes.
-
-```gradle
-apply from: 'https://raw.github.com/nisrulz/gradle-mvn-push/master/gradle-mvn-push.gradle'
-```
-and define the required variables in the `gradle.properties`.
-
-```
-# Properties used by gradle maven-push plugin
-VERSION_NAME=1.0.0
-VERSION_CODE=1
-POM_NAME=<Library_Name>
-POM_ARTIFACT_ID=<library_name_smallcaps>
-
-POM_DESCRIPTION=<library_description>
-POM_URL=https://github.com/<username>/<repo_name>
-POM_SCM_URL=https://github.com/<username>/<repo_name>
-POM_SCM_CONNECTION=scm:git@github.com:<username>/<repo_name>.git
-POM_SCM_DEV_CONNECTION=scm:git@github.com:<username>/<repo_name>.git
-```
-
 Setup [GPG](http://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/) and generate yourself a key.
 
 + Now list your gpg keys
@@ -82,6 +59,8 @@ Setup Sonatype account
   <amp-img width="400" height="30" layout="responsive" src="/assets/images/posts/uploadtomaven/create.jpeg"></amp-img>
 
   + Fill out the form as below
+    + Project : Community Support - Open source
+    + Issue Type : New Project
     + Group Id : com.github.github_username
     + Project URL : https://github.com/github_username/project_name
     + SCM url : https://github.com/github_username/project_name.git
@@ -109,14 +88,38 @@ Setup Sonatype account
      org.gradle.daemon=true
     ```
 
+> IMPORTANT: Steps for setting up your sonatype account up till here are required only once. The steps after these are required whenever publishing your android library, even if its a new one. Just remember to configure it well in your gradle.properties
 
-1. Run in terminal to publish your artifacts
+##### Add the plugin by Chris Banes to your library's `build.gradle`.
+
+> NOTE:  Below is a [fork](https://github.com/nisrulz/gradle-mvn-push) of the [original script](https://github.com/chrisbanes/gradle-mvn-push) written by Chris Banes.
+
+```gradle
+apply from: 'https://raw.github.com/nisrulz/gradle-mvn-push/master/gradle-mvn-push.gradle'
+```
+and define the required variables in the `gradle.properties`.
+
+```
+# Properties used by gradle maven-push plugin
+VERSION_NAME=1.0.0
+VERSION_CODE=1
+POM_NAME=<Library_Name>
+POM_ARTIFACT_ID=<library_name_smallcaps>
+
+POM_DESCRIPTION=<library_description>
+POM_URL=https://github.com/<username>/<repo_name>
+POM_SCM_URL=https://github.com/<username>/<repo_name>
+POM_SCM_CONNECTION=scm:git@github.com:<username>/<repo_name>.git
+POM_SCM_DEV_CONNECTION=scm:git@github.com:<username>/<repo_name>.git
+```
+
++ Run in terminal to publish your artifacts
 
   ```bash
   ./gradlew build clean uploadArchive
   ```
 
-1. Login into [Nexus Repository Console](https://oss.sonatype.org/#stagingRepositories) and search for your package name.
++ Login into [Nexus Repository Console](https://oss.sonatype.org/#stagingRepositories) and search for your package name.
 
   <amp-img width="400" height="200" layout="responsive" src="/assets/images/posts/uploadtomaven/nexusrepo.jpeg"></amp-img>
 
@@ -129,7 +132,6 @@ Next
 1. Release the closed artifact (keep drop artifact selected).[wait]
 
 1. Wait for some hours before everything gets synced with MavenCentral.
-
 
 ##### Using your Android "Awesome" Library in other projects
 
