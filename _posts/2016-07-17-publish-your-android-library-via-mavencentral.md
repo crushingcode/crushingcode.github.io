@@ -9,7 +9,7 @@ author: "Nishant"
 
 If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world. Android artifacts can also be hosted on MavenCentral in a similar manner. Here I am going to document the process to publish an android library to MavenCentral, as I followed it.
 
-This post is second in parts of a series. If you didnot read the others in series , go have a look 
+This post is second in parts of a series. If you didnot read the others in series , go have a look
 
 1. [Guide to publishing your Android Library via Jcenter/Bintray](/publish-your-android-library-via-jcenter/)
 1. [Guide to publishing your Android Library via MavenCentral](#)
@@ -19,7 +19,7 @@ This post is second in parts of a series. If you didnot read the others in serie
 The first step need you to create and build your Android "Awesome" Library and can be read in the [first post of this series here](/publish-your-android-library-via-jcenter/). If you have not done so , then please go ahead and read it up.
 
 Assuming you already have your Android "Awesome" Library built , I will jump directly to steps involved in publishing your library to MavenCentral
-   
+
 ##### Publishing your Android "Awesome" Library
 Add the plugin by Chris Banes to your library's `build.gradle`.
 
@@ -43,9 +43,9 @@ POM_SCM_URL=https://github.com/<username>/<repo_name>
 POM_SCM_CONNECTION=scm:git@github.com:<username>/<repo_name>.git
 POM_SCM_DEV_CONNECTION=scm:git@github.com:<username>/<repo_name>.git
 ```
-  
+
 Setup [GPG](http://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/) and generate yourself a key.
-  
+
 + Now list your gpg keys
 
   ```bash
@@ -64,14 +64,23 @@ Setup [GPG](http://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command
 + To ensure your keys were published
 
   ```bash
-  $ gpg --keyserver hkp://pgp.mit.edu --search-keys 
+  $ gpg --keyserver hkp://pgp.mit.edu --search-keys
   username@example.com # Use your email
   ```
-  
+
 Setup Sonatype account
 
   + Create a JIRA account on [Sonatype](https://issues.sonatype.org/secure/Signup!default.jspa)
+
+  <amp-img width="400" height="350" layout="responsive" src="/assets/images/posts/uploadtomaven/signup.jpeg"></amp-img>
+
+  and Login
+
+  <amp-img width="400" height="180" layout="responsive" src="/assets/images/posts/uploadtomaven/login.jpeg"></amp-img>
+
   + Once you are logged in, [create a new issue](https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&pid=10134)
+  <amp-img width="400" height="30" layout="responsive" src="/assets/images/posts/uploadtomaven/create.jpeg"></amp-img>
+
   + Fill out the form as below
     + Group Id : com.github.github_username
     + Project URL : https://github.com/github_username/project_name
@@ -79,22 +88,28 @@ Setup Sonatype account
     + Username : sonatype_username
     + Already Synced to Central : No
 
-  + Next hit submit. After you submit, it can take up to 2 business days to process your issue. Then you will receive a confirmation that your configuration has been prepared and you can publish your library.
+    <amp-img width="400" height="120" layout="responsive" src="/assets/images/posts/uploadtomaven/createissue.jpeg"></amp-img>
+
+    <amp-img width="400" height="200" layout="responsive" src="/assets/images/posts/uploadtomaven/createissue2.jpeg"></amp-img>
+
+  + Next hit **Create**. After that, it can take up to 2 business days to process your issue. Then you will receive a confirmation that your configuration has been prepared and you can publish your library.
 
     > **IMPORTANT** : Do not deploy until after you have received an e-mail notice indicating that the ticket is Resolved.
-    
+
+    <amp-img width="400" height="200" layout="responsive" src="/assets/images/posts/uploadtomaven/approved.jpeg"></amp-img>
+
   + Update `gradle.properties` on your local machine  at location `~/.gradle/gradle.properties` and include
 
     ```
      NEXUS_USERNAME=sonatype_username
      NEXUS_PASSWORD=sonatype_password
-     signing.keyId=gpg_key_id 
+     signing.keyId=gpg_key_id
      signing.password=gpg_password
      signing.secretKeyRingFile=/Users/username/.gnupg/secring.gpg
      org.gradle.daemon=true
     ```
-    
-  
+
+
 1. Run in terminal to publish your artifacts
 
   ```bash
@@ -102,6 +117,12 @@ Setup Sonatype account
   ```
 
 1. Login into [Nexus Repository Console](https://oss.sonatype.org/#stagingRepositories) and search for your package name.
+
+  <amp-img width="400" height="200" layout="responsive" src="/assets/images/posts/uploadtomaven/nexusrepo.jpeg"></amp-img>
+
+Next
+
+<amp-img width="400" height="100" layout="responsive" src="/assets/images/posts/uploadtomaven/close.jpeg"></amp-img>
 
 1. Close the staged artifact.[wait]
 
@@ -111,7 +132,7 @@ Setup Sonatype account
 
 
 ##### Using your Android "Awesome" Library in other projects
-  
+
 Your code is available through MavenCentral if you have received the mail with confirmation
 
 You can use the lib now as follows
@@ -130,7 +151,7 @@ dependencies {
   }
 ```
 
-+ Let the world know of your **AwesomeLib** 
++ Let the world know of your **AwesomeLib**
 
   > + Add a readme that explains how to integrate and use your Awesome library
   > + Add a license block as in this repo
