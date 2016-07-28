@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Crushing C.O.D.E</title>
+    <link>http://www.crushingcode.co/tags/tools/</link>
+    <description>Recent content in Tools on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Tue, 21 Jul 2015 10:54:24 +0200</lastBuildDate>
+    <atom:link href="http://www.crushingcode.co/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
+      <link>http://www.crushingcode.co/meet-jack-and-jill-androids-experimental-toolchain/</link>
+      <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
+      
+      <guid>http://www.crushingcode.co/meet-jack-and-jill-androids-experimental-toolchain/</guid>
+      <description>&lt;p&gt;JACK &amp;amp; JILL are part of the new tool chain for android and in the words of &lt;a href=&#34;http://android-developers.blogspot.co.uk/2014/12/hello-world-meet-our-new-experimental.html&#34;&gt;Android Developer Blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;they are designed to improve build times and simplify development by reducing dependencies on other tools&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In case you are curious, &lt;strong&gt;JACK&lt;/strong&gt; stands for &lt;strong&gt;Java Android Compiler Kit&lt;/strong&gt; and &lt;strong&gt;JILL&lt;/strong&gt; stands for  &lt;strong&gt;Jack Intermediate Library Linker&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Woa ..woa..wooaaaa ..thats sounds too technical ..lets slow this down, right.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JACK&lt;/strong&gt; &amp;amp; &lt;strong&gt;JILL&lt;/strong&gt; were released as an experimental tool chain in the Android SDK  21.1.1 and recently got minor bug fixes in the recent release of Android SDK 21.1.2&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So what exactly are they for  ?&lt;/strong&gt;
+&lt;strong&gt;JACK&lt;/strong&gt; basically compiles your Java code directly to a .dex Dalvik Executable.
+&lt;strong&gt;JILL&lt;/strong&gt; on the other hand translates any libraries you are referencing to a new Jack library file (.jack).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Whats the difference ?&lt;/strong&gt;
+Glad you asked :)
+The usual process of android compilation process is
+1. Use the standard javac compiler to convert the source code to Java bytecode
+2. Feed this bytecode to dex compiler to get the Dalvik bytecode&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JACK&lt;/strong&gt; eliminates the conversion to Java bytecode step and directly converts source code to Dalvik bytecode. During the same time it also handles any requested code minification (shrinking and/or obfuscation), previously handled by Proguard and then perform repackaging too.&lt;/p&gt;
+
+&lt;p&gt;Now all this time, &lt;strong&gt;JACK&lt;/strong&gt; was working on you source code, right!
+What if you have a library being referenced in the form of say a JAR?
+&lt;strong&gt;JILL&lt;/strong&gt; takes care of that, by converting all libraries to Jack Library File (.jack) which can easily be merged by JACK during compilation into object code.
+Basically the Android Gradle plugin and JACK collect any .jack library files, along with your source code, and compiles them into a set of dex files and further assembles them into an APK.&lt;/p&gt;
+
+&lt;p&gt;The complete process explained in a diagram&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/jacksitesdiagram.png&#34; alt=&#34;jacksitesdiagram&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why all the hassle for compiler ?&lt;/strong&gt;
+Google believes in optimizing the whole process of  compilation of android apps. The faster that happens the better, maybe involve incremental compilation for the same(still under development)! :D
+Also due to the Oracle-Google dispute over using java , Google probably wants to move away from using javac and have its own compiler in place to convert source code to dalvik bytecode.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How do you use the tool chain in your apps ?&lt;/strong&gt;
+Good question! At the moment JACK &amp;amp; JILL are both in experimental phase.
+So you specifically need to enable them in your build.gradle i.e. you need to set &lt;code&gt;useJack = true&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;android {
+    ...
+     buildToolsRevision &#39;24.0.1&#39;
+     defaultConfig {
+         // Enable the experimental Jack build tools.
+         useJack = true
+         }
+    ...
+ }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tools.android.com/tech-docs/jackandjill&#34;&gt;More Info at Android Tools Project Site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Downside ?&lt;/strong&gt;
+As of now these support only Java 7 i.e no support for Java 8 :(
+No Annotation processing :(&lt;/p&gt;
+
+&lt;p&gt;Thats it for now.
+Any questions are always welcome :D&lt;/p&gt;
+
+&lt;p&gt;References&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://android-developers.blogspot.co.uk/2014/12/hello-world-meet-our-new-experimental.html&#34;&gt;Android Developer Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tools.android.com/tech-docs/jackandjill&#34;&gt;Android Tools Project Site&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

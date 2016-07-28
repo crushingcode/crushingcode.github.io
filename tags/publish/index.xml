@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publish on Crushing C.O.D.E</title>
+    <link>http://www.crushingcode.co/tags/publish/</link>
+    <description>Recent content in Publish on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Sun, 17 Jul 2016 10:54:24 +0200</lastBuildDate>
+    <atom:link href="http://www.crushingcode.co/tags/publish/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Guide to publishing your Android Library via MavenCentral</title>
+      <link>http://www.crushingcode.co/publish-your-android-library-via-mavencentral/</link>
+      <pubDate>Sun, 17 Jul 2016 10:54:24 +0200</pubDate>
+      
+      <guid>http://www.crushingcode.co/publish-your-android-library-via-mavencentral/</guid>
+      <description>
+
+&lt;p&gt;If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world. Android artifacts can also be hosted on MavenCentral in a similar manner. Here I am going to document the process to publish an android library to MavenCentral, as I followed it.&lt;/p&gt;
+
+&lt;p&gt;This post is second in parts of a series. If you didnot read the others in series , go have a look&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.crushingcode.co/publish-your-android-library-via-jcenter/&#34;&gt;Guide to publishing your Android Library via Jcenter/Bintray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#&#34;&gt;Guide to publishing your Android Library via MavenCentral&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Guide to publishing your Android Library via JitPack (..todo)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first step need you to create and build your Android &amp;ldquo;Awesome&amp;rdquo; Library and can be read in the &lt;a href=&#34;http://www.crushingcode.co/publish-your-android-library-via-jcenter/&#34;&gt;first post of this series here&lt;/a&gt;. If you have not done so , then please go ahead and read it up.&lt;/p&gt;
+
+&lt;p&gt;Assuming you already have your Android &amp;ldquo;Awesome&amp;rdquo; Library built , I will jump directly to steps involved in publishing your library to MavenCentral&lt;/p&gt;
+
+&lt;h5 id=&#34;publishing-your-android-awesome-library:2b50d16037b146983527a8651ff29e32&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+
+&lt;p&gt;Setup &lt;a href=&#34;http://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/&#34;&gt;GPG&lt;/a&gt; and generate yourself a key.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Now list your gpg keys&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ gpg --list-keys
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;There the first line will be like pub XXXXX/YYYYYYYY &lt;date&gt;. Remember that ‘YYYYYYYY’ part, it’s you key ID.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Next, publish your keys&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ gpg --keyserver hkp://keyserver.ubuntu.com --send-keys YYYYYYYY
+  $ gpg --keyserver hkp://pgp.mit.edu --send-keys YYYYYYYY
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To ensure your keys were published&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ gpg --keyserver hkp://pgp.mit.edu --search-keys
+  username@example.com # Use your email
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setup Sonatype account&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a JIRA account on &lt;a href=&#34;https://issues.sonatype.org/secure/Signup!default.jspa&#34;&gt;Sonatype&lt;/a&gt;
+&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtomaven/signup.jpeg&#34; alt=&#34;signup&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and Login
+  &lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtomaven/login.jpeg&#34; alt=&#34;login&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Once you are logged in, &lt;a href=&#34;https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134&#34;&gt;create a new issue&lt;/a&gt;
+&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtomaven/create.jpeg&#34; alt=&#34;create&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Fill out the form as below&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Project : Community Support - Open source&lt;/li&gt;
+&lt;li&gt;Issue Type : New Project&lt;/li&gt;
+&lt;li&gt;Group Id : com.github.github_username&lt;/li&gt;
+&lt;li&gt;Project URL : &lt;a href=&#34;https://github.com/github_username/project_name&#34;&gt;https://github.com/github_username/project_name&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SCM url : &lt;a href=&#34;https://github.com/github_username/project_name.git&#34;&gt;https://github.com/github_username/project_name.git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Username : sonatype_username&lt;/li&gt;
+&lt;li&gt;Already Synced to Central : No&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtomaven/createissue.jpeg&#34; alt=&#34;createissue&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtomaven/createissue2.jpeg&#34; alt=&#34;createissue2&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Next hit &lt;strong&gt;Create&lt;/strong&gt;. After that, it can take up to 2 business days to process your issue. Then you will receive a confirmation that your configuration has been prepared and you can publish your library.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt; : Do not deploy until after you have received an e-mail notice indicating that the ticket is Resolved.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtomaven/approved.jpeg&#34; alt=&#34;approved&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Update &lt;code&gt;gradle.properties&lt;/code&gt; on your local machine  at location &lt;code&gt;~/.gradle/gradle.properties&lt;/code&gt; and include&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; NEXUS_USERNAME=sonatype_username
+ NEXUS_PASSWORD=sonatype_password
+ signing.keyId=gpg_key_id
+ signing.password=gpg_password
+ signing.secretKeyRingFile=/Users/username/.gnupg/secring.gpg
+ org.gradle.daemon=true
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;IMPORTANT: Steps for setting up your sonatype account up till here are required only once. The steps after these are required whenever publishing your android library, even if its a new one. Just remember to configure it well in your gradle.properties&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&#34;add-the-plugin-by-chris-banes-to-your-library-s-build-gradle:2b50d16037b146983527a8651ff29e32&#34;&gt;Add the plugin by Chris Banes to your library&amp;rsquo;s &lt;code&gt;build.gradle&lt;/code&gt;.&lt;/h5&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NOTE:  Below is a &lt;a href=&#34;https://github.com/nisrulz/gradle-mvn-push&#34;&gt;fork&lt;/a&gt; of the &lt;a href=&#34;https://github.com/chrisbanes/gradle-mvn-push&#34;&gt;original script&lt;/a&gt; written by Chris Banes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;apply from: &#39;https://raw.github.com/nisrulz/gradle-mvn-push/master/gradle-mvn-push.gradle&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and define the required variables in the &lt;code&gt;gradle.properties&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Properties used by gradle maven-push plugin
+VERSION_NAME=1.0.0
+VERSION_CODE=1
+POM_NAME=&amp;lt;Library_Name&amp;gt;
+POM_ARTIFACT_ID=&amp;lt;library_name_smallcaps&amp;gt;
+
+POM_DESCRIPTION=&amp;lt;library_description&amp;gt;
+POM_URL=https://github.com/&amp;lt;username&amp;gt;/&amp;lt;repo_name&amp;gt;
+POM_SCM_URL=https://github.com/&amp;lt;username&amp;gt;/&amp;lt;repo_name&amp;gt;
+POM_SCM_CONNECTION=scm:git@github.com:&amp;lt;username&amp;gt;/&amp;lt;repo_name&amp;gt;.git
+POM_SCM_DEV_CONNECTION=scm:git@github.com:&amp;lt;username&amp;gt;/&amp;lt;repo_name&amp;gt;.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run in terminal to publish your artifacts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  ./gradlew build clean uploadArchive
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Login into &lt;a href=&#34;https://oss.sonatype.org/#stagingRepositories&#34;&gt;Nexus Repository Console&lt;/a&gt; and search for your package name.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtomaven/nexusrepo.jpeg&#34; alt=&#34;nexusrepo&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtomaven/close.jpeg&#34; alt=&#34;close&#34; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Close the staged artifact.[wait]&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Release the closed artifact (keep drop artifact selected).[wait]&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Wait for some hours before everything gets synced with MavenCentral.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:2b50d16037b146983527a8651ff29e32&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+
+&lt;p&gt;Your code is available through MavenCentral if you have received the mail with confirmation&lt;/p&gt;
+
+&lt;p&gt;You can use the lib now as follows&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;dependencies {
+    compile &#39;&amp;lt;group_name&amp;gt;:&amp;lt;artifact_name&amp;gt;:1.0&#39;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;i.e for the sample lib in this repo , &lt;code&gt;awesomelib&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;dependencies {
+      compile &#39;com.github.nisrulz:awesomelib:1.0&#39;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Let the world know of your &lt;strong&gt;AwesomeLib&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a readme that explains how to integrate and use your Awesome library&lt;/li&gt;
+&lt;li&gt;Add a license block as in this repo&lt;/li&gt;
+&lt;li&gt;Also include a badge of MavenCentral in your readme&lt;/li&gt;
+&lt;li&gt;Promote your lib on social media so that others can know about it.&lt;/li&gt;
+&lt;li&gt;Always add a working sample app in your project that demonstrates your library in use.&lt;/li&gt;
+&lt;li&gt;Add screenshots if possible in your readme.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The code for the AwesomeLibrary and this guide itself is open sourced and available on &lt;a href=&#34;https://github.com/nisrulz/UploadToMavenCentral&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Star it or just fork it to use it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Guide to publishing your Android Library via Jcenter/Bintray</title>
+      <link>http://www.crushingcode.co/publish-your-android-library-via-jcenter/</link>
+      <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
+      
+      <guid>http://www.crushingcode.co/publish-your-android-library-via-jcenter/</guid>
+      <description>
+
+&lt;p&gt;Developers are a different kind of people altogether. &lt;strong&gt;They tend to be lazy but strive to be super efficient at the same time&lt;/strong&gt;.
+A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or  to make the complex processes simpler.&lt;/p&gt;
+
+&lt;p&gt;I have a certain knack for re-using code blocks just to avoid repeative tasks and to facilitate this I usually end up converting those codeblocks into an android library.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;But what if I wanted to share my android library with the world?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Well in a nutshell the steps to follow would be as below :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;First of all I need to open source the andorid library, which should be easy as you can push it to &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; or any other public git repository.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Next I need to push the android library as a maven artifact (aar/jar with a POM) to all of the or one of the below central repositories&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bintray.com/&#34;&gt;JCenter/Bintray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://search.maven.org/&#34;&gt;Maven Central&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jitpack.io/&#34;&gt;Jitpack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will walkthrough the process of publishing to each if these central repositories in the upcoming posts of this series.&lt;/p&gt;
+
+&lt;p&gt;For now lets lookup the steps to publish your android library to JCenter/Bintray.&lt;/p&gt;
+
+&lt;h5 id=&#34;creating-your-android-awesome-library:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Creating your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You can skip to the next part if you already have this built&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create an Android project or open an existing one in &lt;a href=&#34;https://en.wikipedia.org/wiki/Android_Studio&#34;&gt;Android Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Init the project with git and also create a repo on Github for the same. Each step here onwards represent a commit and should be pushed to github.&lt;/li&gt;
+&lt;li&gt;Create and add a new module and choose &lt;code&gt;Android Library&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Goto &lt;code&gt;File&amp;gt;New&amp;gt;New Module..&lt;/code&gt; and select &lt;code&gt;Android Library&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/newmodule.jpeg&#34; alt=&#34;newmodule&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/newlib.jpeg&#34; alt=&#34;newlib&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/newlibinfo.jpeg&#34; alt=&#34;newlibinfo&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Implement your library code inside the library module you created in the last step.&lt;/li&gt;
+&lt;li&gt;Next add the library module as a dependency to the app module.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Goto &lt;code&gt;File&amp;gt;Project Structure..&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Select &lt;code&gt;app&lt;/code&gt; module in the sidebar&lt;/li&gt;
+&lt;li&gt;Select the &lt;code&gt;Dependencies&lt;/code&gt; tab&lt;/li&gt;
+&lt;li&gt;At the bottom is a &lt;code&gt;+&lt;/code&gt; icon, click that and select &lt;code&gt;Module dependency&lt;/code&gt; and select your &lt;code&gt;library&lt;/code&gt; module.&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;apply&lt;/code&gt; or &lt;code&gt;ok&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/project.jpeg&#34; alt=&#34;project&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/prjstruct.jpeg&#34; alt=&#34;prjstruct&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/addmodule.jpeg&#34; alt=&#34;addmodule&#34; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;publishing-your-android-awesome-library:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Once project is synced, add the required plugins to classpath in &lt;code&gt;build.gradle&lt;/code&gt; file at root project level, as shown below&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt; dependencies {
+    classpath &#39;com.android.tools.build:gradle:2.1.2&#39;
+    ..
+    ..
+    // Required plugins added to classpath to facilitate pushing to Jcenter/Bintray
+    classpath &#39;com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4&#39;
+    classpath &#39;com.github.dcendents:android-maven-gradle-plugin:1.3&#39;
+    ..
+   }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Next, apply the &lt;code&gt;bintray&lt;/code&gt; and &lt;code&gt;install&lt;/code&gt; plugins at the bottom of build.gradle file at library module level. Also add the ext variable with required information as shown below&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt; apply plugin: &#39;com.android.library&#39;
+
+ ext {
+   bintrayRepo = &#39;maven&#39;
+   bintrayName = &#39;awesomelib&#39;   // Has to be same as your library module name
+
+   publishedGroupId = &#39;com.github.nisrulz&#39;
+   libraryName = &#39;AwesomeLib&#39;
+   artifact = &#39;awesomelib&#39;     // Has to be same as your library module name
+
+   libraryDescription = &#39;Android Library to make any text into Toast with Awesome prepended to the text&#39;
+
+   // Your github repo link
+   siteUrl = &#39;https://github.com/nisrulz/UploadToBintray&#39;
+   gitUrl = &#39;https://github.com/nisrulz/UploadToBintray.git&#39;
+
+   libraryVersion = &#39;1.0&#39;
+
+   developerId = &#39;nisrulz&#39;
+   developerName = &#39;Nishant Srivastava&#39;
+   developerEmail = &#39;nisrulz@gmail.com&#39;
+
+   licenseName = &#39;The Apache Software License, Version 2.0&#39;
+   licenseUrl = &#39;http://www.apache.org/licenses/LICENSE-2.0.txt&#39;
+   allLicenses = [&amp;quot;Apache-2.0&amp;quot;]
+ }
+
+ ..
+ ..
+
+ // Place it at the end of the file
+ apply from: &#39;https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle&#39;
+ apply from: &#39;https://raw.githubusercontent.com/nisrulz/JCenter/master/bintrayv1.gradle&#39;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Edit your &lt;code&gt;local.properties&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;bintray.user=&amp;lt;your_bintray_username&amp;gt;
+bintray.apikey=&amp;lt;your_bintray_apikey&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Now lets setup Bintray before we can push our artifact to it.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Register for an account on &lt;a href=&#34;https://bintray.com/&#34;&gt;bintray.com&lt;/a&gt; and click the activation email they send you.&lt;/li&gt;
+&lt;li&gt;Add a new Maven repository and click &lt;strong&gt;Create New Package&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You should now have a maven repository. For instance:
+&lt;code&gt;https://bintray.com/nisrulz/maven&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now once you have your maven repo setup , click on &lt;strong&gt;Edit&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/edit.jpeg&#34; alt=&#34;edit&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and see that you have selected the option &lt;code&gt;GPG sign uploaded files using Bintray&#39;s public/private key pair.&lt;/code&gt; and then click &lt;strong&gt;Update&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/gpg.jpeg&#34; alt=&#34;gpg&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Once everything is configured, run the below in your terminal in your root of the project&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;./gradlew install bintrayUpload
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Now once your project is up on bintray, simply hit &lt;strong&gt;Add to Jcenter&lt;/strong&gt; button to sync with JCenter.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/addtojcenter.jpeg&#34; alt=&#34;addtojcenter&#34; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Your code is available through the private repo at bintray&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;repositories {
+   jcenter()
+   maven { url &#39;https://dl.bintray.com/&amp;lt;bintray_username&amp;gt;/maven&#39; }
+}
+dependencies {
+  compile &#39;com.github.&amp;lt;bintray_username&amp;gt;:&amp;lt;library_module&amp;gt;:1.0&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;i.e for the sample lib in this repo , &lt;code&gt;awesomelib&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;repositories {
+   jcenter()
+   maven { url &#39;https://dl.bintray.com/nisrulz/maven&#39; }
+}
+dependencies {
+  compile &#39;com.github.nisrulz:awesomelib:1.0&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Your code is available through JCenter if you have received the mail with confirmation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/finalmail.jpeg&#34; alt=&#34;finalmail&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Few things to note when you received the final email.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Goto your maven repo at bintray and verify that you have Jcenter under the &lt;strong&gt;Linked to&lt;/strong&gt; section&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/linked.jpeg&#34; alt=&#34;linked&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now you would also want to sync the artifact to &lt;a href=&#34;https://search.maven.org/&#34;&gt;MavenCentral&lt;/a&gt;, for that you need to hit the &lt;strong&gt;Maven Central&lt;/strong&gt; tab and sync&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/synctomaven.jpeg&#34; alt=&#34;synctomaven&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Once you hit sync you would see as below. Wait for few hours for the sync to occur.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/syncstatus.jpeg&#34; alt=&#34;syncstatus&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can use the lib now as follows&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;dependencies {
+    compile &#39;com.github.&amp;lt;bintray_username&amp;gt;:&amp;lt;library_module&amp;gt;:1.0&#39;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;i.e for the sample lib in this repo , &lt;code&gt;awesomelib&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;dependencies {
+      compile &#39;com.github.nisrulz:awesomelib:1.0&#39;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Let the world know of your &lt;strong&gt;AwesomeLib&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a readme that explains how to integrate and use your Awesome library&lt;/li&gt;
+&lt;li&gt;Add a license block as in this repo&lt;/li&gt;
+&lt;li&gt;Also include the Bintray badge provided by Bintray in your readme
+&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/badge.jpeg&#34; alt=&#34;badge&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Promote your lib on social media so that others can know about it.&lt;/li&gt;
+&lt;li&gt;Always add a working sample app in your project that demonstrates your library in use.&lt;/li&gt;
+&lt;li&gt;Add screenshots if possible in your readme.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The code for the AwesomeLibrary and this guide itself is open sourced and available on &lt;a href=&#34;https://github.com/nisrulz/UploadToBintray&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;bintray&lt;/code&gt; and &lt;code&gt;install&lt;/code&gt; plugins are also available on &lt;a href=&#34;https://github.com/nisrulz/JCenter&#34;&gt;github&lt;/a&gt;. You may fork it and use it in your namespace.&lt;/p&gt;
+
+&lt;p&gt;Star it or just fork it to use it.&lt;/p&gt;
+
+&lt;p&gt;This post is first in parts of a series&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#&#34;&gt;Guide to publishing your Android Library via Jcenter/Bintray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Guide to publishing your Android Library via MavenCentral (..todo)&lt;/li&gt;
+&lt;li&gt;Guide to publishing your Android Library via JitPack (..todo)&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

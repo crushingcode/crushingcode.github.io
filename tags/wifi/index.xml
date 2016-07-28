@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wifi on Crushing C.O.D.E</title>
+    <link>http://www.crushingcode.co/tags/wifi/</link>
+    <description>Recent content in Wifi on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Thu, 09 Jul 2015 10:54:24 +0200</lastBuildDate>
+    <atom:link href="http://www.crushingcode.co/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Life without wires : ADB over WiFi</title>
+      <link>http://www.crushingcode.co/life-without-wires-adb-over-wifi/</link>
+      <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
+      
+      <guid>http://www.crushingcode.co/life-without-wires-adb-over-wifi/</guid>
+      <description>
+
+&lt;p&gt;Tired of being tied to your laptop/desktop while debugging your android apps ?
+Well let me break it to you – You are NOT the FIRST person to do it.
+Its a common practice to tether your device via a USB cable to the host machine and debug android apps.Well here is something for you that is going to set you free. Yes literally. You can run adb over WiFi (period)&lt;/p&gt;
+
+&lt;p&gt;Yes , you read that right! Thats the secret solution(…ok not secret.. :p ) and setting it up is a piece of cake :P
+Most people ask me why another post on this, well if you googled it you would come across a lot of information regarding the same but most of it is outdated or you would be using hit-and-trial method to get it working. I did some research on my own and found a way to get it working in the below steps.
+I will walk you through the process of doing so in the most easiest way.
+All you need is a USB cable (for the initial setup) and have your laptop/desktop and the devices connected to the same network (work on 99% cases)&lt;/p&gt;
+
+&lt;h2 id=&#34;step-1:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 1&lt;/h2&gt;
+
+&lt;p&gt;Connect your mobile device via USB and make sure usb debugging is on (you can do that via the developer options in your device).
+Also connect to your Wifi.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-2:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 2&lt;/h2&gt;
+
+&lt;p&gt;Open up the Terminal , provided you have the adb set in your PATH, type the following&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;adb devices
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;this would list your device as connected over the USB&lt;/p&gt;
+
+&lt;h2 id=&#34;step-3:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 3&lt;/h2&gt;
+
+&lt;p&gt;To enable the wifi-debug-mode&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;adb tcpip 5555
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-4:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 4&lt;/h2&gt;
+
+&lt;p&gt;Get your DEVICE-IP-ADDRESS&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;adb shell netcfg | grep &#39;wlan0&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you will get something like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;wlan0 UP 192.168.2.23/24 0x00001043 cc:c3:ea:ef:12:11
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where 192.168.2.23 is your DEVICE-IP-ADDRESS&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OR&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;you can simply on your device , go to&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Settings &amp;gt; About phone &amp;gt; Status&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;to view the IP address of your phone&lt;/p&gt;
+
+&lt;h2 id=&#34;step-5:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 5&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;IMPORTANT : Remove USB cable&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;step-6:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 6&lt;/h2&gt;
+
+&lt;p&gt;Connect your device by typing in the below in the terminal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;adb connect DEVICE-IP-ADDRESS:5555
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-7:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 7&lt;/h2&gt;
+
+&lt;p&gt;To confirm the connection just made, type in the terminal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;adb devices
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;this should list your device as connected over the particular DEVICE-IP-ADDRESS
+And you are done. Run/Debug your apps from your IDE in wireless mode.
+Let the magic of wire-free-life begin.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-8:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 8&lt;/h2&gt;
+
+&lt;p&gt;Did I mention that to switch back to USB mode you simply type in the below command in terminal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;adb usb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Things to Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;If you move into a different workspace and change WiFi networks, you simply repeat steps 5 and 6 . The steps 1 to 5 are used to set your device into wifi-debug mode.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The device will exit the wifi-debug mode when it restarts. So if your device restarts unfortunately, you will have to start over (from steps 1 to 6). So if you keep an eye on your battery and do not restart your device, you can live without cables for weeks.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt;
+&lt;a href=&#34;http://developer.android.com/tools/help/adb.html&#34;&gt;Info about ADB&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
