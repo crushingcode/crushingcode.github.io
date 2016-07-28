@@ -5,6 +5,7 @@ paginate = 5
 DisqusShortname = "nisrulz"
 Copyright = "All rights reserved - 2015"
 canonifyurls = true
+theme = "casper"
 
 [[menu.main]]
   identifier = "blog"
