@@ -2,48 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.crushingcode.co/</loc>
+    <loc>http://crushingcode.github.io/</loc>
     <lastmod>2016-07-17T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.crushingcode.co/publish-your-android-library-via-mavencentral/</loc>
+    <loc>http://crushingcode.github.io/publish-your-android-library-via-mavencentral/</loc>
     <lastmod>2016-07-17T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.crushingcode.co/publish-your-android-library-via-jcenter/</loc>
+    <loc>http://crushingcode.github.io/publish-your-android-library-via-jcenter/</loc>
     <lastmod>2016-07-12T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.crushingcode.co/a-splash-of-colors-to-your-boring-javadocs/</loc>
+    <loc>http://crushingcode.github.io/a-splash-of-colors-to-your-boring-javadocs/</loc>
     <lastmod>2016-05-15T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.crushingcode.co/the-curious-case-of-dependency-conflicts/</loc>
+    <loc>http://crushingcode.github.io/the-curious-case-of-dependency-conflicts/</loc>
     <lastmod>2016-05-02T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.crushingcode.co/own-a-maven-repository-like-a-bosspart-2/</loc>
+    <loc>http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-2/</loc>
     <lastmod>2016-02-16T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.crushingcode.co/own-a-maven-repository-like-a-bosspart-1/</loc>
+    <loc>http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-1/</loc>
     <lastmod>2015-08-03T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.crushingcode.co/meet-jack-and-jill-androids-experimental-toolchain/</loc>
+    <loc>http://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</loc>
     <lastmod>2015-07-21T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.crushingcode.co/life-without-wires-adb-over-wifi/</loc>
+    <loc>http://crushingcode.github.io/life-without-wires-adb-over-wifi/</loc>
     <lastmod>2015-07-09T10:54:24+02:00</lastmod>
   </url>
   

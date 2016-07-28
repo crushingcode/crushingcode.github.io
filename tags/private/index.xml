@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Private on Crushing C.O.D.E</title>
-    <link>http://www.crushingcode.co/tags/private/</link>
+    <link>http://crushingcode.github.io/tags/private/</link>
     <description>Recent content in Private on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Mon, 03 Aug 2015 10:54:24 +0200</lastBuildDate>
-    <atom:link href="http://www.crushingcode.co/tags/private/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://crushingcode.github.io/tags/private/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Own a maven repository, like a boss! – Part 1</title>
-      <link>http://www.crushingcode.co/own-a-maven-repository-like-a-bosspart-1/</link>
+      <link>http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-1/</link>
       <pubDate>Mon, 03 Aug 2015 10:54:24 +0200</pubDate>
       
-      <guid>http://www.crushingcode.co/own-a-maven-repository-like-a-bosspart-1/</guid>
+      <guid>http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-1/</guid>
       <description>
 
 &lt;p&gt;Have you ever thought how the central repository works like Maven Central or JCenter?
@@ -84,7 +84,7 @@ Lets just say its just another method to host and publish your artifacts without
 &lt;p&gt;Note : you can get the url from Github under the settings tab when at your repository page&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/copygithuburl.png&#34; alt=&#34;copygithuburl&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/copygithuburl.png&#34; alt=&#34;copygithuburl&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 5&lt;/strong&gt; :  Create 2 directories under mavenrepo, namely releases and snapshots&lt;/p&gt;
 

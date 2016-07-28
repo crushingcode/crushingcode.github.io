@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Build on Crushing C.O.D.E</title>
-    <link>http://www.crushingcode.co/tags/build/</link>
+    <link>http://crushingcode.github.io/tags/build/</link>
     <description>Recent content in Build on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Tue, 21 Jul 2015 10:54:24 +0200</lastBuildDate>
-    <atom:link href="http://www.crushingcode.co/tags/build/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://crushingcode.github.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
-      <link>http://www.crushingcode.co/meet-jack-and-jill-androids-experimental-toolchain/</link>
+      <link>http://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</link>
       <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
       
-      <guid>http://www.crushingcode.co/meet-jack-and-jill-androids-experimental-toolchain/</guid>
+      <guid>http://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</guid>
       <description>&lt;p&gt;JACK &amp;amp; JILL are part of the new tool chain for android and in the words of &lt;a href=&#34;http://android-developers.blogspot.co.uk/2014/12/hello-world-meet-our-new-experimental.html&#34;&gt;Android Developer Blog&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -47,7 +47,7 @@ Basically the Android Gradle plugin and JACK collect any .jack library files, al
 
 &lt;p&gt;The complete process explained in a diagram&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/jacksitesdiagram.png&#34; alt=&#34;jacksitesdiagram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/jacksitesdiagram.png&#34; alt=&#34;jacksitesdiagram&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Why all the hassle for compiler ?&lt;/strong&gt;
 Google believes in optimizing the whole process of  compilation of android apps. The faster that happens the better, maybe involve incremental compilation for the same(still under development)! :D

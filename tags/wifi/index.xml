@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wifi on Crushing C.O.D.E</title>
-    <link>http://www.crushingcode.co/tags/wifi/</link>
+    <link>http://crushingcode.github.io/tags/wifi/</link>
     <description>Recent content in Wifi on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Thu, 09 Jul 2015 10:54:24 +0200</lastBuildDate>
-    <atom:link href="http://www.crushingcode.co/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://crushingcode.github.io/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Life without wires : ADB over WiFi</title>
-      <link>http://www.crushingcode.co/life-without-wires-adb-over-wifi/</link>
+      <link>http://crushingcode.github.io/life-without-wires-adb-over-wifi/</link>
       <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
       
-      <guid>http://www.crushingcode.co/life-without-wires-adb-over-wifi/</guid>
+      <guid>http://crushingcode.github.io/life-without-wires-adb-over-wifi/</guid>
       <description>
 
 &lt;p&gt;Tired of being tied to your laptop/desktop while debugging your android apps ?

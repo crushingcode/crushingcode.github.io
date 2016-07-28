@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Solution on Crushing C.O.D.E</title>
-    <link>http://www.crushingcode.co/tags/solution/</link>
+    <link>http://crushingcode.github.io/tags/solution/</link>
     <description>Recent content in Solution on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Mon, 02 May 2016 10:54:24 +0200</lastBuildDate>
-    <atom:link href="http://www.crushingcode.co/tags/solution/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://crushingcode.github.io/tags/solution/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The curious case of dependency conflicts</title>
-      <link>http://www.crushingcode.co/the-curious-case-of-dependency-conflicts/</link>
+      <link>http://crushingcode.github.io/the-curious-case-of-dependency-conflicts/</link>
       <pubDate>Mon, 02 May 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://www.crushingcode.co/the-curious-case-of-dependency-conflicts/</guid>
+      <guid>http://crushingcode.github.io/the-curious-case-of-dependency-conflicts/</guid>
       <description>
 
 &lt;p&gt;If I were to ask a question to a room filled with android developers&lt;/p&gt;
@@ -26,7 +26,7 @@
 
 &lt;p&gt;..I am pretty sure a lot of them would raise their hand or agree to being in that state and the very first action would be to hop onto stackoverflow and search for possible solutions in this type of a situation.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/depconflicts.jpg&#34; alt=&#34;depconflicts&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/depconflicts.jpg&#34; alt=&#34;depconflicts&#34; /&gt;
 &lt;!-- Image taken from freepik.com and all credit goes to the creator of it --&gt;&lt;/p&gt;
 
 &lt;p&gt;We all have been there and we all have experienced it. The problem is a result of each library following a completely different development lifecycle and using a different version of a public api, which by far all means is not the problem which needs to be rectified.

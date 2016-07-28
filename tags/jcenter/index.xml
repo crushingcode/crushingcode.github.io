@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jcenter on Crushing C.O.D.E</title>
-    <link>http://www.crushingcode.co/tags/jcenter/</link>
+    <link>http://crushingcode.github.io/tags/jcenter/</link>
     <description>Recent content in Jcenter on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Tue, 12 Jul 2016 10:54:24 +0200</lastBuildDate>
-    <atom:link href="http://www.crushingcode.co/tags/jcenter/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://crushingcode.github.io/tags/jcenter/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Guide to publishing your Android Library via Jcenter/Bintray</title>
-      <link>http://www.crushingcode.co/publish-your-android-library-via-jcenter/</link>
+      <link>http://crushingcode.github.io/publish-your-android-library-via-jcenter/</link>
       <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://www.crushingcode.co/publish-your-android-library-via-jcenter/</guid>
+      <guid>http://crushingcode.github.io/publish-your-android-library-via-jcenter/</guid>
       <description>
 
 &lt;p&gt;Developers are a different kind of people altogether. &lt;strong&gt;They tend to be lazy but strive to be super efficient at the same time&lt;/strong&gt;.
@@ -61,11 +61,11 @@ A lot of this can be seen in the Android world where a certain library pops up e
 &lt;p&gt;Goto &lt;code&gt;File&amp;gt;New&amp;gt;New Module..&lt;/code&gt; and select &lt;code&gt;Android Library&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/newmodule.jpeg&#34; alt=&#34;newmodule&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/newmodule.jpeg&#34; alt=&#34;newmodule&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/newlib.jpeg&#34; alt=&#34;newlib&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/newlib.jpeg&#34; alt=&#34;newlib&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/newlibinfo.jpeg&#34; alt=&#34;newlibinfo&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/newlibinfo.jpeg&#34; alt=&#34;newlibinfo&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Implement your library code inside the library module you created in the last step.&lt;/li&gt;
@@ -82,11 +82,11 @@ A lot of this can be seen in the Android world where a certain library pops up e
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/project.jpeg&#34; alt=&#34;project&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/project.jpeg&#34; alt=&#34;project&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/prjstruct.jpeg&#34; alt=&#34;prjstruct&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/prjstruct.jpeg&#34; alt=&#34;prjstruct&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/addmodule.jpeg&#34; alt=&#34;addmodule&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/addmodule.jpeg&#34; alt=&#34;addmodule&#34; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&#34;publishing-your-android-awesome-library:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
@@ -164,12 +164,12 @@ bintray.apikey=&amp;lt;your_bintray_apikey&amp;gt;
 
 &lt;li&gt;&lt;p&gt;Now once you have your maven repo setup , click on &lt;strong&gt;Edit&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/edit.jpeg&#34; alt=&#34;edit&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/edit.jpeg&#34; alt=&#34;edit&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;and see that you have selected the option &lt;code&gt;GPG sign uploaded files using Bintray&#39;s public/private key pair.&lt;/code&gt; and then click &lt;strong&gt;Update&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/gpg.jpeg&#34; alt=&#34;gpg&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/gpg.jpeg&#34; alt=&#34;gpg&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Once everything is configured, run the below in your terminal in your root of the project&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -181,7 +181,7 @@ bintray.apikey=&amp;lt;your_bintray_apikey&amp;gt;
 &lt;li&gt;Now once your project is up on bintray, simply hit &lt;strong&gt;Add to Jcenter&lt;/strong&gt; button to sync with JCenter.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/addtojcenter.jpeg&#34; alt=&#34;addtojcenter&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/addtojcenter.jpeg&#34; alt=&#34;addtojcenter&#34; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
 
@@ -213,23 +213,23 @@ dependencies {
 &lt;li&gt;Your code is available through JCenter if you have received the mail with confirmation&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/finalmail.jpeg&#34; alt=&#34;finalmail&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/finalmail.jpeg&#34; alt=&#34;finalmail&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Few things to note when you received the final email.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Goto your maven repo at bintray and verify that you have Jcenter under the &lt;strong&gt;Linked to&lt;/strong&gt; section&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/linked.jpeg&#34; alt=&#34;linked&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/linked.jpeg&#34; alt=&#34;linked&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Now you would also want to sync the artifact to &lt;a href=&#34;https://search.maven.org/&#34;&gt;MavenCentral&lt;/a&gt;, for that you need to hit the &lt;strong&gt;Maven Central&lt;/strong&gt; tab and sync&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/synctomaven.jpeg&#34; alt=&#34;synctomaven&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/synctomaven.jpeg&#34; alt=&#34;synctomaven&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Once you hit sync you would see as below. Wait for few hours for the sync to occur.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/syncstatus.jpeg&#34; alt=&#34;syncstatus&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/syncstatus.jpeg&#34; alt=&#34;syncstatus&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can use the lib now as follows&lt;/p&gt;
 
@@ -254,7 +254,7 @@ dependencies {
 &lt;li&gt;Add a readme that explains how to integrate and use your Awesome library&lt;/li&gt;
 &lt;li&gt;Add a license block as in this repo&lt;/li&gt;
 &lt;li&gt;Also include the Bintray badge provided by Bintray in your readme
-&lt;img src=&#34;http://www.crushingcode.co/images/posts/uploadtojcenter/badge.jpeg&#34; alt=&#34;badge&#34; /&gt;&lt;/li&gt;
+&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/badge.jpeg&#34; alt=&#34;badge&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;Promote your lib on social media so that others can know about it.&lt;/li&gt;
 &lt;li&gt;Always add a working sample app in your project that demonstrates your library in use.&lt;/li&gt;
 &lt;li&gt;Add screenshots if possible in your readme.&lt;/li&gt;

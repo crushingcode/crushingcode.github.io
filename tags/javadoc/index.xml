@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javadoc on Crushing C.O.D.E</title>
-    <link>http://www.crushingcode.co/tags/javadoc/</link>
+    <link>http://crushingcode.github.io/tags/javadoc/</link>
     <description>Recent content in Javadoc on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Sun, 15 May 2016 10:54:24 +0200</lastBuildDate>
-    <atom:link href="http://www.crushingcode.co/tags/javadoc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://crushingcode.github.io/tags/javadoc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Fun Project : Javadoc-Themer</title>
-      <link>http://www.crushingcode.co/a-splash-of-colors-to-your-boring-javadocs/</link>
+      <link>http://crushingcode.github.io/a-splash-of-colors-to-your-boring-javadocs/</link>
       <pubDate>Sun, 15 May 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://www.crushingcode.co/a-splash-of-colors-to-your-boring-javadocs/</guid>
+      <guid>http://crushingcode.github.io/a-splash-of-colors-to-your-boring-javadocs/</guid>
       <description>&lt;p&gt;I am pretty sure you would agree to the fact that the usual javadoc is not a something everyone likes. The colors are what makes it superrrrrrr boring. Yeah , I actually despise those weird colors and the fact that its been around for so long , made me think how to solve this. Also if you try looking it up on the internet there aren&amp;rsquo;t any solutions that basically solved this in a programmatic way.&lt;/p&gt;
 
 &lt;p&gt;Well look no more&amp;hellip;. TADAAAAAAA !!&lt;/p&gt;
 
 &lt;p&gt;Introducing &lt;strong&gt;&lt;a href=&#34;http://javadocthemer.crushingcode.co/&#34;&gt;Javadoc-Themer&lt;/a&gt;&lt;/strong&gt; (..insert suppperrr happy smiley here).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/javadocthemer/javadocthemer.png&#34; alt=&#34;javadocthemer&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/javadocthemer/javadocthemer.png&#34; alt=&#34;javadocthemer&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So what does this do actually ? Well it basically makes it easy for you to control what colors your generated javadoc uses.&lt;/p&gt;
 
@@ -32,7 +32,7 @@
 
 &lt;p&gt;Here is a comparison of both&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.crushingcode.co/images/posts/javadocthemer/javadocdiff.png&#34; alt=&#34;javadocdiff&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/javadocthemer/javadocdiff.png&#34; alt=&#34;javadocdiff&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The code for Javadoc-Themer is open sourced on &lt;a href=&#34;https://github.com/nisrulz/javadoc-themer&#34;&gt;github&lt;/a&gt; and you can find the webapp &lt;a href=&#34;http://javadocthemer.crushingcode.co/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 
