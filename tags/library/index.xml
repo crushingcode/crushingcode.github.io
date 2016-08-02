@@ -7,8 +7,139 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Sun, 17 Jul 2016 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 29 Jul 2016 10:54:24 +0200</lastBuildDate>
     <atom:link href="http://crushingcode.github.io/tags/library/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Guide to publishing your Android Library via JitPack</title>
+      <link>http://crushingcode.github.io/publish-your-android-library-via-jitpack/</link>
+      <pubDate>Fri, 29 Jul 2016 10:54:24 +0200</pubDate>
+      
+      <guid>http://crushingcode.github.io/publish-your-android-library-via-jitpack/</guid>
+      <description>
+
+&lt;p&gt;Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.&lt;/p&gt;
+
+&lt;p&gt;P.S. : If you dont know how to , go ahead and have a look&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://crushingcode.github.io/publish-your-android-library-via-jcenter/&#34;&gt;Guide to publishing your Android Library via Jcenter/Bintray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://crushingcode.github.io/publish-your-android-library-via-mavencentral/&#34;&gt;Guide to publishing your Android Library via MavenCentral&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#&#34;&gt;Guide to publishing your Android Library via JitPack&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The very first question that people would have is&lt;/p&gt;
+
+&lt;h3 id=&#34;what-is-jitpack:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;What is JitPack&lt;/h3&gt;
+
+&lt;p&gt;As per their &lt;a href=&#34;https://www.jitpack.io/&#34;&gt;website&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Easy to use package repository for Git. Publish your JVM and Android libraries&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So basically JitPack builds Git projects on demand and provides you with ready-to-use artifacts (jar, aar).&lt;/p&gt;
+
+&lt;h3 id=&#34;why-would-i-use-it-instead-of-jcenter-or-mavencentral:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Why would I use it instead of JCenter or MavenCentral ?&lt;/h3&gt;
+
+&lt;p&gt;Publishing to MavenCentral or JCenter is a well set process which involves people to go through steps in order to let their artifacts be hosted on these repositories. The process also involves you to wait for a certain few hours to get everything synced up.&lt;/p&gt;
+
+&lt;p&gt;On the other hand JitPack is the most simplest way of publishing the artifacts. There is no need to go through project build and upload steps. All you need to do is&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Push your project to GitHub&lt;/li&gt;
+&lt;li&gt;Tag a &lt;code&gt;release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Head over to JitPack and request to publish the &lt;code&gt;release&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&amp;hellip;and thats it. You have your library code available in just few minutes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It just works! Cool , isn&amp;rsquo;t it!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I will walk you through the process to help understand the process in a more practical mannner.&lt;/p&gt;
+
+&lt;p&gt;The first step that you need is to create and build your Android &amp;ldquo;Awesome&amp;rdquo; Library, which can be read in the &lt;a href=&#34;http://crushingcode.github.io/publish-your-android-library-via-jcenter/&#34;&gt;first post of this series here&lt;/a&gt;. If you have not done so , then please go ahead and read it up. Once done comeback here to read further.&lt;/p&gt;
+
+&lt;p&gt;Assuming you already have your Android &amp;ldquo;Awesome&amp;rdquo; Library built , I will jump directly to steps involved in publishing your library to JitPack&lt;/p&gt;
+
+&lt;h5 id=&#34;publishing-your-android-awesome-library:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Once project is synced, add the &lt;code&gt;android-maven-gradle-plugin&lt;/code&gt; to &lt;code&gt;classpath&lt;/code&gt; in &lt;code&gt;build.gradle&lt;/code&gt; file at &lt;strong&gt;root project&lt;/strong&gt; level.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;dependencies {
+  classpath &#39;com.android.tools.build:gradle:2.1.2&#39;
+  ..
+  ..
+  // Setup the android-maven-gradle-plugin in the classpath
+  classpath &#39;com.github.dcendents:android-maven-gradle-plugin:1.3&#39;
+  ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Next, apply the &lt;code&gt;android-maven-gradle-plugin&lt;/code&gt; to the &lt;code&gt;build.gradle&lt;/code&gt; file at &lt;strong&gt;library module&lt;/strong&gt; level. Also add the group variable.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt; apply plugin: &#39;com.android.library&#39;
+ // Required plugin in library module
+ apply plugin: &#39;com.github.dcendents.android-maven&#39;
+ // Replace nisrulz with &amp;lt;your_github_username&amp;gt;
+ group=&#39;com.github.nisrulz&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Create a release TAG in git&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git tag -a 1.0 -m &amp;quot;v1.0&amp;quot;
+git push origin 1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Once everything is pushed and the release TAG is also pushed, goto &lt;code&gt;https://www.jitpack.io/#username/reponame&lt;/code&gt; where replace &lt;code&gt;username&lt;/code&gt; with your github username and &lt;code&gt;reponame&lt;/code&gt; with the reponame of the android project.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Select the release you would like to share by clicking the ‘Get It’ button next to the list of releases of your repository.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojitpack/sc1.jpeg&#34; alt=&#34;screenshot1&#34; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Next the same page at Jitpack would show you how to use the library in your other android projects. Something like below&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojitpack/sc2.jpeg&#34; alt=&#34;screenshot1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Selectable code&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;  repositories {
+      jcenter()
+      maven { url “https://jitpack.io” }
+  }
+  dependencies {
+      compile &#39;com.github.nisrulz:awesomelib:1.0&#39;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Let the world know of your &lt;strong&gt;AwesomeLib&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add a readme that explains how to integrate and use your Awesome library&lt;/li&gt;
+&lt;li&gt;Add a license block.&lt;/li&gt;
+&lt;li&gt;Also include the JitPack badge provided by jitpack in your readme
+&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojitpack/badge.jpeg&#34; alt=&#34;badge&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Promote your lib on social media so that others can know about it.&lt;/li&gt;
+&lt;li&gt;Always add a working sample app in your project that demonstrates your library in use.&lt;/li&gt;
+&lt;li&gt;Add screenshots if possible in your readme.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The code for the AwesomeLibrary and this guide itself is open sourced and available on &lt;a href=&#34;https://github.com/nisrulz/UploadToJitpack&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Star it or just fork it to use it.&lt;/p&gt;
+
+&lt;p&gt;And thats it for this series. I hope it helps people to deploy their android libraries for the world to use.&lt;/p&gt;
+
+&lt;p&gt;Have fun crushing code :D&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Guide to publishing your Android Library via MavenCentral</title>
