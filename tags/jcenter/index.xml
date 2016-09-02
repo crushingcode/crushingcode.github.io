@@ -95,12 +95,12 @@ A lot of this can be seen in the Android world where a certain library pops up e
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt; dependencies {
-    classpath &#39;com.android.tools.build:gradle:2.1.2&#39;
+    classpath &#39;com.android.tools.build:gradle:2.1.3&#39;
     ..
     ..
     // Required plugins added to classpath to facilitate pushing to Jcenter/Bintray
-    classpath &#39;com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4&#39;
-    classpath &#39;com.github.dcendents:android-maven-gradle-plugin:1.3&#39;
+    classpath &#39;com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7&#39;
+    classpath &#39;com.github.dcendents:android-maven-gradle-plugin:1.4.1&#39;
     ..
    }
 &lt;/code&gt;&lt;/pre&gt;
@@ -124,6 +124,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
    // Your github repo link
    siteUrl = &#39;https://github.com/nisrulz/UploadToBintray&#39;
    gitUrl = &#39;https://github.com/nisrulz/UploadToBintray.git&#39;
+   githubRepository= &#39;nisrulz/UploadToBintray&#39;
 
    libraryVersion = &#39;1.0&#39;
 
@@ -153,6 +154,14 @@ A lot of this can be seen in the Android world where a certain library pops up e
 bintray.apikey=&amp;lt;your_bintray_apikey&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;blockquote&gt;
+&lt;p&gt;NOTE : &lt;code&gt;bintray.user&lt;/code&gt; and &lt;code&gt;bintray.apikey&lt;/code&gt; have to be in &lt;code&gt;local.properties&lt;/code&gt; specifically or else you will get error later regarding the user and apikey values not available to the bintrayUpload gradle task as below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;No value has been specified for property &#39;apiKey&#39;.
+No value has been specified for property &#39;user&#39;.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Now lets setup Bintray before we can push our artifact to it.&lt;/p&gt;
 
@@ -174,7 +183,7 @@ bintray.apikey=&amp;lt;your_bintray_apikey&amp;gt;
 &lt;li&gt;&lt;p&gt;Once everything is configured, run the below in your terminal in your root of the project&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;./gradlew install bintrayUpload
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;./gradlew clean build install bintrayUpload
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;

@@ -286,12 +286,12 @@ A lot of this can be seen in the Android world where a certain library pops up e
 </ul>
 
 <pre><code class="language-gradle"> dependencies {
-    classpath 'com.android.tools.build:gradle:2.1.2'
+    classpath 'com.android.tools.build:gradle:2.1.3'
     ..
     ..
     // Required plugins added to classpath to facilitate pushing to Jcenter/Bintray
-    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4'
-    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
     ..
    }
 </code></pre>
@@ -315,6 +315,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
    // Your github repo link
    siteUrl = 'https://github.com/nisrulz/UploadToBintray'
    gitUrl = 'https://github.com/nisrulz/UploadToBintray.git'
+   githubRepository= 'nisrulz/UploadToBintray'
 
    libraryVersion = '1.0'
 
@@ -344,6 +345,14 @@ A lot of this can be seen in the Android world where a certain library pops up e
 bintray.apikey=&lt;your_bintray_apikey&gt;
 </code></pre>
 
+<blockquote>
+<p>NOTE : <code>bintray.user</code> and <code>bintray.apikey</code> have to be in <code>local.properties</code> specifically or else you will get error later regarding the user and apikey values not available to the bintrayUpload gradle task as below</p>
+
+<pre><code>No value has been specified for property 'apiKey'.
+No value has been specified for property 'user'.
+</code></pre>
+</blockquote>
+
 <ul>
 <li><p>Now lets setup Bintray before we can push our artifact to it.</p>
 
@@ -365,7 +374,7 @@ bintray.apikey=&lt;your_bintray_apikey&gt;
 <li><p>Once everything is configured, run the below in your terminal in your root of the project</p></li>
 </ul>
 
-<pre><code class="language-gradle">./gradlew install bintrayUpload
+<pre><code class="language-gradle">./gradlew clean build install bintrayUpload
 </code></pre>
 
 <ul>
