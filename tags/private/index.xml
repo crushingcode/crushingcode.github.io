@@ -30,7 +30,7 @@ Do you want to host your artifacts in your own private repository?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;For the rest of you who want a complete explanation, lets dive in&lt;/strong&gt;..&lt;/p&gt;
 
-&lt;h2 id=&#34;terms:f84ad0192643eed3ea96b10c231ee903&#34;&gt;Terms&lt;/h2&gt;
+&lt;h2 id=&#34;terms&#34;&gt;Terms&lt;/h2&gt;
 
 &lt;p&gt;Before we start, I want you to get acquainted with some of the terms:&lt;/p&gt;
 
@@ -57,7 +57,7 @@ Lets just say its just another method to host and publish your artifacts without
 
 &lt;p&gt;….Okay…if you made it till this point, everything is going to be a piece of cake from here onwards :P promise :)&lt;/p&gt;
 
-&lt;h2 id=&#34;steps:f84ad0192643eed3ea96b10c231ee903&#34;&gt;Steps&lt;/h2&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt; : Fire up your terminal/command prompt
 &lt;strong&gt;Step 2&lt;/strong&gt; : Create a directory where you will sync your maven artifacts to, lets say its called mavenrepo&lt;/p&gt;
@@ -120,7 +120,7 @@ You have a working maven repository :D&lt;/p&gt;
 To be specific, how do i generate the maven artifact ?
 Simple,&lt;/p&gt;
 
-&lt;h2 id=&#34;generating-a-maven-artifact:f84ad0192643eed3ea96b10c231ee903&#34;&gt;Generating a maven artifact&lt;/h2&gt;
+&lt;h2 id=&#34;generating-a-maven-artifact&#34;&gt;Generating a maven artifact&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 10&lt;/strong&gt; : Generate a maven artifact using the below command in terminal/command prompt (provided you already have the maven installed)&lt;/p&gt;
 
@@ -160,7 +160,7 @@ git push origin master
 
 &lt;p&gt;Repeat &lt;strong&gt;&lt;em&gt;Steps 10-11&lt;/em&gt;&lt;/strong&gt; every time you want to publish a maven artifact to your own maven repository.&lt;/p&gt;
 
-&lt;h2 id=&#34;in-summary:f84ad0192643eed3ea96b10c231ee903&#34;&gt;In Summary&lt;/h2&gt;
+&lt;h2 id=&#34;in-summary&#34;&gt;In Summary&lt;/h2&gt;
 
 &lt;p&gt;Thats it for Part 1. In the next part we will see how to use this maven repository in our android application to reference libraries into our project with the help of gradle.&lt;/p&gt;
 

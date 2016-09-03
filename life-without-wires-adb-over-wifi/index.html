@@ -48,7 +48,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.16" />
 
     <link rel="canonical" href="http://crushingcode.github.io/life-without-wires-adb-over-wifi/" />
 
@@ -218,12 +218,12 @@ Most people ask me why another post on this, well if you googled it you would co
 I will walk you through the process of doing so in the most easiest way.
 All you need is a USB cable (for the initial setup) and have your laptop/desktop and the devices connected to the same network (work on 99% cases)</p>
 
-<h2 id="step-1:4a91edfe3954c56fb32837c099bc0494">Step 1</h2>
+<h2 id="step-1">Step 1</h2>
 
 <p>Connect your mobile device via USB and make sure usb debugging is on (you can do that via the developer options in your device).
 Also connect to your Wifi.</p>
 
-<h2 id="step-2:4a91edfe3954c56fb32837c099bc0494">Step 2</h2>
+<h2 id="step-2">Step 2</h2>
 
 <p>Open up the Terminal , provided you have the adb set in your PATH, type the following</p>
 
@@ -232,14 +232,14 @@ Also connect to your Wifi.</p>
 
 <p>this would list your device as connected over the USB</p>
 
-<h2 id="step-3:4a91edfe3954c56fb32837c099bc0494">Step 3</h2>
+<h2 id="step-3">Step 3</h2>
 
 <p>To enable the wifi-debug-mode</p>
 
 <pre><code>adb tcpip 5555
 </code></pre>
 
-<h2 id="step-4:4a91edfe3954c56fb32837c099bc0494">Step 4</h2>
+<h2 id="step-4">Step 4</h2>
 
 <p>Get your DEVICE-IP-ADDRESS</p>
 
@@ -265,18 +265,18 @@ Also connect to your Wifi.</p>
 
 <p>to view the IP address of your phone</p>
 
-<h2 id="step-5:4a91edfe3954c56fb32837c099bc0494">Step 5</h2>
+<h2 id="step-5">Step 5</h2>
 
 <p><strong>IMPORTANT : Remove USB cable</strong></p>
 
-<h2 id="step-6:4a91edfe3954c56fb32837c099bc0494">Step 6</h2>
+<h2 id="step-6">Step 6</h2>
 
 <p>Connect your device by typing in the below in the terminal</p>
 
 <pre><code>adb connect DEVICE-IP-ADDRESS:5555
 </code></pre>
 
-<h2 id="step-7:4a91edfe3954c56fb32837c099bc0494">Step 7</h2>
+<h2 id="step-7">Step 7</h2>
 
 <p>To confirm the connection just made, type in the terminal</p>
 
@@ -287,7 +287,7 @@ Also connect to your Wifi.</p>
 And you are done. Run/Debug your apps from your IDE in wireless mode.
 Let the magic of wire-free-life begin.</p>
 
-<h2 id="step-8:4a91edfe3954c56fb32837c099bc0494">Step 8</h2>
+<h2 id="step-8">Step 8</h2>
 
 <p>Did I mention that to switch back to USB mode you simply type in the below command in terminal</p>
 

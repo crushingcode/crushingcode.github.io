@@ -7,8 +7,161 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Fri, 29 Jul 2016 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 03 Sep 2016 10:54:24 +0200</lastBuildDate>
     <atom:link href="http://crushingcode.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Update Dependencies.Code.Repeat.</title>
+      <link>http://crushingcode.github.io/update-dependencies-code-repeat/</link>
+      <pubDate>Sat, 03 Sep 2016 10:54:24 +0200</pubDate>
+      
+      <guid>http://crushingcode.github.io/update-dependencies-code-repeat/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/updatedependency/header.jpg&#34; alt=&#34;geader&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Agree or not agree but on an average consensus pretty much every android dev goes through the loop of &lt;strong&gt;Update Dependencies.Code.Repeat.&lt;/strong&gt; for each of his/her android project. Its frustrating, a waste of time and super annoying when you would want to have the same version across all projects.&lt;/p&gt;
+
+&lt;p&gt;One of such situations that I recently got into was trying to keep all my &lt;strong&gt;&lt;a href=&#34;https://github.com/nisrulz/android-examples&#34;&gt;Android-Examples&lt;/a&gt;&lt;/strong&gt; repository on github updates. As you can see it has multiple small and simple examples of completely functional android example apps. Keeping all of them updated was becoming a hard task whenever a new version android-gradle-plugin, a new support library or google play services would be released. Initially I would go onto update each app in the repository and then commiting it back in. As you can see it wasn&amp;rsquo;t the most efficient way to do it. So sometime back I decided that I am going to put an end to this process and make all version configurations common to all apps and thus escape the &lt;strong&gt;Update Dependencies.Code.Repeat.&lt;/strong&gt; loop of hell.&lt;/p&gt;
+
+&lt;p&gt;So now that I had decided to not update each app individually, I decided to look at my options. The obvious one here was Gradle that supported variables.&lt;/p&gt;
+
+&lt;p&gt;Now we all might have done this for &lt;code&gt;support-library&lt;/code&gt; , where we define a variable inside our module&amp;rsquo;s &lt;code&gt;build.gradle&lt;/code&gt; and  then reference it as below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;def  supportLibVer = &amp;quot;24.2.0&amp;quot;
+..
+dependencies {
+  compile &amp;quot;com.android.support:appcompat-v7:$supportLibVer&amp;quot;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So what I have done here is basically&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Defined a variable named &lt;code&gt;supportLibVer&lt;/code&gt; with the value &lt;code&gt;24.2.0&lt;/code&gt; using &lt;code&gt;def&lt;/code&gt; keyword.&lt;/li&gt;
+&lt;li&gt;Next referenced it by using it in the &lt;code&gt;compile&lt;/code&gt; statement as &lt;code&gt;$supportLibVer&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note that the surrounding quote is a double quote &lt;code&gt;&amp;quot;&lt;/code&gt; and not a single quote.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now this approach is basically using a &lt;a href=&#34;https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:local_variables&#34;&gt;Local Variable &lt;/a&gt;, which means that this variable works in the scope of the &lt;code&gt;build.gradle&lt;/code&gt; file it is defined in.&lt;/p&gt;
+
+&lt;p&gt;We want to &lt;strong&gt;&lt;em&gt;externalize&lt;/em&gt;&lt;/strong&gt; the variable from outside the &lt;code&gt;build.gradle&lt;/code&gt; file of the module, so as to provide values to all modules of the project.
+Gradle&amp;rsquo;s &lt;a href=&#34;https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:extra_properties&#34;&gt;Extra properties&lt;/a&gt; come to the rescue.&lt;/p&gt;
+
+&lt;p&gt;The way we use them is by moving our varibales to an &lt;code&gt;ext&lt;/code&gt; block inside the project&amp;rsquo;s root &lt;code&gt;build.gradle&lt;/code&gt; file and reference it as below&lt;/p&gt;
+
+&lt;p&gt;Project&amp;rsquo;s root &lt;code&gt;build.gradle&lt;/code&gt; file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;ext {
+    supportLibVer = &amp;quot;24.2.0&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now reference it in all/required modules as below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;..
+dependencies {
+  compile &amp;quot;com.android.support:appcompat-v7:$rootProject.ext.supportLibVer&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Notice that referencing variable is changed now to &lt;code&gt;$rootProject.ext.supportLibVer&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;..hmm looks like we are going to somewhere with this. So till now we have been able to externailze the variables so as to facilitate common values to the multiple modules inside a particluar project.&lt;/p&gt;
+
+&lt;p&gt;But my requirement was a step ahead than this. I wanted to provide common values to all projects inside my repository and not just to one particular project. So I needed to provide an external &lt;code&gt;gradle&lt;/code&gt; file (that I place at the root of the folder which contains all my my projects) with all &lt;code&gt;ext&lt;/code&gt; variables defined in it , something like this [&lt;a href=&#34;https://github.com/nisrulz/android-examples/blob/master/dependencies.gradle&#34;&gt;dependencies.gradle&lt;/a&gt;]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;ext {
+   androidPluginVer = &amp;quot;2.1.3&amp;quot;
+   compileSdkVer = 24
+   buildToolsVer = &amp;quot;24.0.2&amp;quot;
+
+   minSdkVer = 9
+   targetSdkVer = 24
+
+   supportLibVer = &amp;quot;24.2.0&amp;quot;
+   googlePlayServicesVer = &amp;quot;9.4.0&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;but how do I make them available to each &lt;strong&gt;sub-module&lt;/strong&gt; inside each of my projects? I had to dig the gradle docs and buried deep inside is a section that talks about it, called &lt;a href=&#34;https://docs.gradle.org/current/userguide/multi_project_builds.html#sec:subproject_configuration&#34;&gt;Subproject Configuration&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So after some practical experimentation i figured out how I can use it to facilitate the &lt;code&gt;ext&lt;/code&gt; variables to &lt;strong&gt;sub-modules&lt;/strong&gt; of each project.
+This is what I did next in each Project&amp;rsquo;s root &lt;code&gt;build.gradle&lt;/code&gt;, I added a &lt;code&gt;subprojects&lt;/code&gt; configuration section just below &lt;code&gt;allprojects&lt;/code&gt; configuration section and added a &lt;code&gt;apply from:&lt;/code&gt; statement to apply my external gradle file to each sub-module.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ...
+}
+
+allprojects {
+    ..
+}
+
+// This is added to apply the gradle file to each module under the project
+subprojects {
+    apply from: &#39;../../dependencies.gradle&#39;
+}
+..
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What this did was it made my external variables defined in &lt;code&gt;dependencies.gradle&lt;/code&gt; files available to each module in each of my projects now and I could now reference them simply as&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;..
+dependencies {
+  compile &amp;quot;com.android.support:appcompat-v7:$supportLibVer&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Good. Now this makes life so much easy and now I can provide common values to all the dependencies.
+But if you would try to provide a variable and facilitate the version for &lt;code&gt;android-gradle-plugin&lt;/code&gt;, you would see that this wont work. Well thats a bummer, as I needed to make that as a common variable too.&lt;/p&gt;
+
+&lt;p&gt;So after much experimentation, I figured out it was because when we define the &lt;code&gt;subprojects&lt;/code&gt; configuration , it doesnot apply to the root project&amp;rsquo;s &lt;code&gt;build.gradle&lt;/code&gt;. Hmm, this is news as we had almost solved the problem.&lt;/p&gt;
+
+&lt;p&gt;So the way I solved this is by applying the &lt;code&gt;dependencies.gradle&lt;/code&gt; to the &lt;code&gt;buildscript&lt;/code&gt; section directly inside the root &lt;code&gt;build.gradle&lt;/code&gt; for each Project. So now each project&amp;rsquo;s root &lt;code&gt;build.gradle&lt;/code&gt; script became as below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    // This is added to apply the gradle file to facilitate providing variable values to root build.gradle of the project
+    apply from: &#39;../dependencies.gradle&#39;
+    ..
+    dependencies {
+        classpath &amp;quot;com.android.tools.build:gradle:$androidPluginVer&amp;quot;
+        ..
+    }
+}
+
+
+allprojects {
+    ..
+}
+
+// This is added to apply the gradle file to each module under the project
+subprojects {
+    apply from: &#39;../../dependencies.gradle&#39;
+}
+..
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/nisrulz/android-examples/blob/master/ActivityLifecycle/build.gradle&#34;&gt;Here is a functional root &lt;code&gt;build.gradle&lt;/code&gt; script from one of the project of my repository itself&lt;/a&gt; and &lt;a href=&#34;https://github.com/nisrulz/android-examples/blob/master/ActivityLifecycle/app/build.gradle&#34;&gt;Here is a functional module &lt;code&gt;build.gradle&lt;/code&gt; script from the same project of my repository itself&lt;/a&gt;. You can see i extended the idea to start externalizing the variable for &lt;code&gt;buildToolsVersion&lt;/code&gt; and &lt;code&gt;compileSdkVersion&lt;/code&gt; too :D&lt;/p&gt;
+
+&lt;p&gt;Great! Now we only need to change the values inside the &lt;code&gt;dependencies.gradle&lt;/code&gt; file and hey presto! when ever I would be loading up any of the projects , they will reference the values from this file and would automagically be working of the most udpated version.&lt;/p&gt;
+
+&lt;p&gt;You can checkout the &lt;a href=&#34;https://github.com/nisrulz/android-examples&#34;&gt;Android-Examples&lt;/a&gt; repository to see a fully functional model of this approach.&lt;/p&gt;
+
+&lt;p&gt;Phew, thats all for this time. Hoping it will solve any similar problems, as this approach can be definitely be extended.&lt;/p&gt;
+
+&lt;p&gt;Comment/Suggest me a better approach, if you know one.&lt;/p&gt;
+
+&lt;p&gt;Keep on crushing code!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Guide to publishing your Android Library via JitPack</title>
@@ -30,7 +183,7 @@
 
 &lt;p&gt;The very first question that people would have is&lt;/p&gt;
 
-&lt;h3 id=&#34;what-is-jitpack:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;What is JitPack&lt;/h3&gt;
+&lt;h3 id=&#34;what-is-jitpack&#34;&gt;What is JitPack&lt;/h3&gt;
 
 &lt;p&gt;As per their &lt;a href=&#34;https://www.jitpack.io/&#34;&gt;website&lt;/a&gt;&lt;/p&gt;
 
@@ -40,7 +193,7 @@
 
 &lt;p&gt;So basically JitPack builds Git projects on demand and provides you with ready-to-use artifacts (jar, aar).&lt;/p&gt;
 
-&lt;h3 id=&#34;why-would-i-use-it-instead-of-jcenter-or-mavencentral:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Why would I use it instead of JCenter or MavenCentral ?&lt;/h3&gt;
+&lt;h3 id=&#34;why-would-i-use-it-instead-of-jcenter-or-mavencentral&#34;&gt;Why would I use it instead of JCenter or MavenCentral ?&lt;/h3&gt;
 
 &lt;p&gt;Publishing to MavenCentral or JCenter is a well set process which involves people to go through steps in order to let their artifacts be hosted on these repositories. The process also involves you to wait for a certain few hours to get everything synced up.&lt;/p&gt;
 
@@ -62,7 +215,7 @@
 
 &lt;p&gt;Assuming you already have your Android &amp;ldquo;Awesome&amp;rdquo; Library built , I will jump directly to steps involved in publishing your library to JitPack&lt;/p&gt;
 
-&lt;h5 id=&#34;publishing-your-android-awesome-library:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;publishing-your-android-awesome-library&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Once project is synced, add the &lt;code&gt;android-maven-gradle-plugin&lt;/code&gt; to &lt;code&gt;classpath&lt;/code&gt; in &lt;code&gt;build.gradle&lt;/code&gt; file at &lt;strong&gt;root project&lt;/strong&gt; level.&lt;/p&gt;
@@ -98,7 +251,7 @@ git push origin 1.0
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojitpack/sc1.jpeg&#34; alt=&#34;screenshot1&#34; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Next the same page at Jitpack would show you how to use the library in your other android projects. Something like below&lt;/li&gt;
@@ -163,7 +316,7 @@ git push origin 1.0
 
 &lt;p&gt;Assuming you already have your Android &amp;ldquo;Awesome&amp;rdquo; Library built , I will jump directly to steps involved in publishing your library to MavenCentral&lt;/p&gt;
 
-&lt;h5 id=&#34;publishing-your-android-awesome-library:2b50d16037b146983527a8651ff29e32&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;publishing-your-android-awesome-library&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;p&gt;Setup &lt;a href=&#34;http://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/&#34;&gt;GPG&lt;/a&gt; and generate yourself a key.&lt;/p&gt;
 
@@ -247,7 +400,7 @@ git push origin 1.0
 &lt;p&gt;IMPORTANT: Steps for setting up your sonatype account up till here are required only once. The steps after these are required whenever publishing your android library, even if its a new one. Just remember to configure it well in your gradle.properties&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&#34;add-the-plugin-by-chris-banes-to-your-library-s-build-gradle:2b50d16037b146983527a8651ff29e32&#34;&gt;Add the plugin by Chris Banes to your library&amp;rsquo;s &lt;code&gt;build.gradle&lt;/code&gt;.&lt;/h5&gt;
+&lt;h5 id=&#34;add-the-plugin-by-chris-banes-to-your-library-s-build-gradle&#34;&gt;Add the plugin by Chris Banes to your library&amp;rsquo;s &lt;code&gt;build.gradle&lt;/code&gt;.&lt;/h5&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;NOTE:  Below is a &lt;a href=&#34;https://github.com/nisrulz/gradle-mvn-push&#34;&gt;fork&lt;/a&gt; of the &lt;a href=&#34;https://github.com/chrisbanes/gradle-mvn-push&#34;&gt;original script&lt;/a&gt; written by Chris Banes.&lt;/p&gt;
@@ -296,7 +449,7 @@ POM_SCM_DEV_CONNECTION=scm:git@github.com:&amp;lt;username&amp;gt;/&amp;lt;repo_
 &lt;li&gt;&lt;p&gt;Wait for some hours before everything gets synced with MavenCentral.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:2b50d16037b146983527a8651ff29e32&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
 
 &lt;p&gt;Your code is available through MavenCentral if you have received the mail with confirmation&lt;/p&gt;
 
@@ -370,7 +523,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
 
 &lt;p&gt;For now lets lookup the steps to publish your android library to JCenter/Bintray.&lt;/p&gt;
 
-&lt;h5 id=&#34;creating-your-android-awesome-library:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Creating your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;creating-your-android-awesome-library&#34;&gt;Creating your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;You can skip to the next part if you already have this built&lt;/p&gt;
@@ -413,7 +566,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/addmodule.jpeg&#34; alt=&#34;addmodule&#34; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;publishing-your-android-awesome-library:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;publishing-your-android-awesome-library&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Once project is synced, add the required plugins to classpath in &lt;code&gt;build.gradle&lt;/code&gt; file at root project level, as shown below&lt;/li&gt;
@@ -517,7 +670,7 @@ No value has been specified for property &#39;user&#39;.
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/addtojcenter.jpeg&#34; alt=&#34;addtojcenter&#34; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Your code is available through the private repo at bintray&lt;/li&gt;
@@ -630,18 +783,18 @@ dependencies {
 &lt;p&gt;The basic steps required are as follows :&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;h3 id=&#34;step-1:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 1&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-1&#34;&gt;&lt;strong&gt;Step 1&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Goto your maven repository on github and open up your releases folder via the browser.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;h3 id=&#34;step-2:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 2&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-2&#34;&gt;&lt;strong&gt;Step 2&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Copy the URL in the address bar. It should look like below&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;https://github.com/&amp;lt;username&amp;gt;/&amp;lt;mavenrepo&amp;gt;/tree/master/releases
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;h3 id=&#34;step-3:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 3&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-3&#34;&gt;&lt;strong&gt;Step 3&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Now replace the &lt;code&gt;tree&lt;/code&gt; word in the url with &lt;code&gt;raw&lt;/code&gt;&lt;/p&gt;
 
@@ -654,11 +807,11 @@ https://github.com/&amp;lt;username&amp;gt;/&amp;lt;mavenrepo&amp;gt;/raw/master
 # and copy this new url.
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;h3 id=&#34;step-4:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 4&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-4&#34;&gt;&lt;strong&gt;Step 4&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Now goto your Android Project and open up your &lt;code&gt;build.gradle&lt;/code&gt; file for the module where you want to include the artifact (i.e app/library).&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;h3 id=&#34;step-5:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 5&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-5&#34;&gt;&lt;strong&gt;Step 5&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Now copy the below to the &lt;code&gt;build.gradle&lt;/code&gt; file with the appropriate url for the maven repository as obtained in &lt;em&gt;Step-3&lt;/em&gt;.&lt;/p&gt;
 
@@ -669,7 +822,7 @@ maven {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;h3 id=&#34;step-6:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 6&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-6&#34;&gt;&lt;strong&gt;Step 6&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Next , add the dependency as you would normally&lt;/p&gt;
 
@@ -683,7 +836,7 @@ compile &#39;com.github.&amp;lt;username&amp;gt;:&amp;lt;artifact_name&amp;gt;:&
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;in-summary:2694c5e86a3a8f207d205bd191869089&#34;&gt;In Summary&lt;/h2&gt;
+&lt;h2 id=&#34;in-summary&#34;&gt;In Summary&lt;/h2&gt;
 
 &lt;p&gt;You just learned how to use artifacts from your own github account as a maven repository and in essence bypassed the complexity of getting artifacts into the Maven Central/Jcenter.&lt;/p&gt;
 
@@ -724,7 +877,7 @@ Do you want to host your artifacts in your own private repository?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;For the rest of you who want a complete explanation, lets dive in&lt;/strong&gt;..&lt;/p&gt;
 
-&lt;h2 id=&#34;terms:f84ad0192643eed3ea96b10c231ee903&#34;&gt;Terms&lt;/h2&gt;
+&lt;h2 id=&#34;terms&#34;&gt;Terms&lt;/h2&gt;
 
 &lt;p&gt;Before we start, I want you to get acquainted with some of the terms:&lt;/p&gt;
 
@@ -751,7 +904,7 @@ Lets just say its just another method to host and publish your artifacts without
 
 &lt;p&gt;….Okay…if you made it till this point, everything is going to be a piece of cake from here onwards :P promise :)&lt;/p&gt;
 
-&lt;h2 id=&#34;steps:f84ad0192643eed3ea96b10c231ee903&#34;&gt;Steps&lt;/h2&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt; : Fire up your terminal/command prompt
 &lt;strong&gt;Step 2&lt;/strong&gt; : Create a directory where you will sync your maven artifacts to, lets say its called mavenrepo&lt;/p&gt;
@@ -814,7 +967,7 @@ You have a working maven repository :D&lt;/p&gt;
 To be specific, how do i generate the maven artifact ?
 Simple,&lt;/p&gt;
 
-&lt;h2 id=&#34;generating-a-maven-artifact:f84ad0192643eed3ea96b10c231ee903&#34;&gt;Generating a maven artifact&lt;/h2&gt;
+&lt;h2 id=&#34;generating-a-maven-artifact&#34;&gt;Generating a maven artifact&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 10&lt;/strong&gt; : Generate a maven artifact using the below command in terminal/command prompt (provided you already have the maven installed)&lt;/p&gt;
 
@@ -854,7 +1007,7 @@ git push origin master
 
 &lt;p&gt;Repeat &lt;strong&gt;&lt;em&gt;Steps 10-11&lt;/em&gt;&lt;/strong&gt; every time you want to publish a maven artifact to your own maven repository.&lt;/p&gt;
 
-&lt;h2 id=&#34;in-summary:f84ad0192643eed3ea96b10c231ee903&#34;&gt;In Summary&lt;/h2&gt;
+&lt;h2 id=&#34;in-summary&#34;&gt;In Summary&lt;/h2&gt;
 
 &lt;p&gt;Thats it for Part 1. In the next part we will see how to use this maven repository in our android application to reference libraries into our project with the help of gradle.&lt;/p&gt;
 
@@ -955,12 +1108,12 @@ Most people ask me why another post on this, well if you googled it you would co
 I will walk you through the process of doing so in the most easiest way.
 All you need is a USB cable (for the initial setup) and have your laptop/desktop and the devices connected to the same network (work on 99% cases)&lt;/p&gt;
 
-&lt;h2 id=&#34;step-1:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 1&lt;/h2&gt;
+&lt;h2 id=&#34;step-1&#34;&gt;Step 1&lt;/h2&gt;
 
 &lt;p&gt;Connect your mobile device via USB and make sure usb debugging is on (you can do that via the developer options in your device).
 Also connect to your Wifi.&lt;/p&gt;
 
-&lt;h2 id=&#34;step-2:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 2&lt;/h2&gt;
+&lt;h2 id=&#34;step-2&#34;&gt;Step 2&lt;/h2&gt;
 
 &lt;p&gt;Open up the Terminal , provided you have the adb set in your PATH, type the following&lt;/p&gt;
 
@@ -969,14 +1122,14 @@ Also connect to your Wifi.&lt;/p&gt;
 
 &lt;p&gt;this would list your device as connected over the USB&lt;/p&gt;
 
-&lt;h2 id=&#34;step-3:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 3&lt;/h2&gt;
+&lt;h2 id=&#34;step-3&#34;&gt;Step 3&lt;/h2&gt;
 
 &lt;p&gt;To enable the wifi-debug-mode&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;adb tcpip 5555
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;step-4:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 4&lt;/h2&gt;
+&lt;h2 id=&#34;step-4&#34;&gt;Step 4&lt;/h2&gt;
 
 &lt;p&gt;Get your DEVICE-IP-ADDRESS&lt;/p&gt;
 
@@ -1002,18 +1155,18 @@ Also connect to your Wifi.&lt;/p&gt;
 
 &lt;p&gt;to view the IP address of your phone&lt;/p&gt;
 
-&lt;h2 id=&#34;step-5:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 5&lt;/h2&gt;
+&lt;h2 id=&#34;step-5&#34;&gt;Step 5&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;IMPORTANT : Remove USB cable&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;step-6:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 6&lt;/h2&gt;
+&lt;h2 id=&#34;step-6&#34;&gt;Step 6&lt;/h2&gt;
 
 &lt;p&gt;Connect your device by typing in the below in the terminal&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;adb connect DEVICE-IP-ADDRESS:5555
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;step-7:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 7&lt;/h2&gt;
+&lt;h2 id=&#34;step-7&#34;&gt;Step 7&lt;/h2&gt;
 
 &lt;p&gt;To confirm the connection just made, type in the terminal&lt;/p&gt;
 
@@ -1024,7 +1177,7 @@ Also connect to your Wifi.&lt;/p&gt;
 And you are done. Run/Debug your apps from your IDE in wireless mode.
 Let the magic of wire-free-life begin.&lt;/p&gt;
 
-&lt;h2 id=&#34;step-8:4a91edfe3954c56fb32837c099bc0494&#34;&gt;Step 8&lt;/h2&gt;
+&lt;h2 id=&#34;step-8&#34;&gt;Step 8&lt;/h2&gt;
 
 &lt;p&gt;Did I mention that to switch back to USB mode you simply type in the below command in terminal&lt;/p&gt;
 

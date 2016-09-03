@@ -30,7 +30,7 @@
 
 &lt;p&gt;The very first question that people would have is&lt;/p&gt;
 
-&lt;h3 id=&#34;what-is-jitpack:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;What is JitPack&lt;/h3&gt;
+&lt;h3 id=&#34;what-is-jitpack&#34;&gt;What is JitPack&lt;/h3&gt;
 
 &lt;p&gt;As per their &lt;a href=&#34;https://www.jitpack.io/&#34;&gt;website&lt;/a&gt;&lt;/p&gt;
 
@@ -40,7 +40,7 @@
 
 &lt;p&gt;So basically JitPack builds Git projects on demand and provides you with ready-to-use artifacts (jar, aar).&lt;/p&gt;
 
-&lt;h3 id=&#34;why-would-i-use-it-instead-of-jcenter-or-mavencentral:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Why would I use it instead of JCenter or MavenCentral ?&lt;/h3&gt;
+&lt;h3 id=&#34;why-would-i-use-it-instead-of-jcenter-or-mavencentral&#34;&gt;Why would I use it instead of JCenter or MavenCentral ?&lt;/h3&gt;
 
 &lt;p&gt;Publishing to MavenCentral or JCenter is a well set process which involves people to go through steps in order to let their artifacts be hosted on these repositories. The process also involves you to wait for a certain few hours to get everything synced up.&lt;/p&gt;
 
@@ -62,7 +62,7 @@
 
 &lt;p&gt;Assuming you already have your Android &amp;ldquo;Awesome&amp;rdquo; Library built , I will jump directly to steps involved in publishing your library to JitPack&lt;/p&gt;
 
-&lt;h5 id=&#34;publishing-your-android-awesome-library:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;publishing-your-android-awesome-library&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Once project is synced, add the &lt;code&gt;android-maven-gradle-plugin&lt;/code&gt; to &lt;code&gt;classpath&lt;/code&gt; in &lt;code&gt;build.gradle&lt;/code&gt; file at &lt;strong&gt;root project&lt;/strong&gt; level.&lt;/p&gt;
@@ -98,7 +98,7 @@ git push origin 1.0
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojitpack/sc1.jpeg&#34; alt=&#34;screenshot1&#34; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Next the same page at Jitpack would show you how to use the library in your other android projects. Something like below&lt;/li&gt;

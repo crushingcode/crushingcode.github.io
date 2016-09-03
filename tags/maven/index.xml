@@ -29,18 +29,18 @@
 &lt;p&gt;The basic steps required are as follows :&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;h3 id=&#34;step-1:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 1&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-1&#34;&gt;&lt;strong&gt;Step 1&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Goto your maven repository on github and open up your releases folder via the browser.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;h3 id=&#34;step-2:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 2&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-2&#34;&gt;&lt;strong&gt;Step 2&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Copy the URL in the address bar. It should look like below&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;https://github.com/&amp;lt;username&amp;gt;/&amp;lt;mavenrepo&amp;gt;/tree/master/releases
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;h3 id=&#34;step-3:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 3&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-3&#34;&gt;&lt;strong&gt;Step 3&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Now replace the &lt;code&gt;tree&lt;/code&gt; word in the url with &lt;code&gt;raw&lt;/code&gt;&lt;/p&gt;
 
@@ -53,11 +53,11 @@ https://github.com/&amp;lt;username&amp;gt;/&amp;lt;mavenrepo&amp;gt;/raw/master
 # and copy this new url.
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;h3 id=&#34;step-4:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 4&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-4&#34;&gt;&lt;strong&gt;Step 4&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Now goto your Android Project and open up your &lt;code&gt;build.gradle&lt;/code&gt; file for the module where you want to include the artifact (i.e app/library).&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;h3 id=&#34;step-5:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 5&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-5&#34;&gt;&lt;strong&gt;Step 5&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Now copy the below to the &lt;code&gt;build.gradle&lt;/code&gt; file with the appropriate url for the maven repository as obtained in &lt;em&gt;Step-3&lt;/em&gt;.&lt;/p&gt;
 
@@ -68,7 +68,7 @@ maven {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;h3 id=&#34;step-6:2694c5e86a3a8f207d205bd191869089&#34;&gt;&lt;strong&gt;Step 6&lt;/strong&gt;&lt;/h3&gt;
+&lt;li&gt;&lt;h3 id=&#34;step-6&#34;&gt;&lt;strong&gt;Step 6&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;Next , add the dependency as you would normally&lt;/p&gt;
 
@@ -82,7 +82,7 @@ compile &#39;com.github.&amp;lt;username&amp;gt;:&amp;lt;artifact_name&amp;gt;:&
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;in-summary:2694c5e86a3a8f207d205bd191869089&#34;&gt;In Summary&lt;/h2&gt;
+&lt;h2 id=&#34;in-summary&#34;&gt;In Summary&lt;/h2&gt;
 
 &lt;p&gt;You just learned how to use artifacts from your own github account as a maven repository and in essence bypassed the complexity of getting artifacts into the Maven Central/Jcenter.&lt;/p&gt;
 
@@ -123,7 +123,7 @@ Do you want to host your artifacts in your own private repository?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;For the rest of you who want a complete explanation, lets dive in&lt;/strong&gt;..&lt;/p&gt;
 
-&lt;h2 id=&#34;terms:f84ad0192643eed3ea96b10c231ee903&#34;&gt;Terms&lt;/h2&gt;
+&lt;h2 id=&#34;terms&#34;&gt;Terms&lt;/h2&gt;
 
 &lt;p&gt;Before we start, I want you to get acquainted with some of the terms:&lt;/p&gt;
 
@@ -150,7 +150,7 @@ Lets just say its just another method to host and publish your artifacts without
 
 &lt;p&gt;….Okay…if you made it till this point, everything is going to be a piece of cake from here onwards :P promise :)&lt;/p&gt;
 
-&lt;h2 id=&#34;steps:f84ad0192643eed3ea96b10c231ee903&#34;&gt;Steps&lt;/h2&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt; : Fire up your terminal/command prompt
 &lt;strong&gt;Step 2&lt;/strong&gt; : Create a directory where you will sync your maven artifacts to, lets say its called mavenrepo&lt;/p&gt;
@@ -213,7 +213,7 @@ You have a working maven repository :D&lt;/p&gt;
 To be specific, how do i generate the maven artifact ?
 Simple,&lt;/p&gt;
 
-&lt;h2 id=&#34;generating-a-maven-artifact:f84ad0192643eed3ea96b10c231ee903&#34;&gt;Generating a maven artifact&lt;/h2&gt;
+&lt;h2 id=&#34;generating-a-maven-artifact&#34;&gt;Generating a maven artifact&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 10&lt;/strong&gt; : Generate a maven artifact using the below command in terminal/command prompt (provided you already have the maven installed)&lt;/p&gt;
 
@@ -253,7 +253,7 @@ git push origin master
 
 &lt;p&gt;Repeat &lt;strong&gt;&lt;em&gt;Steps 10-11&lt;/em&gt;&lt;/strong&gt; every time you want to publish a maven artifact to your own maven repository.&lt;/p&gt;
 
-&lt;h2 id=&#34;in-summary:f84ad0192643eed3ea96b10c231ee903&#34;&gt;In Summary&lt;/h2&gt;
+&lt;h2 id=&#34;in-summary&#34;&gt;In Summary&lt;/h2&gt;
 
 &lt;p&gt;Thats it for Part 1. In the next part we will see how to use this maven repository in our android application to reference libraries into our project with the help of gradle.&lt;/p&gt;
 

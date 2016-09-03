@@ -30,7 +30,7 @@
 
 &lt;p&gt;The very first question that people would have is&lt;/p&gt;
 
-&lt;h3 id=&#34;what-is-jitpack:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;What is JitPack&lt;/h3&gt;
+&lt;h3 id=&#34;what-is-jitpack&#34;&gt;What is JitPack&lt;/h3&gt;
 
 &lt;p&gt;As per their &lt;a href=&#34;https://www.jitpack.io/&#34;&gt;website&lt;/a&gt;&lt;/p&gt;
 
@@ -40,7 +40,7 @@
 
 &lt;p&gt;So basically JitPack builds Git projects on demand and provides you with ready-to-use artifacts (jar, aar).&lt;/p&gt;
 
-&lt;h3 id=&#34;why-would-i-use-it-instead-of-jcenter-or-mavencentral:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Why would I use it instead of JCenter or MavenCentral ?&lt;/h3&gt;
+&lt;h3 id=&#34;why-would-i-use-it-instead-of-jcenter-or-mavencentral&#34;&gt;Why would I use it instead of JCenter or MavenCentral ?&lt;/h3&gt;
 
 &lt;p&gt;Publishing to MavenCentral or JCenter is a well set process which involves people to go through steps in order to let their artifacts be hosted on these repositories. The process also involves you to wait for a certain few hours to get everything synced up.&lt;/p&gt;
 
@@ -62,7 +62,7 @@
 
 &lt;p&gt;Assuming you already have your Android &amp;ldquo;Awesome&amp;rdquo; Library built , I will jump directly to steps involved in publishing your library to JitPack&lt;/p&gt;
 
-&lt;h5 id=&#34;publishing-your-android-awesome-library:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;publishing-your-android-awesome-library&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Once project is synced, add the &lt;code&gt;android-maven-gradle-plugin&lt;/code&gt; to &lt;code&gt;classpath&lt;/code&gt; in &lt;code&gt;build.gradle&lt;/code&gt; file at &lt;strong&gt;root project&lt;/strong&gt; level.&lt;/p&gt;
@@ -98,7 +98,7 @@ git push origin 1.0
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojitpack/sc1.jpeg&#34; alt=&#34;screenshot1&#34; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:f560870a983b20c7dd7fd552ffa94c5b&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Next the same page at Jitpack would show you how to use the library in your other android projects. Something like below&lt;/li&gt;
@@ -163,7 +163,7 @@ git push origin 1.0
 
 &lt;p&gt;Assuming you already have your Android &amp;ldquo;Awesome&amp;rdquo; Library built , I will jump directly to steps involved in publishing your library to MavenCentral&lt;/p&gt;
 
-&lt;h5 id=&#34;publishing-your-android-awesome-library:2b50d16037b146983527a8651ff29e32&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;publishing-your-android-awesome-library&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;p&gt;Setup &lt;a href=&#34;http://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/&#34;&gt;GPG&lt;/a&gt; and generate yourself a key.&lt;/p&gt;
 
@@ -247,7 +247,7 @@ git push origin 1.0
 &lt;p&gt;IMPORTANT: Steps for setting up your sonatype account up till here are required only once. The steps after these are required whenever publishing your android library, even if its a new one. Just remember to configure it well in your gradle.properties&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&#34;add-the-plugin-by-chris-banes-to-your-library-s-build-gradle:2b50d16037b146983527a8651ff29e32&#34;&gt;Add the plugin by Chris Banes to your library&amp;rsquo;s &lt;code&gt;build.gradle&lt;/code&gt;.&lt;/h5&gt;
+&lt;h5 id=&#34;add-the-plugin-by-chris-banes-to-your-library-s-build-gradle&#34;&gt;Add the plugin by Chris Banes to your library&amp;rsquo;s &lt;code&gt;build.gradle&lt;/code&gt;.&lt;/h5&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;NOTE:  Below is a &lt;a href=&#34;https://github.com/nisrulz/gradle-mvn-push&#34;&gt;fork&lt;/a&gt; of the &lt;a href=&#34;https://github.com/chrisbanes/gradle-mvn-push&#34;&gt;original script&lt;/a&gt; written by Chris Banes.&lt;/p&gt;
@@ -296,7 +296,7 @@ POM_SCM_DEV_CONNECTION=scm:git@github.com:&amp;lt;username&amp;gt;/&amp;lt;repo_
 &lt;li&gt;&lt;p&gt;Wait for some hours before everything gets synced with MavenCentral.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:2b50d16037b146983527a8651ff29e32&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
 
 &lt;p&gt;Your code is available through MavenCentral if you have received the mail with confirmation&lt;/p&gt;
 
@@ -370,7 +370,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
 
 &lt;p&gt;For now lets lookup the steps to publish your android library to JCenter/Bintray.&lt;/p&gt;
 
-&lt;h5 id=&#34;creating-your-android-awesome-library:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Creating your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;creating-your-android-awesome-library&#34;&gt;Creating your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;You can skip to the next part if you already have this built&lt;/p&gt;
@@ -413,7 +413,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/addmodule.jpeg&#34; alt=&#34;addmodule&#34; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;publishing-your-android-awesome-library:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;publishing-your-android-awesome-library&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Once project is synced, add the required plugins to classpath in &lt;code&gt;build.gradle&lt;/code&gt; file at root project level, as shown below&lt;/li&gt;
@@ -517,7 +517,7 @@ No value has been specified for property &#39;user&#39;.
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/addtojcenter.jpeg&#34; alt=&#34;addtojcenter&#34; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Your code is available through the private repo at bintray&lt;/li&gt;

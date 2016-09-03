@@ -45,7 +45,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
 
 &lt;p&gt;For now lets lookup the steps to publish your android library to JCenter/Bintray.&lt;/p&gt;
 
-&lt;h5 id=&#34;creating-your-android-awesome-library:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Creating your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;creating-your-android-awesome-library&#34;&gt;Creating your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;You can skip to the next part if you already have this built&lt;/p&gt;
@@ -88,7 +88,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/addmodule.jpeg&#34; alt=&#34;addmodule&#34; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;publishing-your-android-awesome-library:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
+&lt;h5 id=&#34;publishing-your-android-awesome-library&#34;&gt;Publishing your Android &amp;ldquo;Awesome&amp;rdquo; Library&lt;/h5&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Once project is synced, add the required plugins to classpath in &lt;code&gt;build.gradle&lt;/code&gt; file at root project level, as shown below&lt;/li&gt;
@@ -192,7 +192,7 @@ No value has been specified for property &#39;user&#39;.
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/uploadtojcenter/addtojcenter.jpeg&#34; alt=&#34;addtojcenter&#34; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects:3aca4bb9a1be907ad816749bc422b732&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
+&lt;h5 id=&#34;using-your-android-awesome-library-in-other-projects&#34;&gt;Using your Android &amp;ldquo;Awesome&amp;rdquo; Library in other projects&lt;/h5&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Your code is available through the private repo at bintray&lt;/li&gt;

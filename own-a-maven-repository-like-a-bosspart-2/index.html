@@ -48,7 +48,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.16" />
 
     <link rel="canonical" href="http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-2/" />
 
@@ -220,18 +220,18 @@
 <p>The basic steps required are as follows :</p>
 
 <ul>
-<li><h3 id="step-1:2694c5e86a3a8f207d205bd191869089"><strong>Step 1</strong></h3>
+<li><h3 id="step-1"><strong>Step 1</strong></h3>
 
 <p>Goto your maven repository on github and open up your releases folder via the browser.</p></li>
 
-<li><h3 id="step-2:2694c5e86a3a8f207d205bd191869089"><strong>Step 2</strong></h3>
+<li><h3 id="step-2"><strong>Step 2</strong></h3>
 
 <p>Copy the URL in the address bar. It should look like below</p>
 
 <pre><code>https://github.com/&lt;username&gt;/&lt;mavenrepo&gt;/tree/master/releases
 </code></pre></li>
 
-<li><h3 id="step-3:2694c5e86a3a8f207d205bd191869089"><strong>Step 3</strong></h3>
+<li><h3 id="step-3"><strong>Step 3</strong></h3>
 
 <p>Now replace the <code>tree</code> word in the url with <code>raw</code></p>
 
@@ -244,11 +244,11 @@ https://github.com/&lt;username&gt;/&lt;mavenrepo&gt;/raw/master/releases
 # and copy this new url.
 </code></pre></li>
 
-<li><h3 id="step-4:2694c5e86a3a8f207d205bd191869089"><strong>Step 4</strong></h3>
+<li><h3 id="step-4"><strong>Step 4</strong></h3>
 
 <p>Now goto your Android Project and open up your <code>build.gradle</code> file for the module where you want to include the artifact (i.e app/library).</p></li>
 
-<li><h3 id="step-5:2694c5e86a3a8f207d205bd191869089"><strong>Step 5</strong></h3>
+<li><h3 id="step-5"><strong>Step 5</strong></h3>
 
 <p>Now copy the below to the <code>build.gradle</code> file with the appropriate url for the maven repository as obtained in <em>Step-3</em>.</p>
 
@@ -259,7 +259,7 @@ maven {
 }
 </code></pre></li>
 
-<li><h3 id="step-6:2694c5e86a3a8f207d205bd191869089"><strong>Step 6</strong></h3>
+<li><h3 id="step-6"><strong>Step 6</strong></h3>
 
 <p>Next , add the dependency as you would normally</p>
 
@@ -273,7 +273,7 @@ compile 'com.github.&lt;username&gt;:&lt;artifact_name&gt;:&lt;version&gt;'
 
 <hr />
 
-<h2 id="in-summary:2694c5e86a3a8f207d205bd191869089">In Summary</h2>
+<h2 id="in-summary">In Summary</h2>
 
 <p>You just learned how to use artifacts from your own github account as a maven repository and in essence bypassed the complexity of getting artifacts into the Maven Central/Jcenter.</p>
 

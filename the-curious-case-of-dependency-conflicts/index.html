@@ -48,7 +48,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.16" />
 
     <link rel="canonical" href="http://crushingcode.github.io/the-curious-case-of-dependency-conflicts/" />
 
@@ -269,7 +269,7 @@ dependencies {
 
 <p>well there are a few ways you can do that, the easiest one uses the <code>gradle wrapper</code>.</p>
 
-<h3 id="step-1:ef486a40d2d89dcc8b652c977990e671"><strong>STEP 1</strong></h3>
+<h3 id="step-1"><strong>STEP 1</strong></h3>
 
 <p>Look for all android dependencies being downloaded as part of the build process.</p>
 
@@ -302,7 +302,7 @@ release
 
 <p>Considering that you still cannot find the conflicting dependencies and their versions and assuming that its not conflicting from a dependency declared in the build.gradle file but (..probably) introduced by some gradle-plugin defined, we will do a more verbose checkup which is what STEP 2 is about</p>
 
-<h3 id="step-2:ef486a40d2d89dcc8b652c977990e671"><strong>STEP 2</strong></h3>
+<h3 id="step-2"><strong>STEP 2</strong></h3>
 
 <p>Check the complete stacktrace of the build process using <code>--info</code> and <code>--stacktrace</code> flags passed as arguments</p>
 
@@ -315,9 +315,9 @@ release
 
 <p>Well, ok so this is a problem we have got. Whats the solution ? how do you go against the default behaviour of gradle and resolve to a lower version when a conflict occurs ?</p>
 
-<h3 id="solution:ef486a40d2d89dcc8b652c977990e671"><strong>SOLUTION</strong></h3>
+<h3 id="solution"><strong>SOLUTION</strong></h3>
 
-<p>Well this is where the flexibility of Gradle comes into view. This is not commonly known but is a very useful functionality tucked away into the <a href="https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html#org.gradle.api.artifacts.ResolutionStrategy:failOnVersionConflict(">api docs</a>) for gradle.</p>
+<p>Well this is where the flexibility of Gradle comes into view. This is not commonly known but is a very useful functionality tucked away into the <a href="https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html#org.gradle.api.artifacts.ResolutionStrategy:failOnVersionConflict()">api docs</a> for gradle.</p>
 
 <p>The very first thing that you should do is, enable <code>failOnVersionConflict</code> flag in gradle on version conflicts.</p>
 
@@ -369,7 +369,7 @@ As of writting this post the latest Gradle Version is 2.13 in which this is avai
 <p>Thats all for today folks.
 Keep crushing code until next post :)</p>
 
-<p>Reference : <a href="https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html#org.gradle.api.artifacts.ResolutionStrategy:failOnVersionConflict(">Gradle Docs</a>)</p>
+<p>Reference : <a href="https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html#org.gradle.api.artifacts.ResolutionStrategy:failOnVersionConflict()">Gradle Docs</a></p>
 
     </section>
 
