@@ -205,11 +205,13 @@
       <br/>
       <p><img src="http://crushingcode.github.io/images/posts/updatedependency/header.jpg" alt="geader" /></p>
 
-<p>Agree or not agree but on an average consensus pretty much every android dev goes through the loop of <strong>Update Dependencies.Code.Repeat.</strong> for each of his/her android project. Its frustrating, a waste of time and super annoying when you would want to have the same version across all projects.</p>
+<p>Agree or not agree, but on an average consensus pretty much every android dev goes through the loop of <strong>Update Dependencies.Code.Repeat.</strong> for each of his/her android project. Its frustrating, a waste of time and super annoying when you would want to have the same version across all projects.</p>
 
-<p>One of such situations that I recently got into was trying to keep all my <strong><a href="https://github.com/nisrulz/android-examples">Android-Examples</a></strong> repository on github updates. As you can see it has multiple small and simple examples of completely functional android example apps. Keeping all of them updated was becoming a hard task whenever a new version android-gradle-plugin, a new support library or google play services would be released. Initially I would go onto update each app in the repository and then commiting it back in. As you can see it wasn&rsquo;t the most efficient way to do it. So sometime back I decided that I am going to put an end to this process and make all version configurations common to all apps and thus escape the <strong>Update Dependencies.Code.Repeat.</strong> loop of hell.</p>
+<p>One of such situations that I recently got into was trying to keep all my apps under <strong><a href="https://github.com/nisrulz/android-examples">Android-Examples</a></strong> repository on github updated. As you can see it the repository has multiple small and simple examples of completely functional android apps. Keeping all of them updated was becoming a hard task whenever a new version of android-gradle-plugin, support library or google play services would be released.</p>
 
-<p>So now that I had decided to not update each app individually, I decided to look at my options. The obvious one here was Gradle that supported variables.</p>
+<p>Initially I would go on to update each app in the repository and then commiting it back. As you can see it wasn&rsquo;t the most efficient way to do it. So sometime back I decided that I am going to put an end to this process and make all version configurations common to all apps and thus escape the <strong>Update Dependencies.Code.Repeat.</strong> loop of hell.</p>
+
+<p>So now that I had decided to not update each app individually, I decided to look at my options. The obvious one here was looking at Gradle that supported variables.</p>
 
 <p>Now we all might have done this for <code>support-library</code> , where we define a variable inside our module&rsquo;s <code>build.gradle</code> and  then reference it as below</p>
 
@@ -235,9 +237,9 @@ dependencies {
 <p>Now this approach is basically using a <a href="https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:local_variables">Local Variable </a>, which means that this variable works in the scope of the <code>build.gradle</code> file it is defined in.</p>
 
 <p>We want to <strong><em>externalize</em></strong> the variable from outside the <code>build.gradle</code> file of the module, so as to provide values to all modules of the project.
-Gradle&rsquo;s <a href="https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:extra_properties">Extra properties</a> come to the rescue.</p>
+Gradle&rsquo;s <a href="https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:extra_properties">Extra properties</a> comes to the rescue for this.</p>
 
-<p>The way we use them is by moving our varibales to an <code>ext</code> block inside the project&rsquo;s root <code>build.gradle</code> file and reference it as below</p>
+<p>The way we use them is by moving our varibales to an <code>ext</code> block inside the project&rsquo;s root <code>build.gradle</code> file and referencing it as below</p>
 
 <p>Project&rsquo;s root <code>build.gradle</code> file</p>
 
@@ -258,9 +260,9 @@ dependencies {
 <p>Notice that referencing variable is changed now to <code>$rootProject.ext.supportLibVer</code></p>
 </blockquote>
 
-<p>..hmm looks like we are going to somewhere with this. So till now we have been able to externailze the variables so as to facilitate common values to the multiple modules inside a particluar project.</p>
+<p>..hmm looks like we are going somewhere with this. So till now we have been able to externalize the variables so as to facilitate common values to the multiple modules inside a particluar project.</p>
 
-<p>But my requirement was a step ahead than this. I wanted to provide common values to all projects inside my repository and not just to one particular project. So I needed to provide an external <code>gradle</code> file (that I place at the root of the folder which contains all my my projects) with all <code>ext</code> variables defined in it , something like this [<a href="https://github.com/nisrulz/android-examples/blob/master/dependencies.gradle">dependencies.gradle</a>]</p>
+<p>But my requirement was a step ahead than this. I wanted to provide common values to all projects inside my repository and not just to one particular project. So I needed to provide an external <code>gradle</code> file (that I place at the root of the folder which contains all my projects) with all <code>ext</code> variables defined in it , something like this [<a href="https://github.com/nisrulz/android-examples/blob/master/dependencies.gradle">dependencies.gradle</a>]</p>
 
 <pre><code class="language-gradle">ext {
    androidPluginVer = &quot;2.1.3&quot;
@@ -275,7 +277,9 @@ dependencies {
 }
 </code></pre>
 
-<p>but how do I make them available to each <strong>sub-module</strong> inside each of my projects? I had to dig the gradle docs and buried deep inside is a section that talks about it, called <a href="https://docs.gradle.org/current/userguide/multi_project_builds.html#sec:subproject_configuration">Subproject Configuration</a>.</p>
+<p>But how do I make them available to each <strong>sub-module</strong> inside each of my projects?</p>
+
+<p>I had to dig the gradle docs and buried deep inside is a section that talks about it, called <a href="https://docs.gradle.org/current/userguide/multi_project_builds.html#sec:subproject_configuration">Subproject Configuration</a>.</p>
 
 <p>So after some practical experimentation i figured out how I can use it to facilitate the <code>ext</code> variables to <strong>sub-modules</strong> of each project.
 This is what I did next in each Project&rsquo;s root <code>build.gradle</code>, I added a <code>subprojects</code> configuration section just below <code>allprojects</code> configuration section and added a <code>apply from:</code> statement to apply my external gradle file to each sub-module.</p>
@@ -297,7 +301,7 @@ subprojects {
 
 </code></pre>
 
-<p>What this did was it made my external variables defined in <code>dependencies.gradle</code> files available to each module in each of my projects now and I could now reference them simply as</p>
+<p>What this did was that it made my external variables, defined in <code>dependencies.gradle</code> files available in the scope of each module in each of my projects now and I could now reference them simply as</p>
 
 <pre><code class="language-gradle">..
 dependencies {
@@ -305,8 +309,11 @@ dependencies {
 }
 </code></pre>
 
-<p>Good. Now this makes life so much easy and now I can provide common values to all the dependencies.
-But if you would try to provide a variable and facilitate the version for <code>android-gradle-plugin</code>, you would see that this wont work. Well thats a bummer, as I needed to make that as a common variable too.</p>
+<p>Good. Now this makes life so much easy and now I can provide common values to all the dependencies.</p>
+
+<p><strong>But wait</strong>, if you would try to provide a variable and facilitate the version for <code>android-gradle-plugin</code>, you would see that this wont work!</p>
+
+<p>Well thats a bummer, as I needed to make that as a common variable too.</p>
 
 <p>So after much experimentation, I figured out it was because when we define the <code>subprojects</code> configuration , it doesnot apply to the root project&rsquo;s <code>build.gradle</code>. Hmm, this is news as we had almost solved the problem.</p>
 
@@ -336,7 +343,7 @@ subprojects {
 
 </code></pre>
 
-<p><a href="https://github.com/nisrulz/android-examples/blob/master/ActivityLifecycle/build.gradle">Here is a functional root <code>build.gradle</code> script from one of the project of my repository itself</a> and <a href="https://github.com/nisrulz/android-examples/blob/master/ActivityLifecycle/app/build.gradle">Here is a functional module <code>build.gradle</code> script from the same project of my repository itself</a>. You can see i extended the idea to start externalizing the variable for <code>buildToolsVersion</code> and <code>compileSdkVersion</code> too :D</p>
+<p><a href="https://github.com/nisrulz/android-examples/blob/master/ActivityLifecycle/build.gradle">Here is a functional root <code>build.gradle</code> script from one of the project of my repository itself</a> and <a href="https://github.com/nisrulz/android-examples/blob/master/ActivityLifecycle/app/build.gradle">Here is a functional module <code>build.gradle</code> script from the same project of my repository itself</a>. You can see I extended the idea to start externalizing the variable for <code>buildToolsVersion</code> and <code>compileSdkVersion</code> too :D</p>
 
 <p>Great! Now we only need to change the values inside the <code>dependencies.gradle</code> file and hey presto! when ever I would be loading up any of the projects , they will reference the values from this file and would automagically be working of the most udpated version.</p>
 
