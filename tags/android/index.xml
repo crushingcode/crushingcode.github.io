@@ -16,7 +16,7 @@
       <pubDate>Sat, 03 Sep 2016 10:54:24 +0200</pubDate>
       
       <guid>http://crushingcode.github.io/update-dependencies-code-repeat/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/updatedependency/header.jpg&#34; alt=&#34;geader&#34; /&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/updatedependency/header.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Agree or not agree, but on an average consensus pretty much every android dev goes through the loop of &lt;strong&gt;Update Dependencies.Code.Repeat.&lt;/strong&gt; for each of his/her android project. Its frustrating, a waste of time and super annoying when you would want to have the same version across all projects.&lt;/p&gt;
 
@@ -153,7 +153,6 @@ subprojects {
     apply from: &#39;../../dependencies.gradle&#39;
 }
 ..
-
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/nisrulz/android-examples/blob/master/ActivityLifecycle/build.gradle&#34;&gt;Here is a functional root &lt;code&gt;build.gradle&lt;/code&gt; script from one of the project of my repository itself&lt;/a&gt; and &lt;a href=&#34;https://github.com/nisrulz/android-examples/blob/master/ActivityLifecycle/app/build.gradle&#34;&gt;Here is a functional module &lt;code&gt;build.gradle&lt;/code&gt; script from the same project of my repository itself&lt;/a&gt;. You can see I extended the idea to start externalizing the variable for &lt;code&gt;buildToolsVersion&lt;/code&gt; and &lt;code&gt;compileSdkVersion&lt;/code&gt; too :D&lt;/p&gt;
@@ -164,9 +163,13 @@ subprojects {
 
 &lt;p&gt;Phew, thats all for this time. Hoping it will solve any similar problems, as this approach can be definitely be extended.&lt;/p&gt;
 
+&lt;blockquote&gt;
+&lt;p&gt;Got featured in &lt;a href=&#34;http://androidweekly.net/issues/issue-221&#34;&gt;AndroidWeekly Issue 221&lt;/a&gt;, thank you for the love&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;p&gt;Comment/Suggest me a better approach, if you know one.&lt;/p&gt;
 
-&lt;p&gt;Keep on crushing code!&lt;/p&gt;
+&lt;p&gt;Keep on crushing code!🤓 😁&lt;/p&gt;
 </description>
     </item>
     
