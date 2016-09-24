@@ -7,8 +7,253 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Sat, 03 Sep 2016 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 24 Sep 2016 10:54:24 +0200</lastBuildDate>
     <atom:link href="http://crushingcode.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Whats in the APK?</title>
+      <link>http://crushingcode.github.io/whats-in-the-apk/</link>
+      <pubDate>Sat, 24 Sep 2016 10:54:24 +0200</pubDate>
+      
+      <guid>http://crushingcode.github.io/whats-in-the-apk/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/header.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If I give you the code of the android app and ask you to provide me information regarding the android &lt;strong&gt;app&lt;/strong&gt; like  &lt;code&gt;minSdkVersion&lt;/code&gt;, &lt;code&gt;targetSdkVersion&lt;/code&gt;, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes. But what if I gave you an android &lt;strong&gt;apk&lt;/strong&gt; file and then ask you to answer for the same 🤔 Its tricky if you try to think at the very first instance.&lt;/p&gt;
+
+&lt;p&gt;I actually ran into such a situation and even though I had know &lt;code&gt;aapt&lt;/code&gt; tool for a long time, it didnot hit my head the very first instance when I had to get the permissions declared inside the &lt;code&gt;apk&lt;/code&gt;. It was a clear I needed to brush up the concepts and follow an efficient approach. This blog post will explain how to do so. Also helpful when you are trying to reverse lookup contents of any other app 🤓&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Ok, the most common way to approach this problem has to be this one&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Going with the definition of an &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Android_application_package&#34;&gt;APK&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Android application package (APK)&lt;/strong&gt; is the package file format used by the Android operating system for distribution and installation of mobile apps and middleware.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;strong&gt;APK&lt;/strong&gt; files are a type of archive file, specifically in &lt;strong&gt;zip&lt;/strong&gt; format packages based on the JAR file format, with .apk as the filename extension.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/apk.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;..hmm so its basically a &lt;em&gt;&lt;strong&gt;ZIP&lt;/strong&gt;&lt;/em&gt; format, so what I can do is rename the extension from &lt;strong&gt;.apk&lt;/strong&gt; to &lt;strong&gt;.zip&lt;/strong&gt; and I should be able extract the contents.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/zip.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/rename.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cool, so we now see what the zip file contain and they are all available for inspection.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/contents.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Well at this point you would think that you have got access to all files so you can give me all the information right away. Well not so quick Mr.AndroidDev 😬&lt;/p&gt;
+
+&lt;p&gt;Go ahead try and open up the AndroidManifest.xml in some text editor to check out its content. This is what you would get&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/androidmanifest.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;..what it basically means is that the AndroidManifest.xml isn&amp;rsquo;t in human readable format anymore. So your chances of reading basic information regarding the apk from the &lt;code&gt;AndroidManifest.xml&lt;/code&gt; goes down the drain 😞&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;..&lt;/p&gt;
+
+&lt;p&gt;..Not really 😋 There are tools to analyze the Android APK and there is one which has been there since the very beginning.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I think its known to all the experinced devs but I am pretty sure a lot of budding as well as seasoned Android Devs have not even heard about it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The tool thats available as part of the Android Build Tool is&lt;/p&gt;
+
+&lt;h4 id=&#34;aapt-android-asset-packaging-tool&#34;&gt;&lt;strong&gt;&lt;code&gt;aapt&lt;/code&gt;&lt;/strong&gt; -  Android Asset Packaging Tool&lt;/h4&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This tool can be used to list, add and remove files in an APK file, package resources, crunching PNG files, etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;First of all, where exactly is this located 🤔&lt;/p&gt;
+
+&lt;p&gt;Good question, its available as part of build tools in your android sdk.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;path_to_android_sdk&amp;gt;/build-tools/&amp;lt;build_tool_version_such_as_24.0.2&amp;gt;/aapt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;..ok so what can it actually do ? From the &lt;code&gt;man&lt;/code&gt; pages of the tool itself&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aapt list&lt;/code&gt; - Listing contents of a ZIP, JAR or APK file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aapt dump&lt;/code&gt; - Dumping specific information from an APK file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aapt package&lt;/code&gt; - Packaging Android resources.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aapt remove&lt;/code&gt; - Removing files from a ZIP, JAR or APK file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aapt add&lt;/code&gt; - Adding files to a ZIP, JAR or APK file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aapt crunch&lt;/code&gt; - Crunching PNG files.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We are interested in &lt;code&gt;aapt list&lt;/code&gt; and &lt;code&gt;aapt dump&lt;/code&gt; specifically as these are what will help us provide &lt;code&gt;apk&lt;/code&gt; information.&lt;/p&gt;
+
+&lt;p&gt;Lets find information that we are looking for directly from the &lt;code&gt;apk&lt;/code&gt; by running the &lt;code&gt;aapt&lt;/code&gt; tool on it.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h5 id=&#34;get-base-information-of-the-apk&#34;&gt;Get base information of the apk&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;aapt dump badging app-debug.apk 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;result&#34;&gt;&amp;gt; Result&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;package: name=&#39;com.example.application&#39; versionCode=&#39;1&#39; versionName=&#39;1.0&#39; platformBuildVersionName=&#39;&#39;
+sdkVersion:&#39;16&#39;
+targetSdkVersion:&#39;24&#39;
+uses-permission: name=&#39;android.permission.WRITE_EXTERNAL_STORAGE&#39;
+uses-permission: name=&#39;android.permission.CAMERA&#39;
+uses-permission: name=&#39;android.permission.VIBRATE&#39;
+uses-permission: name=&#39;android.permission.INTERNET&#39;
+uses-permission: name=&#39;android.permission.RECORD_AUDIO&#39;
+uses-permission: name=&#39;android.permission.READ_EXTERNAL_STORAGE&#39;
+application-label-af:&#39;Example&#39;
+application-label-am:&#39;Example&#39;
+application-label-ar:&#39;Example&#39;
+..
+application-label-zu:&#39;Example&#39;
+application-icon-160:&#39;res/mipmap-mdpi-v4/ic_launcher.png&#39;
+application-icon-240:&#39;res/mipmap-hdpi-v4/ic_launcher.png&#39;
+application-icon-320:&#39;res/mipmap-xhdpi-v4/ic_launcher.png&#39;
+application-icon-480:&#39;res/mipmap-xxhdpi-v4/ic_launcher.png&#39;
+application-icon-640:&#39;res/mipmap-xxxhdpi-v4/ic_launcher.png&#39;
+application: label=&#39;Example&#39; icon=&#39;res/mipmap-mdpi-v4/ic_launcher.png&#39;
+application-debuggable
+launchable-activity: name=&#39;com.example.application.MainActivity&#39;  label=&#39;&#39; icon=&#39;&#39;
+feature-group: label=&#39;&#39;
+  uses-feature: name=&#39;android.hardware.camera&#39;
+  uses-feature-not-required: name=&#39;android.hardware.camera.autofocus&#39;
+  uses-feature-not-required: name=&#39;android.hardware.camera.front&#39;
+  uses-feature-not-required: name=&#39;android.hardware.microphone&#39;
+  uses-feature: name=&#39;android.hardware.faketouch&#39;
+  uses-implied-feature: name=&#39;android.hardware.faketouch&#39; reason=&#39;default feature for all apps&#39;
+main
+other-activities
+supports-screens: &#39;small&#39; &#39;normal&#39; &#39;large&#39; &#39;xlarge&#39;
+supports-any-density: &#39;true&#39;
+locales: &#39;af&#39; &#39;am&#39; &#39;ar&#39; &#39;az-AZ&#39; &#39;be-BY&#39; &#39;bg&#39; &#39;bn-BD&#39; &#39;bs-BA&#39; &#39;ca&#39; &#39;cs&#39; &#39;da&#39; &#39;de&#39; &#39;el&#39; &#39;en-AU&#39; &#39;en-GB&#39; &#39;en-IN&#39; &#39;es&#39; &#39;es-US&#39; &#39;et-EE&#39; &#39;eu-ES&#39; &#39;fa&#39; &#39;fi&#39; &#39;fr&#39; &#39;fr-CA&#39; &#39;gl-ES&#39; &#39;gu-IN&#39; &#39;hi&#39; &#39;hr&#39; &#39;hu&#39; &#39;hy-AM&#39; &#39;in&#39; &#39;is-IS&#39; &#39;it&#39; &#39;iw&#39; &#39;ja&#39; &#39;ka-GE&#39; &#39;kk-KZ&#39; &#39;km-KH&#39; &#39;kn-IN&#39; &#39;ko&#39; &#39;ky-KG&#39; &#39;lo-LA&#39; &#39;lt&#39; &#39;lv&#39; &#39;mk-MK&#39; &#39;ml-IN&#39; &#39;mn-MN&#39; &#39;mr-IN&#39; &#39;ms-MY&#39; &#39;my-MM&#39; &#39;nb&#39; &#39;ne-NP&#39; &#39;nl&#39; &#39;pa-IN&#39; &#39;pl&#39; &#39;pt&#39; &#39;pt-BR&#39; &#39;pt-PT&#39; &#39;ro&#39; &#39;ru&#39; &#39;si-LK&#39; &#39;sk&#39; &#39;sl&#39; &#39;sq-AL&#39; &#39;sr&#39; &#39;sr-Latn&#39; &#39;sv&#39; &#39;sw&#39; &#39;ta-IN&#39; &#39;te-IN&#39; &#39;th&#39; &#39;tl&#39; &#39;tr&#39; &#39;uk&#39; &#39;ur-PK&#39; &#39;uz-UZ&#39; &#39;vi&#39; &#39;zh-CN&#39; &#39;zh-HK&#39; &#39;zh-TW&#39; &#39;zu&#39;
+densities: &#39;160&#39; &#39;240&#39; &#39;320&#39; &#39;480&#39; &#39;640&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;h5 id=&#34;get-list-of-permissions-declared-in-the-androidmanifest-of-the-apk&#34;&gt;Get list of permissions declared in the AndroidManifest of the apk&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;aapt dump permissions app-debug.apk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;result-1&#34;&gt;&amp;gt; Result&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;package: com.example.application
+uses-permission: name=&#39;android.permission.WRITE_EXTERNAL_STORAGE&#39;
+uses-permission: name=&#39;android.permission.CAMERA&#39;
+uses-permission: name=&#39;android.permission.VIBRATE&#39;
+uses-permission: name=&#39;android.permission.INTERNET&#39;
+uses-permission: name=&#39;android.permission.RECORD_AUDIO&#39;
+uses-permission: name=&#39;android.permission.READ_EXTERNAL_STORAGE&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;h5 id=&#34;get-list-of-configurations-for-the-apk&#34;&gt;Get list of configurations for the apk&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;aapt dump configurations app-debug.apk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;result-2&#34;&gt;&amp;gt; Result&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;large-v4
+xlarge-v4
+night-v8
+v11
+v12
+v13
+w820dp-v13
+h720dp-v13
+sw600dp-v13
+v14
+v17
+v18
+v21
+ldltr-v21
+v22
+v23
+port
+land
+mdpi-v4
+ldrtl-mdpi-v17
+hdpi-v4
+ldrtl-hdpi-v17
+xhdpi-v4
+ldrtl-xhdpi-v17
+xxhdpi-v4
+ldrtl-xxhdpi-v17
+xxxhdpi-v4
+ldrtl-xxxhdpi-v17
+ca
+af
+..
+sr
+b+sr+Latn
+...
+sv
+iw
+sw
+bs-rBA
+fr-rCA
+lo-rLA
+...
+kk-rKZ
+uz-rUZ
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;..also try out these&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Print the resource table from the APK.
+aapt dump resources app-debug.apk
+
+# Print the compiled xmls in the given assets.
+aapt dump xmltree app-debug.apk
+
+# Print the strings of the given compiled xml assets.
+aapt dump xmlstrings app-debug.apk
+
+# List contents of Zip-compatible archive.
+aapt list -v -a  app-debug.apk    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;.. as you can see you can easily get the information without even going through the process of unzipping the &lt;code&gt;apk&lt;/code&gt;, but by using the &lt;code&gt;aapt&lt;/code&gt; tool directly on the &lt;code&gt;apk&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is more that you can do , taking more info from the &lt;code&gt;man&lt;/code&gt; pages of the &lt;code&gt;aapt&lt;/code&gt; tool&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;aapt r[emove] [-v] file.{zip,jar,apk} file1 [file2 ...]
+  Delete specified files from Zip-compatible archive.
+  
+aapt a[dd] [-v] file.{zip,jar,apk} file1 [file2 ...]
+  Add specified files to Zip-compatible archive.
+
+aapt c[runch] [-v] -S resource-sources ... -C output-folder ...
+  Do PNG preprocessing and store the results in output folder.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;..I will let you explore these on your own 🙂&lt;/p&gt;
+
+&lt;p&gt;Comment/Suggestions always welcome.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://elinux.org/Android_aapt&#34;&gt;Reference Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you would like to get more of such android tips and tricks, just hop onto my &lt;strong&gt;&lt;a href=&#34;https://github.com/nisrulz/android-tips-tricks&#34;&gt;Android Tips &amp;amp; Tricks&lt;/a&gt;&lt;/strong&gt; github repository. I keep updating it constantly.&lt;/p&gt;
+
+&lt;p&gt;Keep on crushing code!🤓 😁&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Update Dependencies.Code.Repeat.</title>
