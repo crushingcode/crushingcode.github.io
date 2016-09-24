@@ -211,9 +211,9 @@
 
 <p><img src="http://crushingcode.github.io/images/posts/whatsintheapk/header.jpg" alt="header" /></p>
 
-<p>If I give you the code of the android app and ask you to provide me information regarding the android <strong>app</strong> like  <code>minSdkVersion</code>, <code>targetSdkVersion</code>, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes. But what if I gave you an android <strong>apk</strong> file and then ask you to answer for the same 🤔 Its tricky if you try to think at the very first instance.</p>
+<p>If I give you the code of an android app and ask you to provide me information regarding the android <strong>app</strong> like  <code>minSdkVersion</code>, <code>targetSdkVersion</code>, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes. But what if I gave you an android <strong>apk</strong> file and then ask you to answer for the same 🤔 Its tricky if you try to think at the very first instance.</p>
 
-<p>I actually ran into such a situation and even though I had know <code>aapt</code> tool for a long time, it didnot hit my head the very first instance when I had to get the permissions declared inside the <code>apk</code>. It was a clear I needed to brush up the concepts and follow an efficient approach. This blog post will explain how to do so. Also helpful when you are trying to reverse lookup contents of any other app 🤓</p>
+<p>I actually ran into such a situation and even though I had known <code>aapt</code> tool for a long time, it didnot hit my head the very first instance when I had to get the permissions declared inside the <code>apk</code>. It was clear I needed to brush up the concepts and follow an efficient approach. This blog post will explain how to do so. Also helpful when you are trying to reverse lookup contents of any other app 🤓</p>
 
 <p><em><strong>Ok, the most common way to approach this problem has to be this one</strong></em></p>
 
@@ -229,9 +229,9 @@
 
 <p>..hmm so its basically a <em><strong>ZIP</strong></em> format, so what I can do is rename the extension from <strong>.apk</strong> to <strong>.zip</strong> and I should be able extract the contents.</p>
 
-<p><img src="http://crushingcode.github.io/images/posts/whatsintheapk/zip.jpg" alt="header" /></p>
-
 <p><img src="http://crushingcode.github.io/images/posts/whatsintheapk/rename.jpg" alt="header" /></p>
+
+<p><img src="http://crushingcode.github.io/images/posts/whatsintheapk/zip.jpg" alt="header" /></p>
 
 <p>Cool, so we now see what the zip file contain and they are all available for inspection.</p>
 
@@ -239,11 +239,11 @@
 
 <p>Well at this point you would think that you have got access to all files so you can give me all the information right away. Well not so quick Mr.AndroidDev 😬</p>
 
-<p>Go ahead try and open up the AndroidManifest.xml in some text editor to check out its content. This is what you would get</p>
+<p>Go ahead try and open up the <code>AndroidManifest.xml</code> in some text editor to check out its content. This is what you would get</p>
 
 <p><img src="http://crushingcode.github.io/images/posts/whatsintheapk/androidmanifest.jpg" alt="header" /></p>
 
-<p>..what it basically means is that the AndroidManifest.xml isn&rsquo;t in human readable format anymore. So your chances of reading basic information regarding the apk from the <code>AndroidManifest.xml</code> goes down the drain 😞</p>
+<p>..what it basically means is that the <code>AndroidManifest.xml</code> isn&rsquo;t in human readable format anymore. So your chances of reading basic information regarding the apk from the <code>AndroidManifest.xml</code> goes down the drain 😞</p>
 
 <p>&hellip;.</p>
 

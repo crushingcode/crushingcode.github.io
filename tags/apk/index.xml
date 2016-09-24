@@ -20,9 +20,9 @@
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/header.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;If I give you the code of the android app and ask you to provide me information regarding the android &lt;strong&gt;app&lt;/strong&gt; like  &lt;code&gt;minSdkVersion&lt;/code&gt;, &lt;code&gt;targetSdkVersion&lt;/code&gt;, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes. But what if I gave you an android &lt;strong&gt;apk&lt;/strong&gt; file and then ask you to answer for the same 🤔 Its tricky if you try to think at the very first instance.&lt;/p&gt;
+&lt;p&gt;If I give you the code of an android app and ask you to provide me information regarding the android &lt;strong&gt;app&lt;/strong&gt; like  &lt;code&gt;minSdkVersion&lt;/code&gt;, &lt;code&gt;targetSdkVersion&lt;/code&gt;, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes. But what if I gave you an android &lt;strong&gt;apk&lt;/strong&gt; file and then ask you to answer for the same 🤔 Its tricky if you try to think at the very first instance.&lt;/p&gt;
 
-&lt;p&gt;I actually ran into such a situation and even though I had know &lt;code&gt;aapt&lt;/code&gt; tool for a long time, it didnot hit my head the very first instance when I had to get the permissions declared inside the &lt;code&gt;apk&lt;/code&gt;. It was a clear I needed to brush up the concepts and follow an efficient approach. This blog post will explain how to do so. Also helpful when you are trying to reverse lookup contents of any other app 🤓&lt;/p&gt;
+&lt;p&gt;I actually ran into such a situation and even though I had known &lt;code&gt;aapt&lt;/code&gt; tool for a long time, it didnot hit my head the very first instance when I had to get the permissions declared inside the &lt;code&gt;apk&lt;/code&gt;. It was clear I needed to brush up the concepts and follow an efficient approach. This blog post will explain how to do so. Also helpful when you are trying to reverse lookup contents of any other app 🤓&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Ok, the most common way to approach this problem has to be this one&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
@@ -38,9 +38,9 @@
 
 &lt;p&gt;..hmm so its basically a &lt;em&gt;&lt;strong&gt;ZIP&lt;/strong&gt;&lt;/em&gt; format, so what I can do is rename the extension from &lt;strong&gt;.apk&lt;/strong&gt; to &lt;strong&gt;.zip&lt;/strong&gt; and I should be able extract the contents.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/zip.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/rename.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/zip.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cool, so we now see what the zip file contain and they are all available for inspection.&lt;/p&gt;
 
@@ -48,11 +48,11 @@
 
 &lt;p&gt;Well at this point you would think that you have got access to all files so you can give me all the information right away. Well not so quick Mr.AndroidDev 😬&lt;/p&gt;
 
-&lt;p&gt;Go ahead try and open up the AndroidManifest.xml in some text editor to check out its content. This is what you would get&lt;/p&gt;
+&lt;p&gt;Go ahead try and open up the &lt;code&gt;AndroidManifest.xml&lt;/code&gt; in some text editor to check out its content. This is what you would get&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/whatsintheapk/androidmanifest.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;..what it basically means is that the AndroidManifest.xml isn&amp;rsquo;t in human readable format anymore. So your chances of reading basic information regarding the apk from the &lt;code&gt;AndroidManifest.xml&lt;/code&gt; goes down the drain 😞&lt;/p&gt;
+&lt;p&gt;..what it basically means is that the &lt;code&gt;AndroidManifest.xml&lt;/code&gt; isn&amp;rsquo;t in human readable format anymore. So your chances of reading basic information regarding the apk from the &lt;code&gt;AndroidManifest.xml&lt;/code&gt; goes down the drain 😞&lt;/p&gt;
 
 &lt;p&gt;&amp;hellip;.&lt;/p&gt;
 
