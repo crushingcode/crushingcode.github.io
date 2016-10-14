@@ -7,8 +7,370 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Sat, 24 Sep 2016 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 14 Oct 2016 10:54:24 +0200</lastBuildDate>
     <atom:link href="http://crushingcode.github.io/tags/apk/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Do you like to ADB?</title>
+      <link>http://crushingcode.github.io/do-you-like-to-adb/</link>
+      <pubDate>Fri, 14 Oct 2016 10:54:24 +0200</pubDate>
+      
+      <guid>http://crushingcode.github.io/do-you-like-to-adb/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/doyouliketoadb/header.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it. Let me make this clear I am not talking about tests here as thats all related to the code. My focus here is on managing the device/emulator thats paired with your dev environment/system (..and to your IDE - Android Studio , if you still use Eclipse you are simply oblivious to the joys of coding in Android &lt;em&gt;[here is a long blank stare from me to you]&lt;/em&gt; ).&lt;/p&gt;
+
+&lt;p&gt;Technically there is a tool called ADB (Android Debug Bridge) which maintains your connection with your device/emulator and the dev environment/system.&lt;/p&gt;
+
+&lt;p&gt;From the &lt;a href=&#34;https://en.wikipedia.org/wiki/Android_software_development#ADB&#34;&gt;wikipedia&lt;/a&gt;, its described as&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;adb&lt;/strong&gt; is the command line tool provided in the Android SDK package. &lt;strong&gt;adb&lt;/strong&gt; stands for Android Debug Bridge which allows you to communicate with an emulator instance or connected Android-powered device to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Manage the state of an emulator or device.&lt;/li&gt;
+&lt;li&gt;Run shell commands on a device.&lt;/li&gt;
+&lt;li&gt;Manage port forwarding on an emulator or device.&lt;/li&gt;
+&lt;li&gt;Copy files to/from an emulator or device.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ohhk&amp;hellip; that sounds something of use but not convincing enough for you to try and play with it yet. Let me try and put forward some of the problem as a dev you are facing everyday (..and yet no one admits to them whenever it comes up in a conversation 🙄..) and how can we solve this.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;uninstalling-an-app&#34;&gt;Uninstalling an app&lt;/h3&gt;
+
+&lt;p&gt;Oh yeah ..you are used to hitting &lt;strong&gt;Run&lt;/strong&gt; in the IDE (or the keyboard shortcut for the same) and BOOM the apk installs in the device. But what do you do to uninstall the apk ? &lt;strong&gt;[Rolling eyes]&lt;/strong&gt; ohh yeah I know ..you will open up your device/emulator and manually uninstall the app by dragging it to the trash bin in the home screen and hit yes when prompted to uninstall it. Hard ain&amp;rsquo;t it ? Yeah it is.&lt;/p&gt;
+
+&lt;p&gt;ADB can make it as simple as executing just a command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb uninstall &amp;lt;package_name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if you wish to keep the data and cache directory intact but uninstall the app just add &lt;code&gt;-k&lt;/code&gt; as an option to the command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb uninstall [-k] &amp;lt;package_name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;[ ]&lt;/code&gt; means its an optional parameter&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ofcourse you can install an app too via&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb install [-r] [-s] &amp;lt;package_name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the options available to the command are&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-r&lt;/code&gt; : reinstall the app, keeping its data&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-s&lt;/code&gt; : install on SD card instead of internal storage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That looks neat.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;direct-adb-commands-to-specific-devices-when-you-have-multiple-of-those-connected&#34;&gt;Direct ADB commands to specific devices when you have multiple of those connected&lt;/h3&gt;
+
+&lt;p&gt;Ok this one is my favorite 🙃&lt;/p&gt;
+
+&lt;p&gt;So here is the thing. You have like 5-6 devices connected to you dev environment and now you want to do some work with a specific device at a time. Piece of 🍰&lt;/p&gt;
+
+&lt;p&gt;Easy you say, right ? Like you can just fire up your Android Studio and execute the app in some specific device.&lt;/p&gt;
+
+&lt;p&gt;Not so early 😅. Let me complete. You want to execute commands in a certain order 🙄 ..yeah it isn&amp;rsquo;t easy ar you thought before , eh 🤔&lt;/p&gt;
+
+&lt;p&gt;For our example here lets assume we have like 3 devices and 2 emulators running, named as &lt;code&gt;device_1&lt;/code&gt;, &lt;code&gt;device_2&lt;/code&gt;, &lt;code&gt;device_3&lt;/code&gt;, &lt;code&gt;emu_1&lt;/code&gt;, &lt;code&gt;emu_2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our end goal is to be able to execute some adb command on the these devices/emulator in order such as&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;emu_1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;device_3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;device_1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;device_2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;emu_2&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cool ? Now first of all let me give you the magic commands to handle this situation. Lets look at whats available to us&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb -d &amp;lt;command&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What this will do is it will directs command to the only connected USB device. Naice 🙂&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You can also use &lt;code&gt;adb -e &amp;lt;command&amp;gt;&lt;/code&gt; to directs command to the only connected Emulator&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;But we wanna go a step ahead and orchestrate commands in a pattern (..by writting a bash script, obviously). But to do that I need to specifically direct commands to the device I want to control.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb -s &amp;lt;device_id&amp;gt; &amp;lt;command&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Get the device id by using &lt;code&gt;adb devices&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now we are talking 😎. Now the only thing I gotta do is create a bash script something like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+adb -s &amp;lt;emu_1_id&amp;gt; &amp;lt;some_command&amp;gt;
+adb -s &amp;lt;device_3_id&amp;gt; &amp;lt;some_command&amp;gt;
+adb -s &amp;lt;device_1_id&amp;gt; &amp;lt;some_command&amp;gt;
+adb -s &amp;lt;device_2_id&amp;gt; &amp;lt;some_command&amp;gt;
+adb -s &amp;lt;emu_2_id&amp;gt; &amp;lt;some_command&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;where &lt;code&gt;&amp;lt;some_command&amp;gt;&lt;/code&gt; doesnot have to be the same.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;..and&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;save it as &lt;code&gt;execute_cmds_as_symphony.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;make it executable by running &lt;code&gt;chmod +x execute_cmds_as_symphony.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;execute it by running &lt;code&gt;./execute_cmds_as_symphony.sh&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thats all there is. Everytime you wanna run it like this just run the bash script 🤓 😎&lt;/p&gt;
+
+&lt;p&gt;Thats like creating a symphony with your devices , except for the fact its not ..gonna be a symphony in the first place. And its just code executing🤔 But you get my point , right😅&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;connect-wirelessly-with-your-device&#34;&gt;Connect wirelessly with your device&lt;/h3&gt;
+
+&lt;p&gt;Read my post &lt;a href=&#34;http://crushingcode.co/life-without-wires-adb-over-wifi/&#34;&gt;&amp;ldquo;Life without wires : ADB over WiFi&amp;rdquo;&lt;/a&gt; to learn how to set it up.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;device-doesnot-showup-in-the-android-studio-deploy-list&#34;&gt;Device doesnot showup in the Android Studio deploy list&lt;/h3&gt;
+
+&lt;p&gt;There are times when the device would not show up in your IDE. Possible issue could be that adb is not responding.&lt;/p&gt;
+
+&lt;p&gt;To fix that simply kill the server and start it again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Kill the server if it is running
+adb kill-server 
+
+# Start the server
+adb start-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I have seen that you also need to uncheck and then check &lt;strong&gt;ADB Integration&lt;/strong&gt; inside Android Studio as an extra step.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/doyouliketoadb/adbintegration.jpg&#34; alt=&#34;adbintegration&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;to-get-device-information&#34;&gt;To get Device Information&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Prints about the current state of the device : offline | bootloader | device
+adb get-state
+
+# Prints the serial number of the device
+adb get-serialno
+
+# Prints the device path
+adb get-devpath 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;copy-file-to-from-device-emultor&#34;&gt;Copy file to/from device/emultor&lt;/h3&gt;
+
+&lt;p&gt;You can advocate about trying to copy files from your device by opening up some software and then dragging and dropping things onto your desktop. But I am fan of automating things and the above mentioned method is completely fine if you are doing that for one file and only once or twice.&lt;/p&gt;
+
+&lt;p&gt;It changes when you wanted to do the same task again and again. When you want to automate things &lt;code&gt;adb&lt;/code&gt; commands come in handy. You can even add them to a script and run it every time one of the task completes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To push a file/dir to device&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb push &amp;lt;local&amp;gt; &amp;lt;remote&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where &lt;code&gt;&amp;lt;local&amp;gt;&lt;/code&gt; is file in your local system i.e &lt;code&gt;my_image.png&lt;/code&gt; and &lt;code&gt;&amp;lt;remote&amp;gt;&lt;/code&gt; is file location in device/emulator i.e &lt;code&gt;/sdcard/Downloads/my_image.png&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb push ~/Downloads/my_image.png /sdcard/Downloads/my_image.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;To pull a file/dir from device&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb pull &amp;lt;remote&amp;gt; [&amp;lt;local&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where &lt;code&gt;&amp;lt;local&amp;gt;&lt;/code&gt; is file in your local system i.e &lt;code&gt;my_image.png&lt;/code&gt; and &lt;code&gt;&amp;lt;remote&amp;gt;&lt;/code&gt; is file location in device/emulator i.e &lt;code&gt;/sdcard/Downloads/my_image.png&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb pull /sdcard/Downloads/my_image.png my_image.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;acting-as-a-developer-utility-belt&#34;&gt;Acting as a Developer utility-belt&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Generate Public/Private Key&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb keygen &amp;lt;filename&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The private key is stored in &lt;code&gt;&amp;lt;file&amp;gt;&lt;/code&gt;, and the public key is stored in &lt;file&gt;.pub.
+Any existing files are overwritten.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Get a bugreport&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Prints to the standard output
+adb bugreport
+
+# Writes to a file named bugreport.txt
+adb bugreport &amp;gt; bugreport.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Get list of all connected devices&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb devices
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;logging&#34;&gt;Logging&lt;/h3&gt;
+
+&lt;p&gt;Ofcourse this is inbuilt into the IDE , but its worth knowing that its not just a window which you use in Android Studio, but so much more.&lt;/p&gt;
+
+&lt;p&gt;Lets check out its power when used from terminal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Dumps log entries from 3 log buffers: main, events and radio
+adb logcat
+
+# Dumps log entries in long format
+adb logcat -v long
+
+# Dumps log entries into rotated log files on the device
+adb logcat -f /sdcard/Download/Android.log -r 1024 -n 8
+
+# Dumps only error log entries generated from the &amp;quot;AndroidRuntime&amp;quot; process, including Java exceptions
+adb logcat AndroidRuntime:E *:S
+
+# Clears (flushes) the entire log and exits
+adb logcat -c
+
+# Dumps the log to the screen and exits
+adb logcat -d
+
+# Writes log message output to a file. The default is the &amp;quot;stdout - Standard Output&amp;quot;
+adb logcat -f &amp;lt;filename&amp;gt;
+
+# Prints the size of the specified log buffer and exits
+adb logcat -g
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Logcat Format&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To define the format of each log entry that is dumped , you need to set the output format for log messages&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# The default is brief format
+adb logcat -v &amp;lt;format&amp;gt;
+
+# Display priority/tag and the PID of process issuing the message (the default format)
+adb logcat -v brief
+
+# Display PID with the log info 
+adb logcat -v process
+
+# Display the raw log message, with no other metadata fields
+adb logcat -v raw
+
+# Display the date, invocation time, priority/tag, and PID of the process issuing the message
+adb logcat -v time
+
+# Display the priority, tag, and the PID and TID of the thread issuing the message
+adb logcat -v thread
+
+# Display the date, invocation time, priority, tag, and the PID and TID of the thread issuing the message
+adb logcat -v threadtime
+
+# Display all metadata fields and separate messages with a blank lines
+adb logcat -v long
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Filter your log data&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A few people would say that we can always use &lt;code&gt;| grep &amp;quot;filter_text&amp;quot;&lt;/code&gt; appended to the &lt;code&gt;adb logcat&lt;/code&gt;. Well you are right you can , but there are some neat tricks hidden in the actual implementation of logcat and you should look at them too.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb logcat &amp;lt;options&amp;gt; &amp;lt;process-tag&amp;gt;:&amp;lt;priority-code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;When filters are provided, the &amp;ldquo;logcat&amp;rdquo; command will dump log entries that are generated from specified processes with priorities higher than the specified code, plus all log entries that generated from unspecified processes.&lt;/p&gt;
+
+&lt;p&gt;A wildcard character, &amp;ldquo;*&amp;ldquo;, can be used to represent all processes&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;List of all priority codes that can be used in the &amp;ldquo;logcat&amp;rdquo; command:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;V&lt;/code&gt; - Verbose (lowest priority)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;D&lt;/code&gt; - Debug&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;I&lt;/code&gt; - Info (default priority)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;W&lt;/code&gt; - Warning&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;E&lt;/code&gt; - Error&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F&lt;/code&gt; - Fatal&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S&lt;/code&gt; - Silent (highest priority, on which nothing is ever printed)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;to-control-the-device&#34;&gt;To control the device&lt;/h3&gt;
+
+&lt;p&gt;This is pretty well know to people who are into Modding their device. But for people who aren&amp;rsquo;t going to mess with ther device, here is what you can do with &lt;strong&gt;ADB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Remounts the /system partition on the device read-write
+adb remount
+
+# Reboots the device, optionally into the bootloader or recovery program
+adb reboot [bootloader|recovery]
+
+# Reboots the device into the bootloader
+adb reboot-bootloader
+
+# Restarts the adbd daemon with root permissions
+adb root
+
+# Restarts the adbd daemon listening on USB
+adb usb
+
+# Restarts the adbd daemon listening on TCP on the specified port
+adb tcpip &amp;lt;port&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;some-other-base-functionality&#34;&gt;Some other base functionality&lt;/h3&gt;
+
+&lt;p&gt;I am just going to list some more commands , just because well they exist! 😋&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Show help about all commands for adb, check this to get info about more commands in adb
+adb help
+
+# Shows the version number for adb
+adb version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Comment/Suggestions always welcome.&lt;/p&gt;
+
+&lt;p&gt;If you would like to get more of such android tips and tricks, just hop onto my &lt;strong&gt;&lt;a href=&#34;https://github.com/nisrulz/android-tips-tricks&#34;&gt;Android Tips &amp;amp; Tricks&lt;/a&gt;&lt;/strong&gt; github repository. I keep updating it constantly.&lt;/p&gt;
+
+&lt;p&gt;Keep on crushing code!🤓 😁&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Whats in the APK?</title>
