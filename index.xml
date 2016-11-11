@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Crushing C.O.D.E</title>
-    <link>http://crushingcode.github.io/</link>
+    <link>http://crushingcode.github.io/index.xml</link>
     <description>Recent content on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
