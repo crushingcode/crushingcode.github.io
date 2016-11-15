@@ -20,11 +20,11 @@
 
 &lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/doyouliketoadb/header.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it. Let me make this clear I am not talking about tests here as thats all related to the code. My focus here is on managing the device/emulator thats paired with your dev environment/system (..and to your IDE - Android Studio , if you still use Eclipse you are simply oblivious to the joys of coding in Android &lt;em&gt;[here is a long blank stare from me to you]&lt;/em&gt; ).&lt;/p&gt;
+&lt;p&gt;Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it. Let me make this clear I am not talking about tests here as that&amp;rsquo;s all related to the code. My focus here is on managing the device/emulator that&amp;rsquo;s paired with your dev environment/system (..and to your IDE - Android Studio , if you still use Eclipse you are simply oblivious to the joys of coding in Android &lt;em&gt;[here is a long blank stare from me to you]&lt;/em&gt; ).&lt;/p&gt;
 
 &lt;p&gt;Technically there is a tool called ADB (Android Debug Bridge) which maintains your connection with your device/emulator and the dev environment/system.&lt;/p&gt;
 
-&lt;p&gt;From the &lt;a href=&#34;https://en.wikipedia.org/wiki/Android_software_development#ADB&#34;&gt;wikipedia&lt;/a&gt;, its described as&lt;/p&gt;
+&lt;p&gt;From the &lt;a href=&#34;https://en.wikipedia.org/wiki/Android_software_development#ADB&#34;&gt;wikipedia&lt;/a&gt;, it&amp;rsquo;s described as&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;adb&lt;/strong&gt; is the command line tool provided in the Android SDK package. &lt;strong&gt;adb&lt;/strong&gt; stands for Android Debug Bridge which allows you to communicate with an emulator instance or connected Android-powered device to:&lt;/p&gt;
@@ -59,7 +59,7 @@
 &lt;p&gt;&lt;code&gt;[ ]&lt;/code&gt; means its an optional parameter&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Ofcourse you can install an app too via&lt;/p&gt;
+&lt;p&gt;Of Course you can install an app too via&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb install [-r] [-s] &amp;lt;package_name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -79,13 +79,13 @@
 
 &lt;p&gt;Ok this one is my favorite 🙃&lt;/p&gt;
 
-&lt;p&gt;So here is the thing. You have like 5-6 devices connected to you dev environment and now you want to do some work with a specific device at a time. Piece of 🍰&lt;/p&gt;
+&lt;p&gt;So here is the thing. You have like 5-6 devices connected to your dev environment and now you want to do some work with a specific device at a time. Piece of 🍰&lt;/p&gt;
 
 &lt;p&gt;Easy you say, right ? Like you can just fire up your Android Studio and execute the app in some specific device.&lt;/p&gt;
 
 &lt;p&gt;Not so early 😅. Let me complete. You want to execute commands in a certain order 🙄 ..yeah it isn&amp;rsquo;t easy ar you thought before , eh 🤔&lt;/p&gt;
 
-&lt;p&gt;For our example here lets assume we have like 3 devices and 2 emulators running, named as &lt;code&gt;device_1&lt;/code&gt;, &lt;code&gt;device_2&lt;/code&gt;, &lt;code&gt;device_3&lt;/code&gt;, &lt;code&gt;emu_1&lt;/code&gt;, &lt;code&gt;emu_2&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For our example here let&amp;rsquo;s assume we have like 3 devices and 2 emulators running, named as &lt;code&gt;device_1&lt;/code&gt;, &lt;code&gt;device_2&lt;/code&gt;, &lt;code&gt;device_3&lt;/code&gt;, &lt;code&gt;emu_1&lt;/code&gt;, &lt;code&gt;emu_2&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Our end goal is to be able to execute some adb command on the these devices/emulator in order such as&lt;/p&gt;
 
@@ -97,7 +97,7 @@
 &lt;li&gt;&lt;code&gt;emu_2&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Cool ? Now first of all let me give you the magic commands to handle this situation. Lets look at whats available to us&lt;/p&gt;
+&lt;p&gt;Cool ? Now first of all let me give you the magic commands to handle this situation. Lets look at what&amp;rsquo;s available to us&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb -d &amp;lt;command&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -108,7 +108,7 @@
 &lt;p&gt;You can also use &lt;code&gt;adb -e &amp;lt;command&amp;gt;&lt;/code&gt; to directs command to the only connected Emulator&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;But we wanna go a step ahead and orchestrate commands in a pattern (..by writting a bash script, obviously). But to do that I need to specifically direct commands to the device I want to control.&lt;/p&gt;
+&lt;p&gt;But we wanna go a step ahead and orchestrate commands in a pattern (..by writing a bash script, obviously). But to do that I need to specifically direct commands to the device I want to control.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adb -s &amp;lt;device_id&amp;gt; &amp;lt;command&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -129,7 +129,7 @@ adb -s &amp;lt;emu_2_id&amp;gt; &amp;lt;some_command&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;where &lt;code&gt;&amp;lt;some_command&amp;gt;&lt;/code&gt; doesnot have to be the same.&lt;/p&gt;
+&lt;p&gt;where &lt;code&gt;&amp;lt;some_command&amp;gt;&lt;/code&gt; does not have to be the same.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;..and&lt;/p&gt;
@@ -140,9 +140,9 @@ adb -s &amp;lt;emu_2_id&amp;gt; &amp;lt;some_command&amp;gt;
 &lt;li&gt;execute it by running &lt;code&gt;./execute_cmds_as_symphony.sh&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Thats all there is. Everytime you wanna run it like this just run the bash script 🤓 😎&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s all there is. Everytime you wanna run it like this just run the bash script 🤓 😎&lt;/p&gt;
 
-&lt;p&gt;Thats like creating a symphony with your devices , except for the fact its not ..gonna be a symphony in the first place. And its just code executing🤔 But you get my point , right😅&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s like creating a symphony with your devices , except for the fact it&amp;rsquo;s not ..gonna be a symphony in the first place. And its just code executing🤔 But you get my point , right😅&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -152,7 +152,7 @@ adb -s &amp;lt;emu_2_id&amp;gt; &amp;lt;some_command&amp;gt;
 
 &lt;hr /&gt;
 
-&lt;h3 id=&#34;device-doesnot-showup-in-the-android-studio-deploy-list&#34;&gt;Device doesnot showup in the Android Studio deploy list&lt;/h3&gt;
+&lt;h3 id=&#34;device-does-not-show-up-in-the-android-studio-deploy-list&#34;&gt;Device does not show up in the Android Studio deploy list&lt;/h3&gt;
 
 &lt;p&gt;There are times when the device would not show up in your IDE. Possible issue could be that adb is not responding.&lt;/p&gt;
 
@@ -187,7 +187,7 @@ adb get-devpath
 
 &lt;hr /&gt;
 
-&lt;h3 id=&#34;copy-file-to-from-device-emultor&#34;&gt;Copy file to/from device/emultor&lt;/h3&gt;
+&lt;h3 id=&#34;copy-file-to-from-device-emulator&#34;&gt;Copy file to/from device/emulator&lt;/h3&gt;
 
 &lt;p&gt;You can advocate about trying to copy files from your device by opening up some software and then dragging and dropping things onto your desktop. But I am fan of automating things and the above mentioned method is completely fine if you are doing that for one file and only once or twice.&lt;/p&gt;
 
@@ -227,7 +227,7 @@ adb get-devpath
 Any existing files are overwritten.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Get a bugreport&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Get a bug report&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Prints to the standard output
 adb bugreport
@@ -243,7 +243,7 @@ adb bugreport &amp;gt; bugreport.txt
 
 &lt;h3 id=&#34;logging&#34;&gt;Logging&lt;/h3&gt;
 
-&lt;p&gt;Ofcourse this is inbuilt into the IDE , but its worth knowing that its not just a window which you use in Android Studio, but so much more.&lt;/p&gt;
+&lt;p&gt;Of Course this is inbuilt into the IDE , but its worth knowing that it&amp;rsquo;s not just a window which you use in Android Studio, but so much more.&lt;/p&gt;
 
 &lt;p&gt;Lets check out its power when used from terminal&lt;/p&gt;
 
@@ -330,7 +330,7 @@ adb logcat -v long
 
 &lt;h3 id=&#34;to-control-the-device&#34;&gt;To control the device&lt;/h3&gt;
 
-&lt;p&gt;This is pretty well know to people who are into Modding their device. But for people who aren&amp;rsquo;t going to mess with ther device, here is what you can do with &lt;strong&gt;ADB&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is pretty well know to people who are into Modding their device. But for people who aren&amp;rsquo;t going to mess with their device, here is what you can do with &lt;strong&gt;ADB&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Remounts the /system partition on the device read-write
 adb remount
@@ -369,6 +369,9 @@ adb version
 &lt;p&gt;If you would like to get more of such android tips and tricks, just hop onto my &lt;strong&gt;&lt;a href=&#34;https://github.com/nisrulz/android-tips-tricks&#34;&gt;Android Tips &amp;amp; Tricks&lt;/a&gt;&lt;/strong&gt; github repository. I keep updating it constantly.&lt;/p&gt;
 
 &lt;p&gt;Keep on crushing code!🤓 😁&lt;/p&gt;
+
+&lt;p&gt;P.S. : This post is also published on &lt;a href=&#34;https://medium.com/@nisrulz/do-you-like-to-adb-fcae3655b9c8#.e4y1a7km5&#34;&gt;medium.&lt;/a&gt;
+I would like to mention that &lt;a href=&#34;https://twitter.com/pbreault&#34;&gt;@pbreault&lt;/a&gt; wrote a plugin for Android Studio and Intellij IDEA called &lt;a href=&#34;https://plugins.jetbrains.com/plugin/7380&#34;&gt;ADB Idea&lt;/a&gt; &lt;a href=&#34;https://github.com/pbreault/adb-idea&#34;&gt;[Github]&lt;/a&gt;, which allows you to do some of the common and straightforward interactions with ADB inside IntelliJ platform i.e Android Studio. Do check it out too 🙂&lt;/p&gt;
 </description>
     </item>
     
