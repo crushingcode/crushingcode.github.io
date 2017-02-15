@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://crushingcode.github.io/</loc>
-    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://crushingcode.github.io/rewriting-the-history/</loc>
     <lastmod>2016-11-18T10:54:24+02:00</lastmod>
   </url>
@@ -69,6 +64,209 @@
   <url>
     <loc>http://crushingcode.github.io/life-without-wires-adb-over-wifi/</loc>
     <lastmod>2015-07-09T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/aapt/</loc>
+    <lastmod>2016-09-24T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/adb/</loc>
+    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/android/</loc>
+    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/apk/</loc>
+    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/artifact/</loc>
+    <lastmod>2016-02-16T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/build/</loc>
+    <lastmod>2015-07-21T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/commit/</loc>
+    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/conflict/</loc>
+    <lastmod>2016-05-02T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/</loc>
+    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/debugging/</loc>
+    <lastmod>2015-07-09T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/dependency/</loc>
+    <lastmod>2016-09-03T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/fun/</loc>
+    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/git/</loc>
+    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/github/</loc>
+    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/gradle/</loc>
+    <lastmod>2016-09-03T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/history/</loc>
+    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/information/</loc>
+    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/issue/</loc>
+    <lastmod>2016-05-02T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/javadoc/</loc>
+    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/jcenter/</loc>
+    <lastmod>2016-07-12T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/jitpack/</loc>
+    <lastmod>2016-07-29T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/library/</loc>
+    <lastmod>2016-07-29T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/maven/</loc>
+    <lastmod>2016-02-16T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/mavencentral/</loc>
+    <lastmod>2016-07-17T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/opensource/</loc>
+    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/post/</loc>
+    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/private/</loc>
+    <lastmod>2015-08-03T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/project/</loc>
+    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/publish/</loc>
+    <lastmod>2016-07-29T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/repository/</loc>
+    <lastmod>2016-02-16T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/solution/</loc>
+    <lastmod>2016-05-02T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/tools/</loc>
+    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/wifi/</loc>
+    <lastmod>2015-07-09T10:54:24+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

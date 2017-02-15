@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Crushing C.O.D.E</title>
+    <title>Android on Crushing C.O.D.E</title>
     <link>http://crushingcode.github.io/tags/android/index.xml</link>
-    <description>Recent content on Crushing C.O.D.E</description>
+    <description>Recent content in Android on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2015</copyright>
@@ -932,7 +932,7 @@ git push origin 1.0
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;http://crushingcode.github.io/publish-your-android-library-via-jcenter/&#34;&gt;Guide to publishing your Android Library via Jcenter/Bintray&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#&#34;&gt;Guide to publishing your Android Library via MavenCentral&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Guide to publishing your Android Library via JitPack (..todo)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://crushingcode.github.io/publish-your-android-library-via-jitpack/&#34;&gt;Guide to publishing your Android Library via JitPack&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;The first step need you to create and build your Android &amp;ldquo;Awesome&amp;rdquo; Library and can be read in the &lt;a href=&#34;http://crushingcode.github.io/publish-your-android-library-via-jcenter/&#34;&gt;first post of this series here&lt;/a&gt;. If you have not done so , then please go ahead and read it up.&lt;/p&gt;
@@ -1381,8 +1381,8 @@ dependencies {
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;#&#34;&gt;Guide to publishing your Android Library via Jcenter/Bintray&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Guide to publishing your Android Library via MavenCentral (..todo)&lt;/li&gt;
-&lt;li&gt;Guide to publishing your Android Library via JitPack (..todo)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://crushingcode.github.io/publish-your-android-library-via-mavencentral/&#34;&gt;Guide to publishing your Android Library via MavenCentral&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://crushingcode.github.io/publish-your-android-library-via-jitpack/&#34;&gt;Guide to publishing your Android Library via JitPack&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
