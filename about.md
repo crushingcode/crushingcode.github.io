@@ -18,9 +18,9 @@ permalink: /about/
     "email": "nisrulz@gmail.com",
     "phone": "+91-8800616269",
     "address": "Gurgaon, India",
-    "about": "Software Engineer (3+ yrs experience) working constantly 
-    in the field of Android SDK development, Audio Engineering and 
-    Interaction Design. Avid dreamer, doodler and a caffeine dependent 
+    "about": "Software Engineer (3+ yrs experience) working constantly
+    in the field of Android SDK development, Audio Engineering and
+    Interaction Design. Avid dreamer, doodler and a caffeine dependent
     life-form. Keen observer of interfaces and their design. FOSS lover.
     Recommended by 4 out of 5 people that recommend things.",
     "latitude": "28.446394",
@@ -39,7 +39,7 @@ permalink: /about/
         "stackoverflow": "radix",
         "github": "nisrulz",
         "dribbble": "nisrulz",
-        "blog" : "crushingcode.co"
+        "blog" : "crushingcode.nisrulz.com"
       },
     "hobbies": ["doodle", "aesthete","dance", "soccer"],
     "greeting": "Hello, World! You have 2.6 projects to finish..",
@@ -62,4 +62,3 @@ permalink: /about/
 <a  style="text-decoration: none; color: white;" class="about-link" href="https://plus.google.com/+NishantSrivastava26" target="_blank">Google +</a>
 <a  style="text-decoration: none; color: white;" class="about-link" href="https://www.facebook.com/NishantRulez" target="_blank">Facebook</a>
 <a  style="text-decoration: none; color: white;" class="about-link" href="https://codepen.io/nisrulz/" target="_blank">Codepen</a>
-
