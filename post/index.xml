@@ -299,7 +299,7 @@ adb -s &amp;lt;emu_2_id&amp;gt; &amp;lt;some_command&amp;gt;
 
 &lt;h3 id=&#34;connect-wirelessly-with-your-device&#34;&gt;Connect wirelessly with your device&lt;/h3&gt;
 
-&lt;p&gt;Read my post &lt;a href=&#34;http://crushingcode.co/life-without-wires-adb-over-wifi/&#34;&gt;&amp;ldquo;Life without wires : ADB over WiFi&amp;rdquo;&lt;/a&gt; to learn how to set it up.&lt;/p&gt;
+&lt;p&gt;Read my post &lt;a href=&#34;http://crushingcode.github.io/life-without-wires-adb-over-wifi/&#34;&gt;&amp;ldquo;Life without wires : ADB over WiFi&amp;rdquo;&lt;/a&gt; to learn how to set it up.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1817,7 +1817,7 @@ compile &#39;com.github.&amp;lt;username&amp;gt;:&amp;lt;artifact_name&amp;gt;:&
 
 &lt;p&gt;You just learned how to use artifacts from your own github account as a maven repository and in essence bypassed the complexity of getting artifacts into the Maven Central/Jcenter.&lt;/p&gt;
 
-&lt;p&gt;For reference you can have a look at my own &lt;a href=&#34;http://crushingcode.co/mavenrepo/&#34;&gt;maven repository&lt;/a&gt; on &lt;a href=&#34;https://github.com/nisrulz/mavenrepo&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For reference you can have a look at my own &lt;a href=&#34;http://crushingcode.github.io/mavenrepo/&#34;&gt;maven repository&lt;/a&gt; on &lt;a href=&#34;https://github.com/nisrulz/mavenrepo&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;However as you would see this is a very limiting way of accessing artifacts.
 The developer is supposed to include your &lt;code&gt;maven url&lt;/code&gt; under &lt;code&gt;repository&lt;/code&gt; section which is &amp;hellip;a bit of extra work , right ?&lt;/p&gt;

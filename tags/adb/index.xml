@@ -147,7 +147,7 @@ adb -s &amp;lt;emu_2_id&amp;gt; &amp;lt;some_command&amp;gt;
 
 &lt;h3 id=&#34;connect-wirelessly-with-your-device&#34;&gt;Connect wirelessly with your device&lt;/h3&gt;
 
-&lt;p&gt;Read my post &lt;a href=&#34;http://crushingcode.co/life-without-wires-adb-over-wifi/&#34;&gt;&amp;ldquo;Life without wires : ADB over WiFi&amp;rdquo;&lt;/a&gt; to learn how to set it up.&lt;/p&gt;
+&lt;p&gt;Read my post &lt;a href=&#34;http://crushingcode.github.io/life-without-wires-adb-over-wifi/&#34;&gt;&amp;ldquo;Life without wires : ADB over WiFi&amp;rdquo;&lt;/a&gt; to learn how to set it up.&lt;/p&gt;
 
 &lt;hr /&gt;
 
