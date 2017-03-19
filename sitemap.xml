@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://crushingcode.github.io/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</loc>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://crushingcode.github.io/rewriting-the-history/</loc>
     <lastmod>2016-11-18T10:54:24+02:00</lastmod>
   </url>
@@ -80,7 +85,7 @@
   
   <url>
     <loc>http://crushingcode.github.io/tags/android/</loc>
-    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -116,7 +121,7 @@
   
   <url>
     <loc>http://crushingcode.github.io/</loc>
-    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -133,8 +138,20 @@
   </url>
   
   <url>
+    <loc>http://crushingcode.github.io/tags/detection/</loc>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://crushingcode.github.io/tags/fun/</loc>
     <lastmod>2016-05-15T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/gesture/</loc>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -194,7 +211,7 @@
   
   <url>
     <loc>http://crushingcode.github.io/tags/library/</loc>
-    <lastmod>2016-07-29T10:54:24+02:00</lastmod>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -218,7 +235,7 @@
   
   <url>
     <loc>http://crushingcode.github.io/post/</loc>
-    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -243,6 +260,18 @@
   <url>
     <loc>http://crushingcode.github.io/tags/repository/</loc>
     <lastmod>2016-02-16T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/sdk/</loc>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/sensor/</loc>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   

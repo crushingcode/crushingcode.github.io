@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" I could not find a simple Gesture Detection android library, so I built one &middot;  Crushing C.O.D.E" />
+  	<meta property="og:site_name" content="Crushing C.O.D.E" />
+  	<meta property="og:url" content="http://crushingcode.github.io/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2017-02-12T10:54:24&#43;02:00" />
+
+    
+    <meta property="og:article:tag" content="android" />
+    
+    <meta property="og:article:tag" content="library" />
+    
+    <meta property="og:article:tag" content="sdk" />
+    
+    <meta property="og:article:tag" content="sensor" />
+    
+    <meta property="og:article:tag" content="gesture" />
+    
+    <meta property="og:article:tag" content="detection" />
+    
+    
+
+  <title>
+     I could not find a simple Gesture Detection android library, so I built one &middot;  Crushing C.O.D.E
+  </title>
+
+    <meta name="description" content="43 72 75 73 68 69 6e 67 20 43 2e 4f 2e 44 2e 45" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://crushingcode.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://crushingcode.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://crushingcode.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://crushingcode.github.io/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
+
+
+    
+      
+          <link href="http://crushingcode.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Crushing C.O.D.E" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.18.1" />
+
+    <link rel="canonical" href="http://crushingcode.github.io/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53824796-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+
+        
+            
+            <li class="nav-opened" role="presentation">
+              <a href="http://crushingcode.github.io/">Home</a>
+            </li>
+        
+            <b>Follow me 🚀<b>
+            <li class="nav-opened" role="presentation">
+              <a href="https://github.com/nisrulz">Github</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+              <a href="https://twitter.com/nisrulz">Twitter</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+              <a href="https://dribbble.com/nisrulz">Dribbble</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+              <a href="http://stackoverflow.com/users/2745762/radix">Stackoverflow</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+              <a href="https://slides.com/nisrulz">Slides</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+              <a href="https://www.behance.net/nisrulz">Behance</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+              <a href="https://codepen.io/nisrulz/">Codepen</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+              <a href="https://www.quora.com/profile/Nishant-Rulez">Quora</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+              <a href="https://speakerdeck.com/nisrulz">SpeakerDeck</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+              <a href="https://android-arsenal.com/user/nisrulz">Android Arsenal</a>
+            </li>
+        
+            <b>Like my work? ☺️</b>
+            <li class="nav-opened" role="presentation">
+              <a href="https://www.paypal.me/nisrulz/5">Buy me a Coffee</a>
+            </li>
+        
+            <b>Contact Me ✉️</b>
+            <li class="nav-opened" role="presentation">
+              <a href="mailto:nisrulz@gmail.com?Subject=Heyo%20CodeCrusher"> Mail</a>
+            </li>
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="http://crushingcode.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="http://crushingcode.github.io/"><img src="http://crushingcode.github.io/images/author.jpg" alt="Home" /></a>
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">I could not find a simple Gesture Detection android library, so I built one</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+        
+        
+            
+            
+        
+
+        
+            Nishant Srivastava
+        
+          <time class="post-date" datetime="2017-02-12T10:54:24&#43;02:00">
+            Feb 12, 2017
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://crushingcode.github.io/tags/android/">#android</a></span>
+         
+          <span class="post-tag small"><a href="http://crushingcode.github.io/tags/library/">#library</a></span>
+         
+          <span class="post-tag small"><a href="http://crushingcode.github.io/tags/sdk/">#sdk</a></span>
+         
+          <span class="post-tag small"><a href="http://crushingcode.github.io/tags/sensor/">#sensor</a></span>
+         
+          <span class="post-tag small"><a href="http://crushingcode.github.io/tags/gesture/">#gesture</a></span>
+         
+          <span class="post-tag small"><a href="http://crushingcode.github.io/tags/detection/">#detection</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <br/>
+      
+
+<p>While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the <code>SensorManager</code> and getting access to the <code>SensorEvent</code>, plus the extra logic to detect the gesture. At first, it was just fine to do that since I was a beginner around that time. Then soon I got weary of the whole boilerplate. Around this time I started looking for a solution like an android library which would help me avoid all that boilerplate as well as enable me to maintain my code properly.</p>
+
+<h3 id="problem">Problem</h3>
+
+<p>Well, the problem at hand is basically the boilerplate code and the need to maintain your code. Duplicating code across projects and remembering the logic for each gesture was bound to end up in one of the projects in some form of error. It was no doubt inefficient and very repetitive. I was looking for a solution to all this because as Software Engineers we all strive to automate tasks or remove the need for duplicating code. As Douglas Crockford has said</p>
+
+<blockquote>
+<p>“Code reuse is the Holy Grail of Software Engineering.”</p>
+</blockquote>
+
+<p>What was disappointing was that everything available was either too complex in terms of implementation or was very limiting.
+<strong>..and that’s when I decided to write my own Android Library, Sensey.</strong></p>
+
+<p><img src="http://crushingcode.github.io/images/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/header.png" alt="header" /></p>
+
+<p><strong>Sensey</strong> was born out of a need to be able to make Gesture Detection in android as simple as it can get. Not everyone needs to look up <code>x</code>, <code>y</code>, <code>z</code> values of <strong><em>Accelerometer</em></strong> or <code>Azimuth</code>, <code>Pitch</code> and <code>Roll</code> values of <strong><em>Orientation Sensor</em></strong>*. There are other devs who only wish to detect if a certain Gesture was detected or not (period).</p>
+
+<p>So when I set out to build <strong>Sensey</strong>, I had a very clear mindset that I want it to be exactly that — simple and clean.
+When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. Since I couldn’t find the solution for myself in the first place, I guessed (or assumed) that at least a few devs in the community would be in the same boat as me and thus from the start I was sure to make it open sourced (<a href="https://github.com/nisrulz/sensey">You can check it out on Github</a>).</p>
+
+<p><img src="http://crushingcode.github.io/images/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/sampleapp.png" alt="sample app" /></p>
+
+<p>I recently released the version <code>1.6.0</code> of <strong>Sensey</strong> and you can tell that it has come a long way from what it was in version <code>1.0</code>. Let’s walk through the process of integrating Sensey.It is super simple to integrate Sensey in your current android project.</p>
+
+<p>Simply add the below to your build.gradle file</p>
+
+<pre><code class="language-gradle">compile 'com.github.nisrulz:sensey:1.6.0'
+</code></pre>
+
+<p>..sync your gradle and then initialize Sensey in your activity</p>
+
+<pre><code class="language-java">Sensey.getInstance().init(context);
+</code></pre>
+
+<p>That’s it! Sensey at this point is integrated into your app. Now based on what kind of Gesture you want to detect, you will need to start and stop detectors provided by Sensey.</p>
+
+<p>Say for the sake of a simple example, if we wanted to detect a Shake Gesture. All you need to do is</p>
+
+<ul>
+<li>Create an instance of ShakeListener</li>
+</ul>
+
+<pre><code class="language-java">ShakeDetector.ShakeListener shakeListener=new ShakeDetector.ShakeListener() {
+    @Override public void onShakeDetected() {
+       // Shake detected, do something
+   }
+   @Override public void onShakeStopped() {
+       // Shake stopped, do something
+   }
+};
+</code></pre>
+
+<p>Now to start listening for Shake gesture, pass the instance <code>shakeListener</code> to <code>startShakeDetection()</code> function</p>
+
+<pre><code class="language-java">Sensey.getInstance().startShakeDetection(shakeListener);
+</code></pre>
+
+<p>To stop listening for Shake gesture, pass the instance <code>shakeListener</code> to <code>stopShakeDetection()</code> function</p>
+
+<pre><code class="language-java">Sensey.getInstance().stopShakeDetection(shakeListener);
+</code></pre>
+
+<p>Yup, that’s about all it takes to know if a shake gesture was performed and when it stopped.</p>
+
+<p>Let’s check out the complete list of gesture detectors Sensey provides</p>
+
+<h4 id="flip-detector">Flip Detector</h4>
+
+<p>Sensey can detect if your device facing up or facing down. Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#flip">here</a>.</p>
+
+<h4 id="light-detector">Light Detector</h4>
+
+<p>Sensey can detect if your device in a position where it is receiving any light or not. Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#light">here</a></p>
+
+<h4 id="orientation-detector">Orientation Detector</h4>
+
+<p>Sensey can detect if your device’s top side is up or bottom side is up. It can tell if your device’s left side is up vs right side being up. Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#orientation">here</a>.</p>
+
+<h4 id="proximity-detector">Proximity Detector</h4>
+
+<p>Sensey can detect if there is an object in the proximity of the device i.e either it is far or near to the device. Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#proximity">here</a>.</p>
+
+<h4 id="shake-detector">Shake Detector</h4>
+
+<p>Detects a Shake gesture performed on the device and also when the gesture stops.Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#shake">here</a>.</p>
+
+<h4 id="wave-detector">Wave Detector</h4>
+
+<p>This one is a simple implementation. It uses proximity sensor with timing to detect if a hand wave gesture is performed in front of the device screen. Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#wave">here</a>.</p>
+
+<h4 id="chop-detector">Chop Detector</h4>
+
+<p>Added in release 1.6.0 this one is brand new. It allows you to detect if a Chop gesture is performed with the device. Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#chop">here</a>.</p>
+
+<h4 id="wrist-twist-detector">Wrist Twist Detector</h4>
+
+<p>Added in release 1.6.0 this one is another brand new detector. This one allows you to detect if the wrist was twisted in a circular manner while holding the device. Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#wristtwist">here</a>.</p>
+
+<h4 id="movement-detector">Movement Detector</h4>
+
+<p>Another brand new detector added in release 1.6.0, it allows you to know if the device was moved or not. Once moved, it will also detect when the device becomes stationary. Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#movement">here</a>.</p>
+
+<h4 id="sound-level-detector">Sound Level Detector</h4>
+
+<p>Another brand new detector added in release 1.6.0, it allows you to measure the loudness of sound in the environment around the device (calculated on a scale of dB i.e decibel).Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#soundlevel">here</a>.</p>
+
+<h4 id="pinch-scale-detector">Pinch Scale Detector</h4>
+
+<p>Sensey can use this detector to know if the user is executing a pinch scale in or out gesture on the touch screen. It will also be able to detect when the scale gesture was stopped. Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#pinchscale">here</a>.</p>
+
+<h4 id="touch-type-detector">Touch Type Detector</h4>
+
+<p>This one can do a lot of things, you can choose which one to use or not to use. It can detect when someone on the device screen does the following:
+- Single Tap
+- Double Tap
+- Two Finger Tap
+- Three Finger Tap
+- Scroll Up, Down, Left or Right
+- Swipe Left or Right
+- Long Press</p>
+
+<p>Check out the implementation <a href="https://github.com/nisrulz/sensey/wiki/Usage#touchtype">here</a>.</p>
+
+<p>Phew! That’s a lot of gesture detectors packed inside one android library. Well, the list will keep on growing when more gestures get implemented in future releases. The core focus though would always remain the same,</p>
+
+<blockquote>
+<p>simplicity over complexity and ease of use.</p>
+</blockquote>
+
+<h3 id="who-is-it-for">Who is it for</h3>
+
+<p>For people who simply want to detect gesture as an event.</p>
+
+<h3 id="who-is-it-not-for">Who is it not for</h3>
+
+<p>For anyone who wishes to get more advance and wants to tap into the raw SensorEvent values.</p>
+
+<p>That said, the android library isn’t perfect and I would love it if you can try it out and file <a href="https://github.com/nisrulz/sensey/issues">issues</a> on Github to make it better.</p>
+
+<p><a href="https://github.com/nisrulz/sensey">Check out Sensey on Github (Star the repo if you find it useful)</a></p>
+
+<p>If you have suggestions, please let me know in the comment section.</p>
+
+<p>Checkout my <a href="https://github.com/nisrulz">Github</a> or simply follow me on <a href="https://twitter.com/nisrulz">Twitter</a> and keep on crushing code!🤓 😁</p>
+
+<p>P.S. : This post is also published on <a href="https://android.jlelse.eu/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one-334c0a307c16">medium.</a></p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://crushingcode.github.io/" style="background-image: url(http://crushingcode.github.io/images/author.jpg)"><span class="hidden">Nishant Srivastava's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://crushingcode.github.io/">Nishant Srivastava</a></h4>
+  
+  <p>Creative sleeper. Avid dreamer.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Gurgaon, India</span>
+    <span class="author-link icon-link"><a href="https://about.me/nisrulz">https://about.me/nisrulz</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=I%20could%20not%20find%20a%20simple%20Gesture%20Detection%20android%20library%2c%20so%20I%20built%20one&amp;url=http%3a%2f%2fcrushingcode.github.io%2fi-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fcrushingcode.github.io%2fi-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fcrushingcode.github.io%2fi-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'crushingcode';
+  var disqus_url = 'http:\/\/crushingcode.github.io\/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one\/';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Crushing C.O.D.E</a> All rights reserved - 2015</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://crushingcode.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="http://crushingcode.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://crushingcode.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

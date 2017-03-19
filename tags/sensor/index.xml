@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sensor on Crushing C.O.D.E</title>
+    <link>http://crushingcode.github.io/tags/sensor/index.xml</link>
+    <description>Recent content in Sensor on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <atom:link href="http://crushingcode.github.io/tags/sensor/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>I could not find a simple Gesture Detection android library, so I built one</title>
+      <link>http://crushingcode.github.io/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
+      <pubDate>Sun, 12 Feb 2017 10:54:24 +0200</pubDate>
+      
+      <guid>http://crushingcode.github.io/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
+      <description>
+
+&lt;p&gt;While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the &lt;code&gt;SensorManager&lt;/code&gt; and getting access to the &lt;code&gt;SensorEvent&lt;/code&gt;, plus the extra logic to detect the gesture. At first, it was just fine to do that since I was a beginner around that time. Then soon I got weary of the whole boilerplate. Around this time I started looking for a solution like an android library which would help me avoid all that boilerplate as well as enable me to maintain my code properly.&lt;/p&gt;
+
+&lt;h3 id=&#34;problem&#34;&gt;Problem&lt;/h3&gt;
+
+&lt;p&gt;Well, the problem at hand is basically the boilerplate code and the need to maintain your code. Duplicating code across projects and remembering the logic for each gesture was bound to end up in one of the projects in some form of error. It was no doubt inefficient and very repetitive. I was looking for a solution to all this because as Software Engineers we all strive to automate tasks or remove the need for duplicating code. As Douglas Crockford has said&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Code reuse is the Holy Grail of Software Engineering.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What was disappointing was that everything available was either too complex in terms of implementation or was very limiting.
+&lt;strong&gt;..and that’s when I decided to write my own Android Library, Sensey.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/header.png&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sensey&lt;/strong&gt; was born out of a need to be able to make Gesture Detection in android as simple as it can get. Not everyone needs to look up &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;, &lt;code&gt;z&lt;/code&gt; values of &lt;strong&gt;&lt;em&gt;Accelerometer&lt;/em&gt;&lt;/strong&gt; or &lt;code&gt;Azimuth&lt;/code&gt;, &lt;code&gt;Pitch&lt;/code&gt; and &lt;code&gt;Roll&lt;/code&gt; values of &lt;strong&gt;&lt;em&gt;Orientation Sensor&lt;/em&gt;&lt;/strong&gt;*. There are other devs who only wish to detect if a certain Gesture was detected or not (period).&lt;/p&gt;
+
+&lt;p&gt;So when I set out to build &lt;strong&gt;Sensey&lt;/strong&gt;, I had a very clear mindset that I want it to be exactly that — simple and clean.
+When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. Since I couldn’t find the solution for myself in the first place, I guessed (or assumed) that at least a few devs in the community would be in the same boat as me and thus from the start I was sure to make it open sourced (&lt;a href=&#34;https://github.com/nisrulz/sensey&#34;&gt;You can check it out on Github&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/sampleapp.png&#34; alt=&#34;sample app&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I recently released the version &lt;code&gt;1.6.0&lt;/code&gt; of &lt;strong&gt;Sensey&lt;/strong&gt; and you can tell that it has come a long way from what it was in version &lt;code&gt;1.0&lt;/code&gt;. Let’s walk through the process of integrating Sensey.It is super simple to integrate Sensey in your current android project.&lt;/p&gt;
+
+&lt;p&gt;Simply add the below to your build.gradle file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;compile &#39;com.github.nisrulz:sensey:1.6.0&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;..sync your gradle and then initialize Sensey in your activity&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Sensey.getInstance().init(context);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That’s it! Sensey at this point is integrated into your app. Now based on what kind of Gesture you want to detect, you will need to start and stop detectors provided by Sensey.&lt;/p&gt;
+
+&lt;p&gt;Say for the sake of a simple example, if we wanted to detect a Shake Gesture. All you need to do is&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create an instance of ShakeListener&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;ShakeDetector.ShakeListener shakeListener=new ShakeDetector.ShakeListener() {
+    @Override public void onShakeDetected() {
+       // Shake detected, do something
+   }
+   @Override public void onShakeStopped() {
+       // Shake stopped, do something
+   }
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now to start listening for Shake gesture, pass the instance &lt;code&gt;shakeListener&lt;/code&gt; to &lt;code&gt;startShakeDetection()&lt;/code&gt; function&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Sensey.getInstance().startShakeDetection(shakeListener);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To stop listening for Shake gesture, pass the instance &lt;code&gt;shakeListener&lt;/code&gt; to &lt;code&gt;stopShakeDetection()&lt;/code&gt; function&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Sensey.getInstance().stopShakeDetection(shakeListener);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Yup, that’s about all it takes to know if a shake gesture was performed and when it stopped.&lt;/p&gt;
+
+&lt;p&gt;Let’s check out the complete list of gesture detectors Sensey provides&lt;/p&gt;
+
+&lt;h4 id=&#34;flip-detector&#34;&gt;Flip Detector&lt;/h4&gt;
+
+&lt;p&gt;Sensey can detect if your device facing up or facing down. Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#flip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;light-detector&#34;&gt;Light Detector&lt;/h4&gt;
+
+&lt;p&gt;Sensey can detect if your device in a position where it is receiving any light or not. Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#light&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;orientation-detector&#34;&gt;Orientation Detector&lt;/h4&gt;
+
+&lt;p&gt;Sensey can detect if your device’s top side is up or bottom side is up. It can tell if your device’s left side is up vs right side being up. Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#orientation&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;proximity-detector&#34;&gt;Proximity Detector&lt;/h4&gt;
+
+&lt;p&gt;Sensey can detect if there is an object in the proximity of the device i.e either it is far or near to the device. Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#proximity&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;shake-detector&#34;&gt;Shake Detector&lt;/h4&gt;
+
+&lt;p&gt;Detects a Shake gesture performed on the device and also when the gesture stops.Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#shake&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;wave-detector&#34;&gt;Wave Detector&lt;/h4&gt;
+
+&lt;p&gt;This one is a simple implementation. It uses proximity sensor with timing to detect if a hand wave gesture is performed in front of the device screen. Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#wave&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;chop-detector&#34;&gt;Chop Detector&lt;/h4&gt;
+
+&lt;p&gt;Added in release 1.6.0 this one is brand new. It allows you to detect if a Chop gesture is performed with the device. Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#chop&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;wrist-twist-detector&#34;&gt;Wrist Twist Detector&lt;/h4&gt;
+
+&lt;p&gt;Added in release 1.6.0 this one is another brand new detector. This one allows you to detect if the wrist was twisted in a circular manner while holding the device. Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#wristtwist&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;movement-detector&#34;&gt;Movement Detector&lt;/h4&gt;
+
+&lt;p&gt;Another brand new detector added in release 1.6.0, it allows you to know if the device was moved or not. Once moved, it will also detect when the device becomes stationary. Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#movement&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;sound-level-detector&#34;&gt;Sound Level Detector&lt;/h4&gt;
+
+&lt;p&gt;Another brand new detector added in release 1.6.0, it allows you to measure the loudness of sound in the environment around the device (calculated on a scale of dB i.e decibel).Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#soundlevel&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;pinch-scale-detector&#34;&gt;Pinch Scale Detector&lt;/h4&gt;
+
+&lt;p&gt;Sensey can use this detector to know if the user is executing a pinch scale in or out gesture on the touch screen. It will also be able to detect when the scale gesture was stopped. Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#pinchscale&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;touch-type-detector&#34;&gt;Touch Type Detector&lt;/h4&gt;
+
+&lt;p&gt;This one can do a lot of things, you can choose which one to use or not to use. It can detect when someone on the device screen does the following:
+- Single Tap
+- Double Tap
+- Two Finger Tap
+- Three Finger Tap
+- Scroll Up, Down, Left or Right
+- Swipe Left or Right
+- Long Press&lt;/p&gt;
+
+&lt;p&gt;Check out the implementation &lt;a href=&#34;https://github.com/nisrulz/sensey/wiki/Usage#touchtype&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Phew! That’s a lot of gesture detectors packed inside one android library. Well, the list will keep on growing when more gestures get implemented in future releases. The core focus though would always remain the same,&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;simplicity over complexity and ease of use.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;who-is-it-for&#34;&gt;Who is it for&lt;/h3&gt;
+
+&lt;p&gt;For people who simply want to detect gesture as an event.&lt;/p&gt;
+
+&lt;h3 id=&#34;who-is-it-not-for&#34;&gt;Who is it not for&lt;/h3&gt;
+
+&lt;p&gt;For anyone who wishes to get more advance and wants to tap into the raw SensorEvent values.&lt;/p&gt;
+
+&lt;p&gt;That said, the android library isn’t perfect and I would love it if you can try it out and file &lt;a href=&#34;https://github.com/nisrulz/sensey/issues&#34;&gt;issues&lt;/a&gt; on Github to make it better.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/nisrulz/sensey&#34;&gt;Check out Sensey on Github (Star the repo if you find it useful)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have suggestions, please let me know in the comment section.&lt;/p&gt;
+
+&lt;p&gt;Checkout my &lt;a href=&#34;https://github.com/nisrulz&#34;&gt;Github&lt;/a&gt; or simply follow me on &lt;a href=&#34;https://twitter.com/nisrulz&#34;&gt;Twitter&lt;/a&gt; and keep on crushing code!🤓 😁&lt;/p&gt;
+
+&lt;p&gt;P.S. : This post is also published on &lt;a href=&#34;https://android.jlelse.eu/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one-334c0a307c16&#34;&gt;medium.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
