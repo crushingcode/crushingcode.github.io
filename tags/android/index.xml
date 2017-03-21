@@ -264,7 +264,7 @@ public boolean isFeatureAvailable(Context context, String feature) {
 
 &lt;h3 id=&#34;support-different-versions&#34;&gt;Support different versions&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/howmany.gif&#34; alt=&#34;question&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/howmany.gif&#34; alt=&#34;how many&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;em&gt;How many are out there exactly?&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
 
@@ -279,9 +279,9 @@ public boolean isMarshmallow(){
 
 &lt;h3 id=&#34;do-not-log-in-production&#34;&gt;Do not log in production&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/no.gif&#34; alt=&#34;question&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/no.gif&#34; alt=&#34;donot&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Just DO NOT.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;Just DO NOT.&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Almost every time I am asked to test an app or an android library project the first thing that I have seen is that they log everything up in the open, in their release code.
 As a rule of thumb, never log in production. You should use &lt;a href=&#34;https://developer.android.com/studio/build/build-variants.html&#34;&gt;build-variants&lt;/a&gt; with &lt;a href=&#34;https://github.com/JakeWharton/timber&#34;&gt;timber&lt;/a&gt; to help you in the process to separate logging info in production vs debug builds. A simple solution can be to provide a &lt;code&gt;debuggable&lt;/code&gt; flag that the devs can flip to enable/disable logging from your android library&lt;/p&gt;
@@ -325,9 +325,9 @@ debuggable = true
 
 &lt;h3 id=&#34;handle-poor-network-conditions&#34;&gt;Handle poor network conditions&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/loading.gif&#34; alt=&#34;question&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/loading.gif&#34; alt=&#34;poor connections&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;…this gets on my nerves, seriously!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;…this gets on my nerves, seriously!&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;If the android library you wrote deals with making network calls, a very simple thing that usually goes unnoticed is that you should always consider a case of what happens if the network is slow or non-responsive.&lt;/p&gt;
 
@@ -384,9 +384,9 @@ How to achieve this ? Check in classpath&lt;/p&gt;
 
 &lt;h3 id=&#34;try-not-to-hog-the-startup&#34;&gt;Try not to hog the startup&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/worst.gif&#34; alt=&#34;question&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/worst.gif&#34; alt=&#34;worst&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;no kidding…&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;no kidding…&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;What I mean by this is that, as soon as the app starts up try not to initialize your android library greedily. What that would tend to do is that it will increase the startup time for the App itself, even though the app does simply nothing at startup except off course initialize your android library.&lt;/p&gt;
 
@@ -505,7 +505,7 @@ The solution to this is that you stick to more open licenses such as &lt;strong&
 
 &lt;p&gt;Checkout my &lt;a href=&#34;https://github.com/nisrulz&#34;&gt;Github&lt;/a&gt; or simply follow me on &lt;a href=&#34;https://twitter.com/nisrulz&#34;&gt;Twitter&lt;/a&gt; and keep on crushing code!🤓 😁&lt;/p&gt;
 
-&lt;p&gt;P.S. : This post is also published on &lt;a href=&#34;https://android.jlelse.eu/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one-334c0a307c16&#34;&gt;medium.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;P.S. : This post is also published on &lt;a href=&#34;https://android.jlelse.eu/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries-dba1a524d619&#34;&gt;medium.&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

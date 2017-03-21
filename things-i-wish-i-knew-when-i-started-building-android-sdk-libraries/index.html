@@ -461,7 +461,7 @@ public boolean isFeatureAvailable(Context context, String feature) {
 
 <h3 id="support-different-versions">Support different versions</h3>
 
-<p><img src="http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/howmany.gif" alt="question" /></p>
+<p><img src="http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/howmany.gif" alt="how many" /></p>
 
 <p><center><em>How many are out there exactly?</em></center></p>
 
@@ -476,9 +476,9 @@ public boolean isMarshmallow(){
 
 <h3 id="do-not-log-in-production">Do not log in production</h3>
 
-<p><img src="http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/no.gif" alt="question" /></p>
+<p><img src="http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/no.gif" alt="donot" /></p>
 
-<p><em>Just DO NOT.</em></p>
+<p><center><em>Just DO NOT.</em></center></p>
 
 <p>Almost every time I am asked to test an app or an android library project the first thing that I have seen is that they log everything up in the open, in their release code.
 As a rule of thumb, never log in production. You should use <a href="https://developer.android.com/studio/build/build-variants.html">build-variants</a> with <a href="https://github.com/JakeWharton/timber">timber</a> to help you in the process to separate logging info in production vs debug builds. A simple solution can be to provide a <code>debuggable</code> flag that the devs can flip to enable/disable logging from your android library</p>
@@ -522,9 +522,9 @@ debuggable = true
 
 <h3 id="handle-poor-network-conditions">Handle poor network conditions</h3>
 
-<p><img src="http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/loading.gif" alt="question" /></p>
+<p><img src="http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/loading.gif" alt="poor connections" /></p>
 
-<p><em>…this gets on my nerves, seriously!</em></p>
+<p><center><em>…this gets on my nerves, seriously!</em></center></p>
 
 <p>If the android library you wrote deals with making network calls, a very simple thing that usually goes unnoticed is that you should always consider a case of what happens if the network is slow or non-responsive.</p>
 
@@ -581,9 +581,9 @@ How to achieve this ? Check in classpath</p>
 
 <h3 id="try-not-to-hog-the-startup">Try not to hog the startup</h3>
 
-<p><img src="http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/worst.gif" alt="question" /></p>
+<p><img src="http://crushingcode.github.io/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/worst.gif" alt="worst" /></p>
 
-<p><em>no kidding…</em></p>
+<p><center><em>no kidding…</em></center></p>
 
 <p>What I mean by this is that, as soon as the app starts up try not to initialize your android library greedily. What that would tend to do is that it will increase the startup time for the App itself, even though the app does simply nothing at startup except off course initialize your android library.</p>
 
@@ -702,7 +702,7 @@ The solution to this is that you stick to more open licenses such as <strong>MIT
 
 <p>Checkout my <a href="https://github.com/nisrulz">Github</a> or simply follow me on <a href="https://twitter.com/nisrulz">Twitter</a> and keep on crushing code!🤓 😁</p>
 
-<p>P.S. : This post is also published on <a href="https://android.jlelse.eu/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one-334c0a307c16">medium.</a></p>
+<p>P.S. : This post is also published on <a href="https://android.jlelse.eu/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries-dba1a524d619">medium.</a></p>
 
     </section>
 
