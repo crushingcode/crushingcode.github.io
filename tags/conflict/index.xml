@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conflict on Crushing C.O.D.E</title>
-    <link>http://crushingcode.github.io/tags/conflict/index.xml</link>
+    <link>http://crushingcode.github.io/tags/conflict/</link>
     <description>Recent content in Conflict on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
-    <atom:link href="http://crushingcode.github.io/tags/conflict/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 May 2016 10:54:24 +0200</lastBuildDate>
+    
+	<atom:link href="http://crushingcode.github.io/tags/conflict/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>The curious case of dependency conflicts</title>
@@ -15,170 +18,9 @@
       <pubDate>Mon, 02 May 2016 10:54:24 +0200</pubDate>
       
       <guid>http://crushingcode.github.io/the-curious-case-of-dependency-conflicts/</guid>
-      <description>
-
-&lt;p&gt;If I were to ask a question to a room filled with android developers&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;..I am pretty sure a lot of them would raise their hand or agree to being in that state and the very first action would be to hop onto stackoverflow and search for possible solutions in this type of a situation.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/depconflicts.jpg&#34; alt=&#34;depconflicts&#34; /&gt;
-&lt;!-- Image taken from freepik.com and all credit goes to the creator of it --&gt;&lt;/p&gt;
-
-&lt;p&gt;We all have been there and we all have experienced it. The problem is a result of each library following a completely different development lifecycle and using a different version of a public api, which by far all means is not the problem which needs to be rectified.
-You can&amp;rsquo;t just ask all android library developers/team maintaining it to update the library to use either the lastest or some specific version of a dependency just because it works with another library and/or is causing a conflict when you have both of them in your project.&lt;/p&gt;
-
-&lt;p&gt;So what exactly are the options available to us..&lt;/p&gt;
-
-&lt;p&gt;I stumbled upon such a situation sometime back in the last month or so and as the whole journey to fix this type of conflict was suprisingly less documented on the web , here is my record of how I solved it.&lt;/p&gt;
-
-&lt;p&gt;Now the process I followed may not be the best one out there but it sure did led me to hunt down the solution along with digging out some pretty neat tricks possible using &lt;strong&gt;&lt;em&gt;Gradle Build System&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Before we begin lets get acquinted with some terms we would be using a lot in this whole writeup.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;gradle&lt;/strong&gt; - Build system for android&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;dependency&lt;/strong&gt; - Libraries such as support libraries in your build.gradle&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;transitive dependency&lt;/strong&gt; - Libraries on which dependencies defined in your project depend on&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;conflict&lt;/strong&gt; - incompatible or at variance/clash&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;gradlew&lt;/strong&gt; - gradle wrapper&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The important term here for us (in regards to our problem of conflicting dependencies) is &lt;strong&gt;&lt;em&gt;transitive dependency&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;You see when you have multiple dependencies defined in your build.gradle, you can never be sure of what do those dependencies further depend on.&lt;/p&gt;
-
-&lt;p&gt;Lets take a simple example&lt;/p&gt;
-
-&lt;p&gt;Say you have 3 android libraries defined under your build.gradle for the app , namely &lt;strong&gt;libA&lt;/strong&gt;, &lt;strong&gt;libB&lt;/strong&gt; and &lt;strong&gt;libC&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;
-dependencies {
-    compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
-    compile &#39;com.company1.sdk:libA:1.0.2&#39;
-    compile &#39;com.company2.sdk:libB:2.0.3&#39;
-    compile &#39;com.company3.sdk:libC:3.0.4&#39;
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now for you as an android dev the only dependencies in view are &lt;strong&gt;libA&lt;/strong&gt;, &lt;strong&gt;libB&lt;/strong&gt; and &lt;strong&gt;libC&lt;/strong&gt;. You have no idea what these android libraries furthur depend upon.&lt;/p&gt;
-
-&lt;p&gt;The situation which might cause a conflict would be if &lt;strong&gt;libA&lt;/strong&gt; depends on say &lt;strong&gt;libD&lt;/strong&gt; (version 4.0.4) and &lt;strong&gt;libC&lt;/strong&gt; depends on say &lt;strong&gt;libD&lt;/strong&gt; (version 4.0.2).&lt;/p&gt;
-
-&lt;p&gt;Now by default &lt;em&gt;Gradle&lt;/em&gt; would resolve to the latest version of &lt;strong&gt;libD&lt;/strong&gt;. But this is where the problem actually lies.&lt;/p&gt;
-
-&lt;p&gt;You see when you build your code it only says there is conflict in the &lt;strong&gt;libD&lt;/strong&gt; dependency. Thats all.&lt;/p&gt;
-
-&lt;p&gt;So how do you hunt it down.&lt;/p&gt;
-
-&lt;p&gt;well there are a few ways you can do that, the easiest one uses the &lt;code&gt;gradle wrapper&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;step-1&#34;&gt;&lt;strong&gt;STEP 1&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Look for all android dependencies being downloaded as part of the build process.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./gradlew androidDependencies
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;..you should get a graph like this&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;...
-release
-+--- com.company1.sdk:libA:1.0.2
-|    +--- com.company4.sdk:libD:4.0.4
-+--- com.company2.sdk:libB:2.0.3
-|
-+--- com.company3.sdk:libA:3.0.4
-     +--- com.company4.sdk:libD:4.0.2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;..hmm..its becoming a bit more clear now. We can see which version of transitive dependencies are being pulled by which dependency.&lt;/p&gt;
-
-&lt;p&gt;So what exactly happened here?&lt;/p&gt;
-
-&lt;p&gt;The declared dependencies inside your build.gradle file actually download some more libraries on their own since its integral to their functioning. Transitive dependency defined for a declared library could conflict with another transitive dependeny defined for another declared library in version.&lt;/p&gt;
-
-&lt;p&gt;Whats wrong here, you ask  ?  When a library was written to work with older version of the &lt;strong&gt;&lt;em&gt;transitive  dependency&lt;/em&gt;&lt;/strong&gt; then it will basically break if provided with a higher version of the same, probably because the API changed or some classes were removed/renamed (between version updates)from what it was coded to reference and work with.&lt;/p&gt;
-
-&lt;p&gt;Well if you are able to find your problem then you can jump to the solution directly, but if you are still looking for answers then read on.&lt;/p&gt;
-
-&lt;p&gt;Looks like you are still in trouble!&lt;/p&gt;
-
-&lt;p&gt;Considering that you still cannot find the conflicting dependencies and their versions and assuming that its not conflicting from a dependency declared in the build.gradle file but (..probably) introduced by some gradle-plugin defined, we will do a more verbose checkup which is what STEP 2 is about&lt;/p&gt;
-
-&lt;h3 id=&#34;step-2&#34;&gt;&lt;strong&gt;STEP 2&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Check the complete stacktrace of the build process using &lt;code&gt;--info&lt;/code&gt; and &lt;code&gt;--stacktrace&lt;/code&gt; flags passed as arguments&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;./gradlew build --info --stacktrace
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This should give you a complete log of everything and where exactly the build failed.You can find out the version conflicts and a lot more details in this step.&lt;/p&gt;
-
-&lt;p&gt;In my case this was the very case where I was having a conflict on annotations library introduced by the findbugs gradle plugin.&lt;/p&gt;
-
-&lt;p&gt;Well, ok so this is a problem we have got. Whats the solution ? how do you go against the default behaviour of gradle and resolve to a lower version when a conflict occurs ?&lt;/p&gt;
-
-&lt;h3 id=&#34;solution&#34;&gt;&lt;strong&gt;SOLUTION&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Well this is where the flexibility of Gradle comes into view. This is not commonly known but is a very useful functionality tucked away into the &lt;a href=&#34;https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html#org.gradle.api.artifacts.ResolutionStrategy:failOnVersionConflict()&#34;&gt;api docs&lt;/a&gt; for gradle.&lt;/p&gt;
-
-&lt;p&gt;The very first thing that you should do is, enable &lt;code&gt;failOnVersionConflict&lt;/code&gt; flag in gradle on version conflicts.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;
-configurations.all {
-  resolutionStrategy.failOnVersionConflict()
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This should give you more idea about where in your code are version conflicts occuring which were getting implicitly resolved by gradle.&lt;/p&gt;
-
-&lt;p&gt;Secondly, you can force gradle to resolve to the lower version&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;configurations.all {
-  resolutionStrategy.force &#39;com.company4.sdk:libD:4.0.2&#39;
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This changes the default behaviour of gradle.&lt;/p&gt;
-
-&lt;p&gt;But wait! Resoltion strategy is still causing parts of the same dependency to conflict. HELP!&lt;/p&gt;
-
-&lt;p&gt;Well only in that condition you should try and completely replace the whole module.&lt;/p&gt;
-
-&lt;p&gt;Ho do you do it ? by including the below into your &lt;code&gt;build.gradle&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-gradle&#34;&gt;// add dependency substitution rules
-configurations.all {
-  resolutionStrategy.dependencySubstitution {
-    // Substitute one module dependency for another
-    substitute module(&#39;com.company4.sdk:libD:4.0.4&#39;) with module(&#39;com.company4.sdk:libD:4.0.2&#39;)
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;NOTE : dependencySubstitution is an incubating functionality and may change in a future version of Gradle
-As of writting this post the latest Gradle Version is 2.13 in which this is available.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Thats pretty neat , isn&amp;rsquo;t it.&lt;/p&gt;
-
-&lt;p&gt;I am pretty sure this would enable you to find the conflicts and solve it too.&lt;/p&gt;
-
-&lt;p&gt;This also goes with the disclaimer that trying to resolve dependency conflicts this way is not the preferred way. You should always try to be using the latest version of the dependencies as well as maintain your library to use the same. This post basically defines the process to enable you to try and figure out why your build is failing and how to bypass it for the time being.&lt;/p&gt;
-
-&lt;p&gt;Thats all for today folks.
-Keep crushing code until next post :)&lt;/p&gt;
-
-&lt;p&gt;Reference : &lt;a href=&#34;https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html#org.gradle.api.artifacts.ResolutionStrategy:failOnVersionConflict()&#34;&gt;Gradle Docs&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>If I were to ask a question to a room filled with android developers
+ &amp;ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?&amp;rdquo;
+ ..I am pretty sure a lot of them would raise their hand or agree to being in that state and the very first action would be to hop onto stackoverflow and search for possible solutions in this type of a situation.</description>
     </item>
     
   </channel>

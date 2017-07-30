@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Crushing C.O.D.E</title>
-    <link>http://crushingcode.github.io/tags/git/index.xml</link>
+    <link>http://crushingcode.github.io/tags/git/</link>
     <description>Recent content in Git on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
-    <atom:link href="http://crushingcode.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Nov 2016 10:54:24 +0200</lastBuildDate>
+    
+	<atom:link href="http://crushingcode.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Rewriting The History</title>
@@ -15,149 +18,7 @@
       <pubDate>Fri, 18 Nov 2016 10:54:24 +0200</pubDate>
       
       <guid>http://crushingcode.github.io/rewriting-the-history/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/rewritingthehistory/header.jpg&#34; alt=&#34;header&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Most of us are engineers and at the end of the day humans. So basically we all are bound to make mistakes. As an Engineer we make such mistakes in code quite often and even if we do not admit it , they do exist. How many times have you published your code to a public VCS such as Github/Bitbucket with the credentials and then pulled down the repository only to reset the whole history and re-publish the new repository with the credentials cleaned out.&lt;/p&gt;
-
-&lt;p&gt;Pretty common, eh ? From what I have experienced it turns out, thats what most of the devs do. However if I told you that you can clean the credentials out and still keep the git history ! Sounds awesome right ? Thats coz it is !&lt;/p&gt;
-
-&lt;p&gt;So how does one do it ? I will be demonstrating a very simple example of a scenario I recently came across and how I solved it.
-It can however be applied to various other use cases. You can extend it to remove complete files even 🙄&lt;/p&gt;
-
-&lt;h3 id=&#34;the-problem&#34;&gt;The Problem&lt;/h3&gt;
-
-&lt;p&gt;We all have the license block in our code when pushing code to Github (If you don’t have one , then make sure you do have one from now onwards). It looks like below&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/*
- * Copyright (C) 2016 Nishant Srivastava
- *
- * Licensed under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;);
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an &amp;quot;AS IS&amp;quot; BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I use a single machine to code for my full time job and my own open source work (..almost like everyone) and I have preset my Android Studio to include the license block everywhere, but here is the catch, it is setup to add the license block of the company I work for (..thats coz its my full time job). It looks like this&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/*
- * Copyright (c) 2015 - 2016 CompanyName, Inc.
- *
- * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
- * All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- */
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I tend to add my own license when working with my own open source work after work hours and I have never got it messed up , up until recently. I recently pushed one of the .java class of one my android libraries to Github 😱 😱 😱 😱&lt;/p&gt;
-
-&lt;p&gt;Now thats a bummer 😩 to see your git history messed up as it was something that was not intended and I did not want to reset my repository. (..which would mean that I would lose all stars and issue).&lt;/p&gt;
-
-&lt;h3 id=&#34;the-solution&#34;&gt;The Solution 🤓&lt;/h3&gt;
-
-&lt;p&gt;One tool : &lt;a href=&#34;https://rtyley.github.io/bfg-repo-cleaner/&#34;&gt;BFG Repo-Cleaner&lt;/a&gt;, from the tool’s homepage itself&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Removes large or troublesome blobs like git-filter-branch does, but faster.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Yeah, thats all you need to cleanup your repo. What this tool does is that it searches for text inside your git history and replaces it with another version and creates a new commit and removes the old commits. But the order and history is still maintained. Pretty neat , eh ? I know :)&lt;/p&gt;
-
-&lt;p&gt;So here is how we clean our git history of unwanted data.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Download the latest release of &lt;a href=&#34;https://github.com/rtyley/bfg-repo-cleaner/releases&#34;&gt;bfg tool&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Once its downloaded, navigate to the folder you have downloaded it and create a text file named replace.txt (as a matter of fact you can name it whatever you want. I like to name it as replace.txt)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Edit the content of the replace.txt file created as below&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Copyright (c) 2015 - 2016 CompanyName, Inc.==&amp;gt;Copyright (C) 2016 Nishant Srivastava
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;where the syntax followed is text to replace==&amp;gt;text to replace with
-Notice that there are no spaces right before and after the operator ==&amp;gt;
-More ways of defining how to replace text in this &lt;a href=&#34;http://stackoverflow.com/questions/4110652/how-to-substitute-text-from-files-in-git-history/15730571#15730571&#34;&gt;stackoverflow ans.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Now go ahead clone a mirror of your project repo.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone — mirror https://github.com/username/your-project.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Once mirrored, now you need to run the command as below to clean your git history&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;java -jar bfg-&amp;lt;latest_version&amp;gt;.jar  --replace-text replace.txt -fi *.java  your-project.git/
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Next clean the reference logs and optimize the project again&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd your-project.git/ git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Next when done, push your changes to Github&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git push
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;DONE. That is all there is.&lt;/p&gt;
-
-&lt;p&gt;Ok, not really. Here is what you might encounter after you do a git push. Depending on your project size, you can get a lot of output.&lt;/p&gt;
-
-&lt;p&gt;Here is what a successful overwrite of a branch would look like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+ 1289ad8…bee1ea4 master -&amp;gt; master (forced update)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Unfortunately, you might also see something like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;! [remote rejected] refs/pull/53/head -&amp;gt; refs/pull/53/head (deny updating a hidden ref)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;As mentioned in this &lt;a href=&#34;https://github.com/rtyley/bfg-repo-cleaner/issues/36#issuecomment-37877829&#34;&gt;issue&lt;/a&gt;,&lt;/p&gt;
-
-&lt;p&gt;The refs beginning ‘refs/pull&amp;rsquo; are synthetic read-only refs created by GitHub - you can&amp;rsquo;t update (and therefore &amp;lsquo;clean&amp;rsquo;) them, because they reflect branches that may well actually come from other repositories - ones that submitted pull-requests to you.
-So, while you’ve pushed all your real refs, the pull requests don’t get updated
-In simple words Github also saves branches after you merged, closed and deleted them. You have no way to modify those branches that are owned by Github. The only way you can really remove them is by deleting the repository. And keep in mind that you also lose all stars, issues and so on when deleting a project. Which will be a bummer, you don’t want to do that, do you ?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So how do you solve this , well you need to &lt;a href=&#34;http://christoph.ruegg.name/blog/git-howto-mirror-a-github-repository-without-pull-refs.html&#34;&gt;mirror your repo without the Github Pull Request&lt;/a&gt; in Step 4.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;In short, simply replace the catch-all refspec above with two more specific specs to just include all heads and tags, but not the pulls, and all the remote pull refs will no longer make it into your bare mirror&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Goto &lt;code&gt;your-project.git&lt;/code&gt; folder and run &lt;code&gt;git config -e&lt;/code&gt; . Next replace&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;fetch = +refs/*:refs/*
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;with&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;fetch = +refs/heads/*:refs/heads/*
-fetch = +refs/tags/*:refs/tags/*
-fetch = +refs/change/*:refs/change/*
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This should solve your issue.
-Also be careful because everyone who cloned or forked your project still has access to the original data. So thats that 🤔&lt;/p&gt;
-
-&lt;p&gt;If you want to find more about bfg , go ahead and &lt;a href=&#34;https://rtyley.github.io/bfg-repo-cleaner/#usage&#34;&gt;read their awesome doc&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Checkout my &lt;a href=&#34;https://github.com/nisrulz&#34;&gt;Github&lt;/a&gt; or simply follow me on &lt;a href=&#34;https://twitter.com/nisrulz&#34;&gt;Twitter&lt;/a&gt; and keep on crushing code!🤓 😁&lt;/p&gt;
-
-&lt;p&gt;P.S. : This post is also published on &lt;a href=&#34;https://medium.com/@nisrulz/rewriting-the-history-c0e16c4942d3#.ljqy0pvoz&#34;&gt;medium.&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Most of us are engineers and at the end of the day humans. So basically we all are bound to make mistakes. As an Engineer we make such mistakes in code quite often and even if we do not admit it , they do exist. How many times have you published your code to a public VCS such as Github/Bitbucket with the credentials and then pulled down the repository only to reset the whole history and re-publish the new repository with the credentials cleaned out.</description>
     </item>
     
   </channel>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://crushingcode.github.io/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</loc>
+    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
+  </url>
   
   <url>
     <loc>http://crushingcode.github.io/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</loc>
@@ -90,7 +96,7 @@
   
   <url>
     <loc>http://crushingcode.github.io/tags/android/</loc>
-    <lastmod>2017-03-05T10:54:24+02:00</lastmod>
+    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -108,13 +114,18 @@
   
   <url>
     <loc>http://crushingcode.github.io/tags/bestpractices/</loc>
-    <lastmod>2017-03-05T10:54:24+02:00</lastmod>
+    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://crushingcode.github.io/tags/build/</loc>
     <lastmod>2015-07-21T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
@@ -132,7 +143,7 @@
   
   <url>
     <loc>http://crushingcode.github.io/</loc>
-    <lastmod>2017-03-05T10:54:24+02:00</lastmod>
+    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -151,6 +162,18 @@
   <url>
     <loc>http://crushingcode.github.io/tags/detection/</loc>
     <lastmod>2017-02-12T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/edd/</loc>
+    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://crushingcode.github.io/tags/example/</loc>
+    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -246,7 +269,7 @@
   
   <url>
     <loc>http://crushingcode.github.io/post/</loc>
-    <lastmod>2017-03-05T10:54:24+02:00</lastmod>
+    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -294,6 +317,7 @@
   
   <url>
     <loc>http://crushingcode.github.io/tags/</loc>
+    <lastmod>2016-09-24T10:54:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   

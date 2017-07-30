@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Maven on Crushing C.O.D.E</title>
-    <link>http://crushingcode.github.io/tags/maven/index.xml</link>
+    <link>http://crushingcode.github.io/tags/maven/</link>
     <description>Recent content in Maven on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
-    <atom:link href="http://crushingcode.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Feb 2016 10:54:24 +0200</lastBuildDate>
+    
+	<atom:link href="http://crushingcode.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Own a maven repository, like a boss! – Part 2</title>
@@ -15,91 +18,8 @@
       <pubDate>Tue, 16 Feb 2016 10:54:24 +0200</pubDate>
       
       <guid>http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-2/</guid>
-      <description>
-
-&lt;p&gt;The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.&lt;/p&gt;
-
-&lt;p&gt;For the same reason I have gone through a lot of good articles online, which explain how the whole process works. However most of the documentation is either not up to date or lacks proper explanation. Personally all I care about is how does it work and how can I make it simpler. Hence I set out to try and implement the whole process on my own.&lt;/p&gt;
-
-&lt;p&gt;We have already covered in &lt;a href=&#34;http://crushingcode.github.io/own-a-maven-repository-like-a-boss–part-1&#34;&gt;Part-1&lt;/a&gt; of this series the process of how to create a maven repository hosted on github and this part builds upon that.&lt;/p&gt;
-
-&lt;p&gt;The next part is actually the simpler step - To consume these artifacts which are hosted on a maven repository in your android project.&lt;/p&gt;
-
-&lt;p&gt;The basic steps required are as follows :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;h3 id=&#34;step-1&#34;&gt;&lt;strong&gt;Step 1&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Goto your maven repository on github and open up your releases folder via the browser.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;h3 id=&#34;step-2&#34;&gt;&lt;strong&gt;Step 2&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Copy the URL in the address bar. It should look like below&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;https://github.com/&amp;lt;username&amp;gt;/&amp;lt;mavenrepo&amp;gt;/tree/master/releases
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;h3 id=&#34;step-3&#34;&gt;&lt;strong&gt;Step 3&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Now replace the &lt;code&gt;tree&lt;/code&gt; word in the url with &lt;code&gt;raw&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# From
-https://github.com/&amp;lt;username&amp;gt;/&amp;lt;mavenrepo&amp;gt;/tree/master/releases
-
-# to
-https://github.com/&amp;lt;username&amp;gt;/&amp;lt;mavenrepo&amp;gt;/raw/master/releases
-
-# and copy this new url.
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;h3 id=&#34;step-4&#34;&gt;&lt;strong&gt;Step 4&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Now goto your Android Project and open up your &lt;code&gt;build.gradle&lt;/code&gt; file for the module where you want to include the artifact (i.e app/library).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;h3 id=&#34;step-5&#34;&gt;&lt;strong&gt;Step 5&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Now copy the below to the &lt;code&gt;build.gradle&lt;/code&gt; file with the appropriate url for the maven repository as obtained in &lt;em&gt;Step-3&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;repositories {
-maven {
-    url &amp;quot;https://github.com/&amp;lt;username&amp;gt;/&amp;lt;mavenrepo&amp;gt;/raw/master/releases&amp;quot;
-}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;h3 id=&#34;step-6&#34;&gt;&lt;strong&gt;Step 6&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Next , add the dependency as you would normally&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;dependencies {
-compile &#39;com.github.&amp;lt;username&amp;gt;:&amp;lt;artifact_name&amp;gt;:&amp;lt;version&amp;gt;&#39;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;where &lt;code&gt;&amp;lt;version&amp;gt;&lt;/code&gt; has to be of the form  &lt;code&gt;&amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;.&amp;lt;patch&amp;gt;&lt;/code&gt; i.e 1.0.0&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;in-summary&#34;&gt;In Summary&lt;/h2&gt;
-
-&lt;p&gt;You just learned how to use artifacts from your own github account as a maven repository and in essence bypassed the complexity of getting artifacts into the Maven Central/Jcenter.&lt;/p&gt;
-
-&lt;p&gt;For reference you can have a look at my own &lt;a href=&#34;http://crushingcode.github.io/mavenrepo/&#34;&gt;maven repository&lt;/a&gt; on &lt;a href=&#34;https://github.com/nisrulz/mavenrepo&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;However as you would see this is a very limiting way of accessing artifacts.
-The developer is supposed to include your &lt;code&gt;maven url&lt;/code&gt; under &lt;code&gt;repository&lt;/code&gt; section which is &amp;hellip;a bit of extra work , right ?&lt;/p&gt;
-
-&lt;p&gt;As a developer we are all very lazy. We want to cut this extra work down to only compiling our artifact as a dependency with a single line of code&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;compile &#39;com.github.&amp;lt;username&amp;gt;:&amp;lt;artifact_name&amp;gt;:&amp;lt;version&amp;gt;&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Well this is where Maven Central/Jcenter step in.
-A lot of information on them in the next part of this series.&lt;/p&gt;
-
-&lt;p&gt;Till then keep calm and crush c.o.d.e !&lt;/p&gt;
-</description>
+      <description>The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.
+For the same reason I have gone through a lot of good articles online, which explain how the whole process works. However most of the documentation is either not up to date or lacks proper explanation. Personally all I care about is how does it work and how can I make it simpler.</description>
     </item>
     
     <item>
@@ -108,156 +28,8 @@ A lot of information on them in the next part of this series.&lt;/p&gt;
       <pubDate>Mon, 03 Aug 2015 10:54:24 +0200</pubDate>
       
       <guid>http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-1/</guid>
-      <description>
-
-&lt;p&gt;Have you ever thought how the central repository works like Maven Central or JCenter?
-Is it possible to own one for yourself?
-Do you want to host your artifacts in your own private repository?&lt;/p&gt;
-
-&lt;p&gt;If your answer is &lt;strong&gt;YES&lt;/strong&gt;, well you are in the right place. I am going to walk you through basic steps involved in setting up your own maven repository where you can publish your artifacts, using all but your terminal, git and a public remote repository hosting service of your choice ( i.e Github or Bitbucket ).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;For those of you who want to jump into the code right away , here is the gist&lt;/strong&gt;&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/nisrulz/efb1654eaeb8930591c6.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;strong&gt;For the rest of you who want a complete explanation, lets dive in&lt;/strong&gt;..&lt;/p&gt;
-
-&lt;h2 id=&#34;terms&#34;&gt;Terms&lt;/h2&gt;
-
-&lt;p&gt;Before we start, I want you to get acquainted with some of the terms:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Artifacts&lt;/strong&gt; : An artifact is a file, usually a JAR, that gets deployed to a Maven repository. A Maven build produces one or more artifacts, such as a compiled JAR and a “sources” JAR. Each artifact has a group ID (usually a reversed domain name, like com.example.foo), an artifact ID (just a name), and a version string. The three together uniquely identify the artifact. A project’s dependencies are specified as artifacts.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Maven&lt;/strong&gt; : A tool that can be used for building and managing any Java-based project.(&lt;a href=&#34;https://maven.apache.org/what-is-maven.html&#34;&gt;more info&lt;/a&gt;)&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I would like to mention that having your artifacts in the Maven Central and JCenter has a plethora of advantages which you will never be able to get when using the below method.
-Lets just say its just another method to host and publish your artifacts without having to go through the process of publishing it to central repository.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Prerequisites&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;git (&lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;&gt;Install guide&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;maven (&lt;a href=&#34;https://maven.apache.org/install.html&#34;&gt;Install guide&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://bitbucket.org/&#34;&gt;Bitbucket&lt;/a&gt; or &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; account&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;JAR/AAR/WAR file to be published to your maven repository&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;….Okay…if you made it till this point, everything is going to be a piece of cake from here onwards :P promise :)&lt;/p&gt;
-
-&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt; : Fire up your terminal/command prompt
-&lt;strong&gt;Step 2&lt;/strong&gt; : Create a directory where you will sync your maven artifacts to, lets say its called mavenrepo&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mkdir mavenrepo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and change into the mavenrepo directory&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd mavenrepo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 3&lt;/strong&gt; : Once inside the directory, initialize it with git&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 4&lt;/strong&gt; : Create a repository named &lt;strong&gt;mavenrepo (git remote)&lt;/strong&gt; at Github/Bitbucket and add it to your &lt;strong&gt;mavenrepo (git local)&lt;/strong&gt; directory as a remote repository named &lt;strong&gt;origin&lt;/strong&gt; ( here i am adding a github repo)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git remote add origin https://github.com/&amp;lt;username&amp;gt;/mavenrepo.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Note : you can get the url from Github under the settings tab when at your repository page&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://crushingcode.github.io/images/posts/copygithuburl.png&#34; alt=&#34;copygithuburl&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 5&lt;/strong&gt; :  Create 2 directories under mavenrepo, namely releases and snapshots&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mkdir releases snapshots
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 6&lt;/strong&gt; : Create README.md under each sub directory, releases and snapshots
-Note: This step is required since git will not push empty directories, so we add empty README.md files :)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;touch releases/README.md
-touch snapshots/README.md
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 7&lt;/strong&gt; : Stage all the changed files under git, using the below command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git add .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 8&lt;/strong&gt; : Commit with a message&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git commit -m &amp;quot;Initial Setup&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 9&lt;/strong&gt; : Push to origin&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git push origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Thats It!
-You have a working maven repository :D&lt;/p&gt;
-
-&lt;p&gt;Okay, this is cool …I have a working maven repository ..hmm..but something is missing ….wait a second, where is the artifact that i would be pushing to this maven repository ??
-To be specific, how do i generate the maven artifact ?
-Simple,&lt;/p&gt;
-
-&lt;h2 id=&#34;generating-a-maven-artifact&#34;&gt;Generating a maven artifact&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 10&lt;/strong&gt; : Generate a maven artifact using the below command in terminal/command prompt (provided you already have the maven installed)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mvn clean org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgroupId=com.company.id -DartifactId=artificatid -Dversion=1.0.0 -Dpackaging=aar -Dfile=artifact.aar -DlocalRepositoryPath=./mavenrepo/releases/aar -DgeneratePom=true -DcreateChecksum=true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;thats a lot to take in but thats just one single command that does it all.&lt;/p&gt;
-
-&lt;p&gt;Lets break it down into parts:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;mvn&lt;/strong&gt; Maven build tool command&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;clean&lt;/strong&gt; Command that attempts to clean a project’s working directory of the files that were generated at build-time&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file&lt;/strong&gt; Command to install the artifact into the maven repository via using a specific maven plugin, here being v2.5.2&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-DgroupId&lt;/strong&gt; Specify your package name here i.e.com.company.id&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-DartifactId&lt;/strong&gt; Specify the name of the artifact&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-Dversion&lt;/strong&gt; Specify the version of the artifact&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-Dpackaging&lt;/strong&gt; Specify the packaging type of the artifact i.e jar/aar/war&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-Dfile&lt;/strong&gt; Specify here the specific name of the jar/aar/war you are pushing as a maven artifact&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-DlocalRepositoryPath&lt;/strong&gt; Specify the path to your mavenrepo (git local) i.e.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;./mavenrepo/releases/aar
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;-DgeneratePom&lt;/strong&gt; Set it to true to generate a POM file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-DcreateChecksum&lt;/strong&gt; Set it to true to generate the checksum files&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 11&lt;/strong&gt; : Once you are done generating the maven artifacts and they are deployed under the specific folder ( releases/snapshots), just stage them, commit and push it to your remote repo…&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git add .
-git commit -m &amp;quot;&amp;lt;artifact&amp;gt; v1.0.0 added&amp;quot;
-git push origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Repeat &lt;strong&gt;&lt;em&gt;Steps 10-11&lt;/em&gt;&lt;/strong&gt; every time you want to publish a maven artifact to your own maven repository.&lt;/p&gt;
-
-&lt;h2 id=&#34;in-summary&#34;&gt;In Summary&lt;/h2&gt;
-
-&lt;p&gt;Thats it for Part 1. In the next part we will see how to use this maven repository in our android application to reference libraries into our project with the help of gradle.&lt;/p&gt;
-
-&lt;p&gt;Till then have fun crushing code :D&lt;/p&gt;
-</description>
+      <description>Have you ever thought how the central repository works like Maven Central or JCenter? Is it possible to own one for yourself? Do you want to host your artifacts in your own private repository?
+If your answer is YES, well you are in the right place. I am going to walk you through basic steps involved in setting up your own maven repository where you can publish your artifacts, using all but your terminal, git and a public remote repository hosting service of your choice ( i.</description>
     </item>
     
   </channel>
