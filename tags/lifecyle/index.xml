@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lifecyle on Crushing C.O.D.E</title>
+    <link>http://crushingcode.github.io/tags/lifecyle/</link>
+    <description>Recent content in Lifecyle on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2017</copyright>
+    <lastBuildDate>Sun, 17 Sep 2017 10:54:24 +0200</lastBuildDate>
+    
+	<atom:link href="http://crushingcode.github.io/tags/lifecyle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Is your Android Library, Lifecycle-Aware?</title>
+      <link>http://crushingcode.github.io/is-your-android-library-lifecycle-aware/</link>
+      <pubDate>Sun, 17 Sep 2017 10:54:24 +0200</pubDate>
+      
+      <guid>http://crushingcode.github.io/is-your-android-library-lifecycle-aware/</guid>
+      <description>Lifecycle events in Android.
+It has been a pain point for Android developers all over the world. It is no brainer that, most of the times the main cause of a memory leak in the codebase is because an invalid state is accessed which is out of sync with the lifecycle of the activity/fragment of the app. What this means is that as an Android Developer you are forced to put up a lot of checks in place, making sure that your code state is in sync with the lifecycle of the Activity/Fragment.</description>
+    </item>
+    
+  </channel>
+</rss>
