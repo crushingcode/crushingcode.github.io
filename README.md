@@ -1,6 +1,6 @@
 ## Crushing C.O.D.E
 
-* Site: [crushingcode.github.io](http://crushingcode.github.io)
+* Site: [crushingcode.github.io](https://crushingcode.github.io)
 
 > “I love deadlines. I love the whooshing noise they make as they go by.” 
 ― Douglas Adams, The Salmon of Doubt

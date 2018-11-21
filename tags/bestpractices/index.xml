@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bestpractices on Crushing C.O.D.E</title>
-    <link>http://crushingcode.github.io/tags/bestpractices/</link>
+    <link>https://crushingcode.github.io/tags/bestpractices/</link>
     <description>Recent content in Bestpractices on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - Nishant Srivastava</copyright>
     <lastBuildDate>Sat, 29 Jul 2017 10:54:24 +0200</lastBuildDate>
     
-	<atom:link href="http://crushingcode.github.io/tags/bestpractices/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://crushingcode.github.io/tags/bestpractices/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Want To Step Up Your Android Learning Game? You Need To Read This First</title>
-      <link>http://crushingcode.github.io/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</link>
+      <link>https://crushingcode.github.io/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</link>
       <pubDate>Sat, 29 Jul 2017 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</guid>
+      <guid>https://crushingcode.github.io/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</guid>
       <description>DISCLAIMER: If you consider yourself a beginner, intermediate, expert or a ninja in the Android realm, this secret sauce still applies to you.
  TL;DR: Build Something. No really! I am not kidding here. Hear me out on this.
 The secret to becoming better at Android development, with all the new shiny stuff being released every year and making you go through the fear of missing out and what not is just to build out something that’s functional, even before reading a blog post or documentation.</description>
@@ -25,10 +25,10 @@ The secret to becoming better at Android development, with all the new shiny stu
     
     <item>
       <title>Things I wish I knew when I started building Android SDK/Libraries</title>
-      <link>http://crushingcode.github.io/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</link>
+      <link>https://crushingcode.github.io/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</link>
       <pubDate>Sun, 05 Mar 2017 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
+      <guid>https://crushingcode.github.io/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
       <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.
 Now here is a thing, if you are like me, who believes that if the problem was big enough for me to spend some time on it and there wasn’t an existing solution out there, I would abstract the whole solution in a modular manner, which eventually turns out to be an android library.</description>
     </item>

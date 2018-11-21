@@ -7,7 +7,7 @@
 
   	<meta property="og:title" content=" Is your Android Library, Lifecycle-Aware? &middot;  Crushing C.O.D.E" />
   	<meta property="og:site_name" content="Crushing C.O.D.E" />
-  	<meta property="og:url" content="http://crushingcode.github.io/is-your-android-library-lifecycle-aware/" />
+  	<meta property="og:url" content="https://crushingcode.github.io/is-your-android-library-lifecycle-aware/" />
 
     
   	<meta property="og:type" content="article" />
@@ -33,23 +33,23 @@ Nishant Srivastava" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="http://crushingcode.github.io/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="http://crushingcode.github.io/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="https://crushingcode.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://crushingcode.github.io/images/apple-touch-icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="http://crushingcode.github.io/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="http://crushingcode.github.io/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="https://crushingcode.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://crushingcode.github.io/css/nav.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
 
 
     
       
-          <link href="http://crushingcode.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Crushing C.O.D.E" />
+          <link href="https://crushingcode.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Crushing C.O.D.E" />
       
       
     
     <meta name="generator" content="Hugo 0.27.1" />
 
-    <link rel="canonical" href="http://crushingcode.github.io/is-your-android-library-lifecycle-aware/" />
+    <link rel="canonical" href="https://crushingcode.github.io/is-your-android-library-lifecycle-aware/" />
 
     
     <script>
@@ -79,7 +79,7 @@ Nishant Srivastava" />
         
             
             <li class="nav-opened" role="presentation">
-              <a href="http://crushingcode.github.io/">Home</a>
+              <a href="https://crushingcode.github.io/">Home</a>
             </li>
         
             <b> About Me</b>
@@ -145,7 +145,7 @@ Nishant Srivastava" />
     </ul>
 
     
-    <a class="subscribe-button icon-feed" href="http://crushingcode.github.io/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="https://crushingcode.github.io/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -161,7 +161,7 @@ Nishant Srivastava" />
 
 
   
-      <a class="blog-logo" href="http://crushingcode.github.io/"><img src="http://crushingcode.github.io/images/author.jpg" alt="Home" /></a>
+      <a class="blog-logo" href="https://crushingcode.github.io/"><img src="https://crushingcode.github.io/images/author.jpg" alt="Home" /></a>
   
   
       <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
@@ -198,11 +198,11 @@ Nishant Srivastava" />
           </time>
         
          
-          <span class="post-tag small"><a href="http://crushingcode.github.io/tags/android/">#android</a></span>
+          <span class="post-tag small"><a href="https://crushingcode.github.io/tags/android/">#android</a></span>
          
-          <span class="post-tag small"><a href="http://crushingcode.github.io/tags/library/">#library</a></span>
+          <span class="post-tag small"><a href="https://crushingcode.github.io/tags/library/">#library</a></span>
          
-          <span class="post-tag small"><a href="http://crushingcode.github.io/tags/lifecyle/">#lifecyle</a></span>
+          <span class="post-tag small"><a href="https://crushingcode.github.io/tags/lifecyle/">#lifecyle</a></span>
          
         </section>
     </header>
@@ -211,7 +211,7 @@ Nishant Srivastava" />
       <br/>
       
 
-<p><img src="http://crushingcode.github.io/images/posts/is-your-android-library-lifecycle-aware/header.png" alt="header" /></p>
+<p><img src="https://crushingcode.github.io/images/posts/is-your-android-library-lifecycle-aware/header.png" alt="header" /></p>
 
 <p><strong>Lifecycle events in Android.</strong></p>
 
@@ -243,11 +243,11 @@ Nishant Srivastava" />
 
 <p>Lets start by creating a new app. Once done, you can add a new library module</p>
 
-<p><img src="http://crushingcode.github.io/images/posts/is-your-android-library-lifecycle-aware/p1.jpeg" alt="p1" /></p>
+<p><img src="https://crushingcode.github.io/images/posts/is-your-android-library-lifecycle-aware/p1.jpeg" alt="p1" /></p>
 
 <p>Your folder structure should look like the below</p>
 
-<p><img src="http://crushingcode.github.io/images/posts/is-your-android-library-lifecycle-aware/p2.jpeg" alt="p2" /></p>
+<p><img src="https://crushingcode.github.io/images/posts/is-your-android-library-lifecycle-aware/p2.jpeg" alt="p2" /></p>
 
 <p>Next add this <code>awesomelib</code> module as a dependency to the <code>app</code> module, so that the <code>app</code> module has access to the public classes contained by the <code>awesomelib</code> library module. To do that add the below to the <code>build.gradle</code> of the <code>app</code> module.</p>
 
@@ -345,7 +345,7 @@ getLifecycle().removeObserver(AwesomeLibMain.getInstance());
 
 <p>For people worried about adding a lot of method counts to their app, below is a snapshot of method counts (used <a href="https://github.com/google/android-classyshark">Classyshark</a> Tool) for the used arch component libs, <code>awesomelib</code> module and the sample app itself (from the sample <code>app</code> I have linked below)</p>
 
-<p><img src="http://crushingcode.github.io/images/posts/is-your-android-library-lifecycle-aware/p3.jpeg" alt="p3" /></p>
+<p><img src="https://crushingcode.github.io/images/posts/is-your-android-library-lifecycle-aware/p3.jpeg" alt="p3" /></p>
 
 <p>Simple rundown shows the method count for</p>
 
@@ -377,7 +377,7 @@ Till then keep crushing code 🤓</p>
 
     
     <figure class="author-image">
-        <a class="img" href="http://crushingcode.github.io/" style="background-image: url(http://crushingcode.github.io/images/author.jpg)"><span class="hidden">Nishant Srivastava's Picture</span></a>
+        <a class="img" href="https://crushingcode.github.io/" style="background-image: url(https://crushingcode.github.io/images/author.jpg)"><span class="hidden">Nishant Srivastava's Picture</span></a>
     </figure>
     
 
@@ -388,7 +388,7 @@ Till then keep crushing code 🤓</p>
 
 
 <section class="author">
-  <h4><a href="http://crushingcode.github.io/">Nishant Srivastava</a></h4>
+  <h4><a href="https://crushingcode.github.io/">Nishant Srivastava</a></h4>
   
   <p>Creative sleeper. Avid dreamer.</p>
   
@@ -447,9 +447,9 @@ Till then keep crushing code 🤓</p>
         
     </footer>
     </div>
-    <script type="text/javascript" src="http://crushingcode.github.io/js/jquery.js"></script>
-    <script type="text/javascript" src="http://crushingcode.github.io/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://crushingcode.github.io/js/index.js"></script>
+    <script type="text/javascript" src="https://crushingcode.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://crushingcode.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://crushingcode.github.io/js/index.js"></script>
     
 </body>
 </html>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Build on Crushing C.O.D.E</title>
-    <link>http://crushingcode.github.io/tags/build/</link>
+    <link>https://crushingcode.github.io/tags/build/</link>
     <description>Recent content in Build on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - Nishant Srivastava</copyright>
     <lastBuildDate>Tue, 21 Jul 2015 10:54:24 +0200</lastBuildDate>
     
-	<atom:link href="http://crushingcode.github.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://crushingcode.github.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
-      <link>http://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</link>
+      <link>https://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</link>
       <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</guid>
+      <guid>https://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</guid>
       <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
  they are designed to improve build times and simplify development by reducing dependencies on other tools
  In case you are curious, JACK stands for Java Android Compiler Kit and JILL stands for Jack Intermediate Library Linker.

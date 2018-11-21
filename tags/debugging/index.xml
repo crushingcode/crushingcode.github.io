@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Debugging on Crushing C.O.D.E</title>
-    <link>http://crushingcode.github.io/tags/debugging/</link>
+    <link>https://crushingcode.github.io/tags/debugging/</link>
     <description>Recent content in Debugging on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - Nishant Srivastava</copyright>
     <lastBuildDate>Thu, 09 Jul 2015 10:54:24 +0200</lastBuildDate>
     
-	<atom:link href="http://crushingcode.github.io/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://crushingcode.github.io/tags/debugging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Life without wires : ADB over WiFi</title>
-      <link>http://crushingcode.github.io/life-without-wires-adb-over-wifi/</link>
+      <link>https://crushingcode.github.io/life-without-wires-adb-over-wifi/</link>
       <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/life-without-wires-adb-over-wifi/</guid>
+      <guid>https://crushingcode.github.io/life-without-wires-adb-over-wifi/</guid>
       <description>Tired of being tied to your laptop/desktop while debugging your android apps ? Well let me break it to you – You are NOT the FIRST person to do it. Its a common practice to tether your device via a USB cable to the host machine and debug android apps.Well here is something for you that is going to set you free. Yes literally. You can run adb over WiFi (period)</description>
     </item>
     

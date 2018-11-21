@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Commit on Crushing C.O.D.E</title>
-    <link>http://crushingcode.github.io/tags/commit/</link>
+    <link>https://crushingcode.github.io/tags/commit/</link>
     <description>Recent content in Commit on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - Nishant Srivastava</copyright>
     <lastBuildDate>Fri, 18 Nov 2016 10:54:24 +0200</lastBuildDate>
     
-	<atom:link href="http://crushingcode.github.io/tags/commit/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://crushingcode.github.io/tags/commit/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rewriting The History</title>
-      <link>http://crushingcode.github.io/rewriting-the-history/</link>
+      <link>https://crushingcode.github.io/rewriting-the-history/</link>
       <pubDate>Fri, 18 Nov 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/rewriting-the-history/</guid>
+      <guid>https://crushingcode.github.io/rewriting-the-history/</guid>
       <description>Most of us are engineers and at the end of the day humans. So basically we all are bound to make mistakes. As an Engineer we make such mistakes in code quite often and even if we do not admit it , they do exist. How many times have you published your code to a public VCS such as Github/Bitbucket with the credentials and then pulled down the repository only to reset the whole history and re-publish the new repository with the credentials cleaned out.</description>
     </item>
     

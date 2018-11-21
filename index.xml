@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Crushing C.O.D.E</title>
-    <link>http://crushingcode.github.io/</link>
+    <link>https://crushingcode.github.io/</link>
     <description>Recent content on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - Nishant Srivastava</copyright>
     <lastBuildDate>Sun, 17 Sep 2017 10:54:24 +0200</lastBuildDate>
     
-	<atom:link href="http://crushingcode.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://crushingcode.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Is your Android Library, Lifecycle-Aware?</title>
-      <link>http://crushingcode.github.io/is-your-android-library-lifecycle-aware/</link>
+      <link>https://crushingcode.github.io/is-your-android-library-lifecycle-aware/</link>
       <pubDate>Sun, 17 Sep 2017 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/is-your-android-library-lifecycle-aware/</guid>
+      <guid>https://crushingcode.github.io/is-your-android-library-lifecycle-aware/</guid>
       <description>Lifecycle events in Android.
 It has been a pain point for Android developers all over the world. It is no brainer that, most of the times the main cause of a memory leak in the codebase is because an invalid state is accessed which is out of sync with the lifecycle of the activity/fragment of the app. What this means is that as an Android Developer you are forced to put up a lot of checks in place, making sure that your code state is in sync with the lifecycle of the Activity/Fragment.</description>
     </item>
     
     <item>
       <title>Want To Step Up Your Android Learning Game? You Need To Read This First</title>
-      <link>http://crushingcode.github.io/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</link>
+      <link>https://crushingcode.github.io/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</link>
       <pubDate>Sat, 29 Jul 2017 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</guid>
+      <guid>https://crushingcode.github.io/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</guid>
       <description>DISCLAIMER: If you consider yourself a beginner, intermediate, expert or a ninja in the Android realm, this secret sauce still applies to you.
  TL;DR: Build Something. No really! I am not kidding here. Hear me out on this.
 The secret to becoming better at Android development, with all the new shiny stuff being released every year and making you go through the fear of missing out and what not is just to build out something that’s functional, even before reading a blog post or documentation.</description>
@@ -35,66 +35,66 @@ The secret to becoming better at Android development, with all the new shiny stu
     
     <item>
       <title>Things I wish I knew when I started building Android SDK/Libraries</title>
-      <link>http://crushingcode.github.io/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</link>
+      <link>https://crushingcode.github.io/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</link>
       <pubDate>Sun, 05 Mar 2017 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
+      <guid>https://crushingcode.github.io/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
       <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.
 Now here is a thing, if you are like me, who believes that if the problem was big enough for me to spend some time on it and there wasn’t an existing solution out there, I would abstract the whole solution in a modular manner, which eventually turns out to be an android library.</description>
     </item>
     
     <item>
       <title>I could not find a simple Gesture Detection android library, so I built one</title>
-      <link>http://crushingcode.github.io/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
+      <link>https://crushingcode.github.io/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
       <pubDate>Sun, 12 Feb 2017 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
+      <guid>https://crushingcode.github.io/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
       <description>While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture. At first, it was just fine to do that since I was a beginner around that time. Then soon I got weary of the whole boilerplate.</description>
     </item>
     
     <item>
       <title>Rewriting The History</title>
-      <link>http://crushingcode.github.io/rewriting-the-history/</link>
+      <link>https://crushingcode.github.io/rewriting-the-history/</link>
       <pubDate>Fri, 18 Nov 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/rewriting-the-history/</guid>
+      <guid>https://crushingcode.github.io/rewriting-the-history/</guid>
       <description>Most of us are engineers and at the end of the day humans. So basically we all are bound to make mistakes. As an Engineer we make such mistakes in code quite often and even if we do not admit it , they do exist. How many times have you published your code to a public VCS such as Github/Bitbucket with the credentials and then pulled down the repository only to reset the whole history and re-publish the new repository with the credentials cleaned out.</description>
     </item>
     
     <item>
       <title>Do you like to ADB?</title>
-      <link>http://crushingcode.github.io/do-you-like-to-adb/</link>
+      <link>https://crushingcode.github.io/do-you-like-to-adb/</link>
       <pubDate>Fri, 14 Oct 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/do-you-like-to-adb/</guid>
+      <guid>https://crushingcode.github.io/do-you-like-to-adb/</guid>
       <description>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it. Let me make this clear I am not talking about tests here as that&amp;rsquo;s all related to the code. My focus here is on managing the device/emulator that&amp;rsquo;s paired with your dev environment/system (..and to your IDE - Android Studio , if you still use Eclipse you are simply oblivious to the joys of coding in Android [here is a long blank stare from me to you] ).</description>
     </item>
     
     <item>
       <title>Whats in the APK?</title>
-      <link>http://crushingcode.github.io/whats-in-the-apk/</link>
+      <link>https://crushingcode.github.io/whats-in-the-apk/</link>
       <pubDate>Sat, 24 Sep 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/whats-in-the-apk/</guid>
+      <guid>https://crushingcode.github.io/whats-in-the-apk/</guid>
       <description>If I give you the code of an android app and ask you to provide me information regarding the android app like minSdkVersion, targetSdkVersion, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes. But what if I gave you an android apk file and then ask you to answer for the same 🤔 Its tricky if you try to think at the very first instance.</description>
     </item>
     
     <item>
       <title>Update Dependencies.Code.Repeat.</title>
-      <link>http://crushingcode.github.io/update-dependencies-code-repeat/</link>
+      <link>https://crushingcode.github.io/update-dependencies-code-repeat/</link>
       <pubDate>Sat, 03 Sep 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/update-dependencies-code-repeat/</guid>
+      <guid>https://crushingcode.github.io/update-dependencies-code-repeat/</guid>
       <description>Agree or not agree, but on an average consensus pretty much every android dev goes through the loop of Update Dependencies.Code.Repeat. for each of his/her android project. Its frustrating, a waste of time and super annoying when you would want to have the same version across all projects.
 One of such situations that I recently got into was trying to keep all my apps under Android-Examples repository on github updated. As you can see it the repository has multiple small and simple examples of completely functional android apps.</description>
     </item>
     
     <item>
       <title>Guide to publishing your Android Library via JitPack</title>
-      <link>http://crushingcode.github.io/publish-your-android-library-via-jitpack/</link>
+      <link>https://crushingcode.github.io/publish-your-android-library-via-jitpack/</link>
       <pubDate>Fri, 29 Jul 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/publish-your-android-library-via-jitpack/</guid>
+      <guid>https://crushingcode.github.io/publish-your-android-library-via-jitpack/</guid>
       <description>Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.
 P.S. : If you dont know how to , go ahead and have a look
  Guide to publishing your Android Library via Jcenter/Bintray Guide to publishing your Android Library via MavenCentral Guide to publishing your Android Library via JitPack  The very first question that people would have is</description>
@@ -102,38 +102,38 @@ P.S. : If you dont know how to , go ahead and have a look
     
     <item>
       <title>Guide to publishing your Android Library via MavenCentral</title>
-      <link>http://crushingcode.github.io/publish-your-android-library-via-mavencentral/</link>
+      <link>https://crushingcode.github.io/publish-your-android-library-via-mavencentral/</link>
       <pubDate>Sun, 17 Jul 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/publish-your-android-library-via-mavencentral/</guid>
+      <guid>https://crushingcode.github.io/publish-your-android-library-via-mavencentral/</guid>
       <description>If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world. Android artifacts can also be hosted on MavenCentral in a similar manner. Here I am going to document the process to publish an android library to MavenCentral, as I followed it.</description>
     </item>
     
     <item>
       <title>Guide to publishing your Android Library via Jcenter/Bintray</title>
-      <link>http://crushingcode.github.io/publish-your-android-library-via-jcenter/</link>
+      <link>https://crushingcode.github.io/publish-your-android-library-via-jcenter/</link>
       <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/publish-your-android-library-via-jcenter/</guid>
+      <guid>https://crushingcode.github.io/publish-your-android-library-via-jcenter/</guid>
       <description>Developers are a different kind of people altogether. They tend to be lazy but strive to be super efficient at the same time. A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.
 I have a certain knack for re-using code blocks just to avoid repeative tasks and to facilitate this I usually end up converting those codeblocks into an android library.</description>
     </item>
     
     <item>
       <title>Fun Project : Javadoc-Themer</title>
-      <link>http://crushingcode.github.io/a-splash-of-colors-to-your-boring-javadocs/</link>
+      <link>https://crushingcode.github.io/a-splash-of-colors-to-your-boring-javadocs/</link>
       <pubDate>Sun, 15 May 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/a-splash-of-colors-to-your-boring-javadocs/</guid>
+      <guid>https://crushingcode.github.io/a-splash-of-colors-to-your-boring-javadocs/</guid>
       <description>I am pretty sure you would agree to the fact that the usual javadoc is not a something everyone likes. The colors are what makes it superrrrrrr boring. Yeah , I actually despise those weird colors and the fact that its been around for so long , made me think how to solve this. Also if you try looking it up on the internet there aren&amp;rsquo;t any solutions that basically solved this in a programmatic way.</description>
     </item>
     
     <item>
       <title>The curious case of dependency conflicts</title>
-      <link>http://crushingcode.github.io/the-curious-case-of-dependency-conflicts/</link>
+      <link>https://crushingcode.github.io/the-curious-case-of-dependency-conflicts/</link>
       <pubDate>Mon, 02 May 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/the-curious-case-of-dependency-conflicts/</guid>
+      <guid>https://crushingcode.github.io/the-curious-case-of-dependency-conflicts/</guid>
       <description>If I were to ask a question to a room filled with android developers
  &amp;ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?&amp;rdquo;
  ..I am pretty sure a lot of them would raise their hand or agree to being in that state and the very first action would be to hop onto stackoverflow and search for possible solutions in this type of a situation.</description>
@@ -141,30 +141,30 @@ I have a certain knack for re-using code blocks just to avoid repeative tasks an
     
     <item>
       <title>Own a maven repository, like a boss! – Part 2</title>
-      <link>http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-2/</link>
+      <link>https://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-2/</link>
       <pubDate>Tue, 16 Feb 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-2/</guid>
+      <guid>https://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-2/</guid>
       <description>The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.
 For the same reason I have gone through a lot of good articles online, which explain how the whole process works. However most of the documentation is either not up to date or lacks proper explanation. Personally all I care about is how does it work and how can I make it simpler.</description>
     </item>
     
     <item>
       <title>Own a maven repository, like a boss! – Part 1</title>
-      <link>http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-1/</link>
+      <link>https://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-1/</link>
       <pubDate>Mon, 03 Aug 2015 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-1/</guid>
+      <guid>https://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-1/</guid>
       <description>Have you ever thought how the central repository works like Maven Central or JCenter? Is it possible to own one for yourself? Do you want to host your artifacts in your own private repository?
 If your answer is YES, well you are in the right place. I am going to walk you through basic steps involved in setting up your own maven repository where you can publish your artifacts, using all but your terminal, git and a public remote repository hosting service of your choice ( i.</description>
     </item>
     
     <item>
       <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
-      <link>http://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</link>
+      <link>https://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</link>
       <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</guid>
+      <guid>https://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</guid>
       <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
  they are designed to improve build times and simplify development by reducing dependencies on other tools
  In case you are curious, JACK stands for Java Android Compiler Kit and JILL stands for Jack Intermediate Library Linker.
@@ -174,10 +174,10 @@ JACK &amp;amp; JILL were released as an experimental tool chain in the Android S
     
     <item>
       <title>Life without wires : ADB over WiFi</title>
-      <link>http://crushingcode.github.io/life-without-wires-adb-over-wifi/</link>
+      <link>https://crushingcode.github.io/life-without-wires-adb-over-wifi/</link>
       <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/life-without-wires-adb-over-wifi/</guid>
+      <guid>https://crushingcode.github.io/life-without-wires-adb-over-wifi/</guid>
       <description>Tired of being tied to your laptop/desktop while debugging your android apps ? Well let me break it to you – You are NOT the FIRST person to do it. Its a common practice to tether your device via a USB cable to the host machine and debug android apps.Well here is something for you that is going to set you free. Yes literally. You can run adb over WiFi (period)</description>
     </item>
     

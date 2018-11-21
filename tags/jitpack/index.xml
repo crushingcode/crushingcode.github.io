@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jitpack on Crushing C.O.D.E</title>
-    <link>http://crushingcode.github.io/tags/jitpack/</link>
+    <link>https://crushingcode.github.io/tags/jitpack/</link>
     <description>Recent content in Jitpack on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - Nishant Srivastava</copyright>
     <lastBuildDate>Fri, 29 Jul 2016 10:54:24 +0200</lastBuildDate>
     
-	<atom:link href="http://crushingcode.github.io/tags/jitpack/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://crushingcode.github.io/tags/jitpack/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Guide to publishing your Android Library via JitPack</title>
-      <link>http://crushingcode.github.io/publish-your-android-library-via-jitpack/</link>
+      <link>https://crushingcode.github.io/publish-your-android-library-via-jitpack/</link>
       <pubDate>Fri, 29 Jul 2016 10:54:24 +0200</pubDate>
       
-      <guid>http://crushingcode.github.io/publish-your-android-library-via-jitpack/</guid>
+      <guid>https://crushingcode.github.io/publish-your-android-library-via-jitpack/</guid>
       <description>Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.
 P.S. : If you dont know how to , go ahead and have a look
  Guide to publishing your Android Library via Jcenter/Bintray Guide to publishing your Android Library via MavenCentral Guide to publishing your Android Library via JitPack  The very first question that people would have is</description>
