@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wifi on Crushing C.O.D.E</title>
+    <title>wifi on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/wifi/</link>
-    <description>Recent content in Wifi on Crushing C.O.D.E</description>
+    <description>Recent content in wifi on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>All rights reserved - Nishant Srivastava</copyright>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>©2015 - {year}, All Rights Reserved - </copyright>
     <lastBuildDate>Thu, 09 Jul 2015 10:54:24 +0200</lastBuildDate>
     
-	<atom:link href="https://crushingcode.github.io/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.github.io/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Life without wires : ADB over WiFi</title>
-      <link>https://crushingcode.github.io/life-without-wires-adb-over-wifi/</link>
-      <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
+    
       
-      <guid>https://crushingcode.github.io/life-without-wires-adb-over-wifi/</guid>
-      <description>Tired of being tied to your laptop/desktop while debugging your android apps ? Well let me break it to you – You are NOT the FIRST person to do it. Its a common practice to tether your device via a USB cable to the host machine and debug android apps.Well here is something for you that is going to set you free. Yes literally. You can run adb over WiFi (period)</description>
-    </item>
+      <item>
+        <title>Life without wires : ADB over WiFi</title>
+        <link>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</link>
+        <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</guid>
+        <description>Tired of being tied to your laptop/desktop while debugging your android apps ?
+Well let me break it to you – You are NOT the FIRST person to do it.</description>
+      </item>
+      
     
   </channel>
 </rss>

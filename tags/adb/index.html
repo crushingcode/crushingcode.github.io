@@ -1,284 +1,1501 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en" dir="ltr">
+
 <head>
-
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  	<meta property="og:title" content=" Adb &middot;  Crushing C.O.D.E" />
-  	<meta property="og:site_name" content="Crushing C.O.D.E" />
-  	<meta property="og:url" content="https://crushingcode.github.io/tags/adb/" />
-
-    
-    <meta property="og:type" content="website" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>adb – Crushing C.O.D.E</title>
     
 
-  <title>
-     Adb &middot;  Crushing C.O.D.E
-  </title>
 
-    <meta name="description" content="There are two ways to write error-free programs; only the third one works
-Nishant Srivastava" />
+<script defer src="/js/fuse.min.94c78ad70b02749822921660cf4e9f0b3701bc0680c421afb784a78228de0275.js"></script>
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
-    <link rel="shortcut icon" href="https://crushingcode.github.io/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://crushingcode.github.io/images/apple-touch-icon.png" />
+<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://crushingcode.github.io/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="https://crushingcode.github.io/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
+<script>
+  "use strict";
+
+  document.addEventListener('DOMContentLoaded', function () {
+    
+    var gttBtn = document.getElementById("gtt");
+    gttBtn.style.display = "none";
+    gttBtn.addEventListener('click', function () {
+      scrollToTop(250);
+    });
+
+    function scrollToTop(scrollDuration) {
+      var scrollStep = -window.scrollY / (scrollDuration / 15);
+      var scrollInterval = setInterval(function () {
+        if (window.scrollY != 0) {
+          window.scrollBy(0, scrollStep);
+        }
+        else clearInterval(scrollInterval);
+      }, 15);
+    }
+
+    var scrollFunction = function () {
+      if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        gttBtn.style.display = "block";
+      } else {
+        gttBtn.style.display = "none";
+      }
+    }
+    
 
 
     
+    var expandBtn = document.querySelectorAll('.expand__button');
+
+    for (let i = 0; i < expandBtn.length; i++) {
+      expandBtn[i].addEventListener("click", function () {
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          this.querySelector('svg').classList.add('expand-icon__right');
+          this.querySelector('svg').classList.remove('expand-icon__down');
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          this.querySelector('svg').classList.remove('expand-icon__right');
+          this.querySelector('svg').classList.add('expand-icon__down');
+        }
+      });
+    }
+    
+
+
+    
+    var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var tocElem = document.querySelector('.toc');
+    var tableOfContentsElem = tocElem ? tocElem.querySelector('#TableOfContents') : null;
+    var toggleTocElem = document.getElementById('toggle-toc');
+    var singleContentsElem = document.querySelector('.single__contents');
+    var navbar = document.querySelector('.navbar');
+
+    window.onscroll = function () {
+      scrollFunction();
       
-          <link href="https://crushingcode.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Crushing C.O.D.E" />
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop) { 
+        if (st < 250) {
+          gttBtn.style.display = "none";
+        } else {
+          gttBtn.style.display = "block";
+        }
+
+        if (st < 45) {
+          return null;
+        }
+        
+        if (!navbar.classList.contains('navbar--hide')) {
+          navbar.classList.add('navbar--hide');
+        } else if (navbar.classList.contains('navbar--show')) {
+          navbar.classList.remove('navbar--show');
+        }
+        
+        singleContentsElem ? 
+        singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function(elem) {
+          if (toggleTocElem && !toggleTocElem.checked) {
+            return null;
+          }
+          
+          if (document.documentElement.scrollTop >= elem.offsetTop) {
+            if (tableOfContentsElem) {
+              var id = elem.getAttribute('id');
+              tocElem.querySelectorAll('a').forEach(function (elem) {
+                elem.classList.remove('active');
+              });
+              tocElem.querySelector('a[href="#' + id + '"]') ? 
+              tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
+
+              tableOfContentsElem.querySelectorAll('ul > li').forEach(function (liElem) {
+                liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                  ulElem.style.display = 'none';
+                });
+              });
+
+              var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
+              if (curElem && curElem.nextElementSibling) {
+                curElem.nextElementSibling.style.display = 'block';
+              }
+              getParents(curElem, 'ul') ? 
+              getParents(curElem, 'ul').forEach(function (elem) {
+                elem.style.display = 'block';
+              }) : null; 
+            }
+          }
+        }) : null;
+      } else { 
+        if (st < 250) {
+          gttBtn.style.display = "none";
+        }
+
+        if (navbar.classList.contains('navbar--hide')) {
+          navbar.classList.remove('navbar--hide');
+        } else if (!navbar.classList.contains('navbar--show')) {
+          navbar.classList.add('navbar--show');
+        }
+
+        singleContentsElem ? 
+        singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function(elem) {
+          if (toggleTocElem && !toggleTocElem.checked) {
+            return null;
+          }
+
+          if (document.documentElement.scrollTop >= elem.offsetTop) {
+            if (tableOfContentsElem) {
+              var id = elem.getAttribute('id');
+              tocElem.querySelectorAll('a').forEach(function (elem) {
+                elem.classList.remove('active');
+              });
+              tocElem.querySelector('a[href="#' + id + '"]') ? 
+              tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
+
+              tableOfContentsElem.querySelectorAll('ul > li').forEach(function (liElem) {
+                liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                  ulElem.style.display = 'none';
+                });
+              });
+
+              var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
+              if (curElem && curElem.nextElementSibling) {
+                curElem.nextElementSibling.style.display = 'block';
+              }
+              getParents(curElem, 'ul') ? 
+              getParents(curElem, 'ul').forEach(function (elem) {
+                elem.style.display = 'block';
+              }) : null;
+            }
+          }
+        }) : null;
+
+        if (tableOfContentsElem && document.documentElement.scrollTop < 250) {
+          tableOfContentsElem.querySelectorAll('ul > li').forEach(function (liElem) {
+            liElem.querySelectorAll('ul').forEach(function (ulElem) {
+              ulElem.style.display = 'none';
+            });
+          });
+        }
+      }
+      lastScrollTop = st <= 0 ? 0 : st;
+    };
+  
+
+
+  
+    var navbarBurgerElem = document.querySelector('.navbar__burger');
+    var navbarMenuElem = document.querySelector('.navbar__menu');
+    navbarBurgerElem ?
+    navbarBurgerElem.addEventListener('click', function () {
+      if (navbarBurgerElem.classList.contains('is-active')) {
+        navbarBurgerElem.classList.remove('is-active');
+        navbarMenuElem.classList.remove('is-active');
+      } else {
+        navbarBurgerElem.classList.add('is-active');
+        navbarMenuElem.classList.add('is-active');
+      }
+    }) : null;
+  
+
+
+  
+    var mobileSearchInputElem = document.querySelector('#search-mobile');
+    var mobileSearchClassElem = document.querySelector('.mobile-search');
+    var mobileSearchBtnElem = document.querySelector('#mobileSearchBtn');
+    var mobileSearchCloseBtnElem = document.querySelector('#search-mobile-close');
+    var mobileSearchContainer = document.querySelector('#search-mobile-container');
+    var mobileSearchResultsElem = document.querySelector('#search-mobile-results');
+    var htmlElem = document.querySelector('html');
+
+    if (mobileSearchClassElem) {
+      mobileSearchClassElem.style.display = 'none';
+    }
+
+    mobileSearchBtnElem ? 
+    mobileSearchBtnElem.addEventListener('click', function () {
+      if (mobileSearchContainer) {
+        mobileSearchContainer.style.display = 'block';
+      }
+
+      if (mobileSearchInputElem) {
+        mobileSearchInputElem.focus();
+      }
+
+      if (htmlElem) {
+        htmlElem.style.overflowY = 'hidden';
+      }
+    }) : null;
+
+    mobileSearchCloseBtnElem ? 
+    mobileSearchCloseBtnElem.addEventListener('click', function() {
+      if (mobileSearchContainer) {
+        mobileSearchContainer.style.display = 'none';
+      }
+
+      if (mobileSearchInputElem) {
+        mobileSearchInputElem.value = '';
+      }
       
+      if (mobileSearchResultsElem) {
+        while (mobileSearchResultsElem.firstChild) {
+          mobileSearchResultsElem.removeChild(mobileSearchResultsElem.firstChild);
+        }
+      }
+
+      if (htmlElem) {
+        htmlElem.style.overflowY = 'visible';
+      }
+    }) : null;
+
+    mobileSearchInputElem ? 
+    mobileSearchInputElem.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        if (mobileSearchContainer) {
+          mobileSearchContainer.style.display = 'none';
+        }
+        
+        if (mobileSearchInputElem) {
+          mobileSearchInputElem.value = '';
+        }
+
+        if (mobileSearchResultsElem) {
+          while (mobileSearchResultsElem.firstChild) {
+            mobileSearchResultsElem.removeChild(mobileSearchResultsElem.firstChild);
+          }
+        }
+        if (htmlElem) {
+          htmlElem.style.overflowY = 'visible';
+        }
+      }
+    }) : null;
+  
+
+
+  
+    var localTheme = localStorage.getItem('theme');
+    var rootEleme = document.getElementById('root');
+    var selectThemeElem = document.querySelectorAll('.select-theme');
+    var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
+    
+    if (localTheme) {
+      selectThemeItemElem ? 
+      selectThemeItemElem.forEach(function (elem) {
+        if (elem.text.trim() === localTheme) {
+          elem.classList.add('is-active');
+        } else {
+          elem.classList.remove('is-active');
+        }
+      }) : null;
+    }
+
+    selectThemeItemElem ? 
+    selectThemeItemElem.forEach(function (v, i) {
+      v.addEventListener('click', function (e) {
+        var selectedThemeVariant = e.target.text.trim();
+        localStorage.setItem('theme', selectedThemeVariant);
+
+        rootEleme.removeAttribute('class');
+        rootEleme.classList.add(`theme__${selectedThemeVariant}`);
+        selectThemeElem.forEach(function(rootElem) {
+          rootElem.querySelectorAll('a').forEach(function (elem) {
+            if (elem.classList) {
+              if (elem.text.trim() === selectedThemeVariant) {
+                if (!elem.classList.contains('is-active')) {
+                  elem.classList.add('is-active');
+                }
+              } else {
+                if (elem.classList.contains('is-active')) {
+                  elem.classList.remove('is-active');
+                }
+              }
+            }
+          });
+        });
+
+        if (window.mermaid) {
+          if (selectedThemeVariant === "dark" || selectedThemeVariant === "hacker") {
+            mermaid.initialize({ theme: 'dark' });
+            location.reload();
+          } else {
+            mermaid.initialize({ theme: 'default' });
+            location.reload();
+          }
+        }
+
+        var utterances = document.querySelector('iframe');
+        if (utterances) {
+          utterances.contentWindow.postMessage({
+            type: 'set-theme',
+            theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
+          }, 'https://utteranc.es');
+        }
+      });
+    }) : null;
+  
+
+
+  
+    var baseurl = null;
+    
+    var siteBaseURL = JSON.parse("\"https://crushingcode.github.io/\"");
+    var siteBaseChecker = /\/\w+\//i;
+    var isSlug = siteBaseChecker.test(siteBaseURL);
+    var isThemeSite = location.origin.includes('themes.gohugo.io');
+
+    
+        if (isThemeSite) {
+          baseurl = "https:\/\/crushingcode.github.io\/";
+        } else {
+          if (isSlug) {
+            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0];
+          } else {
+            baseurl = location.origin;
+          } 
+        }
+    
+
+    var searchResults = null;
+    var searchMenu = null;
+    var searchText = null;
+    
+    
+    var enableSearchHighlight = JSON.parse("null");
+
+    var fuse = null;
+
+    function endsWith(str, suffix) {
+      return str.indexOf(suffix, str.length - suffix.length) !== -1;
+    }
+
+    function initFuse() {
+      if (!endsWith(baseurl, "/")) {
+        baseurl = baseurl + '/';
+      };
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', baseurl + "index.json");
+      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+            keys: ['title', 'description', 'content'],
+            includeMatches: enableSearchHighlight,
+            shouldSort: true,
+            threshold: 0.4,
+            location: 0,
+            distance: 100,
+            maxPatternLength: 32,
+            minMatchCharLength: 1,
+          });
+        }
+        else {
+          console.error(`[${xhr.status}]Error:`, xhr.statusText);
+        }
+      };
+      xhr.send();
+    }
+
+    function renderSearchResults(results) { 
+      searchResults = document.getElementById('search-results');
+      searchMenu = document.getElementById('search-menu');
+      searchResults.setAttribute('class', 'dropdown is-active');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'dropdown-content search-content');
+
+      if (results.length > 0) {
+        results.forEach(function (result) {
+          var item = document.createElement('a');
+          item.setAttribute('href', result.uri);
+          item.setAttribute('class', 'dropdown-item');
+          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${result.title}</div><div class="menu-item__desc">${result.description ? result.description : result.content}</div></div>`;
+          content.appendChild(item);
+        });
+      } else {
+        var item = document.createElement('span');
+        item.setAttribute('class', 'dropdown-item');
+        item.innerText = 'No results found';
+        content.appendChild(item);
+      }
+
+      while (searchMenu.hasChildNodes()) {
+        searchMenu.removeChild(
+          searchMenu.lastChild
+        );
+      }
+      searchMenu.appendChild(content);
+    }
+
+    function renderSearchHighlightResults(results) {      
+      searchResults = document.getElementById('search-results');
+      searchMenu = document.getElementById('search-menu');
+      searchResults.setAttribute('class', 'dropdown is-active');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'dropdown-content search-content');
+
+      if (results.length > 0) {
+        results.forEach(function (result) {
+          var item = document.createElement('a');
+          item.setAttribute('href', result.item.uri);
+          item.setAttribute('class', 'dropdown-item');
+          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="menu-item__desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
+          content.appendChild(item);
+        });
+      } else {
+        var item = document.createElement('span');
+        item.setAttribute('class', 'dropdown-item');
+        item.innerText = 'No results found';
+        content.appendChild(item);
+      }
+
+      while (searchMenu.hasChildNodes()) {
+        searchMenu.removeChild(
+          searchMenu.lastChild
+        );
+      }
+      searchMenu.appendChild(content);
+    }
+
+    function renderSearchResultsMobile(results) {
+      searchResults = document.getElementById('search-mobile-results');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'mobile-search__content');
+
+      if (results.length > 0) {
+        results.forEach(function (result) {
+          var item = document.createElement('a');
+          item.setAttribute('href', result.uri);
+          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${result.title}</div><div class="mobile-search__item--desc">${result.description ? result.description : result.content}</div></div>`;
+          content.appendChild(item);
+        });
+      } else {
+        var item = document.createElement('span');
+        content.appendChild(item);
+      }
+
+      let wrap = document.getElementById('search-mobile-results');
+      while (wrap.firstChild) {
+        wrap.removeChild(wrap.firstChild)
+      }
+      searchResults.appendChild(content);      
+    }
+
+    function renderSearchHighlightResultsMobile(results) {
+      searchResults = document.getElementById('search-mobile-results');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'mobile-search__content');
+
+      if (results.length > 0) {
+        results.forEach(function (result) {
+          var item = document.createElement('a');
+          item.setAttribute('href', result.item.uri);
+          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="mobile-search__item--desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
+          content.appendChild(item);
+        });
+      } else {
+        var item = document.createElement('span');
+        content.appendChild(item);
+      }
+
+      let wrap = document.getElementById('search-mobile-results');
+      while (wrap.firstChild) {
+        wrap.removeChild(wrap.firstChild)
+      }
+      searchResults.appendChild(content);
+    }
+
+    function generateHighlightedText(text, regions) {
+      if (!regions) {
+        return text;
+      }
+
+      var content = '', nextUnhighlightedRegionStartingIndex = 0;
+
+      regions.forEach(function(region) {
+        if (region[0] === region[1]) {
+          return null;
+        }
+        
+        content += '' +
+          text.substring(nextUnhighlightedRegionStartingIndex, region[0]) +
+          '<span class="search__highlight">' +
+            text.substring(region[0], region[1] + 1) +
+          '</span>' +
+        '';
+        nextUnhighlightedRegionStartingIndex = region[1] + 1;
+      });
+
+      content += text.substring(nextUnhighlightedRegionStartingIndex);
+
+      return content;
+    };
+
+    initFuse();
+
+    var searchElem = document.getElementById('search');
+    var searchMobile = document.getElementById('search-mobile');
+
+    searchElem.addEventListener('input', function(e) {
+      if (!e.target.value) {
+        document.getElementById('search-results').setAttribute('class', 'dropdown');
+        return null;
+      }
+
+      if (window.innerWidth < 770) {
+        return null;
+      }
+
+      searchText = e.target.value;
+      var results = fuse.search(e.target.value);
+      if (enableSearchHighlight) {
+        renderSearchHighlightResults(results);
+      } else {
+        renderSearchResults(results);
+      }
+    });
+
+    searchElem.addEventListener('blur', function() {
+      if (window.innerWidth < 770) {
+        return null;
+      }
+      setTimeout(function () {
+        document.getElementById('search-results').setAttribute('class', 'dropdown');
+      }, 100);
+    });
+
+    searchElem.addEventListener('click', function(e) {
+      if (window.innerWidth < 770) {
+        return null;
+      }
+      if (!e.target.value) {
+        document.getElementById('search-results').setAttribute('class', 'dropdown');
+        return null;
+      }
+
+      searchText = e.target.value;
+      var results = fuse.search(e.target.value);
+      if (enableSearchHighlight) {
+        renderSearchHighlightResults(results);
+      } else {
+        renderSearchResults(results);
+      }
+    });
+    
+    function indexInParent(node) {
+      var children = node.parentNode.childNodes;
+      var num = 0;
+      for (var i = 0; i < children.length; i++) {
+        if (children[i] == node) return num;
+        if (children[i].nodeType == 1) num++;
+      }
+      return -1;
+    }
+
+    var searchMenuElem = document.getElementById("search-menu");
+    var activeItem = document.querySelector('#search-menu .dropdown-item.is-active');
+    var activeIndex = null;
+    var items = null;
+    var searchContainerMaxHeight = 350;
+
+    searchElem.addEventListener('keydown', function(e) {
+      if (window.innerWidth < 770) {
+        return null;
+      }
+
+      var items = document.querySelectorAll('#search-menu .dropdown-item');
       
-        <link href="https://crushingcode.github.io/tags/adb/index.xml" rel="alternate" type="application/rss+xml" title="Adb &middot; Crushing C.O.D.E" />
-      
+      if (e.key === 'ArrowDown') {
+        if (activeIndex === null) {
+          activeIndex = 0;
+          items[activeIndex].classList.remove('is-active');
+        } else {
+          items[activeIndex].classList.remove('is-active');
+          activeIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+        }
+        items[activeIndex].classList.add('is-active');
+
+        let overflowedPixel = items[activeIndex].offsetTop + items[activeIndex].clientHeight - searchContainerMaxHeight;
+        if (overflowedPixel > 0) {
+          document.querySelector(".search-content").scrollTop += items[activeIndex].getBoundingClientRect().height;
+        } else if (activeIndex === 0) {
+          document.querySelector(".search-content").scrollTop = 0;
+        }
+      } else if (e.key === 'ArrowUp') {
+        if (activeIndex === null) {
+          activeIndex = items.length - 1;
+          items[activeIndex].classList.remove('is-active');
+        } else {
+          items[activeIndex].classList.remove('is-active');
+          activeIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+        }
+        items[activeIndex].classList.add('is-active');
+        
+        let overflowedPixel = items[activeIndex].offsetTop + items[activeIndex].clientHeight - searchContainerMaxHeight;
+        if (overflowedPixel < 0) {
+          document.querySelector(".search-content").scrollTop -= items[activeIndex].getBoundingClientRect().height;
+        } else {
+          document.querySelector(".search-content").scrollTop = overflowedPixel + items[activeIndex].getBoundingClientRect().height;
+        }
+      } else if (e.key === 'Enter') {
+        var currentItemLink = items[activeIndex].getAttribute('href');
+        if (currentItemLink) {
+          location.href = currentItemLink;
+        }
+      } else if (e.key === 'Escape') {
+        e.target.value = null;
+        if (searchResults) {
+          searchResults.classList.remove('is-active');
+        }
+      }
+    });
+
+    searchMobile.addEventListener('input', function(e) {
+      if (!e.target.value) {
+        let wrap = document.getElementById('search-mobile-results');
+        while (wrap.firstChild) {
+          wrap.removeChild(wrap.firstChild);
+        }
+        return null;
+      }
+
+      searchText = e.target.value;
+      var results = fuse.search(e.target.value);
+      renderSearchResultsMobile(results);
+      if (enableSearchHighlight) {
+        renderSearchHighlightResultsMobile(results);
+      } else {
+        renderSearchResultsMobile(results);
+      }
+    });
+  
+  });
+</script>    
     
-    <meta name="generator" content="Hugo 0.51" />
 
-    <link rel="canonical" href="https://crushingcode.github.io/tags/adb/" />
+
+<link rel="stylesheet" href="/css/main.min.css">
+
+
+    <link rel="alternate" type="application/rss&#43;xml" title="RSS" href="https://crushingcode.github.io/tags/adb/index.xml">
+<meta name="description" content="" />
+<meta name="keywords" content="">
+<meta name="created" content="2016-10-14T10:54:24&#43;0200">
+<meta name="modified" content="2016-10-14T10:54:24&#43;0200">
+
+
+<meta property="og:site_name" content="Crushing C.O.D.E">
+<meta property="og:title" content="adb">
+<meta property="og:url" content="https://crushingcode.github.io/tags/adb/">
+<meta property="og:type" content="website">
+
+<meta name="generator" content="Hugo 0.62.0" />
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://crushingcode.github.io/tags/adb/">
+<link rel="manifest" href="/manifest.json">
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url" : "https://crushingcode.github.io/tags/adb/",
+    "name": "adb",
+    "description": "Blog by Nishant Srivastava",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://crushingcode.github.io/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Crushing C.O.D.E",
+      "url": "https://crushingcode.github.io/"
+    }
+  }
+</script>
 
     
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-53824796-3', 'auto');
-      ga('send', 'pageview');
 
-    </script>
-    
+
+
 
     
 </head>
-<body class="nav-closed">
 
-  <div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
-        
-
-        
-            
-            <li class="nav-opened" role="presentation">
-              <a href="https://crushingcode.github.io/">Home</a>
-            </li>
-        
-            <b> About Me</b>
-            <li class="nav-opened" role="presentation">
-              <a href="https://github.com/nisrulz/nisrulz.github.io#nishant-srivastava"> Portfolio</a>
-            </li>
-        
-            <b>Follow me 🚀<b>
-            <li class="nav-opened" role="presentation">
-              <a href="https://github.com/nisrulz">Github</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-              <a href="https://twitter.com/nisrulz">Twitter</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-              <a href="https://speakerdeck.com/nisrulz">SpeakerDeck</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-              <a href="https://android-arsenal.com/user/nisrulz">Android Arsenal</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-              <a href="http://stackoverflow.com/users/2745762/radix">Stackoverflow</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-              <a href="https://dribbble.com/nisrulz">Dribbble</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-              <a href="https://www.behance.net/nisrulz">Behance</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-              <a href="https://codepen.io/nisrulz/">Codepen</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-              <a href="https://www.quora.com/profile/Nishant-Rulez">Quora</a>
-            </li>
-        
-            <b>Like my work? ☺️</b>
-            <li class="nav-opened" role="presentation">
-              <a href="https://www.paypal.me/nisrulz/5eur">Buy me a Coffee</a>
-            </li>
-        
-            <b>Contact Me ✉️</b>
-            <li class="nav-opened" role="presentation">
-              <a href="mailto:nisrulz@gmail.com?Subject=Heyo%20CodeCrusher"> Mail</a>
-            </li>
-        
-    </ul>
-
+<body id="root" class="theme__hacker">
+    <script>
+        var localTheme = localStorage.getItem('theme');
+        if (localTheme) {
+            document.getElementById('root').className = `theme__${localTheme}`;
+        }        
+    </script>    
     
-    <a class="subscribe-button icon-feed" href="https://crushingcode.github.io/tags/adb/index.xml">Subscribe</a>
+    <div id="container">
+        
+        <div class="wrapper">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar__brand">
     
-</div>
-<span class="nav-cover"></span>
-
-
- <div class="site-wrapper">
-
-
-
-
-	 
-  <header class="main-header tag-head" style="background-image: url(https://crushingcode.github.io/images/cover5.jpg)">
+    &nbsp;&nbsp;
+    
+    
+      <a href="/" title="Home" rel="home" class="navbar__title-link">
+        <h6 class="navbar__title">Nishant Srivastava</h6>
+      </a>
+    
+  </div>
   
-
-    <nav class="main-nav overlay clearfix">
+  
+<div class="theme-mobile">
+  <div class="dropdown">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" style="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
+    </button>
+    <div class="dropdown-content select-theme">
       
-        <a class="blog-logo" href="https://crushingcode.github.io/"><img src="https://crushingcode.github.io/images/author.jpg" alt="Home" /></a>
+        
+        <a href="#" class="dropdown-item select-theme__item is-active">
+          hacker
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          dark
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          light
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          kimbie
+        </a>
+        
       
-      
-          <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
-      
-    </nav>
-    <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">Adb</h1>
-            <h2 class="page-description">
-                
-            </h2>
-        </div>
     </div>
-</header>
+  </div>
+</div>
 
-<main class="content" role="main">
+  
+<div id="mobileSearchBtn" class="mobile-search__btn">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+</div>
+
+<div id="search-mobile-container" class="mobile-search hide">
+  <div class="mobile-search__top">
+    <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="Search" class="mobile-search__top--input"/>
+    <div id="search-mobile-close" class="mobile-search__top--icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
+    </div>
+  </div>
+  <div id="search-mobile-results" class="mobile-search__body">
+    
+  </div>
+</div>
+
+  
+  <a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>  
+
+  <div class="navbar__menu">
+    
+<div class="theme">
+  <div class="dropdown">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
+    </button>
+    <div class="dropdown-content select-theme">
+      
+        
+        <a href="#" class="dropdown-item select-theme__item is-active">
+          hacker
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          dark
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          light
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          kimbie
+        </a>
+        
+      
+    </div>
+  </div>
+</div>
+
+    
+    
+      
+      
+      
+      
+      
+        <a href="/about" class="navbar__menu-item navbar__slide-down ">About</a>
+      
+    
+      
+      
+      
+      
+      
+        <a href="/posts" class="navbar__menu-item navbar__slide-down ">Posts</a>
+      
+    
+      
+      
+      
+      
+      
+        <a href="/archive" class="navbar__menu-item navbar__slide-down ">Archive</a>
+      
+    
+      
+      
+      
+      
+      
+        <a href="/talks" class="navbar__menu-item navbar__slide-down ">Talks</a>
+      
+    
+      
+      
+      
+      
+      
+        <a href="/showcase" class="navbar__menu-item navbar__slide-down ">Showcase</a>
+      
+    
+  </div>
+</nav>
+            
+            
+
+
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
+
+<main class="main inner">
+  <div class="list__main lm">
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+  <ol>
+    
+  
+  
+  
+  
+  
+  <li >
+    
+      <a href="https://crushingcode.github.io/" class="capitalize">Crushing C.O.D.E</a>
+    
+  </li>
+  
+  
+  <li >
+    
+      <a href="https://crushingcode.github.io/tags/" class="capitalize">Tags</a>
+    
+  </li>
+  
+  
+  <li  class="is-active" >
+    
+      <span>adb</span>
+    
+  </li>
+  
+  </ol>
+  
+</nav>
+    <header class="list__header">
+      <h5 class="list__header--title capitalize h5">adb</h5>
+    </header>
+    
+    <div class="list__header--desc p2">
+      
+    </div>
+
+    <div class="summary__container">
+      
+        
+  <article class="summary-classic">
+  <div class="summary-classic__flex-box" >
+    
+    
     
 
-	<div class="extra-pagination inner">
-    <nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
+    <div class="summary-classic__content">
+      <header>
+        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/do-you-like-to-adb/'> Do you like to ADB?</a> </h5>
+        <h6 class="subtitle caption"><time title="Written At">📅 Oct 14, 2016 </time>  <span title="Reading Time"> &middot; ☕ 10 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+          Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.
+          
+        </div>
+      </div>
+    </div>
 
-	</div>
-
-	
-	   
-<article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="https://crushingcode.github.io/do-you-like-to-adb/">Do you like to ADB?</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it. Let me make this clear I am not talking about tests here as that&rsquo;s all related to the code. My focus here is on managing the device/emulator that&rsquo;s paired with your dev environment/system (..and to your IDE - Android Studio , if you still use Eclipse you are simply oblivious to the joys of coding in Android [here is a long blank stare from me to you] ). <a class="read-more" href="https://crushingcode.github.io/do-you-like-to-adb/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        
-            
-        
-
-        
-            Nishant Srivastava
-        
-        <time class="post-date" datetime="2016-10-14T10:54:24&#43;02:00">
-            14 Oct 2016
-        </time>
-
-        
-            
-                <a href="https://crushingcode.github.io/tags/android/">#android</a>
-            
-                <a href="https://crushingcode.github.io/tags/tools/">#tools</a>
-            
-                <a href="https://crushingcode.github.io/tags/apk/">#apk</a>
-            
-                <a href="https://crushingcode.github.io/tags/adb/">#adb</a>
-            
-                <a href="https://crushingcode.github.io/tags/information/">#information</a>
-            
-        
-    </footer>
+    
+    
+  </div>
+  <hr />
 </article>
 
-	
-	   
-<article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="https://crushingcode.github.io/life-without-wires-adb-over-wifi/">Life without wires : ADB over WiFi</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Tired of being tied to your laptop/desktop while debugging your android apps ? Well let me break it to you – You are NOT the FIRST person to do it. Its a common practice to tether your device via a USB cable to the host machine and debug android apps.Well here is something for you that is going to set you free. Yes literally. You can run adb over WiFi (period) <a class="read-more" href="https://crushingcode.github.io/life-without-wires-adb-over-wifi/">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
+      
         
-        
-            
-        
+  <article class="summary-classic">
+  <div class="summary-classic__flex-box" >
+    
+    
+    
 
-        
-            Nishant Srivastava
-        
-        <time class="post-date" datetime="2015-07-09T10:54:24&#43;02:00">
-            9 Jul 2015
-        </time>
+    <div class="summary-classic__content">
+      <header>
+        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/'> Life without wires : ADB over WiFi</a> </h5>
+        <h6 class="subtitle caption"><time title="Written At">📅 Jul 9, 2015 </time>  <span title="Reading Time"> &middot; ☕ 3 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+          Tired of being tied to your laptop/desktop while debugging your android apps ?
+Well let me break it to you – You are NOT the FIRST person to do it.
+          
+        </div>
+      </div>
+    </div>
 
-        
-            
-                <a href="https://crushingcode.github.io/tags/wifi/">#wifi</a>
-            
-                <a href="https://crushingcode.github.io/tags/adb/">#adb</a>
-            
-                <a href="https://crushingcode.github.io/tags/debugging/">#debugging</a>
-            
-                <a href="https://crushingcode.github.io/tags/android/">#android</a>
-            
-        
-    </footer>
+    
+    
+  </div>
+  <hr />
 </article>
 
-	
+      
+    </div>
+    
 
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
 
+  </div>
+
+  
+    <aside class="list__sidebar r">
+      
+
+<ul class="sidebar">
+    
+
+<div class="search">
+  <span class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </span>
+  <input id="search" aria-label="Site Search" class="input" type="text" placeholder="Search" autocomplete="off">
+  <div id="search-results" class="dropdown">
+    <div id="search-menu" class="dropdown-menu" role="menu">
+    </div>
+  </div>
+</div>
+
+
+    
+    
+</ul>
+<div class="taxo-root">
+
+<div class="taxo">
+    <section>
+        <span class="title p2">
+            <a href="/tags/" class="taxo__title">
+                Tags
+            </a>
+        </span>
+        
+        
+            <span class="tag">
+                <a href="/tags/adb/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        adb
+                    </span>
+                    <span class="taxo__num">
+                        2
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/android/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        android
+                    </span>
+                    <span class="taxo__num">
+                        14
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/best-practices/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        best-practices
+                    </span>
+                    <span class="taxo__num">
+                        2
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/build/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        build
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/debugging/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        debugging
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/gesture/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        gesture
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/git/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        git
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/gradle/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        gradle
+                    </span>
+                    <span class="taxo__num">
+                        2
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/issue/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        issue
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/javadoc/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        javadoc
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/jcenter/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        jcenter
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/jitpack/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        jitpack
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/library/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        library
+                    </span>
+                    <span class="taxo__num">
+                        8
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/lifecyle/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        lifecyle
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/maven/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        maven
+                    </span>
+                    <span class="taxo__num">
+                        2
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/maven-central/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        maven-central
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/opensource/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        opensource
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/sdk/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        sdk
+                    </span>
+                    <span class="taxo__num">
+                        8
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/sensor/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        sensor
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/tools/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        tools
+                    </span>
+                    <span class="taxo__num">
+                        4
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/wifi/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        wifi
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+    </section>
+</div>
+
+
+
+</div>
+
+
+    </aside>
+  
 </main>
 
+<script>
+  
+  var sidebarPosition = JSON.parse("\"right\"");
+  var listMainElem = document.querySelector('.list__main');
+  var listSideElem = document.querySelector('.list__sidebar');
+
+  var gridSmall = 'l';
+  var gridBig = 'mr';
+  var gridFull = 'lmr'
+
+  if (sidebarPosition === "right") {
+      gridSmall = 'r';
+      gridBig = 'lm'
+  }
+
+  enquire.register("screen and (max-width: 769px)", {
+    match: function () {
+      listMainElem.classList.remove(gridBig);
+      listMainElem.classList.add(gridFull);
+      listSideElem.classList.remove(gridSmall);
+    },
+    unmatch: function () {
+      listMainElem.classList.remove(gridFull);
+      listMainElem.classList.add(gridBig);
+      listSideElem.classList.add(gridSmall);
+      
+      document.getElementsByClassName('navbar__burger')[0].classList.remove('is-active');
+      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+    },
+    setup: function () { },
+    deferSetup: true,
+    destroy: function () { },
+  });
+</script>
+
+<script defer src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
+
+<script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
 
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">Crushing C.O.D.E</a> All rights reserved - Nishant Srivastava</section>
-        
-        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
-        
-    </footer>
-    </div>
-    <script type="text/javascript" src="https://crushingcode.github.io/js/jquery.js"></script>
-    <script type="text/javascript" src="https://crushingcode.github.io/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://crushingcode.github.io/js/index.js"></script>
+            
+            <footer class="footer">
     
-</body>
-</html>
+    
+<div class="footer__social">
+  <div class="social">
+    
+            
+    
+            
+    
+      
+      <a href="mailto:nisrulz@gmail.com?Subject=Heyo%20CodeCrusher" title="email" aria-label="email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25c-.25-.16-.4-.43-.4-.72 0-.67.73-1.07 1.3-.72L12 11l6.7-4.19c.57-.35 1.3.05 1.3.72 0 .29-.15.56-.4.72z"/></svg>
+      </a>
+            
+    
+      
+      <a href="https://facebook.com/NishantRulez" title="facebook" aria-label="facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 24 24" version="1.1">
+<g id="surface2747">
+<path fill="currentColor" d="M 11.664062 2.003906 C 6.621094 2.171875 2.375 6.25 2.023438 11.289062 C 1.65625 16.617188 5.46875 21.121094 10.507812 21.878906 L 10.507812 14.648438 L 8.890625 14.648438 C 8.164062 14.648438 7.578125 14.0625 7.578125 13.335938 C 7.578125 12.609375 8.164062 12.023438 8.890625 12.023438 L 10.503906 12.023438 L 10.503906 10.273438 C 10.503906 7.378906 11.914062 6.105469 14.324219 6.105469 C 14.679688 6.105469 14.984375 6.113281 15.242188 6.128906 C 15.878906 6.15625 16.371094 6.6875 16.371094 7.324219 C 16.371094 7.988281 15.835938 8.523438 15.171875 8.523438 L 14.730469 8.523438 C 13.710938 8.523438 13.351562 9.492188 13.351562 10.585938 L 13.351562 12.023438 L 15.222656 12.023438 C 15.8125 12.023438 16.265625 12.550781 16.175781 13.132812 L 16.066406 13.835938 C 15.992188 14.304688 15.589844 14.652344 15.113281 14.652344 L 13.351562 14.652344 L 13.351562 21.898438 C 18.234375 21.234375 22 17.0625 22 12 C 22 6.367188 17.339844 1.820312 11.664062 2.003906 Z M 11.664062 2.003906 "/>
+</g>
+</svg>
 
+      </a>
+            
+    
+      
+      <a href="https://github.com/nisrulz" title="github" aria-label="github">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 24 24" version="1.1">
+<g id="surface3680">
+<path fill="currentColor" d="M 10.898438 2.101562 C 6.300781 2.601562 2.601562 6.300781 2.101562 10.800781 C 1.601562 15.5 4.300781 19.699219 8.398438 21.300781 C 8.699219 21.398438 9 21.199219 9 20.800781 L 9 19.199219 C 9 19.199219 8.601562 19.300781 8.101562 19.300781 C 6.699219 19.300781 6.101562 18.101562 6 17.398438 C 5.898438 17 5.699219 16.699219 5.398438 16.398438 C 5.101562 16.300781 5 16.300781 5 16.199219 C 5 16 5.300781 16 5.398438 16 C 6 16 6.5 16.699219 6.699219 17 C 7.199219 17.800781 7.800781 18 8.101562 18 C 8.5 18 8.800781 17.898438 9 17.800781 C 9.101562 17.101562 9.398438 16.398438 10 16 C 7.699219 15.5 6 14.199219 6 12 C 6 10.898438 6.5 9.800781 7.199219 9 C 7.101562 8.800781 7 8.300781 7 7.601562 C 7 7.199219 7 6.601562 7.300781 6 C 7.300781 6 8.699219 6 10.101562 7.300781 C 10.601562 7.101562 11.300781 7 12 7 C 12.699219 7 13.398438 7.101562 14 7.300781 C 15.300781 6 16.800781 6 16.800781 6 C 17 6.601562 17 7.199219 17 7.601562 C 17 8.398438 16.898438 8.800781 16.800781 9 C 17.5 9.800781 18 10.800781 18 12 C 18 14.199219 16.300781 15.5 14 16 C 14.601562 16.5 15 17.398438 15 18.300781 L 15 20.898438 C 15 21.199219 15.300781 21.5 15.699219 21.398438 C 19.398438 19.898438 22 16.300781 22 12.101562 C 22 6.101562 16.898438 1.398438 10.898438 2.101562 Z M 10.898438 2.101562 "/>
+</g>
+</svg>
+
+      </a>
+            
+    
+            
+    
+            
+    
+      
+      <a href="https://instagram.com/nisrulz" title="instagram" aria-label="instagram">
+        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><path fill="currentColor" d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"/></svg>
+      </a>
+            
+    
+      
+      <a href="https://linkedin.com/in/nisrulz" title="linkedin" aria-label="linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="32" height="32"><path fill="currentColor" d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"/></svg>
+
+      </a>
+            
+    
+            
+    
+      
+      <a href="https://medium.com/@nisrulz" title="medium" aria-label="medium">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="32" height="32"><path fill="currentColor" d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M22.542,21h-5.931 v-0.333L18,19.445V12.47L14.589,21h-0.533l-3.806-8.597v6.087l1.74,2.177V21H7.458v-0.333l1.799-2.177v-7.242L7.658,9.249 c0,0,0-0.289,0-0.244h4.376l3.399,7.353l2.932-7.353h4.154v0.244L21,10.526v8.919l1.542,1.222V21z"/></svg>
+
+      </a>
+            
+    
+            
+    
+            
+    
+      
+      <a href="https://stackoverflow.com/users/2745762/nishant" title="stack-overflow" aria-label="stack-overflow">
+        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="32" height="32"><path fill="currentColor" d="M 9.914063 0.71875 L 9.085938 1.28125 L 11.894531 5.367188 L 12.71875 4.800781 Z M 7.695313 2.453125 L 7.039063 3.207031 L 10.917969 6.582031 L 11.574219 5.828125 Z M 6.226563 4.804688 L 5.773438 5.695313 L 10.210938 7.953125 L 10.664063 7.0625 Z M 5.363281 7.140625 L 5.136719 8.109375 L 9.976563 9.242188 L 10.203125 8.265625 Z M 3 9 L 3 14 L 12 14 L 12 9 L 11 9 L 11 13 L 4 13 L 4 9 Z M 5.03125 9.25 L 4.96875 10.25 L 9.972656 10.566406 L 10.035156 9.570313 Z M 5 11 L 5 12 L 10 12 L 10 11 Z"/></svg>
+      </a>
+            
+    
+            
+    
+            
+    
+            
+    
+      
+      <a href="https://twitter.com/nisrulz" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" version="1.1">
+<g id="surface676">
+<path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
+</g>
+</svg>
+
+      </a>
+            
+    
+            
+    
+            
+    
+            
+    
+    
+  <a href="https://crushingcode.github.io/tags/adb//index.xml" type="application/rss+xml" title="rss" aria-label="RSS Feed Link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
+  </a>
+
+  </div>
+</div>
+
+    
+<div id="gtt">
+  <div class="gtt">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>
+  </div>
+</div>
+
+    <hr />
+
+    <div class="footer__poweredby">
+        
+                
+            <p class="caption">
+                
+                    
+                    
+
+                    
+                        ©2015 - 2020, All Rights Reserved - <a rel="license" href="https://nisrulz.com/">Nishant Srivastava</a>
+                    
+                
+            </p>
+        
+
+        
+    </div> 
+</footer>
+        </div>    
+    </div>
+</body>
+
+</html>

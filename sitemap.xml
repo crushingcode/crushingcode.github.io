@@ -1,347 +1,327 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://crushingcode.github.io/is-your-android-library-lifecycle-aware/</loc>
-    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/showcase/android/easydeviceinfo/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</loc>
-    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/</loc>
+    <lastmod>2020-02-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</loc>
-    <lastmod>2017-03-05T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/fosdem_2020/</loc>
+    <lastmod>2020-02-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</loc>
-    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/showcase/android/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/rewriting-the-history/</loc>
-    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/showcase/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/do-you-like-to-adb/</loc>
-    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/mobilization_ix_2019/</loc>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/whats-in-the-apk/</loc>
-    <lastmod>2016-09-24T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/archive/</loc>
+    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/update-dependencies-code-repeat/</loc>
-    <lastmod>2016-09-03T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/droidcon_greece_2019/</loc>
+    <lastmod>2019-09-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/publish-your-android-library-via-jitpack/</loc>
-    <lastmod>2016-07-29T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/droidcon_vienna_2019/</loc>
+    <lastmod>2019-09-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/publish-your-android-library-via-mavencentral/</loc>
-    <lastmod>2016-07-17T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/devoxx_pl_2019/</loc>
+    <lastmod>2019-06-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/publish-your-android-library-via-jcenter/</loc>
-    <lastmod>2016-07-12T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/appdevcon_2019/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/a-splash-of-colors-to-your-boring-javadocs/</loc>
-    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/the-curious-case-of-dependency-conflicts/</loc>
-    <lastmod>2016-05-02T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/berlindroid_feb_2019/</loc>
+    <lastmod>2019-02-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-2/</loc>
-    <lastmod>2016-02-16T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/mobius_moscow_2018/</loc>
+    <lastmod>2018-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/own-a-maven-repository-like-a-bosspart-1/</loc>
-    <lastmod>2015-08-03T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/devoxx_be_2018/</loc>
+    <lastmod>2018-11-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</loc>
-    <lastmod>2015-07-21T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/droidcon_berlin_2018/</loc>
+    <lastmod>2018-06-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/life-without-wires-adb-over-wifi/</loc>
-    <lastmod>2015-07-09T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/aapt/</loc>
-    <lastmod>2016-09-24T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/adb/</loc>
-    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
-    <priority>0</priority>
+    <loc>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</loc>
+    <lastmod>2017-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://crushingcode.github.io/tags/android/</loc>
     <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/apk/</loc>
-    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/artifact/</loc>
-    <lastmod>2016-02-16T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/bestpractices/</loc>
-    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/build/</loc>
-    <lastmod>2015-07-21T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/commit/</loc>
-    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/conflict/</loc>
-    <lastmod>2016-05-02T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/</loc>
+    <loc>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</loc>
     <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/debugging/</loc>
-    <lastmod>2015-07-09T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/dependency/</loc>
-    <lastmod>2016-09-03T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/detection/</loc>
-    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/edd/</loc>
-    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/example/</loc>
-    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/fun/</loc>
-    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/gesture/</loc>
-    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/git/</loc>
-    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/github/</loc>
-    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/gradle/</loc>
-    <lastmod>2016-09-03T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/history/</loc>
-    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/information/</loc>
-    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/issue/</loc>
-    <lastmod>2016-05-02T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/javadoc/</loc>
-    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/jcenter/</loc>
-    <lastmod>2016-07-12T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/jitpack/</loc>
-    <lastmod>2016-07-29T10:54:24+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://crushingcode.github.io/tags/library/</loc>
     <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://crushingcode.github.io/tags/lifecyle/</loc>
     <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/maven/</loc>
-    <lastmod>2016-02-16T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/mavencentral/</loc>
-    <lastmod>2016-07-17T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/opensource/</loc>
-    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/post/</loc>
+    <loc>https://crushingcode.github.io/posts/</loc>
     <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/private/</loc>
-    <lastmod>2015-08-03T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/project/</loc>
-    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/publish/</loc>
-    <lastmod>2016-07-29T10:54:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/repository/</loc>
-    <lastmod>2016-02-16T10:54:24+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://crushingcode.github.io/tags/sdk/</loc>
+    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/</loc>
+    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/droidcon_berlin_2017/</loc>
+    <lastmod>2017-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/code_and_coffee_aug_2017/</loc>
+    <lastmod>2017-08-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/best-practices/</loc>
+    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first.1/</loc>
+    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/gdg_cv_2017/</loc>
+    <lastmod>2017-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/code_and_coffee_may_2017/</loc>
+    <lastmod>2017-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/vandev_2017/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</loc>
     <lastmod>2017-03-05T10:54:24+02:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/gesture/</loc>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</loc>
+    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://crushingcode.github.io/tags/sensor/</loc>
     <lastmod>2017-02-12T10:54:24+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/solution/</loc>
-    <lastmod>2016-05-02T10:54:24+02:00</lastmod>
-    <priority>0</priority>
+    <loc>https://crushingcode.github.io/tags/git/</loc>
+    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/</loc>
-    <lastmod>2016-09-24T10:54:24+02:00</lastmod>
-    <priority>0</priority>
+    <loc>https://crushingcode.github.io/posts/rewriting-the-history/</loc>
+    <lastmod>2016-11-18T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/adb/</loc>
+    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/do-you-like-to-adb/</loc>
+    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://crushingcode.github.io/tags/tools/</loc>
     <lastmod>2016-10-14T10:54:24+02:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/whats-in-the-apk/</loc>
+    <lastmod>2016-09-24T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/gradle/</loc>
+    <lastmod>2016-09-03T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/update-dependencies-code-repeat/</loc>
+    <lastmod>2016-09-03T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/</loc>
+    <lastmod>2016-07-29T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/jitpack/</loc>
+    <lastmod>2016-07-29T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/</loc>
+    <lastmod>2016-07-17T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/maven-central/</loc>
+    <lastmod>2016-07-17T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</loc>
+    <lastmod>2016-07-12T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/jcenter/</loc>
+    <lastmod>2016-07-12T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</loc>
+    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/javadoc/</loc>
+    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/opensource/</loc>
+    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/issue/</loc>
+    <lastmod>2016-05-02T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/the-curious-case-of-dependency-conflicts/</loc>
+    <lastmod>2016-05-02T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/maven/</loc>
+    <lastmod>2016-02-16T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</loc>
+    <lastmod>2016-02-16T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/</loc>
+    <lastmod>2015-08-03T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/build/</loc>
+    <lastmod>2015-07-21T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</loc>
+    <lastmod>2015-07-21T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/debugging/</loc>
+    <lastmod>2015-07-09T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</loc>
+    <lastmod>2015-07-09T10:54:24+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://crushingcode.github.io/tags/wifi/</loc>
     <lastmod>2015-07-09T10:54:24+02:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/series/</loc>
   </url>
   
 </urlset>

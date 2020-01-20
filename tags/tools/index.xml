@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tools on Crushing C.O.D.E</title>
+    <title>tools on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/tools/</link>
-    <description>Recent content in Tools on Crushing C.O.D.E</description>
+    <description>Recent content in tools on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>All rights reserved - Nishant Srivastava</copyright>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>©2015 - {year}, All Rights Reserved - </copyright>
     <lastBuildDate>Fri, 14 Oct 2016 10:54:24 +0200</lastBuildDate>
     
-	<atom:link href="https://crushingcode.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Do you like to ADB?</title>
-      <link>https://crushingcode.github.io/do-you-like-to-adb/</link>
-      <pubDate>Fri, 14 Oct 2016 10:54:24 +0200</pubDate>
+    
       
-      <guid>https://crushingcode.github.io/do-you-like-to-adb/</guid>
-      <description>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it. Let me make this clear I am not talking about tests here as that&amp;rsquo;s all related to the code. My focus here is on managing the device/emulator that&amp;rsquo;s paired with your dev environment/system (..and to your IDE - Android Studio , if you still use Eclipse you are simply oblivious to the joys of coding in Android [here is a long blank stare from me to you] ).</description>
-    </item>
-    
-    <item>
-      <title>Whats in the APK?</title>
-      <link>https://crushingcode.github.io/whats-in-the-apk/</link>
-      <pubDate>Sat, 24 Sep 2016 10:54:24 +0200</pubDate>
+      <item>
+        <title>Do you like to ADB?</title>
+        <link>https://crushingcode.github.io/posts/do-you-like-to-adb/</link>
+        <pubDate>Fri, 14 Oct 2016 10:54:24 +0200</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/posts/do-you-like-to-adb/</guid>
+        <description>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.</description>
+      </item>
       
-      <guid>https://crushingcode.github.io/whats-in-the-apk/</guid>
-      <description>If I give you the code of an android app and ask you to provide me information regarding the android app like minSdkVersion, targetSdkVersion, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes. But what if I gave you an android apk file and then ask you to answer for the same 🤔 Its tricky if you try to think at the very first instance.</description>
-    </item>
-    
-    <item>
-      <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
-      <link>https://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</link>
-      <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
+      <item>
+        <title>Whats in the APK?</title>
+        <link>https://crushingcode.github.io/posts/whats-in-the-apk/</link>
+        <pubDate>Sat, 24 Sep 2016 10:54:24 +0200</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/posts/whats-in-the-apk/</guid>
+        <description>If I give you the code of an android app and ask you to provide me information regarding the android app like minSdkVersion, targetSdkVersion, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes.</description>
+      </item>
       
-      <guid>https://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</guid>
-      <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
- they are designed to improve build times and simplify development by reducing dependencies on other tools
- In case you are curious, JACK stands for Java Android Compiler Kit and JILL stands for Jack Intermediate Library Linker.
-Woa ..woa..wooaaaa ..thats sounds too technical ..lets slow this down, right.
-JACK &amp;amp; JILL were released as an experimental tool chain in the Android SDK 21.</description>
-    </item>
+      <item>
+        <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
+        <link>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</link>
+        <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
+        <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
+ they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
+      </item>
+      
+      <item>
+        <title>Life without wires : ADB over WiFi</title>
+        <link>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</link>
+        <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</guid>
+        <description>Tired of being tied to your laptop/desktop while debugging your android apps ?
+Well let me break it to you – You are NOT the FIRST person to do it.</description>
+      </item>
+      
     
   </channel>
 </rss>

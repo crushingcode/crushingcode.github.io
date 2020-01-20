@@ -5,11 +5,16 @@
     <link>https://crushingcode.github.io/categories/</link>
     <description>Recent content in Categories on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>All rights reserved - Nishant Srivastava</copyright>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>©2015 - {year}, All Rights Reserved - </copyright>
     
-	<atom:link href="https://crushingcode.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    
+      
     
   </channel>
 </rss>

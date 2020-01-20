@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jcenter on Crushing C.O.D.E</title>
+    <title>jcenter on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/jcenter/</link>
-    <description>Recent content in Jcenter on Crushing C.O.D.E</description>
+    <description>Recent content in jcenter on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>All rights reserved - Nishant Srivastava</copyright>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>©2015 - {year}, All Rights Reserved - </copyright>
     <lastBuildDate>Tue, 12 Jul 2016 10:54:24 +0200</lastBuildDate>
     
-	<atom:link href="https://crushingcode.github.io/tags/jcenter/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.github.io/tags/jcenter/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Guide to publishing your Android Library via Jcenter/Bintray</title>
-      <link>https://crushingcode.github.io/publish-your-android-library-via-jcenter/</link>
-      <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
+    
       
-      <guid>https://crushingcode.github.io/publish-your-android-library-via-jcenter/</guid>
-      <description>Developers are a different kind of people altogether. They tend to be lazy but strive to be super efficient at the same time. A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.
-I have a certain knack for re-using code blocks just to avoid repeative tasks and to facilitate this I usually end up converting those codeblocks into an android library.</description>
-    </item>
+      <item>
+        <title>Guide to publishing your Android Library via Jcenter/Bintray</title>
+        <link>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</link>
+        <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</guid>
+        <description>Developers are a different kind of people altogether. They tend to be lazy but strive to be super efficient at the same time.
+A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.</description>
+      </item>
+      
     
   </channel>
 </rss>

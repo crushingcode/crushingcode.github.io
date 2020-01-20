@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>best-practices on Crushing C.O.D.E</title>
+    <link>https://crushingcode.github.io/tags/best-practices/</link>
+    <description>Recent content in best-practices on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>©2015 - {year}, All Rights Reserved - </copyright>
+    <lastBuildDate>Sat, 29 Jul 2017 10:54:24 +0200</lastBuildDate>
+    
+        <atom:link href="https://crushingcode.github.io/tags/best-practices/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Want To Step Up Your Android Learning Game? You Need To Read This First</title>
+        <link>https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first.1/</link>
+        <pubDate>Sat, 29 Jul 2017 10:54:24 +0200</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first.1/</guid>
+        <description>DISCLAIMER: If you consider yourself a beginner, intermediate, expert or a ninja in the Android realm, this secret sauce still applies to you.
+ TL;DR: Build Something.</description>
+      </item>
+      
+      <item>
+        <title>Things I wish I knew when I started building Android SDK/Libraries</title>
+        <link>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</link>
+        <pubDate>Sun, 05 Mar 2017 10:54:24 +0200</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
+        <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.</description>
+      </item>
+      
+    
+  </channel>
+</rss>

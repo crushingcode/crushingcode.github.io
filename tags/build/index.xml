@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Build on Crushing C.O.D.E</title>
+    <title>build on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/build/</link>
-    <description>Recent content in Build on Crushing C.O.D.E</description>
+    <description>Recent content in build on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>All rights reserved - Nishant Srivastava</copyright>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>©2015 - {year}, All Rights Reserved - </copyright>
     <lastBuildDate>Tue, 21 Jul 2015 10:54:24 +0200</lastBuildDate>
     
-	<atom:link href="https://crushingcode.github.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.github.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
-      <link>https://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</link>
-      <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
+    
       
-      <guid>https://crushingcode.github.io/meet-jack-and-jill-androids-experimental-toolchain/</guid>
-      <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
- they are designed to improve build times and simplify development by reducing dependencies on other tools
- In case you are curious, JACK stands for Java Android Compiler Kit and JILL stands for Jack Intermediate Library Linker.
-Woa ..woa..wooaaaa ..thats sounds too technical ..lets slow this down, right.
-JACK &amp;amp; JILL were released as an experimental tool chain in the Android SDK 21.</description>
-    </item>
+      <item>
+        <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
+        <link>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</link>
+        <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
+        <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
+ they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
+      </item>
+      
     
   </channel>
 </rss>

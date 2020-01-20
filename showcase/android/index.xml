@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Crushing C.O.D.E</title>
+    <link>https://crushingcode.github.io/showcase/android/</link>
+    <description>Recent content in Android on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>©2015 - {year}, All Rights Reserved - </copyright>
+    <lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://crushingcode.github.io/showcase/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>EasyDeviceInfo</title>
+        <link>https://crushingcode.github.io/showcase/android/easydeviceinfo/</link>
+        <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/showcase/android/easydeviceinfo/</guid>
+        <description></description>
+      </item>
+      
+    
+  </channel>
+</rss>
