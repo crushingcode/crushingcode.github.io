@@ -732,7 +732,7 @@
     
 </head>
 
-<body id="root" class="theme__hacker">
+<body id="root" class="theme__dark">
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -746,7 +746,9 @@
             <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar__brand">
     
-    &nbsp;&nbsp;
+    <a href="/" title="Home" rel="home" class="navbar__logo-link">
+      <img src="/logo.png" alt="Home" class="navbar__logo">
+    </a>
     
     
       <a href="/" title="Home" rel="home" class="navbar__title-link">
@@ -765,11 +767,11 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          hacker
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          dark
+          hacker
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -824,11 +826,11 @@
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          hacker
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          dark
+          hacker
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -849,14 +851,6 @@
 </div>
 
     
-    
-      
-      
-      
-      
-      
-        <a href="/about" class="navbar__menu-item navbar__slide-down active">About</a>
-      
     
       
       
@@ -888,6 +882,14 @@
       
       
         <a href="/showcase" class="navbar__menu-item navbar__slide-down ">Showcase</a>
+      
+    
+      
+      
+      
+      
+      
+        <a href="/about" class="navbar__menu-item navbar__slide-down active">About</a>
       
     
   </div>

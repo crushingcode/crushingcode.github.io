@@ -9,6 +9,33 @@
 	"content": ""
 },
 {
+	"uri": "https://crushingcode.github.io/showcase/android/sensey/",
+	"title": "Sensey",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "Play with sensor events &amp; detect gestures in a breeze.",
+	"content": ""
+},
+{
+	"uri": "https://crushingcode.github.io/showcase/android/lantern/",
+	"title": "Lantern",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "Handling flashlight for camera and camera2 api with added support for managing display/screen light.",
+	"content": ""
+},
+{
+	"uri": "https://crushingcode.github.io/showcase/android/recyclerviewhelper/",
+	"title": "RecyclerViewHelper",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "Giving powers to RecyclerView.",
+	"content": ""
+},
+{
 	"uri": "https://crushingcode.github.io/",
 	"title": "",
 	"tags": [],
