@@ -900,7 +900,7 @@
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<main class="main">
+<main class="single__main main">
   
   <div class="single">
     <h2 class="single__title">Delightful X-App Development with Flutter @Code &amp; Coffee</h2>
@@ -1434,7 +1434,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
     <div class="hide">
-    
+      
 
 <div class="search">
   <span class="icon">
@@ -1453,29 +1453,32 @@ document.addEventListener('DOMContentLoaded', function () {
 </main>
 
 
-<aside class="">
-  
-
-
-</aside>
-
 <script>
+  
+  
+  var enableToc = JSON.parse("false");
+  var toc = JSON.parse("null");
+  
+  var singleMainElem = document.querySelector('.single__main');
+  var singleSideElem = document.querySelector('.single__side');
+
   enquire.register("screen and (max-width: 769px)", {
     match: function () {
-      if (document.getElementsByTagName('main')[0]) {
-        document.getElementsByTagName('main')[0].className = "main";
-      }
-      if (document.getElementsByTagName('aside')[0]) {
-        document.getElementsByTagName('aside')[0].className = "hide";
+      if (enableToc || toc) {
+        singleMainElem.classList.remove('main-main');
+        singleMainElem.classList.add('main');
+        singleSideElem.classList.remove('main-side');
+        singleSideElem.classList.add('hide');
       }
     },
     unmatch: function () {
-      if (document.getElementsByTagName('main')[0]) {
-        document.getElementsByTagName('main')[0].className = "main-main";
+      if (enableToc || toc) {
+        singleMainElem.classList.remove('main');
+        singleMainElem.classList.add('main-main');
+        singleSideElem.classList.remove('hide');
+        singleSideElem.classList.add('main-side');
       }
-      if (document.getElementsByTagName('aside')[0]) {
-        document.getElementsByTagName('aside')[0].className = "main-side";
-      }
+
       document.getElementsByClassName('navbar__burger')[0].classList.remove('is-active');
       document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
       document.getElementsByClassName('mobile-search')[0].classList.add('hide');
