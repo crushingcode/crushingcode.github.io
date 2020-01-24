@@ -33,26 +33,6 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/android/</loc>
-    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/posts/circular-image-in-2020/</loc>
-    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/posts/</loc>
-    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/</loc>
-    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://crushingcode.github.io/showcase/android/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
@@ -123,12 +103,27 @@
   </url>
   
   <url>
+    <loc>https://crushingcode.github.io/tags/android/</loc>
+    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://crushingcode.github.io/tags/android-library/</loc>
     <lastmod>2017-09-17T10:54:24+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</loc>
+    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/</loc>
+    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/</loc>
     <lastmod>2017-09-17T10:54:24+02:00</lastmod>
   </url>
   
