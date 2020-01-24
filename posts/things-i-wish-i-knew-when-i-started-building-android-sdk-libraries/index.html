@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Things I wish I knew when I started building Android SDK/Libraries – Crushing C.O.D.E</title>
     
 
@@ -18,6 +19,61 @@
   
 <script>
   "use strict";
+
+  
+  
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+
+  
+  if (!String.prototype.includes) {
+    String.prototype.includes = function (search, start) {
+      'use strict';
+
+      if (search instanceof RegExp) {
+        throw TypeError('first argument must not be a RegExp');
+      }
+      if (start === undefined) { start = 0; }
+      return this.indexOf(search, start) !== -1;
+    };
+  }
+
+  
+  Document.prototype.append = Element.prototype.append = function append() {
+    this.appendChild(_mutation(arguments));
+  };
+  function _mutation(nodes) {
+    if (!nodes.length) {
+      throw new Error('DOM Exception 8');
+    } else if (nodes.length === 1) {
+      return typeof nodes[0] === 'string' ? document.createTextNode(nodes[0]) : nodes[0];
+    } else {
+      var
+      fragment = document.createDocumentFragment(),
+      length = nodes.length,
+      index = -1,
+      node;
+
+      while (++index < length) {
+        node = nodes[index];
+
+        fragment.appendChild(typeof node === 'string' ? document.createTextNode(node) : node);
+      }
+
+      return fragment;
+    }
+  }
+
+  
+  if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function (searchString, position) {
+      position = position || 0;
+      return this.indexOf(searchString, position) === position;
+    };
+  }
+  
+
 
   document.addEventListener('DOMContentLoaded', function () {
     
@@ -50,10 +106,43 @@
 
 
     
+    document.querySelectorAll('.codetab') ? 
+    document.querySelectorAll('.codetab').forEach(function(elem, idx) {
+      var containerId = elem.getAttribute('id');
+      var containerElem = elem;
+      var codetabLinks = elem.querySelectorAll('.codetab__link');
+      var codetabContents = elem.querySelectorAll('.codetab__content');
+      var ids = [];
+
+      codetabLinks && codetabLinks.length > 0 ?
+      codetabLinks.forEach(function(link, index, self) {
+        link.onclick = function(e) {
+          for (var i = 0; i < self.length; i++) {
+            if (index === parseInt(i, 10)) {
+              if (!self[i].classList.contains('active')) {
+                self[i].classList.add('active');
+                codetabContents[i].style.display = 'block';
+              }
+            } else {
+              self[i].classList.remove('active');
+              codetabContents[i].style.display = 'none';
+            }
+          }
+        }
+      }) : null;
+    }) : null;
+    
+
+
+    
     var gttBtn = document.getElementById("gtt");
     gttBtn.style.display = "none";
     gttBtn.addEventListener('click', function () {
-      scrollToTop(250);
+      if (window.document.documentMode) {
+        document.documentElement.scrollTop = 0;
+      } else {
+        scrollToTop(250);
+      }
     });
 
     function scrollToTop(scrollDuration) {
@@ -103,7 +192,19 @@
     var toggleTocElem = document.getElementById('toggle-toc');
     var singleContentsElem = document.querySelector('.single__contents');
     var navbar = document.querySelector('.navbar');
+    var tocFlexbox = document.querySelector('.toc__flexbox');
+    var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
+    var notAllowedTitleIds = null;
 
+    singleContentsElem && singleContentsElem.querySelectorAll(".tab") ?
+    singleContentsElem.querySelectorAll(".tab").forEach(function (elem) {
+      elem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (element) {
+        notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
+          notAllowedTitleIds.concat(element.getAttribute('id')) :
+          [element.getAttribute('id')];
+      });
+    }) : null;
+    
     window.onscroll = function () {
       scrollFunction();
       
@@ -124,40 +225,60 @@
         } else if (navbar.classList.contains('navbar--show')) {
           navbar.classList.remove('navbar--show');
         }
-        
-        singleContentsElem ?
-        singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function(elem) {
-          if (toggleTocElem && !toggleTocElem.checked) {
-            return null;
-          }
-          
-          if (document.documentElement.scrollTop >= elem.offsetTop) {
-            if (tableOfContentsElem) {
-              var id = elem.getAttribute('id');
-              tocElem.querySelectorAll('a').forEach(function (elem) {
-                elem.classList.remove('active');
-              });
-              tocElem.querySelector('a[href="#' + id + '"]') ? 
-              tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
 
-              tableOfContentsElem.querySelector('ul') ?
-              tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
-                liElem.querySelectorAll('ul').forEach(function (ulElem) {
-                  ulElem.style.display = 'none';
-                });
-              }) : null;
-
-              var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
-              if (curElem && curElem.nextElementSibling) {
-                curElem.nextElementSibling.style.display = 'block';
+        if (singleContentsElem) {
+          if (singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").length > 0) {
+            singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (elem) {
+              if (toggleTocElem && !toggleTocElem.checked) {
+                return null;
               }
-              getParents(curElem, 'ul') ?
-              getParents(curElem, 'ul').forEach(function (elem) {
-                elem.style.display = 'block';
-              }) : null;
+
+              if (notAllowedTitleIds && notAllowedTitleIds.includes(elem.getAttribute('id'))) {
+                return null;
+              }
+              
+              if (document.documentElement.scrollTop >= elem.offsetTop) {
+                if (tableOfContentsElem) {
+                  var id = elem.getAttribute('id');
+                  tocElem.querySelectorAll('a').forEach(function (elem) {
+                    elem.classList.remove('active');
+                  });
+                  tocElem.querySelector('a[href="#' + id + '"]') ?
+                    tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
+
+                  tableOfContentsElem.querySelector('ul') ?
+                    tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
+                      liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                        ulElem.style.display = 'none';
+                      });
+                    }) : null;
+
+                  var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
+                  if (curElem && curElem.nextElementSibling) {
+                    curElem.nextElementSibling.style.display = 'block';
+                  }
+                  getParents(curElem, 'ul') ?
+                    getParents(curElem, 'ul').forEach(function (elem) {
+                      elem.style.display = 'block';
+                    }) : null;
+                }
+              }
+            });
+          } else {
+            if (tocFlexbox) {
+              tocFlexbox.setAttribute('data-position', '');
+              if (!tocFlexbox.classList.contains('hide')) {
+                tocFlexbox.classList.add('hide');
+              }
+            }
+            if (tocFlexboxOuter) {
+              tocFlexboxOuter.setAttribute('data-position', '');
+              if (!tocFlexboxOuter.classList.contains('hide')) {
+                tocFlexboxOuter.classList.add('hide');
+              }
             }
           }
-        }) : null;
+        }
       } else { 
         if (st < 250) {
           gttBtn.style.display = "none";
@@ -169,40 +290,55 @@
           navbar.classList.add('navbar--show');
         }
 
-        singleContentsElem ? 
-        singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function(elem) {
-          if (toggleTocElem && !toggleTocElem.checked) {
-            return null;
-          }
-
-          if (document.documentElement.scrollTop >= elem.offsetTop) {
-            if (tableOfContentsElem) {
-              var id = elem.getAttribute('id');
-              tocElem.querySelectorAll('a').forEach(function (elem) {
-                elem.classList.remove('active');
-              });
-              tocElem.querySelector('a[href="#' + id + '"]') ? 
-              tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
-
-              tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
-                rootUl.querySelectorAll('li').forEach(function (liElem) {
-                  liElem.querySelectorAll('ul').forEach(function (ulElem) {
-                    ulElem.style.display = 'none';
-                  });
-                });
-              });
-
-              var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
-              if (curElem && curElem.nextElementSibling) {
-                curElem.nextElementSibling.style.display = 'block';
+        if (singleContentsElem) {
+          if (singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").length > 0) {
+            singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (elem) {
+              if (toggleTocElem && !toggleTocElem.checked) {
+                return null;
               }
-              getParents(curElem, 'ul') ? 
-              getParents(curElem, 'ul').forEach(function (elem) {
-                elem.style.display = 'block';
-              }) : null;
+              
+              if (notAllowedTitleIds && notAllowedTitleIds.includes(elem.getAttribute('id'))) {
+                return null;
+              }
+
+              if (document.documentElement.scrollTop >= elem.offsetTop) {
+                if (tableOfContentsElem) {
+                  var id = elem.getAttribute('id');
+                  tocElem.querySelectorAll('a').forEach(function (elem) {
+                    elem.classList.remove('active');
+                  });
+                  tocElem.querySelector('a[href="#' + id + '"]') ?
+                    tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
+
+                  tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+                    rootUl.querySelectorAll('li').forEach(function (liElem) {
+                      liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                        ulElem.style.display = 'none';
+                      });
+                    });
+                  });
+
+                  var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
+                  if (curElem && curElem.nextElementSibling) {
+                    curElem.nextElementSibling.style.display = 'block';
+                  }
+                  getParents(curElem, 'ul') ?
+                    getParents(curElem, 'ul').forEach(function (elem) {
+                      elem.style.display = 'block';
+                    }) : null;
+                }
+              }
+            });
+          } else {
+            if (tocFlexbox && !tocFlexbox.classList.contains('hide')) {
+              tocFlexbox.classList.add('hide');
+            }
+            if (tocFlexboxOuter && !tocFlexboxOuter.classList.contains('hide')) {
+              tocFlexboxOuter.classList.add('hide');
             }
           }
-        }) : null;
+          
+        }
 
         if (tableOfContentsElem && document.documentElement.scrollTop < 250) {
           tableOfContentsElem.querySelector('ul') ?
@@ -285,7 +421,8 @@
 
     mobileSearchInputElem ? 
     mobileSearchInputElem.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
+      var keyCode = e.which || e.keyCode;
+      if (e.key === 'Escape' || keyCode === 27) {
         if (mobileSearchContainer) {
           mobileSearchContainer.style.display = 'none';
         }
@@ -331,7 +468,7 @@
         localStorage.setItem('theme', selectedThemeVariant);
 
         rootEleme.removeAttribute('class');
-        rootEleme.classList.add(`theme__${selectedThemeVariant}`);
+        rootEleme.classList.add('theme__' + selectedThemeVariant);
         selectThemeElem.forEach(function(rootElem) {
           rootElem.querySelectorAll('a').forEach(function (elem) {
             if (elem.classList) {
@@ -421,11 +558,11 @@
             location: 0,
             distance: 100,
             maxPatternLength: 32,
-            minMatchCharLength: 1,
+            minMatchCharLength: 2,
           });
         }
         else {
-          console.error(`[${xhr.status}]Error:`, xhr.statusText);
+          console.error('[' + xhr.status + ']Error:', xhr.statusText);
         }
       };
       xhr.send();
@@ -444,7 +581,7 @@
           var item = document.createElement('a');
           item.setAttribute('href', result.uri);
           item.setAttribute('class', 'dropdown-item');
-          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${result.title}</div><div class="menu-item__desc">${result.description ? result.description : result.content}</div></div>`;
+          item.innerHTML = '<div class="menu-item"><div class="menu-item__title">📄 ' + result.title + '</div><div class="menu-item__desc">' + (result.description ? result.description : result.content) + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -475,7 +612,7 @@
           var item = document.createElement('a');
           item.setAttribute('href', result.item.uri);
           item.setAttribute('class', 'dropdown-item');
-          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="menu-item__desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
+          item.innerHTML = '<div class="menu-item"><div class="menu-item__title">📄 ' + generateHighlightedText(result.item.title, result.matches[0].indices) + '</div><div class="menu-item__desc">' + (result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : '') + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -503,7 +640,7 @@
         results.forEach(function (result) {
           var item = document.createElement('a');
           item.setAttribute('href', result.uri);
-          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${result.title}</div><div class="mobile-search__item--desc">${result.description ? result.description : result.content}</div></div>`;
+          item.innerHTML = '<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ' + result.title + '</div><div class="mobile-search__item--desc">' + (result.description ? result.description : result.content) + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -528,7 +665,7 @@
         results.forEach(function (result) {
           var item = document.createElement('a');
           item.setAttribute('href', result.item.uri);
-          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="mobile-search__item--desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
+          item.innerHTML = '<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ' + generateHighlightedText(result.item.title, result.matches[0].indices) + '</div><div class="mobile-search__item--desc">' + (result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : '') + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -574,6 +711,7 @@
     var searchElem = document.getElementById('search');
     var searchMobile = document.getElementById('search-mobile');
 
+    searchElem ? 
     searchElem.addEventListener('input', function(e) {
       if (!e.target.value) {
         document.getElementById('search-results').setAttribute('class', 'dropdown');
@@ -591,8 +729,9 @@
       } else {
         renderSearchResults(results);
       }
-    });
+    }) : null;
 
+    searchElem ? 
     searchElem.addEventListener('blur', function() {
       if (window.innerWidth < 770) {
         return null;
@@ -600,8 +739,9 @@
       setTimeout(function () {
         document.getElementById('search-results').setAttribute('class', 'dropdown');
       }, 100);
-    });
+    }) : null;
 
+    searchElem ? 
     searchElem.addEventListener('click', function(e) {
       if (window.innerWidth < 770) {
         return null;
@@ -618,7 +758,7 @@
       } else {
         renderSearchResults(results);
       }
-    });
+    }) : null;
     
     function indexInParent(node) {
       var children = node.parentNode.childNodes;
@@ -636,14 +776,16 @@
     var items = null;
     var searchContainerMaxHeight = 350;
 
+    searchElem ? 
     searchElem.addEventListener('keydown', function(e) {
       if (window.innerWidth < 770) {
         return null;
       }
 
       var items = document.querySelectorAll('#search-menu .dropdown-item');
+      var keyCode = e.which || e.keyCode;
       
-      if (e.key === 'ArrowDown') {
+      if (e.key === 'ArrowDown' || keyCode === 40) {
         if (activeIndex === null) {
           activeIndex = 0;
           items[activeIndex].classList.remove('is-active');
@@ -659,7 +801,7 @@
         } else if (activeIndex === 0) {
           document.querySelector(".search-content").scrollTop = 0;
         }
-      } else if (e.key === 'ArrowUp') {
+      } else if (e.key === 'ArrowUp' || keyCode === 38) {
         if (activeIndex === null) {
           activeIndex = items.length - 1;
           items[activeIndex].classList.remove('is-active');
@@ -675,19 +817,20 @@
         } else {
           document.querySelector(".search-content").scrollTop = overflowedPixel + items[activeIndex].getBoundingClientRect().height;
         }
-      } else if (e.key === 'Enter') {
+      } else if (e.key === 'Enter' || keyCode === 13) {
         var currentItemLink = items[activeIndex].getAttribute('href');
         if (currentItemLink) {
           location.href = currentItemLink;
         }
-      } else if (e.key === 'Escape') {
+      } else if (e.key === 'Escape' || keyCode === 27) {
         e.target.value = null;
         if (searchResults) {
           searchResults.classList.remove('is-active');
         }
       }
-    });
+    }) : null;
 
+    searchMobile ? 
     searchMobile.addEventListener('input', function(e) {
       if (!e.target.value) {
         let wrap = document.getElementById('search-mobile-results');
@@ -705,7 +848,7 @@
       } else {
         renderSearchResultsMobile(results);
       }
-    });
+    }) : null;
   
   });
 </script>    
@@ -715,7 +858,8 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="" />
+    
+<meta name="description" content="Blog by Nishant Srivastava" />
 <meta name="keywords" content="">
 <meta name="created" content="2017-03-05T10:54:24&#43;0200">
 <meta name="modified" content="2017-03-05T10:54:24&#43;0200">
@@ -725,6 +869,8 @@
 <meta property="og:title" content="Things I wish I knew when I started building Android SDK/Libraries">
 <meta property="og:url" content="https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/">
 <meta property="og:type" content="article">
+<meta property="og:description" content="Blog by Nishant Srivastava">
+
 
 <meta name="generator" content="Hugo 0.62.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
@@ -776,13 +922,13 @@
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
-            document.getElementById('root').className = `theme__${localTheme}`;
+            document.getElementById('root').className = 'theme__' + localTheme;
         }        
     </script>    
     
     <div id="container">
         <div class="wrapper__left"></div>
-        <div class="wrapper">
+        <div class="wrapper" data-type="posts" data-kind="page">
             <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar__brand">
     
@@ -1502,29 +1648,62 @@ The solution to this is that you stick to more open licenses such as <strong>MIT
 
     </article>
     
-<div class="donation__message">
-  Support the author with
-</div>
-<div class="donation">  
   
-    
+    <div class="donation">
+      <div class="donation__message">
+        Share this article with
+      </div>
+      <div class="donation__icons">
+        
+        
+        
+          
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcrushingcode.github.io%2fposts%2fthings-i-wish-i-knew-when-i-started-building-android-sdk-libraries%2f" title="Facebook" aria-label="facebook" class="donation__item" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="35" height="35"><path fill="#1877F2" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"/><path fill="#fff" d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"/></svg>
+            </a>
+          
+        
+          
+            <a href="https://twitter.com/intent/tweet?text=Things%20I%20wish%20I%20knew%20when%20I%20started%20building%20Android%20SDK%2fLibraries&url=https%3a%2f%2fcrushingcode.github.io%2fposts%2fthings-i-wish-i-knew-when-i-started-building-android-sdk-libraries%2f&hashtags=android%2clibrary%2csdk%2cbest-practices&via=Nishant" title="Twitter" aria-label="twitter" class="donation__item" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="35" height="35"><path fill="#1DA1F2" d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"/></svg>
+            </a>
+          
+        
+          
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcrushingcode.github.io%2fposts%2fthings-i-wish-i-knew-when-i-started-building-android-sdk-libraries%2f&title=Things%20I%20wish%20I%20knew%20when%20I%20started%20building%20Android%20SDK%2fLibraries &summary=&source=Blog%20by%20Nishant%20Srivastava" target="_blank" rel="noreferer" title="LinkedIn" aria-label="linkedin" class="donation__item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="35" height="35"><path fill="#0077B5" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"/><path fill="#FFF" d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"/></svg>
+            </a>
+          
+        
+      </div>
+    </div>
   
-    
-  
-    
-  
-    
-      
-        <a href="https://www.paypal.me/nisrulz" title="paypal" aria-label="paypal" class="donation__item">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20.055,7.713c-0.677-0.842-1.673-1.41-2.764-1.615C16.773,3.971,14.877,3,13.045,3H5.846L2.647,18h4.114l-0.689,3h6.233 l1.17-5h1.398c3.365,0,5.38-1.445,5.989-4.295C21.278,9.752,20.653,8.456,20.055,7.713z M7.183,16H5.137L7.512,5h5.533 c0.293,0,1.5,0.061,2.078,1.013H9.351l-1.375,6.235L7.183,16z M18.906,11.287C18.5,13.188,17.293,14,14.873,14h-2.944l-1.207,5 H8.594l1.271-6h1.444c4.259,0,5.665-2.394,6.094-4.402c0.027-0.128,0.045-0.256,0.057-0.382c0.378,0.151,0.749,0.393,1.038,0.751 C18.971,9.557,19.108,10.337,18.906,11.287z"/></svg>
 
-          paypal
-        </a>
+    
+<div class="donation">
+  <div class="donation__message">
+    Support the author with
+  </div>
+  <div class="donation__icons">
+    
       
     
-  
+      
     
-  
+      
+    
+      
+        
+          <a href="https://www.paypal.me/nisrulz" title="paypal" aria-label="paypal" class="donation__item" target="_blank" rel="noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22"><path fill="#1565C0" d="M18.7,13.767l0.005,0.002C18.809,13.326,19.187,13,19.66,13h13.472c0.017,0,0.034-0.007,0.051-0.006C32.896,8.215,28.887,6,25.35,6H11.878c-0.474,0-0.852,0.335-0.955,0.777l-0.005-0.002L5.029,33.813l0.013,0.001c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,0.991,1,0.991h8.071L18.7,13.767z"/><path fill="#039BE5" d="M33.183,12.994c0.053,0.876-0.005,1.829-0.229,2.882c-1.281,5.995-5.912,9.115-11.635,9.115c0,0-3.47,0-4.313,0c-0.521,0-0.767,0.306-0.88,0.54l-1.74,8.049l-0.305,1.429h-0.006l-1.263,5.796l0.013,0.001c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,1,1,1h7.333l0.013-0.01c0.472-0.007,0.847-0.344,0.945-0.788l0.018-0.015l1.812-8.416c0,0,0.126-0.803,0.97-0.803s4.178,0,4.178,0c5.723,0,10.401-3.106,11.683-9.102C42.18,16.106,37.358,13.019,33.183,12.994z"/><path fill="#283593" d="M19.66,13c-0.474,0-0.852,0.326-0.955,0.769L18.7,13.767l-2.575,11.765c0.113-0.234,0.359-0.54,0.88-0.54c0.844,0,4.235,0,4.235,0c5.723,0,10.432-3.12,11.713-9.115c0.225-1.053,0.282-2.006,0.229-2.882C33.166,12.993,33.148,13,33.132,13H19.66z"/></svg>
+            paypal
+          </a>
+        
+      
+    
+      
+    
+  </div>
 </div>
 
     
@@ -1851,7 +2030,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   MicroModal.init({
-    onClose: () => {
+    onClose: function () {
       if (mySwipe) {
         mySwipe.kill();
         mySwipe = null;
@@ -2065,7 +2244,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   
 
-  var enableToc = JSON.parse("false");
+  var enableToc = JSON.parse("true");
   var toc = JSON.parse("null");
   var tocPosition = JSON.parse("\"outer\"");
   
@@ -2206,9 +2385,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
     
-    var enableToc = JSON.parse("false");
+    var enableToc = JSON.parse("true");
     var toc = JSON.parse("null");
     var hideToc = JSON.parse("false");
+    var tocFlexbox = document.querySelector('.toc__flexbox');
+    var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
@@ -2219,37 +2400,54 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }) : null;
 
-      tableOfContentsElem.querySelectorAll('a').forEach(function(elem) {
-        elem.addEventListener('click', function() {
-          var id = elem.getAttribute('id');
-          navbar.classList.remove('navbar--show');
-          navbar.classList.remove('navbar--hide');
-          navbar.classList.add('navbar--hide');
+      if (tableOfContentsElem) {
+        if (tableOfContentsElem.querySelectorAll('a').length > 0) {
+          tableOfContentsElem.querySelectorAll('a').forEach(function (elem) {
+            elem.addEventListener('click', function () {
+              var id = elem.getAttribute('id');
+              navbar.classList.remove('navbar--show');
+              navbar.classList.remove('navbar--hide');
+              navbar.classList.add('navbar--hide');
 
-          document.querySelector('.toc').querySelectorAll('a').forEach(function(elem) {
-            elem.classList.remove('active');
-          });
-          elem.classList.add('active');
+              document.querySelector('.toc').querySelectorAll('a').forEach(function (elem) {
+                elem.classList.remove('active');
+              });
+              elem.classList.add('active');
 
-          tableOfContentsElem.querySelector('ul') ?
-          tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
-            liElem.querySelectorAll('ul').forEach(function (ulElem) {
-              ulElem.style.display = 'none';
+              tableOfContentsElem.querySelector('ul') ?
+                tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
+                  liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                    ulElem.style.display = 'none';
+                  });
+                }) : null;
+
+              var curElem = tableOfContentsElem.querySelector('[href="#' + id + '"]');
+              if (curElem && curElem.nextElementSibling) {
+                curElem.nextElementSibling.style.display = 'block';
+              }
+              if (curElem) {
+                getParents(curElem, 'ul') ?
+                  getParents(curElem, 'ul').forEach(function (elem) {
+                    elem.style.display = 'block';
+                  }) : null;
+              }
             });
-          }) : null;
-
-          var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
-          if (curElem && curElem.nextElementSibling) {
-            curElem.nextElementSibling.style.display = 'block';
+          });
+        } else {
+          if (tocFlexbox) {
+            tocFlexbox.setAttribute('data-position', '');
+            if (!tocFlexbox.classList.contains('hide')) {
+              tocFlexbox.classList.add('hide');
+            }
           }
-          if (curElem) {
-            getParents(curElem, 'ul') ? 
-            getParents(curElem, 'ul').forEach(function (elem) {
-              elem.style.display = 'block';
-            }) : null;
+          if (tocFlexboxOuter) {
+            tocFlexboxOuter.setAttribute('data-position', '');
+            if (!tocFlexboxOuter.classList.contains('hide')) {
+              tocFlexboxOuter.classList.add('hide');
+            }
           }
-        });
-      });
+        }
+      }
 
       
       var toggleTocElem = document.getElementById("toggle-toc");
@@ -2327,7 +2525,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var text, clip = new ClipboardJS('.anchor');
     var headers = singleContentsElem.querySelectorAll("h1, h2, h3, h4");
-    
+
     headers ? 
     headers.forEach(function (elem) {
       var url = encodeURI(document.location.origin + document.location.pathname);
@@ -2421,8 +2619,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var isNotAllowedIncluded = false;
         var curClassName = code.getAttribute('class');
 
-        for (let str of notAllowedClass) {
-          if (curClassName && curClassName.startsWith(str)) {
+        for (var i = 0; i < notAllowedClass.length; i++) {
+          if (curClassName && curClassName.startsWith(notAllowedClass[i])) {
             isNotAllowedIncluded = true;
             break;
           }
@@ -2797,6 +2995,50 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="wrapper__right">
   
     
+      
+        <div class="toc__flexbox--outer" data-position="fixed">
+          <h6 class="toc__title toc__title--outer">What&#39;s on this Page</h6>
+          
+        </div>
+        <div class="toc toc__outer ">
+          <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#why-would-you-create-an-android-sdklibrary">Why would you create an android SDK/Library?</a></li>
+    <li><a href="#what-are-the-packaging-options-for-your-artifacts">What are the packaging options for your artifacts?</a></li>
+    <li><a href="#we-have-the-artifact-now-what-where-does-one-host-these-artifacts">We have the artifact, Now what? Where does one host these artifacts?</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#avoid-multiple-arguments">Avoid multiple arguments</a></li>
+    <li><a href="#ease-of-use">Ease of use</a></li>
+    <li><a href="#minimize-permissions">Minimize Permissions</a></li>
+    <li><a href="#minimize-requisites">Minimize Requisites</a></li>
+    <li><a href="#support-different-versions">Support different versions</a></li>
+    <li><a href="#do-not-log-in-production">Do not log in production</a></li>
+    <li><a href="#do-not-crash-silently-and-fail-fast">Do not crash silently and fail fast</a></li>
+    <li><a href="#degrade-gracefully-in-an-event-of-error">Degrade gracefully in an event of error</a></li>
+    <li><a href="#catch-specific-exceptions">Catch specific exceptions</a></li>
+    <li><a href="#handle-poor-network-conditions">Handle poor network conditions</a></li>
+    <li><a href="#reluctance-to-include-large-libraries-as-dependencies">Reluctance to include large libraries as dependencies</a></li>
+    <li><a href="#do-not-require-dependencies-unless-you-very-much-have-to">Do not require dependencies unless you very much have to</a></li>
+    <li><a href="#try-not-to-hog-the-startup">Try not to hog the startup</a></li>
+    <li><a href="#remove-functionality-and-features-gracefully">Remove functionality and features gracefully</a></li>
+    <li><a href="#make-your-code-testable">Make your code Testable</a></li>
+    <li><a href="#document-everything">Document Everything!</a></li>
+    <li><a href="#provide-a-most-minimalistic-sample-app">Provide a most minimalistic Sample App</a></li>
+    <li><a href="#consider-putting-up-a-license">Consider putting up a License</a></li>
+    <li><a href="#last-but-not-the-least-get-feedback">Last but not the least, get feedback</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#ending-thoughts">Ending Thoughts</a></li>
+  </ul>
+</nav>
+        </div>
       
     
   

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crushing C.O.D.E</title>
     
 
@@ -18,6 +19,61 @@
   
 <script>
   "use strict";
+
+  
+  
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+
+  
+  if (!String.prototype.includes) {
+    String.prototype.includes = function (search, start) {
+      'use strict';
+
+      if (search instanceof RegExp) {
+        throw TypeError('first argument must not be a RegExp');
+      }
+      if (start === undefined) { start = 0; }
+      return this.indexOf(search, start) !== -1;
+    };
+  }
+
+  
+  Document.prototype.append = Element.prototype.append = function append() {
+    this.appendChild(_mutation(arguments));
+  };
+  function _mutation(nodes) {
+    if (!nodes.length) {
+      throw new Error('DOM Exception 8');
+    } else if (nodes.length === 1) {
+      return typeof nodes[0] === 'string' ? document.createTextNode(nodes[0]) : nodes[0];
+    } else {
+      var
+      fragment = document.createDocumentFragment(),
+      length = nodes.length,
+      index = -1,
+      node;
+
+      while (++index < length) {
+        node = nodes[index];
+
+        fragment.appendChild(typeof node === 'string' ? document.createTextNode(node) : node);
+      }
+
+      return fragment;
+    }
+  }
+
+  
+  if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function (searchString, position) {
+      position = position || 0;
+      return this.indexOf(searchString, position) === position;
+    };
+  }
+  
+
 
   document.addEventListener('DOMContentLoaded', function () {
     
@@ -50,10 +106,43 @@
 
 
     
+    document.querySelectorAll('.codetab') ? 
+    document.querySelectorAll('.codetab').forEach(function(elem, idx) {
+      var containerId = elem.getAttribute('id');
+      var containerElem = elem;
+      var codetabLinks = elem.querySelectorAll('.codetab__link');
+      var codetabContents = elem.querySelectorAll('.codetab__content');
+      var ids = [];
+
+      codetabLinks && codetabLinks.length > 0 ?
+      codetabLinks.forEach(function(link, index, self) {
+        link.onclick = function(e) {
+          for (var i = 0; i < self.length; i++) {
+            if (index === parseInt(i, 10)) {
+              if (!self[i].classList.contains('active')) {
+                self[i].classList.add('active');
+                codetabContents[i].style.display = 'block';
+              }
+            } else {
+              self[i].classList.remove('active');
+              codetabContents[i].style.display = 'none';
+            }
+          }
+        }
+      }) : null;
+    }) : null;
+    
+
+
+    
     var gttBtn = document.getElementById("gtt");
     gttBtn.style.display = "none";
     gttBtn.addEventListener('click', function () {
-      scrollToTop(250);
+      if (window.document.documentMode) {
+        document.documentElement.scrollTop = 0;
+      } else {
+        scrollToTop(250);
+      }
     });
 
     function scrollToTop(scrollDuration) {
@@ -103,7 +192,19 @@
     var toggleTocElem = document.getElementById('toggle-toc');
     var singleContentsElem = document.querySelector('.single__contents');
     var navbar = document.querySelector('.navbar');
+    var tocFlexbox = document.querySelector('.toc__flexbox');
+    var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
+    var notAllowedTitleIds = null;
 
+    singleContentsElem && singleContentsElem.querySelectorAll(".tab") ?
+    singleContentsElem.querySelectorAll(".tab").forEach(function (elem) {
+      elem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (element) {
+        notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
+          notAllowedTitleIds.concat(element.getAttribute('id')) :
+          [element.getAttribute('id')];
+      });
+    }) : null;
+    
     window.onscroll = function () {
       scrollFunction();
       
@@ -124,40 +225,60 @@
         } else if (navbar.classList.contains('navbar--show')) {
           navbar.classList.remove('navbar--show');
         }
-        
-        singleContentsElem ?
-        singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function(elem) {
-          if (toggleTocElem && !toggleTocElem.checked) {
-            return null;
-          }
-          
-          if (document.documentElement.scrollTop >= elem.offsetTop) {
-            if (tableOfContentsElem) {
-              var id = elem.getAttribute('id');
-              tocElem.querySelectorAll('a').forEach(function (elem) {
-                elem.classList.remove('active');
-              });
-              tocElem.querySelector('a[href="#' + id + '"]') ? 
-              tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
 
-              tableOfContentsElem.querySelector('ul') ?
-              tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
-                liElem.querySelectorAll('ul').forEach(function (ulElem) {
-                  ulElem.style.display = 'none';
-                });
-              }) : null;
-
-              var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
-              if (curElem && curElem.nextElementSibling) {
-                curElem.nextElementSibling.style.display = 'block';
+        if (singleContentsElem) {
+          if (singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").length > 0) {
+            singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (elem) {
+              if (toggleTocElem && !toggleTocElem.checked) {
+                return null;
               }
-              getParents(curElem, 'ul') ?
-              getParents(curElem, 'ul').forEach(function (elem) {
-                elem.style.display = 'block';
-              }) : null;
+
+              if (notAllowedTitleIds && notAllowedTitleIds.includes(elem.getAttribute('id'))) {
+                return null;
+              }
+              
+              if (document.documentElement.scrollTop >= elem.offsetTop) {
+                if (tableOfContentsElem) {
+                  var id = elem.getAttribute('id');
+                  tocElem.querySelectorAll('a').forEach(function (elem) {
+                    elem.classList.remove('active');
+                  });
+                  tocElem.querySelector('a[href="#' + id + '"]') ?
+                    tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
+
+                  tableOfContentsElem.querySelector('ul') ?
+                    tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
+                      liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                        ulElem.style.display = 'none';
+                      });
+                    }) : null;
+
+                  var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
+                  if (curElem && curElem.nextElementSibling) {
+                    curElem.nextElementSibling.style.display = 'block';
+                  }
+                  getParents(curElem, 'ul') ?
+                    getParents(curElem, 'ul').forEach(function (elem) {
+                      elem.style.display = 'block';
+                    }) : null;
+                }
+              }
+            });
+          } else {
+            if (tocFlexbox) {
+              tocFlexbox.setAttribute('data-position', '');
+              if (!tocFlexbox.classList.contains('hide')) {
+                tocFlexbox.classList.add('hide');
+              }
+            }
+            if (tocFlexboxOuter) {
+              tocFlexboxOuter.setAttribute('data-position', '');
+              if (!tocFlexboxOuter.classList.contains('hide')) {
+                tocFlexboxOuter.classList.add('hide');
+              }
             }
           }
-        }) : null;
+        }
       } else { 
         if (st < 250) {
           gttBtn.style.display = "none";
@@ -169,40 +290,55 @@
           navbar.classList.add('navbar--show');
         }
 
-        singleContentsElem ? 
-        singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function(elem) {
-          if (toggleTocElem && !toggleTocElem.checked) {
-            return null;
-          }
-
-          if (document.documentElement.scrollTop >= elem.offsetTop) {
-            if (tableOfContentsElem) {
-              var id = elem.getAttribute('id');
-              tocElem.querySelectorAll('a').forEach(function (elem) {
-                elem.classList.remove('active');
-              });
-              tocElem.querySelector('a[href="#' + id + '"]') ? 
-              tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
-
-              tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
-                rootUl.querySelectorAll('li').forEach(function (liElem) {
-                  liElem.querySelectorAll('ul').forEach(function (ulElem) {
-                    ulElem.style.display = 'none';
-                  });
-                });
-              });
-
-              var curElem = tableOfContentsElem.querySelector(`[href="#${id}"]`);
-              if (curElem && curElem.nextElementSibling) {
-                curElem.nextElementSibling.style.display = 'block';
+        if (singleContentsElem) {
+          if (singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").length > 0) {
+            singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (elem) {
+              if (toggleTocElem && !toggleTocElem.checked) {
+                return null;
               }
-              getParents(curElem, 'ul') ? 
-              getParents(curElem, 'ul').forEach(function (elem) {
-                elem.style.display = 'block';
-              }) : null;
+              
+              if (notAllowedTitleIds && notAllowedTitleIds.includes(elem.getAttribute('id'))) {
+                return null;
+              }
+
+              if (document.documentElement.scrollTop >= elem.offsetTop) {
+                if (tableOfContentsElem) {
+                  var id = elem.getAttribute('id');
+                  tocElem.querySelectorAll('a').forEach(function (elem) {
+                    elem.classList.remove('active');
+                  });
+                  tocElem.querySelector('a[href="#' + id + '"]') ?
+                    tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
+
+                  tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+                    rootUl.querySelectorAll('li').forEach(function (liElem) {
+                      liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                        ulElem.style.display = 'none';
+                      });
+                    });
+                  });
+
+                  var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
+                  if (curElem && curElem.nextElementSibling) {
+                    curElem.nextElementSibling.style.display = 'block';
+                  }
+                  getParents(curElem, 'ul') ?
+                    getParents(curElem, 'ul').forEach(function (elem) {
+                      elem.style.display = 'block';
+                    }) : null;
+                }
+              }
+            });
+          } else {
+            if (tocFlexbox && !tocFlexbox.classList.contains('hide')) {
+              tocFlexbox.classList.add('hide');
+            }
+            if (tocFlexboxOuter && !tocFlexboxOuter.classList.contains('hide')) {
+              tocFlexboxOuter.classList.add('hide');
             }
           }
-        }) : null;
+          
+        }
 
         if (tableOfContentsElem && document.documentElement.scrollTop < 250) {
           tableOfContentsElem.querySelector('ul') ?
@@ -285,7 +421,8 @@
 
     mobileSearchInputElem ? 
     mobileSearchInputElem.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
+      var keyCode = e.which || e.keyCode;
+      if (e.key === 'Escape' || keyCode === 27) {
         if (mobileSearchContainer) {
           mobileSearchContainer.style.display = 'none';
         }
@@ -331,7 +468,7 @@
         localStorage.setItem('theme', selectedThemeVariant);
 
         rootEleme.removeAttribute('class');
-        rootEleme.classList.add(`theme__${selectedThemeVariant}`);
+        rootEleme.classList.add('theme__' + selectedThemeVariant);
         selectThemeElem.forEach(function(rootElem) {
           rootElem.querySelectorAll('a').forEach(function (elem) {
             if (elem.classList) {
@@ -421,11 +558,11 @@
             location: 0,
             distance: 100,
             maxPatternLength: 32,
-            minMatchCharLength: 1,
+            minMatchCharLength: 2,
           });
         }
         else {
-          console.error(`[${xhr.status}]Error:`, xhr.statusText);
+          console.error('[' + xhr.status + ']Error:', xhr.statusText);
         }
       };
       xhr.send();
@@ -444,7 +581,7 @@
           var item = document.createElement('a');
           item.setAttribute('href', result.uri);
           item.setAttribute('class', 'dropdown-item');
-          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${result.title}</div><div class="menu-item__desc">${result.description ? result.description : result.content}</div></div>`;
+          item.innerHTML = '<div class="menu-item"><div class="menu-item__title">📄 ' + result.title + '</div><div class="menu-item__desc">' + (result.description ? result.description : result.content) + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -475,7 +612,7 @@
           var item = document.createElement('a');
           item.setAttribute('href', result.item.uri);
           item.setAttribute('class', 'dropdown-item');
-          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="menu-item__desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
+          item.innerHTML = '<div class="menu-item"><div class="menu-item__title">📄 ' + generateHighlightedText(result.item.title, result.matches[0].indices) + '</div><div class="menu-item__desc">' + (result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : '') + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -503,7 +640,7 @@
         results.forEach(function (result) {
           var item = document.createElement('a');
           item.setAttribute('href', result.uri);
-          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${result.title}</div><div class="mobile-search__item--desc">${result.description ? result.description : result.content}</div></div>`;
+          item.innerHTML = '<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ' + result.title + '</div><div class="mobile-search__item--desc">' + (result.description ? result.description : result.content) + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -528,7 +665,7 @@
         results.forEach(function (result) {
           var item = document.createElement('a');
           item.setAttribute('href', result.item.uri);
-          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="mobile-search__item--desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
+          item.innerHTML = '<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ' + generateHighlightedText(result.item.title, result.matches[0].indices) + '</div><div class="mobile-search__item--desc">' + (result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : '') + '</div></div>';
           content.appendChild(item);
         });
       } else {
@@ -574,6 +711,7 @@
     var searchElem = document.getElementById('search');
     var searchMobile = document.getElementById('search-mobile');
 
+    searchElem ? 
     searchElem.addEventListener('input', function(e) {
       if (!e.target.value) {
         document.getElementById('search-results').setAttribute('class', 'dropdown');
@@ -591,8 +729,9 @@
       } else {
         renderSearchResults(results);
       }
-    });
+    }) : null;
 
+    searchElem ? 
     searchElem.addEventListener('blur', function() {
       if (window.innerWidth < 770) {
         return null;
@@ -600,8 +739,9 @@
       setTimeout(function () {
         document.getElementById('search-results').setAttribute('class', 'dropdown');
       }, 100);
-    });
+    }) : null;
 
+    searchElem ? 
     searchElem.addEventListener('click', function(e) {
       if (window.innerWidth < 770) {
         return null;
@@ -618,7 +758,7 @@
       } else {
         renderSearchResults(results);
       }
-    });
+    }) : null;
     
     function indexInParent(node) {
       var children = node.parentNode.childNodes;
@@ -636,14 +776,16 @@
     var items = null;
     var searchContainerMaxHeight = 350;
 
+    searchElem ? 
     searchElem.addEventListener('keydown', function(e) {
       if (window.innerWidth < 770) {
         return null;
       }
 
       var items = document.querySelectorAll('#search-menu .dropdown-item');
+      var keyCode = e.which || e.keyCode;
       
-      if (e.key === 'ArrowDown') {
+      if (e.key === 'ArrowDown' || keyCode === 40) {
         if (activeIndex === null) {
           activeIndex = 0;
           items[activeIndex].classList.remove('is-active');
@@ -659,7 +801,7 @@
         } else if (activeIndex === 0) {
           document.querySelector(".search-content").scrollTop = 0;
         }
-      } else if (e.key === 'ArrowUp') {
+      } else if (e.key === 'ArrowUp' || keyCode === 38) {
         if (activeIndex === null) {
           activeIndex = items.length - 1;
           items[activeIndex].classList.remove('is-active');
@@ -675,19 +817,20 @@
         } else {
           document.querySelector(".search-content").scrollTop = overflowedPixel + items[activeIndex].getBoundingClientRect().height;
         }
-      } else if (e.key === 'Enter') {
+      } else if (e.key === 'Enter' || keyCode === 13) {
         var currentItemLink = items[activeIndex].getAttribute('href');
         if (currentItemLink) {
           location.href = currentItemLink;
         }
-      } else if (e.key === 'Escape') {
+      } else if (e.key === 'Escape' || keyCode === 27) {
         e.target.value = null;
         if (searchResults) {
           searchResults.classList.remove('is-active');
         }
       }
-    });
+    }) : null;
 
+    searchMobile ? 
     searchMobile.addEventListener('input', function(e) {
       if (!e.target.value) {
         let wrap = document.getElementById('search-mobile-results');
@@ -705,7 +848,7 @@
       } else {
         renderSearchResultsMobile(results);
       }
-    });
+    }) : null;
   
   });
 </script>    
@@ -715,8 +858,11 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <link rel="alternate" type="application/rss&#43;xml" title="RSS" href="https://crushingcode.github.io/index.xml">
+    
+<link rel="alternate" type="application/rss&#43;xml" title="RSS" href="https://crushingcode.github.io/index.xml">
+
 <link rel="alternate" type="application/json" title="JSON" href="https://crushingcode.github.io/index.json">
+
 <meta name="description" content="Blog by Nishant Srivastava" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-02-02T00:00:00&#43;0000">
@@ -727,6 +873,8 @@
 <meta property="og:title" content="">
 <meta property="og:url" content="https://crushingcode.github.io/">
 <meta property="og:type" content="website">
+<meta property="og:description" content="Blog by Nishant Srivastava">
+
 
 <meta name="generator" content="Hugo 0.62.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
@@ -771,13 +919,13 @@
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
-            document.getElementById('root').className = `theme__${localTheme}`;
+            document.getElementById('root').className = 'theme__' + localTheme;
         }        
     </script>    
     
     <div id="container">
         <div class="wrapper__left"></div>
-        <div class="wrapper">
+        <div class="wrapper" data-type="page" data-kind="home">
             <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar__brand">
     
@@ -959,7 +1107,7 @@
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<main class="main inner">
+<main class="main inner" data-sidebar-position="right">
     <div class="list__main lm">
         <div class="summary__container">
             
@@ -973,6 +1121,35 @@
                 
             
             
+            
+                
+  <article class="summary-classic">
+  <div class="summary-classic__flex-box" >
+    
+    
+    
+
+    <div class="summary-classic__content">
+      <header>
+        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/'> Meet JACK &amp; JILL , Android’s experimental toolchain</a> </h5>
+        <h6 class="subtitle caption"><time title="Written At">📅 Jul 21, 2015 </time>  <span title="Reading Time"> &middot; ☕ 3 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+          JACK &amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
+ they are designed to improve build times and simplify development by reducing dependencies on other tools
+          
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </div>
+  <hr />
+</article>
+
             
                 
   <article class="summary-classic">
@@ -1237,7 +1414,7 @@ Well let me break it to you – You are NOT the FIRST person to do it.
                         android
                     </span>
                     <span class="taxo__num">
-                        14
+                        15
                     </span>
                 </a>
             </span>
@@ -1505,6 +1682,9 @@ Well let me break it to you – You are NOT the FIRST person to do it.
 <script>
     
     var sidebarPosition = JSON.parse("\"right\"");
+    
+    var enableSidebar = JSON.parse("true");
+    
     var listMainElem = document.querySelector('.list__main');
     var listSideElem = document.querySelector('.list__sidebar');
 
@@ -1519,16 +1699,39 @@ Well let me break it to you – You are NOT the FIRST person to do it.
 
     enquire.register("screen and (max-width: 769px)", {
         match: function () {
-            listMainElem.classList.remove(gridBig);
-            listMainElem.classList.add(gridFull);
-            listSideElem.classList.remove(gridSmall);
-            listSideElem.classList.add('hide');
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridBig);
+                listMainElem.classList.add(gridFull);
+                listSideElem.classList.remove(gridSmall);
+                listSideElem.classList.add('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
+
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
+            
         },
         unmatch: function () {
-            listMainElem.classList.remove(gridFull);
-            listMainElem.classList.add(gridBig);
-            listSideElem.classList.add(gridSmall);
-            listSideElem.classList.remove('hide');
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridFull);
+                listMainElem.classList.add(gridBig);
+                listSideElem.classList.add(gridSmall);
+                listSideElem.classList.remove('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
+
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
 
             if (document.getElementsByClassName('navbar__burger')[0]) {
                 document.getElementsByClassName('navbar__burger')[0].classList.remove('is-active');

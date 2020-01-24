@@ -9,12 +9,21 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>Nishant Srivastava - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Sun, 17 Sep 2017 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://crushingcode.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Circular images in 2020</title>
+        <link>https://crushingcode.github.io/posts/circular-image-in-2020/</link>
+        <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/posts/circular-image-in-2020/</guid>
+        <description>You would have thought that the problem for creating a simple circular image such as the one for an avatar, would have been solved by now.</description>
+      </item>
       
       <item>
         <title>Is your Android Library, Lifecycle-Aware?</title>
