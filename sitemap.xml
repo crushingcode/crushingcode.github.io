@@ -123,22 +123,12 @@
   </url>
   
   <url>
+    <loc>https://crushingcode.github.io/tags/android-library/</loc>
+    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</loc>
-    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/library/</loc>
-    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/lifecyle/</loc>
-    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/sdk/</loc>
     <lastmod>2017-09-17T10:54:24+02:00</lastmod>
   </url>
   
@@ -180,11 +170,6 @@
   <url>
     <loc>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</loc>
     <lastmod>2017-03-05T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/gesture/</loc>
-    <lastmod>2017-02-12T10:54:24+02:00</lastmod>
   </url>
   
   <url>
@@ -243,7 +228,7 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/jitpack/</loc>
+    <loc>https://crushingcode.github.io/tags/maven/</loc>
     <lastmod>2016-07-29T10:54:24+02:00</lastmod>
   </url>
   
@@ -253,27 +238,12 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/maven-central/</loc>
-    <lastmod>2016-07-17T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</loc>
     <lastmod>2016-07-12T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/jcenter/</loc>
-    <lastmod>2016-07-12T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</loc>
-    <lastmod>2016-05-15T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/javadoc/</loc>
     <lastmod>2016-05-15T10:54:24+02:00</lastmod>
   </url>
   
@@ -293,11 +263,6 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/maven/</loc>
-    <lastmod>2016-02-16T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</loc>
     <lastmod>2016-02-16T10:54:24+02:00</lastmod>
   </url>
@@ -308,27 +273,12 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/build/</loc>
-    <lastmod>2015-07-21T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</loc>
     <lastmod>2015-07-21T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/debugging/</loc>
-    <lastmod>2015-07-09T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</loc>
-    <lastmod>2015-07-09T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/wifi/</loc>
     <lastmod>2015-07-09T10:54:24+02:00</lastmod>
   </url>
   

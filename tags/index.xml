@@ -26,29 +26,11 @@
       </item>
       
       <item>
-        <title>library</title>
-        <link>https://crushingcode.github.io/tags/library/</link>
+        <title>android-library</title>
+        <link>https://crushingcode.github.io/tags/android-library/</link>
         <pubDate>Sun, 17 Sep 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/library/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>lifecyle</title>
-        <link>https://crushingcode.github.io/tags/lifecyle/</link>
-        <pubDate>Sun, 17 Sep 2017 10:54:24 +0200</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/lifecyle/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>sdk</title>
-        <link>https://crushingcode.github.io/tags/sdk/</link>
-        <pubDate>Sun, 17 Sep 2017 10:54:24 +0200</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/sdk/</guid>
+        <guid>https://crushingcode.github.io/tags/android-library/</guid>
         <description></description>
       </item>
       
@@ -58,15 +40,6 @@
         <pubDate>Sat, 29 Jul 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/tags/best-practices/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>gesture</title>
-        <link>https://crushingcode.github.io/tags/gesture/</link>
-        <pubDate>Sun, 12 Feb 2017 10:54:24 +0200</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/gesture/</guid>
         <description></description>
       </item>
       
@@ -116,38 +89,11 @@
       </item>
       
       <item>
-        <title>jitpack</title>
-        <link>https://crushingcode.github.io/tags/jitpack/</link>
+        <title>maven</title>
+        <link>https://crushingcode.github.io/tags/maven/</link>
         <pubDate>Fri, 29 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/jitpack/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>maven-central</title>
-        <link>https://crushingcode.github.io/tags/maven-central/</link>
-        <pubDate>Sun, 17 Jul 2016 10:54:24 +0200</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/maven-central/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>jcenter</title>
-        <link>https://crushingcode.github.io/tags/jcenter/</link>
-        <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/jcenter/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>javadoc</title>
-        <link>https://crushingcode.github.io/tags/javadoc/</link>
-        <pubDate>Sun, 15 May 2016 10:54:24 +0200</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/javadoc/</guid>
+        <guid>https://crushingcode.github.io/tags/maven/</guid>
         <description></description>
       </item>
       
@@ -166,42 +112,6 @@
         <pubDate>Mon, 02 May 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/tags/issue/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>maven</title>
-        <link>https://crushingcode.github.io/tags/maven/</link>
-        <pubDate>Tue, 16 Feb 2016 10:54:24 +0200</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/maven/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>build</title>
-        <link>https://crushingcode.github.io/tags/build/</link>
-        <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/build/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>debugging</title>
-        <link>https://crushingcode.github.io/tags/debugging/</link>
-        <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/debugging/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>wifi</title>
-        <link>https://crushingcode.github.io/tags/wifi/</link>
-        <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <guid>https://crushingcode.github.io/tags/wifi/</guid>
         <description></description>
       </item>
       
