@@ -944,12 +944,12 @@
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
         }        
-    </script>    
+    </script>
     
     <div id="container">
-        <div class="wrapper__left"></div>
+        
         <div class="wrapper" data-type="archive" data-kind="section">
-            <nav class="navbar" role="navigation" aria-label="main navigation">
+            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     
     <a href="/" title="Home" rel="home" class="navbar__logo-link">
@@ -1005,11 +1005,11 @@
 <div id="search-mobile-container" class="mobile-search hide">
   <div class="mobile-search__top">
     <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="Search" class="mobile-search__top--input"/>
-    <div id="search-mobile-close" class="mobile-search__top--icon">
+    <div id="search-mobile-close" class="mobile-search__top--icon" data-dir="ltr">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
     </div>
   </div>
-  <div id="search-mobile-results" class="mobile-search__body">
+  <div id="search-mobile-results" class="mobile-search__body" data-dir="ltr">
     
   </div>
 </div>
@@ -1063,7 +1063,7 @@
       
       
       
-        <a href="/posts" class="navbar__menu-item navbar__slide-down ">Posts</a>
+        <a href="/posts" class="navbar__menu-item navbar__slide-down " dir="ltr">Posts</a>
       
     
       
@@ -1071,7 +1071,7 @@
       
       
       
-        <a href="/archive" class="navbar__menu-item navbar__slide-down active">Archive</a>
+        <a href="/archive" class="navbar__menu-item navbar__slide-down active" dir="ltr">Archive</a>
       
     
       
@@ -1079,7 +1079,7 @@
       
       
       
-        <a href="/talks" class="navbar__menu-item navbar__slide-down ">Talks</a>
+        <a href="/talks" class="navbar__menu-item navbar__slide-down " dir="ltr">Talks</a>
       
     
       
@@ -1087,7 +1087,7 @@
       
       
       
-        <a href="/showcase" class="navbar__menu-item navbar__slide-down ">Showcase</a>
+        <a href="/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr">Showcase</a>
       
     
       
@@ -1095,7 +1095,7 @@
       
       
       
-        <a href="/about" class="navbar__menu-item navbar__slide-down ">About</a>
+        <a href="/about" class="navbar__menu-item navbar__slide-down " dir="ltr">About</a>
       
     
   </div>
@@ -1127,115 +1127,141 @@
     
     
     <span class="archive__key">2017</span>
-    <ul class="archive__ul">
+    <ul class="archive__ul" data-dir="ltr">
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Sep 17</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Sep 17</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/" class="archive__title" data-title-wrap="wrap">Is your Android Library, Lifecycle-Aware?</a>        
+        <a href="https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Is your Android Library, Lifecycle-Aware?</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Jul 29</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Jul 29</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/" class="archive__title" data-title-wrap="wrap">Want To Step Up Your Android Learning Game? You Need To Read This First</a>        
+        <a href="https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Want To Step Up Your Android Learning Game? You Need To Read This First</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Mar 5</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Mar 5</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/" class="archive__title" data-title-wrap="wrap">Things I wish I knew when I started building Android SDK/Libraries</a>        
+        <a href="https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Things I wish I knew when I started building Android SDK/Libraries</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Feb 12</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Feb 12</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/" class="archive__title" data-title-wrap="wrap">I could not find a simple Gesture Detection android library, so I built one</a>        
+        <a href="https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">I could not find a simple Gesture Detection android library, so I built one</a>        
       </li>
       
     </ul>
     
     <span class="archive__key">2016</span>
-    <ul class="archive__ul">
+    <ul class="archive__ul" data-dir="ltr">
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Nov 18</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Nov 18</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/rewriting-the-history/" class="archive__title" data-title-wrap="wrap">Rewriting The History</a>        
+        <a href="https://crushingcode.github.io/posts/rewriting-the-history/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Rewriting The History</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Oct 14</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Oct 14</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/do-you-like-to-adb/" class="archive__title" data-title-wrap="wrap">Do you like to ADB?</a>        
+        <a href="https://crushingcode.github.io/posts/do-you-like-to-adb/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Do you like to ADB?</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Sep 24</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Sep 24</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/whats-in-the-apk/" class="archive__title" data-title-wrap="wrap">Whats in the APK?</a>        
+        <a href="https://crushingcode.github.io/posts/whats-in-the-apk/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Whats in the APK?</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Sep 3</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Sep 3</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/update-dependencies-code-repeat/" class="archive__title" data-title-wrap="wrap">Update Dependencies .Code .Repeat.</a>        
+        <a href="https://crushingcode.github.io/posts/update-dependencies-code-repeat/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Update Dependencies .Code .Repeat.</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Jul 29</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Jul 29</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/" class="archive__title" data-title-wrap="wrap">Guide to publishing your Android Library via JitPack</a>        
+        <a href="https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Guide to publishing your Android Library via JitPack</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Jul 17</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Jul 17</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/" class="archive__title" data-title-wrap="wrap">Guide to publishing your Android Library via MavenCentral</a>        
+        <a href="https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Guide to publishing your Android Library via MavenCentral</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">Jul 12</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">Jul 12</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/" class="archive__title" data-title-wrap="wrap">Guide to publishing your Android Library via Jcenter/Bintray</a>        
+        <a href="https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Guide to publishing your Android Library via Jcenter/Bintray</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">May 15</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">May 15</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/" class="archive__title" data-title-wrap="wrap">Fun Project : Javadoc-Themer</a>        
+        <a href="https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">Fun Project : Javadoc-Themer</a>        
       </li>
       
-      <li class="archive__li">
+      <li class="archive__li" data-dir="ltr">
         <span class="archive__meta">
-          <span class="archive__type">posts</span>
-          <span class="archive__date">May 2</span>
+          
+            <span class="archive__type">posts</span>
+            <span class="archive__date">May 2</span>
+          
         </span>
-        <a href="https://crushingcode.github.io/posts/the-curious-case-of-dependency-conflicts/" class="archive__title" data-title-wrap="wrap">The curious case of dependency conflicts</a>        
+        <a href="https://crushingcode.github.io/posts/the-curious-case-of-dependency-conflicts/" class="archive__title" data-title-wrap="wrap" data-dir="ltr">The curious case of dependency conflicts</a>        
       </li>
       
     </ul>
@@ -1430,7 +1456,8 @@
     </div> 
 </footer>
         </div>
-        <div class="wrapper__right">
+        
+<div class="wrapper__right" dir="ltr">
   
 </div>
 

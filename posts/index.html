@@ -944,12 +944,12 @@
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
         }        
-    </script>    
+    </script>
     
     <div id="container">
-        <div class="wrapper__left"></div>
+        
         <div class="wrapper" data-type="posts" data-kind="section">
-            <nav class="navbar" role="navigation" aria-label="main navigation">
+            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     
     <a href="/" title="Home" rel="home" class="navbar__logo-link">
@@ -1005,11 +1005,11 @@
 <div id="search-mobile-container" class="mobile-search hide">
   <div class="mobile-search__top">
     <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="Search" class="mobile-search__top--input"/>
-    <div id="search-mobile-close" class="mobile-search__top--icon">
+    <div id="search-mobile-close" class="mobile-search__top--icon" data-dir="ltr">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
     </div>
   </div>
-  <div id="search-mobile-results" class="mobile-search__body">
+  <div id="search-mobile-results" class="mobile-search__body" data-dir="ltr">
     
   </div>
 </div>
@@ -1063,7 +1063,7 @@
       
       
       
-        <a href="/posts" class="navbar__menu-item navbar__slide-down active">Posts</a>
+        <a href="/posts" class="navbar__menu-item navbar__slide-down active" dir="ltr">Posts</a>
       
     
       
@@ -1071,7 +1071,7 @@
       
       
       
-        <a href="/archive" class="navbar__menu-item navbar__slide-down ">Archive</a>
+        <a href="/archive" class="navbar__menu-item navbar__slide-down " dir="ltr">Archive</a>
       
     
       
@@ -1079,7 +1079,7 @@
       
       
       
-        <a href="/talks" class="navbar__menu-item navbar__slide-down ">Talks</a>
+        <a href="/talks" class="navbar__menu-item navbar__slide-down " dir="ltr">Talks</a>
       
     
       
@@ -1087,7 +1087,7 @@
       
       
       
-        <a href="/showcase" class="navbar__menu-item navbar__slide-down ">Showcase</a>
+        <a href="/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr">Showcase</a>
       
     
       
@@ -1095,7 +1095,7 @@
       
       
       
-        <a href="/about" class="navbar__menu-item navbar__slide-down ">About</a>
+        <a href="/about" class="navbar__menu-item navbar__slide-down " dir="ltr">About</a>
       
     
   </div>
@@ -1151,12 +1151,12 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/'> Is your Android Library, Lifecycle-Aware?</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Sep 17, 2017 </time>  <span title="Reading Time"> &middot; ☕ 9 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Sep 17, 2017 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 9 min read </span>&middot; <span title="WRITTEN BY" dir="ltr">✍️&nbsp;Nishant</span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-          Lifecycle events in Android.
+            Lifecycle events in Android.
 It has been a pain point for Android developers all over the world. It is no brainer that, most of the times the main cause of a memory leak in the codebase is because an invalid state is accessed which is out of sync with the lifecycle of the activity/fragment of the app.
           
         </div>
@@ -1180,12 +1180,12 @@ It has been a pain point for Android developers all over the world. It is no bra
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/'> Want To Step Up Your Android Learning Game? You Need To Read This First</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Jul 29, 2017 </time>  <span title="Reading Time"> &middot; ☕ 4 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Jul 29, 2017 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 4 min read </span>&middot; <span title="WRITTEN BY" dir="ltr">✍️&nbsp;Nishant</span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-          DISCLAIMER: If you consider yourself a beginner, intermediate, expert or a ninja in the Android realm, this secret sauce still applies to you.
+            DISCLAIMER: If you consider yourself a beginner, intermediate, expert or a ninja in the Android realm, this secret sauce still applies to you.
  TL;DR: Build Something.
           
         </div>
@@ -1209,12 +1209,12 @@ It has been a pain point for Android developers all over the world. It is no bra
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/'> Things I wish I knew when I started building Android SDK/Libraries</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Mar 5, 2017 </time>  <span title="Reading Time"> &middot; ☕ 23 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Mar 5, 2017 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 23 min read </span>&middot; <span title="WRITTEN BY" dir="ltr">✍️&nbsp;Nishant</span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-          It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &ldquo;Awesome Android App&rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.
+            It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &ldquo;Awesome Android App&rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.
           
         </div>
       </div>
@@ -1237,12 +1237,12 @@ It has been a pain point for Android developers all over the world. It is no bra
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/'> I could not find a simple Gesture Detection android library, so I built one</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Feb 12, 2017 </time>  <span title="Reading Time"> &middot; ☕ 6 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Feb 12, 2017 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 6 min read </span>&middot; <span title="WRITTEN BY" dir="ltr">✍️&nbsp;Nishant</span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-          While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture.
+            While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture.
           
         </div>
       </div>
@@ -1265,12 +1265,12 @@ It has been a pain point for Android developers all over the world. It is no bra
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.github.io/posts/rewriting-the-history/'> Rewriting The History</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Nov 18, 2016 </time>  <span title="Reading Time"> &middot; ☕ 6 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Nov 18, 2016 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 6 min read </span>&middot; <span title="WRITTEN BY" dir="ltr">✍️&nbsp;Nishant</span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-          Most of us are engineers and at the end of the day humans. So basically we all are bound to make mistakes. As an Engineer we make such mistakes in code quite often and even if we do not admit it , they do exist.
+            Most of us are engineers and at the end of the day humans. So basically we all are bound to make mistakes. As an Engineer we make such mistakes in code quite often and even if we do not admit it , they do exist.
           
         </div>
       </div>
@@ -1293,12 +1293,12 @@ It has been a pain point for Android developers all over the world. It is no bra
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.github.io/posts/do-you-like-to-adb/'> Do you like to ADB?</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Oct 14, 2016 </time>  <span title="Reading Time"> &middot; ☕ 10 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Oct 14, 2016 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 10 min read </span>&middot; <span title="WRITTEN BY" dir="ltr">✍️&nbsp;Nishant</span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-          Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.
+            Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.
           
         </div>
       </div>
@@ -1321,12 +1321,12 @@ It has been a pain point for Android developers all over the world. It is no bra
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.github.io/posts/whats-in-the-apk/'> Whats in the APK?</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Sep 24, 2016 </time>  <span title="Reading Time"> &middot; ☕ 6 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Sep 24, 2016 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 6 min read </span>&middot; <span title="WRITTEN BY" dir="ltr">✍️&nbsp;Nishant</span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-          If I give you the code of an android app and ask you to provide me information regarding the android app like minSdkVersion, targetSdkVersion, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes.
+            If I give you the code of an android app and ask you to provide me information regarding the android app like minSdkVersion, targetSdkVersion, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes.
           
         </div>
       </div>
@@ -1349,12 +1349,12 @@ It has been a pain point for Android developers all over the world. It is no bra
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.github.io/posts/update-dependencies-code-repeat/'> Update Dependencies .Code .Repeat.</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Sep 3, 2016 </time>  <span title="Reading Time"> &middot; ☕ 6 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Sep 3, 2016 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 6 min read </span>&middot; <span title="WRITTEN BY" dir="ltr">✍️&nbsp;Nishant</span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-          Agree or not agree, but on an average consensus pretty much every android dev goes through the loop of Update Dependencies.Code.Repeat. for each of his/her android project.
+            Agree or not agree, but on an average consensus pretty much every android dev goes through the loop of Update Dependencies.Code.Repeat. for each of his/her android project.
           
         </div>
       </div>
@@ -1408,7 +1408,7 @@ It has been a pain point for Android developers all over the world. It is no bra
     </div>    
 
     
-        <aside class="list__sidebar r">
+        <aside class="list__sidebar r" data-dir="ltr">
             
 
 <ul class="sidebar">
@@ -1797,7 +1797,8 @@ It has been a pain point for Android developers all over the world. It is no bra
     </div> 
 </footer>
         </div>
-        <div class="wrapper__right">
+        
+<div class="wrapper__right" dir="ltr">
   
 </div>
 

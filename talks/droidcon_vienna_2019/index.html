@@ -944,12 +944,12 @@
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
         }        
-    </script>    
+    </script>
     
     <div id="container">
-        <div class="wrapper__left"></div>
+        
         <div class="wrapper" data-type="talks" data-kind="page">
-            <nav class="navbar" role="navigation" aria-label="main navigation">
+            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     
     <a href="/" title="Home" rel="home" class="navbar__logo-link">
@@ -1005,11 +1005,11 @@
 <div id="search-mobile-container" class="mobile-search hide">
   <div class="mobile-search__top">
     <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="Search" class="mobile-search__top--input"/>
-    <div id="search-mobile-close" class="mobile-search__top--icon">
+    <div id="search-mobile-close" class="mobile-search__top--icon" data-dir="ltr">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
     </div>
   </div>
-  <div id="search-mobile-results" class="mobile-search__body">
+  <div id="search-mobile-results" class="mobile-search__body" data-dir="ltr">
     
   </div>
 </div>
@@ -1063,7 +1063,7 @@
       
       
       
-        <a href="/posts" class="navbar__menu-item navbar__slide-down ">Posts</a>
+        <a href="/posts" class="navbar__menu-item navbar__slide-down " dir="ltr">Posts</a>
       
     
       
@@ -1071,7 +1071,7 @@
       
       
       
-        <a href="/archive" class="navbar__menu-item navbar__slide-down ">Archive</a>
+        <a href="/archive" class="navbar__menu-item navbar__slide-down " dir="ltr">Archive</a>
       
     
       
@@ -1079,7 +1079,7 @@
       
       
       
-        <a href="/talks" class="navbar__menu-item navbar__slide-down active">Talks</a>
+        <a href="/talks" class="navbar__menu-item navbar__slide-down active" dir="ltr">Talks</a>
       
     
       
@@ -1087,7 +1087,7 @@
       
       
       
-        <a href="/showcase" class="navbar__menu-item navbar__slide-down ">Showcase</a>
+        <a href="/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr">Showcase</a>
       
     
       
@@ -1095,7 +1095,7 @@
       
       
       
-        <a href="/about" class="navbar__menu-item navbar__slide-down ">About</a>
+        <a href="/about" class="navbar__menu-item navbar__slide-down " dir="ltr">About</a>
       
     
   </div>
@@ -1142,19 +1142,19 @@
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcrushingcode.github.io%2ftalks%2fdroidcon_vienna_2019%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcrushingcode.github.io%2ftalks%2fdroidcon_vienna_2019%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=My%20love-hate%20relationship%20with%20Android%20Studio%20%40Droidcon%20Vienna&url=https%3a%2f%2fcrushingcode.github.io%2ftalks%2fdroidcon_vienna_2019%2f&via=nisrulz" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer">
+        <a href="https://twitter.com/intent/tweet?text=My%20love-hate%20relationship%20with%20Android%20Studio%20%40Droidcon%20Vienna&url=https%3a%2f%2fcrushingcode.github.io%2ftalks%2fdroidcon_vienna_2019%2f&via=nisrulz" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
     
       
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcrushingcode.github.io%2ftalks%2fdroidcon_vienna_2019%2f&title=My%20love-hate%20relationship%20with%20Android%20Studio%20%40Droidcon%20Vienna &summary=&source=Blog%20by%20Nishant%20Srivastava" target="_blank" rel="noreferer" title="LinkedIn" aria-label="LinkedIn Share Button" class="donation__item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcrushingcode.github.io%2ftalks%2fdroidcon_vienna_2019%2f&title=My%20love-hate%20relationship%20with%20Android%20Studio%20%40Droidcon%20Vienna &summary=&source=Blog%20by%20Nishant%20Srivastava" target="_blank" rel="noreferer" title="LinkedIn" aria-label="LinkedIn Share Button" class="donation__item" data-type="share">
           <svg data-name="linkedin" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"/><path d="m.396 7.977h4.976v16.023h-4.976z"/><path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"/></svg>
         </a>
       
@@ -1177,7 +1177,7 @@
     
       
         
-          <a href="https://www.paypal.me/nisrulz" title="paypal" aria-label="paypal" class="donation__item" target="_blank" rel="noreferrer">
+          <a href="https://www.paypal.me/nisrulz" title="paypal" aria-label="paypal" class="donation__item" target="_blank" rel="noreferrer" data-type="donation">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="35" height="35"><path fill="#1565C0" d="M18.7,13.767l0.005,0.002C18.809,13.326,19.187,13,19.66,13h13.472c0.017,0,0.034-0.007,0.051-0.006C32.896,8.215,28.887,6,25.35,6H11.878c-0.474,0-0.852,0.335-0.955,0.777l-0.005-0.002L5.029,33.813l0.013,0.001c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,0.991,1,0.991h8.071L18.7,13.767z"/><path fill="#039BE5" d="M33.183,12.994c0.053,0.876-0.005,1.829-0.229,2.882c-1.281,5.995-5.912,9.115-11.635,9.115c0,0-3.47,0-4.313,0c-0.521,0-0.767,0.306-0.88,0.54l-1.74,8.049l-0.305,1.429h-0.006l-1.263,5.796l0.013,0.001c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,1,1,1h7.333l0.013-0.01c0.472-0.007,0.847-0.344,0.945-0.788l0.018-0.015l1.812-8.416c0,0,0.126-0.803,0.97-0.803s4.178,0,4.178,0c5.723,0,10.401-3.106,11.683-9.102C42.18,16.106,37.358,13.019,33.183,12.994z"/><path fill="#283593" d="M19.66,13c-0.474,0-0.852,0.326-0.955,0.769L18.7,13.767l-2.575,11.765c0.113-0.234,0.359-0.54,0.88-0.54c0.844,0,4.235,0,4.235,0c5.723,0,10.432-3.12,11.713-9.115c0.225-1.053,0.282-2.006,0.229-2.882C33.166,12.993,33.148,13,33.132,13H19.66z"/></svg>
           </a>
         
@@ -1318,21 +1318,23 @@
     <div class="grow"></div>
 <nav class="pagination-single">
   
-    <a href="https://crushingcode.github.io/talks/devoxx_pl_2019/" class="pagination-single__left">
-      <div class="pagination-single__icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
-      </div>
-      <div class="pagination-single__left-title">My love-hate relationship with Android Studio @Devoxx Poland</div>      
-    </a>
-  
-  <div class="grow"></div>
-  
-    <a href="https://crushingcode.github.io/talks/droidcon_greece_2019/" class="pagination-single__right">      
-      <div class="pagination-single__right-title">My love-hate relationship with Android Studio @Droidcon Greece</div>
+    
+    <a href="https://crushingcode.github.io/talks/droidcon_greece_2019/" class="pagination-single__right">
       <div class="pagination-single__icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
       </div>
+      <div class="pagination-single__right-title">My love-hate relationship with Android Studio @Droidcon Greece</div>
     </a>
+    
+    <div class="grow"></div>
+    
+    <a href="https://crushingcode.github.io/talks/devoxx_pl_2019/" class="pagination-single__left">
+      <div class="pagination-single__left-title">My love-hate relationship with Android Studio @Devoxx Poland</div>
+      <div class="pagination-single__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+      </div>
+    </a>
+    
   
 </nav>
     
@@ -1782,7 +1784,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
 <script>
   'use strict';
 
@@ -2174,19 +2175,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-    if (lib && lib.includes('mathjax')) {
-      window.MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']],
-          processEscapes: false,
-          packages: { '[+]': ['noerrors'] }
-        },
-        loader: {
-          load: ['[tex]/noerrors']
-        },
-      };
-    }
     
 
 
@@ -2438,15 +2426,16 @@ document.addEventListener('DOMContentLoaded', function () {
     </div> 
 </footer>
         </div>
-        <div class="wrapper__right">
+        
+<div class="wrapper__right" dir="ltr">
   
     
       
-        <div class="toc__flexbox--outer" data-position="fixed">
+        <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr">
           <h6 class="toc__title toc__title--outer">What&#39;s on this Page</h6>
           
         </div>
-        <div class="toc toc__outer ">
+        <div class="toc toc__outer " data-dir="ltr">
           <nav id="TableOfContents"></nav>
         </div>
       
