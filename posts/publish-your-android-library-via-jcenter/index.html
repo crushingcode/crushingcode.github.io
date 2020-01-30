@@ -1157,7 +1157,7 @@
 
 </div>
     </div>    
-    <article class="single__contents">
+    <article class="single__contents" data-dir="ltr">
       
       <p>Developers are a different kind of people altogether. <strong>They tend to be lazy but strive to be super efficient at the same time</strong>.<br />
 A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or  to make the complex processes simpler.</p>
@@ -2527,11 +2527,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (lib && lib.includes('katex')) {
       var mathElements = document.getElementsByClassName('math');
-      var options = [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ];
+      var options = {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+      };
 
       renderMathInElement(document.querySelector('.single__contents'), options);
     }

@@ -1139,7 +1139,7 @@
 
 </div>
     </div>    
-    <article class="single__contents">
+    <article class="single__contents" data-dir="ltr">
       
       <p><img src="/images/posts/rewritingthehistory/header.jpg" alt="header" /></p>
 <p>Most of us are engineers and at the end of the day humans. So basically we all are bound to make mistakes. As an Engineer we make such mistakes in code quite often and even if we do not admit it , they do exist. How many times have you published your code to a public VCS such as Github/Bitbucket with the credentials and then pulled down the repository only to reset the whole history and re-publish the new repository with the credentials cleaned out.</p>
@@ -2305,11 +2305,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (lib && lib.includes('katex')) {
       var mathElements = document.getElementsByClassName('math');
-      var options = [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ];
+      var options = {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+      };
 
       renderMathInElement(document.querySelector('.single__contents'), options);
     }

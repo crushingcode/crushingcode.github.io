@@ -1157,7 +1157,7 @@
 
 </div>
     </div>    
-    <article class="single__contents">
+    <article class="single__contents" data-dir="ltr">
       
       <p>While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the <code>SensorManager</code> and getting access to the <code>SensorEvent</code>, plus the extra logic to detect the gesture. At first, it was just fine to do that since I was a beginner around that time. Then soon I got weary of the whole boilerplate. Around this time I started looking for a solution like an android library which would help me avoid all that boilerplate as well as enable me to maintain my code properly.</p>
 <h3 id="problem">Problem</h3>
@@ -2319,11 +2319,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (lib && lib.includes('katex')) {
       var mathElements = document.getElementsByClassName('math');
-      var options = [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ];
+      var options = {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+      };
 
       renderMathInElement(document.querySelector('.single__contents'), options);
     }

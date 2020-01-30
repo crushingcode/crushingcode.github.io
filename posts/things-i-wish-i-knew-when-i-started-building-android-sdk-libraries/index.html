@@ -1157,7 +1157,7 @@
 
 </div>
     </div>    
-    <article class="single__contents">
+    <article class="single__contents" data-dir="ltr">
       
       <p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/header.png" alt="header" /></p>
 <p>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their <strong>&ldquo;Awesome Android App&rdquo;</strong>. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.</p>
@@ -2696,11 +2696,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (lib && lib.includes('katex')) {
       var mathElements = document.getElementsByClassName('math');
-      var options = [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ];
+      var options = {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+      };
 
       renderMathInElement(document.querySelector('.single__contents'), options);
     }

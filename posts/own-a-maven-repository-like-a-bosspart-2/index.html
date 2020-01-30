@@ -1157,7 +1157,7 @@
 
 </div>
     </div>    
-    <article class="single__contents">
+    <article class="single__contents" data-dir="ltr">
       
       <p>The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.</p>
 <p>For the same reason I have gone through a lot of good articles online, which explain how the whole process works. However most of the documentation is either not up to date or lacks proper explanation. Personally all I care about is how does it work and how can I make it simpler. Hence I set out to try and implement the whole process on my own.</p>
@@ -2257,11 +2257,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (lib && lib.includes('katex')) {
       var mathElements = document.getElementsByClassName('math');
-      var options = [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ];
+      var options = {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+      };
 
       renderMathInElement(document.querySelector('.single__contents'), options);
     }

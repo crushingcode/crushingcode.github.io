@@ -1148,7 +1148,7 @@
 
 </div>
     </div>    
-    <article class="single__contents">
+    <article class="single__contents" data-dir="ltr">
       
       <p><img src="/images/posts/whatsintheapk/header.jpg" alt="header" /></p>
 <p>If I give you the code of an android app and ask you to provide me information regarding the android <strong>app</strong> like  <code>minSdkVersion</code>, <code>targetSdkVersion</code>, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes. But what if I gave you an android <strong>apk</strong> file and then ask you to answer for the same 🤔 Its tricky if you try to think at the very first instance.</p>
@@ -2479,11 +2479,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (lib && lib.includes('katex')) {
       var mathElements = document.getElementsByClassName('math');
-      var options = [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ];
+      var options = {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+      };
 
       renderMathInElement(document.querySelector('.single__contents'), options);
     }

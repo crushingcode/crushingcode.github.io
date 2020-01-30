@@ -1148,7 +1148,7 @@
 
 </div>
     </div>    
-    <article class="single__contents">
+    <article class="single__contents" data-dir="ltr">
       
       <p>I am pretty sure you would agree to the fact that the usual javadoc is not a something everyone likes. The colors are what makes it superrrrrrr boring. Yeah , I actually despise those weird colors and the fact that its been around for so long , made me think how to solve this. Also if you try looking it up on the internet there aren't any solutions that basically solved this in a programmatic way.</p>
 <p>Well look no more&hellip;. TADAAAAAAA !!</p>
@@ -2183,11 +2183,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (lib && lib.includes('katex')) {
       var mathElements = document.getElementsByClassName('math');
-      var options = [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ];
+      var options = {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+      };
 
       renderMathInElement(document.querySelector('.single__contents'), options);
     }

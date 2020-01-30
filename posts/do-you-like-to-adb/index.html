@@ -1157,7 +1157,7 @@
 
 </div>
     </div>    
-    <article class="single__contents">
+    <article class="single__contents" data-dir="ltr">
       
       <p><img src="/images/posts/doyouliketoadb/header.jpg" alt="header" /></p>
 <p>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it. Let me make this clear I am not talking about tests here as that's all related to the code. My focus here is on managing the device/emulator that's paired with your dev environment/system (..and to your IDE - Android Studio , if you still use Eclipse you are simply oblivious to the joys of coding in Android <em>[here is a long blank stare from me to you]</em> ).</p>
@@ -2650,11 +2650,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (lib && lib.includes('katex')) {
       var mathElements = document.getElementsByClassName('math');
-      var options = [
-        { left: "$$", right: "$$", display: true },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ];
+      var options = {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+      };
 
       renderMathInElement(document.querySelector('.single__contents'), options);
     }
