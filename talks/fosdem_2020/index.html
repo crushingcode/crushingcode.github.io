@@ -203,6 +203,9 @@
     var notAllowedTitleIds = null;
 
     
+    var tocFolding = JSON.parse("null");
+
+    
     singleContentsElem && singleContentsElem.querySelectorAll(".tab") ?
     singleContentsElem.querySelectorAll(".tab").forEach(function (elem) {
       elem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (element) {
@@ -272,14 +275,18 @@
                   tocElem.querySelector('a[href="#' + id + '"]') ?
                     tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
 
-                  tableOfContentsElem.querySelectorAll('ul') ? 
-                  tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
-                    rootUl.querySelectorAll('li').forEach(function (liElem) {
-                      liElem.querySelectorAll('ul').forEach(function (ulElem) {
-                        ulElem.style.display = 'none';
-                      });
-                    });
-                  }) : null;
+                  if (false === tocFolding) {
+                    
+                  } else {
+                    tableOfContentsElem.querySelectorAll('ul') ?
+                      tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+                        rootUl.querySelectorAll('li').forEach(function (liElem) {
+                          liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                            ulElem.style.display = 'none';
+                          });
+                        });
+                      }) : null;
+                  }
 
                   var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
                   if (curElem && curElem.nextElementSibling) {
@@ -338,14 +345,18 @@
                   tocElem.querySelector('a[href="#' + id + '"]') ?
                     tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
 
-                  tableOfContentsElem.querySelectorAll('ul') ? 
-                  tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
-                    rootUl.querySelectorAll('li').forEach(function (liElem) {
-                      liElem.querySelectorAll('ul').forEach(function (ulElem) {
-                        ulElem.style.display = 'none';
-                      });
-                    });
-                  }) : null;
+                  if (false === tocFolding) {
+                    
+                  } else {
+                    tableOfContentsElem.querySelectorAll('ul') ?
+                      tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+                        rootUl.querySelectorAll('li').forEach(function (liElem) {
+                          liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                            ulElem.style.display = 'none';
+                          });
+                        });
+                      }) : null;
+                  }
 
                   var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
                   if (curElem && curElem.nextElementSibling) {
@@ -370,12 +381,16 @@
         }
 
         if (tableOfContentsElem && document.documentElement.scrollTop < 250) {
-          tableOfContentsElem.querySelector('ul') ?
-          tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
-            liElem.querySelectorAll('ul').forEach(function (ulElem) {
-              ulElem.style.display = 'none';
-            });
-          }) : null;
+          if (false === tocFolding) {
+
+          } else {
+            tableOfContentsElem.querySelector('ul') ?
+              tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
+                liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                  ulElem.style.display = 'none';
+                });
+              }) : null;
+          }
         }
       }
       lastScrollTop = st <= 0 ? 0 : st;
@@ -892,6 +907,9 @@
 <meta name="keywords" content="">
 <meta name="created" content="2020-02-02T00:00:00&#43;0000">
 <meta name="modified" content="2020-02-02T00:00:00&#43;0000">
+<meta property="article:published_time" content="2020-02-02T00:00:00&#43;0000">
+
+<meta name="author" content="Nishant Srivastava">
 
 
 <meta property="og:site_name" content="Crushing C.O.D.E">
@@ -899,7 +917,6 @@
 <meta property="og:url" content="https://crushingcode.github.io/talks/fosdem_2020/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
-
 
 <meta name="generator" content="Hugo 0.62.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
@@ -1309,6 +1326,7 @@
   </div>
 </section>
 <hr class="hr-slash whoami-hr" />
+
 
     <section class="related">
     
@@ -1832,22 +1850,29 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
     
+    
     var enableToc = JSON.parse("true");
     var toc = JSON.parse("null");
     var hideToc = JSON.parse("false");
     var tocFlexbox = document.querySelector('.toc__flexbox');
     var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
+    var tocFolding = JSON.parse("null");
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
-      tableOfContentsElem.querySelectorAll('ul') ?
-      tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
-        rootUl.querySelectorAll('li').forEach(function (liElem) {
-          liElem.querySelectorAll('ul').forEach(function (ulElem) {
-            ulElem.style.display = 'none';
-          });
-        });
-      }) : null;
+
+      if (false === tocFolding) {
+
+      } else {
+        tableOfContentsElem.querySelectorAll('ul') ?
+          tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+            rootUl.querySelectorAll('li').forEach(function (liElem) {
+              liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                ulElem.style.display = 'none';
+              });
+            });
+          }) : null;
+      }
 
       if (tableOfContentsElem) {
         if (tableOfContentsElem.querySelectorAll('a').length > 0) {
@@ -2433,7 +2458,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <h6 class="toc__title toc__title--outer">What&#39;s on this Page</h6>
           
         </div>
-        <div class="toc toc__outer " data-dir="ltr">
+        <div class="toc toc__outer " data-dir="ltr" data-folding="false">
           <nav id="TableOfContents"></nav>
         </div>
       
