@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -616,7 +616,7 @@
       searchResults = document.getElementById('search-results');
       searchMenu = document.getElementById('search-menu');
       searchResults.setAttribute('class', 'dropdown is-active');
-
+      
       var content = document.createElement('div');
       content.setAttribute('class', 'dropdown-content search-content');
 
@@ -643,7 +643,7 @@
       searchMenu.appendChild(content);
     }
 
-    function renderSearchHighlightResults(results) {      
+    function renderSearchHighlightResults(results) {
       searchResults = document.getElementById('search-results');
       searchMenu = document.getElementById('search-menu');
       searchResults.setAttribute('class', 'dropdown is-active');
@@ -862,9 +862,8 @@
           document.querySelector(".search-content").scrollTop = overflowedPixel + items[activeIndex].getBoundingClientRect().height;
         }
       } else if (e.key === 'Enter' || keyCode === 13) {
-        var currentItemLink = items[activeIndex].getAttribute('href');
-        if (currentItemLink) {
-          location.href = currentItemLink;
+        if (items[activeIndex] && items[activeIndex].getAttribute('href')) {
+          location.href = items[activeIndex].getAttribute('href');
         }
       } else if (e.key === 'Escape' || keyCode === 27) {
         e.target.value = null;
@@ -1575,7 +1574,7 @@
                     
 
                     
-                        Nishant Srivastava - ©2015 - 2020, All content is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+                        <a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2020, All content is licensed under<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
                     
                 
             </p>
