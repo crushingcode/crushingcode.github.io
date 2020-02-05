@@ -78,6 +78,8 @@
   }
   
 
+  
+  var permalink = JSON.parse("\"https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/\"");
 
   document.addEventListener('DOMContentLoaded', function () {
     
@@ -552,25 +554,6 @@
 
 
   
-    var baseurl = null;
-    
-    var siteBaseURL = JSON.parse("\"https://crushingcode.github.io/\"");
-    var siteBaseChecker = /\/\w+\//i;
-    var isSlug = siteBaseChecker.test(siteBaseURL);
-    var isThemeSite = location.origin.includes('themes.gohugo.io');
-
-    
-        if (isThemeSite) {
-          baseurl = "https:\/\/crushingcode.github.io\/";
-        } else {
-          if (isSlug) {
-            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0];
-          } else {
-            baseurl = location.origin;
-          } 
-        }
-    
-
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -585,12 +568,8 @@
     }
 
     function initFuse() {
-      if (!endsWith(baseurl, "/")) {
-        baseurl = baseurl + '/';
-      };
-
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', baseurl + "index.json");
+      xhr.open('GET', permalink + "index.json");
       xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
       xhr.onload = function () {
         if (xhr.status === 200) {
@@ -1909,8 +1888,8 @@ The solution to this is that you stick to more open licenses such as <strong>MIT
     
     <div class="grow"></div>
     
-      <a href="https://crushingcode.github.io/talks/vandev_2017/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Build.Better.­Android.Libraries @VanDev</div>
+      <a href="https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Want To Step Up Your Android Learning Game? You Need To Read This First</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
