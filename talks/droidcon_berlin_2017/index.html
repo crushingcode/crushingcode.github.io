@@ -78,9 +78,6 @@
   }
   
 
-  
-  var permalink = JSON.parse("\"https://crushingcode.github.io/talks/droidcon_berlin_2017/\"");
-
   document.addEventListener('DOMContentLoaded', function () {
     
     document.querySelectorAll('.tab') ? 
@@ -554,6 +551,25 @@
 
 
   
+    var baseurl = null;
+    
+    var siteBaseURL = JSON.parse("\"https://crushingcode.github.io/\"");
+    var siteBaseChecker = /\/\w+\//i;
+    var isSlug = siteBaseChecker.test(siteBaseURL);
+    var isThemeSite = location.origin.includes('themes.gohugo.io');
+
+    
+        if (isThemeSite) {
+          baseurl = "https:\/\/crushingcode.github.io\/";
+        } else {
+          if (isSlug) {
+            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0];
+          } else {
+            baseurl = location.origin;
+          } 
+        }
+    
+
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -568,8 +584,12 @@
     }
 
     function initFuse() {
+      if (!endsWith(baseurl, "/")) {
+        baseurl = baseurl + '/';
+      };
+
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
+      xhr.open('GET', baseurl + "index.json");
       xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
       xhr.onload = function () {
         if (xhr.status === 200) {
@@ -915,7 +935,7 @@
     "datePublished": "2017-09-05T00:00:00Z",
     "dateModified": "2017-09-05T00:00:00Z",
     "url" : "https://crushingcode.github.io/talks/droidcon_berlin_2017/",
-    "description": " Droidcon Berlin \u0026lsquo;17, Berlin, Germany Presentation  Video  Event  ",
+    "description": "Droidcon Berlin \u0026lsquo;17, Berlin, Germany Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://crushingcode.github.io/"
@@ -1121,7 +1141,13 @@
     <article class="single__contents" data-dir="ltr">
       
       <center>
-<h1 id="droidcon-berlin-17-berlin-germany">Droidcon Berlin &lsquo;17, Berlin, Germany</h1>
+<h3 id="droidcon-berlin-17-berlin-germany">Droidcon Berlin &lsquo;17, Berlin, Germany</h3>
+<h2 id="abstract">Abstract</h2>
+</center>
+<blockquote>
+<p>As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas. However, if android library developers follow a certain standard with a rationale they can avoid most of the pitfalls. Building an android library is easy, but building one that keeps in mind developer happiness is rare but definitely not hard. The session would cover how one can build android libraries taking in consideration to exposing more informative API, making sure the best resources are utilized efficiently and that one does not force the app developer with redundant dependencies and complexities.</p>
+</blockquote>
+<center>
 <h2 id="presentation">Presentation</h2>
 <script async class="speakerdeck-embed" data-id="339e131bc56c426bb6f247d81d1de282" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 <h2 id="video">Video</h2>
@@ -2449,7 +2475,11 @@ document.addEventListener('DOMContentLoaded', function () {
           
         </div>
         <div class="toc toc__outer " data-dir="ltr" data-folding="false">
-          <nav id="TableOfContents"></nav>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#droidcon-berlin-17-berlin-germany">Droidcon Berlin &lsquo;17, Berlin, Germany</a></li>
+  </ul>
+</nav>
         </div>
       
     

@@ -78,7 +78,7 @@
 	"categories": [],
 	"series": [],
 	"description": "",
-	"content": " Mobilization IX, Łódź, Poland Presentation  Video  Event  "
+	"content": " Mobilization IX, Łódź, Poland Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects. In this talk, you will be cooking up a hot pot of various Kotlin Coroutine approaches. You will be covering some aromatic recipes that provide step by step process to add that specific flavor to your current Kotlin and/or Android projects to unlock the full potential of Coroutines.\n  Presentation  Video  Event  "
 },
 {
 	"uri": "https://crushingcode.github.io/archive/",
@@ -141,7 +141,7 @@
 	"categories": [],
 	"series": [],
 	"description": "",
-	"content": " Berlindroid \u0026lsquo;19, Berlin, Germany Presentation  Event  "
+	"content": " Berlindroid \u0026lsquo;19, Berlin, Germany Abstract   Building an Android library in the current times is way different than what it used to be earlier. Things have changed considerably and keeping up to date with them is a now a necessity than just some acquirable knowledge.\nThis session in a second part to the last year’s talk at Droidcon Berlin 2017 with the same title. In this session we will dive deeper into best practices and ways of architecting android libraries. You will get to learn about the common pitfalls and how to overcome them by using the right approach such as leveraging architecture components and making your android libraries lifecycle aware. We will also be covering how one can leverage Kotlin language when developing android libraries as well as information around API design and exploring the path to becoming a better Android Library Developer.\nBy the end of this session, you will be all set to build android libraries that scale and have API which contributes to developer happiness.\n  Presentation  Event  "
 },
 {
 	"uri": "https://crushingcode.github.io/talks/mobius_moscow_2018/",
@@ -159,7 +159,7 @@
 	"categories": [],
 	"series": [],
 	"description": "",
-	"content": " Devoxx Belgium \u0026lsquo;18, Antwerp, Belgium Presentation  Video  Event  📖 Also mentioned in Android Weekly #339 "
+	"content": " Devoxx Belgium \u0026lsquo;18, Antwerp, Belgium Abstract   Building an Android library in the current times is way different than what it used to be earlier. Things have changed considerably and keeping up to date with them is a now a necessity than just some acquirable knowledge.\nThis session in a second part to the last year’s talk at Droidcon Berlin 2017 with the same title. In this session we will dive deeper into best practices and ways of architecting android libraries. You will get to learn about the common pitfalls and how to overcome them by using the right approach such as leveraging architecture components and making your android libraries lifecycle aware. We will also be covering how one can leverage Kotlin language when developing android libraries as well as information around API design and exploring the path to becoming a better Android Library Developer.\nBy the end of this session, you will be all set to build android libraries that scale and have API which contributes to developer happiness.\n  Devoxx Belgium \u0026lsquo;18, Antwerp, Belgium Presentation  Video  Event  📖 Also mentioned in Android Weekly #339 "
 },
 {
 	"uri": "https://crushingcode.github.io/talks/droidcon_berlin_2018/",
@@ -168,7 +168,7 @@
 	"categories": [],
 	"series": [],
 	"description": "",
-	"content": " Droidcon Berlin \u0026lsquo;18, Berlin, Germany Presentation  Video  Event  "
+	"content": " Droidcon Berlin \u0026lsquo;18, Berlin, Germany Abstract   If you've been developing Android applications for a while now, you know the pain of handling the lifecycle just right. It’s a pain-point that has existed since the advent of Android, up until recently when Google released Architecture components. As an Android developer you are bugged by handling activity/fragment lifecycle and flow of data in tandem to the lifecycle changes day in and out. Making your code aware about the lifecycle of the process/activity/fragment makes you more confident as a developer and enables faster development. This session would enable you to understand Lifecycle components (ProcessLifecycleOwner, LifecycleOwner, LifecycleObserver) and how they are leveraged in other architecture components like LiveData and ViewModel.\n  Presentation  Video  Event  "
 },
 {
 	"uri": "https://crushingcode.github.io/talks/gdd_eu_ext_2017/",
@@ -177,7 +177,7 @@
 	"categories": [],
 	"series": [],
 	"description": "",
-	"content": " GDG CV, Vancouver, Canada Presentation  Event  "
+	"content": " Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event  "
 },
 {
 	"uri": "https://crushingcode.github.io/tags/android/",
@@ -231,7 +231,7 @@
 	"categories": [],
 	"series": [],
 	"description": "",
-	"content": " Droidcon Berlin \u0026lsquo;17, Berlin, Germany Presentation  Video  Event  "
+	"content": " Droidcon Berlin \u0026lsquo;17, Berlin, Germany Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas. However, if android library developers follow a certain standard with a rationale they can avoid most of the pitfalls. Building an android library is easy, but building one that keeps in mind developer happiness is rare but definitely not hard. The session would cover how one can build android libraries taking in consideration to exposing more informative API, making sure the best resources are utilized efficiently and that one does not force the app developer with redundant dependencies and complexities.\n  Presentation  Video  Event  "
 },
 {
 	"uri": "https://crushingcode.github.io/talks/code_and_coffee_aug_2017/",
@@ -240,7 +240,7 @@
 	"categories": [],
 	"series": [],
 	"description": "",
-	"content": " Code \u0026amp; Coffee, Vancouver, Canada Presentation  Video  Event  "
+	"content": " Code \u0026amp; Coffee, Vancouver, Canada Abstract   A quick introduction of what Flutter is and what is required to start building apps with Flutter\n  Presentation  Video  Event  "
 },
 {
 	"uri": "https://crushingcode.github.io/tags/best-practices/",
@@ -276,7 +276,7 @@
 	"categories": [],
 	"series": [],
 	"description": "",
-	"content": " Mobius Moscow \u0026lsquo;18, Moscow, Russia Presentation  Video  Event  "
+	"content": " Code \u0026amp; Coffee, Vancouver, Canada Abstract   Kotlin programming language is gaining popularity nowadays. It’s a modern language that gives more power in everyday routines.It’s a pragmatic language with a very low learning curve and can be quickly grasped by Java developers.\n  Presentation  Video  Event  "
 },
 {
 	"uri": "https://crushingcode.github.io/talks/vandev_2017/",
@@ -285,7 +285,7 @@
 	"categories": [],
 	"series": [],
 	"description": "",
-	"content": " VanDev: Vancouver's Software Developers Network, Vancouver, Canada Presentation  Event  "
+	"content": " VanDev: Vancouver's Software Developers Network, Vancouver, Canada Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas. However, if android library developers follow a certain standard with a rationale they can avoid most of the pitfalls. Building an android library is easy, but building one that keeps in mind developer happiness is rare but definitely not hard. The session would cover how one can build android libraries taking in consideration to exposing more informative API, making sure the best resources are utilized efficiently and that one does not force the app developer with redundant dependencies and complexities.\n  ## Presentation  Event  "
 },
 {
 	"uri": "https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/",

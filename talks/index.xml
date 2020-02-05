@@ -31,7 +31,7 @@
         <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/mobilization_ix_2019/</guid>
-        <description> Mobilization IX, Łódź, Poland Presentation  Video  Event  </description>
+        <description>Mobilization IX, Łódź, Poland Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
       </item>
       
       <item>
@@ -76,7 +76,7 @@
         <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/berlindroid_feb_2019/</guid>
-        <description> Berlindroid &amp;lsquo;19, Berlin, Germany Presentation  Event  </description>
+        <description>Berlindroid &amp;lsquo;19, Berlin, Germany Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
       </item>
       
       <item>
@@ -94,7 +94,7 @@
         <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/devoxx_be_2018/</guid>
-        <description> Devoxx Belgium &amp;lsquo;18, Antwerp, Belgium Presentation  Video  Event  📖 Also mentioned in Android Weekly #339 </description>
+        <description>Devoxx Belgium &amp;lsquo;18, Antwerp, Belgium Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
       </item>
       
       <item>
@@ -103,7 +103,7 @@
         <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/droidcon_berlin_2018/</guid>
-        <description> Droidcon Berlin &amp;lsquo;18, Berlin, Germany Presentation  Video  Event  </description>
+        <description>Droidcon Berlin &amp;lsquo;18, Berlin, Germany Abstract   If you&#39;ve been developing Android applications for a while now, you know the pain of handling the lifecycle just right.</description>
       </item>
       
       <item>
@@ -112,7 +112,7 @@
         <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</guid>
-        <description> GDG CV, Vancouver, Canada Presentation  Event  </description>
+        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event  </description>
       </item>
       
       <item>
@@ -121,7 +121,7 @@
         <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/droidcon_berlin_2017/</guid>
-        <description> Droidcon Berlin &amp;lsquo;17, Berlin, Germany Presentation  Video  Event  </description>
+        <description>Droidcon Berlin &amp;lsquo;17, Berlin, Germany Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
       </item>
       
       <item>
@@ -130,7 +130,7 @@
         <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/code_and_coffee_aug_2017/</guid>
-        <description> Code &amp;amp; Coffee, Vancouver, Canada Presentation  Video  Event  </description>
+        <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract   A quick introduction of what Flutter is and what is required to start building apps with Flutter</description>
       </item>
       
       <item>
@@ -148,7 +148,7 @@
         <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/code_and_coffee_may_2017/</guid>
-        <description> Mobius Moscow &amp;lsquo;18, Moscow, Russia Presentation  Video  Event  </description>
+        <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract   Kotlin programming language is gaining popularity nowadays. It’s a modern language that gives more power in everyday routines.</description>
       </item>
       
       <item>
@@ -157,7 +157,7 @@
         <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/vandev_2017/</guid>
-        <description> VanDev: Vancouver&#39;s Software Developers Network, Vancouver, Canada Presentation  Event  </description>
+        <description>VanDev: Vancouver&#39;s Software Developers Network, Vancouver, Canada Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
       </item>
       
     

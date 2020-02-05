@@ -78,9 +78,6 @@
   }
   
 
-  
-  var permalink = JSON.parse("\"https://crushingcode.github.io/talks/code_and_coffee_may_2017/\"");
-
   document.addEventListener('DOMContentLoaded', function () {
     
     document.querySelectorAll('.tab') ? 
@@ -554,6 +551,25 @@
 
 
   
+    var baseurl = null;
+    
+    var siteBaseURL = JSON.parse("\"https://crushingcode.github.io/\"");
+    var siteBaseChecker = /\/\w+\//i;
+    var isSlug = siteBaseChecker.test(siteBaseURL);
+    var isThemeSite = location.origin.includes('themes.gohugo.io');
+
+    
+        if (isThemeSite) {
+          baseurl = "https:\/\/crushingcode.github.io\/";
+        } else {
+          if (isSlug) {
+            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0];
+          } else {
+            baseurl = location.origin;
+          } 
+        }
+    
+
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -568,8 +584,12 @@
     }
 
     function initFuse() {
+      if (!endsWith(baseurl, "/")) {
+        baseurl = baseurl + '/';
+      };
+
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
+      xhr.open('GET', baseurl + "index.json");
       xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
       xhr.onload = function () {
         if (xhr.status === 200) {
@@ -915,7 +935,7 @@
     "datePublished": "2017-05-18T00:00:00Z",
     "dateModified": "2017-05-18T00:00:00Z",
     "url" : "https://crushingcode.github.io/talks/code_and_coffee_may_2017/",
-    "description": " Mobius Moscow \u0026lsquo;18, Moscow, Russia Presentation  Video  Event  ",
+    "description": "Code \u0026amp; Coffee, Vancouver, Canada Abstract   Kotlin programming language is gaining popularity nowadays. It’s a modern language that gives more power in everyday …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://crushingcode.github.io/"
@@ -1121,7 +1141,13 @@
     <article class="single__contents" data-dir="ltr">
       
       <center>
-<h1 id="mobius-moscow-18-moscow-russia">Mobius Moscow &lsquo;18, Moscow, Russia</h1>
+<h3 id="code--coffee-vancouver-canada">Code &amp; Coffee, Vancouver, Canada</h3>
+<h2 id="abstract">Abstract</h2>
+</center>
+<blockquote>
+<p>Kotlin programming language is gaining popularity nowadays. It’s a modern language that gives more power in everyday routines.It’s a pragmatic language with a very low learning curve and can be quickly grasped by Java developers.</p>
+</blockquote>
+<center>
 <h2 id="presentation">Presentation</h2>
 <script async class="speakerdeck-embed" data-id="1cc39924b2ce4b2fbd88f496f621b8ac" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 <h2 id="video">Video</h2>
@@ -2449,7 +2475,11 @@ document.addEventListener('DOMContentLoaded', function () {
           
         </div>
         <div class="toc toc__outer " data-dir="ltr" data-folding="false">
-          <nav id="TableOfContents"></nav>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#code--coffee-vancouver-canada">Code & Coffee, Vancouver, Canada</a></li>
+  </ul>
+</nav>
         </div>
       
     

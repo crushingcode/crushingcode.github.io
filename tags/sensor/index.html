@@ -78,9 +78,6 @@
   }
   
 
-  
-  var permalink = JSON.parse("\"https://crushingcode.github.io/tags/sensor/\"");
-
   document.addEventListener('DOMContentLoaded', function () {
     
     document.querySelectorAll('.tab') ? 
@@ -554,6 +551,25 @@
 
 
   
+    var baseurl = null;
+    
+    var siteBaseURL = JSON.parse("\"https://crushingcode.github.io/\"");
+    var siteBaseChecker = /\/\w+\//i;
+    var isSlug = siteBaseChecker.test(siteBaseURL);
+    var isThemeSite = location.origin.includes('themes.gohugo.io');
+
+    
+        if (isThemeSite) {
+          baseurl = "https:\/\/crushingcode.github.io\/";
+        } else {
+          if (isSlug) {
+            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0];
+          } else {
+            baseurl = location.origin;
+          } 
+        }
+    
+
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -568,8 +584,12 @@
     }
 
     function initFuse() {
+      if (!endsWith(baseurl, "/")) {
+        baseurl = baseurl + '/';
+      };
+
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
+      xhr.open('GET', baseurl + "index.json");
       xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
       xhr.onload = function () {
         if (xhr.status === 200) {

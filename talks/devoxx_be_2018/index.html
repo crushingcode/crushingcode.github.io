@@ -78,9 +78,6 @@
   }
   
 
-  
-  var permalink = JSON.parse("\"https://crushingcode.github.io/talks/devoxx_be_2018/\"");
-
   document.addEventListener('DOMContentLoaded', function () {
     
     document.querySelectorAll('.tab') ? 
@@ -554,6 +551,25 @@
 
 
   
+    var baseurl = null;
+    
+    var siteBaseURL = JSON.parse("\"https://crushingcode.github.io/\"");
+    var siteBaseChecker = /\/\w+\//i;
+    var isSlug = siteBaseChecker.test(siteBaseURL);
+    var isThemeSite = location.origin.includes('themes.gohugo.io');
+
+    
+        if (isThemeSite) {
+          baseurl = "https:\/\/crushingcode.github.io\/";
+        } else {
+          if (isSlug) {
+            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0];
+          } else {
+            baseurl = location.origin;
+          } 
+        }
+    
+
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -568,8 +584,12 @@
     }
 
     function initFuse() {
+      if (!endsWith(baseurl, "/")) {
+        baseurl = baseurl + '/';
+      };
+
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
+      xhr.open('GET', baseurl + "index.json");
       xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
       xhr.onload = function () {
         if (xhr.status === 200) {
@@ -915,7 +935,7 @@
     "datePublished": "2018-11-15T00:00:00Z",
     "dateModified": "2018-11-15T00:00:00Z",
     "url" : "https://crushingcode.github.io/talks/devoxx_be_2018/",
-    "description": " Devoxx Belgium \u0026lsquo;18, Antwerp, Belgium Presentation  Video  Event  📖 Also mentioned in Android Weekly #339 ",
+    "description": "Devoxx Belgium \u0026lsquo;18, Antwerp, Belgium Abstract   Building an Android library in the current times is way different than what it used to be earlier.",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://crushingcode.github.io/"
@@ -1121,7 +1141,16 @@
     <article class="single__contents" data-dir="ltr">
       
       <center>
-<h1 id="devoxx-belgium-18-antwerp-belgium">Devoxx Belgium &lsquo;18, Antwerp, Belgium</h1>
+<h3 id="devoxx-belgium-18-antwerp-belgium">Devoxx Belgium &lsquo;18, Antwerp, Belgium</h3>
+<h2 id="abstract">Abstract</h2>
+</center>
+<blockquote>
+<p>Building an Android library in the current times is way different than what it used to be earlier. Things have changed considerably and keeping up to date with them is a now a necessity than just some acquirable knowledge.</p>
+<p>This session in a second part to the last year’s talk at Droidcon Berlin 2017 with the same title. In this session we will dive deeper into best practices and ways of architecting android libraries. You will get to learn about the common pitfalls and how to overcome them by using the right approach such as leveraging architecture components and making your android libraries lifecycle aware. We will also be covering how one can leverage Kotlin language when developing android libraries as well as information around API design and exploring the path to becoming a better Android Library Developer.</p>
+<p>By the end of this session, you will be all set to build android libraries that scale and have API which contributes to developer happiness.</p>
+</blockquote>
+<center>
+<h1 id="devoxx-belgium-18-antwerp-belgium-1">Devoxx Belgium &lsquo;18, Antwerp, Belgium</h1>
 <h2 id="presentation">Presentation</h2>
 <script async class="speakerdeck-embed" data-id="735c152a84cc4bc584f69b5d46fb3f31" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 <h2 id="video">Video</h2>
@@ -2451,6 +2480,10 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <div class="toc toc__outer " data-dir="ltr" data-folding="false">
           <nav id="TableOfContents">
+  <ul>
+    <li><a href="#devoxx-belgium-18-antwerp-belgium">Devoxx Belgium &lsquo;18, Antwerp, Belgium</a></li>
+  </ul>
+
   <ul>
     <li>
       <ul>

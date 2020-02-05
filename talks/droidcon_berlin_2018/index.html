@@ -78,9 +78,6 @@
   }
   
 
-  
-  var permalink = JSON.parse("\"https://crushingcode.github.io/talks/droidcon_berlin_2018/\"");
-
   document.addEventListener('DOMContentLoaded', function () {
     
     document.querySelectorAll('.tab') ? 
@@ -554,6 +551,25 @@
 
 
   
+    var baseurl = null;
+    
+    var siteBaseURL = JSON.parse("\"https://crushingcode.github.io/\"");
+    var siteBaseChecker = /\/\w+\//i;
+    var isSlug = siteBaseChecker.test(siteBaseURL);
+    var isThemeSite = location.origin.includes('themes.gohugo.io');
+
+    
+        if (isThemeSite) {
+          baseurl = "https:\/\/crushingcode.github.io\/";
+        } else {
+          if (isSlug) {
+            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0];
+          } else {
+            baseurl = location.origin;
+          } 
+        }
+    
+
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -568,8 +584,12 @@
     }
 
     function initFuse() {
+      if (!endsWith(baseurl, "/")) {
+        baseurl = baseurl + '/';
+      };
+
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
+      xhr.open('GET', baseurl + "index.json");
       xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
       xhr.onload = function () {
         if (xhr.status === 200) {
@@ -915,7 +935,7 @@
     "datePublished": "2018-06-26T00:00:00Z",
     "dateModified": "2018-06-26T00:00:00Z",
     "url" : "https://crushingcode.github.io/talks/droidcon_berlin_2018/",
-    "description": " Droidcon Berlin \u0026lsquo;18, Berlin, Germany Presentation  Video  Event  ",
+    "description": "Droidcon Berlin \u0026lsquo;18, Berlin, Germany Abstract   If you've been developing Android applications for a while now, you know the pain of handling the lifecycle just …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://crushingcode.github.io/"
@@ -1121,7 +1141,13 @@
     <article class="single__contents" data-dir="ltr">
       
       <center>
-<h1 id="droidcon-berlin-18-berlin-germany">Droidcon Berlin &lsquo;18, Berlin, Germany</h1>
+<h3 id="droidcon-berlin-18-berlin-germany">Droidcon Berlin &lsquo;18, Berlin, Germany</h3>
+<h2 id="abstract">Abstract</h2>
+</center>
+<blockquote>
+<p>If you've been developing Android applications for a while now, you know the pain of handling the lifecycle just right. It’s a pain-point that has existed since the advent of Android, up until recently when Google released Architecture components. As an Android developer you are bugged by handling activity/fragment lifecycle and flow of data in tandem to the lifecycle changes day in and out. Making your code aware about the lifecycle of the process/activity/fragment makes you more confident as a developer and enables faster development. This session would enable you to understand Lifecycle components (ProcessLifecycleOwner, LifecycleOwner, LifecycleObserver) and how they are leveraged in other architecture components like LiveData and ViewModel.</p>
+</blockquote>
+<center>
 <h2 id="presentation">Presentation</h2>
 <script async class="speakerdeck-embed" data-id="d141edb49bb743d1a5bf987acb364d39" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 <h2 id="video">Video</h2>
@@ -2449,7 +2475,11 @@ document.addEventListener('DOMContentLoaded', function () {
           
         </div>
         <div class="toc toc__outer " data-dir="ltr" data-folding="false">
-          <nav id="TableOfContents"></nav>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#droidcon-berlin-18-berlin-germany">Droidcon Berlin &lsquo;18, Berlin, Germany</a></li>
+  </ul>
+</nav>
         </div>
       
     

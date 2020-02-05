@@ -78,9 +78,6 @@
   }
   
 
-  
-  var permalink = JSON.parse("\"https://crushingcode.github.io/talks/mobilization_ix_2019/\"");
-
   document.addEventListener('DOMContentLoaded', function () {
     
     document.querySelectorAll('.tab') ? 
@@ -554,6 +551,25 @@
 
 
   
+    var baseurl = null;
+    
+    var siteBaseURL = JSON.parse("\"https://crushingcode.github.io/\"");
+    var siteBaseChecker = /\/\w+\//i;
+    var isSlug = siteBaseChecker.test(siteBaseURL);
+    var isThemeSite = location.origin.includes('themes.gohugo.io');
+
+    
+        if (isThemeSite) {
+          baseurl = "https:\/\/crushingcode.github.io\/";
+        } else {
+          if (isSlug) {
+            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0];
+          } else {
+            baseurl = location.origin;
+          } 
+        }
+    
+
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -568,8 +584,12 @@
     }
 
     function initFuse() {
+      if (!endsWith(baseurl, "/")) {
+        baseurl = baseurl + '/';
+      };
+
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
+      xhr.open('GET', baseurl + "index.json");
       xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
       xhr.onload = function () {
         if (xhr.status === 200) {
@@ -915,7 +935,7 @@
     "datePublished": "2019-10-26T00:00:00Z",
     "dateModified": "2019-10-26T00:00:00Z",
     "url" : "https://crushingcode.github.io/talks/mobilization_ix_2019/",
-    "description": " Mobilization IX, Łódź, Poland Presentation  Video  Event  ",
+    "description": "Mobilization IX, Łódź, Poland Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://crushingcode.github.io/"
@@ -1121,7 +1141,13 @@
     <article class="single__contents" data-dir="ltr">
       
       <center>
-<h1 id="mobilization-ix-d-poland">Mobilization IX, Łódź, Poland</h1>
+<h3 id="mobilization-ix-d-poland">Mobilization IX, Łódź, Poland</h3>
+<h2 id="abstract">Abstract</h2>
+</center>
+<blockquote>
+<p>Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects. In this talk, you will be cooking up a hot pot of various Kotlin Coroutine approaches. You will be covering some aromatic recipes that provide step by step process to add that specific flavor to your current Kotlin and/or Android projects to unlock the full potential of Coroutines.</p>
+</blockquote>
+<center>
 <h2 id="presentation">Presentation</h2>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQesR0irh5b7y0IZCYSbxSLxbdVU2j9CaJmmayazfaBuZ8su2hWccvrJKisUGL4pCA2ukKMmTbGVMWI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="70%" height="390" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 <h2 id="video">Video</h2>
@@ -2449,7 +2475,11 @@ document.addEventListener('DOMContentLoaded', function () {
           
         </div>
         <div class="toc toc__outer " data-dir="ltr" data-folding="false">
-          <nav id="TableOfContents"></nav>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#mobilization-ix-d-poland">Mobilization IX, Łódź, Poland</a></li>
+  </ul>
+</nav>
         </div>
       
     
