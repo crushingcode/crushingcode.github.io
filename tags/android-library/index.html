@@ -80,6 +80,17 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     
+    var summaryContainer = document.querySelector('.summary__container');
+    var searchResult = document.querySelector('.search-result');
+    var searchResultCloseBtn = document.querySelector('.search-result__close');
+    searchResultCloseBtn ? searchResultCloseBtn.addEventListener('click', function (e) {
+      searchResult.setAttribute('data-display', 'none');
+      summaryContainer.setAttribute('data-display', 'block');
+    }) : null;
+    
+
+
+    
     document.querySelectorAll('.tab') ? 
     document.querySelectorAll('.tab').forEach(function(elem, idx) {
       var containerId = elem.getAttribute('id');
@@ -485,17 +496,21 @@
     
     
     var enableSearchHighlight = JSON.parse("null");
+    
+    var searchResultPosition = JSON.parse("null");
+    
+    var sectionType = JSON.parse("\"tags\"");
 
     var fuse = null;
 
-    function initFuse() {
+    (function initFuse() {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', permalink + "index.json");
       xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
       xhr.onload = function () {
         if (xhr.status === 200) {
           fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: ['title', 'description', 'content'],
+            keys: sectionType.includes('publication') ? ['title', 'description', 'content'] : ['title', 'abstract'],
             includeMatches: enableSearchHighlight,
             shouldSort: true,
             threshold: 0.4,
@@ -504,16 +519,14 @@
             maxPatternLength: 32,
             minMatchCharLength: 1,
           });
+          window.fuse = fuse;
         }
         else {
           console.error('[' + xhr.status + ']Error:', xhr.statusText);
         }
       };
       xhr.send();
-    }
-
-
-
+    })();
 
     function makeLi(ulElem, obj) {
       var li = document.createElement('li');
@@ -529,7 +542,7 @@
       if (obj.description) {
         descDiv.innerHTML = obj.description;
       } else if (obj.content) {
-        descDiv.innerHTML = obj.content.substring(0, 150);
+        descDiv.innerHTML = obj.content.substring(0, 225);
       }
       
       li.appendChild(a);
@@ -589,12 +602,7 @@
       }
     }
 
-
-
-
-
-
-    function renderSearchResults(searchText, results) {
+    function renderSearchResultsSide(searchText, results) {
       searchResults = document.getElementById('search-results');
       searchMenu = document.getElementById('search-menu');
       searchResults.setAttribute('class', 'dropdown is-active');
@@ -642,7 +650,7 @@
       searchMenu.appendChild(ul);
     }
 
-    function renderSearchHighlightResults(searchText, results) {
+    function renderSearchHighlightResultsSide(searchText, results) {
       searchResults = document.getElementById('search-results');
       searchMenu = document.getElementById('search-menu');
       searchResults.setAttribute('class', 'dropdown is-active');
@@ -743,26 +751,69 @@
     function renderSearchHighlightResultsMobile(searchText, results) {
       searchResults = document.getElementById('search-mobile-results');
 
-      var content = document.createElement('div');
-      content.setAttribute('class', 'mobile-search__content');
+      var ul = document.createElement('div');
+      ul.setAttribute('class', 'mobile-search__content');
 
-      if (results.length > 0) {
+      if (results.length) {
         results.forEach(function (result) {
-          var item = document.createElement('a');
-          item.setAttribute('href', result.item.uri);
-          item.innerHTML = '<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ' + generateHighlightedText(result.item.title, result.matches[0].indices) + '</div><div class="mobile-search__item--desc">' + (result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : '') + '</div></div>';
-          content.appendChild(item);
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          var descDiv = null;
+
+          a.setAttribute('href', result.item.uri);
+          a.appendChild(li);
+          li.setAttribute('class', 'mobile-search__item');
+
+          var titleDiv = document.createElement('div');
+          titleDiv.innerHTML = result.item.title;
+          titleDiv.setAttribute('class', 'mobile-search__item--title');
+          
+          if (result.matches && result.matches.length) {
+            for (var i = 0; i < result.matches.length; i++) {
+              if ('title' === result.matches[i].key) {
+                titleDiv.innerHTML = generateHighlightedText(result.matches[i].value, result.matches[i].indices);
+              }
+
+              if ('description' === result.matches[i].key) {
+                descDiv = document.createElement('div');
+                descDiv.setAttribute('class', 'mobile-search__item--desc');
+                descDiv.innerHTML = generateHighlightedText(result.item.description, result.matches[i].indices);
+              } else if ('content' === result.matches[i].key) {
+                if (!descDiv) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = generateHighlightedText(result.item.content.substring(0, 150), result.matches[i].indices);
+                }
+              } else {
+                if (result.item.description) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = result.item.description;
+                } else {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = result.item.content.substring(0, 150);
+                }
+              }
+            }
+            
+            li.appendChild(titleDiv);
+            if (descDiv) {
+              li.appendChild(descDiv);
+            }
+            ul.appendChild(a);
+          }
         });
       } else {
         var item = document.createElement('span');
-        content.appendChild(item);
+        ul.appendChild(item);
       }
 
       let wrap = document.getElementById('search-mobile-results');
       while (wrap.firstChild) {
         wrap.removeChild(wrap.firstChild)
       }
-      searchResults.appendChild(content);
+      searchResults.appendChild(ul);
     }
 
     function generateHighlightedText(text, regions) {
@@ -791,28 +842,41 @@
       return content;
     };
 
-    initFuse();
-
     var searchElem = document.getElementById('search');
     var searchMobile = document.getElementById('search-mobile');
+    var searchResultsContainer = document.getElementById('search-results');
 
-    searchElem ? 
+    searchElem ?
     searchElem.addEventListener('input', function(e) {
-      if (!e.target.value) {
-        document.getElementById('search-results').setAttribute('class', 'dropdown');
-        return null;
-      }
-
-      if (window.innerWidth < 770) {
+      if (!e.target.value | window.innerWidth < 770) {
+        searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
         return null;
       }
 
       searchText = e.target.value;
       var results = fuse.search(e.target.value);
-      if (enableSearchHighlight) {
-        renderSearchHighlightResults(searchText, results);
+
+      if (searchResultPosition === "main") {
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsMain(searchText, results);
+        } else {
+          renderSearchResultsMain(searchText, results);
+        }
       } else {
-        renderSearchResults(searchText, results);
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsSide(searchText, results);
+        } else {
+          renderSearchResultsSide(searchText, results);
+        }
+        
+        var dropdownItems = searchResultsContainer.querySelectorAll('.dropdown-item');
+        dropdownItems ? dropdownItems.forEach(function(item) {
+          item.addEventListener('mousedown', function(e) {
+            e.target.click();
+          });
+        }) : null;
       }
     }) : null;
 
@@ -821,9 +885,7 @@
       if (window.innerWidth < 770) {
         return null;
       }
-      setTimeout(function () {
-        document.getElementById('search-results').setAttribute('class', 'dropdown');
-      }, 100);
+      searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
     }) : null;
 
     searchElem ? 
@@ -832,28 +894,34 @@
         return null;
       }
       if (!e.target.value) {
-        document.getElementById('search-results').setAttribute('class', 'dropdown');
+        searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
         return null;
       }
 
       searchText = e.target.value;
       var results = fuse.search(e.target.value);
-      if (enableSearchHighlight) {
-        renderSearchHighlightResults(searchText, results);
-      } else {
-        renderSearchResults(searchText, results);
+
+      if (searchResultPosition === "main") {
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsMain(searchText, results);
+        } else {
+          renderSearchResultsMain(searchText, results);
+        }
+      } else{
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsSide(searchText, results);
+        } else {
+          renderSearchResultsSide(searchText, results);
+        }
+
+        var dropdownItems = searchResultsContainer.querySelectorAll('.dropdown-item');
+        dropdownItems ? dropdownItems.forEach(function (item) {
+          item.addEventListener('mousedown', function (e) {
+            e.target.click();
+          });
+        }) : null;
       }
     }) : null;
-    
-    function indexInParent(node) {
-      var children = node.parentNode.childNodes;
-      var num = 0;
-      for (var i = 0; i < children.length; i++) {
-        if (children[i] == node) return num;
-        if (children[i].nodeType == 1) num++;
-      }
-      return -1;
-    }
 
     var searchMenuElem = document.getElementById("search-menu");
     var activeItem = document.querySelector('#search-menu .dropdown-item.is-active');
@@ -865,6 +933,11 @@
     searchElem.addEventListener('keydown', function(e) {
       if (window.innerWidth < 770) {
         return null;
+      }
+
+      if (e.key === 'Escape') {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
       }
 
       var items = document.querySelectorAll('#search-menu .dropdown-item');
@@ -989,7 +1062,7 @@
       }
     }) : null;
 
-    mobileSearchInputElem ? 
+    mobileSearchInputElem ?
     mobileSearchInputElem.addEventListener('keydown', function(e) {
       var keyCode = e.which || e.keyCode;
       if (e.key === 'Escape' || keyCode === 27) {
@@ -1011,6 +1084,53 @@
         }
       }
     }) : null;
+  
+
+
+  
+    function renderSearchResultsMain(searchText, results) {
+      var searchBody = document.querySelector('.search-result__body');
+      var originUl = searchBody.querySelector('ul');
+      var ul = document.createElement('ul');
+      
+      if (!searchText) {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      } else if (results) {
+        if (results && results.length) {
+          results.forEach(function (result) {
+            makeLi(ul, result);
+          });
+
+          searchResult ? searchResult.setAttribute('data-display', 'block') : null;
+          summaryContainer ? summaryContainer.setAttribute('data-display', 'none') : null;
+        }
+      }
+
+      originUl.parentNode.replaceChild(ul, originUl);
+    }
+
+    function renderSearchHighlightResultsMain(searchText, results) {
+      var searchBody = document.querySelector('.search-result__body');
+      var originUl = searchBody.querySelector('ul');
+      var ul = document.createElement('ul');
+
+      if (!searchText) {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      } else if (results) {
+        if (results && results.length) {
+          results.forEach(function (result) {
+            makeHighlightLi(ul, result);
+          });
+
+          searchResult ? searchResult.setAttribute('data-display', 'block') : null;
+          summaryContainer ? summaryContainer.setAttribute('data-display', 'none') : null;
+        }
+      }
+
+      originUl.parentNode.replaceChild(ul, originUl);
+    }
   
   });
 </script>    
@@ -1283,7 +1403,7 @@
       
     </div>
 
-    <div class="summary__container">
+    <div class="summary__container" data-display="block">
       
         
   <article class="summary-classic">
@@ -1506,10 +1626,27 @@ Do you want to host your artifacts in your own private repository?
 </article>
 
       
+      
+
+
     </div>
-    
-
-
+    <div class="search-result" data-display="none">
+  <div class="search-result__header">
+    <div class="search-result__close" data-dir="ltr">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
+    </div>
+  </div>
+  <div class="search-result__body">
+    <ul>
+      <li class="search-result__item">
+        <div class="search-result__item--title">
+        </div>
+        <div class="search-result__item--desc">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
   </div>
 
   
