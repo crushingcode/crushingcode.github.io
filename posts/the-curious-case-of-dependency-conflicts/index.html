@@ -3,7 +3,7 @@
 
 <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>The curious case of dependency conflicts – Crushing C.O.D.E</title>
     
@@ -1195,6 +1195,10 @@
 </script>
 
     
+  
+  
+
+
 
 
 
@@ -1370,7 +1374,11 @@
 
 <main class="single__main main">
   
-  <div class="single">
+  <noscript>
+    Please enable Javascript to view the contents
+  </noscript>
+  <div class="single hide">
+    <script>document.querySelector('.single').classList.remove('hide')</script>
     <h2 class="single__title">The curious case of dependency conflicts</h2>
     <div class="single__meta">
       
@@ -2928,6 +2936,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <hr />
 
+    <div class="basicflex">
+        
+    </div>
+
     <div class="footer__poweredby">
         
                 
@@ -2946,11 +2958,13 @@ document.addEventListener('DOMContentLoaded', function () {
         
             <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" rel="noreferrer">Zzo theme</a></p>
         
+        
     </div> 
 </footer>
         </div>
         
-<div class="wrapper__right" dir="ltr">
+<div class="wrapper__right hide" dir="ltr">
+  <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
   
     
       
