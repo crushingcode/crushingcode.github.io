@@ -214,11 +214,19 @@
 
     
     var tocFolding = JSON.parse("null");
+    
+    var tocLevels = JSON.parse("null");
+    
+    if (tocLevels) {
+      tocLevels = tocLevels.toString();
+    } else {
+      tocLevels = "h1, h2, h3, h4, h5, h6";
+    }
 
     
     singleContentsElem && singleContentsElem.querySelectorAll(".tab") ?
     singleContentsElem.querySelectorAll(".tab").forEach(function (elem) {
-      elem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (element) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
         notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
           notAllowedTitleIds.concat(element.getAttribute('id')) :
           [element.getAttribute('id')];
@@ -227,7 +235,7 @@
 
     
     expandContents ? expandContents.forEach(function(elem) {
-      elem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (element) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
         notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
           notAllowedTitleIds.concat(element.getAttribute('id')) :
           [element.getAttribute('id')];
@@ -236,7 +244,7 @@
 
     
     boxContents ? boxContents.forEach(function(elem) {
-      elem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (element) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
         notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
           notAllowedTitleIds.concat(element.getAttribute('id')) :
           [element.getAttribute('id')];
@@ -266,8 +274,8 @@
         }
 
         if (singleContentsElem) {
-          if (singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").length > 0) {
-            singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (elem) {
+          if (singleContentsElem.querySelectorAll(tocLevels).length > 0) {
+            singleContentsElem.querySelectorAll(tocLevels).forEach(function (elem) {
               if (toggleTocElem && !toggleTocElem.checked) {
                 return null;
               }
@@ -336,8 +344,8 @@
         }
 
         if (singleContentsElem) {
-          if (singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").length > 0) {
-            singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (elem) {
+          if (singleContentsElem.querySelectorAll(tocLevels).length > 0) {
+            singleContentsElem.querySelectorAll(tocLevels).forEach(function (elem) {
               if (toggleTocElem && !toggleTocElem.checked) {
                 return null;
               }
@@ -1367,15 +1375,16 @@
             
 
 
-<header class="header">
+<header class="header basicflex-column">
   <h3 class="h3 terms__title">
     Talks
   </h3>
-  <div>
+  <div class="px py p2 terms__content">
     
   </div>
 </header>
 <main class="main archive">
+  
   <div class="archive__container">
     
     
@@ -1388,7 +1397,10 @@
         <span class="talk__date" data-dir="ltr">
           Feb 2
         </span>
-        <a href="https://crushingcode.github.io/talks/fosdem_2020/" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Kotlin MP: Into the Multi-Verse @FOSDEM</a>
+        
+        <a href="https://crushingcode.github.io/talks/fosdem_2020/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Kotlin MP: Into the Multi-Verse @FOSDEM</a>
+          
+        
       </li>
       
     </ul>
@@ -1400,42 +1412,60 @@
         <span class="talk__date" data-dir="ltr">
           Oct 26
         </span>
-        <a href="https://crushingcode.github.io/talks/mobilization_ix_2019/" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Cooking with Coroutines Recipes @Mobilization IX</a>
+        
+        <a href="https://crushingcode.github.io/talks/mobilization_ix_2019/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Cooking with Coroutines Recipes @Mobilization IX</a>
+          
+        
       </li>
       
       <li class="archive__li" data-dir="ltr">
         <span class="talk__date" data-dir="ltr">
           Sep 25
         </span>
-        <a href="https://crushingcode.github.io/talks/droidcon_greece_2019/" class="talk__title" data-title-wrap="wrap" data-dir="ltr">My love-hate relationship with Android Studio @Droidcon Greece</a>
+        
+        <a href="https://crushingcode.github.io/talks/droidcon_greece_2019/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">My love-hate relationship with Android Studio @Droidcon Greece</a>
+          
+        
       </li>
       
       <li class="archive__li" data-dir="ltr">
         <span class="talk__date" data-dir="ltr">
           Sep 19
         </span>
-        <a href="https://crushingcode.github.io/talks/droidcon_vienna_2019/" class="talk__title" data-title-wrap="wrap" data-dir="ltr">My love-hate relationship with Android Studio @Droidcon Vienna</a>
+        
+        <a href="https://crushingcode.github.io/talks/droidcon_vienna_2019/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">My love-hate relationship with Android Studio @Droidcon Vienna</a>
+          
+        
       </li>
       
       <li class="archive__li" data-dir="ltr">
         <span class="talk__date" data-dir="ltr">
           Jun 24
         </span>
-        <a href="https://crushingcode.github.io/talks/devoxx_pl_2019/" class="talk__title" data-title-wrap="wrap" data-dir="ltr">My love-hate relationship with Android Studio @Devoxx Poland</a>
+        
+        <a href="https://crushingcode.github.io/talks/devoxx_pl_2019/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">My love-hate relationship with Android Studio @Devoxx Poland</a>
+          
+        
       </li>
       
       <li class="archive__li" data-dir="ltr">
         <span class="talk__date" data-dir="ltr">
           Mar 15
         </span>
-        <a href="https://crushingcode.github.io/talks/appdevcon_2019/" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Demystifying Android Libraries @AppdevCon</a>
+        
+        <a href="https://crushingcode.github.io/talks/appdevcon_2019/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Demystifying Android Libraries @AppdevCon</a>
+          
+        
       </li>
       
       <li class="archive__li" data-dir="ltr">
         <span class="talk__date" data-dir="ltr">
           Feb 27
         </span>
-        <a href="https://crushingcode.github.io/talks/berlindroid_feb_2019/" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Things I wish I knew when I started building Android libraries-Vol.2 @Berlindroid</a>
+        
+        <a href="https://crushingcode.github.io/talks/berlindroid_feb_2019/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Things I wish I knew when I started building Android libraries-Vol.2 @Berlindroid</a>
+          
+        
       </li>
       
     </ul>
@@ -1447,7 +1477,10 @@
         <span class="talk__date" data-dir="ltr">
           Dec 8
         </span>
-        <a href="https://crushingcode.github.io/talks/mobius_moscow_2018/" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Things I wish I knew when I started building Android libraries-Vol.2 @Mobius Moscow</a>
+        
+        <a href="https://crushingcode.github.io/talks/mobius_moscow_2018/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Things I wish I knew when I started building Android libraries-Vol.2 @Mobius Moscow</a>
+          
+        
       </li>
       
     </ul>
