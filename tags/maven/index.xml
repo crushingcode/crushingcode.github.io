@@ -15,6 +15,7 @@
     
     
     
+
       
       <item>
         <title>Guide to publishing your Android Library via JitPack</title>
@@ -65,6 +66,7 @@ Is it possible to own one for yourself?
 Do you want to host your artifacts in your own private repository?</description>
       </item>
       
+
     
   </channel>
 </rss>

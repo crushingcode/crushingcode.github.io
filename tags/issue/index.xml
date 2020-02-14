@@ -15,6 +15,7 @@
     
     
     
+
       
       <item>
         <title>The curious case of dependency conflicts</title>
@@ -26,6 +27,7 @@
  **&amp;ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?</description>
       </item>
       
+
     
   </channel>
 </rss>

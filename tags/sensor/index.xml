@@ -15,6 +15,7 @@
     
     
     
+
       
       <item>
         <title>I could not find a simple Gesture Detection android library, so I built one</title>
@@ -25,6 +26,7 @@
         <description>While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture.</description>
       </item>
       
+
     
   </channel>
 </rss>
