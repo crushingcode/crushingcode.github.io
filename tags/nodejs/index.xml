@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on Crushing C.O.D.E</title>
+    <link>https://crushingcode.github.io/tags/nodejs/</link>
+    <description>Recent content in nodejs on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
+    <lastBuildDate>Wed, 16 Oct 2013 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://crushingcode.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Introduction to Node.JS @Mindfire Solutions</title>
+        <link>https://crushingcode.github.io/talks/gdgnd_oct_2013/</link>
+        <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/gdgnd_oct_2013/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract   Basic intro of node.js
+  Presentation   </description>
+      </item>
+      
+
+    
+  </channel>
+</rss>

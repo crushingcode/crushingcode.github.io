@@ -18,12 +18,30 @@
 
       
       <item>
+        <title>Cooking with Coroutine Recipes @CodemotionAmsterdam</title>
+        <link>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</link>
+        <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</guid>
+        <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them.</description>
+      </item>
+      
+      <item>
         <title>Kotlin MP: Into the Multi-Verse @FOSDEM</title>
         <link>https://crushingcode.github.io/talks/fosdem_2020/</link>
         <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/fosdem_2020/</guid>
         <description>FOSDEM 2020: Kotlin Devroom, Brussels, Belgium Abstract   Kotlin Multiplatform is the new kid on the cross-platform block. The approach although is very different from what you have seen in the past.</description>
+      </item>
+      
+      <item>
+        <title>My love-hate relationship with Android Studio @Devfest&#39;19 Berlin</title>
+        <link>https://crushingcode.github.io/talks/devfest_berlin_2019/</link>
+        <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/devfest_berlin_2019/</guid>
+        <description>Devfest&#39;19 &amp;lsquo;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
       </item>
       
       <item>
@@ -108,12 +126,22 @@
       </item>
       
       <item>
+        <title>Architecture Components @Devfest&#39;17 Vancouver</title>
+        <link>https://crushingcode.github.io/talks/devfest_vancouver_2017/</link>
+        <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/devfest_vancouver_2017/</guid>
+        <description> Devfest&#39;17, Vancouver, Canada Abstract   Get to know the new Architecture Components released by Google in I/O&#39;17
+  Presentation  Event   </description>
+      </item>
+      
+      <item>
         <title>Google Developer Days, Europe - Extended &#39;17 Recap: Android and Flutter @GDG CV</title>
         <link>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</link>
         <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</guid>
-        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event  </description>
+        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
       </item>
       
       <item>
@@ -140,7 +168,7 @@
         <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/gdg_cv_2017/</guid>
-        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event  </description>
+        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
       </item>
       
       <item>
@@ -159,6 +187,95 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/vandev_2017/</guid>
         <description>VanDev: Vancouver&#39;s Software Developers Network, Vancouver, Canada Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
+      </item>
+      
+      <item>
+        <title>Mastering Tools for Android @GDG New Delhi</title>
+        <link>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</link>
+        <pubDate>Sat, 08 Oct 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</guid>
+        <description>Google Developer Group New Delhi, New Delhi, India Abstract   Learn about how you can master various tools in Android to become an efficient and productive Android Dev,</description>
+      </item>
+      
+      <item>
+        <title>Jumpstart Firebase @GDG New Delhi</title>
+        <link>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</link>
+        <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract   Overview and demonstration of firebase and its services.
+  Presentation   </description>
+      </item>
+      
+      <item>
+        <title>Building Apps for Billions @Udacity Community</title>
+        <link>https://crushingcode.github.io/talks/gdgnd_aug_2016/</link>
+        <pubDate>Sun, 07 Aug 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/gdgnd_aug_2016/</guid>
+        <description> Udacity Community Delhi NCR, New Delhi, India Abstract   Deliver the best performance across a range of connections, data plans, and devices.
+  Presentation  Event   </description>
+      </item>
+      
+      <item>
+        <title>Sipping on Battery Juice @Devfest&#39;16 New Delhi</title>
+        <link>https://crushingcode.github.io/talks/devfest_newdelhi_2016/</link>
+        <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/devfest_newdelhi_2016/</guid>
+        <description> Devfest&#39;16, New Delhi, India Abstract   Learn about battery consumption on Android and how to avoid it when building your apps.
+  Presentation  Event   </description>
+      </item>
+      
+      <item>
+        <title>An-Droid 101 - Developing Libraries @GDG New Delhi</title>
+        <link>https://crushingcode.github.io/talks/gdgnd_feb_2016/</link>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/gdgnd_feb_2016/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract   Learn about android libraries and how to build one for yourself.
+  Presentation  Event   </description>
+      </item>
+      
+      <item>
+        <title>Materialized Instantly @GDG New Delhi</title>
+        <link>https://crushingcode.github.io/talks/gdgnd_mar_2015/</link>
+        <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/gdgnd_mar_2015/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract   Materialized Instantly
+  Presentation   </description>
+      </item>
+      
+      <item>
+        <title>Kickstart Android App Development @GDG New Delhi</title>
+        <link>https://crushingcode.github.io/talks/gdgnd_feb_2015/</link>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/gdgnd_feb_2015/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract   Kickstart Android App Development
+  Presentation   </description>
+      </item>
+      
+      <item>
+        <title>Kickstart Android Wear @GDG New Delhi</title>
+        <link>https://crushingcode.github.io/talks/gdgnd_oct_2014/</link>
+        <pubDate>Thu, 30 Oct 2014 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/gdgnd_oct_2014/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract   Kickstart into Android Wear World
+  Presentation  Event   </description>
+      </item>
+      
+      <item>
+        <title>Introduction to Node.JS @Mindfire Solutions</title>
+        <link>https://crushingcode.github.io/talks/gdgnd_oct_2013/</link>
+        <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/gdgnd_oct_2013/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract   Basic intro of node.js
+  Presentation   </description>
       </item>
       
 

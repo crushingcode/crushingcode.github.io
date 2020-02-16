@@ -3,13 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://crushingcode.github.io/showcase/android/android_tips_tricks/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://crushingcode.github.io/showcase/android/easydeviceinfo/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://crushingcode.github.io/showcase/book/kotlin_coroutines_by_tutorial/</loc>
+    <lastmod>2018-11-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/showcase/patents/patent_1/</loc>
+    <lastmod>2015-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://crushingcode.github.io/showcase/android/sensey/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/showcase/patents/patent_2/</loc>
+    <lastmod>2015-06-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -24,11 +44,36 @@
   
   <url>
     <loc>https://crushingcode.github.io/</loc>
-    <lastmod>2020-02-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</loc>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/coroutines/</loc>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/kotlin/</loc>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/</loc>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://crushingcode.github.io/talks/fosdem_2020/</loc>
+    <lastmod>2020-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/kotlin-multiplatform/</loc>
     <lastmod>2020-02-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,8 +83,38 @@
   </url>
   
   <url>
+    <loc>https://crushingcode.github.io/showcase/book/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/showcase/patents/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://crushingcode.github.io/showcase/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/adb/</loc>
+    <lastmod>2019-11-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/android/</loc>
+    <lastmod>2019-11-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/devfest_berlin_2019/</loc>
+    <lastmod>2019-11-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/tools/</loc>
+    <lastmod>2019-11-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -65,6 +140,16 @@
   <url>
     <loc>https://crushingcode.github.io/talks/devoxx_pl_2019/</loc>
     <lastmod>2019-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/android-library/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/best-practices/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -98,18 +183,18 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</loc>
+    <loc>https://crushingcode.github.io/talks/devfest_vancouver_2017/</loc>
+    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/flutter/</loc>
     <lastmod>2017-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/android/</loc>
-    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/android-library/</loc>
-    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</loc>
+    <lastmod>2017-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -119,11 +204,6 @@
   
   <url>
     <loc>https://crushingcode.github.io/posts/</loc>
-    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/</loc>
     <lastmod>2017-09-17T10:54:24+02:00</lastmod>
   </url>
   
@@ -138,13 +218,13 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/best-practices/</loc>
+    <loc>https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</loc>
     <lastmod>2017-07-29T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</loc>
-    <lastmod>2017-07-29T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/tags/firebase/</loc>
+    <lastmod>2017-07-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -188,18 +268,18 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/adb/</loc>
-    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://crushingcode.github.io/posts/do-you-like-to-adb/</loc>
     <lastmod>2016-10-14T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/tags/tools/</loc>
-    <lastmod>2016-10-14T10:54:24+02:00</lastmod>
+    <loc>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</loc>
+    <lastmod>2016-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</loc>
+    <lastmod>2016-10-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -215,6 +295,11 @@
   <url>
     <loc>https://crushingcode.github.io/posts/update-dependencies-code-repeat/</loc>
     <lastmod>2016-09-03T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/gdgnd_aug_2016/</loc>
+    <lastmod>2016-08-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -235,6 +320,11 @@
   <url>
     <loc>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</loc>
     <lastmod>2016-07-12T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/devfest_newdelhi_2016/</loc>
+    <lastmod>2016-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -263,6 +353,11 @@
   </url>
   
   <url>
+    <loc>https://crushingcode.github.io/talks/gdgnd_feb_2016/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/</loc>
     <lastmod>2015-08-03T10:54:24+02:00</lastmod>
   </url>
@@ -275,6 +370,36 @@
   <url>
     <loc>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</loc>
     <lastmod>2015-07-09T10:54:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/gdgnd_mar_2015/</loc>
+    <lastmod>2015-03-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/gdgnd_feb_2015/</loc>
+    <lastmod>2015-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/android-wear/</loc>
+    <lastmod>2014-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/gdgnd_oct_2014/</loc>
+    <lastmod>2014-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/talks/gdgnd_oct_2013/</loc>
+    <lastmod>2013-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/nodejs/</loc>
+    <lastmod>2013-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>

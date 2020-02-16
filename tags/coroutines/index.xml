@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coroutines  on Crushing C.O.D.E</title>
+    <link>https://crushingcode.github.io/tags/coroutines/</link>
+    <description>Recent content in coroutines  on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://crushingcode.github.io/tags/coroutines/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Cooking with Coroutine Recipes @CodemotionAmsterdam</title>
+        <link>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</link>
+        <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</guid>
+        <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them.</description>
+      </item>
+      
+      <item>
+        <title>Cooking with Coroutines Recipes @Mobilization IX</title>
+        <link>https://crushingcode.github.io/talks/mobilization_ix_2019/</link>
+        <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/mobilization_ix_2019/</guid>
+        <description>Mobilization IX, Łódź, Poland Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+      </item>
+      
+
+    
+  </channel>
+</rss>

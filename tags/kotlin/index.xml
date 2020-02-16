@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kotlin on Crushing C.O.D.E</title>
+    <link>https://crushingcode.github.io/tags/kotlin/</link>
+    <description>Recent content in kotlin on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://crushingcode.github.io/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Cooking with Coroutine Recipes @CodemotionAmsterdam</title>
+        <link>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</link>
+        <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</guid>
+        <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them.</description>
+      </item>
+      
+      <item>
+        <title>Kotlin MP: Into the Multi-Verse @FOSDEM</title>
+        <link>https://crushingcode.github.io/talks/fosdem_2020/</link>
+        <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/fosdem_2020/</guid>
+        <description>FOSDEM 2020: Kotlin Devroom, Brussels, Belgium Abstract   Kotlin Multiplatform is the new kid on the cross-platform block. The approach although is very different from what you have seen in the past.</description>
+      </item>
+      
+      <item>
+        <title>Cooking with Coroutines Recipes @Mobilization IX</title>
+        <link>https://crushingcode.github.io/talks/mobilization_ix_2019/</link>
+        <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/mobilization_ix_2019/</guid>
+        <description>Mobilization IX, Łódź, Poland Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+      </item>
+      
+      <item>
+        <title>Google I/O &#39;17 Recap: Android, Kotlin and Firebase @GDG Cloud Vancouver</title>
+        <link>https://crushingcode.github.io/talks/gdg_cv_2017/</link>
+        <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/gdg_cv_2017/</guid>
+        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
+      </item>
+      
+      <item>
+        <title>Hello &#39;Kotlin&#39; World @Code &amp; Coffee</title>
+        <link>https://crushingcode.github.io/talks/code_and_coffee_may_2017/</link>
+        <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/code_and_coffee_may_2017/</guid>
+        <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract   Kotlin programming language is gaining popularity nowadays. It’s a modern language that gives more power in everyday routines.</description>
+      </item>
+      
+
+    
+  </channel>
+</rss>

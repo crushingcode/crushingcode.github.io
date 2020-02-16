@@ -26,6 +26,24 @@
         <description></description>
       </item>
       
+      <item>
+        <title>Books</title>
+        <link>https://crushingcode.github.io/showcase/book/</link>
+        <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/showcase/book/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Patents</title>
+        <link>https://crushingcode.github.io/showcase/patents/</link>
+        <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/showcase/patents/</guid>
+        <description></description>
+      </item>
+      
 
     
   </channel>

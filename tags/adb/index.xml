@@ -9,13 +9,49 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Fri, 14 Oct 2016 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 09 Nov 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://crushingcode.github.io/tags/adb/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>My love-hate relationship with Android Studio @Devfest&#39;19 Berlin</title>
+        <link>https://crushingcode.github.io/talks/devfest_berlin_2019/</link>
+        <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/devfest_berlin_2019/</guid>
+        <description>Devfest&#39;19 &amp;lsquo;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+      </item>
+      
+      <item>
+        <title>My love-hate relationship with Android Studio @Droidcon Greece</title>
+        <link>https://crushingcode.github.io/talks/droidcon_greece_2019/</link>
+        <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/droidcon_greece_2019/</guid>
+        <description>Droidcon Greece &amp;lsquo;19, Heraklion, Greece Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+      </item>
+      
+      <item>
+        <title>My love-hate relationship with Android Studio @Droidcon Vienna</title>
+        <link>https://crushingcode.github.io/talks/droidcon_vienna_2019/</link>
+        <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/droidcon_vienna_2019/</guid>
+        <description>Droidcon Vienna &amp;lsquo;19, Vienna, Austria Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+      </item>
+      
+      <item>
+        <title>My love-hate relationship with Android Studio @Devoxx Poland</title>
+        <link>https://crushingcode.github.io/talks/devoxx_pl_2019/</link>
+        <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <guid>https://crushingcode.github.io/talks/devoxx_pl_2019/</guid>
+        <description>Devoxx Poland &amp;lsquo;19, Krakow, Poland Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+      </item>
       
       <item>
         <title>Do you like to ADB?</title>
