@@ -8,13 +8,18 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/showcase/android/easydeviceinfo/</loc>
+    <loc>https://crushingcode.github.io/showcase/android_library/easydeviceinfo/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/showcase/book/kotlin_coroutines_by_tutorial/</loc>
+    <loc>https://crushingcode.github.io/showcase/books/kotlin_coroutines_by_tutorial/</loc>
     <lastmod>2018-11-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/showcase/books/seven_mobile_apps/</loc>
+    <lastmod>2016-07-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,7 +28,7 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/showcase/android/sensey/</loc>
+    <loc>https://crushingcode.github.io/showcase/android_library/sensey/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,12 +38,12 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/showcase/android/lantern/</loc>
+    <loc>https://crushingcode.github.io/showcase/android_library/lantern/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/showcase/android/recyclerviewhelper/</loc>
+    <loc>https://crushingcode.github.io/showcase/android_library/recyclerviewhelper/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -83,7 +88,12 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.github.io/showcase/book/</loc>
+    <loc>https://crushingcode.github.io/showcase/android_library/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/showcase/books/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
