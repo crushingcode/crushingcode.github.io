@@ -1165,7 +1165,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.62.0" />
+<meta name="generator" content="Hugo 0.64.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://crushingcode.github.io/posts/the-curious-case-of-dependency-conflicts/">
@@ -1372,6 +1372,26 @@
       
       
       
+        <div class="navbar__dropdown navbar__slide-down">
+          <a href="/gallery" class="navbar__menu-item " dir="ltr">
+            Gallery
+            <span class="navbar__menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+            </span>
+          </a>        
+          <div class="navbar__dropdown--content">
+            
+            <a href="/gallery/doodles" class="navbar__dropdown--item" dir="ltr">Doodles</a>        
+            
+          </div>
+        </div>
+      
+    
+      
+      
+      
+      
+      
         <a href="/about" class="navbar__menu-item navbar__slide-down " dir="ltr">About</a>
       
     
@@ -1423,7 +1443,7 @@
 <p><img src="/images/posts/depconflicts.jpg" alt="depconflicts" /></p>
 <!-- Image taken from freepik.com and all credit goes to the creator of it -->
 <p>We all have been there and we all have experienced it. The problem is a result of each library following a completely different development lifecycle and using a different version of a public api, which by far all means is not the problem which needs to be rectified.<br />
-You can't just ask all android library developers/team maintaining it to update the library to use either the lastest or some specific version of a dependency just because it works with another library and/or is causing a conflict when you have both of them in your project.</p>
+You can&rsquo;t just ask all android library developers/team maintaining it to update the library to use either the lastest or some specific version of a dependency just because it works with another library and/or is causing a conflict when you have both of them in your project.</p>
 <p>So what exactly are the options available to us..</p>
 <p>I stumbled upon such a situation sometime back in the last month or so and as the whole journey to fix this type of conflict was suprisingly less documented on the web , here is my record of how I solved it.</p>
 <p>Now the process I followed may not be the best one out there but it sure did led me to hunt down the solution along with digging out some pretty neat tricks possible using <em><strong>Gradle Build System</strong></em>.</p>
@@ -1583,7 +1603,7 @@ release
 <p>NOTE : dependencySubstitution is an incubating functionality and may change in a future version of Gradle<br />
 As of writting this post the latest Gradle Version is 2.13 in which this is available.</p>
 </blockquote>
-<p>Thats pretty neat , isn't it.</p>
+<p>Thats pretty neat , isn&rsquo;t it.</p>
 <p>I am pretty sure this would enable you to find the conflicts and solve it too.</p>
 <p>This also goes with the disclaimer that trying to resolve dependency conflicts this way is not the preferred way. You should always try to be using the latest version of the dependencies as well as maintain your library to use the same. This post basically defines the process to enable you to try and figure out why your build is failing and how to bypass it for the time being.</p>
 <p>Thats all for today folks.<br />

@@ -1165,7 +1165,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.62.0" />
+<meta name="generator" content="Hugo 0.64.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://crushingcode.github.io/posts/rewriting-the-history/">
@@ -1372,6 +1372,26 @@
       
       
       
+        <div class="navbar__dropdown navbar__slide-down">
+          <a href="/gallery" class="navbar__menu-item " dir="ltr">
+            Gallery
+            <span class="navbar__menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+            </span>
+          </a>        
+          <div class="navbar__dropdown--content">
+            
+            <a href="/gallery/doodles" class="navbar__dropdown--item" dir="ltr">Doodles</a>        
+            
+          </div>
+        </div>
+      
+    
+      
+      
+      
+      
+      
         <a href="/about" class="navbar__menu-item navbar__slide-down " dir="ltr">About</a>
       
     
@@ -1552,7 +1572,7 @@ It can however be applied to various other use cases. You can extend it to remov
 <pre><code>! [remote rejected] refs/pull/53/head -&gt; refs/pull/53/head (deny updating a hidden ref)
 </code></pre><blockquote>
 <p>As mentioned in this <a href="https://github.com/rtyley/bfg-repo-cleaner/issues/36#issuecomment-37877829">issue</a>,</p>
-<p>The refs beginning ‘refs/pull&rsquo; are synthetic read-only refs created by GitHub - you can't update (and therefore &lsquo;clean&rsquo;) them, because they reflect branches that may well actually come from other repositories - ones that submitted pull-requests to you.<br />
+<p>The refs beginning ‘refs/pull&rsquo; are synthetic read-only refs created by GitHub - you can&rsquo;t update (and therefore &lsquo;clean&rsquo;) them, because they reflect branches that may well actually come from other repositories - ones that submitted pull-requests to you.<br />
 So, while you’ve pushed all your real refs, the pull requests don’t get updated<br />
 In simple words Github also saves branches after you merged, closed and deleted them. You have no way to modify those branches that are owned by Github. The only way you can really remove them is by deleting the repository. And keep in mind that you also lose all stars, issues and so on when deleting a project. Which will be a bummer, you don’t want to do that, do you ?</p>
 </blockquote>
