@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
   <channel>
     <title>firebase on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/firebase/</link>
@@ -10,6 +14,8 @@
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Mon, 17 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,6 +30,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/gdg_cv_2017/</guid>
         <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin </category>
+            
+          
+            
+              <category>firebase</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -34,6 +61,23 @@
         <guid>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Overview and demonstration of firebase and its services.
   Presentation   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>firebase</category>
+            
+          
+        
+        
+        
       </item>
       
 

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
   <channel>
     <title>kotlin-multiplatform on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/kotlin-multiplatform/</link>
@@ -10,6 +14,8 @@
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/kotlin-multiplatform/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,6 +30,23 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/fosdem_2020/</guid>
         <description>FOSDEM 2020: Kotlin Devroom, Brussels, Belgium Abstract   Kotlin Multiplatform is the new kid on the cross-platform block. The approach although is very different from what you have seen in the past.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>kotlin-multiplatform</category>
+            
+          
+        
+        
+        
       </item>
       
 

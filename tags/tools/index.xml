@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
   <channel>
     <title>tools on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/tools/</link>
@@ -10,6 +14,8 @@
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Sat, 09 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,6 +30,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/devfest_berlin_2019/</guid>
         <description>Devfest&amp;rsquo;19 &amp;lsquo;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -33,6 +60,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/droidcon_greece_2019/</guid>
         <description>Droidcon Greece &amp;lsquo;19, Heraklion, Greece Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -42,6 +90,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/droidcon_vienna_2019/</guid>
         <description>Droidcon Vienna &amp;lsquo;19, Vienna, Austria Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -51,6 +120,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/devoxx_pl_2019/</guid>
         <description>Devoxx Poland &amp;lsquo;19, Krakow, Poland Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -60,6 +150,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/posts/do-you-like-to-adb/</guid>
         <description>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>adb</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -69,6 +180,23 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</guid>
         <description>Google Developer Group New Delhi, New Delhi, India Abstract   Learn about how you can master various tools in Android to become an efficient and productive Android Dev,</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -78,6 +206,23 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/posts/whats-in-the-apk/</guid>
         <description>If I give you the code of an android app and ask you to provide me information regarding the android app like minSdkVersion, targetSdkVersion, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -87,6 +232,23 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</guid>
         <description>I am pretty sure you would agree to the fact that the usual javadoc is not a something everyone likes. The colors are what makes it superrrrrrr boring.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>opensource</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -97,6 +259,23 @@
         <guid>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
         <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
  they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -107,6 +286,27 @@
         <guid>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</guid>
         <description>Tired of being tied to your laptop/desktop while debugging your android apps ?
 Well let me break it to you – You are NOT the FIRST person to do it.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>adb</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
 

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
   <channel>
     <title>best-practices on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/best-practices/</link>
@@ -10,6 +14,8 @@
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/best-practices/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,6 +30,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/appdevcon_2019/</guid>
         <description>AppdevCon &amp;lsquo;19, Amsterdam, Netherlands Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -33,6 +60,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/berlindroid_feb_2019/</guid>
         <description>Berlindroid &amp;lsquo;19, Berlin, Germany Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -42,6 +90,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/mobius_moscow_2018/</guid>
         <description>Mobius Moscow &amp;lsquo;18, Moscow, Russia Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -51,6 +120,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/devoxx_be_2018/</guid>
         <description>Devoxx Belgium &amp;lsquo;18, Antwerp, Belgium Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -60,6 +150,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/droidcon_berlin_2017/</guid>
         <description>Droidcon Berlin &amp;lsquo;17, Berlin, Germany Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -70,6 +181,23 @@
         <guid>https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</guid>
         <description>DISCLAIMER: If you consider yourself a beginner, intermediate, expert or a ninja in the Android realm, this secret sauce still applies to you.
  TL;DR: Build Something.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -79,6 +207,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/vandev_2017/</guid>
         <description>VanDev: Vancouver&amp;rsquo;s Software Developers Network, Vancouver, Canada Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -88,6 +237,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
         <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
 

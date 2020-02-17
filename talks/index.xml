@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
   <channel>
     <title>Talks on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/talks/</link>
@@ -10,6 +14,8 @@
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/talks/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,6 +30,23 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</guid>
         <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>coroutines</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -33,6 +56,23 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/fosdem_2020/</guid>
         <description>FOSDEM 2020: Kotlin Devroom, Brussels, Belgium Abstract   Kotlin Multiplatform is the new kid on the cross-platform block. The approach although is very different from what you have seen in the past.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>kotlin-multiplatform</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -42,6 +82,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/devfest_berlin_2019/</guid>
         <description>Devfest&amp;rsquo;19 &amp;lsquo;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -51,6 +112,23 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/mobilization_ix_2019/</guid>
         <description>Mobilization IX, Łódź, Poland Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>coroutines </category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -60,6 +138,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/droidcon_greece_2019/</guid>
         <description>Droidcon Greece &amp;lsquo;19, Heraklion, Greece Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -69,6 +168,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/droidcon_vienna_2019/</guid>
         <description>Droidcon Vienna &amp;lsquo;19, Vienna, Austria Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -78,6 +198,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/devoxx_pl_2019/</guid>
         <description>Devoxx Poland &amp;lsquo;19, Krakow, Poland Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -87,6 +228,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/appdevcon_2019/</guid>
         <description>AppdevCon &amp;lsquo;19, Amsterdam, Netherlands Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -96,6 +258,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/berlindroid_feb_2019/</guid>
         <description>Berlindroid &amp;lsquo;19, Berlin, Germany Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -105,6 +288,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/mobius_moscow_2018/</guid>
         <description>Mobius Moscow &amp;lsquo;18, Moscow, Russia Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -114,6 +318,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/devoxx_be_2018/</guid>
         <description>Devoxx Belgium &amp;lsquo;18, Antwerp, Belgium Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -123,6 +348,23 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/droidcon_berlin_2018/</guid>
         <description>Droidcon Berlin &amp;lsquo;18, Berlin, Germany Abstract   If you&amp;rsquo;ve been developing Android applications for a while now, you know the pain of handling the lifecycle just right.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -133,6 +375,19 @@
         <guid>https://crushingcode.github.io/talks/devfest_vancouver_2017/</guid>
         <description> Devfest&amp;rsquo;17, Vancouver, Canada Abstract   Get to know the new Architecture Components released by Google in I/O&amp;rsquo;17
   Presentation  Event   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -142,6 +397,23 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</guid>
         <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>flutter </category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -151,6 +423,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/droidcon_berlin_2017/</guid>
         <description>Droidcon Berlin &amp;lsquo;17, Berlin, Germany Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -160,6 +453,19 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/code_and_coffee_aug_2017/</guid>
         <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract   A quick introduction of what Flutter is and what is required to start building apps with Flutter</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>flutter</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -169,6 +475,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/gdg_cv_2017/</guid>
         <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin </category>
+            
+          
+            
+              <category>firebase</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -178,6 +505,19 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/code_and_coffee_may_2017/</guid>
         <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract   Kotlin programming language is gaining popularity nowadays. It’s a modern language that gives more power in everyday routines.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -187,6 +527,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/vandev_2017/</guid>
         <description>VanDev: Vancouver&amp;rsquo;s Software Developers Network, Vancouver, Canada Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -196,6 +557,23 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</guid>
         <description>Google Developer Group New Delhi, New Delhi, India Abstract   Learn about how you can master various tools in Android to become an efficient and productive Android Dev,</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -206,6 +584,23 @@
         <guid>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Overview and demonstration of firebase and its services.
   Presentation   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>firebase</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -216,6 +611,19 @@
         <guid>https://crushingcode.github.io/talks/gdgnd_aug_2016/</guid>
         <description> Udacity Community Delhi NCR, New Delhi, India Abstract   Deliver the best performance across a range of connections, data plans, and devices.
   Presentation  Event   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -226,6 +634,19 @@
         <guid>https://crushingcode.github.io/talks/devfest_newdelhi_2016/</guid>
         <description> Devfest&amp;rsquo;16, New Delhi, India Abstract   Learn about battery consumption on Android and how to avoid it when building your apps.
   Presentation  Event   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -236,6 +657,23 @@
         <guid>https://crushingcode.github.io/talks/gdgnd_feb_2016/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Learn about android libraries and how to build one for yourself.
   Presentation  Event   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -246,6 +684,19 @@
         <guid>https://crushingcode.github.io/talks/gdgnd_mar_2015/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Materialized Instantly
   Presentation   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -256,6 +707,19 @@
         <guid>https://crushingcode.github.io/talks/gdgnd_feb_2015/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Kickstart Android App Development
   Presentation   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -266,6 +730,23 @@
         <guid>https://crushingcode.github.io/talks/gdgnd_oct_2014/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Kickstart into Android Wear World
   Presentation  Event   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-wear</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -276,6 +757,19 @@
         <guid>https://crushingcode.github.io/talks/gdgnd_oct_2013/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Basic intro of node.js
   Presentation   </description>
+        
+        
+        
+        
+        
+          
+            
+              <category>nodejs</category>
+            
+          
+        
+        
+        
       </item>
       
 

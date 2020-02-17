@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
   <channel>
     <title>maven on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/maven/</link>
@@ -10,6 +14,8 @@
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Fri, 29 Jul 2016 10:54:24 +0200</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,6 +30,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/</guid>
         <description>Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+            
+              <category>maven</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -33,6 +60,27 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/</guid>
         <description>If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+            
+              <category>maven</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -43,6 +91,27 @@
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</guid>
         <description>Developers are a different kind of people altogether. They tend to be lazy but strive to be super efficient at the same time.
 A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+            
+              <category>maven</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -53,6 +122,27 @@ A lot of this can be seen in the Android world where a certain library pops up e
         <guid>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</guid>
         <description>The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.
 For the same reason I have gone through a lot of good articles online, which explain how the whole process works.</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>maven</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
       </item>
       
       <item>
@@ -64,6 +154,27 @@ For the same reason I have gone through a lot of good articles online, which exp
         <description>Have you ever thought how the central repository works like Maven Central or JCenter?
 Is it possible to own one for yourself?
 Do you want to host your artifacts in your own private repository?</description>
+        
+        
+        
+        
+        
+          
+            
+              <category>maven</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
       </item>
       
 
