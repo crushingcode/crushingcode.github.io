@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>adb on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/adb/</link>
@@ -15,7 +16,6 @@
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Sat, 09 Nov 2019 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
-    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/adb/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,9 +28,11 @@
         <link>https://crushingcode.github.io/talks/devfest_berlin_2019/</link>
         <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 09 Nov 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/devfest_berlin_2019/</guid>
         <description>Devfest&amp;rsquo;19 &amp;lsquo;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -58,9 +60,11 @@
         <link>https://crushingcode.github.io/talks/droidcon_greece_2019/</link>
         <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 25 Sep 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/droidcon_greece_2019/</guid>
         <description>Droidcon Greece &amp;lsquo;19, Heraklion, Greece Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -88,9 +92,11 @@
         <link>https://crushingcode.github.io/talks/droidcon_vienna_2019/</link>
         <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 19 Sep 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/droidcon_vienna_2019/</guid>
         <description>Droidcon Vienna &amp;lsquo;19, Vienna, Austria Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -118,9 +124,11 @@
         <link>https://crushingcode.github.io/talks/devoxx_pl_2019/</link>
         <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 24 Jun 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/devoxx_pl_2019/</guid>
         <description>Devoxx Poland &amp;lsquo;19, Krakow, Poland Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -148,9 +156,11 @@
         <link>https://crushingcode.github.io/posts/do-you-like-to-adb/</link>
         <pubDate>Fri, 14 Oct 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 14 Oct 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/do-you-like-to-adb/</guid>
         <description>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -178,10 +188,12 @@
         <link>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</link>
         <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 09 Jul 2015 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</guid>
         <description>Tired of being tied to your laptop/desktop while debugging your android apps ?
 Well let me break it to you – You are NOT the FIRST person to do it.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         

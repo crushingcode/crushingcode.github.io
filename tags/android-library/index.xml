@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>android-library on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/android-library/</link>
@@ -15,7 +16,6 @@
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
-    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/android-library/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,9 +28,11 @@
         <link>https://crushingcode.github.io/talks/appdevcon_2019/</link>
         <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 15 Mar 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/appdevcon_2019/</guid>
         <description>AppdevCon &amp;lsquo;19, Amsterdam, Netherlands Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -58,9 +60,11 @@
         <link>https://crushingcode.github.io/talks/berlindroid_feb_2019/</link>
         <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 27 Feb 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/berlindroid_feb_2019/</guid>
         <description>Berlindroid &amp;lsquo;19, Berlin, Germany Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -88,9 +92,11 @@
         <link>https://crushingcode.github.io/talks/mobius_moscow_2018/</link>
         <pubDate>Sat, 08 Dec 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 08 Dec 2018 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/mobius_moscow_2018/</guid>
         <description>Mobius Moscow &amp;lsquo;18, Moscow, Russia Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -118,9 +124,11 @@
         <link>https://crushingcode.github.io/talks/devoxx_be_2018/</link>
         <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 15 Nov 2018 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/devoxx_be_2018/</guid>
         <description>Devoxx Belgium &amp;lsquo;18, Antwerp, Belgium Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -148,9 +156,11 @@
         <link>https://crushingcode.github.io/talks/droidcon_berlin_2018/</link>
         <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 26 Jun 2018 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/droidcon_berlin_2018/</guid>
         <description>Droidcon Berlin &amp;lsquo;18, Berlin, Germany Abstract   If you&amp;rsquo;ve been developing Android applications for a while now, you know the pain of handling the lifecycle just right.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -174,10 +184,12 @@
         <link>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</link>
         <pubDate>Sun, 17 Sep 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 17 Sep 2017 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</guid>
         <description>Lifecycle events in Android.
 It has been a pain point for Android developers all over the world. It is no brainer that, most of the times the main cause of a memory leak in the codebase is because an invalid state is accessed which is out of sync with the lifecycle of the activity/fragment of the app.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -201,9 +213,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/talks/droidcon_berlin_2017/</link>
         <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 05 Sep 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/droidcon_berlin_2017/</guid>
         <description>Droidcon Berlin &amp;lsquo;17, Berlin, Germany Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -231,9 +245,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/talks/vandev_2017/</link>
         <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 25 Apr 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/vandev_2017/</guid>
         <description>VanDev: Vancouver&amp;rsquo;s Software Developers Network, Vancouver, Canada Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -261,9 +277,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</link>
         <pubDate>Sun, 05 Mar 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 05 Mar 2017 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
         <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -291,9 +309,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
         <pubDate>Sun, 12 Feb 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 12 Feb 2017 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
         <description>While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -321,9 +341,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/</link>
         <pubDate>Fri, 29 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 29 Jul 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/</guid>
         <description>Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -351,9 +373,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/</link>
         <pubDate>Sun, 17 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 17 Jul 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/</guid>
         <description>If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -381,10 +405,12 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</link>
         <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 12 Jul 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</guid>
         <description>Developers are a different kind of people altogether. They tend to be lazy but strive to be super efficient at the same time.
 A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -412,10 +438,12 @@ A lot of this can be seen in the Android world where a certain library pops up e
         <link>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</link>
         <pubDate>Tue, 16 Feb 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 16 Feb 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</guid>
         <description>The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.
 For the same reason I have gone through a lot of good articles online, which explain how the whole process works.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -443,10 +471,12 @@ For the same reason I have gone through a lot of good articles online, which exp
         <link>https://crushingcode.github.io/talks/gdgnd_feb_2016/</link>
         <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 14 Feb 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/gdgnd_feb_2016/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Learn about android libraries and how to build one for yourself.
   Presentation  Event   </description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -470,11 +500,13 @@ For the same reason I have gone through a lot of good articles online, which exp
         <link>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/</link>
         <pubDate>Mon, 03 Aug 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 03 Aug 2015 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/</guid>
         <description>Have you ever thought how the central repository works like Maven Central or JCenter?
 Is it possible to own one for yourself?
 Do you want to host your artifacts in your own private repository?</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         

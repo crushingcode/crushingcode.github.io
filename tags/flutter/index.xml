@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>flutter on Crushing C.O.D.E</title>
+    <title>flutter  on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/flutter/</link>
-    <description>Recent content in flutter on Crushing C.O.D.E</description>
+    <description>Recent content in flutter  on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
@@ -15,7 +16,6 @@
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Fri, 29 Sep 2017 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
-    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,9 +28,11 @@
         <link>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</link>
         <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 29 Sep 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</guid>
         <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         
@@ -54,9 +56,11 @@
         <link>https://crushingcode.github.io/talks/code_and_coffee_aug_2017/</link>
         <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 17 Aug 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/code_and_coffee_aug_2017/</guid>
         <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract   A quick introduction of what Flutter is and what is required to start building apps with Flutter</description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         

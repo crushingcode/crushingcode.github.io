@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>opensource on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/opensource/</link>
@@ -15,7 +16,6 @@
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Sun, 15 May 2016 10:54:24 +0200</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
-    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,9 +28,11 @@
         <link>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</link>
         <pubDate>Sun, 15 May 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 15 May 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</guid>
         <description>I am pretty sure you would agree to the fact that the usual javadoc is not a something everyone likes. The colors are what makes it superrrrrrr boring.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         

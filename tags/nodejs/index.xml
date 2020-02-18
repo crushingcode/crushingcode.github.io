@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>nodejs on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/nodejs/</link>
@@ -15,7 +16,6 @@
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Wed, 16 Oct 2013 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
-    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,10 +28,12 @@
         <link>https://crushingcode.github.io/talks/gdgnd_oct_2013/</link>
         <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 16 Oct 2013 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/talks/gdgnd_oct_2013/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Basic intro of node.js
   Presentation   </description>
         
+        <dc:creator>Nishant Srivastava</dc:creator>
         
         
         

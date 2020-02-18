@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>maven on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/tags/maven/</link>
@@ -15,7 +16,6 @@
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Fri, 29 Jul 2016 10:54:24 +0200</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
-    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,9 +28,11 @@
         <link>https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/</link>
         <pubDate>Fri, 29 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 29 Jul 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/</guid>
         <description>Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -58,9 +60,11 @@
         <link>https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/</link>
         <pubDate>Sun, 17 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 17 Jul 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/</guid>
         <description>If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -88,10 +92,12 @@
         <link>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</link>
         <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 12 Jul 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</guid>
         <description>Developers are a different kind of people altogether. They tend to be lazy but strive to be super efficient at the same time.
 A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -119,10 +125,12 @@ A lot of this can be seen in the Android world where a certain library pops up e
         <link>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</link>
         <pubDate>Tue, 16 Feb 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 16 Feb 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</guid>
         <description>The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.
 For the same reason I have gone through a lot of good articles online, which explain how the whole process works.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -150,11 +158,13 @@ For the same reason I have gone through a lot of good articles online, which exp
         <link>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/</link>
         <pubDate>Mon, 03 Aug 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 03 Aug 2015 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/</guid>
         <description>Have you ever thought how the central repository works like Maven Central or JCenter?
 Is it possible to own one for yourself?
 Do you want to host your artifacts in your own private repository?</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         

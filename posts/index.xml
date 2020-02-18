@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Posts on Crushing C.O.D.E</title>
     <link>https://crushingcode.github.io/posts/</link>
@@ -15,7 +16,6 @@
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
     <lastBuildDate>Sun, 17 Sep 2017 10:54:24 +0200</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
-    <dc:creator>Nishant Srivastava</dc:creator>
     
         <atom:link href="https://crushingcode.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,10 +28,12 @@
         <link>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</link>
         <pubDate>Sun, 17 Sep 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 17 Sep 2017 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</guid>
         <description>Lifecycle events in Android.
 It has been a pain point for Android developers all over the world. It is no brainer that, most of the times the main cause of a memory leak in the codebase is because an invalid state is accessed which is out of sync with the lifecycle of the activity/fragment of the app.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -55,10 +57,12 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</link>
         <pubDate>Sat, 29 Jul 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 29 Jul 2017 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</guid>
         <description>DISCLAIMER: If you consider yourself a beginner, intermediate, expert or a ninja in the Android realm, this secret sauce still applies to you.
  TL;DR: Build Something.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -82,9 +86,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</link>
         <pubDate>Sun, 05 Mar 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 05 Mar 2017 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
         <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -112,9 +118,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
         <pubDate>Sun, 12 Feb 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 12 Feb 2017 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
         <description>While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -142,9 +150,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/rewriting-the-history/</link>
         <pubDate>Fri, 18 Nov 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 18 Nov 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/rewriting-the-history/</guid>
         <description>Most of us are engineers and at the end of the day humans. So basically we all are bound to make mistakes. As an Engineer we make such mistakes in code quite often and even if we do not admit it , they do exist.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -164,9 +174,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/do-you-like-to-adb/</link>
         <pubDate>Fri, 14 Oct 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 14 Oct 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/do-you-like-to-adb/</guid>
         <description>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -194,9 +206,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/whats-in-the-apk/</link>
         <pubDate>Sat, 24 Sep 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 24 Sep 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/whats-in-the-apk/</guid>
         <description>If I give you the code of an android app and ask you to provide me information regarding the android app like minSdkVersion, targetSdkVersion, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -220,9 +234,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/update-dependencies-code-repeat/</link>
         <pubDate>Sat, 03 Sep 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 03 Sep 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/update-dependencies-code-repeat/</guid>
         <description>Agree or not agree, but on an average consensus pretty much every android dev goes through the loop of Update Dependencies.Code.Repeat. for each of his/her android project.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -246,9 +262,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/</link>
         <pubDate>Fri, 29 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 29 Jul 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/</guid>
         <description>Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -276,9 +294,11 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/</link>
         <pubDate>Sun, 17 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 17 Jul 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/</guid>
         <description>If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -306,10 +326,12 @@ It has been a pain point for Android developers all over the world. It is no bra
         <link>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</link>
         <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 12 Jul 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</guid>
         <description>Developers are a different kind of people altogether. They tend to be lazy but strive to be super efficient at the same time.
 A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -337,9 +359,11 @@ A lot of this can be seen in the Android world where a certain library pops up e
         <link>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</link>
         <pubDate>Sun, 15 May 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 15 May 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</guid>
         <description>I am pretty sure you would agree to the fact that the usual javadoc is not a something everyone likes. The colors are what makes it superrrrrrr boring.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -363,10 +387,12 @@ A lot of this can be seen in the Android world where a certain library pops up e
         <link>https://crushingcode.github.io/posts/the-curious-case-of-dependency-conflicts/</link>
         <pubDate>Mon, 02 May 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 02 May 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/the-curious-case-of-dependency-conflicts/</guid>
         <description>If I were to ask a question to a room filled with android developers
  **&amp;ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -390,10 +416,12 @@ A lot of this can be seen in the Android world where a certain library pops up e
         <link>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</link>
         <pubDate>Tue, 16 Feb 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 16 Feb 2016 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</guid>
         <description>The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.
 For the same reason I have gone through a lot of good articles online, which explain how the whole process works.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -421,11 +449,13 @@ For the same reason I have gone through a lot of good articles online, which exp
         <link>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/</link>
         <pubDate>Mon, 03 Aug 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 03 Aug 2015 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/</guid>
         <description>Have you ever thought how the central repository works like Maven Central or JCenter?
 Is it possible to own one for yourself?
 Do you want to host your artifacts in your own private repository?</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -453,10 +483,12 @@ Do you want to host your artifacts in your own private repository?</description>
         <link>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</link>
         <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 21 Jul 2015 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
         <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
  they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
@@ -480,10 +512,12 @@ Do you want to host your artifacts in your own private repository?</description>
         <link>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</link>
         <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 09 Jul 2015 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</guid>
         <description>Tired of being tied to your laptop/desktop while debugging your android apps ?
 Well let me break it to you – You are NOT the FIRST person to do it.</description>
         
+        <dc:creator>Nishant</dc:creator>
         
         
         
