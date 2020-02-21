@@ -564,7 +564,7 @@
       xhr.onload = function () {
         if (xhr.status === 200) {
           fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: sectionType.includes('publication') ? ['title', 'description', 'content'] : ['title', 'abstract'],
+            keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
             includeMatches: enableSearchHighlight,
             shouldSort: true,
             threshold: 0.4,
@@ -1732,7 +1732,7 @@
             <span class="tag">
                 <a href="/tags/flutter/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        flutter 
+                        flutter
                     </span>
                     <span class="taxo__num" dir="auto">
                         2
