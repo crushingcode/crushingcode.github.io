@@ -1211,7 +1211,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.64.1" />
+<meta name="generator" content="Hugo 0.65.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1273,12 +1273,6 @@
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
         }
-        
-        function resetHeight() {
-            document.body.style.height = window.innerHeight + "px";
-        }
-        window.addEventListener("resize", resetHeight);
-        resetHeight();
     </script>
     <div id="container">
         
@@ -1587,7 +1581,7 @@ You can&rsquo;t just ask all android library developers/team maintaining it to u
 <td class="lntd">
 <pre class="chroma"><code class="language-gradle" data-lang="gradle">
 <span class="n">dependencies</span> <span class="o">{</span>
-    <span class="n">compile</span> <span class="nf">fileTree</span><span class="o">(</span><span class="nl">dir:</span> <span class="s1">&#39;libs&#39;</span><span class="o">,</span> <span class="nl">include:</span> <span class="o">[</span><span class="s1">&#39;*.jar&#39;</span><span class="o">]</span><span class="o">)</span>
+    <span class="n">compile</span> <span class="nf">fileTree</span><span class="o">(</span><span class="nl">dir:</span> <span class="s1">&#39;libs&#39;</span><span class="o">,</span> <span class="nl">include:</span> <span class="o">[</span><span class="s1">&#39;*.jar&#39;</span><span class="o">])</span>
     <span class="n">compile</span> <span class="s1">&#39;com.company1.sdk:libA:1.0.2&#39;</span>
     <span class="n">compile</span> <span class="s1">&#39;com.company2.sdk:libB:2.0.3&#39;</span>
     <span class="n">compile</span> <span class="s1">&#39;com.company3.sdk:libC:3.0.4&#39;</span>
@@ -1668,7 +1662,7 @@ release
 <td class="lntd">
 <pre class="chroma"><code class="language-gradle" data-lang="gradle">
 <span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
-  <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">failOnVersionConflict</span><span class="o">(</span><span class="o">)</span>
+  <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">failOnVersionConflict</span><span class="o">()</span>
 <span class="o">}</span>
 
 </code></pre></td></tr></table>

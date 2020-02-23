@@ -1211,7 +1211,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.64.1" />
+<meta name="generator" content="Hugo 0.65.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1273,12 +1273,6 @@
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
         }
-        
-        function resetHeight() {
-            document.body.style.height = window.innerHeight + "px";
-        }
-        window.addEventListener("resize", resetHeight);
-        resetHeight();
     </script>
     <div id="container">
         
@@ -1644,7 +1638,7 @@ Second issue is that to use your android library one would need to include an ex
 <td class="lntd">
 <pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">allprojects</span> <span class="o">{</span>
 	<span class="n">repositories</span> <span class="o">{</span>
-		<span class="o">.</span><span class="o">.</span><span class="o">.</span>
+		<span class="o">...</span>
 		<span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;http://url.to_your_hosted_artifactory_instance.maven_repository&#39;</span> <span class="o">}</span>
 	<span class="o">}</span>
 <span class="o">}</span>
@@ -1666,7 +1660,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 <td class="lntd">
 <pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">allprojects</span> <span class="o">{</span>
 	<span class="n">repositories</span> <span class="o">{</span>
-		<span class="o">.</span><span class="o">.</span><span class="o">.</span>
+		<span class="o">...</span>
 		<span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://www.jitpack.io&#39;</span> <span class="o">}</span>
 	<span class="o">}</span>
 <span class="o">}</span>
@@ -1704,10 +1698,10 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// DONOT DO THIS
-</span><span class="c1"></span><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">String</span> <span class="n">apikey</span><span class="o">,</span> <span class="kt">int</span> <span class="n">refresh</span><span class="o">,</span> <span class="kt">long</span> <span class="n">interval</span><span class="o">,</span> <span class="n">String</span> <span class="n">type</span><span class="o">)</span><span class="o">;</span>
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">String</span> <span class="n">apikey</span><span class="o">,</span> <span class="kt">int</span> <span class="n">refresh</span><span class="o">,</span> <span class="kt">long</span> <span class="n">interval</span><span class="o">,</span> <span class="n">String</span> <span class="n">type</span><span class="o">);</span>
 
 <span class="c1">// DO this
-</span><span class="c1"></span><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ApiSecret</span> <span class="n">apisecret</span><span class="o">)</span><span class="o">;</span>
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ApiSecret</span> <span class="n">apisecret</span><span class="o">);</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>where ApiSecret is an Entity Class, declared as below</p>
@@ -1778,8 +1772,8 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasPermission</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">permission</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">checkCallingOrSelfPermission</span><span class="o">(</span><span class="n">permission</span><span class="o">)</span><span class="o">;</span>
-  <span class="k">return</span> <span class="n">result</span> <span class="o">=</span><span class="o">=</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">;</span>
+  <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">checkCallingOrSelfPermission</span><span class="o">(</span><span class="n">permission</span><span class="o">);</span>
+  <span class="k">return</span> <span class="n">result</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
@@ -1799,7 +1793,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="cm"> * devs to get it on their own and feed it to a function in the 
 </span><span class="cm"> * library.
 </span><span class="cm"> */</span>
-<span class="n">MyAwesomeLibrary</span><span class="o">.</span><span class="na">getEmail</span><span class="o">(</span><span class="s">&#34;username@emailprovider.com&#34;</span><span class="o">)</span><span class="o">;</span>
+<span class="n">MyAwesomeLibrary</span><span class="o">.</span><span class="na">getEmail</span><span class="o">(</span><span class="s">&#34;username@emailprovider.com&#34;</span><span class="o">);</span>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="minimize-requisites">Minimize Requisites</h3>
@@ -1825,7 +1819,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">feature</span> <span class="o">=</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">FEATURE_BLUETOOTH</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isFeatureAvailable</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">feature</span><span class="o">)</span> <span class="o">{</span>
- <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="na">getPackageManager</span><span class="o">(</span><span class="o">)</span><span class="o">.</span><span class="na">hasSystemFeature</span><span class="o">(</span><span class="n">feature</span><span class="o">)</span><span class="o">;</span>
+ <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="na">getPackageManager</span><span class="o">().</span><span class="na">hasSystemFeature</span><span class="o">(</span><span class="n">feature</span><span class="o">);</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
@@ -1845,8 +1839,8 @@ As a rule of thumb support the full spectrum of versions via defining in <code>m
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Method to check if the Android Version on device is greater than or equal to Marshmallow.
-</span><span class="c1"></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isMarshmallow</span><span class="o">(</span><span class="o">)</span><span class="o">{</span>
-    <span class="k">return</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span><span class="o">&gt;</span><span class="o">=</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION_CODES</span><span class="o">.</span><span class="na">M</span><span class="o">;</span>
+</span><span class="c1"></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isMarshmallow</span><span class="o">(){</span>
+    <span class="k">return</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span><span class="o">&gt;=</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION_CODES</span><span class="o">.</span><span class="na">M</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
@@ -1866,7 +1860,7 @@ As a rule of thumb, never log in production. You should use <a href="https://dev
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// In code     
 </span><span class="c1"></span><span class="kt">boolean</span> <span class="n">debuggable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-<span class="n">MyAwesomeLibrary</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="n">apisecret</span><span class="o">,</span><span class="n">debuggable</span><span class="o">)</span><span class="o">;</span>
+<span class="n">MyAwesomeLibrary</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="n">apisecret</span><span class="o">,</span><span class="n">debuggable</span><span class="o">);</span>
 <span class="c1">// In build.gradle     
 </span><span class="c1"></span><span class="n">debuggable</span> <span class="o">=</span> <span class="kc">true</span>
 </code></pre></td></tr></table>
@@ -1890,17 +1884,17 @@ As a rule of thumb, never log in production. You should use <a href="https://dev
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ApiSecret</span> <span class="n">apisecret</span><span class="o">,</span><span class="kt">boolean</span> <span class="n">debuggable</span><span class="o">)</span><span class="o">{</span>
-      <span class="o">.</span><span class="o">.</span><span class="o">.</span>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ApiSecret</span> <span class="n">apisecret</span><span class="o">,</span><span class="kt">boolean</span> <span class="n">debuggable</span><span class="o">){</span>
+      <span class="o">...</span>
       <span class="k">try</span><span class="o">{</span>
-        <span class="o">.</span><span class="o">.</span><span class="o">.</span>
-      <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="o">)</span><span class="o">{</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">debuggable</span><span class="o">)</span><span class="o">{</span>
+        <span class="o">...</span>
+      <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="o">){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">debuggable</span><span class="o">){</span>
           <span class="c1">// This is printed only when debuggable is true
-</span><span class="c1"></span>          <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">(</span><span class="o">)</span><span class="o">;</span>
+</span><span class="c1"></span>          <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
         <span class="o">}</span>
       <span class="o">}</span>
-      <span class="o">.</span><span class="o">.</span><span class="o">.</span><span class="o">.</span>
+      <span class="o">....</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
@@ -1942,12 +1936,12 @@ How to achieve this ? Check in classpath</p>
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">hasOKHttpOnClasspath</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">hasOKHttpOnClasspath</span><span class="o">()</span> <span class="o">{</span>
    <span class="k">try</span> <span class="o">{</span>
-       <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;com.squareup.okhttp3.OkHttpClient&#34;</span><span class="o">)</span><span class="o">;</span>
+       <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;com.squareup.okhttp3.OkHttpClient&#34;</span><span class="o">);</span>
        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">ClassNotFoundException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-       <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">(</span><span class="o">)</span><span class="o">;</span>
+       <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
    <span class="o">}</span>
    <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
 <span class="o">}</span>

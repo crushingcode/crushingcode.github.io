@@ -1211,7 +1211,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.64.1" />
+<meta name="generator" content="Hugo 0.65.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1273,12 +1273,6 @@
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
         }
-        
-        function resetHeight() {
-            document.body.style.height = window.innerHeight + "px";
-        }
-        window.addEventListener("resize", resetHeight);
-        resetHeight();
     </script>
     <div id="container">
         
@@ -1583,7 +1577,7 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="o">)</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="n">context</span><span class="o">)</span><span class="o">;</span>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">init</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>That’s it! Sensey at this point is integrated into your app. Now based on what kind of Gesture you want to detect, you will need to start and stop detectors provided by Sensey.</p>
@@ -1603,14 +1597,14 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">ShakeDetector</span><span class="o">.</span><span class="na">ShakeListener</span> <span class="n">shakeListener</span><span class="o">=</span><span class="k">new</span> <span class="n">ShakeDetector</span><span class="o">.</span><span class="na">ShakeListener</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
-    <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onShakeDetected</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">ShakeDetector</span><span class="o">.</span><span class="na">ShakeListener</span> <span class="n">shakeListener</span><span class="o">=</span><span class="k">new</span> <span class="n">ShakeDetector</span><span class="o">.</span><span class="na">ShakeListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onShakeDetected</span><span class="o">()</span> <span class="o">{</span>
        <span class="c1">// Shake detected, do something
 </span><span class="c1"></span>   <span class="o">}</span>
-   <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onShakeStopped</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+   <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onShakeStopped</span><span class="o">()</span> <span class="o">{</span>
        <span class="c1">// Shake stopped, do something
 </span><span class="c1"></span>   <span class="o">}</span>
-<span class="o">}</span><span class="o">;</span>
+<span class="o">};</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Now to start listening for Shake gesture, pass the instance <code>shakeListener</code> to <code>startShakeDetection()</code> function</p>
@@ -1619,7 +1613,7 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="o">)</span><span class="o">.</span><span class="na">startShakeDetection</span><span class="o">(</span><span class="n">shakeListener</span><span class="o">)</span><span class="o">;</span>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startShakeDetection</span><span class="o">(</span><span class="n">shakeListener</span><span class="o">);</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>To stop listening for Shake gesture, pass the instance <code>shakeListener</code> to <code>stopShakeDetection()</code> function</p>
@@ -1628,7 +1622,7 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="o">)</span><span class="o">.</span><span class="na">stopShakeDetection</span><span class="o">(</span><span class="n">shakeListener</span><span class="o">)</span><span class="o">;</span>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">stopShakeDetection</span><span class="o">(</span><span class="n">shakeListener</span><span class="o">);</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Yup, that’s about all it takes to know if a shake gesture was performed and when it stopped.</p>

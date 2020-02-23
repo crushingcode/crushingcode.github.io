@@ -1211,7 +1211,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.64.1" />
+<meta name="generator" content="Hugo 0.65.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1273,12 +1273,6 @@
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
         }
-        
-        function resetHeight() {
-            document.body.style.height = window.innerHeight + "px";
-        }
-        window.addEventListener("resize", resetHeight);
-        resetHeight();
     </script>
     <div id="container">
         
@@ -1566,7 +1560,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="kt">def</span>  <span class="n">supportLibVer</span> <span class="o">=</span> <span class="s2">&#34;24.2.0&#34;</span>
-<span class="o">.</span><span class="o">.</span>
+<span class="o">..</span>
 <span class="n">dependencies</span> <span class="o">{</span>
   <span class="n">compile</span> <span class="s2">&#34;com.android.support:appcompat-v7:$supportLibVer&#34;</span>
 <span class="o">}</span>
@@ -1611,7 +1605,7 @@ Gradle&rsquo;s <a href="https://docs.gradle.org/current/userguide/writing_build_
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">.</span><span class="o">.</span>
+<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">..</span>
 <span class="n">dependencies</span> <span class="o">{</span>
   <span class="n">compile</span> <span class="s2">&#34;com.android.support:appcompat-v7:$rootProject.ext.supportLibVer&#34;</span>
 <span class="o">}</span>
@@ -1675,18 +1669,18 @@ This is what I did next in each Project&rsquo;s root <code>build.gradle</code>, 
 <td class="lntd">
 <pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="c1">// Top-level build file where you can add configuration options common to all sub-projects/modules.
 </span><span class="c1"></span><span class="n">buildscript</span> <span class="o">{</span>
-    <span class="o">.</span><span class="o">.</span><span class="o">.</span>
+    <span class="o">...</span>
 <span class="o">}</span>
 
 <span class="n">allprojects</span> <span class="o">{</span>
-    <span class="o">.</span><span class="o">.</span>
+    <span class="o">..</span>
 <span class="o">}</span>
 
 <span class="c1">// This is added to apply the gradle file to each module under the project
 </span><span class="c1"></span><span class="n">subprojects</span> <span class="o">{</span>
     <span class="n">apply</span> <span class="nl">from:</span> <span class="s1">&#39;../../dependencies.gradle&#39;</span>
 <span class="o">}</span>
-<span class="o">.</span><span class="o">.</span>
+<span class="o">..</span>
 
 </code></pre></td></tr></table>
 </div>
@@ -1699,7 +1693,7 @@ This is what I did next in each Project&rsquo;s root <code>build.gradle</code>, 
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">.</span><span class="o">.</span>
+<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">..</span>
 <span class="n">dependencies</span> <span class="o">{</span>
   <span class="n">compile</span> <span class="s2">&#34;com.android.support:appcompat-v7:$supportLibVer&#34;</span>
 <span class="o">}</span>
@@ -1739,23 +1733,23 @@ This is what I did next in each Project&rsquo;s root <code>build.gradle</code>, 
 </span><span class="c1"></span><span class="n">buildscript</span> <span class="o">{</span>
     <span class="c1">// This is added to apply the gradle file to facilitate providing variable values to root build.gradle of the project
 </span><span class="c1"></span>    <span class="n">apply</span> <span class="nl">from:</span> <span class="s1">&#39;../dependencies.gradle&#39;</span>
-    <span class="o">.</span><span class="o">.</span>
+    <span class="o">..</span>
     <span class="n">dependencies</span> <span class="o">{</span>
         <span class="n">classpath</span> <span class="s2">&#34;com.android.tools.build:gradle:$androidPluginVer&#34;</span>
-        <span class="o">.</span><span class="o">.</span>
+        <span class="o">..</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
 
 <span class="n">allprojects</span> <span class="o">{</span>
-    <span class="o">.</span><span class="o">.</span>
+    <span class="o">..</span>
 <span class="o">}</span>
 
 <span class="c1">// This is added to apply the gradle file to each module under the project
 </span><span class="c1"></span><span class="n">subprojects</span> <span class="o">{</span>
     <span class="n">apply</span> <span class="nl">from:</span> <span class="s1">&#39;../../dependencies.gradle&#39;</span>
 <span class="o">}</span>
-<span class="o">.</span><span class="o">.</span>
+<span class="o">..</span>
 </code></pre></td></tr></table>
 </div>
 </div><p><a href="https://github.com/nisrulz/android-examples/blob/master/ActivityLifecycle/build.gradle">Here is a functional root <code>build.gradle</code> script from one of the project of my repository itself</a> and <a href="https://github.com/nisrulz/android-examples/blob/master/ActivityLifecycle/app/build.gradle">Here is a functional module <code>build.gradle</code> script from the same project of my repository itself</a>. You can see I extended the idea to start externalizing the variable for <code>buildToolsVersion</code> and <code>compileSdkVersion</code> too :D</p>

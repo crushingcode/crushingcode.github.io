@@ -1211,7 +1211,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.64.1" />
+<meta name="generator" content="Hugo 0.65.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1273,12 +1273,6 @@
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
         }
-        
-        function resetHeight() {
-            document.body.style.height = window.innerHeight + "px";
-        }
-        window.addEventListener("resize", resetHeight);
-        resetHeight();
     </script>
     <div id="container">
         
@@ -1636,12 +1630,12 @@ A lot of this can be seen in the Android world where a certain library pops up e
 <td class="lntd">
 <pre class="chroma"><code class="language-gradle" data-lang="gradle"> <span class="n">dependencies</span> <span class="o">{</span>
     <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:2.1.3&#39;</span>
-    <span class="o">.</span><span class="o">.</span>
-    <span class="o">.</span><span class="o">.</span>
+    <span class="o">..</span>
+    <span class="o">..</span>
     <span class="c1">// Required plugins added to classpath to facilitate pushing to Jcenter/Bintray
 </span><span class="c1"></span>    <span class="n">classpath</span> <span class="s1">&#39;com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7&#39;</span>
     <span class="n">classpath</span> <span class="s1">&#39;com.github.dcendents:android-maven-gradle-plugin:1.4.1&#39;</span>
-    <span class="o">.</span><span class="o">.</span>
+    <span class="o">..</span>
    <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
@@ -1715,8 +1709,8 @@ A lot of this can be seen in the Android world where a certain library pops up e
    <span class="n">allLicenses</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&#34;Apache-2.0&#34;</span><span class="o">]</span>
  <span class="o">}</span>
 
- <span class="o">.</span><span class="o">.</span>
- <span class="o">.</span><span class="o">.</span>
+ <span class="o">..</span>
+ <span class="o">..</span>
 
  <span class="c1">// Place it at the end of the file
 </span><span class="c1"></span> <span class="n">apply</span> <span class="nl">from:</span> <span class="s1">&#39;https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle&#39;</span>
@@ -1766,7 +1760,7 @@ No value has been specified for property 'user'.
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">.</span><span class="o">/</span><span class="n">gradlew</span> <span class="n">clean</span> <span class="n">build</span> <span class="n">install</span> <span class="n">bintrayUpload</span>
+<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">./</span><span class="n">gradlew</span> <span class="n">clean</span> <span class="n">build</span> <span class="n">install</span> <span class="n">bintrayUpload</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -1791,7 +1785,7 @@ No value has been specified for property 'user'.
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">repositories</span> <span class="o">{</span>
-   <span class="n">jcenter</span><span class="o">(</span><span class="o">)</span>
+   <span class="n">jcenter</span><span class="o">()</span>
    <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://dl.bintray.com/&lt;bintray_username&gt;/maven&#39;</span> <span class="o">}</span>
 <span class="o">}</span>
 <span class="n">dependencies</span> <span class="o">{</span>
@@ -1812,7 +1806,7 @@ No value has been specified for property 'user'.
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">repositories</span> <span class="o">{</span>
-   <span class="n">jcenter</span><span class="o">(</span><span class="o">)</span>
+   <span class="n">jcenter</span><span class="o">()</span>
    <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://dl.bintray.com/nisrulz/maven&#39;</span> <span class="o">}</span>
 <span class="o">}</span>
 <span class="n">dependencies</span> <span class="o">{</span>
