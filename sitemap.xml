@@ -163,6 +163,21 @@
   </url>
   
   <url>
+    <loc>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</loc>
+    <lastmod>2019-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/localization/</loc>
+    <lastmod>2019-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/</loc>
+    <lastmod>2019-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://crushingcode.github.io/tags/android-library/</loc>
     <lastmod>2019-03-15T00:00:00+00:00</lastmod>
   </url>
@@ -219,11 +234,6 @@
   
   <url>
     <loc>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</loc>
-    <lastmod>2017-09-17T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/posts/</loc>
     <lastmod>2017-09-17T10:54:24+02:00</lastmod>
   </url>
   

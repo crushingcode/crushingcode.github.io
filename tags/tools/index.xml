@@ -152,6 +152,39 @@
       </item>
       
       <item>
+        <title>Building an automated Android Localization Tool today</title>
+        <link>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</link>
+        <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 28 Mar 2019 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</guid>
+        <description>TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 😎
+So this started when I found the below tweet:</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>localization</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Do you like to ADB?</title>
         <link>https://crushingcode.github.io/posts/do-you-like-to-adb/</link>
         <pubDate>Fri, 14 Oct 2016 10:54:24 +0200</pubDate>

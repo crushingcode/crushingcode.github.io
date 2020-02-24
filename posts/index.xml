@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Sun, 17 Sep 2017 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 28 Mar 2019 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -22,6 +22,39 @@
     
     
 
+      
+      <item>
+        <title>Building an automated Android Localization Tool today</title>
+        <link>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</link>
+        <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 28 Mar 2019 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</guid>
+        <description>TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 😎
+So this started when I found the below tweet:</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>localization</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Is your Android Library, Lifecycle-Aware?</title>
