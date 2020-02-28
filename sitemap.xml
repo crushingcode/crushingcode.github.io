@@ -74,12 +74,17 @@
   
   <url>
     <loc>https://crushingcode.github.io/gallery/doodles/</loc>
-    <lastmod>2020-02-16T17:01:06+01:00</lastmod>
+    <lastmod>2020-02-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://crushingcode.github.io/gallery/</loc>
-    <lastmod>2020-02-16T17:01:06+01:00</lastmod>
+    <lastmod>2020-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/gallery/graphic_design/</loc>
+    <lastmod>2020-02-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -218,6 +223,21 @@
   </url>
   
   <url>
+    <loc>https://crushingcode.github.io/tags/gradle/</loc>
+    <lastmod>2018-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</loc>
+    <lastmod>2018-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.github.io/tags/shell/</loc>
+    <lastmod>2018-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://crushingcode.github.io/talks/devfest_vancouver_2017/</loc>
     <lastmod>2017-10-14T00:00:00+00:00</lastmod>
   </url>
@@ -315,11 +335,6 @@
   <url>
     <loc>https://crushingcode.github.io/posts/whats-in-the-apk/</loc>
     <lastmod>2016-09-24T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.github.io/tags/gradle/</loc>
-    <lastmod>2016-09-03T10:54:24+02:00</lastmod>
   </url>
   
   <url>

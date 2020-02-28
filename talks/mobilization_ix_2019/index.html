@@ -1210,7 +1210,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.65.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1218,7 +1218,9 @@
 <meta name="msapplication-navbutton-color" content="#fff">
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
 <link rel="canonical" href="https://crushingcode.github.io/talks/mobilization_ix_2019/">
+
 <link rel="manifest" href="/manifest.json">
 
   
@@ -1345,56 +1347,94 @@
   <span aria-hidden="true"></span>
 </a>
 <div class="navbarm__collapse" data-open="false">
-  <ul>
+  <ul dir="ltr">
     
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/posts">Posts</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/posts">Posts</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/archive">Archive</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/archive">Archive</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item active">
-        <a href="/talks">Talks</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item active">
+          <a href="/talks">Talks</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/showcase">Showcase</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/showcase">Showcase</a>
+        </li>
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/gallery">Gallery</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/gallery">
+            Gallery
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+          </a>
+        </li>
+
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/gallery/doodles">Doodles</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/gallery/graphic_design">Graphic Design</a>
+          </li>
+        
+
+      
+      
     
       
       
       
       
-      <li class="navbarm__menu--item ">
-        <a href="/about">About</a>
-      </li>
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/about">About</a>
+        </li>
+      
+      
     
 
     
@@ -1478,13 +1518,13 @@
     <a href="/gallery" class="navbar__menu-item "
       dir="ltr">
       Gallery
-      <span class="navbar__menu-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
-      </span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
     </a>
     <div class="navbar__dropdown--content">
       
       <a href="/gallery/doodles" class="navbar__dropdown--item" dir="ltr">Doodles</a>
+      
+      <a href="/gallery/graphic_design" class="navbar__dropdown--item" dir="ltr">Graphic Design</a>
       
     </div>
   </div>
@@ -1505,11 +1545,10 @@
 
 <main class="single__main main">
   
-  <noscript>
-    Please enable Javascript to view the contents
-  </noscript>
-  <div class="single hide">
-    <script>document.querySelector('.single').classList.remove('hide')</script>
+  
+  <div class="single ">
+    <div class="single__nojs">This page looks best with JavaScript enabled</div>
+    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="false">Cooking with Coroutines Recipes @Mobilization IX</h2>
     <div class="single__meta">
       
@@ -1555,6 +1594,7 @@
 </center>
 
     </article>
+    
     <script>
   'use strict';
   

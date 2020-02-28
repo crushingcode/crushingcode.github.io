@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Sun, 16 Feb 2020 17:01:06 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
@@ -26,10 +26,28 @@
       <item>
         <title>Doodles</title>
         <link>https://crushingcode.github.io/gallery/doodles/</link>
-        <pubDate>Sun, 16 Feb 2020 17:01:06 +0100</pubDate>
+        <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Sun, 16 Feb 2020 17:01:06 +0100</atom:modified>
+        <atom:modified>Sun, 16 Feb 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/gallery/doodles/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Graphic Design</title>
+        <link>https://crushingcode.github.io/gallery/graphic_design/</link>
+        <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 16 Feb 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.github.io/gallery/graphic_design/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

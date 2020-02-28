@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Sat, 03 Sep 2016 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 06 Apr 2018 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.github.io/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
@@ -24,7 +24,43 @@
 
       
       <item>
-        <title>Update Dependencies .Code .Repeat.</title>
+        <title>How I reduced my Android build times by 89%</title>
+        <link>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</link>
+        <pubDate>Fri, 06 Apr 2018 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 06 Apr 2018 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</guid>
+        <description>This isn’t a click-bait article! I will explain how to make your Android build time shorter than the reading time of this post (hopefully) 🏃🏻</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>gradle</category>
+            
+          
+            
+              <category>shell</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Update Dependencies-Code-Repeat</title>
         <link>https://crushingcode.github.io/posts/update-dependencies-code-repeat/</link>
         <pubDate>Sat, 03 Sep 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
@@ -33,9 +69,9 @@
         <description>Agree or not agree, but on an average consensus pretty much every android dev goes through the loop of Update Dependencies.Code.Repeat. for each of his/her android project.</description>
         
         <dc:creator>Nishant</dc:creator>
+        <media:content url="https://crushingcode.github.io//images/posts/updatedependency/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        
-        
+        <media:content url="https://crushingcode.github.io//images/posts/updatedependency/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             

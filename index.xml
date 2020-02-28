@@ -51,8 +51,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 28 Mar 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</guid>
-        <description>TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 😎
-So this started when I found the below tweet:</description>
+        <description>TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 🐼  So this started when I found the below tweet:</description>
         
         <dc:creator>Nishant</dc:creator>
         
@@ -78,6 +77,42 @@ So this started when I found the below tweet:</description>
       </item>
       
       <item>
+        <title>How I reduced my Android build times by 89%</title>
+        <link>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</link>
+        <pubDate>Fri, 06 Apr 2018 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 06 Apr 2018 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</guid>
+        <description>This isn’t a click-bait article! I will explain how to make your Android build time shorter than the reading time of this post (hopefully) 🏃🏻</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>gradle</category>
+            
+          
+            
+              <category>shell</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Is your Android Library, Lifecycle-Aware?</title>
         <link>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</link>
         <pubDate>Sun, 17 Sep 2017 10:54:24 +0200</pubDate>
@@ -90,7 +125,7 @@ It has been a pain point for Android developers all over the world. It is no bra
         <dc:creator>Nishant</dc:creator>
         
         
-        
+        <media:content url="https://crushingcode.github.io//images/posts/is-your-android-library-lifecycle-aware/header.png" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
@@ -142,10 +177,10 @@ It has been a pain point for Android developers all over the world. It is no bra
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 05 Mar 2017 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
-        <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.</description>
+        <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;.</description>
         
         <dc:creator>Nishant</dc:creator>
-        
+        <media:content url="https://crushingcode.github.io//images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/header.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -233,9 +268,9 @@ It has been a pain point for Android developers all over the world. It is no bra
         <description>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.</description>
         
         <dc:creator>Nishant</dc:creator>
+        <media:content url="https://crushingcode.github.io//images/posts/doyouliketoadb/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        
-        
+        <media:content url="https://crushingcode.github.io//images/posts/doyouliketoadb/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
@@ -265,9 +300,9 @@ It has been a pain point for Android developers all over the world. It is no bra
         <description>If I give you the code of an android app and ask you to provide me information regarding the android app like minSdkVersion, targetSdkVersion, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes.</description>
         
         <dc:creator>Nishant</dc:creator>
+        <media:content url="https://crushingcode.github.io//images/posts/whatsintheapk/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        
-        
+        <media:content url="https://crushingcode.github.io//images/posts/whatsintheapk/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
@@ -284,7 +319,7 @@ It has been a pain point for Android developers all over the world. It is no bra
       </item>
       
       <item>
-        <title>Update Dependencies .Code .Repeat.</title>
+        <title>Update Dependencies-Code-Repeat</title>
         <link>https://crushingcode.github.io/posts/update-dependencies-code-repeat/</link>
         <pubDate>Sat, 03 Sep 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
@@ -293,9 +328,9 @@ It has been a pain point for Android developers all over the world. It is no bra
         <description>Agree or not agree, but on an average consensus pretty much every android dev goes through the loop of Update Dependencies.Code.Repeat. for each of his/her android project.</description>
         
         <dc:creator>Nishant</dc:creator>
+        <media:content url="https://crushingcode.github.io//images/posts/updatedependency/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        
-        
+        <media:content url="https://crushingcode.github.io//images/posts/updatedependency/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             

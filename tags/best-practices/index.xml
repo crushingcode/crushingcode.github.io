@@ -251,10 +251,10 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 05 Mar 2017 10:54:24 +0200</atom:modified>
         <guid>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
-        <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.</description>
+        <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;.</description>
         
         <dc:creator>Nishant</dc:creator>
-        
+        <media:content url="https://crushingcode.github.io//images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/header.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
