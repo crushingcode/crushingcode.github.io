@@ -45,6 +45,34 @@
 
       
       <item>
+        <title>Terminal Foo: Triggering Notifications from CMDLine 📟</title>
+        <link>https://crushingcode.github.io/posts/trigger-notification-when-task-over/</link>
+        <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 01 Mar 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.github.io/posts/trigger-notification-when-task-over/</guid>
+        <description>Executing tasks and processes is pretty common in the Terminal. Having them run and then pipe the output into another one, transforming the output, triggering a sub-process/task, etc.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        <media:content url="https://crushingcode.github.io//images/posts/trigger-notification-when-task-over/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        <media:content url="https://crushingcode.github.io//images/posts/trigger-notification-when-task-over/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tricks</category>
+            
+          
+            
+              <category>terminal</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Building an automated Android Localization Tool today</title>
         <link>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</link>
         <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
