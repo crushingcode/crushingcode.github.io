@@ -1716,6 +1716,7 @@ git push origin 1.0
 <p>The code for the AwesomeLibrary and this guide itself is open sourced and available on <a href="https://github.com/nisrulz/UploadToJitpack">github</a></p>
 <p>Star it or just fork it to use it.</p>
 <p>And thats it for this series. I hope it helps people to deploy their android libraries for the world to use.</p>
+<p>If you have suggestions or maybe would like me to add something to the content here, please let me know.</p>
 <p>Have fun crushing code :D</p>
 
     </article>
@@ -2676,7 +2677,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var clipInit = false;
     var preChromaElem = document.querySelectorAll('pre.chroma');
     var langCodeElem = document.querySelectorAll('.language-code');
-    var dolorCodeElem = document.querySelectorAll('div.language-\\$');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
     var gtCodeElem = document.querySelectorAll('div.language-\\>');
 
     var makeClipboard = function(elem) {
@@ -2733,7 +2734,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var newClipboardElem = document.createElement('span');
             newClipboardElem.setAttribute('class', 'copy-to-clipboard');
             newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            closest(code, 'div.chroma').append(newClipboardElem);
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
           }
         }
       }
@@ -2760,8 +2761,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }) : null;
 
-    dolorCodeElem ? 
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
       elem.querySelectorAll('code').forEach(function (codeElem) {
         makeSymbolClipboard(codeElem);
       });
@@ -2777,8 +2778,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-    dolorCodeElem ?
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ?
+    dollarCodeElem.forEach(function(elem) {
       var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
       lnts ? 
       lnts.forEach(function(lnt) {

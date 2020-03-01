@@ -1753,8 +1753,7 @@ As of writting this post the latest Gradle Version is 2.13 in which this is avai
 <p>Thats pretty neat , isn&rsquo;t it.</p>
 <p>I am pretty sure this would enable you to find the conflicts and solve it too.</p>
 <p>This also goes with the disclaimer that trying to resolve dependency conflicts this way is not the preferred way. You should always try to be using the latest version of the dependencies as well as maintain your library to use the same. This post basically defines the process to enable you to try and figure out why your build is failing and how to bypass it for the time being.</p>
-<p>Thats all for today folks.<br />
-Keep crushing code until next post :)</p>
+<p>If you have suggestions or maybe would like me to add something to the content here, please let me know.</p>
 <p>Reference : <a href="https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html#org.gradle.api.artifacts.ResolutionStrategy:failOnVersionConflict()">Gradle Docs</a></p>
 
     </article>
@@ -2684,7 +2683,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var clipInit = false;
     var preChromaElem = document.querySelectorAll('pre.chroma');
     var langCodeElem = document.querySelectorAll('.language-code');
-    var dolorCodeElem = document.querySelectorAll('div.language-\\$');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
     var gtCodeElem = document.querySelectorAll('div.language-\\>');
 
     var makeClipboard = function(elem) {
@@ -2741,7 +2740,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var newClipboardElem = document.createElement('span');
             newClipboardElem.setAttribute('class', 'copy-to-clipboard');
             newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            closest(code, 'div.chroma').append(newClipboardElem);
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
           }
         }
       }
@@ -2768,8 +2767,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }) : null;
 
-    dolorCodeElem ? 
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
       elem.querySelectorAll('code').forEach(function (codeElem) {
         makeSymbolClipboard(codeElem);
       });
@@ -2785,8 +2784,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-    dolorCodeElem ?
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ?
+    dollarCodeElem.forEach(function(elem) {
       var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
       lnts ? 
       lnts.forEach(function(lnt) {

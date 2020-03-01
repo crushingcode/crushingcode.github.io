@@ -1953,12 +1953,10 @@
 </ul>
 <p>So as you can see they are pretty light in terms of adding method count. Support library is part of the app module and something usually all apps nowadays have, so you are basically not shipping your android library with that. 😅</p>
 <p>As mentioned at the start of this post, the code for above is available on github <a href="https://github.com/nisrulz/android-examples/tree/develop/LifeCycleCompForLib">here</a>.</p>
-<p>If you have suggestions or maybe would like me to add something to the content here, please let me know.<br />
-Till then keep crushing code 🤓</p>
+<p>If you have suggestions or maybe would like me to add something to the content here, please let me know.</p>
 <hr />
 <blockquote>
 <p>I gave a talk on this topic at <a href="http://droidcon.de/en/sessions/things-i-wish-i-knew-when-i-started-building-android-sdklibraries">Droidcon Berlin ’17</a>, checkout the slides <a href="https://speakerdeck.com/nisrulz/libraries">here</a>.This post got featured in <a href="http://androidweekly.net/issues/issue-276">Android Weekly Issue 276</a>! 😎</p>
-<p>P.S. : This post is also published on <a href="https://android.jlelse.eu/is-your-android-library-lifecycle-aware-127629d32dcc">medium.</a></p>
 </blockquote>
 
     </article>
@@ -2919,7 +2917,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var clipInit = false;
     var preChromaElem = document.querySelectorAll('pre.chroma');
     var langCodeElem = document.querySelectorAll('.language-code');
-    var dolorCodeElem = document.querySelectorAll('div.language-\\$');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
     var gtCodeElem = document.querySelectorAll('div.language-\\>');
 
     var makeClipboard = function(elem) {
@@ -2976,7 +2974,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var newClipboardElem = document.createElement('span');
             newClipboardElem.setAttribute('class', 'copy-to-clipboard');
             newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            closest(code, 'div.chroma').append(newClipboardElem);
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
           }
         }
       }
@@ -3003,8 +3001,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }) : null;
 
-    dolorCodeElem ? 
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
       elem.querySelectorAll('code').forEach(function (codeElem) {
         makeSymbolClipboard(codeElem);
       });
@@ -3020,8 +3018,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-    dolorCodeElem ?
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ?
+    dollarCodeElem.forEach(function(elem) {
       var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
       lnts ? 
       lnts.forEach(function(lnt) {

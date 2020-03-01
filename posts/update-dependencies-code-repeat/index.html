@@ -1820,8 +1820,7 @@ This is what I did next in each Project&rsquo;s root <code>build.gradle</code>, 
 <blockquote>
 <p>Got featured in <a href="http://androidweekly.net/issues/issue-221">AndroidWeekly Issue 221</a>, thank you for the love</p>
 </blockquote>
-<p>Comment/Suggest me a better approach, if you know one.</p>
-<p>Keep on crushing code!🤓 😁</p>
+<p>If you have suggestions or maybe would like me to add something to the content here, please let me know.</p>
 
     </article>
     
@@ -2781,7 +2780,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var clipInit = false;
     var preChromaElem = document.querySelectorAll('pre.chroma');
     var langCodeElem = document.querySelectorAll('.language-code');
-    var dolorCodeElem = document.querySelectorAll('div.language-\\$');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
     var gtCodeElem = document.querySelectorAll('div.language-\\>');
 
     var makeClipboard = function(elem) {
@@ -2838,7 +2837,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var newClipboardElem = document.createElement('span');
             newClipboardElem.setAttribute('class', 'copy-to-clipboard');
             newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            closest(code, 'div.chroma').append(newClipboardElem);
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
           }
         }
       }
@@ -2865,8 +2864,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }) : null;
 
-    dolorCodeElem ? 
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
       elem.querySelectorAll('code').forEach(function (codeElem) {
         makeSymbolClipboard(codeElem);
       });
@@ -2882,8 +2881,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-    dolorCodeElem ?
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ?
+    dollarCodeElem.forEach(function(elem) {
       var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
       lnts ? 
       lnts.forEach(function(lnt) {

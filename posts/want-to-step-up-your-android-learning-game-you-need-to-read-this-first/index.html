@@ -1612,9 +1612,7 @@
 <blockquote>
 <p>P.S: I did a write up sometime back about how I manage dependencies for such a huge number of example apps. If you are interested in that you can find that <a href="http://crushingcode.nisrulz.com/update-dependencies-code-repeat/">here</a></p>
 </blockquote>
-<p>Until next post keep crushing code 🤓</p>
-<p>Checkout my <a href="https://github.com/nisrulz">Github</a> or simply follow me on <a href="https://twitter.com/nisrulz">Twitter</a> 😁</p>
-<p>P.S. : This post is also published on <a href="https://medium.com/@nisrulz/want-to-step-up-your-android-learning-game-you-need-to-read-this-first-e0cb9a7816a3">medium.</a></p>
+<p>If you have suggestions or maybe would like me to add something to the content here, please let me know.</p>
 
     </article>
     
@@ -2574,7 +2572,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var clipInit = false;
     var preChromaElem = document.querySelectorAll('pre.chroma');
     var langCodeElem = document.querySelectorAll('.language-code');
-    var dolorCodeElem = document.querySelectorAll('div.language-\\$');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
     var gtCodeElem = document.querySelectorAll('div.language-\\>');
 
     var makeClipboard = function(elem) {
@@ -2631,7 +2629,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var newClipboardElem = document.createElement('span');
             newClipboardElem.setAttribute('class', 'copy-to-clipboard');
             newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            closest(code, 'div.chroma').append(newClipboardElem);
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
           }
         }
       }
@@ -2658,8 +2656,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }) : null;
 
-    dolorCodeElem ? 
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
       elem.querySelectorAll('code').forEach(function (codeElem) {
         makeSymbolClipboard(codeElem);
       });
@@ -2675,8 +2673,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-    dolorCodeElem ?
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ?
+    dollarCodeElem.forEach(function(elem) {
       var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
       lnts ? 
       lnts.forEach(function(lnt) {

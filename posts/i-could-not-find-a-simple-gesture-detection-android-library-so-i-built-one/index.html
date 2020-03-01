@@ -1710,9 +1710,7 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 <p>For anyone who wishes to get more advance and wants to tap into the raw SensorEvent values.</p>
 <p>That said, the android library isn’t perfect and I would love it if you can try it out and file <a href="https://github.com/nisrulz/sensey/issues">issues</a> on Github to make it better.</p>
 <p><a href="https://github.com/nisrulz/sensey">Check out Sensey on Github (Star the repo if you find it useful)</a></p>
-<p>If you have suggestions, please let me know in the comment section.</p>
-<p>Checkout my <a href="https://github.com/nisrulz">Github</a> or simply follow me on <a href="https://twitter.com/nisrulz">Twitter</a> and keep on crushing code!🤓 😁</p>
-<p>P.S. : This post is also published on <a href="https://android.jlelse.eu/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one-334c0a307c16">medium.</a></p>
+<p>If you have suggestions or maybe would like me to add something to the content here, please let me know.</p>
 
     </article>
     
@@ -2672,7 +2670,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var clipInit = false;
     var preChromaElem = document.querySelectorAll('pre.chroma');
     var langCodeElem = document.querySelectorAll('.language-code');
-    var dolorCodeElem = document.querySelectorAll('div.language-\\$');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
     var gtCodeElem = document.querySelectorAll('div.language-\\>');
 
     var makeClipboard = function(elem) {
@@ -2729,7 +2727,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var newClipboardElem = document.createElement('span');
             newClipboardElem.setAttribute('class', 'copy-to-clipboard');
             newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            closest(code, 'div.chroma').append(newClipboardElem);
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
           }
         }
       }
@@ -2756,8 +2754,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }) : null;
 
-    dolorCodeElem ? 
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
       elem.querySelectorAll('code').forEach(function (codeElem) {
         makeSymbolClipboard(codeElem);
       });
@@ -2773,8 +2771,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-    dolorCodeElem ?
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ?
+    dollarCodeElem.forEach(function(elem) {
       var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
       lnts ? 
       lnts.forEach(function(lnt) {

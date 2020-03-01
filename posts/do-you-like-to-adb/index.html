@@ -2073,8 +2073,7 @@ adb version
 </div><p>Comment/Suggestions always welcome.</p>
 <p>If you would like to get more of such android tips and tricks, just hop onto my <strong><a href="https://github.com/nisrulz/android-tips-tricks">Android Tips &amp; Tricks</a></strong> github repository. I keep updating it constantly.</p>
 <p>Keep on crushing code!🤓 😁</p>
-<p>P.S. : This post is also published on <a href="https://medium.com/@nisrulz/do-you-like-to-adb-fcae3655b9c8#.e4y1a7km5">medium.</a><br />
-I would like to mention that <a href="https://twitter.com/pbreault">@pbreault</a> wrote a plugin for Android Studio and Intellij IDEA called <a href="https://plugins.jetbrains.com/plugin/7380">ADB Idea</a> <a href="https://github.com/pbreault/adb-idea">[Github]</a>, which allows you to do some of the common and straightforward interactions with ADB inside IntelliJ platform i.e Android Studio. Do check it out too 🙂</p>
+<p>I would like to mention that <a href="https://twitter.com/pbreault">@pbreault</a> wrote a plugin for Android Studio and Intellij IDEA called <a href="https://plugins.jetbrains.com/plugin/7380">ADB Idea</a> <a href="https://github.com/pbreault/adb-idea">[Github]</a>, which allows you to do some of the common and straightforward interactions with ADB inside IntelliJ platform i.e Android Studio. Do check it out too 🙂</p>
 
     </article>
     
@@ -3034,7 +3033,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var clipInit = false;
     var preChromaElem = document.querySelectorAll('pre.chroma');
     var langCodeElem = document.querySelectorAll('.language-code');
-    var dolorCodeElem = document.querySelectorAll('div.language-\\$');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
     var gtCodeElem = document.querySelectorAll('div.language-\\>');
 
     var makeClipboard = function(elem) {
@@ -3091,7 +3090,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var newClipboardElem = document.createElement('span');
             newClipboardElem.setAttribute('class', 'copy-to-clipboard');
             newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            closest(code, 'div.chroma').append(newClipboardElem);
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
           }
         }
       }
@@ -3118,8 +3117,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }) : null;
 
-    dolorCodeElem ? 
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
       elem.querySelectorAll('code').forEach(function (codeElem) {
         makeSymbolClipboard(codeElem);
       });
@@ -3135,8 +3134,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-    dolorCodeElem ?
-    dolorCodeElem.forEach(function(elem) {
+    dollarCodeElem ?
+    dollarCodeElem.forEach(function(elem) {
       var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
       lnts ? 
       lnts.forEach(function(lnt) {
