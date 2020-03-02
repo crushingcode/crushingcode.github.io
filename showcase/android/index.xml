@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Android on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/showcase/android/</link>
+    <link>https://crushingcode.nisrulz.com/showcase/android/</link>
     <description>Recent content in Android on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/showcase/android/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/showcase/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Android Tips-Tricks</title>
-        <link>https://crushingcode.github.io/showcase/android/android_tips_tricks/</link>
+        <link>https://crushingcode.nisrulz.com/showcase/android/android_tips_tricks/</link>
         <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/showcase/android/android_tips_tricks/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/android/android_tips_tricks/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

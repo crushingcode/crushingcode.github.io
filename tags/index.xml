@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/</link>
+    <link>https://crushingcode.nisrulz.com/tags/</link>
     <description>Recent content in Tags on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>coroutines</title>
-        <link>https://crushingcode.github.io/tags/coroutines/</link>
+        <link>https://crushingcode.nisrulz.com/tags/coroutines/</link>
         <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/coroutines/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/coroutines/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -43,11 +43,11 @@
       
       <item>
         <title>kotlin</title>
-        <link>https://crushingcode.github.io/tags/kotlin/</link>
+        <link>https://crushingcode.nisrulz.com/tags/kotlin/</link>
         <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/kotlin/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/kotlin/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -61,11 +61,11 @@
       
       <item>
         <title>terminal</title>
-        <link>https://crushingcode.github.io/tags/terminal/</link>
+        <link>https://crushingcode.nisrulz.com/tags/terminal/</link>
         <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/terminal/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/terminal/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -79,11 +79,11 @@
       
       <item>
         <title>tricks</title>
-        <link>https://crushingcode.github.io/tags/tricks/</link>
+        <link>https://crushingcode.nisrulz.com/tags/tricks/</link>
         <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/tricks/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/tricks/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -97,11 +97,11 @@
       
       <item>
         <title>kotlin-multiplatform</title>
-        <link>https://crushingcode.github.io/tags/kotlin-multiplatform/</link>
+        <link>https://crushingcode.nisrulz.com/tags/kotlin-multiplatform/</link>
         <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/kotlin-multiplatform/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/kotlin-multiplatform/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -115,11 +115,11 @@
       
       <item>
         <title>adb</title>
-        <link>https://crushingcode.github.io/tags/adb/</link>
+        <link>https://crushingcode.nisrulz.com/tags/adb/</link>
         <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/adb/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/adb/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -133,11 +133,11 @@
       
       <item>
         <title>android</title>
-        <link>https://crushingcode.github.io/tags/android/</link>
+        <link>https://crushingcode.nisrulz.com/tags/android/</link>
         <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/android/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/android/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -151,11 +151,11 @@
       
       <item>
         <title>tools</title>
-        <link>https://crushingcode.github.io/tags/tools/</link>
+        <link>https://crushingcode.nisrulz.com/tags/tools/</link>
         <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/tools/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/tools/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -169,11 +169,11 @@
       
       <item>
         <title>localization</title>
-        <link>https://crushingcode.github.io/tags/localization/</link>
+        <link>https://crushingcode.nisrulz.com/tags/localization/</link>
         <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/localization/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/localization/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -187,11 +187,11 @@
       
       <item>
         <title>android-library</title>
-        <link>https://crushingcode.github.io/tags/android-library/</link>
+        <link>https://crushingcode.nisrulz.com/tags/android-library/</link>
         <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/android-library/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/android-library/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -205,11 +205,11 @@
       
       <item>
         <title>best-practices</title>
-        <link>https://crushingcode.github.io/tags/best-practices/</link>
+        <link>https://crushingcode.nisrulz.com/tags/best-practices/</link>
         <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/best-practices/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/best-practices/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -223,11 +223,11 @@
       
       <item>
         <title>gradle</title>
-        <link>https://crushingcode.github.io/tags/gradle/</link>
+        <link>https://crushingcode.nisrulz.com/tags/gradle/</link>
         <pubDate>Fri, 06 Apr 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/gradle/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/gradle/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -241,11 +241,11 @@
       
       <item>
         <title>shell</title>
-        <link>https://crushingcode.github.io/tags/shell/</link>
+        <link>https://crushingcode.nisrulz.com/tags/shell/</link>
         <pubDate>Fri, 06 Apr 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/shell/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/shell/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -259,11 +259,11 @@
       
       <item>
         <title>flutter</title>
-        <link>https://crushingcode.github.io/tags/flutter/</link>
+        <link>https://crushingcode.nisrulz.com/tags/flutter/</link>
         <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/flutter/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/flutter/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -277,11 +277,11 @@
       
       <item>
         <title>firebase</title>
-        <link>https://crushingcode.github.io/tags/firebase/</link>
+        <link>https://crushingcode.nisrulz.com/tags/firebase/</link>
         <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/firebase/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/firebase/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -295,11 +295,11 @@
       
       <item>
         <title>sensor</title>
-        <link>https://crushingcode.github.io/tags/sensor/</link>
+        <link>https://crushingcode.nisrulz.com/tags/sensor/</link>
         <pubDate>Sun, 12 Feb 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/sensor/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/sensor/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -313,11 +313,11 @@
       
       <item>
         <title>git</title>
-        <link>https://crushingcode.github.io/tags/git/</link>
+        <link>https://crushingcode.nisrulz.com/tags/git/</link>
         <pubDate>Fri, 18 Nov 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/git/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/git/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -331,11 +331,11 @@
       
       <item>
         <title>maven</title>
-        <link>https://crushingcode.github.io/tags/maven/</link>
+        <link>https://crushingcode.nisrulz.com/tags/maven/</link>
         <pubDate>Fri, 29 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/maven/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/maven/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -349,11 +349,11 @@
       
       <item>
         <title>opensource</title>
-        <link>https://crushingcode.github.io/tags/opensource/</link>
+        <link>https://crushingcode.nisrulz.com/tags/opensource/</link>
         <pubDate>Sun, 15 May 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/opensource/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/opensource/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -367,11 +367,11 @@
       
       <item>
         <title>issue</title>
-        <link>https://crushingcode.github.io/tags/issue/</link>
+        <link>https://crushingcode.nisrulz.com/tags/issue/</link>
         <pubDate>Mon, 02 May 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/issue/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/issue/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -385,11 +385,11 @@
       
       <item>
         <title>android-wear</title>
-        <link>https://crushingcode.github.io/tags/android-wear/</link>
+        <link>https://crushingcode.nisrulz.com/tags/android-wear/</link>
         <pubDate>Thu, 30 Oct 2014 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/android-wear/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/android-wear/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -403,11 +403,11 @@
       
       <item>
         <title>nodejs</title>
-        <link>https://crushingcode.github.io/tags/nodejs/</link>
+        <link>https://crushingcode.nisrulz.com/tags/nodejs/</link>
         <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
-        <guid>https://crushingcode.github.io/tags/nodejs/</guid>
+        <guid>https://crushingcode.nisrulz.com/tags/nodejs/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

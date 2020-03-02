@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>android-wear on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/android-wear/</link>
+    <link>https://crushingcode.nisrulz.com/tags/android-wear/</link>
     <description>Recent content in android-wear on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Thu, 30 Oct 2014 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/android-wear/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/android-wear/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Kickstart Android Wear @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_oct_2014/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_oct_2014/</link>
         <pubDate>Thu, 30 Oct 2014 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 30 Oct 2014 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_oct_2014/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_oct_2014/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Kickstart into Android Wear World
   Presentation  Event   </description>
         

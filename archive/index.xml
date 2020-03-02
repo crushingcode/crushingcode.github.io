@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Archive on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/archive/</link>
+    <link>https://crushingcode.nisrulz.com/archive/</link>
     <description>Recent content in Archive on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sat, 19 Oct 2019 11:44:14 +0900</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/archive/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/archive/index.xml" rel="self" type="application/rss+xml" />
     
     
     

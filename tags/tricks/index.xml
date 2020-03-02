@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>tricks on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/tricks/</link>
+    <link>https://crushingcode.nisrulz.com/tags/tricks/</link>
     <description>Recent content in tricks on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/tricks/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/tricks/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,17 +25,17 @@
       
       <item>
         <title>Terminal Foo: Triggering Notifications from CMDLine 📟</title>
-        <link>https://crushingcode.github.io/posts/trigger-notification-when-task-over/</link>
+        <link>https://crushingcode.nisrulz.com/posts/trigger-notification-when-task-over/</link>
         <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 01 Mar 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/posts/trigger-notification-when-task-over/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/trigger-notification-when-task-over/</guid>
         <description>Executing tasks and processes is pretty common in the Terminal. Having them run and then pipe the output into another one, transforming the output, triggering a sub-process/task, etc.</description>
         
         <dc:creator>Nishant</dc:creator>
-        <media:content url="https://crushingcode.github.io//images/posts/trigger-notification-when-task-over/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/trigger-notification-when-task-over/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        <media:content url="https://crushingcode.github.io//images/posts/trigger-notification-when-task-over/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/trigger-notification-when-task-over/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             

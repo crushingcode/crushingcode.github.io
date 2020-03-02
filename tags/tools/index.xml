@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>tools on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/tools/</link>
+    <link>https://crushingcode.nisrulz.com/tags/tools/</link>
     <description>Recent content in tools on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sat, 09 Nov 2019 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Devfest&#39;19 Berlin</title>
-        <link>https://crushingcode.github.io/talks/devfest_berlin_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devfest_berlin_2019/</link>
         <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 09 Nov 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devfest_berlin_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devfest_berlin_2019/</guid>
         <description>Devfest&amp;rsquo;19 &amp;lsquo;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -57,11 +57,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Droidcon Greece</title>
-        <link>https://crushingcode.github.io/talks/droidcon_greece_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_greece_2019/</link>
         <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 25 Sep 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/droidcon_greece_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_greece_2019/</guid>
         <description>Droidcon Greece &amp;lsquo;19, Heraklion, Greece Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -89,11 +89,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Droidcon Vienna</title>
-        <link>https://crushingcode.github.io/talks/droidcon_vienna_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_vienna_2019/</link>
         <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 19 Sep 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/droidcon_vienna_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_vienna_2019/</guid>
         <description>Droidcon Vienna &amp;lsquo;19, Vienna, Austria Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -121,11 +121,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Devoxx Poland</title>
-        <link>https://crushingcode.github.io/talks/devoxx_pl_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devoxx_pl_2019/</link>
         <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 24 Jun 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devoxx_pl_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devoxx_pl_2019/</guid>
         <description>Devoxx Poland &amp;lsquo;19, Krakow, Poland Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -153,11 +153,11 @@
       
       <item>
         <title>Building an automated Android Localization Tool today</title>
-        <link>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</link>
+        <link>https://crushingcode.nisrulz.com/posts/automated-localization-using-gsheets/</link>
         <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 28 Mar 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/automated-localization-using-gsheets/</guid>
         <description>TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 🐼  So this started when I found the below tweet:</description>
         
         <dc:creator>Nishant</dc:creator>
@@ -185,11 +185,11 @@
       
       <item>
         <title>How I reduced my Android build times by 89%</title>
-        <link>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</link>
+        <link>https://crushingcode.nisrulz.com/posts/how-i-reduced-android-build-times/</link>
         <pubDate>Fri, 06 Apr 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 06 Apr 2018 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/how-i-reduced-android-build-times/</guid>
         <description>This isn’t a click-bait article! I will explain how to make your Android build time shorter than the reading time of this post (hopefully) 🏃🏻</description>
         
         <dc:creator>Nishant</dc:creator>
@@ -221,17 +221,17 @@
       
       <item>
         <title>Do you like to ADB?</title>
-        <link>https://crushingcode.github.io/posts/do-you-like-to-adb/</link>
+        <link>https://crushingcode.nisrulz.com/posts/do-you-like-to-adb/</link>
         <pubDate>Fri, 14 Oct 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 14 Oct 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/do-you-like-to-adb/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/do-you-like-to-adb/</guid>
         <description>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.</description>
         
         <dc:creator>Nishant</dc:creator>
-        <media:content url="https://crushingcode.github.io//images/posts/doyouliketoadb/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/doyouliketoadb/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        <media:content url="https://crushingcode.github.io//images/posts/doyouliketoadb/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/doyouliketoadb/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
@@ -253,11 +253,11 @@
       
       <item>
         <title>Mastering Tools for Android @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_8_oct_2016/</link>
         <pubDate>Sat, 08 Oct 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 08 Oct 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_8_oct_2016/</guid>
         <description>Google Developer Group New Delhi, New Delhi, India Abstract   Learn about how you can master various tools in Android to become an efficient and productive Android Dev,</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -281,17 +281,17 @@
       
       <item>
         <title>Whats in the APK?</title>
-        <link>https://crushingcode.github.io/posts/whats-in-the-apk/</link>
+        <link>https://crushingcode.nisrulz.com/posts/whats-in-the-apk/</link>
         <pubDate>Sat, 24 Sep 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 24 Sep 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/whats-in-the-apk/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/whats-in-the-apk/</guid>
         <description>If I give you the code of an android app and ask you to provide me information regarding the android app like minSdkVersion, targetSdkVersion, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes.</description>
         
         <dc:creator>Nishant</dc:creator>
-        <media:content url="https://crushingcode.github.io//images/posts/whatsintheapk/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/whatsintheapk/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        <media:content url="https://crushingcode.github.io//images/posts/whatsintheapk/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/whatsintheapk/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
@@ -309,11 +309,11 @@
       
       <item>
         <title>Fun Project : Javadoc-Themer</title>
-        <link>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</link>
+        <link>https://crushingcode.nisrulz.com/posts/a-splash-of-colors-to-your-boring-javadocs/</link>
         <pubDate>Sun, 15 May 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 15 May 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/a-splash-of-colors-to-your-boring-javadocs/</guid>
         <description>I am pretty sure you would agree to the fact that the usual javadoc is not a something everyone likes. The colors are what makes it superrrrrrr boring.</description>
         
         <dc:creator>Nishant</dc:creator>
@@ -337,11 +337,11 @@
       
       <item>
         <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
-        <link>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</link>
+        <link>https://crushingcode.nisrulz.com/posts/meet-jack-and-jill-androids-experimental-toolchain/</link>
         <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 21 Jul 2015 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
         <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
  they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
         
@@ -366,11 +366,11 @@
       
       <item>
         <title>Life without wires : ADB over WiFi</title>
-        <link>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</link>
+        <link>https://crushingcode.nisrulz.com/posts/life-without-wires-adb-over-wifi/</link>
         <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 09 Jul 2015 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/life-without-wires-adb-over-wifi/</guid>
         <description>Tired of being tied to your laptop/desktop while debugging your android apps ?
 Well let me break it to you – You are NOT the FIRST person to do it.</description>
         

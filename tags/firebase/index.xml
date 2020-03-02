@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>firebase on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/firebase/</link>
+    <link>https://crushingcode.nisrulz.com/tags/firebase/</link>
     <description>Recent content in firebase on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Mon, 17 Jul 2017 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Google I/O &#39;17 Recap: Android, Kotlin and Firebase @GDG Cloud Vancouver</title>
-        <link>https://crushingcode.github.io/talks/gdg_cv_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdg_cv_2017/</link>
         <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 17 Jul 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdg_cv_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdg_cv_2017/</guid>
         <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -57,11 +57,11 @@
       
       <item>
         <title>Jumpstart Firebase @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_2_oct_2016/</link>
         <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 02 Oct 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_2_oct_2016/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Overview and demonstration of firebase and its services.
   Presentation   </description>
         

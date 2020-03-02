@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>kotlin-multiplatform on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/kotlin-multiplatform/</link>
+    <link>https://crushingcode.nisrulz.com/tags/kotlin-multiplatform/</link>
     <description>Recent content in kotlin-multiplatform on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/kotlin-multiplatform/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/kotlin-multiplatform/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Kotlin MP: Into the Multi-Verse @FOSDEM</title>
-        <link>https://crushingcode.github.io/talks/fosdem_2020/</link>
+        <link>https://crushingcode.nisrulz.com/talks/fosdem_2020/</link>
         <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 02 Feb 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/fosdem_2020/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/fosdem_2020/</guid>
         <description>FOSDEM 2020: Kotlin Devroom, Brussels, Belgium Abstract   Kotlin Multiplatform is the new kid on the cross-platform block. The approach although is very different from what you have seen in the past.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

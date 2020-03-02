@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Patents on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/showcase/patents/</link>
+    <link>https://crushingcode.nisrulz.com/showcase/patents/</link>
     <description>Recent content in Patents on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/showcase/patents/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/showcase/patents/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>WO2016005999A3</title>
-        <link>https://crushingcode.github.io/showcase/patents/patent_1/</link>
+        <link>https://crushingcode.nisrulz.com/showcase/patents/patent_1/</link>
         <pubDate>Sat, 06 Jun 2015 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 06 Jun 2015 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/showcase/patents/patent_1/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/patents/patent_1/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -43,11 +43,11 @@
       
       <item>
         <title>WO2016006000A3</title>
-        <link>https://crushingcode.github.io/showcase/patents/patent_2/</link>
+        <link>https://crushingcode.nisrulz.com/showcase/patents/patent_2/</link>
         <pubDate>Sat, 06 Jun 2015 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 06 Jun 2015 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/showcase/patents/patent_2/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/patents/patent_2/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

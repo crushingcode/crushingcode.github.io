@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Books on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/showcase/books/</link>
+    <link>https://crushingcode.nisrulz.com/showcase/books/</link>
     <description>Recent content in Books on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/showcase/books/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/showcase/books/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Kotlin Coroutines by Tutorials</title>
-        <link>https://crushingcode.github.io/showcase/books/kotlin_coroutines_by_tutorial/</link>
+        <link>https://crushingcode.nisrulz.com/showcase/books/kotlin_coroutines_by_tutorial/</link>
         <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 21 Nov 2018 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/showcase/books/kotlin_coroutines_by_tutorial/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/books/kotlin_coroutines_by_tutorial/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -43,11 +43,11 @@
       
       <item>
         <title>Seven Mobile Apps in Seven Weeks: Native Apps, Multiple Platforms (Pragmatic Programmer) </title>
-        <link>https://crushingcode.github.io/showcase/books/seven_mobile_apps/</link>
+        <link>https://crushingcode.nisrulz.com/showcase/books/seven_mobile_apps/</link>
         <pubDate>Mon, 11 Jul 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 11 Jul 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/showcase/books/seven_mobile_apps/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/books/seven_mobile_apps/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

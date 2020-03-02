@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>sensor on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/sensor/</link>
+    <link>https://crushingcode.nisrulz.com/tags/sensor/</link>
     <description>Recent content in sensor on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sun, 12 Feb 2017 10:54:24 +0200</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/sensor/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/sensor/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>I could not find a simple Gesture Detection android library, so I built one</title>
-        <link>https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
+        <link>https://crushingcode.nisrulz.com/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
         <pubDate>Sun, 12 Feb 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 12 Feb 2017 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
         <description>While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture.</description>
         
         <dc:creator>Nishant</dc:creator>

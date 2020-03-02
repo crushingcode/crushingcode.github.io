@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>shell on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/shell/</link>
+    <link>https://crushingcode.nisrulz.com/tags/shell/</link>
     <description>Recent content in shell on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Fri, 06 Apr 2018 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>How I reduced my Android build times by 89%</title>
-        <link>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</link>
+        <link>https://crushingcode.nisrulz.com/posts/how-i-reduced-android-build-times/</link>
         <pubDate>Fri, 06 Apr 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 06 Apr 2018 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/how-i-reduced-android-build-times/</guid>
         <description>This isn’t a click-bait article! I will explain how to make your Android build time shorter than the reading time of this post (hopefully) 🏃🏻</description>
         
         <dc:creator>Nishant</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>opensource on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/opensource/</link>
+    <link>https://crushingcode.nisrulz.com/tags/opensource/</link>
     <description>Recent content in opensource on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sun, 15 May 2016 10:54:24 +0200</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Fun Project : Javadoc-Themer</title>
-        <link>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</link>
+        <link>https://crushingcode.nisrulz.com/posts/a-splash-of-colors-to-your-boring-javadocs/</link>
         <pubDate>Sun, 15 May 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 15 May 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/a-splash-of-colors-to-your-boring-javadocs/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/a-splash-of-colors-to-your-boring-javadocs/</guid>
         <description>I am pretty sure you would agree to the fact that the usual javadoc is not a something everyone likes. The colors are what makes it superrrrrrr boring.</description>
         
         <dc:creator>Nishant</dc:creator>

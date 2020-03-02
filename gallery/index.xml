@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Galleries on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/gallery/</link>
+    <link>https://crushingcode.nisrulz.com/gallery/</link>
     <description>Recent content in Galleries on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sun, 16 Feb 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/gallery/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Doodles</title>
-        <link>https://crushingcode.github.io/gallery/doodles/</link>
+        <link>https://crushingcode.nisrulz.com/gallery/doodles/</link>
         <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 16 Feb 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/gallery/doodles/</guid>
+        <guid>https://crushingcode.nisrulz.com/gallery/doodles/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -43,11 +43,11 @@
       
       <item>
         <title>Graphic Design</title>
-        <link>https://crushingcode.github.io/gallery/graphic_design/</link>
+        <link>https://crushingcode.nisrulz.com/gallery/graphic_design/</link>
         <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 16 Feb 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/gallery/graphic_design/</guid>
+        <guid>https://crushingcode.nisrulz.com/gallery/graphic_design/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>android on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/android/</link>
+    <link>https://crushingcode.nisrulz.com/tags/android/</link>
     <description>Recent content in android on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sat, 09 Nov 2019 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Devfest&#39;19 Berlin</title>
-        <link>https://crushingcode.github.io/talks/devfest_berlin_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devfest_berlin_2019/</link>
         <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 09 Nov 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devfest_berlin_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devfest_berlin_2019/</guid>
         <description>Devfest&amp;rsquo;19 &amp;lsquo;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -57,11 +57,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Droidcon Greece</title>
-        <link>https://crushingcode.github.io/talks/droidcon_greece_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_greece_2019/</link>
         <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 25 Sep 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/droidcon_greece_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_greece_2019/</guid>
         <description>Droidcon Greece &amp;lsquo;19, Heraklion, Greece Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -89,11 +89,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Droidcon Vienna</title>
-        <link>https://crushingcode.github.io/talks/droidcon_vienna_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_vienna_2019/</link>
         <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 19 Sep 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/droidcon_vienna_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_vienna_2019/</guid>
         <description>Droidcon Vienna &amp;lsquo;19, Vienna, Austria Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -121,11 +121,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Devoxx Poland</title>
-        <link>https://crushingcode.github.io/talks/devoxx_pl_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devoxx_pl_2019/</link>
         <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 24 Jun 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devoxx_pl_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devoxx_pl_2019/</guid>
         <description>Devoxx Poland &amp;lsquo;19, Krakow, Poland Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -153,11 +153,11 @@
       
       <item>
         <title>Building an automated Android Localization Tool today</title>
-        <link>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</link>
+        <link>https://crushingcode.nisrulz.com/posts/automated-localization-using-gsheets/</link>
         <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 28 Mar 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/posts/automated-localization-using-gsheets/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/automated-localization-using-gsheets/</guid>
         <description>TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 🐼  So this started when I found the below tweet:</description>
         
         <dc:creator>Nishant</dc:creator>
@@ -185,11 +185,11 @@
       
       <item>
         <title>Demystifying Android Libraries @AppdevCon</title>
-        <link>https://crushingcode.github.io/talks/appdevcon_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/appdevcon_2019/</link>
         <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 15 Mar 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/appdevcon_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/appdevcon_2019/</guid>
         <description>AppdevCon &amp;lsquo;19, Amsterdam, Netherlands Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -217,11 +217,11 @@
       
       <item>
         <title>Things I wish I knew when I started building Android libraries-Vol.2 @Berlindroid</title>
-        <link>https://crushingcode.github.io/talks/berlindroid_feb_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/berlindroid_feb_2019/</link>
         <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 27 Feb 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/berlindroid_feb_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/berlindroid_feb_2019/</guid>
         <description>Berlindroid &amp;lsquo;19, Berlin, Germany Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -249,11 +249,11 @@
       
       <item>
         <title>Things I wish I knew when I started building Android libraries-Vol.2 @Mobius Moscow</title>
-        <link>https://crushingcode.github.io/talks/mobius_moscow_2018/</link>
+        <link>https://crushingcode.nisrulz.com/talks/mobius_moscow_2018/</link>
         <pubDate>Sat, 08 Dec 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 08 Dec 2018 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/mobius_moscow_2018/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/mobius_moscow_2018/</guid>
         <description>Mobius Moscow &amp;lsquo;18, Moscow, Russia Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -281,11 +281,11 @@
       
       <item>
         <title>Things I wish I knew when I started building Android libraries-Vol.2 @Devoxx Belgium</title>
-        <link>https://crushingcode.github.io/talks/devoxx_be_2018/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devoxx_be_2018/</link>
         <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 15 Nov 2018 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devoxx_be_2018/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devoxx_be_2018/</guid>
         <description>Devoxx Belgium &amp;lsquo;18, Antwerp, Belgium Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -313,11 +313,11 @@
       
       <item>
         <title>The A, B and C of Lifecycle Components @Droidcon Berlin</title>
-        <link>https://crushingcode.github.io/talks/droidcon_berlin_2018/</link>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_berlin_2018/</link>
         <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 26 Jun 2018 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/droidcon_berlin_2018/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_berlin_2018/</guid>
         <description>Droidcon Berlin &amp;lsquo;18, Berlin, Germany Abstract   If you&amp;rsquo;ve been developing Android applications for a while now, you know the pain of handling the lifecycle just right.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -341,11 +341,11 @@
       
       <item>
         <title>How I reduced my Android build times by 89%</title>
-        <link>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</link>
+        <link>https://crushingcode.nisrulz.com/posts/how-i-reduced-android-build-times/</link>
         <pubDate>Fri, 06 Apr 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 06 Apr 2018 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/posts/how-i-reduced-android-build-times/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/how-i-reduced-android-build-times/</guid>
         <description>This isn’t a click-bait article! I will explain how to make your Android build time shorter than the reading time of this post (hopefully) 🏃🏻</description>
         
         <dc:creator>Nishant</dc:creator>
@@ -377,11 +377,11 @@
       
       <item>
         <title>Architecture Components @Devfest&#39;17 Vancouver</title>
-        <link>https://crushingcode.github.io/talks/devfest_vancouver_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devfest_vancouver_2017/</link>
         <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 14 Oct 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devfest_vancouver_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devfest_vancouver_2017/</guid>
         <description> Devfest&amp;rsquo;17, Vancouver, Canada Abstract   Get to know the new Architecture Components released by Google in I/O&amp;rsquo;17
   Presentation  Event   </description>
         
@@ -402,11 +402,11 @@
       
       <item>
         <title>Google Developer Days, Europe - Extended &#39;17 Recap: Android and Flutter @GDG CV</title>
-        <link>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdd_eu_ext_2017/</link>
         <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 29 Sep 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdd_eu_ext_2017/</guid>
         <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -430,18 +430,18 @@
       
       <item>
         <title>Is your Android Library, Lifecycle-Aware?</title>
-        <link>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</link>
+        <link>https://crushingcode.nisrulz.com/posts/is-your-android-library-lifecycle-aware/</link>
         <pubDate>Sun, 17 Sep 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 17 Sep 2017 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/is-your-android-library-lifecycle-aware/</guid>
         <description>Lifecycle events in Android.
 It has been a pain point for Android developers all over the world. It is no brainer that, most of the times the main cause of a memory leak in the codebase is because an invalid state is accessed which is out of sync with the lifecycle of the activity/fragment of the app.</description>
         
         <dc:creator>Nishant</dc:creator>
         
         
-        <media:content url="https://crushingcode.github.io//images/posts/is-your-android-library-lifecycle-aware/header.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/is-your-android-library-lifecycle-aware/header.png" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
@@ -459,11 +459,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Things I wish I knew when I started building Android libraries @Droidcon Berlin</title>
-        <link>https://crushingcode.github.io/talks/droidcon_berlin_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_berlin_2017/</link>
         <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 05 Sep 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/droidcon_berlin_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_berlin_2017/</guid>
         <description>Droidcon Berlin &amp;lsquo;17, Berlin, Germany Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -491,11 +491,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Want To Step Up Your Android Learning Game? You Need To Read This First</title>
-        <link>https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</link>
+        <link>https://crushingcode.nisrulz.com/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</link>
         <pubDate>Sat, 29 Jul 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 29 Jul 2017 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</guid>
         <description>DISCLAIMER: If you consider yourself a beginner, intermediate, expert or a ninja in the Android realm, this secret sauce still applies to you.
  TL;DR: Build Something.</description>
         
@@ -520,11 +520,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Google I/O &#39;17 Recap: Android, Kotlin and Firebase @GDG Cloud Vancouver</title>
-        <link>https://crushingcode.github.io/talks/gdg_cv_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdg_cv_2017/</link>
         <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 17 Jul 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdg_cv_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdg_cv_2017/</guid>
         <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -552,11 +552,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Build.Better.­Android.Libraries @VanDev</title>
-        <link>https://crushingcode.github.io/talks/vandev_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/vandev_2017/</link>
         <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 25 Apr 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/vandev_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/vandev_2017/</guid>
         <description>VanDev: Vancouver&amp;rsquo;s Software Developers Network, Vancouver, Canada Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -584,15 +584,15 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Things I wish I knew when I started building Android SDK/Libraries</title>
-        <link>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</link>
+        <link>https://crushingcode.nisrulz.com/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</link>
         <pubDate>Sun, 05 Mar 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 05 Mar 2017 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
         <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;.</description>
         
         <dc:creator>Nishant</dc:creator>
-        <media:content url="https://crushingcode.github.io//images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/header.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/header.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -616,11 +616,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>I could not find a simple Gesture Detection android library, so I built one</title>
-        <link>https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
+        <link>https://crushingcode.nisrulz.com/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
         <pubDate>Sun, 12 Feb 2017 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 12 Feb 2017 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
         <description>While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture.</description>
         
         <dc:creator>Nishant</dc:creator>
@@ -648,17 +648,17 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Do you like to ADB?</title>
-        <link>https://crushingcode.github.io/posts/do-you-like-to-adb/</link>
+        <link>https://crushingcode.nisrulz.com/posts/do-you-like-to-adb/</link>
         <pubDate>Fri, 14 Oct 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 14 Oct 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/do-you-like-to-adb/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/do-you-like-to-adb/</guid>
         <description>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.</description>
         
         <dc:creator>Nishant</dc:creator>
-        <media:content url="https://crushingcode.github.io//images/posts/doyouliketoadb/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/doyouliketoadb/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        <media:content url="https://crushingcode.github.io//images/posts/doyouliketoadb/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/doyouliketoadb/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
@@ -680,11 +680,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Mastering Tools for Android @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_8_oct_2016/</link>
         <pubDate>Sat, 08 Oct 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 08 Oct 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_8_oct_2016/</guid>
         <description>Google Developer Group New Delhi, New Delhi, India Abstract   Learn about how you can master various tools in Android to become an efficient and productive Android Dev,</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -708,11 +708,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Jumpstart Firebase @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_2_oct_2016/</link>
         <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 02 Oct 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_2_oct_2016/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Overview and demonstration of firebase and its services.
   Presentation   </description>
         
@@ -737,17 +737,17 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Whats in the APK?</title>
-        <link>https://crushingcode.github.io/posts/whats-in-the-apk/</link>
+        <link>https://crushingcode.nisrulz.com/posts/whats-in-the-apk/</link>
         <pubDate>Sat, 24 Sep 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 24 Sep 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/whats-in-the-apk/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/whats-in-the-apk/</guid>
         <description>If I give you the code of an android app and ask you to provide me information regarding the android app like minSdkVersion, targetSdkVersion, permissions, configurations, almost anyone who knows how to code an android app would provide it to me in a few minutes.</description>
         
         <dc:creator>Nishant</dc:creator>
-        <media:content url="https://crushingcode.github.io//images/posts/whatsintheapk/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/whatsintheapk/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        <media:content url="https://crushingcode.github.io//images/posts/whatsintheapk/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/whatsintheapk/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
@@ -765,17 +765,17 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Update Dependencies-Code-Repeat</title>
-        <link>https://crushingcode.github.io/posts/update-dependencies-code-repeat/</link>
+        <link>https://crushingcode.nisrulz.com/posts/update-dependencies-code-repeat/</link>
         <pubDate>Sat, 03 Sep 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 03 Sep 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/update-dependencies-code-repeat/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/update-dependencies-code-repeat/</guid>
         <description>Agree or not agree, but on an average consensus pretty much every android dev goes through the loop of Update Dependencies.Code.Repeat. for each of his/her android project.</description>
         
         <dc:creator>Nishant</dc:creator>
-        <media:content url="https://crushingcode.github.io//images/posts/updatedependency/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/updatedependency/header.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        <media:content url="https://crushingcode.github.io//images/posts/updatedependency/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/updatedependency/header.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
@@ -793,11 +793,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Building Apps for Billions @Udacity Community</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_aug_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_aug_2016/</link>
         <pubDate>Sun, 07 Aug 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 07 Aug 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_aug_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_aug_2016/</guid>
         <description> Udacity Community Delhi NCR, New Delhi, India Abstract   Deliver the best performance across a range of connections, data plans, and devices.
   Presentation  Event   </description>
         
@@ -818,11 +818,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Guide to publishing your Android Library via JitPack</title>
-        <link>https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/</link>
+        <link>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-jitpack/</link>
         <pubDate>Fri, 29 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 29 Jul 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-jitpack/</guid>
         <description>Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.</description>
         
         <dc:creator>Nishant</dc:creator>
@@ -850,11 +850,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Guide to publishing your Android Library via MavenCentral</title>
-        <link>https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/</link>
+        <link>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-mavencentral/</link>
         <pubDate>Sun, 17 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 17 Jul 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-mavencentral/</guid>
         <description>If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world.</description>
         
         <dc:creator>Nishant</dc:creator>
@@ -882,11 +882,11 @@ It has been a pain point for Android developers all over the world. It is no bra
       
       <item>
         <title>Guide to publishing your Android Library via Jcenter/Bintray</title>
-        <link>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</link>
+        <link>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-jcenter/</link>
         <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 12 Jul 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-jcenter/</guid>
         <description>Developers are a different kind of people altogether. They tend to be lazy but strive to be super efficient at the same time.
 A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.</description>
         
@@ -915,11 +915,11 @@ A lot of this can be seen in the Android world where a certain library pops up e
       
       <item>
         <title>Sipping on Battery Juice @Devfest&#39;16 New Delhi</title>
-        <link>https://crushingcode.github.io/talks/devfest_newdelhi_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devfest_newdelhi_2016/</link>
         <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 18 May 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devfest_newdelhi_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devfest_newdelhi_2016/</guid>
         <description> Devfest&amp;rsquo;16, New Delhi, India Abstract   Learn about battery consumption on Android and how to avoid it when building your apps.
   Presentation  Event   </description>
         
@@ -940,11 +940,11 @@ A lot of this can be seen in the Android world where a certain library pops up e
       
       <item>
         <title>Own a maven repository, like a boss! – Part 2</title>
-        <link>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</link>
+        <link>https://crushingcode.nisrulz.com/posts/own-a-maven-repository-like-a-bosspart-2/</link>
         <pubDate>Tue, 16 Feb 2016 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 16 Feb 2016 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/own-a-maven-repository-like-a-bosspart-2/</guid>
         <description>The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.
 For the same reason I have gone through a lot of good articles online, which explain how the whole process works.</description>
         
@@ -973,11 +973,11 @@ For the same reason I have gone through a lot of good articles online, which exp
       
       <item>
         <title>An-Droid 101 - Developing Libraries @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_feb_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_feb_2016/</link>
         <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 14 Feb 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_feb_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_feb_2016/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Learn about android libraries and how to build one for yourself.
   Presentation  Event   </description>
         
@@ -1002,11 +1002,11 @@ For the same reason I have gone through a lot of good articles online, which exp
       
       <item>
         <title>Own a maven repository, like a boss! – Part 1</title>
-        <link>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/</link>
+        <link>https://crushingcode.nisrulz.com/posts/own-a-maven-repository-like-a-bosspart-1/</link>
         <pubDate>Mon, 03 Aug 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 03 Aug 2015 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/own-a-maven-repository-like-a-bosspart-1/</guid>
         <description>Have you ever thought how the central repository works like Maven Central or JCenter?
 Is it possible to own one for yourself?
 Do you want to host your artifacts in your own private repository?</description>
@@ -1036,11 +1036,11 @@ Do you want to host your artifacts in your own private repository?</description>
       
       <item>
         <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
-        <link>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</link>
+        <link>https://crushingcode.nisrulz.com/posts/meet-jack-and-jill-androids-experimental-toolchain/</link>
         <pubDate>Tue, 21 Jul 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 21 Jul 2015 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
         <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
  they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
         
@@ -1065,11 +1065,11 @@ Do you want to host your artifacts in your own private repository?</description>
       
       <item>
         <title>Life without wires : ADB over WiFi</title>
-        <link>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</link>
+        <link>https://crushingcode.nisrulz.com/posts/life-without-wires-adb-over-wifi/</link>
         <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 09 Jul 2015 10:54:24 +0200</atom:modified>
-        <guid>https://crushingcode.github.io/posts/life-without-wires-adb-over-wifi/</guid>
+        <guid>https://crushingcode.nisrulz.com/posts/life-without-wires-adb-over-wifi/</guid>
         <description>Tired of being tied to your laptop/desktop while debugging your android apps ?
 Well let me break it to you – You are NOT the FIRST person to do it.</description>
         
@@ -1098,11 +1098,11 @@ Well let me break it to you – You are NOT the FIRST person to do it.</descript
       
       <item>
         <title>Materialized Instantly @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_mar_2015/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_mar_2015/</link>
         <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 19 Mar 2015 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_mar_2015/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_mar_2015/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Materialized Instantly
   Presentation   </description>
         
@@ -1123,11 +1123,11 @@ Well let me break it to you – You are NOT the FIRST person to do it.</descript
       
       <item>
         <title>Kickstart Android App Development @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_feb_2015/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_feb_2015/</link>
         <pubDate>Sun, 15 Feb 2015 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 15 Feb 2015 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_feb_2015/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_feb_2015/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Kickstart Android App Development
   Presentation   </description>
         
@@ -1148,11 +1148,11 @@ Well let me break it to you – You are NOT the FIRST person to do it.</descript
       
       <item>
         <title>Kickstart Android Wear @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_oct_2014/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_oct_2014/</link>
         <pubDate>Thu, 30 Oct 2014 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 30 Oct 2014 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_oct_2014/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_oct_2014/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Kickstart into Android Wear World
   Presentation  Event   </description>
         

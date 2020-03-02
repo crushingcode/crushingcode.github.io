@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Talks on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/talks/</link>
+    <link>https://crushingcode.nisrulz.com/talks/</link>
     <description>Recent content in Talks on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/talks/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/talks/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Cooking with Coroutine Recipes @CodemotionAmsterdam</title>
-        <link>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</link>
+        <link>https://crushingcode.nisrulz.com/talks/codemotion_amsterdam_2020/</link>
         <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 27 May 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/codemotion_amsterdam_2020/</guid>
         <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -53,11 +53,11 @@
       
       <item>
         <title>Kotlin MP: Into the Multi-Verse @FOSDEM</title>
-        <link>https://crushingcode.github.io/talks/fosdem_2020/</link>
+        <link>https://crushingcode.nisrulz.com/talks/fosdem_2020/</link>
         <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 02 Feb 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/fosdem_2020/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/fosdem_2020/</guid>
         <description>FOSDEM 2020: Kotlin Devroom, Brussels, Belgium Abstract   Kotlin Multiplatform is the new kid on the cross-platform block. The approach although is very different from what you have seen in the past.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -81,11 +81,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Devfest&#39;19 Berlin</title>
-        <link>https://crushingcode.github.io/talks/devfest_berlin_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devfest_berlin_2019/</link>
         <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 09 Nov 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devfest_berlin_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devfest_berlin_2019/</guid>
         <description>Devfest&amp;rsquo;19 &amp;lsquo;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -113,11 +113,11 @@
       
       <item>
         <title>Cooking with Coroutines Recipes @Mobilization IX</title>
-        <link>https://crushingcode.github.io/talks/mobilization_ix_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/mobilization_ix_2019/</link>
         <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 26 Oct 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/mobilization_ix_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/mobilization_ix_2019/</guid>
         <description>Mobilization IX, Łódź, Poland Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -141,11 +141,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Droidcon Greece</title>
-        <link>https://crushingcode.github.io/talks/droidcon_greece_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_greece_2019/</link>
         <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 25 Sep 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/droidcon_greece_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_greece_2019/</guid>
         <description>Droidcon Greece &amp;lsquo;19, Heraklion, Greece Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -173,11 +173,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Droidcon Vienna</title>
-        <link>https://crushingcode.github.io/talks/droidcon_vienna_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_vienna_2019/</link>
         <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 19 Sep 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/droidcon_vienna_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_vienna_2019/</guid>
         <description>Droidcon Vienna &amp;lsquo;19, Vienna, Austria Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -205,11 +205,11 @@
       
       <item>
         <title>My love-hate relationship with Android Studio @Devoxx Poland</title>
-        <link>https://crushingcode.github.io/talks/devoxx_pl_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devoxx_pl_2019/</link>
         <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 24 Jun 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devoxx_pl_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devoxx_pl_2019/</guid>
         <description>Devoxx Poland &amp;lsquo;19, Krakow, Poland Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -237,11 +237,11 @@
       
       <item>
         <title>Demystifying Android Libraries @AppdevCon</title>
-        <link>https://crushingcode.github.io/talks/appdevcon_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/appdevcon_2019/</link>
         <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 15 Mar 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/appdevcon_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/appdevcon_2019/</guid>
         <description>AppdevCon &amp;lsquo;19, Amsterdam, Netherlands Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -269,11 +269,11 @@
       
       <item>
         <title>Things I wish I knew when I started building Android libraries-Vol.2 @Berlindroid</title>
-        <link>https://crushingcode.github.io/talks/berlindroid_feb_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/berlindroid_feb_2019/</link>
         <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 27 Feb 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/berlindroid_feb_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/berlindroid_feb_2019/</guid>
         <description>Berlindroid &amp;lsquo;19, Berlin, Germany Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -301,11 +301,11 @@
       
       <item>
         <title>Things I wish I knew when I started building Android libraries-Vol.2 @Mobius Moscow</title>
-        <link>https://crushingcode.github.io/talks/mobius_moscow_2018/</link>
+        <link>https://crushingcode.nisrulz.com/talks/mobius_moscow_2018/</link>
         <pubDate>Sat, 08 Dec 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 08 Dec 2018 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/mobius_moscow_2018/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/mobius_moscow_2018/</guid>
         <description>Mobius Moscow &amp;lsquo;18, Moscow, Russia Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -333,11 +333,11 @@
       
       <item>
         <title>Things I wish I knew when I started building Android libraries-Vol.2 @Devoxx Belgium</title>
-        <link>https://crushingcode.github.io/talks/devoxx_be_2018/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devoxx_be_2018/</link>
         <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 15 Nov 2018 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devoxx_be_2018/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devoxx_be_2018/</guid>
         <description>Devoxx Belgium &amp;lsquo;18, Antwerp, Belgium Abstract   Building an Android library in the current times is way different than what it used to be earlier.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -365,11 +365,11 @@
       
       <item>
         <title>The A, B and C of Lifecycle Components @Droidcon Berlin</title>
-        <link>https://crushingcode.github.io/talks/droidcon_berlin_2018/</link>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_berlin_2018/</link>
         <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 26 Jun 2018 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/droidcon_berlin_2018/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_berlin_2018/</guid>
         <description>Droidcon Berlin &amp;lsquo;18, Berlin, Germany Abstract   If you&amp;rsquo;ve been developing Android applications for a while now, you know the pain of handling the lifecycle just right.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -393,11 +393,11 @@
       
       <item>
         <title>Architecture Components @Devfest&#39;17 Vancouver</title>
-        <link>https://crushingcode.github.io/talks/devfest_vancouver_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devfest_vancouver_2017/</link>
         <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 14 Oct 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devfest_vancouver_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devfest_vancouver_2017/</guid>
         <description> Devfest&amp;rsquo;17, Vancouver, Canada Abstract   Get to know the new Architecture Components released by Google in I/O&amp;rsquo;17
   Presentation  Event   </description>
         
@@ -418,11 +418,11 @@
       
       <item>
         <title>Google Developer Days, Europe - Extended &#39;17 Recap: Android and Flutter @GDG CV</title>
-        <link>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdd_eu_ext_2017/</link>
         <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 29 Sep 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdd_eu_ext_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdd_eu_ext_2017/</guid>
         <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -446,11 +446,11 @@
       
       <item>
         <title>Things I wish I knew when I started building Android libraries @Droidcon Berlin</title>
-        <link>https://crushingcode.github.io/talks/droidcon_berlin_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_berlin_2017/</link>
         <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 05 Sep 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/droidcon_berlin_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_berlin_2017/</guid>
         <description>Droidcon Berlin &amp;lsquo;17, Berlin, Germany Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -478,11 +478,11 @@
       
       <item>
         <title>Delightful X-App Development with Flutter @Code &amp; Coffee</title>
-        <link>https://crushingcode.github.io/talks/code_and_coffee_aug_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/code_and_coffee_aug_2017/</link>
         <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 17 Aug 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/code_and_coffee_aug_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/code_and_coffee_aug_2017/</guid>
         <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract   A quick introduction of what Flutter is and what is required to start building apps with Flutter</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -502,11 +502,11 @@
       
       <item>
         <title>Google I/O &#39;17 Recap: Android, Kotlin and Firebase @GDG Cloud Vancouver</title>
-        <link>https://crushingcode.github.io/talks/gdg_cv_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdg_cv_2017/</link>
         <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 17 Jul 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdg_cv_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdg_cv_2017/</guid>
         <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -534,11 +534,11 @@
       
       <item>
         <title>Hello &#39;Kotlin&#39; World @Code &amp; Coffee</title>
-        <link>https://crushingcode.github.io/talks/code_and_coffee_may_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/code_and_coffee_may_2017/</link>
         <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 18 May 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/code_and_coffee_may_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/code_and_coffee_may_2017/</guid>
         <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract   Kotlin programming language is gaining popularity nowadays. It’s a modern language that gives more power in everyday routines.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -558,11 +558,11 @@
       
       <item>
         <title>Build.Better.­Android.Libraries @VanDev</title>
-        <link>https://crushingcode.github.io/talks/vandev_2017/</link>
+        <link>https://crushingcode.nisrulz.com/talks/vandev_2017/</link>
         <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 25 Apr 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/vandev_2017/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/vandev_2017/</guid>
         <description>VanDev: Vancouver&amp;rsquo;s Software Developers Network, Vancouver, Canada Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -590,11 +590,11 @@
       
       <item>
         <title>Mastering Tools for Android @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_8_oct_2016/</link>
         <pubDate>Sat, 08 Oct 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 08 Oct 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_8_oct_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_8_oct_2016/</guid>
         <description>Google Developer Group New Delhi, New Delhi, India Abstract   Learn about how you can master various tools in Android to become an efficient and productive Android Dev,</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -618,11 +618,11 @@
       
       <item>
         <title>Jumpstart Firebase @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_2_oct_2016/</link>
         <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 02 Oct 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_2_oct_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_2_oct_2016/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Overview and demonstration of firebase and its services.
   Presentation   </description>
         
@@ -647,11 +647,11 @@
       
       <item>
         <title>Building Apps for Billions @Udacity Community</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_aug_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_aug_2016/</link>
         <pubDate>Sun, 07 Aug 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 07 Aug 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_aug_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_aug_2016/</guid>
         <description> Udacity Community Delhi NCR, New Delhi, India Abstract   Deliver the best performance across a range of connections, data plans, and devices.
   Presentation  Event   </description>
         
@@ -672,11 +672,11 @@
       
       <item>
         <title>Sipping on Battery Juice @Devfest&#39;16 New Delhi</title>
-        <link>https://crushingcode.github.io/talks/devfest_newdelhi_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/devfest_newdelhi_2016/</link>
         <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 18 May 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/devfest_newdelhi_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/devfest_newdelhi_2016/</guid>
         <description> Devfest&amp;rsquo;16, New Delhi, India Abstract   Learn about battery consumption on Android and how to avoid it when building your apps.
   Presentation  Event   </description>
         
@@ -697,11 +697,11 @@
       
       <item>
         <title>An-Droid 101 - Developing Libraries @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_feb_2016/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_feb_2016/</link>
         <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 14 Feb 2016 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_feb_2016/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_feb_2016/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Learn about android libraries and how to build one for yourself.
   Presentation  Event   </description>
         
@@ -726,11 +726,11 @@
       
       <item>
         <title>Materialized Instantly @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_mar_2015/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_mar_2015/</link>
         <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 19 Mar 2015 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_mar_2015/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_mar_2015/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Materialized Instantly
   Presentation   </description>
         
@@ -751,11 +751,11 @@
       
       <item>
         <title>Kickstart Android App Development @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_feb_2015/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_feb_2015/</link>
         <pubDate>Sun, 15 Feb 2015 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 15 Feb 2015 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_feb_2015/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_feb_2015/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Kickstart Android App Development
   Presentation   </description>
         
@@ -776,11 +776,11 @@
       
       <item>
         <title>Kickstart Android Wear @GDG New Delhi</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_oct_2014/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_oct_2014/</link>
         <pubDate>Thu, 30 Oct 2014 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 30 Oct 2014 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_oct_2014/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_oct_2014/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Kickstart into Android Wear World
   Presentation  Event   </description>
         
@@ -805,11 +805,11 @@
       
       <item>
         <title>Introduction to Node.JS @Mindfire Solutions</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_oct_2013/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_oct_2013/</link>
         <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 16 Oct 2013 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_oct_2013/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_oct_2013/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Basic intro of node.js
   Presentation   </description>
         

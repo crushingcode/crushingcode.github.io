@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Showcase overview on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/showcase/</link>
+    <link>https://crushingcode.nisrulz.com/showcase/</link>
     <description>Recent content in Showcase overview on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/showcase/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/showcase/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Android</title>
-        <link>https://crushingcode.github.io/showcase/android/</link>
+        <link>https://crushingcode.nisrulz.com/showcase/android/</link>
         <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/showcase/android/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/android/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -43,11 +43,11 @@
       
       <item>
         <title>Android Libraries</title>
-        <link>https://crushingcode.github.io/showcase/android_library/</link>
+        <link>https://crushingcode.nisrulz.com/showcase/android_library/</link>
         <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/showcase/android_library/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/android_library/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -61,11 +61,11 @@
       
       <item>
         <title>Books</title>
-        <link>https://crushingcode.github.io/showcase/books/</link>
+        <link>https://crushingcode.nisrulz.com/showcase/books/</link>
         <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/showcase/books/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/books/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -79,11 +79,11 @@
       
       <item>
         <title>Patents</title>
-        <link>https://crushingcode.github.io/showcase/patents/</link>
+        <link>https://crushingcode.nisrulz.com/showcase/patents/</link>
         <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/showcase/patents/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/patents/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

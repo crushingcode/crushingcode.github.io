@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>nodejs on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/nodejs/</link>
+    <link>https://crushingcode.nisrulz.com/tags/nodejs/</link>
     <description>Recent content in nodejs on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Wed, 16 Oct 2013 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Introduction to Node.JS @Mindfire Solutions</title>
-        <link>https://crushingcode.github.io/talks/gdgnd_oct_2013/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdgnd_oct_2013/</link>
         <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 16 Oct 2013 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/gdgnd_oct_2013/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdgnd_oct_2013/</guid>
         <description> Google Developer Group New Delhi, New Delhi, India Abstract   Basic intro of node.js
   Presentation   </description>
         

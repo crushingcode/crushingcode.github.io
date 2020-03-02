@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>coroutines on Crushing C.O.D.E</title>
-    <link>https://crushingcode.github.io/tags/coroutines/</link>
+    <link>https://crushingcode.nisrulz.com/tags/coroutines/</link>
     <description>Recent content in coroutines on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -17,7 +17,7 @@
     <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
-        <atom:link href="https://crushingcode.github.io/tags/coroutines/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://crushingcode.nisrulz.com/tags/coroutines/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -25,11 +25,11 @@
       
       <item>
         <title>Cooking with Coroutine Recipes @CodemotionAmsterdam</title>
-        <link>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</link>
+        <link>https://crushingcode.nisrulz.com/talks/codemotion_amsterdam_2020/</link>
         <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 27 May 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/codemotion_amsterdam_2020/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/codemotion_amsterdam_2020/</guid>
         <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -53,11 +53,11 @@
       
       <item>
         <title>Cooking with Coroutines Recipes @Mobilization IX</title>
-        <link>https://crushingcode.github.io/talks/mobilization_ix_2019/</link>
+        <link>https://crushingcode.nisrulz.com/talks/mobilization_ix_2019/</link>
         <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 26 Oct 2019 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.github.io/talks/mobilization_ix_2019/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/mobilization_ix_2019/</guid>
         <description>Mobilization IX, Łódź, Poland Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
