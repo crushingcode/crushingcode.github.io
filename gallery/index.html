@@ -1213,7 +1213,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.66.0" />
+<meta name="generator" content="Hugo 0.67.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1273,6 +1273,11 @@
     </script>
     <div id="container">
         
+
+
+
+
+
         <div class="wrapper" data-type="gallery" data-kind="section">
             <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
@@ -1572,7 +1577,7 @@
             <h5 class="list__header--title capitalize h5">Galleries</h5>
         </header>
 
-        <div class="list__header--desc p2">
+        <div class="list__header--desc single__contents p2">
             
         </div>
 
@@ -1588,7 +1593,12 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/gallery/doodles/'> Doodles</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Feb 16, 2020 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 0 min read </span></h6>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Feb 16, 2020 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;0&nbsp;min read </span>
+          
+        </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1615,7 +1625,12 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/gallery/graphic_design/'> Graphic Design</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Feb 16, 2020 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 0 min read </span></h6>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Feb 16, 2020 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;0&nbsp;min read </span>
+          
+        </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -2006,6 +2021,7 @@
         gridSmall = 'r';
         gridBig = 'lm'
     }
+
     enquire.register("screen and (max-width: 769px)", {
         match: function () {
             if (enableSidebar) {
@@ -2023,6 +2039,7 @@
                     listSideElem.classList.add('hide');
                 }
             }
+
         },
         unmatch: function () {
             if (enableSidebar) {
@@ -2048,14 +2065,19 @@
                 navCollapse.style.maxHeight = 0;
                 navCollapseBtn.classList.remove('is-active');
             }
-            document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
-            document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            if (document.getElementsByClassName('navbar__menu')[0]) {
+                document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('mobile-search')[0]) {
+                document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            }
         },
         setup: function () { },
         deferSetup: true,
         destroy: function () { },
     });
 </script>
+
 
 
             
@@ -2193,7 +2215,12 @@
 </footer>
         </div>
         
-<div class="wrapper__right hide" dir="ltr">
+
+
+
+
+
+<div class="wrapper__right hide" data-pad="false" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
   
 </div>

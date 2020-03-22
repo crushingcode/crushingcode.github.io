@@ -1213,7 +1213,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.66.0" />
+<meta name="generator" content="Hugo 0.67.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1273,6 +1273,11 @@
     </script>
     <div id="container">
         
+
+
+
+
+
         <div class="wrapper" data-type="tags" data-kind="taxonomy">
             <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
@@ -1596,7 +1601,12 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/codemotion_amsterdam_2020/'> Cooking with Coroutine Recipes @CodemotionAmsterdam</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 May 27, 2020 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 1 min read </span></h6>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;May 27, 2020 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
+          
+        </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1623,7 +1633,12 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/fosdem_2020/'> Kotlin MP: Into the Multi-Verse @FOSDEM</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Feb 2, 2020 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 1 min read </span></h6>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Feb 2, 2020 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
+          
+        </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1650,7 +1665,12 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/mobilization_ix_2019/'> Cooking with Coroutines Recipes @Mobilization IX</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Oct 26, 2019 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 1 min read </span></h6>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Oct 26, 2019 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
+          
+        </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1677,7 +1697,12 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/gdg_cv_2017/'> Google I/O &#39;17 Recap: Android, Kotlin and Firebase @GDG Cloud Vancouver</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 Jul 17, 2017 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 1 min read </span></h6>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Jul 17, 2017 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
+          
+        </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1704,7 +1729,12 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/code_and_coffee_may_2017/'> Hello &#39;Kotlin&#39; World @Code &amp; Coffee</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 May 18, 2017 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 1 min read </span></h6>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;May 18, 2017 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
+          
+        </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -2079,73 +2109,79 @@
 </main>
 
 <script>
-  
-  var sidebarPosition = JSON.parse("\"right\"");
-  
-  var enableSidebar = JSON.parse("true");
+    
+    var sidebarPosition = JSON.parse("\"right\"");
+    
+    var enableSidebar = JSON.parse("true");
 
-  var listMainElem = document.querySelector('.list__main');
-  var listSideElem = document.querySelector('.list__sidebar');
+    var listMainElem = document.querySelector('.list__main');
+    var listSideElem = document.querySelector('.list__sidebar');
 
-  var gridSmall = 'l';
-  var gridBig = 'mr';
-  var gridFull = 'lmr'
+    var gridSmall = 'l';
+    var gridBig = 'mr';
+    var gridFull = 'lmr'
 
-  if (sidebarPosition === "right") {
-      gridSmall = 'r';
-      gridBig = 'lm'
-  }
+    if (sidebarPosition === "right") {
+        gridSmall = 'r';
+        gridBig = 'lm'
+    }
 
-  enquire.register("screen and (max-width: 769px)", {
-    match: function () {
-      if (enableSidebar) {
-        listMainElem.classList.remove(gridBig);
-        listMainElem.classList.add(gridFull);
-        listSideElem.classList.remove(gridSmall);
-        listSideElem.classList.add('hide');
-      } else {
-        if (listMainElem && !listMainElem.classList.contains(gridFull)) {
-          listMainElem.classList.remove(gridBig);
-          listMainElem.classList.add(gridFull);
-        }
+    enquire.register("screen and (max-width: 769px)", {
+        match: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridBig);
+                listMainElem.classList.add(gridFull);
+                listSideElem.classList.remove(gridSmall);
+                listSideElem.classList.add('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
 
-        if (listSideElem && !listSideElem.classList.contains('hide')) {
-          listSideElem.classList.add('hide');
-        }
-      }
-    },
-    unmatch: function () {
-      if (enableSidebar) {
-        listMainElem.classList.remove(gridFull);
-        listMainElem.classList.add(gridBig);
-        listSideElem.classList.add(gridSmall);
-        listSideElem.classList.remove('hide');
-      } else {
-        if (listMainElem && !listMainElem.classList.contains(gridFull)) {
-          listMainElem.classList.remove(gridBig);
-          listMainElem.classList.add(gridFull);
-        }
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
 
-        if (listSideElem && !listSideElem.classList.contains('hide')) {
-          listSideElem.classList.add('hide');
-        }
-      }
-      
-      var navCollapseBtn = document.querySelector('.navbar__burger');
-      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
-      if (navCollapse) {
-        navCollapse.setAttribute('data-open', false);
-        navCollapse.style.maxHeight = 0;
-        navCollapseBtn.classList.remove('is-active');
-      }
-      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
-      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
-    },
-    setup: function () { },
-    deferSetup: true,
-    destroy: function () { },
-  });
+        },
+        unmatch: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridFull);
+                listMainElem.classList.add(gridBig);
+                listSideElem.classList.add(gridSmall);
+                listSideElem.classList.remove('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
+
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
+
+            var navCollapseBtn = document.querySelector('.navbar__burger');
+            var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+            if (navCollapse) {
+                navCollapse.setAttribute('data-open', false);
+                navCollapse.style.maxHeight = 0;
+                navCollapseBtn.classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('navbar__menu')[0]) {
+                document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('mobile-search')[0]) {
+                document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            }
+        },
+        setup: function () { },
+        deferSetup: true,
+        destroy: function () { },
+    });
 </script>
+
 
 
             
@@ -2290,7 +2326,12 @@
 </footer>
         </div>
         
-<div class="wrapper__right hide" dir="ltr">
+
+
+
+
+
+<div class="wrapper__right hide" data-pad="true" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
   
 </div>
