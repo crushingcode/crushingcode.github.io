@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head prefix="og: http://ogp.me/ns#">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>The curious case of dependency conflicts – Crushing C.O.D.E</title>
@@ -529,12 +529,20 @@
           }
         }
 
-        var utterances = document.querySelector('iframe');
+        var utterances = document.getElementById('utterances');
         if (utterances) {
-          utterances.contentWindow.postMessage({
+          utterances.querySelector('iframe').contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
+        }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
         }
       });
     }) : null;
@@ -1214,7 +1222,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1241,7 +1249,7 @@
     "datePublished": "2016-05-02T10:54:24+02:00",
     "dateModified": "2016-05-02T10:54:24+02:00",
     "url" : "https://crushingcode.nisrulz.com/posts/the-curious-case-of-dependency-conflicts/",
-    "description": "If I were to ask a question to a room filled with android developers  **\u0026ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle …",
+    "description": "If I were to ask a question to a room filled with android developers  \u0026ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle …",
     "keywords": ["gradle","issue"],
     "author": {
       "@type": "Person",
@@ -1592,7 +1600,7 @@
       
       <p>If I were to ask a question to a room filled with android developers</p>
 <blockquote>
-<p>**&ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?&quot;**</p>
+<p><strong>&ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?&quot;</strong></p>
 </blockquote>
 <p>..I am pretty sure a lot of them would raise their hand or agree to being in that state and the very first action would be to hop onto stackoverflow and search for possible solutions in this type of a situation.</p>
 <p><img src="/images/posts/depconflicts.jpg" alt="depconflicts" /></p>

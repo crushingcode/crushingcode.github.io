@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head prefix="og: http://ogp.me/ns#">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Talks – Crushing C.O.D.E</title>
@@ -529,12 +529,20 @@
           }
         }
 
-        var utterances = document.querySelector('iframe');
+        var utterances = document.getElementById('utterances');
         if (utterances) {
-          utterances.contentWindow.postMessage({
+          utterances.querySelector('iframe').contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
+        }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
         }
       });
     }) : null;
@@ -1213,7 +1221,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="Talks Page">
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1579,6 +1587,26 @@
       
       <li class="archive__li" data-dir="ltr">
         <span class="talk__date" data-dir="ltr" data-ani="false">
+          Apr 21
+        </span>
+        
+        <a href="https://crushingcode.nisrulz.com/talks/android_makers_paris_apr_2020/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Demystifying Low Latency Audio on Android @Android Makers Paris</a>
+        
+        
+      </li>
+      
+      <li class="archive__li" data-dir="ltr">
+        <span class="talk__date" data-dir="ltr" data-ani="false">
+          Apr 4
+        </span>
+        
+        <a href="https://crushingcode.nisrulz.com/talks/gdg_ahmedabad_apr_2020/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">My love-hate relationship with Android Studio @GDG Ahmedabad</a>
+        
+        
+      </li>
+      
+      <li class="archive__li" data-dir="ltr">
+        <span class="talk__date" data-dir="ltr" data-ani="false">
           Feb 2
         </span>
         
@@ -1628,26 +1656,6 @@
         </span>
         
         <a href="https://crushingcode.nisrulz.com/talks/droidcon_vienna_2019/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">My love-hate relationship with Android Studio @Droidcon Vienna</a>
-        
-        
-      </li>
-      
-      <li class="archive__li" data-dir="ltr">
-        <span class="talk__date" data-dir="ltr" data-ani="false">
-          Jun 24
-        </span>
-        
-        <a href="https://crushingcode.nisrulz.com/talks/devoxx_pl_2019/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">My love-hate relationship with Android Studio @Devoxx Poland</a>
-        
-        
-      </li>
-      
-      <li class="archive__li" data-dir="ltr">
-        <span class="talk__date" data-dir="ltr" data-ani="false">
-          Mar 15
-        </span>
-        
-        <a href="https://crushingcode.nisrulz.com/talks/appdevcon_2019/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Demystifying Android Libraries @AppdevCon</a>
         
         
       </li>

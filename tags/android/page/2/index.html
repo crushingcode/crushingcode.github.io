@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head prefix="og: http://ogp.me/ns#">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>android – Crushing C.O.D.E</title>
@@ -529,12 +529,20 @@
           }
         }
 
-        var utterances = document.querySelector('iframe');
+        var utterances = document.getElementById('utterances');
         if (utterances) {
-          utterances.contentWindow.postMessage({
+          utterances.querySelector('iframe').contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
+        }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
         }
       });
     }) : null;
@@ -1200,9 +1208,9 @@
 <meta name="description" content="Blog by Nishant Srivastava" />
 
 
-<meta name="created" content="2019-11-09T00:00:00&#43;0000">
-<meta name="modified" content="2019-11-09T00:00:00&#43;0000">
-<meta property="article:published_time" content="2019-11-09T00:00:00&#43;0000">
+<meta name="created" content="2020-04-21T00:00:00&#43;0000">
+<meta name="modified" content="2020-04-21T00:00:00&#43;0000">
+<meta property="article:published_time" content="2020-04-21T00:00:00&#43;0000">
 
 <meta name="author" content="Nishant Srivastava">
 
@@ -1213,7 +1221,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1600,6 +1608,70 @@
 
     <div class="summary-classic__content">
       <header>
+        <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/berlindroid_feb_2019/'> Things I wish I knew when I started building Android libraries-Vol.2 @Berlindroid</a> </h5>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Feb 27, 2019 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
+          
+        </h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+            Berlindroid &lsquo;19, Berlin, Germany Abstract   Building an Android library in the current times is way different than what it used to be earlier.
+          
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </div>
+  <hr />
+</article>
+
+      
+        
+  <article class="summary-classic" data-ani="false">
+  <div class="summary-classic__flex-box" >
+
+    
+
+    <div class="summary-classic__content">
+      <header>
+        <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/mobius_moscow_2018/'> Things I wish I knew when I started building Android libraries-Vol.2 @Mobius Moscow</a> </h5>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Dec 8, 2018 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
+          
+        </h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+            Mobius Moscow &lsquo;18, Moscow, Russia Abstract   Building an Android library in the current times is way different than what it used to be earlier.
+          
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </div>
+  <hr />
+</article>
+
+      
+        
+  <article class="summary-classic" data-ani="false">
+  <div class="summary-classic__flex-box" >
+
+    
+
+    <div class="summary-classic__content">
+      <header>
         <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/devoxx_be_2018/'> Things I wish I knew when I started building Android libraries-Vol.2 @Devoxx Belgium</a> </h5>
         <h6 class="subtitle caption">
           <time title="Written At" dir="ltr">📅&nbsp;Nov 15, 2018 </time>
@@ -1790,73 +1862,6 @@ It has been a pain point for Android developers all over the world. It is no bra
 </article>
 
       
-        
-  <article class="summary-classic" data-ani="false">
-  <div class="summary-classic__flex-box" >
-
-    
-
-    <div class="summary-classic__content">
-      <header>
-        <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/droidcon_berlin_2017/'> Things I wish I knew when I started building Android libraries @Droidcon Berlin</a> </h5>
-        <h6 class="subtitle caption">
-          <time title="Written At" dir="ltr">📅&nbsp;Sep 5, 2017 </time>
-          
-          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
-          
-        </h6>
-      </header>
-      <div>
-        <div class="summary-classic__text p2">
-          
-            Droidcon Berlin &lsquo;17, Berlin, Germany Abstract   As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.
-          
-        </div>
-      </div>
-    </div>
-
-    
-    
-  </div>
-  <hr />
-</article>
-
-      
-        
-  <article class="summary-classic" data-ani="false">
-  <div class="summary-classic__flex-box" >
-
-    
-
-    <div class="summary-classic__content">
-      <header>
-        <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/'> Want To Step Up Your Android Learning Game? You Need To Read This First</a> </h5>
-        <h6 class="subtitle caption">
-          <time title="Written At" dir="ltr">📅&nbsp;Jul 29, 2017 </time>
-          
-          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;4&nbsp;min read </span>
-          
-          &middot; <span title="WRITTEN BY" dir="ltr">✍️&nbsp;Nishant</span>
-          
-        </h6>
-      </header>
-      <div>
-        <div class="summary-classic__text p2">
-          
-            DISCLAIMER: If you consider yourself a beginner, intermediate, expert or a ninja in the Android realm, this secret sauce still applies to you.
- TL;DR: Build Something.
-          
-        </div>
-      </div>
-    </div>
-
-    
-    
-  </div>
-  <hr />
-</article>
-
-      
       
 
 
@@ -1971,7 +1976,7 @@ It has been a pain point for Android developers all over the world. It is no bra
                         adb
                     </span>
                     <span class="taxo__num" dir="auto">
-                        6
+                        7
                     </span>
                 </a>
             </span>
@@ -1984,7 +1989,7 @@ It has been a pain point for Android developers all over the world. It is no bra
                         android
                     </span>
                     <span class="taxo__num" dir="auto">
-                        38
+                        40
                     </span>
                 </a>
             </span>
@@ -2008,6 +2013,19 @@ It has been a pain point for Android developers all over the world. It is no bra
                 <a href="/tags/android-wear/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         android-wear
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/audio/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        audio
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -2114,7 +2132,7 @@ It has been a pain point for Android developers all over the world. It is no bra
                         kotlin
                     </span>
                     <span class="taxo__num" dir="auto">
-                        5
+                        6
                     </span>
                 </a>
             </span>
@@ -2231,7 +2249,7 @@ It has been a pain point for Android developers all over the world. It is no bra
                         tools
                     </span>
                     <span class="taxo__num" dir="auto">
-                        12
+                        13
                     </span>
                 </a>
             </span>

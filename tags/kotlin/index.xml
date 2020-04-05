@@ -52,6 +52,38 @@
       </item>
       
       <item>
+        <title>Demystifying Low Latency Audio on Android @Android Makers Paris</title>
+        <link>https://crushingcode.nisrulz.com/talks/android_makers_paris_apr_2020/</link>
+        <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 21 Apr 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/android_makers_paris_apr_2020/</guid>
+        <description>Android Makers Paris 2020, Online Abstract   Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>audio</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Kotlin MP: Into the Multi-Verse @FOSDEM</title>
         <link>https://crushingcode.nisrulz.com/talks/fosdem_2020/</link>
         <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>

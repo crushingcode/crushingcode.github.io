@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head prefix="og: http://ogp.me/ns#">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Talks – Crushing C.O.D.E</title>
@@ -529,12 +529,20 @@
           }
         }
 
-        var utterances = document.querySelector('iframe');
+        var utterances = document.getElementById('utterances');
         if (utterances) {
-          utterances.contentWindow.postMessage({
+          utterances.querySelector('iframe').contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
+        }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
         }
       });
     }) : null;
@@ -1213,7 +1221,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="Talks Page">
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1563,6 +1571,31 @@
     
     
 
+    
+    <span class="archive__key" data-ani="false">2016</span>
+    <ul class="archive__ul" data-dir="ltr">
+      
+      <li class="archive__li" data-dir="ltr">
+        <span class="talk__date" data-dir="ltr" data-ani="false">
+          May 18
+        </span>
+        
+        <a href="https://crushingcode.nisrulz.com/talks/devfest_newdelhi_2016/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">Sipping on Battery Juice @Devfest&#39;16 New Delhi</a>
+        
+        
+      </li>
+      
+      <li class="archive__li" data-dir="ltr">
+        <span class="talk__date" data-dir="ltr" data-ani="false">
+          Feb 14
+        </span>
+        
+        <a href="https://crushingcode.nisrulz.com/talks/gdgnd_feb_2016/" target="" rel="" class="talk__title" data-title-wrap="wrap" data-dir="ltr">An-Droid 101 - Developing Libraries @GDG New Delhi</a>
+        
+        
+      </li>
+      
+    </ul>
     
     <span class="archive__key" data-ani="false">2015</span>
     <ul class="archive__ul" data-dir="ltr">

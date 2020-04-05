@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head prefix="og: http://ogp.me/ns#">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Posts – Crushing C.O.D.E</title>
@@ -529,12 +529,20 @@
           }
         }
 
-        var utterances = document.querySelector('iframe');
+        var utterances = document.getElementById('utterances');
         if (utterances) {
-          utterances.contentWindow.postMessage({
+          utterances.querySelector('iframe').contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
+        }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
         }
       });
     }) : null;
@@ -1213,7 +1221,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1863,7 +1871,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
         <div class="summary-classic__text p2">
           
             If I were to ask a question to a room filled with android developers
- **&ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?
+ &ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?
           
         </div>
       </div>
@@ -1974,7 +1982,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
                         adb
                     </span>
                     <span class="taxo__num" dir="auto">
-                        6
+                        7
                     </span>
                 </a>
             </span>
@@ -1987,7 +1995,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
                         android
                     </span>
                     <span class="taxo__num" dir="auto">
-                        38
+                        40
                     </span>
                 </a>
             </span>
@@ -2011,6 +2019,19 @@ A lot of this can be seen in the Android world where a certain library pops up e
                 <a href="/tags/android-wear/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         android-wear
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/audio/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        audio
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -2117,7 +2138,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
                         kotlin
                     </span>
                     <span class="taxo__num" dir="auto">
-                        5
+                        6
                     </span>
                 </a>
             </span>
@@ -2234,7 +2255,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
                         tools
                     </span>
                     <span class="taxo__num" dir="auto">
-                        12
+                        13
                     </span>
                 </a>
             </span>
