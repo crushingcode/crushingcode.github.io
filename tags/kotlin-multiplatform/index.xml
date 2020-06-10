@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/kotlin-multiplatform/index.xml" rel="self" type="application/rss+xml" />
@@ -22,6 +22,46 @@
     
     
 
+      
+      <item>
+        <title>The Future of Mobile: Android/iOS, Flutter and Native @Raywenderlich.com</title>
+        <link>https://crushingcode.nisrulz.com/talks/future_of_mobile_2020/</link>
+        <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 14 May 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/future_of_mobile_2020/</guid>
+        <description>Raywenderlich.com, Online Abstract   In this Roundtable Talk, Kevin Moore, Kevin Galligan, Nishant Srivastava and Joe Howard discuss the state of mobile and what platform you should use when starting a brand new project.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>kotlin-multiplatform</category>
+            
+          
+            
+              <category>flutter</category>
+            
+          
+            
+              <category>ios</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Kotlin MP: Into the Multi-Verse @FOSDEM</title>

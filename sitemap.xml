@@ -74,7 +74,27 @@
   
   <url>
     <loc>https://crushingcode.nisrulz.com/tags/android/</loc>
-    <lastmod>2020-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/tags/flutter/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/tags/ios/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/tags/kotlin-multiplatform/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/talks/future_of_mobile_2020/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -139,11 +159,6 @@
   
   <url>
     <loc>https://crushingcode.nisrulz.com/talks/fosdem_2020/</loc>
-    <lastmod>2020-02-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.nisrulz.com/tags/kotlin-multiplatform/</loc>
     <lastmod>2020-02-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -270,11 +285,6 @@
   <url>
     <loc>https://crushingcode.nisrulz.com/talks/devfest_vancouver_2017/</loc>
     <lastmod>2017-10-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.nisrulz.com/tags/flutter/</loc>
-    <lastmod>2017-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
