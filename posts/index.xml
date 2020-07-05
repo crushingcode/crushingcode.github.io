@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -22,6 +22,30 @@
     
     
 
+      
+      <item>
+        <title>Tutorials contributed to Raywenderlich.com</title>
+        <link>https://crushingcode.nisrulz.com/posts/raywederlich-com-tutorials/</link>
+        <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 05 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/posts/raywederlich-com-tutorials/</guid>
+        <description>I have been contributing to the tutorials at Raywenderlich.com since 2018. I joined them initially as an Author on the Android team, but since then have now jumped into different roles such as being a Technical Editor and a Final Pass Editor.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>tutorials</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Terminal Foo: Triggering Notifications from CMDLine 📟</title>
