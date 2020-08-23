@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Tue, 21 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/audio/index.xml" rel="self" type="application/rss+xml" />
@@ -22,6 +22,38 @@
     
     
 
+      
+      <item>
+        <title>Demystifying Low Latency Audio on Android @GDG Kisumu</title>
+        <link>https://crushingcode.nisrulz.com/talks/gdg_kisumu_aug_2020/</link>
+        <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 22 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/gdg_kisumu_aug_2020/</guid>
+        <description>GDG Kisumu, Kenya 2020, Online Abstract   Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>audio</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Demystifying Low Latency Audio on Android @Android Makers Paris</title>

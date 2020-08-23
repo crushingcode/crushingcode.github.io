@@ -24,6 +24,38 @@
 
       
       <item>
+        <title>Demystifying Low Latency Audio on Android @GDG Kisumu</title>
+        <link>https://crushingcode.nisrulz.com/talks/gdg_kisumu_aug_2020/</link>
+        <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 22 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/gdg_kisumu_aug_2020/</guid>
+        <description>GDG Kisumu, Kenya 2020, Online Abstract   Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>audio</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Cooking with Coroutine Recipes @CodemotionAmsterdam [Cancelled]</title>
         <link>https://crushingcode.nisrulz.com/talks/codemotion_amsterdam_2020/</link>
         <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
