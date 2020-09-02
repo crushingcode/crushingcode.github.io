@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -24,9 +24,45 @@
 
       
       <item>
+        <title>coroutines</title>
+        <link>https://crushingcode.nisrulz.com/tags/coroutines/</link>
+        <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/tags/coroutines/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kotlin</title>
+        <link>https://crushingcode.nisrulz.com/tags/kotlin/</link>
+        <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/tags/kotlin/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>android</title>
         <link>https://crushingcode.nisrulz.com/tags/android/</link>
-        <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/tags/android/</guid>
@@ -60,48 +96,12 @@
       </item>
       
       <item>
-        <title>kotlin</title>
-        <link>https://crushingcode.nisrulz.com/tags/kotlin/</link>
-        <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        
-        <guid>https://crushingcode.nisrulz.com/tags/kotlin/</guid>
-        <description></description>
-        
-        <dc:creator>Nishant Srivastava</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
         <title>tutorials</title>
         <link>https://crushingcode.nisrulz.com/tags/tutorials/</link>
         <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/tags/tutorials/</guid>
-        <description></description>
-        
-        <dc:creator>Nishant Srivastava</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>coroutines</title>
-        <link>https://crushingcode.nisrulz.com/tags/coroutines/</link>
-        <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        
-        <guid>https://crushingcode.nisrulz.com/tags/coroutines/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

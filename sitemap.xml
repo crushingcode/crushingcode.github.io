@@ -49,12 +49,37 @@
   
   <url>
     <loc>https://crushingcode.nisrulz.com/</loc>
-    <lastmod>2020-08-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/talks/codemotion_online_2020/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/tags/coroutines/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/tags/kotlin/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/tags/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://crushingcode.nisrulz.com/tags/android/</loc>
-    <lastmod>2020-08-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/talks/gdg_kisumu_4_sept_2020/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -63,17 +88,7 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.nisrulz.com/talks/gdg_kisumu_aug_2020/</loc>
-    <lastmod>2020-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.nisrulz.com/tags/kotlin/</loc>
-    <lastmod>2020-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.nisrulz.com/tags/</loc>
+    <loc>https://crushingcode.nisrulz.com/talks/gdg_kisumu_22_aug_2020/</loc>
     <lastmod>2020-08-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -94,11 +109,6 @@
   
   <url>
     <loc>https://crushingcode.nisrulz.com/talks/codemotion_amsterdam_2020/</loc>
-    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://crushingcode.nisrulz.com/tags/coroutines/</loc>
     <lastmod>2020-05-27T00:00:00+00:00</lastmod>
   </url>
   

@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
@@ -24,12 +24,68 @@
 
       
       <item>
+        <title>Cooking with Coroutine Recipes @Codemotion Online</title>
+        <link>https://crushingcode.nisrulz.com/talks/codemotion_online_2020/</link>
+        <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 21 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/codemotion_online_2020/</guid>
+        <description>Codemotion Online 2020, Online Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>coroutines</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Android 11 - THE GRAND FINALE! @GDG Kisumu</title>
+        <link>https://crushingcode.nisrulz.com/talks/gdg_kisumu_4_sept_2020/</link>
+        <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 04 Sep 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/gdg_kisumu_4_sept_2020/</guid>
+        <description>GDG Kisumu, Kenya 2020, Online Abstract   This is a panel discussion along with other awesome developers about Android with focus on upcoming Android 11 release.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Demystifying Low Latency Audio on Android @GDG Kisumu</title>
-        <link>https://crushingcode.nisrulz.com/talks/gdg_kisumu_aug_2020/</link>
+        <link>https://crushingcode.nisrulz.com/talks/gdg_kisumu_22_aug_2020/</link>
         <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 22 Aug 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.nisrulz.com/talks/gdg_kisumu_aug_2020/</guid>
+        <guid>https://crushingcode.nisrulz.com/talks/gdg_kisumu_22_aug_2020/</guid>
         <description>GDG Kisumu, Kenya 2020, Online Abstract   Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
