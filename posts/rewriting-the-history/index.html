@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.75.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1756,7 +1756,7 @@ It can however be applied to various other use cases. You can extend it to remov
 <pre><code>! [remote rejected] refs/pull/53/head -&gt; refs/pull/53/head (deny updating a hidden ref)
 </code></pre><blockquote>
 <p>As mentioned in this <a href="https://github.com/rtyley/bfg-repo-cleaner/issues/36#issuecomment-37877829">issue</a>,</p>
-<p>The refs beginning ‘refs/pull&rsquo; are synthetic read-only refs created by GitHub - you can&rsquo;t update (and therefore &lsquo;clean&rsquo;) them, because they reflect branches that may well actually come from other repositories - ones that submitted pull-requests to you.<br />
+<p>The refs beginning ‘refs/pull' are synthetic read-only refs created by GitHub - you can&rsquo;t update (and therefore &lsquo;clean&rsquo;) them, because they reflect branches that may well actually come from other repositories - ones that submitted pull-requests to you.<br />
 So, while you’ve pushed all your real refs, the pull requests don’t get updated<br />
 In simple words Github also saves branches after you merged, closed and deleted them. You have no way to modify those branches that are owned by Github. The only way you can really remove them is by deleting the repository. And keep in mind that you also lose all stars, issues and so on when deleting a project. Which will be a bummer, you don’t want to do that, do you ?</p>
 </blockquote>
