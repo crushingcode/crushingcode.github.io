@@ -24,6 +24,34 @@
 
       
       <item>
+        <title>And&#39; Libraries, Stop Starting up! @Droidcon Americas &#39;20</title>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_americas_2020/</link>
+        <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 16 Nov 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_americas_2020/</guid>
+        <description>Droidcon Americas &amp;lsquo;20, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Cooking with Coroutine Recipes @Codemotion Online</title>
         <link>https://crushingcode.nisrulz.com/talks/codemotion_online_2020/</link>
         <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>

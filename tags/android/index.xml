@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Fri, 04 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
@@ -22,6 +22,34 @@
     
     
 
+      
+      <item>
+        <title>And&#39; Libraries, Stop Starting up! @Droidcon Americas &#39;20</title>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_americas_2020/</link>
+        <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 16 Nov 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_americas_2020/</guid>
+        <description>Droidcon Americas &amp;lsquo;20, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library </category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Android 11 - THE GRAND FINALE! @GDG Kisumu</title>
