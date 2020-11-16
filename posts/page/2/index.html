@@ -106,6 +106,74 @@
 
 
     
+    var tables = document.querySelectorAll('.single__contents > table');
+    for (let i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentElement.replaceChild(wrapper, table);
+      wrapper.appendChild(table);
+    }
+    
+
+
+    
+    var footNoteRefs = document.querySelectorAll('.footnote-ref');
+    var footNoteBackRefs = document.querySelectorAll('.footnote-backref');
+
+    footNoteRefs ? 
+    footNoteRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function () {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+
+    footNoteBackRefs ? 
+    footNoteBackRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function() {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+    
+
+
+    
     var summaryContainer = document.querySelector('.summary__container');
     var searchResult = document.querySelector('.search-result');
     var searchResultCloseBtn = document.querySelector('.search-result__close');
@@ -1679,6 +1747,7 @@
   <hr />
 </article>
 
+
             
                 
   <article class="summary-classic" data-ani="false">
@@ -1712,6 +1781,7 @@
   </div>
   <hr />
 </article>
+
 
             
                 
@@ -1753,6 +1823,7 @@
   <hr />
 </article>
 
+
             
                 
   <article class="summary-classic" data-ani="false">
@@ -1792,6 +1863,7 @@
   </div>
   <hr />
 </article>
+
 
             
                 
@@ -1833,6 +1905,7 @@
   <hr />
 </article>
 
+
             
                 
   <article class="summary-classic" data-ani="false">
@@ -1866,6 +1939,7 @@
   </div>
   <hr />
 </article>
+
 
             
                 
@@ -1901,6 +1975,7 @@
   <hr />
 </article>
 
+
             
                 
   <article class="summary-classic" data-ani="false">
@@ -1935,6 +2010,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
   </div>
   <hr />
 </article>
+
 
             
             
