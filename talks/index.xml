@@ -24,7 +24,39 @@
 
       
       <item>
-        <title>And&#39; Libraries, Stop Starting up! @Droidcon Americas &#39;20</title>
+        <title>Demystifying Low Latency Audio on Android @Droidcon APAC</title>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_apac_2020/</link>
+        <pubDate>Mon, 14 Dec 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 14 Dec 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_apac_2020/</guid>
+        <description>Droidcon APAC &amp;lsquo;20, Online Abstract   Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>audio</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>And&#39; Libraries, Stop Starting up! @Droidcon Americas</title>
         <link>https://crushingcode.nisrulz.com/talks/droidcon_americas_2020/</link>
         <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
@@ -43,7 +75,7 @@
             
           
             
-              <category>android-library </category>
+              <category>android-library</category>
             
           
         
@@ -475,7 +507,7 @@
             
           
             
-              <category>android-library </category>
+              <category>android-library</category>
             
           
             
@@ -507,7 +539,7 @@
             
           
             
-              <category>android-library </category>
+              <category>android-library</category>
             
           
             
@@ -539,7 +571,7 @@
             
           
             
-              <category>android-library </category>
+              <category>android-library</category>
             
           
             
@@ -571,7 +603,7 @@
             
           
             
-              <category>android-library </category>
+              <category>android-library</category>
             
           
             
@@ -603,7 +635,7 @@
             
           
             
-              <category>android-library </category>
+              <category>android-library</category>
             
           
         
@@ -684,7 +716,7 @@
             
           
             
-              <category>android-library </category>
+              <category>android-library</category>
             
           
             
@@ -796,7 +828,7 @@
             
           
             
-              <category>android-library </category>
+              <category>android-library</category>
             
           
             
