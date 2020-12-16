@@ -2274,13 +2274,14 @@ No value has been specified for property 'user'.
       
     
       
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcrushingcode.nisrulz.com%2fposts%2fpublish-your-android-library-via-jcenter%2f&title=Guide%20to%20publishing%20your%20Android%20Library%20via%20Jcenter%2fBintray &summary=&source=Blog%20by%20Nishant%20Srivastava" target="_blank" rel="noreferer" title="LinkedIn" aria-label="LinkedIn Share Button" class="donation__item" data-type="share">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcrushingcode.nisrulz.com%2fposts%2fpublish-your-android-library-via-jcenter%2f&title=Guide%20to%20publishing%20your%20Android%20Library%20via%20Jcenter%2fBintray &summary=&source=Blog%20by%20Nishant%20Srivastava" target="_blank" rel="noreferrer" title="LinkedIn" aria-label="LinkedIn Share Button" class="donation__item" data-type="share">
           <svg data-name="linkedin" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"/><path d="m.396 7.977h4.976v16.023h-4.976z"/><path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"/></svg>
         </a>
       
     
   </div>
 </div>
+
 
     
 <div class="donation">
@@ -2884,6 +2885,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
 <script defer src="/js/helper/getParents.min.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
@@ -2893,6 +2895,42 @@ document.addEventListener('DOMContentLoaded', function () {
 <script defer src="/js/helper/prop.min.js"></script>
 
 <script defer src="/js/helper/fadeinout.min.js"></script>
+
+<script defer src="/js/helper/throttle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3076,6 +3114,23 @@ document.addEventListener('DOMContentLoaded', function () {
       }) : null;
     }
     
+    
+    
+    
+    
+    var topOffset = 120;
+    var botOffset = 70;
+    var handleWindowResize = function () {
+      if (tocElem) {
+        tocElem.style.maxHeight = (window.innerHeight - topOffset - botOffset) + 'px';
+      }
+    }
+    var throttledWindowResize = throttle(handleWindowResize, 300);
+    throttledWindowResize()
+
+    
+    window.addEventListener('resize', throttledWindowResize);
+    
 
 
 
@@ -3094,7 +3149,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var newElemOuter = document.createElement('span');
       newElemOuter.classList.add('anchor');
       newElemOuter.classList.add('hide');
-      newElemOuter.setAttribute('data-clipboard-text', link);
+      newElemOuter.setAttribute('data-clipboard-text', decodeURI(link));
       newElemOuter.style.position = 'relative';
 
       var newElemInner = document.createElement('span');
