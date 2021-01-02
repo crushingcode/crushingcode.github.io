@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://crushingcode.nisrulz.com/showcase/android/android_tips_tricks/</loc>
+    <loc>https://crushingcode.nisrulz.com/showcase/tipsntricks/android_tips_tricks/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://crushingcode.nisrulz.com/showcase/android_library/easydeviceinfo/</loc>
+    <loc>https://crushingcode.nisrulz.com/showcase/oss/appg/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_library/sensey/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_apps/metronome/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -28,7 +38,17 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.nisrulz.com/showcase/android_library/sensey/</loc>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_library/easydeviceinfo/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/showcase/oss/javadoc_themer/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_apps/vf_smartapp/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -42,12 +62,17 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.nisrulz.com/showcase/android_library/lantern/</loc>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_library/validatetor/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://crushingcode.nisrulz.com/showcase/android_library/recyclerviewhelper/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_library/lantern/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -242,7 +267,7 @@
   </url>
   
   <url>
-    <loc>https://crushingcode.nisrulz.com/showcase/android/</loc>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_apps/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -257,12 +282,22 @@
   </url>
   
   <url>
+    <loc>https://crushingcode.nisrulz.com/showcase/oss/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://crushingcode.nisrulz.com/showcase/patents/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://crushingcode.nisrulz.com/showcase/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://crushingcode.nisrulz.com/showcase/tipsntricks/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   

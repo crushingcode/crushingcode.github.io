@@ -22,24 +22,6 @@
 
       
       <item>
-        <title>EasyDeviceInfo</title>
-        <link>https://crushingcode.nisrulz.com/showcase/android_library/easydeviceinfo/</link>
-        <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.nisrulz.com/showcase/android_library/easydeviceinfo/</guid>
-        <description></description>
-        
-        <dc:creator>Nishant Srivastava</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
         <title>Sensey</title>
         <link>https://crushingcode.nisrulz.com/showcase/android_library/sensey/</link>
         <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
@@ -58,12 +40,30 @@
       </item>
       
       <item>
-        <title>Lantern</title>
-        <link>https://crushingcode.nisrulz.com/showcase/android_library/lantern/</link>
+        <title>EasyDeviceInfo</title>
+        <link>https://crushingcode.nisrulz.com/showcase/android_library/easydeviceinfo/</link>
         <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.nisrulz.com/showcase/android_library/lantern/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/android_library/easydeviceinfo/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Validatetor</title>
+        <link>https://crushingcode.nisrulz.com/showcase/android_library/validatetor/</link>
+        <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/showcase/android_library/validatetor/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -82,6 +82,24 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/showcase/android_library/recyclerviewhelper/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Lantern</title>
+        <link>https://crushingcode.nisrulz.com/showcase/android_library/lantern/</link>
+        <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/showcase/android_library/lantern/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

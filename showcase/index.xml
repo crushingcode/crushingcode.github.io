@@ -22,12 +22,12 @@
 
       
       <item>
-        <title>Android</title>
-        <link>https://crushingcode.nisrulz.com/showcase/android/</link>
+        <title>Android Apps</title>
+        <link>https://crushingcode.nisrulz.com/showcase/android_apps/</link>
         <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.nisrulz.com/showcase/android/</guid>
+        <guid>https://crushingcode.nisrulz.com/showcase/android_apps/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -76,12 +76,48 @@
       </item>
       
       <item>
+        <title>OSS</title>
+        <link>https://crushingcode.nisrulz.com/showcase/oss/</link>
+        <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/showcase/oss/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Patents</title>
         <link>https://crushingcode.nisrulz.com/showcase/patents/</link>
         <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/showcase/patents/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Tips n&#39; Tricks</title>
+        <link>https://crushingcode.nisrulz.com/showcase/tipsntricks/</link>
+        <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 19 Jan 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/showcase/tipsntricks/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
