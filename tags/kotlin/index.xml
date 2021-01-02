@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Mon, 14 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Feb 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
@@ -22,6 +22,98 @@
     
     
 
+      
+      <item>
+        <title>Step it up: Compose for Desktop @FOSDEM</title>
+        <link>https://crushingcode.nisrulz.com/talks/fosdem_2021/</link>
+        <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 07 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/fosdem_2021/</guid>
+        <description>FOSDEM 2021: Kotlin Devroom, Online Abstract   Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>And&#39; Libraries, Stop Starting up! @Devfest DACH</title>
+        <link>https://crushingcode.nisrulz.com/talks/devfest_dach_2020/</link>
+        <pubDate>Sun, 24 Jan 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 24 Jan 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/devfest_dach_2020/</guid>
+        <description>Devfest DACH, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>sdk</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>And&#39; Libraries, Stop Starting up! @Android Worldwide</title>
+        <link>https://crushingcode.nisrulz.com/talks/android_worldwide_jan_2021/</link>
+        <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 19 Jan 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/android_worldwide_jan_2021/</guid>
+        <description>Android Worldwide, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>sdk</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Demystifying Low Latency Audio on Android @Droidcon APAC</title>

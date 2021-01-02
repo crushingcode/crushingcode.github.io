@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-    <meta charset="utf-8">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>sdk – Crushing C.O.D.E</title>
     
 
 
-<script defer src="/js/fuse.min.94c78ad70b02749822921660cf4e9f0b3701bc0680c421afb784a78228de0275.js"></script>
+  
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
+
+
+
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
+
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
 <script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -76,6 +83,107 @@
 
 
   document.addEventListener('DOMContentLoaded', function () {
+    
+    var navCollapseBtn = document.querySelector('.navbar__burger');
+    navCollapseBtn ? navCollapseBtn.addEventListener('click', function (e) {
+      var navCollapse = document.querySelector('.navbarm__collapse');
+
+      if (navCollapse) {
+        var dataOpen = navCollapse.getAttribute('data-open');
+
+        if (dataOpen === 'true') {
+          navCollapse.setAttribute('data-open', 'false');
+          navCollapse.style.maxHeight = 0;
+          navCollapseBtn.classList.remove('is-active');
+        } else {
+          navCollapse.setAttribute('data-open', 'true');
+          navCollapse.style.maxHeight = navCollapse.scrollHeight + "px";
+          navCollapseBtn.classList.add('is-active');
+        }
+      }
+    }) : null;
+    
+
+
+    
+    var tables = document.querySelectorAll('.single__contents > table');
+    for (let i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentElement.replaceChild(wrapper, table);
+      wrapper.appendChild(table);
+    }
+    
+
+
+    
+    var footNoteRefs = document.querySelectorAll('.footnote-ref');
+    var footNoteBackRefs = document.querySelectorAll('.footnote-backref');
+
+    footNoteRefs ? 
+    footNoteRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function () {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+
+    footNoteBackRefs ? 
+    footNoteBackRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function() {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+    
+
+
+    
+    var summaryContainer = document.querySelector('.summary__container');
+    var searchResult = document.querySelector('.search-result');
+    var searchResultCloseBtn = document.querySelector('.search-result__close');
+    searchResultCloseBtn ? searchResultCloseBtn.addEventListener('click', function (e) {
+      searchResult.setAttribute('data-display', 'none');
+      summaryContainer.setAttribute('data-display', 'block');
+    }) : null;
+    
+
+
     
     document.querySelectorAll('.tab') ? 
     document.querySelectorAll('.tab').forEach(function(elem, idx) {
@@ -194,16 +302,49 @@
     var navbar = document.querySelector('.navbar');
     var tocFlexbox = document.querySelector('.toc__flexbox');
     var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
+    var expandContents = document.querySelectorAll('.expand__content');
+    var boxContents = document.querySelectorAll('.box');
     var notAllowedTitleIds = null;
 
+    
+    var tocFolding = JSON.parse("null");
+    
+    var tocLevels = JSON.parse("null");
+    
+    if (tocLevels) {
+      tocLevels = tocLevels.toString();
+    } else {
+      tocLevels = "h1, h2, h3, h4, h5, h6";
+    }
+
+    
     singleContentsElem && singleContentsElem.querySelectorAll(".tab") ?
     singleContentsElem.querySelectorAll(".tab").forEach(function (elem) {
-      elem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (element) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
         notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
           notAllowedTitleIds.concat(element.getAttribute('id')) :
           [element.getAttribute('id')];
       });
     }) : null;
+
+    
+    expandContents ? expandContents.forEach(function(elem) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
+        notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
+          notAllowedTitleIds.concat(element.getAttribute('id')) :
+          [element.getAttribute('id')];
+      });
+    }) : null;
+
+    
+    boxContents ? boxContents.forEach(function(elem) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
+        notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
+          notAllowedTitleIds.concat(element.getAttribute('id')) :
+          [element.getAttribute('id')];
+      });
+    }) : null;
+
     
     window.onscroll = function () {
       scrollFunction();
@@ -219,16 +360,18 @@
         if (st < 45) {
           return null;
         }
-        
-        if (!navbar.classList.contains('navbar--hide')) {
-          navbar.classList.add('navbar--hide');
-        } else if (navbar.classList.contains('navbar--show')) {
-          navbar.classList.remove('navbar--show');
+
+        if (navbar.classList.contains('scrolling')) {
+          if (!navbar.classList.contains('navbar--hide')) {
+            navbar.classList.add('navbar--hide');
+          } else if (navbar.classList.contains('navbar--show')) {
+            navbar.classList.remove('navbar--show');
+          }
         }
 
         if (singleContentsElem) {
-          if (singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").length > 0) {
-            singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (elem) {
+          if (singleContentsElem.querySelectorAll(tocLevels).length > 0) {
+            singleContentsElem.querySelectorAll(tocLevels).forEach(function (elem) {
               if (toggleTocElem && !toggleTocElem.checked) {
                 return null;
               }
@@ -246,12 +389,18 @@
                   tocElem.querySelector('a[href="#' + id + '"]') ?
                     tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
 
-                  tableOfContentsElem.querySelector('ul') ?
-                    tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
-                      liElem.querySelectorAll('ul').forEach(function (ulElem) {
-                        ulElem.style.display = 'none';
-                      });
-                    }) : null;
+                  if (false === tocFolding) {
+                    
+                  } else {
+                    tableOfContentsElem.querySelectorAll('ul') ?
+                      tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+                        rootUl.querySelectorAll('li').forEach(function (liElem) {
+                          liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                            ulElem.style.display = 'none';
+                          });
+                        });
+                      }) : null;
+                  }
 
                   var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
                   if (curElem && curElem.nextElementSibling) {
@@ -284,15 +433,17 @@
           gttBtn.style.display = "none";
         }
 
-        if (navbar.classList.contains('navbar--hide')) {
-          navbar.classList.remove('navbar--hide');
-        } else if (!navbar.classList.contains('navbar--show')) {
-          navbar.classList.add('navbar--show');
+        if (navbar.classList.contains('scrolling')) {
+          if (navbar.classList.contains('navbar--hide')) {
+            navbar.classList.remove('navbar--hide');
+          } else if (!navbar.classList.contains('navbar--show')) {
+            navbar.classList.add('navbar--show');
+          }
         }
 
         if (singleContentsElem) {
-          if (singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").length > 0) {
-            singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function (elem) {
+          if (singleContentsElem.querySelectorAll(tocLevels).length > 0) {
+            singleContentsElem.querySelectorAll(tocLevels).forEach(function (elem) {
               if (toggleTocElem && !toggleTocElem.checked) {
                 return null;
               }
@@ -310,13 +461,18 @@
                   tocElem.querySelector('a[href="#' + id + '"]') ?
                     tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
 
-                  tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
-                    rootUl.querySelectorAll('li').forEach(function (liElem) {
-                      liElem.querySelectorAll('ul').forEach(function (ulElem) {
-                        ulElem.style.display = 'none';
-                      });
-                    });
-                  });
+                  if (false === tocFolding) {
+                    
+                  } else {
+                    tableOfContentsElem.querySelectorAll('ul') ?
+                      tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+                        rootUl.querySelectorAll('li').forEach(function (liElem) {
+                          liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                            ulElem.style.display = 'none';
+                          });
+                        });
+                      }) : null;
+                  }
 
                   var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
                   if (curElem && curElem.nextElementSibling) {
@@ -341,12 +497,16 @@
         }
 
         if (tableOfContentsElem && document.documentElement.scrollTop < 250) {
-          tableOfContentsElem.querySelector('ul') ?
-          tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
-            liElem.querySelectorAll('ul').forEach(function (ulElem) {
-              ulElem.style.display = 'none';
-            });
-          }) : null;
+          if (false === tocFolding) {
+
+          } else {
+            tableOfContentsElem.querySelector('ul') ?
+              tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
+                liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                  ulElem.style.display = 'none';
+                });
+              }) : null;
+          }
         }
       }
       lastScrollTop = st <= 0 ? 0 : st;
@@ -355,100 +515,69 @@
 
 
   
-    var navbarBurgerElem = document.querySelector('.navbar__burger');
-    var navbarMenuElem = document.querySelector('.navbar__menu');
-    navbarBurgerElem ?
-    navbarBurgerElem.addEventListener('click', function () {
-      if (navbarBurgerElem.classList.contains('is-active')) {
-        navbarBurgerElem.classList.remove('is-active');
-        navbarMenuElem.classList.remove('is-active');
-      } else {
-        navbarBurgerElem.classList.add('is-active');
-        navbarMenuElem.classList.add('is-active');
-      }
-    }) : null;
-  
-
-
-  
-    var mobileSearchInputElem = document.querySelector('#search-mobile');
-    var mobileSearchClassElem = document.querySelector('.mobile-search');
-    var mobileSearchBtnElem = document.querySelector('#mobileSearchBtn');
-    var mobileSearchCloseBtnElem = document.querySelector('#search-mobile-close');
-    var mobileSearchContainer = document.querySelector('#search-mobile-container');
-    var mobileSearchResultsElem = document.querySelector('#search-mobile-results');
-    var htmlElem = document.querySelector('html');
-
-    if (mobileSearchClassElem) {
-      mobileSearchClassElem.style.display = 'none';
-    }
-
-    mobileSearchBtnElem ? 
-    mobileSearchBtnElem.addEventListener('click', function () {
-      if (mobileSearchContainer) {
-        mobileSearchContainer.style.display = 'block';
-      }
-
-      if (mobileSearchInputElem) {
-        mobileSearchInputElem.focus();
-      }
-
-      if (htmlElem) {
-        htmlElem.style.overflowY = 'hidden';
-      }
-    }) : null;
-
-    mobileSearchCloseBtnElem ? 
-    mobileSearchCloseBtnElem.addEventListener('click', function() {
-      if (mobileSearchContainer) {
-        mobileSearchContainer.style.display = 'none';
-      }
-
-      if (mobileSearchInputElem) {
-        mobileSearchInputElem.value = '';
-      }
-      
-      if (mobileSearchResultsElem) {
-        while (mobileSearchResultsElem.firstChild) {
-          mobileSearchResultsElem.removeChild(mobileSearchResultsElem.firstChild);
-        }
-      }
-
-      if (htmlElem) {
-        htmlElem.style.overflowY = 'visible';
-      }
-    }) : null;
-
-    mobileSearchInputElem ? 
-    mobileSearchInputElem.addEventListener('keydown', function(e) {
-      var keyCode = e.which || e.keyCode;
-      if (e.key === 'Escape' || keyCode === 27) {
-        if (mobileSearchContainer) {
-          mobileSearchContainer.style.display = 'none';
-        }
-        
-        if (mobileSearchInputElem) {
-          mobileSearchInputElem.value = '';
-        }
-
-        if (mobileSearchResultsElem) {
-          while (mobileSearchResultsElem.firstChild) {
-            mobileSearchResultsElem.removeChild(mobileSearchResultsElem.firstChild);
-          }
-        }
-        if (htmlElem) {
-          htmlElem.style.overflowY = 'visible';
-        }
-      }
-    }) : null;
-  
-
-
-  
     var localTheme = localStorage.getItem('theme');
     var rootEleme = document.getElementById('root');
     var selectThemeElem = document.querySelectorAll('.select-theme');
     var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
+    
+    
+    var skinDarkCode = JSON.parse("\"dark\"");
+    
+    var skinLightCode = JSON.parse("\"light\"");
+    
+    var skinHackerCode = JSON.parse("\"hacker\"");
+    
+    var skinSolarizedCode = JSON.parse("\"solarized\"");
+    
+    var skinKimbieCode = JSON.parse("\"kimbie\"");
+
+    var setMetaColor = function(themeColor) {
+      var metaMsapplicationTileColor = document.getElementsByName('msapplication-TileColor')[0];
+      var metaThemeColor = document.getElementsByName('theme-color')[0];
+      var metaMsapplicationNavbuttonColor = document.getElementsByName('msapplication-navbutton-color')[0];
+      var metaAppleMobileWebAappStatusBarStyle = document.getElementsByName('apple-mobile-web-app-status-bar-style')[0];
+
+      if (themeColor.includes('dark')) {
+        metaMsapplicationTileColor.setAttribute('content', '#fcfcfa');
+        metaThemeColor.setAttribute('content', '#403E41');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#403E41');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#403E41');
+      } else if (themeColor.includes('light')) {
+        metaMsapplicationTileColor.setAttribute('content', '#555');
+        metaThemeColor.setAttribute('content', '#eee');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#eee');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee');
+      } else if (themeColor.includes('hacker')) {
+        metaMsapplicationTileColor.setAttribute('content', '#e3cd26');
+        metaThemeColor.setAttribute('content', '#252526');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#252526');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#252526');
+      } else if (themeColor.includes('solarized')) {
+        metaMsapplicationTileColor.setAttribute('content', '#d3af86');
+        metaThemeColor.setAttribute('content', '#51412c');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#51412c');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#51412c');
+      } else if (themeColor.includes('kimbie')) {
+        metaMsapplicationTileColor.setAttribute('content', '#586e75');
+        metaThemeColor.setAttribute('content', '#eee8d5');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#eee8d5');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee8d5');
+      }
+    }
+
+    var parseSkinCode = function(themeText) {
+      if (themeText === skinDarkCode) {
+        return 'dark';
+      } else if (themeText === skinLightCode) {
+        return 'light';
+      } else if (themeText === skinHackerCode) {
+        return 'hacker';
+      } else if (themeText === skinSolarizedCode) {
+        return 'solarized';
+      } else if (themeText === skinKimbieCode) {
+        return 'kimbie';
+      }
+    }
     
     if (localTheme) {
       selectThemeItemElem ? 
@@ -459,13 +588,18 @@
           elem.classList.remove('is-active');
         }
       }) : null;
+
+      setMetaColor(localTheme);
+    } else {
+      setMetaColor(rootEleme.className);
     }
 
     selectThemeItemElem ? 
     selectThemeItemElem.forEach(function (v, i) {
       v.addEventListener('click', function (e) {
-        var selectedThemeVariant = e.target.text.trim();
+        var selectedThemeVariant = parseSkinCode(e.target.text.trim());
         localStorage.setItem('theme', selectedThemeVariant);
+        setMetaColor(selectedThemeVariant);
 
         rootEleme.removeAttribute('class');
         rootEleme.classList.add('theme__' + selectedThemeVariant);
@@ -495,12 +629,20 @@
           }
         }
 
-        var utterances = document.querySelector('iframe');
+        var utterances = document.getElementById('utterances');
         if (utterances) {
-          utterances.contentWindow.postMessage({
+          utterances.querySelector('iframe').contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
+        }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
         }
       });
     }) : null;
@@ -508,87 +650,175 @@
 
 
   
-    var baseurl = null;
     
-    var siteBaseURL = JSON.parse("\"https://crushingcode.github.io/\"");
-    var siteBaseChecker = /\/\w+\//i;
-    var isSlug = siteBaseChecker.test(siteBaseURL);
-    var isThemeSite = location.origin.includes('themes.gohugo.io');
-
+    var baseurl = JSON.parse("\"https://crushingcode.nisrulz.com/\"");
     
-        if (isThemeSite) {
-          baseurl = "https:\/\/crushingcode.github.io\/";
-        } else {
-          if (isSlug) {
-            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0];
-          } else {
-            baseurl = location.origin;
-          } 
-        }
+    var permalink = JSON.parse("\"https://crushingcode.nisrulz.com/tags/sdk/\"");
     
-
+    var langprefix = JSON.parse("\"\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
     
     
-    var enableSearchHighlight = JSON.parse("null");
-
+    var enableSearch = JSON.parse("true");
+    
+    var enableSearchHighlight = JSON.parse("true");
+    
+    var searchResultPosition = JSON.parse("null");
+    
+    var sectionType = JSON.parse("\"tags\"");
+    
+    var kind = JSON.parse("\"term\"");
+    
     var fuse = null;
 
-    function endsWith(str, suffix) {
-      return str.indexOf(suffix, str.length - suffix.length) !== -1;
+    if (enableSearch) {
+      (function initFuse() {
+        var xhr = new XMLHttpRequest();
+        if (sectionType === "publication" && kind !== "page") {
+          xhr.open('GET', permalink + "index.json");
+        } else {
+          xhr.open('GET', baseurl + langprefix + "/index.json");
+        }
+        
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+              includeMatches: enableSearchHighlight,
+              shouldSort: true, 
+              threshold: 0.4, 
+              location: 0, 
+              distance: 100, 
+              maxPatternLength: 32,
+              minMatchCharLength: 1,
+              isCaseSensitive: false, 
+              findAllMatches: false, 
+              useExtendedSearch: false, 
+            });
+            window.fuse = fuse;
+          }
+          else {
+            console.error('[' + xhr.status + ']Error:', xhr.statusText);
+          }
+        };
+        xhr.send();
+      })();
     }
 
-    function initFuse() {
-      if (!endsWith(baseurl, "/")) {
-        baseurl = baseurl + '/';
-      };
+    function makeLi(ulElem, obj) {
+      var li = document.createElement('li');
+      li.className = 'search-result__item';
+      
+      var a = document.createElement('a');
+      a.innerHTML = obj.item.title;
+      a.setAttribute('class', 'search-result__item--title');
+      a.setAttribute('href', obj.item.permalink);
 
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', baseurl + "index.json");
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: ['title', 'description', 'content'],
-            includeMatches: enableSearchHighlight,
-            shouldSort: true,
-            threshold: 0.4,
-            location: 0,
-            distance: 100,
-            maxPatternLength: 32,
-            minMatchCharLength: 2,
-          });
-        }
-        else {
-          console.error('[' + xhr.status + ']Error:', xhr.statusText);
-        }
-      };
-      xhr.send();
+      var descDiv = document.createElement('div');
+      descDiv.setAttribute('class', 'search-result__item--desc');
+      if (obj.item.description) {
+        descDiv.innerHTML = obj.item.description;
+      } else if (obj.item.content) {
+        descDiv.innerHTML = obj.item.content.substring(0, 225);
+      }
+      
+      li.appendChild(a);
+      li.appendChild(descDiv);
+      ulElem.appendChild(li);
     }
 
-    function renderSearchResults(results) { 
+    function makeHighlightLi(ulElem, obj) {
+      var li = document.createElement('li');
+      li.className = 'search-result__item';
+      var descDiv = null;
+
+      var a = document.createElement('a');
+      a.innerHTML = obj.item.title;
+      a.setAttribute('class', 'search-result__item--title');
+      a.setAttribute('href', obj.item.uri);
+
+      if (obj.matches && obj.matches.length) {
+        for (var i = 0; i < obj.matches.length; i++) {
+          if ('title' === obj.matches[i].key) {
+            a = document.createElement('a');
+            a.innerHTML = generateHighlightedText(obj.matches[i].value, obj.matches[i].indices);
+            a.setAttribute('class', 'search-result__item--title');
+            a.setAttribute('href', obj.item.uri);
+          }
+          
+          if ('description' === obj.matches[i].key) {
+            descDiv = document.createElement('div');
+            descDiv.setAttribute('class', 'search-result__item--desc');
+            descDiv.innerHTML = generateHighlightedText(obj.item.description, obj.matches[i].indices);
+          } else if ('content' === obj.matches[i].key) {
+            if (!descDiv) {
+              descDiv = document.createElement('div');
+              descDiv.setAttribute('class', 'search-result__item--desc');
+              descDiv.innerHTML = generateHighlightedText(obj.item.content.substring(0, 150), obj.matches[i].indices);
+            }
+          } else {
+            if (obj.item.description) {
+              descDiv = document.createElement('div');
+              descDiv.setAttribute('class', 'search-result__item--desc');
+              descDiv.innerHTML = obj.item.description;
+            } else {
+              descDiv = document.createElement('div');
+              descDiv.setAttribute('class', 'search-result__item--desc');
+              descDiv.innerHTML = obj.item.content.substring(0, 150);
+            }
+          }
+        }
+
+        li.appendChild(a);
+        if (descDiv) {
+          li.appendChild(descDiv);
+        }
+        if (li) {
+          ulElem.appendChild(li);
+        }
+      }
+    }
+
+    function renderSearchResultsSide(searchText, results) {
       searchResults = document.getElementById('search-results');
       searchMenu = document.getElementById('search-menu');
       searchResults.setAttribute('class', 'dropdown is-active');
+      
+      var ul = document.createElement('ul');
+      ul.setAttribute('class', 'dropdown-content search-content');
 
-      var content = document.createElement('div');
-      content.setAttribute('class', 'dropdown-content search-content');
-
-      if (results.length > 0) {
+      if (results.length) {
         results.forEach(function (result) {
-          var item = document.createElement('a');
-          item.setAttribute('href', result.uri);
-          item.setAttribute('class', 'dropdown-item');
-          item.innerHTML = '<div class="menu-item"><div class="menu-item__title">📄 ' + result.title + '</div><div class="menu-item__desc">' + (result.description ? result.description : result.content) + '</div></div>';
-          content.appendChild(item);
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.setAttribute('href', result.uri);
+          a.setAttribute('class', 'dropdown-item');
+          a.appendChild(li);
+
+          var titleDiv = document.createElement('div');
+          titleDiv.innerHTML = result.title;
+          titleDiv.setAttribute('class', 'menu-item__title');
+
+          var descDiv = document.createElement('div');
+          descDiv.setAttribute('class', 'menu-item__desc');
+          if (result.description) {
+            descDiv.innerHTML = result.description;
+          } else if (result.content) {
+            descDiv.innerHTML = result.content.substring(0, 150);
+          }
+
+          li.appendChild(titleDiv);
+          li.appendChild(descDiv);
+          ul.appendChild(a);
         });
       } else {
-        var item = document.createElement('span');
-        item.setAttribute('class', 'dropdown-item');
-        item.innerText = 'No results found';
-        content.appendChild(item);
+        var li = document.createElement('li');
+        li.setAttribute('class', 'dropdown-item');
+        li.innerText = 'No results found';
+        ul.appendChild(li);
       }
 
       while (searchMenu.hasChildNodes()) {
@@ -596,30 +826,73 @@
           searchMenu.lastChild
         );
       }
-      searchMenu.appendChild(content);
+      
+      searchMenu.appendChild(ul);
     }
 
-    function renderSearchHighlightResults(results) {      
+    function renderSearchHighlightResultsSide(searchText, results) {
       searchResults = document.getElementById('search-results');
       searchMenu = document.getElementById('search-menu');
       searchResults.setAttribute('class', 'dropdown is-active');
 
-      var content = document.createElement('div');
-      content.setAttribute('class', 'dropdown-content search-content');
+      var ul = document.createElement('ul');
+      ul.setAttribute('class', 'dropdown-content search-content');
 
-      if (results.length > 0) {
+      if (results.length) {
         results.forEach(function (result) {
-          var item = document.createElement('a');
-          item.setAttribute('href', result.item.uri);
-          item.setAttribute('class', 'dropdown-item');
-          item.innerHTML = '<div class="menu-item"><div class="menu-item__title">📄 ' + generateHighlightedText(result.item.title, result.matches[0].indices) + '</div><div class="menu-item__desc">' + (result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : '') + '</div></div>';
-          content.appendChild(item);
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          var descDiv = null;
+
+          a.setAttribute('href', result.item.uri);
+          a.setAttribute('class', 'dropdown-item');
+          a.appendChild(li);
+
+          var titleDiv = document.createElement('div');
+          titleDiv.innerHTML = result.item.title;
+          titleDiv.setAttribute('class', 'menu-item__title');
+          
+          if (result.matches && result.matches.length) {
+            for (var i = 0; i < result.matches.length; i++) {
+              if ('title' === result.matches[i].key) {
+                titleDiv.innerHTML = generateHighlightedText(result.matches[i].value, result.matches[i].indices);
+              }
+
+              if ('description' === result.matches[i].key) {
+                descDiv = document.createElement('div');
+                descDiv.setAttribute('class', 'menu-item__desc');
+                descDiv.innerHTML = generateHighlightedText(result.item.description, result.matches[i].indices);
+              } else if ('content' === result.matches[i].key) {
+                if (!descDiv) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'menu-item__desc');
+                  descDiv.innerHTML = generateHighlightedText(result.item.content.substring(0, 150), result.matches[i].indices);
+                }
+              } else {
+                if (result.item.description) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'menu-item__desc');
+                  descDiv.innerHTML = result.item.description;
+                } else {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'menu-item__desc');
+                  descDiv.innerHTML = result.item.content.substring(0, 150);
+                }
+              }
+            }
+            
+            li.appendChild(titleDiv);
+            if (descDiv) {
+              li.appendChild(descDiv);
+            }
+            ul.appendChild(a);
+          }
         });
       } else {
-        var item = document.createElement('span');
-        item.setAttribute('class', 'dropdown-item');
-        item.innerText = 'No results found';
-        content.appendChild(item);
+        var li = document.createElement('li');
+        li.setAttribute('class', 'dropdown-item');
+        li.innerText = 'No results found';
+        ul.appendChild(li);
       }
 
       while (searchMenu.hasChildNodes()) {
@@ -627,10 +900,10 @@
           searchMenu.lastChild
         );
       }
-      searchMenu.appendChild(content);
+      searchMenu.appendChild(ul);
     }
 
-    function renderSearchResultsMobile(results) {
+    function renderSearchResultsMobile(searchText, results) {
       searchResults = document.getElementById('search-mobile-results');
 
       var content = document.createElement('div');
@@ -655,29 +928,72 @@
       searchResults.appendChild(content);      
     }
 
-    function renderSearchHighlightResultsMobile(results) {
+    function renderSearchHighlightResultsMobile(searchText, results) {
       searchResults = document.getElementById('search-mobile-results');
 
-      var content = document.createElement('div');
-      content.setAttribute('class', 'mobile-search__content');
+      var ul = document.createElement('div');
+      ul.setAttribute('class', 'mobile-search__content');
 
-      if (results.length > 0) {
+      if (results.length) {
         results.forEach(function (result) {
-          var item = document.createElement('a');
-          item.setAttribute('href', result.item.uri);
-          item.innerHTML = '<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ' + generateHighlightedText(result.item.title, result.matches[0].indices) + '</div><div class="mobile-search__item--desc">' + (result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : '') + '</div></div>';
-          content.appendChild(item);
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          var descDiv = null;
+
+          a.setAttribute('href', result.item.uri);
+          a.appendChild(li);
+          li.setAttribute('class', 'mobile-search__item');
+
+          var titleDiv = document.createElement('div');
+          titleDiv.innerHTML = result.item.title;
+          titleDiv.setAttribute('class', 'mobile-search__item--title');
+          
+          if (result.matches && result.matches.length) {
+            for (var i = 0; i < result.matches.length; i++) {
+              if ('title' === result.matches[i].key) {
+                titleDiv.innerHTML = generateHighlightedText(result.matches[i].value, result.matches[i].indices);
+              }
+
+              if ('description' === result.matches[i].key) {
+                descDiv = document.createElement('div');
+                descDiv.setAttribute('class', 'mobile-search__item--desc');
+                descDiv.innerHTML = generateHighlightedText(result.item.description, result.matches[i].indices);
+              } else if ('content' === result.matches[i].key) {
+                if (!descDiv) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = generateHighlightedText(result.item.content.substring(0, 150), result.matches[i].indices);
+                }
+              } else {
+                if (result.item.description) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = result.item.description;
+                } else {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = result.item.content.substring(0, 150);
+                }
+              }
+            }
+            
+            li.appendChild(titleDiv);
+            if (descDiv) {
+              li.appendChild(descDiv);
+            }
+            ul.appendChild(a);
+          }
         });
       } else {
         var item = document.createElement('span');
-        content.appendChild(item);
+        ul.appendChild(item);
       }
 
       let wrap = document.getElementById('search-mobile-results');
       while (wrap.firstChild) {
         wrap.removeChild(wrap.firstChild)
       }
-      searchResults.appendChild(content);
+      searchResults.appendChild(ul);
     }
 
     function generateHighlightedText(text, regions) {
@@ -706,28 +1022,41 @@
       return content;
     };
 
-    initFuse();
-
     var searchElem = document.getElementById('search');
     var searchMobile = document.getElementById('search-mobile');
+    var searchResultsContainer = document.getElementById('search-results');
 
-    searchElem ? 
+    searchElem ?
     searchElem.addEventListener('input', function(e) {
-      if (!e.target.value) {
-        document.getElementById('search-results').setAttribute('class', 'dropdown');
-        return null;
-      }
-
-      if (window.innerWidth < 770) {
+      if (!e.target.value | window.innerWidth < 770) {
+        searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
         return null;
       }
 
       searchText = e.target.value;
       var results = fuse.search(e.target.value);
-      if (enableSearchHighlight) {
-        renderSearchHighlightResults(results);
+      
+      if (searchResultPosition === "main") {
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsMain(searchText, results);
+        } else {
+          renderSearchResultsMain(searchText, results);
+        }
       } else {
-        renderSearchResults(results);
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsSide(searchText, results);
+        } else {
+          renderSearchResultsSide(searchText, results);
+        }
+        
+        var dropdownItems = searchResultsContainer.querySelectorAll('.dropdown-item');
+        dropdownItems ? dropdownItems.forEach(function(item) {
+          item.addEventListener('mousedown', function(e) {
+            e.target.click();
+          });
+        }) : null;
       }
     }) : null;
 
@@ -736,9 +1065,7 @@
       if (window.innerWidth < 770) {
         return null;
       }
-      setTimeout(function () {
-        document.getElementById('search-results').setAttribute('class', 'dropdown');
-      }, 100);
+      searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
     }) : null;
 
     searchElem ? 
@@ -747,28 +1074,34 @@
         return null;
       }
       if (!e.target.value) {
-        document.getElementById('search-results').setAttribute('class', 'dropdown');
+        searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
         return null;
       }
 
       searchText = e.target.value;
       var results = fuse.search(e.target.value);
-      if (enableSearchHighlight) {
-        renderSearchHighlightResults(results);
-      } else {
-        renderSearchResults(results);
+
+      if (searchResultPosition === "main") {
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsMain(searchText, results);
+        } else {
+          renderSearchResultsMain(searchText, results);
+        }
+      } else{
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsSide(searchText, results);
+        } else {
+          renderSearchResultsSide(searchText, results);
+        }
+
+        var dropdownItems = searchResultsContainer.querySelectorAll('.dropdown-item');
+        dropdownItems ? dropdownItems.forEach(function (item) {
+          item.addEventListener('mousedown', function (e) {
+            e.target.click();
+          });
+        }) : null;
       }
     }) : null;
-    
-    function indexInParent(node) {
-      var children = node.parentNode.childNodes;
-      var num = 0;
-      for (var i = 0; i < children.length; i++) {
-        if (children[i] == node) return num;
-        if (children[i].nodeType == 1) num++;
-      }
-      return -1;
-    }
 
     var searchMenuElem = document.getElementById("search-menu");
     var activeItem = document.querySelector('#search-menu .dropdown-item.is-active');
@@ -782,8 +1115,17 @@
         return null;
       }
 
+      if (e.key === 'Escape') {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      }
+
       var items = document.querySelectorAll('#search-menu .dropdown-item');
       var keyCode = e.which || e.keyCode;
+
+      if (!items || !items.length) {
+        return null;
+      }
       
       if (e.key === 'ArrowDown' || keyCode === 40) {
         if (activeIndex === null) {
@@ -818,9 +1160,8 @@
           document.querySelector(".search-content").scrollTop = overflowedPixel + items[activeIndex].getBoundingClientRect().height;
         }
       } else if (e.key === 'Enter' || keyCode === 13) {
-        var currentItemLink = items[activeIndex].getAttribute('href');
-        if (currentItemLink) {
-          location.href = currentItemLink;
+        if (items[activeIndex] && items[activeIndex].getAttribute('href')) {
+          location.href = items[activeIndex].getAttribute('href');
         }
       } else if (e.key === 'Escape' || keyCode === 27) {
         e.target.value = null;
@@ -842,13 +1183,136 @@
 
       searchText = e.target.value;
       var results = fuse.search(e.target.value);
-      renderSearchResultsMobile(results);
+      renderSearchResultsMobile(searchText, results);
       if (enableSearchHighlight) {
-        renderSearchHighlightResultsMobile(results);
+        renderSearchHighlightResultsMobile(searchText, results);
       } else {
-        renderSearchResultsMobile(results);
+        renderSearchResultsMobile(searchText, results);
       }
     }) : null;
+  
+
+
+  
+    var mobileSearchInputElem = document.querySelector('#search-mobile');
+    var mobileSearchClassElem = document.querySelector('.mobile-search');
+    var mobileSearchBtnElems = document.querySelectorAll('.navbar-search');
+    var mobileSearchCloseBtnElem = document.querySelector('#search-mobile-close');
+    var mobileSearchContainer = document.querySelector('#search-mobile-container');
+    var mobileSearchResultsElem = document.querySelector('#search-mobile-results');
+    var htmlElem = document.querySelector('html');
+
+    if (mobileSearchClassElem) {
+      mobileSearchClassElem.style.display = 'none';
+    }
+
+    mobileSearchBtnElems ? 
+    mobileSearchBtnElems.forEach(function (elem, idx) {
+      elem.addEventListener('click', function () {
+        if (mobileSearchContainer) {
+          mobileSearchContainer.style.display = 'block';
+        }
+
+        if (mobileSearchInputElem) {
+          mobileSearchInputElem.focus();
+        }
+
+        if (htmlElem) {
+          htmlElem.style.overflowY = 'hidden';
+        }
+      });
+    }) : null;
+
+    mobileSearchCloseBtnElem ? 
+    mobileSearchCloseBtnElem.addEventListener('click', function() {
+      if (mobileSearchContainer) {
+        mobileSearchContainer.style.display = 'none';
+      }
+
+      if (mobileSearchInputElem) {
+        mobileSearchInputElem.value = '';
+      }
+      
+      if (mobileSearchResultsElem) {
+        while (mobileSearchResultsElem.firstChild) {
+          mobileSearchResultsElem.removeChild(mobileSearchResultsElem.firstChild);
+        }
+      }
+
+      if (htmlElem) {
+        htmlElem.style.overflowY = 'visible';
+      }
+    }) : null;
+
+    mobileSearchInputElem ?
+    mobileSearchInputElem.addEventListener('keydown', function(e) {
+      var keyCode = e.which || e.keyCode;
+      if (e.key === 'Escape' || keyCode === 27) {
+        if (mobileSearchContainer) {
+          mobileSearchContainer.style.display = 'none';
+        }
+        
+        if (mobileSearchInputElem) {
+          mobileSearchInputElem.value = '';
+        }
+
+        if (mobileSearchResultsElem) {
+          while (mobileSearchResultsElem.firstChild) {
+            mobileSearchResultsElem.removeChild(mobileSearchResultsElem.firstChild);
+          }
+        }
+        if (htmlElem) {
+          htmlElem.style.overflowY = 'visible';
+        }
+      }
+    }) : null;
+  
+
+
+  
+    function renderSearchResultsMain(searchText, results) {
+      var searchBody = document.querySelector('.search-result__body');
+      var originUl = searchBody.querySelector('ul');
+      var ul = document.createElement('ul');
+      
+      if (!searchText) {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      } else if (results) {
+        if (results && results.length) {
+          results.forEach(function (result) {
+            makeLi(ul, result);
+          });
+
+          searchResult ? searchResult.setAttribute('data-display', 'block') : null;
+          summaryContainer ? summaryContainer.setAttribute('data-display', 'none') : null;
+        }
+      }
+
+      originUl.parentNode.replaceChild(ul, originUl);
+    }
+
+    function renderSearchHighlightResultsMain(searchText, results) {
+      var searchBody = document.querySelector('.search-result__body');
+      var originUl = searchBody.querySelector('ul');
+      var ul = document.createElement('ul');
+
+      if (!searchText) {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      } else if (results) {
+        if (results && results.length) {
+          results.forEach(function (result) {
+            makeHighlightLi(ul, result);
+          });
+
+          searchResult ? searchResult.setAttribute('data-display', 'block') : null;
+          summaryContainer ? summaryContainer.setAttribute('data-display', 'none') : null;
+        }
+      }
+
+      originUl.parentNode.replaceChild(ul, originUl);
+    }
   
   });
 </script>    
@@ -859,52 +1323,67 @@
 
 
     
-<link rel="alternate" type="application/rss&#43;xml" title="RSS" href="https://crushingcode.github.io/tags/sdk/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" title="RSS" href="https://crushingcode.nisrulz.com/tags/sdk/index.xml">
 
 <meta name="description" content="Blog by Nishant Srivastava" />
-<meta name="keywords" content="">
-<meta name="created" content="2017-09-17T10:54:24&#43;0200">
-<meta name="modified" content="2017-09-17T10:54:24&#43;0200">
+
+
+<meta name="created" content="2021-01-24T00:00:00&#43;0000">
+<meta name="modified" content="2021-01-24T00:00:00&#43;0000">
+<meta property="article:published_time" content="2021-01-24T00:00:00&#43;0000">
+
+<meta name="author" content="Nishant Srivastava">
 
 
 <meta property="og:site_name" content="Crushing C.O.D.E">
 <meta property="og:title" content="sdk">
-<meta property="og:url" content="https://crushingcode.github.io/tags/sdk/">
+<meta property="og:url" content="https://crushingcode.nisrulz.com/tags/sdk/">
 <meta property="og:type" content="website">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
+<meta name="generator" content="Hugo 0.80.0" />
+<meta name="msapplication-TileColor" content="#fff">
 
-<meta name="generator" content="Hugo 0.62.0" />
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://crushingcode.github.io/tags/sdk/">
+<meta name="theme-color" content="#fff">
+
+<meta name="msapplication-navbutton-color" content="#fff">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
+<link rel="canonical" href="https://crushingcode.nisrulz.com/tags/sdk/">
+
 <link rel="manifest" href="/manifest.json">
 
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+  
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
+  
+
 
     <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url" : "https://crushingcode.github.io/tags/sdk/",
+    "url" : "https://crushingcode.nisrulz.com/tags/sdk/",
     "name": "sdk",
     "description": "Blog by Nishant Srivastava",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://crushingcode.github.io/"
+      "@id": "https://crushingcode.nisrulz.com/"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Crushing C.O.D.E",
-      "url": "https://crushingcode.github.io/"
+      "url": "https://crushingcode.nisrulz.com/"
     }
   }
 </script>
 
     
+  
+  
+
+
 
 
 
@@ -918,13 +1397,17 @@
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
-        }        
-    </script>    
-    
+        }
+    </script>
     <div id="container">
-        <div class="wrapper__left"></div>
-        <div class="wrapper" data-type="tags" data-kind="taxonomy">
-            <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+
+
+
+
+
+        <div class="wrapper" data-type="tags" data-kind="term">
+            <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     
     <a href="/" title="Home" rel="home" class="navbar__logo-link">
@@ -937,11 +1420,11 @@
       </a>
     
   </div>
+
   
-  
-<div class="theme-mobile">
+<div class="theme theme-mobile" data-ani="false">
   <div class="dropdown">
-    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" style="">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" style="" data-ani="false">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
     </button>
     <div class="dropdown-content select-theme">
@@ -972,12 +1455,12 @@
   </div>
 </div>
 
-  
-<div id="mobileSearchBtn" class="mobile-search__btn">
+
+<div class="mobile-search__btn navbar-search" data-ani="false">
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
 </div>
 
-<div id="search-mobile-container" class="mobile-search hide">
+<div id="search-mobile-container" class="mobile-search hide" data-dir="ltr">
   <div class="mobile-search__top">
     <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="Search" class="mobile-search__top--input"/>
     <div id="search-mobile-close" class="mobile-search__top--icon">
@@ -989,18 +1472,114 @@
   </div>
 </div>
 
-  
-  <a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false">
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-  </a>  
 
-  <div class="navbar__menu">
+<a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false"
+  data-ani="false">
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+</a>
+<div class="navbarm__collapse" data-open="false">
+  <ul dir="ltr">
     
-<div class="theme">
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/posts">Posts</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/archive">Archive</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/talks">Talks</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/showcase">Showcase</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/gallery">
+            Gallery
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+          </a>
+        </li>
+
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/gallery/doodles">Doodles</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/gallery/graphic_design">Graphic Design</a>
+          </li>
+        
+
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/about">About</a>
+        </li>
+      
+      
+    
+
+    
+  </ul>
+</div>
+  <div class="navbar__menu">
+  
+  
+  
+<div class="theme" data-ani="false">
   <div class="dropdown">
-    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" data-ani="false">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
     </button>
     <div class="dropdown-content select-theme">
@@ -1031,59 +1610,78 @@
   </div>
 </div>
 
-    
-    
+  
+  
+  
+  
+  
+  
+  
+  <a href="/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="false">Posts</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/archive" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="false">Archive</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/talks" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="false">Talks</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="false">Showcase</a>
+  
+  
+  
+  
+  
+  
+  
+  <div class="navbar__dropdown navbar__slide-down" data-ani="false">
+    <a href="/gallery" class="navbar__menu-item "
+      dir="ltr">
+      Gallery
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+    </a>
+    <div class="navbar__dropdown--content">
       
+      <a href="/gallery/doodles" class="navbar__dropdown--item" dir="ltr">Doodles</a>
       
+      <a href="/gallery/graphic_design" class="navbar__dropdown--item" dir="ltr">Graphic Design</a>
       
-      
-      
-        <a href="/posts" class="navbar__menu-item navbar__slide-down ">Posts</a>
-      
-    
-      
-      
-      
-      
-      
-        <a href="/archive" class="navbar__menu-item navbar__slide-down ">Archive</a>
-      
-    
-      
-      
-      
-      
-      
-        <a href="/talks" class="navbar__menu-item navbar__slide-down ">Talks</a>
-      
-    
-      
-      
-      
-      
-      
-        <a href="/showcase" class="navbar__menu-item navbar__slide-down ">Showcase</a>
-      
-    
-      
-      
-      
-      
-      
-        <a href="/about" class="navbar__menu-item navbar__slide-down ">About</a>
-      
-    
+    </div>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="false">About</a>
+  
+  
+</div>
 </nav>
             
             
 
-
-<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
-
 <main class="main inner" data-sidebar-position="right">
   <div class="list__main lm">
-    <nav class="breadcrumb" aria-label="breadcrumbs">
+    <nav class="breadcrumb hide" aria-label="breadcrumbs">
+  <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
   <ol>
     
   
@@ -1093,14 +1691,14 @@
   
   <li >
     
-      <a href="https://crushingcode.github.io/" class="capitalize">Crushing C.O.D.E</a>
+      <a href="https://crushingcode.nisrulz.com/" class="capitalize">Crushing C.O.D.E</a>
     
   </li>
   
   
   <li >
     
-      <a href="https://crushingcode.github.io/tags/" class="capitalize">Tags</a>
+      <a href="https://crushingcode.nisrulz.com/tags/" class="capitalize">Tags</a>
     
   </li>
   
@@ -1122,25 +1720,28 @@
       
     </div>
 
-    <div class="summary__container">
+    <div class="summary__container" data-display="block">
       
         
-  <article class="summary-classic">
+  <article class="summary-classic" data-ani="false">
   <div class="summary-classic__flex-box" >
-    
-    
+
     
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/is-your-android-library-lifecycle-aware/'> Is your Android Library, Lifecycle-Aware?</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Sep 17, 2017 </time>  <span title="Reading Time"> &middot; ☕ 9 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+        <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/devfest_dach_2020/'>And&#39; Libraries, Stop Starting up! @Devfest DACH</a> </h5>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Jan 24, 2021 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
+          
+        </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-          Lifecycle events in Android.
-It has been a pain point for Android developers all over the world. It is no brainer that, most of the times the main cause of a memory leak in the codebase is because an invalid state is accessed which is out of sync with the lifecycle of the activity/fragment of the app.
+            Devfest DACH, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.
           
         </div>
       </div>
@@ -1152,23 +1753,28 @@ It has been a pain point for Android developers all over the world. It is no bra
   <hr />
 </article>
 
+
       
         
-  <article class="summary-classic">
+  <article class="summary-classic" data-ani="false">
   <div class="summary-classic__flex-box" >
-    
-    
+
     
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/'> Things I wish I knew when I started building Android SDK/Libraries</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Mar 5, 2017 </time>  <span title="Reading Time"> &middot; ☕ 23 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
+        <h5 class="title h5"><a href='https://crushingcode.nisrulz.com/talks/android_worldwide_jan_2021/'>And&#39; Libraries, Stop Starting up! @Android Worldwide</a> </h5>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Jan 19, 2021 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;1&nbsp;min read </span>
+          
+        </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-          It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &ldquo;Awesome Android App&rdquo;. During the process, most developers would encounter a couple of issues and in tandem, to those, they would come up with possible solutions.
+            Android Worldwide, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.
           
         </div>
       </div>
@@ -1180,187 +1786,33 @@ It has been a pain point for Android developers all over the world. It is no bra
   <hr />
 </article>
 
+
       
-        
-  <article class="summary-classic">
-  <div class="summary-classic__flex-box" >
-    
-    
-    
+      
 
-    <div class="summary-classic__content">
-      <header>
-        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/'> I could not find a simple Gesture Detection android library, so I built one</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Feb 12, 2017 </time>  <span title="Reading Time"> &middot; ☕ 6 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
-      </header>
-      <div>
-        <div class="summary-classic__text p2">
-          
-          While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture.
-          
-        </div>
-      </div>
+
     </div>
-
-    
-    
+    <div class="search-result" data-display="none">
+  <div class="search-result__header">
+    <div class="search-result__close" data-dir="ltr">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
+    </div>
   </div>
-  <hr />
-</article>
-
-      
-        
-  <article class="summary-classic">
-  <div class="summary-classic__flex-box" >
-    
-    
-    
-
-    <div class="summary-classic__content">
-      <header>
-        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/publish-your-android-library-via-jitpack/'> Guide to publishing your Android Library via JitPack</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Jul 29, 2016 </time>  <span title="Reading Time"> &middot; ☕ 4 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
-      </header>
-      <div>
-        <div class="summary-classic__text p2">
-          
-          Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.
-          
+  <div class="search-result__body">
+    <ul>
+      <li class="search-result__item">
+        <div class="search-result__item--title">
         </div>
-      </div>
-    </div>
-
-    
-    
-  </div>
-  <hr />
-</article>
-
-      
-        
-  <article class="summary-classic">
-  <div class="summary-classic__flex-box" >
-    
-    
-    
-
-    <div class="summary-classic__content">
-      <header>
-        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/publish-your-android-library-via-mavencentral/'> Guide to publishing your Android Library via MavenCentral</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Jul 17, 2016 </time>  <span title="Reading Time"> &middot; ☕ 4 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
-      </header>
-      <div>
-        <div class="summary-classic__text p2">
-          
-          If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world.
-          
+        <div class="search-result__item--desc">
         </div>
-      </div>
-    </div>
-
-    
-    
+      </li>
+    </ul>
   </div>
-  <hr />
-</article>
-
-      
-        
-  <article class="summary-classic">
-  <div class="summary-classic__flex-box" >
-    
-    
-    
-
-    <div class="summary-classic__content">
-      <header>
-        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/publish-your-android-library-via-jcenter/'> Guide to publishing your Android Library via Jcenter/Bintray</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Jul 12, 2016 </time>  <span title="Reading Time"> &middot; ☕ 6 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
-      </header>
-      <div>
-        <div class="summary-classic__text p2">
-          
-          Developers are a different kind of people altogether. They tend to be lazy but strive to be super efficient at the same time.
-A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.
-          
-        </div>
-      </div>
-    </div>
-
-    
-    
-  </div>
-  <hr />
-</article>
-
-      
-        
-  <article class="summary-classic">
-  <div class="summary-classic__flex-box" >
-    
-    
-    
-
-    <div class="summary-classic__content">
-      <header>
-        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-2/'> Own a maven repository, like a boss! – Part 2</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Feb 16, 2016 </time>  <span title="Reading Time"> &middot; ☕ 3 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
-      </header>
-      <div>
-        <div class="summary-classic__text p2">
-          
-          The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.
-For the same reason I have gone through a lot of good articles online, which explain how the whole process works.
-          
-        </div>
-      </div>
-    </div>
-
-    
-    
-  </div>
-  <hr />
-</article>
-
-      
-        
-  <article class="summary-classic">
-  <div class="summary-classic__flex-box" >
-    
-    
-    
-
-    <div class="summary-classic__content">
-      <header>
-        <h5 class="title h5"><a href='https://crushingcode.github.io/posts/own-a-maven-repository-like-a-bosspart-1/'> Own a maven repository, like a boss! – Part 1</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At">📅 Aug 3, 2015 </time>  <span title="Reading Time"> &middot; ☕ 5 min read </span>&middot; <span title="WRITTEN BY">✍️&nbsp;Nishant</span></h6>
-      </header>
-      <div>
-        <div class="summary-classic__text p2">
-          
-          Have you ever thought how the central repository works like Maven Central or JCenter?
-Is it possible to own one for yourself?
-Do you want to host your artifacts in your own private repository?
-          
-        </div>
-      </div>
-    </div>
-
-    
-    
-  </div>
-  <hr />
-</article>
-
-      
-    </div>
-    
-
-
+</div>
   </div>
 
   
-    <aside class="list__sidebar r">
+    <aside class="list__sidebar r" data-dir="ltr">
       
 
 <ul class="sidebar">
@@ -1380,6 +1832,8 @@ Do you want to host your artifacts in your own private repository?
 
     
     
+    
+    
 </ul>
 <div class="taxo-root">
 
@@ -1392,13 +1846,14 @@ Do you want to host your artifacts in your own private repository?
         </span>
         
         
+        
             <span class="tag">
-                <a href="/tags/adb/" class="is-tags taxo__link">
+                <a href="/tags/adb/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         adb
                     </span>
-                    <span class="taxo__num">
-                        2
+                    <span class="taxo__num" dir="auto">
+                        7
                     </span>
                 </a>
             </span>
@@ -1406,12 +1861,12 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/android/" class="is-tags taxo__link">
+                <a href="/tags/android/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         android
                     </span>
-                    <span class="taxo__num">
-                        15
+                    <span class="taxo__num" dir="auto">
+                        47
                     </span>
                 </a>
             </span>
@@ -1419,11 +1874,89 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/best-practices/" class="is-tags taxo__link">
+                <a href="/tags/android-library/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        android-library
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        17
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/android-wear/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        android-wear
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/audio/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        audio
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        3
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/best-practices/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         best-practices
                     </span>
-                    <span class="taxo__num">
+                    <span class="taxo__num" dir="auto">
+                        8
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/compose/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        compose
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/coroutines/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        coroutines
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        3
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/firebase/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        firebase
+                    </span>
+                    <span class="taxo__num" dir="auto">
                         2
                     </span>
                 </a>
@@ -1432,12 +1965,12 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/build/" class="is-tags taxo__link">
+                <a href="/tags/flutter/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        build
+                        flutter
                     </span>
-                    <span class="taxo__num">
-                        1
+                    <span class="taxo__num" dir="auto">
+                        3
                     </span>
                 </a>
             </span>
@@ -1445,37 +1978,11 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/debugging/" class="is-tags taxo__link">
-                    <span class="taxo__text">
-                        debugging
-                    </span>
-                    <span class="taxo__num">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/gesture/" class="is-tags taxo__link">
-                    <span class="taxo__text">
-                        gesture
-                    </span>
-                    <span class="taxo__num">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/git/" class="is-tags taxo__link">
+                <a href="/tags/git/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         git
                     </span>
-                    <span class="taxo__num">
+                    <span class="taxo__num" dir="auto">
                         1
                     </span>
                 </a>
@@ -1484,12 +1991,12 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/gradle/" class="is-tags taxo__link">
+                <a href="/tags/gradle/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         gradle
                     </span>
-                    <span class="taxo__num">
-                        2
+                    <span class="taxo__num" dir="auto">
+                        3
                     </span>
                 </a>
             </span>
@@ -1497,11 +2004,24 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/issue/" class="is-tags taxo__link">
+                <a href="/tags/ios/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        ios
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/issue/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         issue
                     </span>
-                    <span class="taxo__num">
+                    <span class="taxo__num" dir="auto">
                         1
                     </span>
                 </a>
@@ -1510,12 +2030,12 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/javadoc/" class="is-tags taxo__link">
+                <a href="/tags/kotlin/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        javadoc
+                        kotlin
                     </span>
-                    <span class="taxo__num">
-                        1
+                    <span class="taxo__num" dir="auto">
+                        14
                     </span>
                 </a>
             </span>
@@ -1523,63 +2043,11 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/jcenter/" class="is-tags taxo__link">
+                <a href="/tags/kotlin-multiplatform/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        jcenter
+                        kotlin-multiplatform
                     </span>
-                    <span class="taxo__num">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/jitpack/" class="is-tags taxo__link">
-                    <span class="taxo__text">
-                        jitpack
-                    </span>
-                    <span class="taxo__num">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/library/" class="is-tags taxo__link">
-                    <span class="taxo__text">
-                        library
-                    </span>
-                    <span class="taxo__num">
-                        8
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/lifecyle/" class="is-tags taxo__link">
-                    <span class="taxo__text">
-                        lifecyle
-                    </span>
-                    <span class="taxo__num">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/maven/" class="is-tags taxo__link">
-                    <span class="taxo__text">
-                        maven
-                    </span>
-                    <span class="taxo__num">
+                    <span class="taxo__num" dir="auto">
                         2
                     </span>
                 </a>
@@ -1588,11 +2056,11 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/maven-central/" class="is-tags taxo__link">
+                <a href="/tags/localization/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        maven-central
+                        localization
                     </span>
-                    <span class="taxo__num">
+                    <span class="taxo__num" dir="auto">
                         1
                     </span>
                 </a>
@@ -1601,11 +2069,50 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/opensource/" class="is-tags taxo__link">
+                <a href="/tags/maven/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        maven
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        5
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/news/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        news
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/nodejs/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        nodejs
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/opensource/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         opensource
                     </span>
-                    <span class="taxo__num">
+                    <span class="taxo__num" dir="auto">
                         1
                     </span>
                 </a>
@@ -1614,12 +2121,25 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/sdk/" class="is-tags taxo__link">
+                <a href="/tags/project/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        project
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/sdk/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         sdk
                     </span>
-                    <span class="taxo__num">
-                        8
+                    <span class="taxo__num" dir="auto">
+                        2
                     </span>
                 </a>
             </span>
@@ -1627,11 +2147,11 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/sensor/" class="is-tags taxo__link">
+                <a href="/tags/sensor/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         sensor
                     </span>
-                    <span class="taxo__num">
+                    <span class="taxo__num" dir="auto">
                         1
                     </span>
                 </a>
@@ -1640,12 +2160,12 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/tools/" class="is-tags taxo__link">
+                <a href="/tags/shell/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        tools
+                        shell
                     </span>
-                    <span class="taxo__num">
-                        4
+                    <span class="taxo__num" dir="auto">
+                        1
                     </span>
                 </a>
             </span>
@@ -1653,11 +2173,50 @@ Do you want to host your artifacts in your own private repository?
         
         
             <span class="tag">
-                <a href="/tags/wifi/" class="is-tags taxo__link">
+                <a href="/tags/terminal/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        wifi
+                        terminal
                     </span>
-                    <span class="taxo__num">
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/tools/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        tools
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        13
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/tricks/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        tricks
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/tutorials/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        tutorials
+                    </span>
+                    <span class="taxo__num" dir="auto">
                         1
                     </span>
                 </a>
@@ -1669,6 +2228,7 @@ Do you want to host your artifacts in your own private repository?
 
 
 
+
 </div>
 
 
@@ -1677,71 +2237,79 @@ Do you want to host your artifacts in your own private repository?
 </main>
 
 <script>
-  
-  var sidebarPosition = JSON.parse("\"right\"");
-  
-  var enableSidebar = JSON.parse("true");
+    
+    var sidebarPosition = JSON.parse("\"right\"");
+    
+    var enableSidebar = JSON.parse("true");
 
-  var listMainElem = document.querySelector('.list__main');
-  var listSideElem = document.querySelector('.list__sidebar');
+    var listMainElem = document.querySelector('.list__main');
+    var listSideElem = document.querySelector('.list__sidebar');
 
-  var gridSmall = 'l';
-  var gridBig = 'mr';
-  var gridFull = 'lmr'
+    var gridSmall = 'l';
+    var gridBig = 'mr';
+    var gridFull = 'lmr'
 
-  if (sidebarPosition === "right") {
-      gridSmall = 'r';
-      gridBig = 'lm'
-  }
+    if (sidebarPosition === "right") {
+        gridSmall = 'r';
+        gridBig = 'lm'
+    }
 
-  enquire.register("screen and (max-width: 769px)", {
-    match: function () {
-      if (enableSidebar) {
-        listMainElem.classList.remove(gridBig);
-        listMainElem.classList.add(gridFull);
-        listSideElem.classList.remove(gridSmall);
-        listSideElem.classList.add('hide');
-      } else {
-        if (listMainElem && !listMainElem.classList.contains(gridFull)) {
-          listMainElem.classList.remove(gridBig);
-          listMainElem.classList.add(gridFull);
-        }
+    enquire.register("screen and (max-width: 769px)", {
+        match: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridBig);
+                listMainElem.classList.add(gridFull);
+                listSideElem.classList.remove(gridSmall);
+                listSideElem.classList.add('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
 
-        if (listSideElem && !listSideElem.classList.contains('hide')) {
-          listSideElem.classList.add('hide');
-        }
-      }
-    },
-    unmatch: function () {
-      if (enableSidebar) {
-        listMainElem.classList.remove(gridFull);
-        listMainElem.classList.add(gridBig);
-        listSideElem.classList.add(gridSmall);
-        listSideElem.classList.remove('hide');
-      } else {
-        if (listMainElem && !listMainElem.classList.contains(gridFull)) {
-          listMainElem.classList.remove(gridBig);
-          listMainElem.classList.add(gridFull);
-        }
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
 
-        if (listSideElem && !listSideElem.classList.contains('hide')) {
-          listSideElem.classList.add('hide');
-        }
-      }
-      
-      document.getElementsByClassName('navbar__burger')[0].classList.remove('is-active');
-      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
-      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
-    },
-    setup: function () { },
-    deferSetup: true,
-    destroy: function () { },
-  });
+        },
+        unmatch: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridFull);
+                listMainElem.classList.add(gridBig);
+                listSideElem.classList.add(gridSmall);
+                listSideElem.classList.remove('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
+
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
+
+            var navCollapseBtn = document.querySelector('.navbar__burger');
+            var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+            if (navCollapse) {
+                navCollapse.setAttribute('data-open', false);
+                navCollapse.style.maxHeight = 0;
+                navCollapseBtn.classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('navbar__menu')[0]) {
+                document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('mobile-search')[0]) {
+                document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            }
+        },
+        setup: function () { },
+        deferSetup: true,
+        destroy: function () { },
+    });
 </script>
 
-<script defer src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
-
-<script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
 
             
@@ -1802,11 +2370,6 @@ Do you want to host your artifacts in your own private repository?
     
             
     
-      
-      <a href="https://medium.com/@nisrulz" title="medium" aria-label="medium">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="32" height="32"><path fill="currentColor" d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M22.542,21h-5.931 v-0.333L18,19.445V12.47L14.589,21h-0.533l-3.806-8.597v6.087l1.74,2.177V21H7.458v-0.333l1.799-2.177v-7.242L7.658,9.249 c0,0,0-0.289,0-0.244h4.376l3.399,7.353l2.932-7.353h4.154v0.244L21,10.526v8.919l1.542,1.222V21z"/></svg>
-
-      </a>
             
     
             
@@ -1843,9 +2406,15 @@ Do you want to host your artifacts in your own private repository?
             
     
     
-  <a href="https://crushingcode.github.io/tags/sdk//index.xml" type="application/rss+xml" title="rss" aria-label="RSS Feed Link">
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
-  </a>
+  
+  
+    
+      <a href="https://crushingcode.nisrulz.com/tags/sdk//index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
+      </a>
+    
+  
+
 
   </div>
 </div>
@@ -1859,6 +2428,10 @@ Do you want to host your artifacts in your own private repository?
 
     <hr />
 
+    <div class="basicflex flexwrap">
+        
+    </div>
+
     <div class="footer__poweredby">
         
                 
@@ -1868,19 +2441,27 @@ Do you want to host your artifacts in your own private repository?
                     
 
                     
-                        Nishant Srivastava - ©2015 - 2020, All content is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+                        <a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2021, All content is licensed under<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"> CC BY-SA</a>
                     
                 
             </p>
         
 
         
-            <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" rel="noreferrer">Zzo theme</a></p>
+            <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
+        
         
     </div> 
 </footer>
         </div>
-        <div class="wrapper__right">
+        
+
+
+
+
+
+<div class="wrapper__right hide" data-pad="true" dir="ltr">
+  <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
   
 </div>
 
