@@ -28,7 +28,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 09 Apr 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/how-to-convert-markdown-to-pdf/</guid>
-        <description>Writing documentations is part of almost all developer jobs. Although writing code is the primary focus for any developer, the core understanding/reasoning of the implementation can only be captured in a well written human readable documentation.</description>
+        <description>Writing documentation is part of almost all developer jobs. Although writing code is the primary focus for any developer, the core understanding/reasoning of the implementation can only be captured in a well-written human-readable documentation.</description>
         
         <dc:creator>Nishant</dc:creator>
         

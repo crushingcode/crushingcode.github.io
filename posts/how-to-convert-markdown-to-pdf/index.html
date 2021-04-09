@@ -1378,7 +1378,7 @@
     "datePublished": "2021-04-09T00:00:00Z",
     "dateModified": "2021-04-09T00:00:00Z",
     "url" : "https://crushingcode.nisrulz.com/posts/how-to-convert-markdown-to-pdf/",
-    "description": "Writing documentations is part of almost all developer jobs. Although writing code is the primary focus for any developer, the core understanding/reasoning of the …",
+    "description": "Writing documentation is part of almost all developer jobs. Although writing code is the primary focus for any developer, the core understanding/reasoning of the …",
     "keywords": ["tools","opensource"],
     "author": {
       "@type": "Person",
@@ -1743,18 +1743,18 @@
   
 </figure>
 <br/>
-<p>Writing documentations is part of almost all developer jobs. Although writing code is the primary focus for any developer, the core understanding/reasoning of the implementation can only be captured in a well written <strong>human readable</strong> documentation.</p>
-<p>I put emphasis on <strong>human readable</strong> because this documentation needs to be understood by, well humans. If we throw in a lot of jargon words, acrnoyms and code without explaining it in simple language then it is close to not usable by people.</p>
-<p>Another aspect which is import is how the documentation is formatted. If it is just blobs of text it becomes boring to read and people tend to just skip parts of it. This is easy to fix. The best and easiest way is to write in <a href="https://www.markdownguide.org/getting-started/">Markdown</a>, which takes care of syntax highlighting as well as is simple to write. It is written following a certain <a href="https://www.markdownguide.org/basic-syntax/">syntax</a> and is saved to a file with extension of <code>.md</code>. In fact this post is written in markdown 😎</p>
-<p>The only problem is that many folks, don&rsquo;t actually know how to consume this <code>.md</code> file. Mostly folks are familiar with a more common format i.e <code>.pdf</code> file. Almost all major operating system can handle <strong>PDF</strong> files.</p>
-<p>I recently had to write a specific integration guide as part of documentation and deliver it to a client separately from our hosted documentation. Now I could totally write all of that in a Word doc/Normal Text file or in a Google Doc. However I donot get all the nice features that markdown provides. Plus I have to deal with the GUI tools of each of these tools. So I decided to write the integration guide as a markdown file. The whole writeup was quickly done as I have been using markdown for sometime now. Now comes the tricky part.</p>
+<p>Writing documentation is part of almost all developer jobs. Although writing code is the primary focus for any developer, the core understanding/reasoning of the implementation can only be captured in a well-written <strong>human-readable</strong> documentation.</p>
+<p>I put emphasis on <strong>human-readable</strong> because this documentation needs to be understood by, well humans. If we throw in a lot of jargon words, acronyms and code without explaining it in a simple language then it is close to not usable by people.</p>
+<p>Another aspect that is important is how the documentation is formatted. If it is just blobs of text it becomes boring to read and people tend to just skip parts of it. This is easy to fix. The best and easiest way is to write in <a href="https://www.markdownguide.org/getting-started/">Markdown</a>, which takes care of syntax highlighting as well as is simple to write. It is written following a certain <a href="https://www.markdownguide.org/basic-syntax/">syntax</a> and is saved to a file with an extension of <code>.md</code>. In fact, this post is written in markdown 😎</p>
+<p>The only problem is that many folks, don&rsquo;t actually know how to consume this <code>.md</code> file. Most folks are familiar with a more common format i.e <code>.pdf</code> file. Almost all major operating systems can handle <strong>PDF</strong> files.</p>
+<p>I recently had to write a specific integration guide as part of documentation and deliver it to a client separately from our hosted documentation. Now I could totally write all of that in a Word doc/Normal Text file or in a Google Doc. However, I don&rsquo;t get all the nice features that markdown provides. Plus I have to deal with the GUI tools of each of these tools. So I decided to write the integration guide as a markdown file. The whole write-up was quickly done as I have been using markdown for some time now. Now comes the tricky part.</p>
 <p>I needed to provide this file as a <strong>PDF</strong> file. So I started searching for possible ways I could do that.</p>
 <p>The golden tool to pick for this would be <a href="https://pandoc.org/"><strong>pandoc</strong></a>.</p>
 <blockquote>
 <p>Read about how to install pandoc <a href="https://pandoc.org/installing.html">here</a>.<br />
-Note: In order to render pdf, pandoc requires <a href="https://www.latex-project.org/get/">latex installed</a>. Make sure it installed before proceeding.</p>
+Note: In order to render pdf, pandoc requires <a href="https://www.latex-project.org/get/">latex installed</a>. Make sure it is installed before proceeding.</p>
 </blockquote>
-<p>Considering our markdown file is called <a href="/images/posts/how-to-convert-markdown-to-pdf/integration_guide.md">integration_guide.md</a>, below command would convert it to a <code>integration_guide.pdf</code>:</p>
+<p>Considering our markdown file is called <a href="/images/posts/how-to-convert-markdown-to-pdf/integration_guide.md">integration_guide.md</a>, below command would convert it to an <code>integration_guide.pdf</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1782,14 +1782,14 @@ Note: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </blockquote>
 <p>Simple and fast!</p>
 <p>This should solve the problem. Well not really 🥺</p>
-<p>The thing is that I really like Github Flavored Markdown (Yes there are different <a href="https://www.markdownguide.org/extended-syntax/#lightweight-markup-languages">flavors of Markdown</a>, like icecream 🍦).</p>
-<p>Turns out using <strong>pandoc</strong> this is not quite possible (or I couldn&rsquo;t find it, if you have an idea how to do it let me know on <a href="https://twitter.com/nisrulz">twitter</a> 😅). Also I found out that installing <strong>LaTex</strong> is a huge download 👀. Not to mention again, but not being able to render emojis is already a deal breaker for me, because I ♥️ using emojis. So I started looking for some other tool that would let me render my markdown into a PDF that looked how Github renders markdown.</p>
-<p>After an hour of trying out various tools, I stumbled upon <a href="https://github.com/joeyespo/grip"><strong>grip</strong></a>. From the github repository</p>
+<p>The thing is that I like Github Flavored Markdown (Yes there are different <a href="https://www.markdownguide.org/extended-syntax/#lightweight-markup-languages">flavors of Markdown</a>, like icecream 🍦).</p>
+<p>Turns out while using <strong>pandoc</strong> this is not quite possible (or I couldn&rsquo;t find it. If you have an idea how to do it let me know on <a href="https://twitter.com/nisrulz">twitter</a> 😅). Also, I found out that installing <strong>LaTex</strong> is a huge download 👀. Not to mention again, but not being able to render emojis is already a deal-breaker for me because I ♥️ using emojis. So I started looking for some other tool that would let me render my markdown into a PDF that looks the same as how Github renders markdown.</p>
+<p>After an hour of trying out various tools, I stumbled upon <a href="https://github.com/joeyespo/grip"><strong>grip</strong></a>. From the Github repository</p>
 <blockquote>
 <p>Render local readme files before sending off to GitHub.</p>
 <p>Grip is a command-line server application written in Python that uses the GitHub markdown API to render a local readme file. The styles and rendering come directly from GitHub, so you&rsquo;ll know exactly how it will appear. Changes you make to the Readme will be instantly reflected in the browser without requiring a page refresh.</p>
 </blockquote>
-<p>Using <strong>grip</strong> for my usecase was as simple as running</p>
+<p>Using <strong>grip</strong> for my use-case was as simple as running</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1818,12 +1818,12 @@ Note: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </code></pre></td></tr></table>
 </div>
 </div><p>On opening <code>http://localhost:6419/</code> in a browser of your choice (I use MS Edge), you are presented with a nice Github Flavored Markdown render of your file</p>
-<p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_2.png" alt="Local server rendered markdown file in browser" /></p>
+<p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_2.png" alt="Local server-rendered markdown file in browser" /></p>
 <p>Sweet 😎</p>
 <p>But wait, what is this fake tab in the rendered webpage?</p>
 <p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_2a.png" alt="fake tab in the render" /></p>
-<p>In order to get rid of this <em>&ldquo;Fake Tab&rdquo;</em>, I checked the documentation of <strong>grip</strong>. Nothing stood out as a proper solution, until I found this <a href="https://github.com/joeyespo/grip/issues/331#issuecomment-733925600">issue/comment</a>.</p>
-<p>Basically the solution is to load the markdown via <strong>stdin</strong> and then export it as a <strong>HTML</strong> file. Sounds good. I did a bit of a mix and came up with the below oneliner command:</p>
+<p>In order to get rid of this <em>&ldquo;Fake Tab&rdquo;</em>, I checked the documentation of <strong>grip</strong>. Nothing stood out as a proper solution until I found this <a href="https://github.com/joeyespo/grip/issues/331#issuecomment-733925600">issue/comment</a>.</p>
+<p>Basically, the solution is to load the markdown via <strong>stdin</strong> and then export it as an <strong>HTML</strong> file. Sounds good. I did a bit of a mix and came up with the below oneliner command:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1859,7 +1859,7 @@ Note: In order to render pdf, pandoc requires <a href="https://www.latex-project
     <span class="k">if</span> <span class="o">[[</span> <span class="nv">$1</span> <span class="o">==</span> *<span class="s2">&#34;.md&#34;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
         <span class="c1"># Filename without extension</span>
         <span class="nb">local</span> <span class="nv">FILE_NAME</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> .md<span class="k">)</span>
-        <span class="c1"># Read the markdown file and then convert it to a HTML file</span>
+        <span class="c1"># Read the markdown file and then convert it to an HTML file</span>
         cat <span class="nv">$FILE_NAME</span>.md <span class="p">|</span> grip - --export <span class="nv">$FILE_NAME</span>.html 
         <span class="c1"># Open the generated HTML file in a browser window</span>
         open <span class="nv">$FILE_NAME</span>.html
@@ -1869,7 +1869,7 @@ Note: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Using the bash function, I simply need to call below line of code:</p>
+</div><p>Using the bash function, I simply need to call the below line of code:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1887,7 +1887,7 @@ Note: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <blockquote>
 <p>Checkout the final generated <a href="/images/posts/how-to-convert-markdown-to-pdf/integration_guide.pdf">integration_guide.pdf</a> file.</p>
 </blockquote>
-<p>Thats it! Everything works 😎 It is a bit of more steps, but it is quick and solved my immediate requirement. There are possibly many other tools, which could have been useful too i.e <a href="https://www.npmjs.com/package/markdown-pdf">markdown-pdf</a></p>
+<p>That&rsquo;s it! Everything works 😎 It is a bit of more steps, but it is quick and solved my immediate requirement. There are possibly many other tools, which could have been useful too i.e <a href="https://www.npmjs.com/package/markdown-pdf">markdown-pdf</a></p>
 
     </article>
     
