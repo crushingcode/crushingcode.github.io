@@ -14,12 +14,40 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Thu, 29 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>How to convert Markdown to PDF</title>
+        <link>https://crushingcode.nisrulz.com/posts/how-to-convert-markdown-to-pdf/</link>
+        <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 09 Apr 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/posts/how-to-convert-markdown-to-pdf/</guid>
+        <description>Writing documentations is part of almost all developer jobs. Although writing code is the primary focus for any developer, the core understanding/reasoning of the implementation can only be captured in a well written human readable documentation.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/how-to-convert-markdown-to-pdf/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>opensource</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>App Privacy Policy Generator is moving to AGPLv3 license 🙇🏻‍♂️🥳</title>
