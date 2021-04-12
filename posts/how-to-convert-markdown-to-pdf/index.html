@@ -1708,7 +1708,7 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Apr 9, 2021 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;8&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Nishant</span>
   
@@ -1752,7 +1752,7 @@
 <p>The golden tool to pick for this would be <a href="https://pandoc.org/"><strong>pandoc</strong></a>.</p>
 <blockquote>
 <p>Read about how to install pandoc <a href="https://pandoc.org/installing.html">here</a>.<br />
-Note: In order to render pdf, pandoc requires <a href="https://www.latex-project.org/get/">latex installed</a>. Make sure it is installed before proceeding.</p>
+NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project.org/get/">latex installed</a>. Make sure it is installed before proceeding.</p>
 </blockquote>
 <p>Considering our markdown file is called <a href="/images/posts/how-to-convert-markdown-to-pdf/integration_guide.md">integration_guide.md</a>, below command would convert it to an <code>integration_guide.pdf</code>:</p>
 <div class="highlight"><div class="chroma">
@@ -1788,6 +1788,9 @@ Note: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <blockquote>
 <p>Render local readme files before sending off to GitHub.</p>
 <p>Grip is a command-line server application written in Python that uses the GitHub markdown API to render a local readme file. The styles and rendering come directly from GitHub, so you&rsquo;ll know exactly how it will appear. Changes you make to the Readme will be instantly reflected in the browser without requiring a page refresh.</p>
+</blockquote>
+<blockquote>
+<p>NOTE: Make sure <strong>grip</strong> is installed by executing <code>pip3 install grip</code> in your directory.</p>
 </blockquote>
 <p>Using <strong>grip</strong> for my use-case was as simple as running</p>
 <div class="highlight"><div class="chroma">
@@ -1887,7 +1890,139 @@ Note: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <blockquote>
 <p>Checkout the final generated <a href="/images/posts/how-to-convert-markdown-to-pdf/integration_guide.pdf">integration_guide.pdf</a> file.</p>
 </blockquote>
-<p>That&rsquo;s it! Everything works 😎 It is a bit of more steps, but it is quick and solved my immediate requirement. There are possibly many other tools, which could have been useful too i.e <a href="https://www.npmjs.com/package/markdown-pdf">markdown-pdf</a></p>
+<p>However, I am not quite happy with this solution. It works, yes, but I really don&rsquo;t want to open a browser and then have a few keystrokes to print the final pdf file. Would be nice if I could skip this step and directly convert HTML file to PDF via some commandline tool. This gave me an idea 💡 What if I could open a browser window in headless mode and print the document programmitically 🧐? Kind of like emulating the current process we figured earlier 👀</p>
+<p>This is not new for me and I knew where to start for this part. The best tool out there for a headless and programmable browser is <a href="https://github.com/puppeteer/puppeteer">Puppeteer</a>. Reading through the docs quickly for my specific use case, I came up with the below script, which I saved as <code>renderToPdf.js</code>:</p>
+<blockquote>
+<p>NOTE: Make sure <strong>puppeteer</strong> is installed by executing <code>npm i  puppeteer</code> in your directory.</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">puppeteer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;puppeteer&#39;</span><span class="p">);</span>
+
+<span class="p">(</span><span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Get the cmdline arguments
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">myArgs</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="c1">// The first argument is the HTML file
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">inputHtmlFile</span> <span class="o">=</span> <span class="nx">myArgs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1">// Extract the filename from input file, to create the output filename
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">outputHtmlFileName</span> <span class="o">=</span> <span class="nx">inputHtmlFile</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\.[^/.]+$/</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.pdf&#39;</span>
+    <span class="c1">// Prepare the file path
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="s1">&#39;file:///&#39;</span> <span class="o">+</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nx">inputHtmlFile</span>
+
+    <span class="c1">// Launch the headless browser
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">browser</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">puppeteer</span><span class="p">.</span><span class="nx">launch</span><span class="p">();</span>
+    <span class="kr">const</span> <span class="nx">page</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">newPage</span><span class="p">();</span>
+    <span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="p">{</span> <span class="nx">waitUntil</span><span class="o">:</span> <span class="s1">&#39;networkidle0&#39;</span> <span class="p">});</span>
+    <span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">pdf</span><span class="p">({</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="nx">outputHtmlFileName</span><span class="p">,</span>
+        <span class="nx">format</span><span class="o">:</span> <span class="s1">&#39;A4&#39;</span><span class="p">,</span>
+        <span class="nx">margin</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">left</span><span class="o">:</span> <span class="s2">&#34;40px&#34;</span><span class="p">,</span>
+            <span class="nx">right</span><span class="o">:</span> <span class="s2">&#34;40px&#34;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+    <span class="kr">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="p">})();</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><p>Now in order to execute my <code>renderToPdf.js</code> script I need to execute in terminal the below command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">node renderToPdf.js integration_guide.html
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Checkout the final generated <a href="/images/posts/how-to-convert-markdown-to-pdf/puppeteer_gen_integration_guide.pdf">integration_guide.pdf</a> file via Puppeteer.</p>
+</blockquote>
+<p>We can even incorporate this step as part of our bash function we created earlier. The updated function looks like below:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Convert Markdown to PDF</span>
+<span class="c1"># Use as: convertMarkdownToPdf your_markdown_file.md</span>
+<span class="k">function</span> convertMarkdownToPdf<span class="o">(){</span>
+    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$1</span> <span class="o">==</span> *<span class="s2">&#34;.md&#34;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="c1"># Filename without extension</span>
+        <span class="nb">local</span> <span class="nv">FILE_NAME</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> .md<span class="k">)</span>
+        <span class="c1"># Read the markdown file and then convert it to an HTML file</span>
+        cat <span class="nv">$FILE_NAME</span>.md <span class="p">|</span> grip - --export <span class="nv">$FILE_NAME</span>.html 
+        <span class="c1"># Render HTML to PDF</span>
+        node renderToPdf.js  <span class="nv">$FILE_NAME</span>.html
+        <span class="c1"># Open the generated PDF file</span>
+        open <span class="nv">$FILE_NAME</span>.pdf
+ <span class="k">else</span>
+        <span class="nb">echo</span> <span class="s2">&#34;Passed file is not of markdown type. Please pass a .md file&#34;</span>
+    <span class="k">fi</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Using the bash function, I simply need to call the below line of code:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">convertMarkdownToPdf integration_guide.md
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>NOTE: The bash function has been renamed from <code>convertMarkdownToHtml</code> to  <code>convertMarkdownToPdf</code></p>
+</blockquote>
+<p>&hellip;and the markdown file is converted to HTML first, opened in Headless browser and printed as a PDF file. Then opened in the associated PDF file reader!</p>
+<p>That&rsquo;s it! Everything works 😎 It is quick and solved my immediate requirement.</p>
+<p><a href="https://github.com/nisrulz/convert-md-to-pdf">All this code now exists also on Github as a project</a>! 🎉</p>
+<p>Sidenote:<br />
+There are possibly many other tools, which could have been useful too i.e <a href="https://www.npmjs.com/package/markdown-pdf">markdown-pdf</a>. However I am quite happy with my setup here 😅</p>
 
     </article>
     
