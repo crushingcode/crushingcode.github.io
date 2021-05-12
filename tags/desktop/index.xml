@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>desktop on Crushing C.O.D.E</title>
+    <link>https://crushingcode.nisrulz.com/tags/desktop/</link>
+    <description>Recent content in desktop on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
+    <lastBuildDate>Wed, 12 May 2021 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    
+        <atom:link href="https://crushingcode.nisrulz.com/tags/desktop/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Jet-Set-Compose 🚀@GDG London</title>
+        <link>https://crushingcode.nisrulz.com/talks/gdg_london_jetpack_compose_may_2021/</link>
+        <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 12 May 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/gdg_london_jetpack_compose_may_2021/</guid>
+        <description>GDG London: Jetpack Compose, Online Abstract   Since the time Android has existed, our workflow for designing a UI has been confined to XML.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+            
+              <category>desktop</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

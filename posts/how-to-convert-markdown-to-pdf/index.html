@@ -1988,6 +1988,12 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Convert Markdown to PDF</span>
@@ -2001,8 +2007,14 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
         <span class="c1"># Render HTML to PDF</span>
         node renderToPdf.js  <span class="nv">$FILE_NAME</span>.html
         <span class="c1"># Open the generated PDF file</span>
-        open <span class="nv">$FILE_NAME</span>.pdf
- <span class="k">else</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="sb">`</span>uname<span class="sb">`</span> <span class="o">==</span> <span class="s2">&#34;Darwin&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+            <span class="c1"># macOS</span>
+            open <span class="nv">$FILE_NAME</span>.pdf
+        <span class="k">else</span>
+            <span class="c1"># Linux</span>
+            xdg-open <span class="nv">$FILE_NAME</span>.pdf
+        <span class="k">fi</span>
+    <span class="k">else</span>
         <span class="nb">echo</span> <span class="s2">&#34;Passed file is not of markdown type. Please pass a .md file&#34;</span>
     <span class="k">fi</span>
 <span class="o">}</span>
