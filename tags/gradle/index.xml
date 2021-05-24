@@ -60,9 +60,9 @@
       <item>
         <title>Update Dependencies-Code-Repeat</title>
         <link>https://crushingcode.nisrulz.com/posts/update-dependencies-code-repeat/</link>
-        <pubDate>Sat, 03 Sep 2016 10:54:24 +0200</pubDate>
+        <pubDate>Sat, 03 Sep 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Sat, 03 Sep 2016 10:54:24 +0200</atom:modified>
+        <atom:modified>Sat, 03 Sep 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/update-dependencies-code-repeat/</guid>
         <description>Agree or not agree, but on an average consensus pretty much every android dev goes through the loop of Update Dependencies.Code.Repeat. for each of his/her android project.</description>
         
@@ -88,9 +88,9 @@
       <item>
         <title>The curious case of dependency conflicts</title>
         <link>https://crushingcode.nisrulz.com/posts/the-curious-case-of-dependency-conflicts/</link>
-        <pubDate>Mon, 02 May 2016 10:54:24 +0200</pubDate>
+        <pubDate>Mon, 02 May 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Mon, 02 May 2016 10:54:24 +0200</atom:modified>
+        <atom:modified>Mon, 02 May 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/the-curious-case-of-dependency-conflicts/</guid>
         <description>If I were to ask a question to a room filled with android developers
  &amp;ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?</description>

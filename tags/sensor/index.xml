@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Sun, 12 Feb 2017 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 12 Feb 2017 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/sensor/index.xml" rel="self" type="application/rss+xml" />
@@ -24,9 +24,9 @@
       <item>
         <title>I could not find a simple Gesture Detection android library, so I built one</title>
         <link>https://crushingcode.nisrulz.com/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
-        <pubDate>Sun, 12 Feb 2017 10:54:24 +0200</pubDate>
+        <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Sun, 12 Feb 2017 10:54:24 +0200</atom:modified>
+        <atom:modified>Sun, 12 Feb 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
         <description>While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture.</description>
         

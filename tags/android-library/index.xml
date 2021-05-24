@@ -54,13 +54,13 @@
       </item>
       
       <item>
-        <title>And&#39; Libraries, Stop Starting up! @Devfest DACH</title>
+        <title>And&#39; Libraries, Stop Starting up! @Devfest DACH&#39;21</title>
         <link>https://crushingcode.nisrulz.com/talks/devfest_dach_2020/</link>
         <pubDate>Sun, 24 Jan 2021 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 24 Jan 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/devfest_dach_2020/</guid>
-        <description>Devfest DACH, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        <description>Devfest DACH&#39;21, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -304,9 +304,9 @@
       <item>
         <title>Is your Android Library, Lifecycle-Aware?</title>
         <link>https://crushingcode.nisrulz.com/posts/is-your-android-library-lifecycle-aware/</link>
-        <pubDate>Sun, 17 Sep 2017 10:54:24 +0200</pubDate>
+        <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Sun, 17 Sep 2017 10:54:24 +0200</atom:modified>
+        <atom:modified>Sun, 17 Sep 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/is-your-android-library-lifecycle-aware/</guid>
         <description>Lifecycle events in Android.
 It has been a pain point for Android developers all over the world. It is no brainer that, most of the times the main cause of a memory leak in the codebase is because an invalid state is accessed which is out of sync with the lifecycle of the activity/fragment of the app.</description>
@@ -397,9 +397,9 @@ It has been a pain point for Android developers all over the world. It is no bra
       <item>
         <title>Things I wish I knew when I started building Android SDK/Libraries</title>
         <link>https://crushingcode.nisrulz.com/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</link>
-        <pubDate>Sun, 05 Mar 2017 10:54:24 +0200</pubDate>
+        <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Sun, 05 Mar 2017 10:54:24 +0200</atom:modified>
+        <atom:modified>Sun, 05 Mar 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/</guid>
         <description>It all starts when some android developer tries to figure out a solution to a problem he/she is having while building their &amp;ldquo;Awesome Android App&amp;rdquo;.</description>
         
@@ -429,9 +429,9 @@ It has been a pain point for Android developers all over the world. It is no bra
       <item>
         <title>I could not find a simple Gesture Detection android library, so I built one</title>
         <link>https://crushingcode.nisrulz.com/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</link>
-        <pubDate>Sun, 12 Feb 2017 10:54:24 +0200</pubDate>
+        <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Sun, 12 Feb 2017 10:54:24 +0200</atom:modified>
+        <atom:modified>Sun, 12 Feb 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/i-could-not-find-a-simple-gesture-detection-android-library-so-i-built-one/</guid>
         <description>While working on various projects, there have been times when I have had to implement various gesture-based events. Every time I have had to do that I had to write the whole code for getting the SensorManager and getting access to the SensorEvent, plus the extra logic to detect the gesture.</description>
         
@@ -461,9 +461,9 @@ It has been a pain point for Android developers all over the world. It is no bra
       <item>
         <title>Guide to publishing your Android Library via JitPack</title>
         <link>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-jitpack/</link>
-        <pubDate>Fri, 29 Jul 2016 10:54:24 +0200</pubDate>
+        <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Fri, 29 Jul 2016 10:54:24 +0200</atom:modified>
+        <atom:modified>Fri, 29 Jul 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-jitpack/</guid>
         <description>Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.</description>
         
@@ -493,9 +493,9 @@ It has been a pain point for Android developers all over the world. It is no bra
       <item>
         <title>Guide to publishing your Android Library via MavenCentral</title>
         <link>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-mavencentral/</link>
-        <pubDate>Sun, 17 Jul 2016 10:54:24 +0200</pubDate>
+        <pubDate>Sun, 17 Jul 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Sun, 17 Jul 2016 10:54:24 +0200</atom:modified>
+        <atom:modified>Sun, 17 Jul 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-mavencentral/</guid>
         <description>If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world.</description>
         
@@ -525,12 +525,12 @@ It has been a pain point for Android developers all over the world. It is no bra
       <item>
         <title>Guide to publishing your Android Library via Jcenter/Bintray</title>
         <link>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-jcenter/</link>
-        <pubDate>Tue, 12 Jul 2016 10:54:24 +0200</pubDate>
+        <pubDate>Tue, 12 Jul 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Tue, 12 Jul 2016 10:54:24 +0200</atom:modified>
+        <atom:modified>Tue, 12 Jul 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/publish-your-android-library-via-jcenter/</guid>
-        <description>Developers are a different kind of people altogether. They tend to be lazy but strive to be super efficient at the same time.
-A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.</description>
+        <description>NOTE: Jcenter has been sunset. It is encouraged to publish to MavenCentral.
+You checkout the other guide: Guide to publishing your Android Library via MavenCentral</description>
         
         <dc:creator>Nishant</dc:creator>
         
@@ -558,9 +558,9 @@ A lot of this can be seen in the Android world where a certain library pops up e
       <item>
         <title>Own a maven repository, like a boss! – Part 2</title>
         <link>https://crushingcode.nisrulz.com/posts/own-a-maven-repository-like-a-bosspart-2/</link>
-        <pubDate>Tue, 16 Feb 2016 10:54:24 +0200</pubDate>
+        <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Tue, 16 Feb 2016 10:54:24 +0200</atom:modified>
+        <atom:modified>Tue, 16 Feb 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/own-a-maven-repository-like-a-bosspart-2/</guid>
         <description>The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.
 For the same reason I have gone through a lot of good articles online, which explain how the whole process works.</description>
@@ -620,9 +620,9 @@ For the same reason I have gone through a lot of good articles online, which exp
       <item>
         <title>Own a maven repository, like a boss! – Part 1</title>
         <link>https://crushingcode.nisrulz.com/posts/own-a-maven-repository-like-a-bosspart-1/</link>
-        <pubDate>Mon, 03 Aug 2015 10:54:24 +0200</pubDate>
+        <pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Mon, 03 Aug 2015 10:54:24 +0200</atom:modified>
+        <atom:modified>Mon, 03 Aug 2015 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/own-a-maven-repository-like-a-bosspart-1/</guid>
         <description>Have you ever thought how the central repository works like Maven Central or JCenter?
 Is it possible to own one for yourself?

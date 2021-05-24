@@ -1328,9 +1328,9 @@
 
 <meta name="keywords" content="adb,android,tools">
 
-<meta name="created" content="2015-07-09T10:54:24&#43;0200">
-<meta name="modified" content="2015-07-09T10:54:24&#43;0200">
-<meta property="article:published_time" content="2015-07-09T10:54:24&#43;0200">
+<meta name="created" content="2015-07-09T00:00:00&#43;0000">
+<meta name="modified" content="2015-07-09T00:00:00&#43;0000">
+<meta property="article:published_time" content="2015-07-09T00:00:00&#43;0000">
 
 <meta name="author" content="Nishant">
 <meta property="article:author" content="https://crushingcode.nisrulz.com/posts/life-without-wires-adb-over-wifi/@Nishant">
@@ -1342,7 +1342,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.83.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1366,10 +1366,10 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "headline": "Life without wires : ADB over WiFi",
-    "datePublished": "2015-07-09T10:54:24+02:00",
-    "dateModified": "2015-07-09T10:54:24+02:00",
+    "datePublished": "2015-07-09T00:00:00Z",
+    "dateModified": "2015-07-09T00:00:00Z",
     "url" : "https://crushingcode.nisrulz.com/posts/life-without-wires-adb-over-wifi/",
-    "description": "Tired of being tied to your laptop/desktop while debugging your android apps ? Well let me break it to you – You are NOT the FIRST person to do it.",
+    "description": "Tired of being tied to your laptop/desktop while debugging your android apps ? Well let me break it to you – You are NOT the FIRST person bugged by this issues.",
     "keywords": ["adb","android","tools"],
     "author": {
       "@type": "Person",
@@ -1726,51 +1726,54 @@
     <article class="single__contents" data-dir="ltr" data-ani="false">
       
       <p>Tired of being tied to your laptop/desktop while debugging your android apps ?<br />
-Well let me break it to you – You are NOT the FIRST person to do it.<br />
-Its a common practice to tether your device via a USB cable to the host machine and debug android apps.Well here is something for you that is going to set you free. Yes literally. You can run adb over WiFi (period)</p>
+Well let me break it to you – You are NOT the FIRST person bugged by this issues.</p>
+<p>Its a common practice to tether your device via a USB cable to the host machine and debug android apps.Well here is something for you that is going to set you free. Yes literally. You can run adb over WiFi (period)</p>
 <p>Yes , you read that right! Thats the secret solution(…ok not secret.. :p ) and setting it up is a piece of cake :P<br />
-Most people ask me why another post on this, well if you googled it you would come across a lot of information regarding the same but most of it is outdated or you would be using hit-and-trial method to get it working. I did some research on my own and found a way to get it working in the below steps.<br />
-I will walk you through the process of doing so in the most easiest way.<br />
+Most people ask me why another post on this, well if you googled it you would come across a lot of information regarding the same but most of it is outdated or you would be using hit-and-trial method to get it working. I did some research on my own and found a way to get it working in the below steps.</p>
+<p>I will walk you through the process of doing so in the most easiest way.<br />
 All you need is a USB cable (for the initial setup) and have your laptop/desktop and the devices connected to the same network (work on 99% cases)</p>
-<h2 id="step-1">Step 1</h2>
+<ol>
+<li>
 <p>Connect your mobile device via USB and make sure usb debugging is on (you can do that via the developer options in your device).<br />
 Also connect to your Wifi.</p>
-<h2 id="step-2">Step 2</h2>
+</li>
+<li>
 <p>Open up the Terminal , provided you have the adb set in your PATH, type the following</p>
 <pre><code>adb devices
 </code></pre><p>this would list your device as connected over the USB</p>
-<h2 id="step-3">Step 3</h2>
+</li>
+<li>
 <p>To enable the wifi-debug-mode</p>
 <pre><code>adb tcpip 5555
-</code></pre><h2 id="step-4">Step 4</h2>
+</code></pre></li>
+<li>
 <p>Get your DEVICE-IP-ADDRESS</p>
 <pre><code>adb shell netcfg | grep 'wlan0'
 </code></pre><p>you will get something like this</p>
 <pre><code>wlan0 UP 192.168.2.23/24 0x00001043 cc:c3:ea:ef:12:11
 </code></pre><p>where 192.168.2.23 is your DEVICE-IP-ADDRESS</p>
 <p><strong>OR</strong></p>
-<p>you can simply on your device , go to</p>
-<blockquote>
-<blockquote>
-<p>Settings &gt; About phone &gt; Status</p>
-</blockquote>
-</blockquote>
-<p>to view the IP address of your phone</p>
-<h2 id="step-5">Step 5</h2>
+<p>you can navigate to <strong>Settings &gt; About phone &gt; Status</strong> on your device, to view the IP address of your phone.</p>
+</li>
+<li>
 <p><strong>IMPORTANT : Remove USB cable</strong></p>
-<h2 id="step-6">Step 6</h2>
+</li>
+<li>
 <p>Connect your device by typing in the below in the terminal</p>
 <pre><code>adb connect DEVICE-IP-ADDRESS:5555
-</code></pre><h2 id="step-7">Step 7</h2>
+</code></pre></li>
+<li>
 <p>To confirm the connection just made, type in the terminal</p>
 <pre><code>adb devices
-</code></pre><p>this should list your device as connected over the particular DEVICE-IP-ADDRESS<br />
-And you are done. Run/Debug your apps from your IDE in wireless mode.<br />
-Let the magic of wire-free-life begin.</p>
-<h2 id="step-8">Step 8</h2>
+</code></pre><p>this should list your device as connected over the particular DEVICE-IP-ADDRESS</p>
+<p>And you are done. Run/Debug your apps from your IDE in wireless mode. Let the magic of wire-free-life begin.</p>
+</li>
+<li>
 <p>Did I mention that to switch back to USB mode you simply type in the below command in terminal</p>
 <pre><code>adb usb
-</code></pre><p><strong>Things to Note:</strong></p>
+</code></pre></li>
+</ol>
+<h2 id="things-to-note">Things to Note:</h2>
 <ul>
 <li>
 <p>If you move into a different workspace and change WiFi networks, you simply repeat steps 5 and 6 . The steps 1 to 5 are used to set your device into wifi-debug mode.</p>

@@ -40,6 +40,24 @@
       </item>
       
       <item>
+        <title>Beginning Android Game Development</title>
+        <link>https://crushingcode.nisrulz.com/showcase/books/beginning_android_game_dev/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/showcase/books/beginning_android_game_dev/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Seven Mobile Apps in Seven Weeks</title>
         <link>https://crushingcode.nisrulz.com/showcase/books/seven_mobile_apps/</link>
         <pubDate>Mon, 11 Jul 2016 00:00:00 +0000</pubDate>
@@ -58,12 +76,12 @@
       </item>
       
       <item>
-        <title>Beginning Android Game Development</title>
-        <link>https://crushingcode.nisrulz.com/showcase/books/beginning_android_game_dev/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <title>Learning Java by Building Android Games</title>
+        <link>https://crushingcode.nisrulz.com/showcase/books/learning_java_by_building_android_games/</link>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        
-        <guid>https://crushingcode.nisrulz.com/showcase/books/beginning_android_game_dev/</guid>
+        <atom:modified>Fri, 26 Mar 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/showcase/books/learning_java_by_building_android_games/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

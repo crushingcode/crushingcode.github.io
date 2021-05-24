@@ -60,7 +60,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 09 Nov 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/devfest_berlin_2019/</guid>
-        <description>Devfest&#39;19 &amp;lsquo;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        <description>Devfest&#39;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -184,9 +184,9 @@
       <item>
         <title>Do you like to ADB?</title>
         <link>https://crushingcode.nisrulz.com/posts/do-you-like-to-adb/</link>
-        <pubDate>Fri, 14 Oct 2016 10:54:24 +0200</pubDate>
+        <pubDate>Fri, 14 Oct 2016 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Fri, 14 Oct 2016 10:54:24 +0200</atom:modified>
+        <atom:modified>Fri, 14 Oct 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/do-you-like-to-adb/</guid>
         <description>Lets face it we all have been there , trying to fiddle with managing our emulators and dev devices. And at max we would do is try to manually manage it.</description>
         
@@ -216,12 +216,12 @@
       <item>
         <title>Life without wires : ADB over WiFi</title>
         <link>https://crushingcode.nisrulz.com/posts/life-without-wires-adb-over-wifi/</link>
-        <pubDate>Thu, 09 Jul 2015 10:54:24 +0200</pubDate>
+        <pubDate>Thu, 09 Jul 2015 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Thu, 09 Jul 2015 10:54:24 +0200</atom:modified>
+        <atom:modified>Thu, 09 Jul 2015 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/life-without-wires-adb-over-wifi/</guid>
         <description>Tired of being tied to your laptop/desktop while debugging your android apps ?
-Well let me break it to you – You are NOT the FIRST person to do it.</description>
+Well let me break it to you – You are NOT the FIRST person bugged by this issues.</description>
         
         <dc:creator>Nishant</dc:creator>
         
