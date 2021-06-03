@@ -22,6 +22,98 @@
 
       
       <item>
+        <title>🕐 Another Compose(it): Desktop @Ya!vaConf</title>
+        <link>https://crushingcode.nisrulz.com/talks/yava_conf_2021/</link>
+        <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 24 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/yava_conf_2021/</guid>
+        <description>Ya!vaConf, Online Abstract   Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+            
+              <category>desktop</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>🕐 WWDC First Impressions Livecast @Raywenderlic.com</title>
+        <link>https://crushingcode.nisrulz.com/talks/wwdc_livecast_2021/</link>
+        <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 07 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/wwdc_livecast_2021/</guid>
+        <description>Raywenderlich.com, Online Abstract   In this Livecast, Dru Freeman, Nishant Srivastava, Ray Fix, Caroline Begbie, Audrey Tam and Ehab Amer livestream their reactions to Apple’s annual Worldwide Developers Conference (WWDC 2021) keynote event.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>apple</category>
+            
+          
+            
+              <category>ios</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Google I/O First Impressions Livecast @Raywenderlich.com</title>
+        <link>https://crushingcode.nisrulz.com/talks/google_io_livecast_2021/</link>
+        <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 19 May 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/google_io_livecast_2021/</guid>
+        <description>Raywenderlich.com, Online Abstract   In this Livecast, Dru Freeman, Nishant Srivastava, Victoria Gonda, Fuad Kamal and Subhrajyoti Sen sit down to share their thoughts on all the latest news and outcomes from Google I/O 2021.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>google</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Jet-Set-Compose 🚀@GDG London</title>
         <link>https://crushingcode.nisrulz.com/talks/gdg_london_jetpack_compose_may_2021/</link>
         <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>

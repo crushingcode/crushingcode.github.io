@@ -14,12 +14,76 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Wed, 12 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>🕐 Another Compose(it): Desktop @Ya!vaConf</title>
+        <link>https://crushingcode.nisrulz.com/talks/yava_conf_2021/</link>
+        <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 24 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/yava_conf_2021/</guid>
+        <description>Ya!vaConf, Online Abstract   Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+            
+              <category>desktop</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Google I/O First Impressions Livecast @Raywenderlich.com</title>
+        <link>https://crushingcode.nisrulz.com/talks/google_io_livecast_2021/</link>
+        <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 19 May 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/google_io_livecast_2021/</guid>
+        <description>Raywenderlich.com, Online Abstract   In this Livecast, Dru Freeman, Nishant Srivastava, Victoria Gonda, Fuad Kamal and Subhrajyoti Sen sit down to share their thoughts on all the latest news and outcomes from Google I/O 2021.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>google</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Jet-Set-Compose 🚀@GDG London</title>

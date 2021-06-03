@@ -14,12 +14,40 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Thu, 14 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Jun 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>🕐 WWDC First Impressions Livecast @Raywenderlic.com</title>
+        <link>https://crushingcode.nisrulz.com/talks/wwdc_livecast_2021/</link>
+        <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 07 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/wwdc_livecast_2021/</guid>
+        <description>Raywenderlich.com, Online Abstract   In this Livecast, Dru Freeman, Nishant Srivastava, Ray Fix, Caroline Begbie, Audrey Tam and Ehab Amer livestream their reactions to Apple’s annual Worldwide Developers Conference (WWDC 2021) keynote event.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>apple</category>
+            
+          
+            
+              <category>ios</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>The Future of Mobile: Android/iOS, Flutter and Native @Raywenderlich.com</title>

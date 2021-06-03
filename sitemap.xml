@@ -53,24 +53,42 @@
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/</loc>
-    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/android/</loc>
-    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/compose/</loc>
-    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/desktop/</loc>
-    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/talks/gdg_london_jetpack_compose_may_2021/</loc>
-    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/kotlin/</loc>
-    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/</loc>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/talks/yava_conf_2021/</loc>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/tags/apple/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/tags/ios/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/talks/wwdc_livecast_2021/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/tags/google/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/talks/google_io_livecast_2021/</loc>
+    <lastmod>2021-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/talks/gdg_london_jetpack_compose_may_2021/</loc>
     <lastmod>2021-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/posts/how-to-convert-markdown-to-pdf/</loc>
@@ -140,9 +158,6 @@
     <lastmod>2020-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/flutter/</loc>
-    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/tags/ios/</loc>
     <lastmod>2020-05-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/kotlin-multiplatform/</loc>
@@ -376,9 +391,9 @@
     <loc>https://crushingcode.nisrulz.com/tags/nodejs/</loc>
     <lastmod>2013-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crushingcode.nisrulz.com/categories/</loc>
-  </url><url>
     <loc>https://crushingcode.nisrulz.com/about/</loc>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/categories/</loc>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/series/</loc>
   </url>

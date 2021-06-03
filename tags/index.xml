@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright>&lt;a target=&#39;_blank&#39; rel=&#39;external noopener&#39; href=&#39;https://nisrulz.com&#39;&gt;Nishant Srivastava&lt;/a&gt; - ©2015 - {year}, All content is licensed under </copyright>
-    <lastBuildDate>Wed, 12 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -24,7 +24,7 @@
       <item>
         <title>android</title>
         <link>https://crushingcode.nisrulz.com/tags/android/</link>
-        <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/tags/android/</guid>
@@ -42,7 +42,7 @@
       <item>
         <title>compose</title>
         <link>https://crushingcode.nisrulz.com/tags/compose/</link>
-        <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/tags/compose/</guid>
@@ -60,7 +60,7 @@
       <item>
         <title>desktop</title>
         <link>https://crushingcode.nisrulz.com/tags/desktop/</link>
-        <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/tags/desktop/</guid>
@@ -78,10 +78,64 @@
       <item>
         <title>kotlin</title>
         <link>https://crushingcode.nisrulz.com/tags/kotlin/</link>
-        <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/tags/kotlin/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>apple</title>
+        <link>https://crushingcode.nisrulz.com/tags/apple/</link>
+        <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/tags/apple/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>ios</title>
+        <link>https://crushingcode.nisrulz.com/tags/ios/</link>
+        <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/tags/ios/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>google</title>
+        <link>https://crushingcode.nisrulz.com/tags/google/</link>
+        <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/tags/google/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
@@ -244,24 +298,6 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/tags/flutter/</guid>
-        <description></description>
-        
-        <dc:creator>Nishant Srivastava</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>ios</title>
-        <link>https://crushingcode.nisrulz.com/tags/ios/</link>
-        <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        
-        <guid>https://crushingcode.nisrulz.com/tags/ios/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
