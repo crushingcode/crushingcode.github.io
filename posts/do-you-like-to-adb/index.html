@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1775,19 +1775,19 @@
 <p>ADB can make it as simple as executing just a command</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb uninstall &lt;package_name&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb uninstall &lt;package_name&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>if you wish to keep the data and cache directory intact but uninstall the app just add <code>-k</code> as an option to the command</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb uninstall <span class="o">[</span>-k<span class="o">]</span> &lt;package_name&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb uninstall <span class="o">[</span>-k<span class="o">]</span> &lt;package_name&gt;
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
@@ -1796,10 +1796,10 @@
 <p>Of Course you can install an app too via</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb install <span class="o">[</span>-r<span class="o">]</span> <span class="o">[</span>-s<span class="o">]</span> &lt;package_name&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb install <span class="o">[</span>-r<span class="o">]</span> <span class="o">[</span>-s<span class="o">]</span> &lt;package_name&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>the options available to the command are</p>
@@ -1826,10 +1826,10 @@
 <p>Cool ? Now first of all let me give you the magic commands to handle this situation. Lets look at what&rsquo;s available to us</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb -d &lt;command&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb -d &lt;command&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>What this will do is it will directs command to the only connected USB device. Naice 🙂</p>
@@ -1839,10 +1839,10 @@
 <p>But we wanna go a step ahead and orchestrate commands in a pattern (..by writing a bash script, obviously). But to do that I need to specifically direct commands to the device I want to control.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb -s &lt;device_id&gt; &lt;command&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb -s &lt;device_id&gt; &lt;command&gt;
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
@@ -1851,7 +1851,7 @@
 <p>Now we are talking 😎. Now the only thing I gotta do is create a bash script something like this</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1860,7 +1860,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 adb -s &lt;emu_1_id&gt; &lt;some_command&gt;
 adb -s &lt;device_3_id&gt; &lt;some_command&gt;
@@ -1889,14 +1889,14 @@ adb -s &lt;emu_2_id&gt; &lt;some_command&gt;
 <p>To fix that simply kill the server and start it again.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Kill the server if it is running</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Kill the server if it is running</span>
 adb kill-server 
 
 <span class="c1"># Start the server</span>
@@ -1921,7 +1921,7 @@ adb start-server
 <h3 id="to-get-device-information">To get Device Information</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1931,7 +1931,7 @@ adb start-server
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Prints about the current state of the device : offline | bootloader | device</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Prints about the current state of the device : offline | bootloader | device</span>
 adb get-state
 
 <span class="c1"># Prints the serial number of the device</span>
@@ -1948,37 +1948,37 @@ adb get-devpath
 <p><strong>To push a file/dir to device</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb push &lt;local&gt; &lt;remote&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb push &lt;local&gt; &lt;remote&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>where <code>&lt;local&gt;</code> is file in your local system i.e <code>my_image.png</code> and <code>&lt;remote&gt;</code> is file location in device/emulator i.e <code>/sdcard/Downloads/my_image.png</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb push ~/Downloads/my_image.png /sdcard/Downloads/my_image.png
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb push ~/Downloads/my_image.png /sdcard/Downloads/my_image.png
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>To pull a file/dir from device</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb pull &lt;remote&gt; <span class="o">[</span>&lt;local&gt;<span class="o">]</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb pull &lt;remote&gt; <span class="o">[</span>&lt;local&gt;<span class="o">]</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>where <code>&lt;local&gt;</code> is file in your local system i.e <code>my_image.png</code> and <code>&lt;remote&gt;</code> is file location in device/emulator i.e <code>/sdcard/Downloads/my_image.png</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb pull /sdcard/Downloads/my_image.png my_image.png
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb pull /sdcard/Downloads/my_image.png my_image.png
 </code></pre></td></tr></table>
 </div>
 </div><hr />
@@ -1986,10 +1986,10 @@ adb get-devpath
 <p><strong>Generate Public/Private Key</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb keygen &lt;filename&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb keygen &lt;filename&gt;
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
@@ -1999,14 +1999,14 @@ Any existing files are overwritten.</p>
 <p><strong>Get a bug report</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Prints to the standard output</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Prints to the standard output</span>
 adb bugreport
 
 <span class="c1"># Writes to a file named bugreport.txt</span>
@@ -2016,10 +2016,10 @@ adb bugreport &gt; bugreport.txt
 </div><p><strong>Get list of all connected devices</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb devices
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb devices
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="logging">Logging</h3>
@@ -2027,7 +2027,7 @@ adb bugreport &gt; bugreport.txt
 <p>Lets check out its power when used from terminal</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2052,7 +2052,7 @@ adb bugreport &gt; bugreport.txt
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Dumps log entries from 3 log buffers: main, events and radio</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Dumps log entries from 3 log buffers: main, events and radio</span>
 adb logcat
 
 <span class="c1"># Dumps log entries in long format</span>
@@ -2081,7 +2081,7 @@ adb logcat -g
 <p>To define the format of each log entry that is dumped , you need to set the output format for log messages</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2106,7 +2106,7 @@ adb logcat -g
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># The default is brief format</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># The default is brief format</span>
 adb logcat -v &lt;format&gt;
 
 <span class="c1"># Display priority/tag and the PID of process issuing the message (the default format)</span>
@@ -2135,10 +2135,10 @@ adb logcat -v long
 <p>A few people would say that we can always use <code>| grep &quot;filter_text&quot;</code> appended to the <code>adb logcat</code>. Well you are right you can , but there are some neat tricks hidden in the actual implementation of logcat and you should look at them too.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">adb logcat &lt;options&gt; &lt;process-tag&gt;:&lt;priority-code&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb logcat &lt;options&gt; &lt;process-tag&gt;:&lt;priority-code&gt;
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
@@ -2160,7 +2160,7 @@ adb logcat -v long
 <p>This is pretty well know to people who are into Modding their device. But for people who aren&rsquo;t going to mess with their device, here is what you can do with <strong>ADB</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2179,7 +2179,7 @@ adb logcat -v long
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Remounts the /system partition on the device read-write</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Remounts the /system partition on the device read-write</span>
 adb remount
 
 <span class="c1"># Reboots the device, optionally into the bootloader or recovery program</span>
@@ -2203,14 +2203,14 @@ adb tcpip &lt;port&gt;
 <p>I am just going to list some more commands , just because well they exist! 😋</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Show help about all commands for adb, check this to get info about more commands in adb</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Show help about all commands for adb, check this to get info about more commands in adb</span>
 adb <span class="nb">help</span>
 
 <span class="c1"># Shows the version number for adb</span>

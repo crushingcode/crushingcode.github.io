@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1740,7 +1740,7 @@ Do you want to host your artifacts in your own private repository?</p>
 <p><strong>For those of you who want to jump into the code right away , here is the gist</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1782,7 +1782,7 @@ Do you want to host your artifacts in your own private repository?</p>
 </span><span class="lnt">40
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1">### Create Maven Repository</span>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1">### Create Maven Repository</span>
 <span class="c1"># Create a directory named mavenrepo</span>
 mkdir mavenrepo
 
@@ -1852,29 +1852,29 @@ Lets just say its just another method to host and publish your artifacts without
 <h2 id="steps">Steps</h2>
 <p><strong>Step 1</strong> : Fire up your terminal/command prompt<br />
 <strong>Step 2</strong> : Create a directory where you will sync your maven artifacts to, lets say its called mavenrepo</p>
-<pre><code>mkdir mavenrepo
+<pre tabindex="0"><code>mkdir mavenrepo
 </code></pre><p>and change into the mavenrepo directory</p>
-<pre><code>cd mavenrepo
+<pre tabindex="0"><code>cd mavenrepo
 </code></pre><p><strong>Step 3</strong> : Once inside the directory, initialize it with git</p>
-<pre><code>git init
+<pre tabindex="0"><code>git init
 </code></pre><p><strong>Step 4</strong> : Create a repository named <strong>mavenrepo (git remote)</strong> at Github/Bitbucket and add it to your <strong>mavenrepo (git local)</strong> directory as a remote repository named <strong>origin</strong> ( here i am adding a github repo)</p>
-<pre><code>git remote add origin https://github.com/&lt;username&gt;/mavenrepo.git
+<pre tabindex="0"><code>git remote add origin https://github.com/&lt;username&gt;/mavenrepo.git
 </code></pre><blockquote>
 <p>Note : you can get the url from Github under the settings tab when at your repository page</p>
 </blockquote>
 <p><img src="/images/posts/copygithuburl.png" alt="copygithuburl" /></p>
 <p><strong>Step 5</strong> :  Create 2 directories under mavenrepo, namely releases and snapshots</p>
-<pre><code>mkdir releases snapshots
+<pre tabindex="0"><code>mkdir releases snapshots
 </code></pre><p><strong>Step 6</strong> : Create README.md under each sub directory, releases and snapshots<br />
 Note: This step is required since git will not push empty directories, so we add empty README.md files :)</p>
-<pre><code>touch releases/README.md
+<pre tabindex="0"><code>touch releases/README.md
 touch snapshots/README.md
 </code></pre><p><strong>Step 7</strong> : Stage all the changed files under git, using the below command</p>
-<pre><code>git add .
+<pre tabindex="0"><code>git add .
 </code></pre><p><strong>Step 8</strong> : Commit with a message</p>
-<pre><code>git commit -m &quot;Initial Setup&quot;
+<pre tabindex="0"><code>git commit -m &quot;Initial Setup&quot;
 </code></pre><p><strong>Step 9</strong> : Push to origin</p>
-<pre><code>git push origin master
+<pre tabindex="0"><code>git push origin master
 </code></pre><p>Thats It!<br />
 You have a working maven repository :D</p>
 <p>Okay, this is cool …I have a working maven repository ..hmm..but something is missing ….wait a second, where is the artifact that i would be pushing to this maven repository ??<br />
@@ -1882,7 +1882,7 @@ To be specific, how do i generate the maven artifact ?<br />
 Simple,</p>
 <h2 id="generating-a-maven-artifact">Generating a maven artifact</h2>
 <p><strong>Step 10</strong> : Generate a maven artifact using the below command in terminal/command prompt (provided you already have the maven installed)</p>
-<pre><code>mvn clean org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file \
+<pre tabindex="0"><code>mvn clean org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file \
 -DgroupId=com.company.id -DartifactId=artificatid -Dversion=1.0.0 \
 -Dpackaging=aar -Dfile=artifact.aar -DlocalRepositoryPath=./mavenrepo/releases/aar \
 -DgeneratePom=true -DcreateChecksum=true
@@ -1899,13 +1899,13 @@ Simple,</p>
 <li><strong>-Dfile</strong> Specify here the specific name of the jar/aar/war you are pushing as a maven artifact</li>
 <li><strong>-DlocalRepositoryPath</strong> Specify the path to your mavenrepo (git local) i.e.</li>
 </ul>
-<pre><code>./mavenrepo/releases/aar
+<pre tabindex="0"><code>./mavenrepo/releases/aar
 </code></pre><ul>
 <li><strong>-DgeneratePom</strong> Set it to true to generate a POM file</li>
 <li><strong>-DcreateChecksum</strong> Set it to true to generate the checksum files</li>
 </ul>
 <p><strong>Step 11</strong> : Once you are done generating the maven artifacts and they are deployed under the specific folder ( releases/snapshots), just stage them, commit and push it to your remote repo…</p>
-<pre><code>git add .
+<pre tabindex="0"><code>git add .
 git commit -m &quot;&lt;artifact&gt; v1.0.0 added&quot;
 git push origin master
 </code></pre><p>Repeat <em><strong>Steps 10-11</strong></em> every time you want to publish a maven artifact to your own maven repository.</p>

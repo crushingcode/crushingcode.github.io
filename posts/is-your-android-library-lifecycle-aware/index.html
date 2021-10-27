@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1765,16 +1765,16 @@
 <p>Next add this <code>awesomelib</code> module as a dependency to the <code>app</code> module, so that the <code>app</code> module has access to the public classes contained by the <code>awesomelib</code> library module. To do that add the below to the <code>build.gradle</code> of the <code>app</code> module.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="nf">project</span><span class="o">(</span><span class="s1">&#39;:awesomelib&#39;</span><span class="o">)</span>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="nf">project</span><span class="o">(</span><span class="s1">&#39;:awesomelib&#39;</span><span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Next you want to add a class to your <code>awesomelib</code> library module. I created mine named as <code>AwesomeMainLib</code> . This class is just to showcase the code for library which will be referenced in the <code>app</code> module later on. For simplicity sake, lets make <code>AwesomeMainLib</code> class a singleton. The code in that case would look like below</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1794,7 +1794,7 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AwesomeLibMain</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AwesomeLibMain</span> <span class="o">{</span>
   <span class="kd">static</span> <span class="kd">final</span> <span class="n">AwesomeLibMain</span> <span class="n">ourInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AwesomeLibMain</span><span class="o">();</span>
 
   <span class="kd">public</span> <span class="kd">static</span> <span class="n">AwesomeLibMain</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
@@ -1817,7 +1817,7 @@
 </div><p>and in your <code>app</code> module you would call <code>init()</code> method via <code>AwesomeLibMain.getInstance().init()</code> in <code>onCreate()</code> and <code>cleanup()</code> method via <code>AwesomeLibMain.getInstance().cleanup()</code> in <code>onDestroy()</code> respectively. Here is the code of <code>MainActivity.java</code> class in <code>app</code> module</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1838,7 +1838,7 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
 
   <span class="nd">@Override</span>
   <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
@@ -1865,21 +1865,21 @@
 <p>Add the below to the <code>build.gradle</code> for <code>awesomelib</code> module</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s2">&#34;android.arch.lifecycle:runtime:1.0.0&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s2">&#34;android.arch.lifecycle:runtime:1.0.0&#34;</span>
 <span class="n">annotationProcessor</span> <span class="s2">&#34;android.arch.lifecycle:compiler:1.0.0-beta1&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>and add the below to the <code>build.gradle</code> for <code>app</code> module</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s2">&#34;com.android.support:appcompat-v7:26.1.0&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s2">&#34;com.android.support:appcompat-v7:26.1.0&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
@@ -1894,13 +1894,13 @@
 <p><strong><em>Now comes the magic</em></strong>. Once you have integrated Lifecycle Arch components, you have access to annotations which correspond to lifecycle events of Activity/Fragment such as</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_CREATE</span><span class="o">)</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_CREATE</span><span class="o">)</span>
 <span class="n">or</span> 
 <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_DESTROY</span><span class="o">)</span>
 <span class="o">...</span>
@@ -1910,7 +1910,7 @@
 <p>Lets have a look at what our <code>AwesomeLibMain</code> class look, after we have annotated the methods</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1962,7 +1962,7 @@
 </span><span class="lnt">50
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">android.arch.lifecycle.Lifecycle</span><span class="o">;</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">android.arch.lifecycle.Lifecycle</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.arch.lifecycle.LifecycleObserver</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.arch.lifecycle.OnLifecycleEvent</span><span class="o">;</span>
 
@@ -2024,7 +2024,7 @@
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2045,7 +2045,7 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
 
   <span class="nd">@Override</span>
   <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
@@ -2069,22 +2069,22 @@
 </div><p>so you basically needed to add it as an <strong>Observer</strong> for lifecycle in <code>onCreate()</code> of Activity via</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Add Lifecycle Observer
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Add Lifecycle Observer
 </span><span class="c1"></span><span class="n">getLifecycle</span><span class="o">().</span><span class="na">addObserver</span><span class="o">(</span><span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>…and then remove the Observer for lifecycle in onDestroy() of Activity via</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Remove Lifecycle Observer
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Remove Lifecycle Observer
 </span><span class="c1"></span><span class="n">getLifecycle</span><span class="o">().</span><span class="na">removeObserver</span><span class="o">(</span><span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
 </code></pre></td></tr></table>
 </div>

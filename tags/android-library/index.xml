@@ -14,12 +14,44 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2021, All content is licensed under</copyright>
-    <lastBuildDate>Tue, 02 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/android-library/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Clubhouse: Building Android Libraries @Android Chatter</title>
+        <link>https://crushingcode.nisrulz.com/talks/clubhouse_jun_2021/</link>
+        <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 17 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/clubhouse_jun_2021/</guid>
+        <description>Android Chatter, Online Abstract   Live panel discussion with other Android devs to talk about building Android Libraries, tips n&#39; tricks and Q&amp;amp;A from audience👨🏻‍💻</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>And&#39; Libraries, Stop Starting up! @GDG Helwan</title>

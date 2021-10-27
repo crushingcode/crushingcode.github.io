@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1806,7 +1806,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1817,7 +1817,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"> <span class="n">dependencies</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"> <span class="n">dependencies</span> <span class="o">{</span>
     <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:2.1.3&#39;</span>
     <span class="o">..</span>
     <span class="o">..</span>
@@ -1833,7 +1833,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1870,7 +1870,7 @@ A lot of this can be seen in the Android world where a certain library pops up e
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"> <span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.library&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"> <span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.library&#39;</span>
 
  <span class="n">ext</span> <span class="o">{</span>
    <span class="n">bintrayRepo</span> <span class="o">=</span> <span class="s1">&#39;maven&#39;</span>
@@ -1910,12 +1910,12 @@ A lot of this can be seen in the Android world where a certain library pops up e
 </div><ul>
 <li>Edit your <code>local.properties</code></li>
 </ul>
-<pre><code>bintray.user=&lt;your_bintray_username&gt;
+<pre tabindex="0"><code>bintray.user=&lt;your_bintray_username&gt;
 bintray.apikey=&lt;your_bintray_apikey&gt;
 </code></pre><blockquote>
 <p>NOTE : <code>bintray.user</code> and <code>bintray.apikey</code> have to be in <code>local.properties</code> specifically or else you will get error later regarding the user and apikey values not available to the bintrayUpload gradle task as below</p>
 </blockquote>
-<pre><code>No value has been specified for property 'apiKey'.
+<pre tabindex="0"><code>No value has been specified for property 'apiKey'.
 No value has been specified for property 'user'.
 </code></pre><ul>
 <li>
@@ -1946,10 +1946,10 @@ No value has been specified for property 'user'.
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">./</span><span class="n">gradlew</span> <span class="n">clean</span> <span class="n">build</span> <span class="n">install</span> <span class="n">bintrayUpload</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">./</span><span class="n">gradlew</span> <span class="n">clean</span> <span class="n">build</span> <span class="n">install</span> <span class="n">bintrayUpload</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -1964,7 +1964,7 @@ No value has been specified for property 'user'.
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1973,7 +1973,7 @@ No value has been specified for property 'user'.
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">repositories</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">repositories</span> <span class="o">{</span>
    <span class="n">jcenter</span><span class="o">()</span>
    <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://dl.bintray.com/&lt;bintray_username&gt;/maven&#39;</span> <span class="o">}</span>
 <span class="o">}</span>
@@ -1985,7 +1985,7 @@ No value has been specified for property 'user'.
 </div><p>i.e for the sample lib in this repo , <code>awesomelib</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1994,7 +1994,7 @@ No value has been specified for property 'user'.
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">repositories</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">repositories</span> <span class="o">{</span>
    <span class="n">jcenter</span><span class="o">()</span>
    <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://dl.bintray.com/nisrulz/maven&#39;</span> <span class="o">}</span>
 <span class="o">}</span>
@@ -2027,12 +2027,12 @@ No value has been specified for property 'user'.
 <p>You can use the lib now as follows</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">dependencies</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">dependencies</span> <span class="o">{</span>
     <span class="n">implementation</span> <span class="s1">&#39;com.github.&lt;bintray_username&gt;:&lt;library_module&gt;:1.0&#39;</span>
   <span class="o">}</span>
 </code></pre></td></tr></table>
@@ -2040,12 +2040,12 @@ No value has been specified for property 'user'.
 </div><p>i.e for the sample lib in this repo , <code>awesomelib</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">dependencies</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">dependencies</span> <span class="o">{</span>
       <span class="n">implementation</span> <span class="s1">&#39;com.github.nisrulz:awesomelib:1.0&#39;</span>
   <span class="o">}</span>
 </code></pre></td></tr></table>

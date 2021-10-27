@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1799,7 +1799,7 @@ Turns out you have a couple of options here too, each having its own pros and co
 <p>In a gist is you need to put the <code>aar</code> file in the <code>libs</code> directory (create it if needed), then, add the following code in your <code>build.gradle</code> :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1809,7 +1809,7 @@ Turns out you have a couple of options here too, each having its own pros and co
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">dependencies</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">dependencies</span> <span class="o">{</span>
    <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span><span class="s1">&#39;nameOfYourAARFileWithoutExtension&#39;</span><span class="o">,</span> <span class="nl">ext:</span><span class="s1">&#39;aar&#39;</span><span class="o">)</span>
  <span class="o">}</span>
 <span class="n">repositories</span><span class="o">{</span>
@@ -1835,7 +1835,7 @@ The solution for that is to deploy your own instance of artifactory (read about 
 Second issue is that to use your android library one would need to include an extra line in their root <code>build.gradle</code> file</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1843,7 +1843,7 @@ Second issue is that to use your android library one would need to include an ex
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">allprojects</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">allprojects</span> <span class="o">{</span>
 	<span class="n">repositories</span> <span class="o">{</span>
 		<span class="o">...</span>
 		<span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;http://url.to_your_hosted_artifactory_instance.maven_repository&#39;</span> <span class="o">}</span>
@@ -1857,7 +1857,7 @@ Second issue is that to use your android library one would need to include an ex
 However the issue at hand is same as the one for local/remote maven repositories that users of your android library would need to include an extra line in their root <code>build.gradle</code> file</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1865,7 +1865,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">allprojects</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">allprojects</span> <span class="o">{</span>
 	<span class="n">repositories</span> <span class="o">{</span>
 		<span class="o">...</span>
 		<span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://www.jitpack.io&#39;</span> <span class="o">}</span>
@@ -1879,12 +1879,12 @@ However the issue at hand is same as the one for local/remote maven repositories
 <p>If you publish to Jcenter, bintray the company behind it gives you the option to sync with Maven Central from within their publishing platform. Once published its as simple as adding the below line to your build.gradle file to use the library in any android project</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">dependencies</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">dependencies</span> <span class="o">{</span>
   <span class="n">compile</span> <span class="s1">&#39;com.github.nisrulz:awesomelib:1.0&#39;</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
@@ -1897,14 +1897,14 @@ However the issue at hand is same as the one for local/remote maven repositories
 <p>Just because its hard to remember the exact mapping of these arguments and the order in which they are declared in the library code.It also is prone to more mistakes as anyone can make a mistake of passing <code>int</code> value in a <code>String</code> field or vice versa.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// DONOT DO THIS
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// DONOT DO THIS
 </span><span class="c1"></span><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">String</span> <span class="n">apikey</span><span class="o">,</span> <span class="kt">int</span> <span class="n">refresh</span><span class="o">,</span> <span class="kt">long</span> <span class="n">interval</span><span class="o">,</span> <span class="n">String</span> <span class="n">type</span><span class="o">);</span>
 
 <span class="c1">// DO this
@@ -1914,7 +1914,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 </div><p>where ApiSecret is an Entity Class, declared as below</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1928,7 +1928,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ApiSecret</span><span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ApiSecret</span><span class="o">{</span>
     <span class="n">String</span> <span class="n">apikey</span><span class="o">;</span>
     <span class="kt">int</span> <span class="n">refresh</span><span class="o">;</span>
     <span class="kt">long</span> <span class="n">interval</span><span class="o">;</span>
@@ -1972,13 +1972,13 @@ However the issue at hand is same as the one for local/remote maven repositories
 <p>This is how you check if you have a said permission granted or not:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasPermission</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">permission</span><span class="o">)</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasPermission</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">permission</span><span class="o">)</span> <span class="o">{</span>
   <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">checkCallingOrSelfPermission</span><span class="o">(</span><span class="n">permission</span><span class="o">);</span>
   <span class="k">return</span> <span class="n">result</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">;</span>
 <span class="o">}</span>
@@ -1987,7 +1987,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 </div><p>Some of the devs would say that they really need that specific permission, what to do in that case. Well, your library code should be generic for all types of apps that need the specific functionality. If you can provide hooks such as functions to let users of your android library pass the data you need the dangerous permission for. In that way, you do not force the devs to require a permission they do not want to. In absence of the permission provide a fallback implementation. Simple.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1995,7 +1995,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="cm">/* Requiring GET_ACCOUNTS permission (as a requisite to use the 
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="cm">/* Requiring GET_ACCOUNTS permission (as a requisite to use the 
 </span><span class="cm"> * library) is avoided here by providing a function which lets the 
 </span><span class="cm"> * devs to get it on their own and feed it to a function in the 
 </span><span class="cm"> * library.
@@ -2007,10 +2007,10 @@ However the issue at hand is same as the one for local/remote maven repositories
 <p>We have all been there. We have a specific functionality that requires that the device has a certain feature. The usual way you would approach this is by defining the below in your manifest file</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-feature</span> <span class="na">android:name=</span><span class="s">&#34;android.hardware.bluetooth&#34;</span> <span class="nt">/&gt;</span>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-feature</span> <span class="na">android:name=</span><span class="s">&#34;android.hardware.bluetooth&#34;</span> <span class="nt">/&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>..the problem with this is that when this is defined in the android library code, this would get merged into the app manifest file during the manifest-merger phase of <code>build</code> and thus hide the app in Play Store for devices that do not have the bluetooth unit (this is something the Play Store does as filtering). So basically an app that was earlier visible to a larger audience would now be visible to a smaller audience, just cause you added that to your library code.</p>
@@ -2018,13 +2018,13 @@ However the issue at hand is same as the one for local/remote maven repositories
 <em>Well what you need to do is not include that <code>uses-feature</code> in your manifest file for the android library but rather check for the feature during runtime in your code as below</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">feature</span> <span class="o">=</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">FEATURE_BLUETOOTH</span><span class="o">;</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">feature</span> <span class="o">=</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">FEATURE_BLUETOOTH</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isFeatureAvailable</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">feature</span><span class="o">)</span> <span class="o">{</span>
  <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="na">getPackageManager</span><span class="o">().</span><span class="na">hasSystemFeature</span><span class="o">(</span><span class="n">feature</span><span class="o">);</span>
 <span class="o">}</span>
@@ -2039,13 +2039,13 @@ However the issue at hand is same as the one for local/remote maven repositories
 As a rule of thumb support the full spectrum of versions via defining in <code>minSdkVersion</code> and <code>targetSdkVersion</code>. What you should do internally to your library code is check for the android version at runtime and enable/disable the feature or use a fallback.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Method to check if the Android Version on device is greater than or equal to Marshmallow.
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Method to check if the Android Version on device is greater than or equal to Marshmallow.
 </span><span class="c1"></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isMarshmallow</span><span class="o">(){</span>
     <span class="k">return</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span><span class="o">&gt;=</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION_CODES</span><span class="o">.</span><span class="na">M</span><span class="o">;</span>
 <span class="o">}</span>
@@ -2058,14 +2058,14 @@ As a rule of thumb support the full spectrum of versions via defining in <code>m
 As a rule of thumb, never log in production. You should use <a href="https://developer.android.com/studio/build/build-variants.html">build-variants</a> with <a href="https://github.com/JakeWharton/timber">timber</a> to help you in the process to separate logging info in production vs debug builds. A simple solution can be to provide a <code>debuggable</code> flag that the devs can flip to enable/disable logging from your android library</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// In code     
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// In code     
 </span><span class="c1"></span><span class="kt">boolean</span> <span class="n">debuggable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
 <span class="n">MyAwesomeLibrary</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="n">apisecret</span><span class="o">,</span><span class="n">debuggable</span><span class="o">);</span>
 <span class="c1">// In build.gradle     
@@ -2077,7 +2077,7 @@ As a rule of thumb, never log in production. You should use <a href="https://dev
 <p>I have seen this a lot of times now. Some of the devs would not log their errors and exception in logcat! Which basically adds a headache to the users of the android library when they are trying to debug the code. In tandem to the last tip about not logging in production, you must understand that exceptions and errors need to be logged irrespective of being in debug or production. If you do not want to log in production, at least provide a functionality of enabling logs via passing some flag when you initialize your library. i.e</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2091,7 +2091,7 @@ As a rule of thumb, never log in production. You should use <a href="https://dev
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ApiSecret</span> <span class="n">apisecret</span><span class="o">,</span><span class="kt">boolean</span> <span class="n">debuggable</span><span class="o">){</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ApiSecret</span> <span class="n">apisecret</span><span class="o">,</span><span class="kt">boolean</span> <span class="n">debuggable</span><span class="o">){</span>
       <span class="o">...</span>
       <span class="k">try</span><span class="o">{</span>
         <span class="o">...</span>
@@ -2132,7 +2132,7 @@ In such a scenario, your library has introduced a bigger problem than solving th
 How to achieve this ? Check in classpath</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2143,7 +2143,7 @@ How to achieve this ? Check in classpath</p>
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">hasOKHttpOnClasspath</span><span class="o">()</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">hasOKHttpOnClasspath</span><span class="o">()</span> <span class="o">{</span>
    <span class="k">try</span> <span class="o">{</span>
        <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;com.squareup.okhttp3.OkHttpClient&#34;</span><span class="o">);</span>
        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
@@ -2157,7 +2157,7 @@ How to achieve this ? Check in classpath</p>
 </div><p>Next, you can use <code>provided</code>(Gradle v2.12 and below) or <code>compileOnly</code>(Gradle v2.12+)(<a href="https://blog.gradle.org/introducing-compile-only-dependencies">Read here for complete information</a>), so as to be able to get hold of the classes defined by the dependency during compile time.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2165,7 +2165,7 @@ How to achieve this ? Check in classpath</p>
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">dependencies</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">dependencies</span> <span class="o">{</span>
    <span class="c1">// for gradle version 2.12 and below
 </span><span class="c1"></span>   <span class="n">provided</span> <span class="s1">&#39;com.squareup.okhttp3:okhttp:3.6.0&#39;</span>
    <span class="c1">// or for gradle version 2.12+

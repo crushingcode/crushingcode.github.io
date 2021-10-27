@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1750,7 +1750,7 @@
 </li>
 </ul>
 <p>Copy the URL in the address bar. It should look like below</p>
-<pre><code>https://github.com/&lt;username&gt;/&lt;mavenrepo&gt;/tree/master/releases
+<pre tabindex="0"><code>https://github.com/&lt;username&gt;/&lt;mavenrepo&gt;/tree/master/releases
 </code></pre><ul>
 <li>
 <h3 id="step-3"><strong>Step 3</strong></h3>
@@ -1779,7 +1779,7 @@ https://github.com/&lt;username&gt;/&lt;mavenrepo&gt;/raw/master/releases
 </li>
 </ul>
 <p>Now copy the below to the <code>build.gradle</code> file with the appropriate url for the maven repository as obtained in <em>Step-3</em>.</p>
-<pre><code>repositories {
+<pre tabindex="0"><code>repositories {
     maven {
         url &quot;https://github.com/&lt;username&gt;/&lt;mavenrepo&gt;/raw/master/releases&quot;
     }
@@ -1790,7 +1790,7 @@ https://github.com/&lt;username&gt;/&lt;mavenrepo&gt;/raw/master/releases
 </li>
 </ul>
 <p>Next , add the dependency as you would normally</p>
-<pre><code>dependencies {
+<pre tabindex="0"><code>dependencies {
     implementation 'com.github.&lt;username&gt;:&lt;artifact_name&gt;:&lt;version&gt;'
 }
 </code></pre><p><strong>where <code>&lt;version&gt;</code> has to be of the form  <code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code> i.e 1.0.0</strong></p>
@@ -1801,7 +1801,7 @@ https://github.com/&lt;username&gt;/&lt;mavenrepo&gt;/raw/master/releases
 <p>However as you would see this is a very limiting way of accessing artifacts.<br />
 The developer is supposed to include your <code>maven url</code> under <code>repository</code> section which is &hellip;a bit of extra work , right ?</p>
 <p>As a developer we are all very lazy. We want to cut this extra work down to only compiling our artifact as a dependency with a single line of code</p>
-<pre><code>compile 'com.github.&lt;username&gt;:&lt;artifact_name&gt;:&lt;version&gt;'
+<pre tabindex="0"><code>compile 'com.github.&lt;username&gt;:&lt;artifact_name&gt;:&lt;version&gt;'
 </code></pre><p>Well this is where Maven Central/Jcenter step in.<br />
 A lot of information on them in the next part of this series.</p>
 <p>Till then keep calm and crush c.o.d.e !</p>

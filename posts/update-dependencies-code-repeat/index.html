@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1761,7 +1761,7 @@
 <p>Now we all might have done this for <code>support-library</code> , where we define a variable inside our module&rsquo;s <code>build.gradle</code> and  then reference it as below</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1769,7 +1769,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="kt">def</span>  <span class="n">supportLibVer</span> <span class="o">=</span> <span class="s2">&#34;24.2.0&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="kt">def</span>  <span class="n">supportLibVer</span> <span class="o">=</span> <span class="s2">&#34;24.2.0&#34;</span>
 <span class="o">..</span>
 <span class="n">dependencies</span> <span class="o">{</span>
   <span class="n">compile</span> <span class="s2">&#34;com.android.support:appcompat-v7:$supportLibVer&#34;</span>
@@ -1796,12 +1796,12 @@ Gradle&rsquo;s <a href="https://docs.gradle.org/current/userguide/writing_build_
 <p>Project&rsquo;s root <code>build.gradle</code> file</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">ext</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">ext</span> <span class="o">{</span>
     <span class="n">supportLibVer</span> <span class="o">=</span> <span class="s2">&#34;24.2.0&#34;</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
@@ -1809,13 +1809,13 @@ Gradle&rsquo;s <a href="https://docs.gradle.org/current/userguide/writing_build_
 </div><p>Now reference it in all/required modules as below</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">..</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">..</span>
 <span class="n">dependencies</span> <span class="o">{</span>
   <span class="n">compile</span> <span class="s2">&#34;com.android.support:appcompat-v7:$rootProject.ext.supportLibVer&#34;</span>
 <span class="o">}</span>
@@ -1828,7 +1828,7 @@ Gradle&rsquo;s <a href="https://docs.gradle.org/current/userguide/writing_build_
 <p>But my requirement was a step ahead than this. I wanted to provide common values to all projects inside my repository and not just to one particular project. So I needed to provide an external <code>gradle</code> file (that I place at the root of the folder which contains all my projects) with all <code>ext</code> variables defined in it , something like this [<a href="https://github.com/nisrulz/android-examples/blob/master/dependencies.gradle">dependencies.gradle</a>]</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1841,7 +1841,7 @@ Gradle&rsquo;s <a href="https://docs.gradle.org/current/userguide/writing_build_
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">ext</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">ext</span> <span class="o">{</span>
    <span class="n">androidPluginVer</span> <span class="o">=</span> <span class="s2">&#34;2.1.3&#34;</span>
    <span class="n">compileSdkVer</span> <span class="o">=</span> <span class="mi">24</span>
    <span class="n">buildToolsVer</span> <span class="o">=</span> <span class="s2">&#34;24.0.2&#34;</span>
@@ -1860,7 +1860,7 @@ Gradle&rsquo;s <a href="https://docs.gradle.org/current/userguide/writing_build_
 This is what I did next in each Project&rsquo;s root <code>build.gradle</code>, I added a <code>subprojects</code> configuration section just below <code>allprojects</code> configuration section and added a <code>apply from:</code> statement to apply my external gradle file to each sub-module.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1877,7 +1877,7 @@ This is what I did next in each Project&rsquo;s root <code>build.gradle</code>, 
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="c1">// Top-level build file where you can add configuration options common to all sub-projects/modules.
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="c1">// Top-level build file where you can add configuration options common to all sub-projects/modules.
 </span><span class="c1"></span><span class="n">buildscript</span> <span class="o">{</span>
     <span class="o">...</span>
 <span class="o">}</span>
@@ -1897,13 +1897,13 @@ This is what I did next in each Project&rsquo;s root <code>build.gradle</code>, 
 </div><p>What this did was that it made my external variables, defined in <code>dependencies.gradle</code> files available in the scope of each module in each of my projects now and I could now reference them simply as</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">..</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">..</span>
 <span class="n">dependencies</span> <span class="o">{</span>
   <span class="n">compile</span> <span class="s2">&#34;com.android.support:appcompat-v7:$supportLibVer&#34;</span>
 <span class="o">}</span>
@@ -1916,7 +1916,7 @@ This is what I did next in each Project&rsquo;s root <code>build.gradle</code>, 
 <p>So the way I solved this is by applying the <code>dependencies.gradle</code> to the <code>buildscript</code> section directly inside the root <code>build.gradle</code> for each Project. So now each project&rsquo;s root <code>build.gradle</code> script became as below</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1939,7 +1939,7 @@ This is what I did next in each Project&rsquo;s root <code>build.gradle</code>, 
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="c1">// Top-level build file where you can add configuration options common to all sub-projects/modules.
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="c1">// Top-level build file where you can add configuration options common to all sub-projects/modules.
 </span><span class="c1"></span><span class="n">buildscript</span> <span class="o">{</span>
     <span class="c1">// This is added to apply the gradle file to facilitate providing variable values to root build.gradle of the project
 </span><span class="c1"></span>    <span class="n">apply</span> <span class="nl">from:</span> <span class="s1">&#39;../dependencies.gradle&#39;</span>

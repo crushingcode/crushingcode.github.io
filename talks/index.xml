@@ -22,6 +22,104 @@
 
       
       <item>
+        <title>Another Compose(it): Desktop @Droidcon Italy</title>
+        <link>https://crushingcode.nisrulz.com/talks/droidcon_italy_2021/</link>
+        <pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 12 Oct 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/droidcon_italy_2021/</guid>
+        <description>Droidcon Italy, Online Abstract   Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+            
+              <category>desktop</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title> Birds of a Feather: Kotlin Multiplatform Mobile @Chicago Roboto</title>
+        <link>https://crushingcode.nisrulz.com/talks/chicago_roboto_2021/</link>
+        <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 28 Sep 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/chicago_roboto_2021/</guid>
+        <description>Chicago Roboto Online Abstract   KMM or Kotlin Multiplatform Mobile is evolving rapidly. So much so that many companies already use it in production.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>kmp</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Panel: Ask Googlers about Jetpack Compose @Droidcon Online</title>
+        <link>https://crushingcode.nisrulz.com/talks/panel_discussion_droidcon_online_july_2021/</link>
+        <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 29 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/panel_discussion_droidcon_online_july_2021/</guid>
+        <description> Droidcon, Online Abstract   Panel Discussion with Googlers about Jetpack Compose.
+  Video+ Event Click here to access the event website
+  </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Another Compose(it): Desktop @Ya!vaConf</title>
         <link>https://crushingcode.nisrulz.com/talks/yava_conf_2021/</link>
         <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
@@ -50,6 +148,38 @@
           
             
               <category>desktop</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Clubhouse: Building Android Libraries @Android Chatter</title>
+        <link>https://crushingcode.nisrulz.com/talks/clubhouse_jun_2021/</link>
+        <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 17 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/talks/clubhouse_jun_2021/</guid>
+        <description>Android Chatter, Online Abstract   Live panel discussion with other Android devs to talk about building Android Libraries, tips n&#39; tricks and Q&amp;amp;A from audience👨🏻‍💻</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
             
           
         

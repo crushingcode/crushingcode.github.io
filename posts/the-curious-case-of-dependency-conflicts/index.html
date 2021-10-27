@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1757,7 +1757,7 @@ You can&rsquo;t just ask all android library developers/team maintaining it to u
 <p>Say you have 3 android libraries defined under your build.gradle for the app , namely <strong>libA</strong>, <strong>libB</strong> and <strong>libC</strong>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1767,7 +1767,7 @@ You can&rsquo;t just ask all android library developers/team maintaining it to u
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle">
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle">
 <span class="n">dependencies</span> <span class="o">{</span>
     <span class="n">compile</span> <span class="nf">fileTree</span><span class="o">(</span><span class="nl">dir:</span> <span class="s1">&#39;libs&#39;</span><span class="o">,</span> <span class="nl">include:</span> <span class="o">[</span><span class="s1">&#39;*.jar&#39;</span><span class="o">])</span>
     <span class="n">compile</span> <span class="s1">&#39;com.company1.sdk:libA:1.0.2&#39;</span>
@@ -1787,16 +1787,16 @@ You can&rsquo;t just ask all android library developers/team maintaining it to u
 <p>Look for all android dependencies being downloaded as part of the build process.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">./gradlew androidDependencies
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">./gradlew androidDependencies
 </code></pre></td></tr></table>
 </div>
 </div><p>..you should get a graph like this</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1806,7 +1806,7 @@ You can&rsquo;t just ask all android library developers/team maintaining it to u
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">...
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">...
 release
 +--- com.company1.sdk:libA:1.0.2
 <span class="p">|</span>    +--- com.company4.sdk:libD:4.0.4
@@ -1827,10 +1827,10 @@ release
 <p>Check the complete stacktrace of the build process using <code>--info</code> and <code>--stacktrace</code> flags passed as arguments</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">./gradlew build --info --stacktrace
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">./gradlew build --info --stacktrace
 </code></pre></td></tr></table>
 </div>
 </div><p>This should give you a complete log of everything and where exactly the build failed.You can find out the version conflicts and a lot more details in this step.</p>
@@ -1841,14 +1841,14 @@ release
 <p>The very first thing that you should do is, enable <code>failOnVersionConflict</code> flag in gradle on version conflicts.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle">
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle">
 <span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
   <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">failOnVersionConflict</span><span class="o">()</span>
 <span class="o">}</span>
@@ -1859,13 +1859,13 @@ release
 <p>Secondly, you can force gradle to resolve to the lower version</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
   <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">force</span> <span class="s1">&#39;com.company4.sdk:libD:4.0.2&#39;</span>
 <span class="o">}</span>
 
@@ -1877,7 +1877,7 @@ release
 <p>Ho do you do it ? by including the below into your <code>build.gradle</code> file.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1886,7 +1886,7 @@ release
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="c1">// add dependency substitution rules
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="c1">// add dependency substitution rules
 </span><span class="c1"></span><span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
   <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">dependencySubstitution</span> <span class="o">{</span>
     <span class="c1">// Substitute one module dependency for another

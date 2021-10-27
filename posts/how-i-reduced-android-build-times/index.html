@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1753,7 +1753,7 @@ My laptop does not pack much power, meaning when I would be coding on small-aver
 <p>Updated my gradle config inside <code>~/.gradle/gradle.properties</code>  which now looks like:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1772,7 +1772,7 @@ My laptop does not pack much power, meaning when I would be coding on small-aver
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"># Enable Gradle Daemon
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"># Enable Gradle Daemon
 org.gradle.daemon=true
 
 # Enable Configure on demand
@@ -1801,11 +1801,11 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryErro
 <p>Guess what, I was able to clock my builds at ~3 minutes via Terminal!</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># To build your debug apk from terminal, run the below</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># To build your debug apk from terminal, run the below</span>
 ./gradlew assembleDebug
 </code></pre></td></tr></table>
 </div>
@@ -1816,10 +1816,10 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryErro
 <p><strong>Edit 1:</strong> As pointed out by <a href="https://twitter.com/franklinharper">Frank Harper</a> you can effectively build and install the debug apk to your device using just a single command:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">./gradlew installDebug
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">./gradlew installDebug
 </code></pre></td></tr></table>
 </div>
 </div><p>This however will not launch the apk but only install it.<a href="https://developer.android.com/studio/build/building-cmdline.html#DebugMode">This is also mentioned here in official documentation.</a></p>
@@ -1830,7 +1830,7 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryErro
 <p>I have created some terminal aliases to help me install the apk and then launch it too on the connected device.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1867,7 +1867,7 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryErro
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># I use ZSH, here is what I added to my .zshrc file (config file)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># I use ZSH, here is what I added to my .zshrc file (config file)</span>
 <span class="c1"># at ~/.zshrc</span>
 
 <span class="c1"># Have the adb accessible, by including it in the PATH</span>
@@ -1909,12 +1909,12 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryErro
 <p>I would however like to inspect more about the Gradle build times in my Android Project, but only when time permits. For those who like to know how that is done,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Profile your build from the terminal</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Profile your build from the terminal</span>
 <span class="c1"># In my case, &lt;task&gt; would be assembleDebug</span>
 gradle --profile &lt;tasks&gt;
 </code></pre></td></tr></table>

@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1767,10 +1767,10 @@
 <p>After reading through the possible options, I figured I can do this via:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">notify-send <span class="s2">&#34;Title&#34;</span> <span class="s2">&#34;Message&#34;</span> -i face-smile
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">notify-send <span class="s2">&#34;Title&#34;</span> <span class="s2">&#34;Message&#34;</span> -i face-smile
 </code></pre></td></tr></table>
 </div>
 </div><p>The <code>-i face-smile</code> allows to specify an icon for the notification. This is how it shows up if you execute the above line in your terminal.</p>
@@ -1778,10 +1778,10 @@
 <p>To test if it works when a task finishes, execute the below:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in <span class="o">{</span>1..9999999<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="p">;</span> <span class="k">done</span> <span class="o">&amp;&amp;</span> notify-send <span class="s2">&#34;Title&#34;</span> <span class="s2">&#34;Message&#34;</span> -i face-smile
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in <span class="o">{</span>1..9999999<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="p">;</span> <span class="k">done</span> <span class="o">&amp;&amp;</span> notify-send <span class="s2">&#34;Title&#34;</span> <span class="s2">&#34;Message&#34;</span> -i face-smile
 </code></pre></td></tr></table>
 </div>
 </div><p>Here we are running a for loop to simulate work being done. When the for loop finishes you will see the same notification show up! Sweet🍬</p>
@@ -1795,19 +1795,19 @@
 <p>and you use it as below:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">display notification <span class="s2">&#34;Message&#34;</span> with title <span class="s2">&#34;Title&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">display notification <span class="s2">&#34;Message&#34;</span> with title <span class="s2">&#34;Title&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>However you cannot just execute it directly in a terminal. This utility needs to be triggered via <code>osascript</code>. So you need to trigger this from terminal as below:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">osascript -e <span class="s1">&#39;display notification &#34;Message&#34; with title &#34;Title&#34;&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">osascript -e <span class="s1">&#39;display notification &#34;Message&#34; with title &#34;Title&#34;&#39;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>This is how it shows up if you execute the above line in your terminal.</p>
@@ -1815,17 +1815,17 @@
 <p>To test if it works when a task finishes, we will do the same for-loop test. Execute the below in a terminal:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in <span class="o">{</span>1..9999999<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="p">;</span> <span class="k">done</span> <span class="o">&amp;&amp;</span> osascript -e <span class="s1">&#39;display notification &#34;Message&#34; with title &#34;Title&#34;&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in <span class="o">{</span>1..9999999<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="p">;</span> <span class="k">done</span> <span class="o">&amp;&amp;</span> osascript -e <span class="s1">&#39;display notification &#34;Message&#34; with title &#34;Title&#34;&#39;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Thats perfect!</p>
 <p>Now the only thing bothering me is that I need to call these commands based on the platforms and that their syntax differs for each. I can fix that by making a simple bash function called <code>notify</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1841,7 +1841,7 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Drop this in your ~/.zshrc or ~/.bashrc file</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Drop this in your ~/.zshrc or ~/.bashrc file</span>
 <span class="c1"># Trigger a notification</span>
 <span class="c1"># Use as:</span>
 <span class="c1">#   notify &#34;Title&#34; &#34;Message&#34; &#34;face-smile&#34;</span>

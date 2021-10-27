@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1786,7 +1786,7 @@
 </blockquote>
 <p>First of all, where exactly is this located 🤔</p>
 <p>Good question, its available as part of build tools in your android sdk.</p>
-<pre><code>&lt;path_to_android_sdk&gt;/build-tools/&lt;build_tool_version_such_as_24.0.2&gt;/aapt
+<pre tabindex="0"><code>&lt;path_to_android_sdk&gt;/build-tools/&lt;build_tool_version_such_as_24.0.2&gt;/aapt
 </code></pre><p>..ok so what can it actually do ? From the <code>man</code> pages of the tool itself</p>
 <ul>
 <li><code>aapt list</code> - Listing contents of a ZIP, JAR or APK file.</li>
@@ -1806,7 +1806,7 @@ aapt dump badging app-debug.apk
 <h5 id="-result">&gt; Result</h5>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1843,7 +1843,7 @@ aapt dump badging app-debug.apk
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">package: <span class="nv">name</span><span class="o">=</span><span class="s1">&#39;com.example.application&#39;</span> <span class="nv">versionCode</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nv">versionName</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span> <span class="nv">platformBuildVersionName</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">package: <span class="nv">name</span><span class="o">=</span><span class="s1">&#39;com.example.application&#39;</span> <span class="nv">versionCode</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nv">versionName</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span> <span class="nv">platformBuildVersionName</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
 sdkVersion:<span class="s1">&#39;16&#39;</span>
 targetSdkVersion:<span class="s1">&#39;24&#39;</span>
 uses-permission: <span class="nv">name</span><span class="o">=</span><span class="s1">&#39;android.permission.WRITE_EXTERNAL_STORAGE&#39;</span>
@@ -1888,7 +1888,7 @@ aapt dump permissions app-debug.apk
 <h5 id="-result-1">&gt; Result</h5>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1897,7 +1897,7 @@ aapt dump permissions app-debug.apk
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">package: com.example.application
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">package: com.example.application
 uses-permission: <span class="nv">name</span><span class="o">=</span><span class="s1">&#39;android.permission.WRITE_EXTERNAL_STORAGE&#39;</span>
 uses-permission: <span class="nv">name</span><span class="o">=</span><span class="s1">&#39;android.permission.CAMERA&#39;</span>
 uses-permission: <span class="nv">name</span><span class="o">=</span><span class="s1">&#39;android.permission.VIBRATE&#39;</span>
@@ -1914,7 +1914,7 @@ aapt dump configurations app-debug.apk
 <h5 id="-result-2">&gt; Result</h5>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1959,7 +1959,7 @@ aapt dump configurations app-debug.apk
 </span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">large-v4
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">large-v4
 xlarge-v4
 night-v8
 v11
@@ -2005,7 +2005,7 @@ uz-rUZ
 </code></pre></td></tr></table>
 </div>
 </div><p>..also try out these</p>
-<pre><code># Print the resource table from the APK.
+<pre tabindex="0"><code># Print the resource table from the APK.
 aapt dump resources app-debug.apk
 
 # Print the compiled xmls in the given assets.
@@ -2020,7 +2020,7 @@ aapt list -v -a  app-debug.apk
 <p>There is more that you can do , taking more info from the <code>man</code> pages of the <code>aapt</code> tool</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2030,7 +2030,7 @@ aapt list -v -a  app-debug.apk
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">aapt r<span class="o">[</span>emove<span class="o">]</span> <span class="o">[</span>-v<span class="o">]</span> file.<span class="o">{</span>zip,jar,apk<span class="o">}</span> file1 <span class="o">[</span>file2 ...<span class="o">]</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">aapt r<span class="o">[</span>emove<span class="o">]</span> <span class="o">[</span>-v<span class="o">]</span> file.<span class="o">{</span>zip,jar,apk<span class="o">}</span> file1 <span class="o">[</span>file2 ...<span class="o">]</span>
   Delete specified files from Zip-compatible archive.
   
 aapt a<span class="o">[</span>dd<span class="o">]</span> <span class="o">[</span>-v<span class="o">]</span> file.<span class="o">{</span>zip,jar,apk<span class="o">}</span> file1 <span class="o">[</span>file2 ...<span class="o">]</span>
