@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2021, All content is licensed under</copyright>
-    <lastBuildDate>Tue, 12 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Nov 2021 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
@@ -24,9 +24,9 @@
       <item>
         <title>Another Compose(it): Desktop @Droidcon Italy</title>
         <link>https://crushingcode.nisrulz.com/talks/droidcon_italy_2021/</link>
-        <pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Tue, 12 Oct 2021 00:00:00 +0000</atom:modified>
+        <atom:modified>Fri, 12 Nov 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/droidcon_italy_2021/</guid>
         <description>Droidcon Italy, Online Abstract   Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
         
