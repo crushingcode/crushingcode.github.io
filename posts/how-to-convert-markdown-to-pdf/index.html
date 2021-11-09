@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.89.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1945,7 +1945,7 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
     <span class="c1">// Extract the filename from input file, to create the output filename
 </span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">outputHtmlFileName</span> <span class="o">=</span> <span class="nx">inputHtmlFile</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\.[^/.]+$/</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.pdf&#39;</span>
     <span class="c1">// Prepare the file path
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="s1">&#39;file:///&#39;</span> <span class="o">+</span> <span class="mi">__</span><span class="nx">dirname</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nx">inputHtmlFile</span>
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="s1">&#39;file:///&#39;</span> <span class="o">+</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nx">inputHtmlFile</span>
 
     <span class="c1">// Launch the headless browser
 </span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">browser</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">puppeteer</span><span class="p">.</span><span class="nx">launch</span><span class="p">();</span>
