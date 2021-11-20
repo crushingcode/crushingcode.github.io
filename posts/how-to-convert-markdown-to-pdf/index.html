@@ -1861,19 +1861,59 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Drop this in your ~/.bashrc or ~/.zshrc file</span>
-<span class="c1"># Use as: convertMarkdownToHtml your_markdown_file.md</span>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Drop these in your ~/.bashrc or ~/.zshrc file</span>
+
+<span class="c1"># Single command to open a file in your OS</span>
+<span class="c1"># Use as: openFile filename.extension</span>
+<span class="k">function</span> openFile<span class="o">(){</span>
+    <span class="c1"># Open the generated output file</span>
+    <span class="k">if</span> <span class="o">[[</span> <span class="k">$(</span>uname -s<span class="k">)</span> <span class="o">==</span> <span class="s2">&#34;Darwin&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="c1"># macOS</span>
+        open <span class="nv">$1</span>
+    <span class="k">else</span>
+        <span class="c1"># Linux</span>
+        xdg-open <span class="nv">$1</span>
+    <span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c1"># Convert Markdown to HTML</span>
 <span class="c1"># Dependency: Install grip, https://github.com/joeyespo/grip</span>
+<span class="c1"># Use as: convertMarkdownToHtml your_markdown_file.md</span>
+<span class="c1"># Use as with open flag: convertMarkdownToHtml your_markdown_file.md --open</span>
 <span class="k">function</span> convertMarkdownToHtml<span class="o">(){</span>
     <span class="k">if</span> <span class="o">[[</span> <span class="nv">$1</span> <span class="o">==</span> *<span class="s2">&#34;.md&#34;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
         <span class="c1"># Filename without extension</span>
         <span class="nb">local</span> <span class="nv">FILE_NAME</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> .md<span class="k">)</span>
+        <span class="nb">local</span> <span class="nv">OUTPUT_FILE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$FILE_NAME</span><span class="s2">.html&#34;</span>
         <span class="c1"># Read the markdown file and then convert it to an HTML file</span>
-        cat <span class="nv">$FILE_NAME</span>.md <span class="p">|</span> grip - --export <span class="nv">$FILE_NAME</span>.html 
-        <span class="c1"># Open the generated HTML file in a browser window</span>
-        open <span class="nv">$FILE_NAME</span>.html
+        cat <span class="nv">$FILE_NAME</span>.md <span class="p">|</span> grip - --export <span class="nv">$OUTPUT_FILE</span>
+
+        <span class="k">if</span> <span class="o">[[</span> <span class="nv">$2</span> <span class="o">==</span> <span class="s2">&#34;--open&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+          <span class="c1"># Open the generated output file</span>
+          openFile <span class="nv">$OUTPUT_FILE</span>
+        <span class="k">fi</span>
     <span class="k">else</span>
         <span class="nb">echo</span> <span class="s2">&#34;Passed file is not of markdown type. Please pass a .md file&#34;</span>
     <span class="k">fi</span>
@@ -1889,7 +1929,17 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">convertMarkdownToHtml integration_guide.md
 </code></pre></td></tr></table>
 </div>
-</div><p>At this point I can utilize the <strong>Print</strong> functionality of the browser (<strong>CMD</strong> + <strong>P</strong>/ <strong>Ctrl</strong> + <strong>P</strong>) to save as PDF:</p>
+</div><p>Aditionally if called with the command with <code>--open</code> flag:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">convertMarkdownToHtml integration_guide.md --open
+</code></pre></td></tr></table>
+</div>
+</div><p>Then the generated HTML file is opened in the associated Browser window!</p>
+<p>At this point I can open the generated HTML file and utilize the <strong>Print</strong> functionality of the browser (<strong>CMD</strong> + <strong>P</strong>/ <strong>Ctrl</strong> + <strong>P</strong>) to save as PDF:</p>
 <p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_3.png" alt="Print dialog in browser" /></p>
 <p>&hellip;and hit <strong>Print</strong> or <strong>Save</strong>.</p>
 <p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_3a.png" alt="Save file" /></p>
@@ -1901,7 +1951,7 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <p>However, I am not quite happy with this solution. It works, yes, but I really don&rsquo;t want to open a browser and then have a few keystrokes to print the final pdf file. Would be nice if I could skip this step and directly convert HTML file to PDF via some commandline tool. This gave me an idea 💡 What if I could open a browser window in headless mode and print the document programmitically 🧐? Kind of like emulating the current process we figured earlier 👀</p>
 <p>This is not new for me and I knew where to start for this part. The best tool out there for a headless and programmable browser is <a href="https://github.com/puppeteer/puppeteer">Puppeteer</a>. Reading through the docs quickly for my specific use case, I came up with the below script, which I saved as <code>renderToPdf.js</code>:</p>
 <blockquote>
-<p>NOTE: Make sure <strong>puppeteer</strong> is installed by executing <code>npm i  puppeteer</code> in your directory.</p>
+<p>NOTE: Make sure <strong>puppeteer</strong> is installed by executing <code>npm i -g puppeteer</code> in your directory.</p>
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2002,25 +2052,27 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
+</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Convert Markdown to PDF</span>
 <span class="c1"># Use as: convertMarkdownToPdf your_markdown_file.md</span>
+<span class="c1"># Use as with open flag: convertMarkdownToPdf your_markdown_file.md --open</span>
 <span class="k">function</span> convertMarkdownToPdf<span class="o">(){</span>
     <span class="k">if</span> <span class="o">[[</span> <span class="nv">$1</span> <span class="o">==</span> *<span class="s2">&#34;.md&#34;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
         <span class="c1"># Filename without extension</span>
         <span class="nb">local</span> <span class="nv">FILE_NAME</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> .md<span class="k">)</span>
+        <span class="nb">local</span> <span class="nv">TEMP_FILE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$FILE_NAME</span><span class="s2">.html&#34;</span>
         <span class="c1"># Read the markdown file and then convert it to an HTML file</span>
-        cat <span class="nv">$FILE_NAME</span>.md <span class="p">|</span> grip - --export <span class="nv">$FILE_NAME</span>.html 
+        cat <span class="nv">$FILE_NAME</span>.md <span class="p">|</span> grip - --export <span class="nv">$TEMP_FILE</span>
         <span class="c1"># Render HTML to PDF</span>
-        node renderToPdf.js  <span class="nv">$FILE_NAME</span>.html
-        <span class="c1"># Open the generated PDF file</span>
-        <span class="k">if</span> <span class="o">[</span> <span class="sb">`</span>uname<span class="sb">`</span> <span class="o">==</span> <span class="s2">&#34;Darwin&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-            <span class="c1"># macOS</span>
-            open <span class="nv">$FILE_NAME</span>.pdf
-        <span class="k">else</span>
-            <span class="c1"># Linux</span>
-            xdg-open <span class="nv">$FILE_NAME</span>.pdf
+        node renderToPdf.js <span class="nv">$TEMP_FILE</span>
+        <span class="c1"># Remove intermediate html file</span>
+        rm <span class="nv">$TEMP_FILE</span>
+
+        <span class="k">if</span> <span class="o">[[</span> <span class="nv">$2</span> <span class="o">==</span> <span class="s2">&#34;--open&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+          <span class="c1"># Open the generated output file</span>
+          openFile <span class="nv">$FILE_NAME</span>.pdf
         <span class="k">fi</span>
     <span class="k">else</span>
         <span class="nb">echo</span> <span class="s2">&#34;Passed file is not of markdown type. Please pass a .md file&#34;</span>
@@ -2040,7 +2092,16 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </div><blockquote>
 <p>NOTE: The bash function has been renamed from <code>convertMarkdownToHtml</code> to  <code>convertMarkdownToPdf</code></p>
 </blockquote>
-<p>&hellip;and the markdown file is converted to HTML first, opened in Headless browser and printed as a PDF file. Then opened in the associated PDF file reader!</p>
+<p>&hellip;and the markdown file is converted to HTML first, opened in Headless browser and printed as a PDF file. Aditionally if called with the command with <code>--open</code> flag:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">convertMarkdownToPdf integration_guide.md --open
+</code></pre></td></tr></table>
+</div>
+</div><p>Then the generated PDF file is opened in the associated PDF file reader!</p>
 <p>That&rsquo;s it! Everything works 😎 It is quick and solved my immediate requirement.</p>
 <p><a href="https://github.com/nisrulz/convert-md-to-pdf">All this code now exists also on Github as a project</a>! 🎉</p>
 <p>Sidenote:<br />
