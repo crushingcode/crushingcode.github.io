@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_library/zentone/</loc>
+    <lastmod>2022-02-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://crushingcode.nisrulz.com/showcase/tipsntricks/android_tips_tricks/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,19 +14,16 @@
     <loc>https://crushingcode.nisrulz.com/showcase/android_apps/instacartoon/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crushingcode.nisrulz.com/showcase/android_library/sensey/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://crushingcode.nisrulz.com/showcase/books/kotlin_coroutines_by_tutorial/</loc>
     <lastmod>2018-11-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/showcase/patents/patent_1/</loc>
     <lastmod>2015-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crushingcode.nisrulz.com/showcase/android_library/easydeviceinfo/</loc>
+    <loc>https://crushingcode.nisrulz.com/showcase/oss/javadoc_themer/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crushingcode.nisrulz.com/showcase/oss/javadoc_themer/</loc>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_library/lantern/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/showcase/android_apps/metronome/</loc>
@@ -34,7 +34,7 @@
   </url><url>
     <loc>https://crushingcode.nisrulz.com/showcase/books/beginning_android_game_dev/</loc>
   </url><url>
-    <loc>https://crushingcode.nisrulz.com/showcase/android_library/validatetor/</loc>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_library/sensey/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/showcase/android_apps/vf_smartapp/</loc>
@@ -46,17 +46,32 @@
     <loc>https://crushingcode.nisrulz.com/showcase/books/learning_java_by_building_android_games/</loc>
     <lastmod>2021-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crushingcode.nisrulz.com/showcase/android_library/recyclerviewhelper/</loc>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_library/easydeviceinfo/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/showcase/books/managing_state_in_flutter_pragmatically/</loc>
     <lastmod>2021-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crushingcode.nisrulz.com/showcase/android_library/lantern/</loc>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_library/validatetor/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/showcase/android_library/recyclerviewhelper/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/</loc>
-    <lastmod>2021-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2022-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/tags/gradle/</loc>
+    <lastmod>2022-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/posts/</loc>
+    <lastmod>2022-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/posts/reducing-mammoth-gradle-caches/</loc>
+    <lastmod>2022-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/tags/</loc>
+    <lastmod>2022-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/android/</loc>
     <lastmod>2021-11-12T00:00:00+00:00</lastmod>
@@ -71,9 +86,6 @@
     <lastmod>2021-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/kotlin/</loc>
-    <lastmod>2021-11-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/tags/</loc>
     <lastmod>2021-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/talks/chicago_roboto_2021/</loc>
@@ -116,9 +128,6 @@
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/opensource/</loc>
-    <lastmod>2021-04-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/posts/</loc>
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/tools/</loc>
@@ -279,9 +288,6 @@
   </url><url>
     <loc>https://crushingcode.nisrulz.com/talks/droidcon_berlin_2018/</loc>
     <lastmod>2018-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/tags/gradle/</loc>
-    <lastmod>2018-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/posts/how-i-reduced-android-build-times/</loc>
     <lastmod>2018-04-06T00:00:00+00:00</lastmod>
