@@ -14,12 +14,30 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2022, All content is licensed under</copyright>
-    <lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Mar 2022 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>terminal</title>
+        <link>https://crushingcode.nisrulz.com/tags/terminal/</link>
+        <pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/tags/terminal/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>gradle</title>
@@ -370,24 +388,6 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/tags/adb/</guid>
-        <description></description>
-        
-        <dc:creator>Nishant Srivastava</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>terminal</title>
-        <link>https://crushingcode.nisrulz.com/tags/terminal/</link>
-        <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        
-        <guid>https://crushingcode.nisrulz.com/tags/terminal/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

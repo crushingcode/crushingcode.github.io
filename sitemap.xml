@@ -59,18 +59,24 @@
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/</loc>
-    <lastmod>2022-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2022-03-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/posts/hunting-kotlin-synthetics-for-views/</loc>
+    <lastmod>2022-03-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/posts/</loc>
+    <lastmod>2022-03-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/tags/</loc>
+    <lastmod>2022-03-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/tags/terminal/</loc>
+    <lastmod>2022-03-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/gradle/</loc>
     <lastmod>2022-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crushingcode.nisrulz.com/posts/</loc>
-    <lastmod>2022-03-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://crushingcode.nisrulz.com/posts/reducing-mammoth-gradle-caches/</loc>
-    <lastmod>2022-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/tags/</loc>
     <lastmod>2022-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/tags/android/</loc>
@@ -201,9 +207,6 @@
   </url><url>
     <loc>https://crushingcode.nisrulz.com/talks/gdg_ahmedabad_apr_2020/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/tags/terminal/</loc>
-    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/posts/trigger-notification-when-task-over/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>

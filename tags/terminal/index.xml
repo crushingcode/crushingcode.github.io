@@ -14,12 +14,37 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2022, All content is licensed under</copyright>
-    <lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Mar 2022 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Hunting Kotlin Synthetics For Views</title>
+        <link>https://crushingcode.nisrulz.com/posts/hunting-kotlin-synthetics-for-views/</link>
+        <pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 02 Mar 2022 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/posts/hunting-kotlin-synthetics-for-views/</guid>
+        <description>Kotlin Synthetics for Views is deprecated! You can read about it here.
+That means if you have been using them in your project then you need to replace them with a more recommended approach i.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/hunting-kotlin-synthetics-for-views/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>terminal</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Terminal Foo: Triggering Notifications from CMDLine 📟</title>
