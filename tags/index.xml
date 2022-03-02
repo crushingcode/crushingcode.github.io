@@ -14,12 +14,30 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2022, All content is licensed under</copyright>
-    <lastBuildDate>Wed, 02 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Mar 2022 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>android</title>
+        <link>https://crushingcode.nisrulz.com/tags/android/</link>
+        <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/tags/android/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>terminal</title>
@@ -46,24 +64,6 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/tags/gradle/</guid>
-        <description></description>
-        
-        <dc:creator>Nishant Srivastava</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>android</title>
-        <link>https://crushingcode.nisrulz.com/tags/android/</link>
-        <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        
-        <guid>https://crushingcode.nisrulz.com/tags/android/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
