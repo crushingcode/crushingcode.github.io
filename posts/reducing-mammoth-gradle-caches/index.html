@@ -1716,7 +1716,7 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Mar 1, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;2&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Nishant</span>
   
@@ -1785,30 +1785,71 @@
 </div><p><img src="/images/posts/reducing-mammoth-gradle-caches/meme.png" alt="Gradle meme, why not" /></p>
 <p>Now that is a lot of space occupied by just 1 directory that is just a directory for storing cache, 15 Gb!</p>
 <p>I need to free up some space, but I don&rsquo;t want to delete the whole directory because the cache is useful.</p>
-<p>To handle this case, I came up with another alias command that will only delete files that are more than 30 days old and not used. That way the most used cache files are kept intact and unused files are deleted. Copy and past the below alias in your <code>~/.bashrc</code> or <code>~/.zshrc</code> file:</p>
+<p>To handle this case, I came up with a command that will only delete files that are were accessed more than 30 days ago. That way the most used cache files are kept intact and unused/rarely used files are deleted. Lets take a look at it now.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Clean files inside .gradle directory that were accessed more than 30 days ago</span>
+find ~/.gradle -type f -atime +30 -delete
+</code></pre></td></tr></table>
+</div>
+</div><p>here</p>
+<ul>
+<li>
+<p><code>~/.gradle</code> = Path where <a href="https://ss64.com/bash/find.html"><code>find</code></a> will be executed.</p>
+</li>
+<li>
+<p><code>-type f</code> =  Only look for files.</p>
+</li>
+<li>
+<p><code>-atime +30</code> = File was last accessed more than 30 days ago (tweak this as per your requirement).</p>
+</li>
+<li>
+<p><code>-delete</code> = Delete files found by <code>find</code> based on set criteria.</p>
+</li>
+</ul>
+<p>Additionally, I could also delete all empty directories inside <code>.gradle</code>. The below command does just that:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Delete empty directories inside .gradle directory</span>
+find ~/.gradle -mindepth <span class="m">1</span> -type d -empty -delete
+</code></pre></td></tr></table>
+</div>
+</div><p>here</p>
+<ul>
+<li>
+<p><code>-mindepth 1</code> =  Means process all files except the command line arguments i.e except <code>~/.gradle</code> directory itself, all sub directories are used to find.</p>
+</li>
+<li>
+<p><code>-type d</code> =  Only look for directories.</p>
+</li>
+<li>
+<p><code>-empty</code> = File is empty and is either a regular file or a directory.</p>
+</li>
+</ul>
+<p>I then went ahead and combined the two commands into 1 alias as shown below. Copy and past the below alias in your <code>~/.bashrc</code> or <code>~/.zshrc</code> file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Drop this aliases in your ~/.bashrc or ~/.zshrc file</span>
-
-<span class="c1"># Clean your .gradle/caches that is older than 30 days</span>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Clean your .gradle/caches that is older than 30 days</span>
 <span class="c1"># Usage: gradleCleanCache</span>
-<span class="nb">alias</span> <span class="nv">gradleCleanCache</span><span class="o">=</span><span class="s1">&#39;find ~/.gradle -type f \
-</span><span class="s1">-atime +30 -delete \
-</span><span class="s1">&amp;&amp; find ~/.gradle -mindepth 1 \
-</span><span class="s1">-type d -empty -delete&#39;</span>
+<span class="nb">alias</span> <span class="nv">gradleCleanCache</span><span class="o">=</span><span class="s1">&#39;find ~/.gradle -type f -atime +30 -delete \
+</span><span class="s1">&amp;&amp; find ~/.gradle -mindepth 1 -type d -empty -delete&#39;</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>I executed this alias command to free up my disk space and checked for the occupied space again</p>
+</div><p>Looks so much better! I executed this alias command to free up my disk space and checked for the occupied space again</p>
 <p><img src="/images/posts/reducing-mammoth-gradle-caches/img_2.png" alt="After deleting older cache files" /></p>
 <p>Nice! I was able to free up 5.7 Gb of disk space. Everything else is useful, thus shouldn&rsquo;t be deleted.</p>
 <p>Enjoy your free space 🎉</p>
