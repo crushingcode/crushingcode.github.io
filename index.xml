@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2022, All content is licensed under</copyright>
-    <lastBuildDate>Thu, 03 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Mar 2022 12:00:06 +0900</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/index.xml" rel="self" type="application/rss+xml" />
@@ -43,11 +43,35 @@
 
       
       <item>
+        <title>Rainbow console logs in Groovy</title>
+        <link>https://crushingcode.nisrulz.com/posts/rainbow-console-logs-in-groovy/</link>
+        <pubDate>Thu, 03 Mar 2022 12:00:06 +0900</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 03 Mar 2022 12:00:06 +0900</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/posts/rainbow-console-logs-in-groovy/</guid>
+        <description>Have you ever wanted to emphasize some console log output with colors? Well, I thought I never would have needed to, but while tinkering with some side project, I found a trick to colorize my console log output.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/rainbow-console-logs-in-groovy/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>groovy</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Signing Android Apps</title>
         <link>https://crushingcode.nisrulz.com/posts/signing-android-apps/</link>
-        <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 03 Mar 2022 08:00:06 +0900</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Thu, 03 Mar 2022 00:00:00 +0000</atom:modified>
+        <atom:modified>Thu, 03 Mar 2022 08:00:06 +0900</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/signing-android-apps/</guid>
         <description>As an Android Engineer, I have to sign Android apps whenever making a public release. The steps are quite simple and well documented on the official website.</description>
         

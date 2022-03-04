@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2022, All content is licensed under</copyright>
-    <lastBuildDate>Thu, 03 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Mar 2022 08:00:06 +0900</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
@@ -24,9 +24,9 @@
       <item>
         <title>Signing Android Apps</title>
         <link>https://crushingcode.nisrulz.com/posts/signing-android-apps/</link>
-        <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 03 Mar 2022 08:00:06 +0900</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Thu, 03 Mar 2022 00:00:00 +0000</atom:modified>
+        <atom:modified>Thu, 03 Mar 2022 08:00:06 +0900</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/signing-android-apps/</guid>
         <description>As an Android Engineer, I have to sign Android apps whenever making a public release. The steps are quite simple and well documented on the official website.</description>
         
