@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1817,16 +1817,16 @@ A lot of this can be seen in the Android world where a certain library pops up e
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"> <span class="n">dependencies</span> <span class="o">{</span>
-    <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:2.1.3&#39;</span>
-    <span class="o">..</span>
-    <span class="o">..</span>
-    <span class="c1">// Required plugins added to classpath to facilitate pushing to Jcenter/Bintray
-</span><span class="c1"></span>    <span class="n">classpath</span> <span class="s1">&#39;com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7&#39;</span>
-    <span class="n">classpath</span> <span class="s1">&#39;com.github.dcendents:android-maven-gradle-plugin:1.4.1&#39;</span>
-    <span class="o">..</span>
-   <span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"> <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:2.1.3&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">..</span>
+</span></span><span class="line"><span class="cl">    <span class="o">..</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Required plugins added to classpath to facilitate pushing to Jcenter/Bintray
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">classpath</span> <span class="s1">&#39;com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">classpath</span> <span class="s1">&#39;com.github.dcendents:android-maven-gradle-plugin:1.4.1&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">..</span>
+</span></span><span class="line"><span class="cl">   <span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Next, apply the <code>bintray</code> and <code>install</code> plugins at the bottom of build.gradle file at library module level. Also add the ext variable with required information as shown below</li>
@@ -1867,45 +1867,43 @@ A lot of this can be seen in the Android world where a certain library pops up e
 </span><span class="lnt">32
 </span><span class="lnt">33
 </span><span class="lnt">34
-</span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"> <span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.library&#39;</span>
-
- <span class="n">ext</span> <span class="o">{</span>
-   <span class="n">bintrayRepo</span> <span class="o">=</span> <span class="s1">&#39;maven&#39;</span>
-   <span class="n">bintrayName</span> <span class="o">=</span> <span class="s1">&#39;awesomelib&#39;</span>   <span class="c1">// Has to be same as your library module name
-</span><span class="c1"></span>
-   <span class="n">publishedGroupId</span> <span class="o">=</span> <span class="s1">&#39;com.github.nisrulz&#39;</span>
-   <span class="n">libraryName</span> <span class="o">=</span> <span class="s1">&#39;AwesomeLib&#39;</span>
-   <span class="n">artifact</span> <span class="o">=</span> <span class="s1">&#39;awesomelib&#39;</span>     <span class="c1">// Has to be same as your library module name
-</span><span class="c1"></span>
-   <span class="n">libraryDescription</span> <span class="o">=</span> <span class="s1">&#39;Android Library to make any text into Toast with Awesome prepended to the text&#39;</span>
-
-   <span class="c1">// Your github repo link
-</span><span class="c1"></span>   <span class="n">siteUrl</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/nisrulz/UploadToBintray&#39;</span>
-   <span class="n">gitUrl</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/nisrulz/UploadToBintray.git&#39;</span>
-   <span class="n">githubRepository</span><span class="o">=</span> <span class="s1">&#39;nisrulz/UploadToBintray&#39;</span>
-
-   <span class="n">libraryVersion</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span>
-
-   <span class="n">developerId</span> <span class="o">=</span> <span class="s1">&#39;nisrulz&#39;</span>
-   <span class="n">developerName</span> <span class="o">=</span> <span class="s1">&#39;Nishant Srivastava&#39;</span>
-   <span class="n">developerEmail</span> <span class="o">=</span> <span class="s1">&#39;nisrulz@gmail.com&#39;</span>
-
-   <span class="n">licenseName</span> <span class="o">=</span> <span class="s1">&#39;The Apache Software License, Version 2.0&#39;</span>
-   <span class="n">licenseUrl</span> <span class="o">=</span> <span class="s1">&#39;http://www.apache.org/licenses/LICENSE-2.0.txt&#39;</span>
-   <span class="n">allLicenses</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&#34;Apache-2.0&#34;</span><span class="o">]</span>
- <span class="o">}</span>
-
- <span class="o">..</span>
- <span class="o">..</span>
-
- <span class="c1">// Place it at the end of the file
-</span><span class="c1"></span> <span class="n">apply</span> <span class="nl">from:</span> <span class="s1">&#39;https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle&#39;</span>
- <span class="n">apply</span> <span class="nl">from:</span> <span class="s1">&#39;https://raw.githubusercontent.com/nisrulz/JCenter/master/bintrayv1.gradle&#39;</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"> <span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.library&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="n">ext</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">bintrayRepo</span> <span class="o">=</span> <span class="s1">&#39;maven&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">bintrayName</span> <span class="o">=</span> <span class="s1">&#39;awesomelib&#39;</span>   <span class="c1">// Has to be same as your library module name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">   <span class="n">publishedGroupId</span> <span class="o">=</span> <span class="s1">&#39;com.github.nisrulz&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">libraryName</span> <span class="o">=</span> <span class="s1">&#39;AwesomeLib&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">artifact</span> <span class="o">=</span> <span class="s1">&#39;awesomelib&#39;</span>     <span class="c1">// Has to be same as your library module name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">   <span class="n">libraryDescription</span> <span class="o">=</span> <span class="s1">&#39;Android Library to make any text into Toast with Awesome prepended to the text&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="c1">// Your github repo link
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">siteUrl</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/nisrulz/UploadToBintray&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">gitUrl</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/nisrulz/UploadToBintray.git&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">githubRepository</span><span class="o">=</span> <span class="s1">&#39;nisrulz/UploadToBintray&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">libraryVersion</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">developerId</span> <span class="o">=</span> <span class="s1">&#39;nisrulz&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">developerName</span> <span class="o">=</span> <span class="s1">&#39;Nishant Srivastava&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">developerEmail</span> <span class="o">=</span> <span class="s1">&#39;nisrulz@gmail.com&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">licenseName</span> <span class="o">=</span> <span class="s1">&#39;The Apache Software License, Version 2.0&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">licenseUrl</span> <span class="o">=</span> <span class="s1">&#39;http://www.apache.org/licenses/LICENSE-2.0.txt&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">allLicenses</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&#34;Apache-2.0&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="o">..</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="c1">// Place it at the end of the file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="n">apply</span> <span class="nl">from:</span> <span class="s1">&#39;https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle&#39;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">apply</span> <span class="nl">from:</span> <span class="s1">&#39;https://raw.githubusercontent.com/nisrulz/JCenter/master/bintrayv1.gradle&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Edit your <code>local.properties</code></li>
@@ -1915,8 +1913,8 @@ bintray.apikey=&lt;your_bintray_apikey&gt;
 </code></pre><blockquote>
 <p>NOTE : <code>bintray.user</code> and <code>bintray.apikey</code> have to be in <code>local.properties</code> specifically or else you will get error later regarding the user and apikey values not available to the bintrayUpload gradle task as below</p>
 </blockquote>
-<pre tabindex="0"><code>No value has been specified for property 'apiKey'.
-No value has been specified for property 'user'.
+<pre tabindex="0"><code>No value has been specified for property &#39;apiKey&#39;.
+No value has been specified for property &#39;user&#39;.
 </code></pre><ul>
 <li>
 <p>Now lets setup Bintray before we can push our artifact to it.</p>
@@ -1949,8 +1947,8 @@ No value has been specified for property 'user'.
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="o">./</span><span class="n">gradlew</span> <span class="n">clean</span> <span class="n">build</span> <span class="n">install</span> <span class="n">bintrayUpload</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="o">./</span><span class="n">gradlew</span> <span class="n">clean</span> <span class="n">build</span> <span class="n">install</span> <span class="n">bintrayUpload</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -1973,14 +1971,14 @@ No value has been specified for property 'user'.
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">repositories</span> <span class="o">{</span>
-   <span class="n">jcenter</span><span class="o">()</span>
-   <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://dl.bintray.com/&lt;bintray_username&gt;/maven&#39;</span> <span class="o">}</span>
-<span class="o">}</span>
-<span class="n">dependencies</span> <span class="o">{</span>
-  <span class="n">implementation</span> <span class="s1">&#39;com.github.&lt;bintray_username&gt;:&lt;library_module&gt;:1.0&#39;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">jcenter</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl">   <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://dl.bintray.com/&lt;bintray_username&gt;/maven&#39;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">implementation</span> <span class="s1">&#39;com.github.&lt;bintray_username&gt;:&lt;library_module&gt;:1.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>i.e for the sample lib in this repo , <code>awesomelib</code></p>
 <div class="highlight"><div class="chroma">
@@ -1994,14 +1992,14 @@ No value has been specified for property 'user'.
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">repositories</span> <span class="o">{</span>
-   <span class="n">jcenter</span><span class="o">()</span>
-   <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://dl.bintray.com/nisrulz/maven&#39;</span> <span class="o">}</span>
-<span class="o">}</span>
-<span class="n">dependencies</span> <span class="o">{</span>
-  <span class="n">implementation</span> <span class="s1">&#39;com.github.nisrulz:awesomelib:1.0&#39;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">jcenter</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl">   <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://dl.bintray.com/nisrulz/maven&#39;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">implementation</span> <span class="s1">&#39;com.github.nisrulz:awesomelib:1.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -2032,10 +2030,10 @@ No value has been specified for property 'user'.
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">dependencies</span> <span class="o">{</span>
-    <span class="n">implementation</span> <span class="s1">&#39;com.github.&lt;bintray_username&gt;:&lt;library_module&gt;:1.0&#39;</span>
-  <span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">implementation</span> <span class="s1">&#39;com.github.&lt;bintray_username&gt;:&lt;library_module&gt;:1.0&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>i.e for the sample lib in this repo , <code>awesomelib</code></p>
 <div class="highlight"><div class="chroma">
@@ -2045,10 +2043,10 @@ No value has been specified for property 'user'.
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">dependencies</span> <span class="o">{</span>
-      <span class="n">implementation</span> <span class="s1">&#39;com.github.nisrulz:awesomelib:1.0&#39;</span>
-  <span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">implementation</span> <span class="s1">&#39;com.github.nisrulz:awesomelib:1.0&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -2545,7 +2543,7 @@ No value has been specified for property 'user'.
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

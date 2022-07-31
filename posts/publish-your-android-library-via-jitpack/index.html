@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1775,14 +1775,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"> <span class="n">dependencies</span> <span class="o">{</span>
-    <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:2.1.2&#39;</span>
-    <span class="o">..</span>
-    <span class="o">..</span>
-    <span class="c1">// Setup the android-maven-gradle-plugin in the classpath
-</span><span class="c1"></span>    <span class="n">classpath</span> <span class="s1">&#39;com.github.dcendents:android-maven-gradle-plugin:1.3&#39;</span>
-    <span class="o">..</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"> <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:2.1.2&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">..</span>
+</span></span><span class="line"><span class="cl">    <span class="o">..</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Setup the android-maven-gradle-plugin in the classpath
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">classpath</span> <span class="s1">&#39;com.github.dcendents:android-maven-gradle-plugin:1.3&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">..</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol>
 <li>
@@ -1796,19 +1796,19 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"> <span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.library&#39;</span>
- <span class="c1">// Required plugin in library module
-</span><span class="c1"></span> <span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.github.dcendents.android-maven&#39;</span>
- <span class="c1">// Replace nisrulz with &lt;your_github_username&gt;
-</span><span class="c1"></span> <span class="n">group</span><span class="o">=</span><span class="s1">&#39;com.github.nisrulz&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"> <span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.library&#39;</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// Required plugin in library module
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.github.dcendents.android-maven&#39;</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// Replace nisrulz with &lt;your_github_username&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="n">group</span><span class="o">=</span><span class="s1">&#39;com.github.nisrulz&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
 <p>Create a release TAG in git</p>
 </li>
 </ol>
-<pre tabindex="0"><code>git tag -a 1.0 -m &quot;v1.0&quot;
+<pre tabindex="0"><code>git tag -a 1.0 -m &#34;v1.0&#34;
 git push origin 1.0
 </code></pre><ol>
 <li>
@@ -1836,14 +1836,14 @@ git push origin 1.0
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">repositories</span> <span class="o">{</span>
-    <span class="n">jcenter</span><span class="o">()</span>
-    <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="err">“</span><span class="nl">https:</span><span class="c1">//jitpack.io” }
-</span><span class="c1"></span><span class="o">}</span>
-<span class="n">dependencies</span> <span class="o">{</span>
-    <span class="n">implementation</span> <span class="s1">&#39;com.github.nisrulz:awesomelib:1.0&#39;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">jcenter</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="err">“</span><span class="nl">https:</span><span class="c1">//jitpack.io” }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">implementation</span> <span class="s1">&#39;com.github.nisrulz:awesomelib:1.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -2334,7 +2334,7 @@ git push origin 1.0
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1770,8 +1770,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">notify-send <span class="s2">&#34;Title&#34;</span> <span class="s2">&#34;Message&#34;</span> -i face-smile
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">notify-send <span class="s2">&#34;Title&#34;</span> <span class="s2">&#34;Message&#34;</span> -i face-smile
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>The <code>-i face-smile</code> allows to specify an icon for the notification. This is how it shows up if you execute the above line in your terminal. You can find the valid names for icons that can be used<a href="https://specifications.freedesktop.org/icon-naming-spec/latest/ar01s04.html">here</a>.</p>
 <p><img src="/images/posts/trigger-notification-when-task-over/img_1.png" alt="img" /></p>
@@ -1781,8 +1781,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in <span class="o">{</span>1..9999999<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="p">;</span> <span class="k">done</span> <span class="o">&amp;&amp;</span> notify-send <span class="s2">&#34;Title&#34;</span> <span class="s2">&#34;Message&#34;</span> -i face-smile
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> i in <span class="o">{</span>1..9999999<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="p">;</span> <span class="k">done</span> <span class="o">&amp;&amp;</span> notify-send <span class="s2">&#34;Title&#34;</span> <span class="s2">&#34;Message&#34;</span> -i face-smile
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Here we are running a for loop to simulate work being done. When the for loop finishes you will see the same notification show up! Sweet🍬</p>
 <p>So Ubuntu is sorted for showing a notification when a task finishes. Next up is figuring it out for macOS.</p>
@@ -1798,8 +1798,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">display notification <span class="s2">&#34;Message&#34;</span> with title <span class="s2">&#34;Title&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">display notification <span class="s2">&#34;Message&#34;</span> with title <span class="s2">&#34;Title&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>However you cannot just execute it directly in a terminal. This utility needs to be triggered via <code>osascript</code>. So you need to trigger this from terminal as below:</p>
 <div class="highlight"><div class="chroma">
@@ -1807,8 +1807,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">osascript -e <span class="s1">&#39;display notification &#34;Message&#34; with title &#34;Title&#34;&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">osascript -e <span class="s1">&#39;display notification &#34;Message&#34; with title &#34;Title&#34;&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This is how it shows up if you execute the above line in your terminal.</p>
 <p><img src="/images/posts/trigger-notification-when-task-over/img_3.png" alt="img" /></p>
@@ -1818,8 +1818,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in <span class="o">{</span>1..9999999<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="p">;</span> <span class="k">done</span> <span class="o">&amp;&amp;</span> osascript -e <span class="s1">&#39;display notification &#34;Message&#34; with title &#34;Title&#34;&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> i in <span class="o">{</span>1..9999999<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="p">;</span> <span class="k">done</span> <span class="o">&amp;&amp;</span> osascript -e <span class="s1">&#39;display notification &#34;Message&#34; with title &#34;Title&#34;&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Thats perfect!</p>
 <p>Now the only thing bothering me is that I need to call these commands based on the platforms and that their syntax differs for each. I can fix that by making a simple bash function called <code>notify</code>:</p>
@@ -1841,21 +1841,21 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Drop this in your ~/.zshrc or ~/.bashrc file</span>
-<span class="c1"># Trigger a notification</span>
-<span class="c1"># Use as:</span>
-<span class="c1">#   notify &#34;Title&#34; &#34;Message&#34; &#34;face-smile&#34;</span>
-<span class="k">function</span> notify<span class="o">()</span> <span class="o">{</span>
-    <span class="nb">local</span> <span class="nv">TITLE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
-    <span class="nb">local</span> <span class="nv">MSG</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span>
-    <span class="nb">local</span> <span class="nv">ICON</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$3</span><span class="s2">&#34;</span>
-    <span class="k">if</span> <span class="o">[[</span> <span class="s2">&#34;</span><span class="nv">$OSTYPE</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;darwin&#34;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span> <span class="c1"># if it is macOS</span>
-        osascript -e <span class="s2">&#34;display notification \&#34;</span><span class="nv">$MSG</span><span class="s2">\&#34; with title \&#34;</span><span class="nv">$TITLE</span><span class="s2">\&#34;&#34;</span>
-    <span class="k">else</span>
-        notify-send <span class="nv">$TITLE</span> <span class="nv">$MSG</span> -i <span class="nv">$ICON</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Drop this in your ~/.zshrc or ~/.bashrc file</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Trigger a notification</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use as:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   notify &#34;Title&#34; &#34;Message&#34; &#34;face-smile&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> notify<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">TITLE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">MSG</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">ICON</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$3</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[[</span> <span class="s2">&#34;</span><span class="nv">$OSTYPE</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;darwin&#34;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span> <span class="c1"># if it is macOS</span>
+</span></span><span class="line"><span class="cl">        osascript -e <span class="s2">&#34;display notification \&#34;</span><span class="nv">$MSG</span><span class="s2">\&#34; with title \&#34;</span><span class="nv">$TITLE</span><span class="s2">\&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        notify-send <span class="nv">$TITLE</span> <span class="nv">$MSG</span> -i <span class="nv">$ICON</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Here, if the function is being executed on macOS it will execute the <code>display notification</code> utility by setting the right params in order, otherwise it will execute the <code>notify-send</code> utility.</p>
 <blockquote>
@@ -2305,7 +2305,7 @@ Also note that I escaped the <code>&quot;</code>  in <code>\&quot;$MSG\&quot;</c
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1809,15 +1809,15 @@ Turns out you have a couple of options here too, each having its own pros and co
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">dependencies</span> <span class="o">{</span>
-   <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span><span class="s1">&#39;nameOfYourAARFileWithoutExtension&#39;</span><span class="o">,</span> <span class="nl">ext:</span><span class="s1">&#39;aar&#39;</span><span class="o">)</span>
- <span class="o">}</span>
-<span class="n">repositories</span><span class="o">{</span>
-      <span class="n">flatDir</span><span class="o">{</span>
-              <span class="n">dirs</span> <span class="s1">&#39;libs&#39;</span>
-       <span class="o">}</span>
- <span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span><span class="s1">&#39;nameOfYourAARFileWithoutExtension&#39;</span><span class="o">,</span> <span class="nl">ext:</span><span class="s1">&#39;aar&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">repositories</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">flatDir</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">              <span class="n">dirs</span> <span class="s1">&#39;libs&#39;</span>
+</span></span><span class="line"><span class="cl">       <span class="o">}</span>
+</span></span><span class="line"><span class="cl"> <span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>..what comes with this is that now whenever you want to share your android library you are passing around your <code>aar</code> file(…which is not the best way to share your android library).</p>
 <blockquote>
@@ -1843,13 +1843,13 @@ Second issue is that to use your android library one would need to include an ex
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">allprojects</span> <span class="o">{</span>
-	<span class="n">repositories</span> <span class="o">{</span>
-		<span class="o">...</span>
-		<span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;http://url.to_your_hosted_artifactory_instance.maven_repository&#39;</span> <span class="o">}</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">allprojects</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="o">...</span>
+</span></span><span class="line"><span class="cl">		<span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;http://url.to_your_hosted_artifactory_instance.maven_repository&#39;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>..which to be fair is an extra step and we are all here to make the process simpler. It is easier on the creator part to push the android library out quickly but adds an extra step for the users to use the library code.</p>
 <h5 id="maven-central-jcenter-or-jitpack">Maven Central, Jcenter or JitPack</h5>
@@ -1865,13 +1865,13 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">allprojects</span> <span class="o">{</span>
-	<span class="n">repositories</span> <span class="o">{</span>
-		<span class="o">...</span>
-		<span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://www.jitpack.io&#39;</span> <span class="o">}</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">allprojects</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="o">...</span>
+</span></span><span class="line"><span class="cl">		<span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;https://www.jitpack.io&#39;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>You can read about how to publish your android library to JitPack <a href="/posts/publish-your-android-library-via-jitpack/">here</a>.</p>
 <p>The other option you have is of Maven Central or Jcenter.</p>
@@ -1884,10 +1884,10 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">dependencies</span> <span class="o">{</span>
-  <span class="n">compile</span> <span class="s1">&#39;com.github.nisrulz:awesomelib:1.0&#39;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">compile</span> <span class="s1">&#39;com.github.nisrulz:awesomelib:1.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>You can read about how to publish your android library to Jcenter <a href="http://crushingcode.co/publish-your-android-library-via-jcenter/">here</a>.</p>
 <p>With all those basic questions out of the way, let us look at things one should take care of while building an Android SDK/Library</p>
@@ -1904,12 +1904,12 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// DONOT DO THIS
-</span><span class="c1"></span><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">String</span> <span class="n">apikey</span><span class="o">,</span> <span class="kt">int</span> <span class="n">refresh</span><span class="o">,</span> <span class="kt">long</span> <span class="n">interval</span><span class="o">,</span> <span class="n">String</span> <span class="n">type</span><span class="o">);</span>
-
-<span class="c1">// DO this
-</span><span class="c1"></span><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ApiSecret</span> <span class="n">apisecret</span><span class="o">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// DONOT DO THIS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">String</span> <span class="n">apikey</span><span class="o">,</span> <span class="kt">int</span> <span class="n">refresh</span><span class="o">,</span> <span class="kt">long</span> <span class="n">interval</span><span class="o">,</span> <span class="n">String</span> <span class="n">type</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// DO this
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ApiSecret</span> <span class="n">apisecret</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>where ApiSecret is an Entity Class, declared as below</p>
 <div class="highlight"><div class="chroma">
@@ -1928,19 +1928,19 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ApiSecret</span><span class="o">{</span>
-    <span class="n">String</span> <span class="n">apikey</span><span class="o">;</span>
-    <span class="kt">int</span> <span class="n">refresh</span><span class="o">;</span>
-    <span class="kt">long</span> <span class="n">interval</span><span class="o">;</span>
-    <span class="n">String</span> <span class="n">type</span><span class="o">;</span>
-    <span class="c1">// constructor
-</span><span class="c1"></span>    <span class="cm">/* you can define proper checks(such as type safety) and
-</span><span class="cm">     * conditions to validate data before it gets set
-</span><span class="cm">     */</span>
-   
-    <span class="c1">// setter and getters
-</span><span class="c1"></span><span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ApiSecret</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">String</span> <span class="n">apikey</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">refresh</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">long</span> <span class="n">interval</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">String</span> <span class="n">type</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// constructor
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="cm">/* you can define proper checks(such as type safety) and
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * conditions to validate data before it gets set
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">    <span class="c1">// setter and getters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Or you can also use <code>Builder Pattern</code> as an alternative approach to the above.</p>
 <p>You can read more about Builder Pattern <a href="https://sourcemaking.com/design_patterns/builder">here</a>. <a href="https://jlordiales.me/about/">JOSE LUIS ORDIALES</a> talks in depth about how to implement it in your code, take a look <a href="https://jlordiales.me/2012/12/13/the-builder-pattern-in-practice/">here</a>.</p>
@@ -1978,11 +1978,11 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasPermission</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">permission</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">checkCallingOrSelfPermission</span><span class="o">(</span><span class="n">permission</span><span class="o">);</span>
-  <span class="k">return</span> <span class="n">result</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasPermission</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">permission</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">checkCallingOrSelfPermission</span><span class="o">(</span><span class="n">permission</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">result</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Some of the devs would say that they really need that specific permission, what to do in that case. Well, your library code should be generic for all types of apps that need the specific functionality. If you can provide hooks such as functions to let users of your android library pass the data you need the dangerous permission for. In that way, you do not force the devs to require a permission they do not want to. In absence of the permission provide a fallback implementation. Simple.</p>
 <div class="highlight"><div class="chroma">
@@ -1995,13 +1995,13 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="cm">/* Requiring GET_ACCOUNTS permission (as a requisite to use the 
-</span><span class="cm"> * library) is avoided here by providing a function which lets the 
-</span><span class="cm"> * devs to get it on their own and feed it to a function in the 
-</span><span class="cm"> * library.
-</span><span class="cm"> */</span>
-<span class="n">MyAwesomeLibrary</span><span class="o">.</span><span class="na">getEmail</span><span class="o">(</span><span class="s">&#34;username@emailprovider.com&#34;</span><span class="o">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="cm">/* Requiring GET_ACCOUNTS permission (as a requisite to use the 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * library) is avoided here by providing a function which lets the 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * devs to get it on their own and feed it to a function in the 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * library.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="n">MyAwesomeLibrary</span><span class="o">.</span><span class="na">getEmail</span><span class="o">(</span><span class="s">&#34;username@emailprovider.com&#34;</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="minimize-requisites">Minimize Requisites</h3>
 <p>We have all been there. We have a specific functionality that requires that the device has a certain feature. The usual way you would approach this is by defining the below in your manifest file</p>
@@ -2010,8 +2010,8 @@ However the issue at hand is same as the one for local/remote maven repositories
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-feature</span> <span class="na">android:name=</span><span class="s">&#34;android.hardware.bluetooth&#34;</span> <span class="nt">/&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;uses-feature</span> <span class="na">android:name=</span><span class="s">&#34;android.hardware.bluetooth&#34;</span> <span class="nt">/&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>..the problem with this is that when this is defined in the android library code, this would get merged into the app manifest file during the manifest-merger phase of <code>build</code> and thus hide the app in Play Store for devices that do not have the bluetooth unit (this is something the Play Store does as filtering). So basically an app that was earlier visible to a larger audience would now be visible to a smaller audience, just cause you added that to your library code.</p>
 <p>Well, that’s not we want, do we? Nope. So how do we solve this.<br />
@@ -2024,11 +2024,11 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">feature</span> <span class="o">=</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">FEATURE_BLUETOOTH</span><span class="o">;</span>
-<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isFeatureAvailable</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">feature</span><span class="o">)</span> <span class="o">{</span>
- <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="na">getPackageManager</span><span class="o">().</span><span class="na">hasSystemFeature</span><span class="o">(</span><span class="n">feature</span><span class="o">);</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span> <span class="n">feature</span> <span class="o">=</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">FEATURE_BLUETOOTH</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isFeatureAvailable</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">feature</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"> <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="na">getPackageManager</span><span class="o">().</span><span class="na">hasSystemFeature</span><span class="o">(</span><span class="n">feature</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>.. this way there is no entry in the manifest and once it merges into the app, it won’t let the app get filtered in the Play Store.</p>
 <p>As an added feature though if the feature is not available you can just disable the functionality in your library code and have some fallback functionality in place. It is a Win- Win for both the android dev who built the library and the dev who integrates the lib in their app.</p>
@@ -2045,11 +2045,11 @@ As a rule of thumb support the full spectrum of versions via defining in <code>m
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Method to check if the Android Version on device is greater than or equal to Marshmallow.
-</span><span class="c1"></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isMarshmallow</span><span class="o">(){</span>
-    <span class="k">return</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span><span class="o">&gt;=</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION_CODES</span><span class="o">.</span><span class="na">M</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Method to check if the Android Version on device is greater than or equal to Marshmallow.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isMarshmallow</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span><span class="o">&gt;=</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION_CODES</span><span class="o">.</span><span class="na">M</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="do-not-log-in-production">Do not log in production</h3>
 <p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/no.gif" alt="donot" /></p>
@@ -2065,12 +2065,12 @@ As a rule of thumb, never log in production. You should use <a href="https://dev
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// In code     
-</span><span class="c1"></span><span class="kt">boolean</span> <span class="n">debuggable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-<span class="n">MyAwesomeLibrary</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="n">apisecret</span><span class="o">,</span><span class="n">debuggable</span><span class="o">);</span>
-<span class="c1">// In build.gradle     
-</span><span class="c1"></span><span class="n">debuggable</span> <span class="o">=</span> <span class="kc">true</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// In code     
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">boolean</span> <span class="n">debuggable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">MyAwesomeLibrary</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="n">apisecret</span><span class="o">,</span><span class="n">debuggable</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// In build.gradle     
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">debuggable</span> <span class="o">=</span> <span class="kc">true</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="do-not-crash-silently-and-fail-fast">Do not crash silently and fail fast</h3>
 <p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/crash.png" alt="crash" /></p>
@@ -2091,19 +2091,19 @@ As a rule of thumb, never log in production. You should use <a href="https://dev
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ApiSecret</span> <span class="n">apisecret</span><span class="o">,</span><span class="kt">boolean</span> <span class="n">debuggable</span><span class="o">){</span>
-      <span class="o">...</span>
-      <span class="k">try</span><span class="o">{</span>
-        <span class="o">...</span>
-      <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="o">){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">debuggable</span><span class="o">){</span>
-          <span class="c1">// This is printed only when debuggable is true
-</span><span class="c1"></span>          <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-        <span class="o">}</span>
-      <span class="o">}</span>
-      <span class="o">....</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">ApiSecret</span> <span class="n">apisecret</span><span class="o">,</span><span class="kt">boolean</span> <span class="n">debuggable</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">      <span class="o">...</span>
+</span></span><span class="line"><span class="cl">      <span class="k">try</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">...</span>
+</span></span><span class="line"><span class="cl">      <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">debuggable</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">          <span class="c1">// This is printed only when debuggable is true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">....</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>It is important that your android library fails immediately and shows an exception to the user of your android library instead of being hung up on doing something. Avoid writing code which would block the Main Thread.</p>
 <h3 id="degrade-gracefully-in-an-event-of-error">Degrade gracefully in an event of error</h3>
@@ -2143,16 +2143,16 @@ How to achieve this ? Check in classpath</p>
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">hasOKHttpOnClasspath</span><span class="o">()</span> <span class="o">{</span>
-   <span class="k">try</span> <span class="o">{</span>
-       <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;com.squareup.okhttp3.OkHttpClient&#34;</span><span class="o">);</span>
-       <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-   <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">ClassNotFoundException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-       <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-   <span class="o">}</span>
-   <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">hasOKHttpOnClasspath</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">   <span class="k">try</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">       <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&#34;com.squareup.okhttp3.OkHttpClient&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">       <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">   <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">ClassNotFoundException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">       <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">   <span class="o">}</span>
+</span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Next, you can use <code>provided</code>(Gradle v2.12 and below) or <code>compileOnly</code>(Gradle v2.12+)(<a href="https://blog.gradle.org/introducing-compile-only-dependencies">Read here for complete information</a>), so as to be able to get hold of the classes defined by the dependency during compile time.</p>
 <div class="highlight"><div class="chroma">
@@ -2165,13 +2165,13 @@ How to achieve this ? Check in classpath</p>
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">dependencies</span> <span class="o">{</span>
-   <span class="c1">// for gradle version 2.12 and below
-</span><span class="c1"></span>   <span class="n">provided</span> <span class="s1">&#39;com.squareup.okhttp3:okhttp:3.6.0&#39;</span>
-   <span class="c1">// or for gradle version 2.12+
-</span><span class="c1"></span>   <span class="n">compileOnly</span> <span class="s1">&#39;com.squareup.okhttp3:okhttp:3.6.0&#39;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">// for gradle version 2.12 and below
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">provided</span> <span class="s1">&#39;com.squareup.okhttp3:okhttp:3.6.0&#39;</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">// or for gradle version 2.12+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">compileOnly</span> <span class="s1">&#39;com.squareup.okhttp3:okhttp:3.6.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>A word of caution here, you can only use this functionality of requiring a dependency if its a complete java dependency. i.e if its an android library you want to include at compile time, you can not reference its transitive libs as well as resources which need to be present before compilation. A pure java dependency, on the other hand, has only java classes and they are the only ones that would be added to classpath during the compilation process.</p>
@@ -2726,7 +2726,7 @@ The solution to this is that you stick to more open licenses such as <strong>MIT
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

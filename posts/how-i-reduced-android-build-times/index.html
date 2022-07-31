@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1772,24 +1772,24 @@ My laptop does not pack much power, meaning when I would be coding on small-aver
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"># Enable Gradle Daemon
-org.gradle.daemon=true
-
-# Enable Configure on demand
-org.gradle.configureondemand=true
-
-# Enable parallel builds
-org.gradle.parallel=true
-
-# Enable Build Cache
-android.enableBuildCache=true
-
-# Enable simple gradle caching
-org.gradle.caching=true
-
-# Increase memory allotted to JVM
-org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Enable Gradle Daemon
+</span></span><span class="line"><span class="cl">org.gradle.daemon=true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Enable Configure on demand
+</span></span><span class="line"><span class="cl">org.gradle.configureondemand=true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Enable parallel builds
+</span></span><span class="line"><span class="cl">org.gradle.parallel=true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Enable Build Cache
+</span></span><span class="line"><span class="cl">android.enableBuildCache=true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Enable simple gradle caching
+</span></span><span class="line"><span class="cl">org.gradle.caching=true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Increase memory allotted to JVM
+</span></span><span class="line"><span class="cl">org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>At 28 minutes build time, this wasn’t anywhere near acceptable.</p>
 <p><img src="/images/posts/how-i-reduced-android-build-times/img_3.webp" alt="img_3" /></p>
@@ -1805,9 +1805,9 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryErro
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># To build your debug apk from terminal, run the below</span>
-./gradlew assembleDebug
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># To build your debug apk from terminal, run the below</span>
+</span></span><span class="line"><span class="cl">./gradlew assembleDebug
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>I noticed Android Studio was particularly bad at only the Gradle builds, hence I switched back to <em>writing code in Android Studio but stuck to running builds via my terminal.</em></p>
 <p><strong>At almost 3 minutes build time down from 28 minutes, I had achieved 89% reduction in build times! That’s insane!</strong></p>
@@ -1819,8 +1819,8 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryErro
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">./gradlew installDebug
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./gradlew installDebug
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This however will not launch the apk but only install it.<a href="https://developer.android.com/studio/build/building-cmdline.html#DebugMode">This is also mentioned here in official documentation.</a></p>
 <p><img src="/images/posts/how-i-reduced-android-build-times/img_5.png" alt="img_5" /></p>
@@ -1867,42 +1867,42 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryErro
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># I use ZSH, here is what I added to my .zshrc file (config file)</span>
-<span class="c1"># at ~/.zshrc</span>
-
-<span class="c1"># Have the adb accessible, by including it in the PATH</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$PATH</span><span class="s2">:path/to/android_sdk/platform-tools/&#34;</span>
-
-<span class="c1"># Setup your Android SDK path in ANDROID_HOME variable</span>
-<span class="nb">export</span> <span class="nv">ANDROID_HOME</span><span class="o">=</span>~/sdks/android_sdk
-
-<span class="c1"># Setup aapt tool so it accessible using a single command</span>
-<span class="nb">alias</span> <span class="nv">aapt</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$ANDROID_HOME</span><span class="s2">/build-tools/29.0.3/aapt&#34;</span>
-
-<span class="c1"># Install APK to device</span>
-<span class="c1"># Use as: apkinstall app-debug.apk</span>
-<span class="nb">alias</span> <span class="nv">apkinstall</span><span class="o">=</span><span class="s2">&#34;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X install -r </span><span class="nv">$1</span><span class="s2">&#34;</span>
-<span class="c1"># As an alternative to apkinstall, you can also do just ./gradlew installDebug</span>
-
-<span class="c1"># Alias for building and installing the apk to connected device</span>
-<span class="c1"># Run at the root of your project</span>
-<span class="c1"># $ buildAndInstallApk</span>
-<span class="nb">alias</span> <span class="nv">buildAndInstallApk</span><span class="o">=</span><span class="s1">&#39;./gradlew assembleDebug &amp;&amp; apkinstall ./app/build/outputs/apk/debug/app-debug.apk&#39;</span>
-
-<span class="c1"># Launch your debug apk on your connected device</span>
-<span class="c1"># Execute at the root of your android project</span>
-<span class="c1"># Usage: launchDebugApk</span>
-<span class="nb">alias</span> <span class="nv">launchDebugApk</span><span class="o">=</span><span class="s2">&#34;adb shell monkey -p `aapt dump badging ./app/build/outputs/apk/debug/app-debug.apk | grep -e &#39;package: name&#39; | cut -d \&#39; -f 2` 1&#34;</span>
-
-<span class="c1"># ------------- Single command to build+install+launch apk------------#</span>
-<span class="c1"># Execute at the root of your android project</span>
-<span class="c1"># Use as: buildInstallLaunchDebugApk</span>
-<span class="nb">alias</span> <span class="nv">buildInstallLaunchDebugApk</span><span class="o">=</span><span class="s2">&#34;buildAndInstallApk &amp;&amp; launchDebugApk&#34;</span>
-
-<span class="c1"># Note: Here I am building, installing and launching the debug apk which is usually in the path: `./app/build/outputs/apk/debug/app-debug.apk` </span>
-<span class="c1"># when this command is executed from the root of the project</span>
-<span class="c1"># If you would like to install and run any other apk, simply replace the path for debug apk with path of your own apk</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># I use ZSH, here is what I added to my .zshrc file (config file)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># at ~/.zshrc</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Have the adb accessible, by including it in the PATH</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$PATH</span><span class="s2">:path/to/android_sdk/platform-tools/&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Setup your Android SDK path in ANDROID_HOME variable</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">ANDROID_HOME</span><span class="o">=</span>~/sdks/android_sdk
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Setup aapt tool so it accessible using a single command</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">aapt</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$ANDROID_HOME</span><span class="s2">/build-tools/29.0.3/aapt&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install APK to device</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use as: apkinstall app-debug.apk</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">apkinstall</span><span class="o">=</span><span class="s2">&#34;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X install -r </span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># As an alternative to apkinstall, you can also do just ./gradlew installDebug</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Alias for building and installing the apk to connected device</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Run at the root of your project</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># $ buildAndInstallApk</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">buildAndInstallApk</span><span class="o">=</span><span class="s1">&#39;./gradlew assembleDebug &amp;&amp; apkinstall ./app/build/outputs/apk/debug/app-debug.apk&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Launch your debug apk on your connected device</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Execute at the root of your android project</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage: launchDebugApk</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">launchDebugApk</span><span class="o">=</span><span class="s2">&#34;adb shell monkey -p `aapt dump badging ./app/build/outputs/apk/debug/app-debug.apk | grep -e &#39;package: name&#39; | cut -d \&#39; -f 2` 1&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ------------- Single command to build+install+launch apk------------#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Execute at the root of your android project</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use as: buildInstallLaunchDebugApk</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">buildInstallLaunchDebugApk</span><span class="o">=</span><span class="s2">&#34;buildAndInstallApk &amp;&amp; launchDebugApk&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Note: Here I am building, installing and launching the debug apk which is usually in the path: `./app/build/outputs/apk/debug/app-debug.apk` </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># when this command is executed from the root of the project</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># If you would like to install and run any other apk, simply replace the path for debug apk with path of your own apk</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>..the apk is built, pushed and installed to device. Here is the result</p>
 <p><img src="/images/posts/how-i-reduced-android-build-times/img_6.png" alt="img_6" /></p>
@@ -1914,10 +1914,10 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryErro
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Profile your build from the terminal</span>
-<span class="c1"># In my case, &lt;task&gt; would be assembleDebug</span>
-gradle --profile &lt;tasks&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Profile your build from the terminal</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># In my case, &lt;task&gt; would be assembleDebug</span>
+</span></span><span class="line"><span class="cl">gradle --profile &lt;tasks&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>My work cycle is super fast now. I am able to iterate at 10x the speed than I was earlier. I plan on revisiting this with more in-depth info. But for now, this Android Developer with not-so-fast-machine is happy and productive.</p>
 <p><strong>EDIT 2:</strong> Created a twitter thread with all my terminal aliases for Android Development (at the end there is a link to a gist for easy copy pasting). If you would like to follow, you can do so at*</p>
@@ -2401,7 +2401,7 @@ If it did help you in any way, then please share this in your network for it to 
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

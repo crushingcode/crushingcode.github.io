@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1764,11 +1764,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">KEYSTORE_FILE_PATH</span> <span class="o">=</span> <span class="s2">&#34;/Users/your_user/App_Directory/keystore_file.keystore&#34;</span>
-<span class="nb">export</span> <span class="nv">KEYSTORE_PASSWORD</span> <span class="o">=</span> <span class="s2">&#34;********&#34;</span>
-<span class="nb">export</span> <span class="nv">KEY_ALIAS</span> <span class="o">=</span> <span class="s2">&#34;key_alias&#34;</span>
-<span class="nb">export</span> <span class="nv">KEY_PASSWORD</span> <span class="o">=</span> <span class="s2">&#34;************&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">KEYSTORE_FILE_PATH</span> <span class="o">=</span> <span class="s2">&#34;/Users/your_user/App_Directory/keystore_file.keystore&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">KEYSTORE_PASSWORD</span> <span class="o">=</span> <span class="s2">&#34;********&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">KEY_ALIAS</span> <span class="o">=</span> <span class="s2">&#34;key_alias&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">KEY_PASSWORD</span> <span class="o">=</span> <span class="s2">&#34;************&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Then inside your app module&rsquo;s build.gradle file, you can reference it as shown below:</p>
 <div class="highlight"><div class="chroma">
@@ -1783,15 +1783,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">signingConfigs</span> <span class="o">{</span>
-    <span class="n">release</span> <span class="o">{</span>
-        <span class="n">storeFile</span> <span class="nf">file</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&#34;KEYSTORE_FILE_PATH&#34;</span><span class="o">)))</span>
-        <span class="n">storePassword</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&#34;KEYSTORE_PASSWORD&#34;</span><span class="o">)</span>
-        <span class="n">keyAlias</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&#34;KEY_ALIAS&#34;</span><span class="o">)</span>
-        <span class="n">keyPassword</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&#34;KEY_PASSWORD&#34;</span><span class="o">)</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">signingConfigs</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">release</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">storeFile</span> <span class="nf">file</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&#34;KEYSTORE_FILE_PATH&#34;</span><span class="o">)))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">storePassword</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&#34;KEYSTORE_PASSWORD&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">keyAlias</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&#34;KEY_ALIAS&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">keyPassword</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&#34;KEY_PASSWORD&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="using-localproperties-file">Using local.properties file</h2>
 <p>Inside your <code>local.properties</code> file, declare the key value pairs as shown below:</p>
@@ -1803,11 +1803,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">storeFile</span><span class="o">=</span>../keystore.jks
-<span class="nv">storePassword</span><span class="o">=</span>example
-<span class="nv">keyAlias</span><span class="o">=</span>example
-<span class="nv">keyPassword</span><span class="o">=</span>example
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">storeFile</span><span class="o">=</span>../keystore.jks
+</span></span><span class="line"><span class="cl"><span class="nv">storePassword</span><span class="o">=</span>example
+</span></span><span class="line"><span class="cl"><span class="nv">keyAlias</span><span class="o">=</span>example
+</span></span><span class="line"><span class="cl"><span class="nv">keyPassword</span><span class="o">=</span>example
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>Note: <code>keystore.jks</code> file is the Keystore file that is expected to be placed inside the root directory of your project.</p>
@@ -1848,38 +1848,38 @@
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="kt">def</span> <span class="n">keystorePropertiesFile</span> <span class="o">=</span> <span class="n">rootProject</span><span class="o">.</span><span class="na">file</span><span class="o">(</span><span class="s2">&#34;local.properties&#34;</span><span class="o">)</span>
-
-<span class="k">if</span> <span class="o">(</span><span class="n">keystorePropertiesFile</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
-	<span class="c1">// Load the properties
-</span><span class="c1"></span>	<span class="kt">def</span> <span class="n">keystoreProperties</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Properties</span><span class="o">()</span>
-	<span class="n">keystoreProperties</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="n">keystorePropertiesFile</span><span class="o">))</span>
-	<span class="n">android</span> <span class="o">{</span>
-		<span class="n">signingConfigs</span> <span class="o">{</span>
-			<span class="k">if</span> <span class="o">(</span><span class="n">keystorePropertiesFile</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
-				<span class="n">release</span> <span class="o">{</span>
-					<span class="n">keyAlias</span> <span class="n">keystoreProperties</span><span class="o">[</span><span class="s1">&#39;keyAlias&#39;</span><span class="o">]</span>
-					<span class="n">keyPassword</span> <span class="n">keystoreProperties</span><span class="o">[</span><span class="s1">&#39;keyPassword&#39;</span><span class="o">]</span>
-					<span class="n">storeFile</span> <span class="nf">file</span><span class="o">(</span><span class="n">keystoreProperties</span><span class="o">[</span><span class="s1">&#39;storeFile&#39;</span><span class="o">])</span>
-					<span class="n">storePassword</span> <span class="n">keystoreProperties</span><span class="o">[</span><span class="s1">&#39;storePassword&#39;</span><span class="o">]</span>
-				<span class="o">}</span>
-			<span class="o">}</span>
-		<span class="o">}</span>
-
-		<span class="n">buildTypes</span> <span class="o">{</span>
-			<span class="n">release</span> <span class="o">{</span>
-				<span class="k">if</span> <span class="o">(</span><span class="n">keystorePropertiesFile</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
-					<span class="n">signingConfig</span> <span class="n">signingConfigs</span><span class="o">.</span><span class="na">release</span>
-				<span class="o">}</span>
-			<span class="o">}</span>
-		<span class="o">}</span>
-	<span class="o">}</span>
-<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-	<span class="n">println</span><span class="o">(</span><span class="s2">&#34;Filename: keystore.properties&#34;</span><span class="o">)</span>
-	<span class="n">println</span><span class="o">(</span><span class="s2">&#34;Error: File does not exists&#34;</span><span class="o">)</span>
-	<span class="n">println</span><span class="o">(</span><span class="s2">&#34;Solution: Create a keystore.properties file with valid details under keystore directory at the root of your project&#34;</span><span class="o">)</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="kt">def</span> <span class="n">keystorePropertiesFile</span> <span class="o">=</span> <span class="n">rootProject</span><span class="o">.</span><span class="na">file</span><span class="o">(</span><span class="s2">&#34;local.properties&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span><span class="n">keystorePropertiesFile</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Load the properties
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">def</span> <span class="n">keystoreProperties</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Properties</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl">	<span class="n">keystoreProperties</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="n">keystorePropertiesFile</span><span class="o">))</span>
+</span></span><span class="line"><span class="cl">	<span class="n">android</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">signingConfigs</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="o">(</span><span class="n">keystorePropertiesFile</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">release</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">					<span class="n">keyAlias</span> <span class="n">keystoreProperties</span><span class="o">[</span><span class="s1">&#39;keyAlias&#39;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">					<span class="n">keyPassword</span> <span class="n">keystoreProperties</span><span class="o">[</span><span class="s1">&#39;keyPassword&#39;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">					<span class="n">storeFile</span> <span class="nf">file</span><span class="o">(</span><span class="n">keystoreProperties</span><span class="o">[</span><span class="s1">&#39;storeFile&#39;</span><span class="o">])</span>
+</span></span><span class="line"><span class="cl">					<span class="n">storePassword</span> <span class="n">keystoreProperties</span><span class="o">[</span><span class="s1">&#39;storePassword&#39;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">				<span class="o">}</span>
+</span></span><span class="line"><span class="cl">			<span class="o">}</span>
+</span></span><span class="line"><span class="cl">		<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">buildTypes</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">release</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="o">(</span><span class="n">keystorePropertiesFile</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">					<span class="n">signingConfig</span> <span class="n">signingConfigs</span><span class="o">.</span><span class="na">release</span>
+</span></span><span class="line"><span class="cl">				<span class="o">}</span>
+</span></span><span class="line"><span class="cl">			<span class="o">}</span>
+</span></span><span class="line"><span class="cl">		<span class="o">}</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">println</span><span class="o">(</span><span class="s2">&#34;Filename: keystore.properties&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">println</span><span class="o">(</span><span class="s2">&#34;Error: File does not exists&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">println</span><span class="o">(</span><span class="s2">&#34;Solution: Create a keystore.properties file with valid details under keystore directory at the root of your project&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Now in order to use this <code>signing.gradle</code> config in your app, open the <code>build.gradle</code> file for app module and add the the below line of code just above the <code>android {}</code> block:</p>
 <div class="highlight"><div class="chroma">
@@ -1890,11 +1890,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy">
-<span class="n">apply</span> <span class="nl">from:</span> <span class="s2">&#34;$rootProject.projectDir/signing.gradle&#34;</span>
-
-<span class="c1">// android { ... }
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">apply</span> <span class="nl">from:</span> <span class="s2">&#34;$rootProject.projectDir/signing.gradle&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// android { ... }
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Thats all!</p>
 <p>In both cases, simply sync your project and you should be able to sign your APK file by executing <code>./gradlew assembleRelease</code> 🎉</p>
@@ -2368,7 +2368,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

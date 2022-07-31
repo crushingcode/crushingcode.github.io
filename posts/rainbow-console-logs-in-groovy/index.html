@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1784,42 +1784,40 @@
 </span><span class="lnt">29
 </span><span class="lnt">30
 </span><span class="lnt">31
-</span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="c1">// Colored Console logs in Groovy
-</span><span class="c1"></span><span class="kt">def</span> <span class="nf">printlnWithColor</span><span class="o">(</span><span class="n">color</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// Map of ANSI Escape color codes
-</span><span class="c1"></span>    <span class="kd">final</span> <span class="n">colorsMap</span> <span class="o">=</span> <span class="o">[</span><span class="n">black</span>  <span class="o">:</span> <span class="mi">30</span><span class="o">,</span> <span class="nl">red:</span> <span class="mi">31</span><span class="o">,</span> <span class="nl">green:</span> <span class="mi">32</span><span class="o">,</span> <span class="nl">yellow:</span> <span class="mi">33</span><span class="o">,</span>
-                       <span class="n">blue</span>   <span class="o">:</span> <span class="mi">34</span><span class="o">,</span> <span class="nl">magenta:</span> <span class="mi">35</span><span class="o">,</span> <span class="nl">cyan:</span> <span class="mi">36</span><span class="o">,</span> <span class="nl">white:</span> <span class="mi">37</span><span class="o">,</span>
-                       <span class="k">default</span><span class="o">:</span> <span class="mi">39</span><span class="o">]</span>
-    <span class="c1">// Create the escape sequence so string is color formatted                   
-</span><span class="c1"></span>    <span class="kd">final</span> <span class="n">style</span> <span class="o">=</span> <span class="s2">&#34;${(char) 27}[${colorsMap[color]}&#34;</span> <span class="o">+</span> <span class="s2">&#34;m&#34;</span>
-    <span class="c1">// Apply the escape sequence to the string by prepending it
-</span><span class="c1"></span>    <span class="kd">final</span> <span class="n">styledStr</span> <span class="o">=</span> <span class="n">style</span> <span class="o">+</span> <span class="n">str</span>
-    <span class="c1">// finally use println to print this escaped string
-</span><span class="c1"></span>    <span class="n">println</span><span class="o">(</span><span class="n">styledStr</span><span class="o">)</span>
-<span class="o">}</span>
-
-<span class="c1">// Using ext.method_name so it is exported and available 
-</span><span class="c1">// to be used outside the file it is declared in
-</span><span class="c1"></span><span class="n">ext</span><span class="o">.</span><span class="na">printlnBlack</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;black&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
-
-<span class="n">ext</span><span class="o">.</span><span class="na">printlnRed</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;red&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
-
-<span class="n">ext</span><span class="o">.</span><span class="na">printlnGreen</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;green&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
-
-<span class="n">ext</span><span class="o">.</span><span class="na">printlnYellow</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;yellow&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
-
-<span class="n">ext</span><span class="o">.</span><span class="na">printlnBlue</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;blue&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
-
-<span class="n">ext</span><span class="o">.</span><span class="na">printlnCyan</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;magenta&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
-
-<span class="n">ext</span><span class="o">.</span><span class="na">printlnWhite</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;white&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
-
-<span class="n">ext</span><span class="o">.</span><span class="na">printlnDefault</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;default&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="c1">// Colored Console logs in Groovy
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">def</span> <span class="nf">printlnWithColor</span><span class="o">(</span><span class="n">color</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Map of ANSI Escape color codes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">final</span> <span class="n">colorsMap</span> <span class="o">=</span> <span class="o">[</span><span class="n">black</span>  <span class="o">:</span> <span class="mi">30</span><span class="o">,</span> <span class="nl">red:</span> <span class="mi">31</span><span class="o">,</span> <span class="nl">green:</span> <span class="mi">32</span><span class="o">,</span> <span class="nl">yellow:</span> <span class="mi">33</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="n">blue</span>   <span class="o">:</span> <span class="mi">34</span><span class="o">,</span> <span class="nl">magenta:</span> <span class="mi">35</span><span class="o">,</span> <span class="nl">cyan:</span> <span class="mi">36</span><span class="o">,</span> <span class="nl">white:</span> <span class="mi">37</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="k">default</span><span class="o">:</span> <span class="mi">39</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Create the escape sequence so string is color formatted                   
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">final</span> <span class="n">style</span> <span class="o">=</span> <span class="s2">&#34;${(char) 27}[${colorsMap[color]}&#34;</span> <span class="o">+</span> <span class="s2">&#34;m&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Apply the escape sequence to the string by prepending it
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">final</span> <span class="n">styledStr</span> <span class="o">=</span> <span class="n">style</span> <span class="o">+</span> <span class="n">str</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// finally use println to print this escaped string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="o">(</span><span class="n">styledStr</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Using ext.method_name so it is exported and available 
+</span></span></span><span class="line"><span class="cl"><span class="c1">// to be used outside the file it is declared in
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">ext</span><span class="o">.</span><span class="na">printlnBlack</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;black&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ext</span><span class="o">.</span><span class="na">printlnRed</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;red&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ext</span><span class="o">.</span><span class="na">printlnGreen</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;green&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ext</span><span class="o">.</span><span class="na">printlnYellow</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;yellow&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ext</span><span class="o">.</span><span class="na">printlnBlue</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;blue&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ext</span><span class="o">.</span><span class="na">printlnCyan</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;magenta&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ext</span><span class="o">.</span><span class="na">printlnWhite</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;white&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ext</span><span class="o">.</span><span class="na">printlnDefault</span> <span class="o">=</span> <span class="o">{</span> <span class="n">str</span> <span class="o">-&gt;</span> <span class="n">printlnWithColor</span><span class="o">(</span><span class="s2">&#34;default&#34;</span><span class="o">,</span> <span class="n">str</span><span class="o">)</span> <span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Next, include this file inside the <code>build.gradle</code> file where you want to want to use the functions that facilitate colored console output. i.e app module&rsquo;s build.gradle file.</p>
 <p>Include the below line of code at the top of build.gradle file where plugins are defined.</p>
@@ -1828,8 +1826,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">apply</span> <span class="nl">from:</span> <span class="s2">&#34;$rootProject.projectDir/colored_console.gradle&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">apply</span> <span class="nl">from:</span> <span class="s2">&#34;$rootProject.projectDir/colored_console.gradle&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>The setup part is now done and you can start using the defined functions to enable colored console output.</p>
 <p>In order to test this out, lets create a task named <code>coloredHelloWorld</code>, as shown below:</p>
@@ -1842,12 +1840,12 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">task</span> <span class="n">coloredHelloWorld</span> <span class="o">{</span>
-    <span class="n">printlnGreen</span><span class="o">(</span><span class="s2">&#34;============&#34;</span><span class="o">)</span>
-    <span class="n">printlnBlue</span><span class="o">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="o">)</span>
-    <span class="n">printlnRed</span><span class="o">(</span><span class="s2">&#34;============&#34;</span><span class="o">)</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">task</span> <span class="n">coloredHelloWorld</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printlnGreen</span><span class="o">(</span><span class="s2">&#34;============&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printlnBlue</span><span class="o">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printlnRed</span><span class="o">(</span><span class="s2">&#34;============&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Now we should execute this task by running the below command in a terminal window at the root of the project:</p>
 <div class="highlight"><div class="chroma">
@@ -1855,12 +1853,13 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">./gradlew coloredHelloWorld
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">./gradlew coloredHelloWorld
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>and its output:</p>
 <p><img src="/images/posts/rainbow-console-logs-in-groovy/img_1.png" alt="output" /></p>
-<p>Pretty, init 🌈 Now go use it in your projects and add a splash of color to your console logs 🙃</p>
+<p>Pretty neat 🌈  Now go use it in your projects and add a splash of color to your console logs 🙃</p>
+<p>You can find all code in a functional Android project <a href="https://github.com/nisrulz/android-examples/tree/develop/ColoredConsoleLogs">here</a>.</p>
 <p><img src="/images/posts/rainbow-console-logs-in-groovy/meme.png" alt="meme" /></p>
 
     </article>
@@ -2294,7 +2293,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

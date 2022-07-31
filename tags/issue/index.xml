@@ -29,7 +29,7 @@
         <atom:modified>Mon, 02 May 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/the-curious-case-of-dependency-conflicts/</guid>
         <description>If I were to ask a question to a room filled with android developers
- &amp;ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?</description>
+&amp;ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?</description>
         
         <dc:creator>Nishant</dc:creator>
         

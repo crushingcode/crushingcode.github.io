@@ -28,7 +28,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 12 Nov 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/droidcon_italy_2021/</guid>
-        <description>Droidcon Italy, Online Abstract   Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
+        <description>Droidcon Italy, Online Abstract Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -64,7 +64,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 28 Sep 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/chicago_roboto_2021/</guid>
-        <description>Chicago Roboto Online Abstract   KMM or Kotlin Multiplatform Mobile is evolving rapidly. So much so that many companies already use it in production.</description>
+        <description>Chicago Roboto Online Abstract KMM or Kotlin Multiplatform Mobile is evolving rapidly. So much so that many companies already use it in production. KMM brings a paradigm shift in sharing code between mobile platforms in a way that allows for greater control over what is shared while leaving the native UI code to the platform.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -92,9 +92,8 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 29 Jul 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/panel_discussion_droidcon_online_july_2021/</guid>
-        <description> Droidcon, Online Abstract   Panel Discussion with Googlers about Jetpack Compose.
-  Video+ Event Click here to access the event website
-  </description>
+        <description>Droidcon, Online Abstract Panel Discussion with Googlers about Jetpack Compose.
+Video+ Event Click here to access the event website</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -126,7 +125,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 24 Jun 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/yava_conf_2021/</guid>
-        <description>Ya!vaConf, Online Abstract   Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
+        <description>Ya!vaConf, Online Abstract Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -162,7 +161,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 17 Jun 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/clubhouse_jun_2021/</guid>
-        <description>Android Chatter, Clubhouse/Online Abstract   Live panel discussion with other Android devs to talk about building Android Libraries, tips n&#39; tricks and Q&amp;amp;A from audience👨🏻‍💻</description>
+        <description>Android Chatter, Clubhouse/Online Abstract Live panel discussion with other Android devs to talk about building Android Libraries, tips n&amp;rsquo; tricks and Q&amp;amp;A from audience👨🏻‍💻</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -194,7 +193,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 12 May 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/gdg_london_jetpack_compose_may_2021/</guid>
-        <description>GDG London: Jetpack Compose, Online Abstract   Since the time Android has existed, our workflow for designing a UI has been confined to XML.</description>
+        <description>GDG London: Jetpack Compose, Online Abstract Since the time Android has existed, our workflow for designing a UI has been confined to XML. This has led to other issues and hacks to make UI work as per current times.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -230,7 +229,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 07 Feb 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/fosdem_2021/</guid>
-        <description>FOSDEM 2021: Kotlin Devroom, Online Abstract   Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
+        <description>FOSDEM 2021: Kotlin Devroom, Online Abstract Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -258,7 +257,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 02 Feb 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/south_cairo_tech_talks_2021/</guid>
-        <description>South Cairo Tech Talks, GDG Helwan, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        <description>South Cairo Tech Talks, GDG Helwan, Online Abstract A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -290,7 +289,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 24 Jan 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/devfest_dach_2020/</guid>
-        <description>Devfest DACH&#39;21, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        <description>Devfest DACH&#39;21, Online Abstract A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -322,7 +321,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 19 Jan 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/android_worldwide_jan_2021/</guid>
-        <description>Android Worldwide, Online Abstract   A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        <description>Android Worldwide, Online Abstract A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -354,7 +353,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 14 Dec 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/droidcon_apac_2020/</guid>
-        <description>Droidcon APAC &amp;lsquo;20, Online Abstract   Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
+        <description>Droidcon APAC &amp;lsquo;20, Online Abstract Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps. Android, however, holds dark secrets about low latency audio, thus making it harder for developers to build responsive audio apps and user experiences.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -386,7 +385,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 21 Oct 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/codemotion_online_2020/</guid>
-        <description>Codemotion Online 2020, Online Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+        <description>Codemotion Online 2020, Online Abstract Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -414,7 +413,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 04 Sep 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/gdg_kisumu_4_sept_2020/</guid>
-        <description>GDG Kisumu, Kenya 2020, Online Abstract   This is a panel discussion along with other awesome developers about Android with focus on upcoming Android 11 release.</description>
+        <description>GDG Kisumu, Kenya 2020, Online Abstract This is a panel discussion along with other awesome developers about Android with focus on upcoming Android 11 release.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -442,7 +441,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 22 Aug 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/gdg_kisumu_22_aug_2020/</guid>
-        <description>GDG Kisumu, Kenya 2020, Online Abstract   Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
+        <description>GDG Kisumu, Kenya 2020, Online Abstract Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -474,7 +473,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 27 May 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/codemotion_amsterdam_2020/</guid>
-        <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them.</description>
+        <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -502,7 +501,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 14 May 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/future_of_mobile_2020/</guid>
-        <description>Raywenderlich.com, Online Abstract   In this Roundtable Talk, Kevin Moore, Kevin Galligan, Nishant Srivastava and Joe Howard discuss the state of mobile and what platform you should use when starting a brand new project.</description>
+        <description>Raywenderlich.com, Online Abstract In this Roundtable Talk, Kevin Moore, Kevin Galligan, Nishant Srivastava and Joe Howard discuss the state of mobile and what platform you should use when starting a brand new project.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -542,7 +541,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 21 Apr 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/android_makers_paris_apr_2020/</guid>
-        <description>Android Makers Paris 2020, Online Abstract   Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
+        <description>Android Makers Paris 2020, Online Abstract Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -574,7 +573,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sun, 02 Feb 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/fosdem_2020/</guid>
-        <description>FOSDEM 2020: Kotlin Devroom, Brussels, Belgium Abstract   Kotlin Multiplatform is the new kid on the cross-platform block. The approach although is very different from what you have seen in the past.</description>
+        <description>FOSDEM 2020: Kotlin Devroom, Brussels, Belgium Abstract Kotlin Multiplatform is the new kid on the cross-platform block. The approach although is very different from what you have seen in the past.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -602,7 +601,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 26 Oct 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/mobilization_ix_2019/</guid>
-        <description>Mobilization IX, Łódź, Poland Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+        <description>Mobilization IX, Łódź, Poland Abstract Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -630,7 +629,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 17 Jul 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/gdg_cv_2017/</guid>
-        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation  Event   </description>
+        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation Event </description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -662,7 +661,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 18 May 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/code_and_coffee_may_2017/</guid>
-        <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract   Kotlin programming language is gaining popularity nowadays. It’s a modern language that gives more power in everyday routines.</description>
+        <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract Kotlin programming language is gaining popularity nowadays. It’s a modern language that gives more power in everyday routines.It’s a pragmatic language with a very low learning curve and can be quickly grasped by Java developers.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         

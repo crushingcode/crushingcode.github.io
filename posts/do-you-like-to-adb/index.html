@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1778,8 +1778,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb uninstall &lt;package_name&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb uninstall &lt;package_name&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>if you wish to keep the data and cache directory intact but uninstall the app just add <code>-k</code> as an option to the command</p>
 <div class="highlight"><div class="chroma">
@@ -1787,8 +1787,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb uninstall <span class="o">[</span>-k<span class="o">]</span> &lt;package_name&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb uninstall <span class="o">[</span>-k<span class="o">]</span> &lt;package_name&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p><code>[ ]</code> means its an optional parameter</p>
@@ -1799,8 +1799,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb install <span class="o">[</span>-r<span class="o">]</span> <span class="o">[</span>-s<span class="o">]</span> &lt;package_name&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb install <span class="o">[</span>-r<span class="o">]</span> <span class="o">[</span>-s<span class="o">]</span> &lt;package_name&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>the options available to the command are</p>
 <ul>
@@ -1829,8 +1829,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb -d &lt;command&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb -d &lt;command&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>What this will do is it will directs command to the only connected USB device. Naice 🙂</p>
 <blockquote>
@@ -1842,8 +1842,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb -s &lt;device_id&gt; &lt;command&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb -s &lt;device_id&gt; &lt;command&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>Get the device id by using <code>adb devices</code></p>
@@ -1860,14 +1860,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-adb -s &lt;emu_1_id&gt; &lt;some_command&gt;
-adb -s &lt;device_3_id&gt; &lt;some_command&gt;
-adb -s &lt;device_1_id&gt; &lt;some_command&gt;
-adb -s &lt;device_2_id&gt; &lt;some_command&gt;
-adb -s &lt;emu_2_id&gt; &lt;some_command&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">adb -s &lt;emu_1_id&gt; &lt;some_command&gt;
+</span></span><span class="line"><span class="cl">adb -s &lt;device_3_id&gt; &lt;some_command&gt;
+</span></span><span class="line"><span class="cl">adb -s &lt;device_1_id&gt; &lt;some_command&gt;
+</span></span><span class="line"><span class="cl">adb -s &lt;device_2_id&gt; &lt;some_command&gt;
+</span></span><span class="line"><span class="cl">adb -s &lt;emu_2_id&gt; &lt;some_command&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>where <code>&lt;some_command&gt;</code> does not have to be the same.</p>
@@ -1896,12 +1896,12 @@ adb -s &lt;emu_2_id&gt; &lt;some_command&gt;
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Kill the server if it is running</span>
-adb kill-server 
-
-<span class="c1"># Start the server</span>
-adb start-server
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Kill the server if it is running</span>
+</span></span><span class="line"><span class="cl">adb kill-server 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Start the server</span>
+</span></span><span class="line"><span class="cl">adb start-server
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>I have seen that you also need to uncheck and then check <strong>ADB Integration</strong> inside Android Studio as an extra step.</p>
@@ -1931,15 +1931,15 @@ adb start-server
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Prints about the current state of the device : offline | bootloader | device</span>
-adb get-state
-
-<span class="c1"># Prints the serial number of the device</span>
-adb get-serialno
-
-<span class="c1"># Prints the device path</span>
-adb get-devpath 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Prints about the current state of the device : offline | bootloader | device</span>
+</span></span><span class="line"><span class="cl">adb get-state
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Prints the serial number of the device</span>
+</span></span><span class="line"><span class="cl">adb get-serialno
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Prints the device path</span>
+</span></span><span class="line"><span class="cl">adb get-devpath 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><hr />
 <h3 id="copy-file-tofrom-deviceemulator">Copy file to/from device/emulator</h3>
@@ -1951,8 +1951,8 @@ adb get-devpath
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb push &lt;local&gt; &lt;remote&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb push &lt;local&gt; &lt;remote&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>where <code>&lt;local&gt;</code> is file in your local system i.e <code>my_image.png</code> and <code>&lt;remote&gt;</code> is file location in device/emulator i.e <code>/sdcard/Downloads/my_image.png</code></p>
 <div class="highlight"><div class="chroma">
@@ -1960,8 +1960,8 @@ adb get-devpath
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb push ~/Downloads/my_image.png /sdcard/Downloads/my_image.png
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb push ~/Downloads/my_image.png /sdcard/Downloads/my_image.png
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>To pull a file/dir from device</strong></p>
 <div class="highlight"><div class="chroma">
@@ -1969,8 +1969,8 @@ adb get-devpath
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb pull &lt;remote&gt; <span class="o">[</span>&lt;local&gt;<span class="o">]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb pull &lt;remote&gt; <span class="o">[</span>&lt;local&gt;<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>where <code>&lt;local&gt;</code> is file in your local system i.e <code>my_image.png</code> and <code>&lt;remote&gt;</code> is file location in device/emulator i.e <code>/sdcard/Downloads/my_image.png</code></p>
 <div class="highlight"><div class="chroma">
@@ -1978,8 +1978,8 @@ adb get-devpath
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb pull /sdcard/Downloads/my_image.png my_image.png
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb pull /sdcard/Downloads/my_image.png my_image.png
+</span></span></code></pre></td></tr></table>
 </div>
 </div><hr />
 <h3 id="acting-as-a-developer-utility-belt">Acting as a Developer utility-belt</h3>
@@ -1989,8 +1989,8 @@ adb get-devpath
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb keygen &lt;filename&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb keygen &lt;filename&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>The private key is stored in <code>&lt;file&gt;</code>, and the public key is stored in <file>.pub.<br />
@@ -2006,12 +2006,12 @@ Any existing files are overwritten.</p>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Prints to the standard output</span>
-adb bugreport
-
-<span class="c1"># Writes to a file named bugreport.txt</span>
-adb bugreport &gt; bugreport.txt
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Prints to the standard output</span>
+</span></span><span class="line"><span class="cl">adb bugreport
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Writes to a file named bugreport.txt</span>
+</span></span><span class="line"><span class="cl">adb bugreport &gt; bugreport.txt
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>Get list of all connected devices</strong></p>
 <div class="highlight"><div class="chroma">
@@ -2019,8 +2019,8 @@ adb bugreport &gt; bugreport.txt
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb devices
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb devices
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="logging">Logging</h3>
 <p>Of Course this is inbuilt into the IDE , but its worth knowing that it&rsquo;s not just a window which you use in Android Studio, but so much more.</p>
@@ -2052,30 +2052,30 @@ adb bugreport &gt; bugreport.txt
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Dumps log entries from 3 log buffers: main, events and radio</span>
-adb logcat
-
-<span class="c1"># Dumps log entries in long format</span>
-adb logcat -v long
-
-<span class="c1"># Dumps log entries into rotated log files on the device</span>
-adb logcat -f /sdcard/Download/Android.log -r <span class="m">1024</span> -n <span class="m">8</span>
-
-<span class="c1"># Dumps only error log entries generated from the &#34;AndroidRuntime&#34; process, including Java exceptions</span>
-adb logcat AndroidRuntime:E *:S
-
-<span class="c1"># Clears (flushes) the entire log and exits</span>
-adb logcat -c
-
-<span class="c1"># Dumps the log to the screen and exits</span>
-adb logcat -d
-
-<span class="c1"># Writes log message output to a file. The default is the &#34;stdout - Standard Output&#34;</span>
-adb logcat -f &lt;filename&gt;
-
-<span class="c1"># Prints the size of the specified log buffer and exits</span>
-adb logcat -g
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Dumps log entries from 3 log buffers: main, events and radio</span>
+</span></span><span class="line"><span class="cl">adb logcat
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Dumps log entries in long format</span>
+</span></span><span class="line"><span class="cl">adb logcat -v long
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Dumps log entries into rotated log files on the device</span>
+</span></span><span class="line"><span class="cl">adb logcat -f /sdcard/Download/Android.log -r <span class="m">1024</span> -n <span class="m">8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Dumps only error log entries generated from the &#34;AndroidRuntime&#34; process, including Java exceptions</span>
+</span></span><span class="line"><span class="cl">adb logcat AndroidRuntime:E *:S
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Clears (flushes) the entire log and exits</span>
+</span></span><span class="line"><span class="cl">adb logcat -c
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Dumps the log to the screen and exits</span>
+</span></span><span class="line"><span class="cl">adb logcat -d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Writes log message output to a file. The default is the &#34;stdout - Standard Output&#34;</span>
+</span></span><span class="line"><span class="cl">adb logcat -f &lt;filename&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Prints the size of the specified log buffer and exits</span>
+</span></span><span class="line"><span class="cl">adb logcat -g
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>Logcat Format</strong></p>
 <p>To define the format of each log entry that is dumped , you need to set the output format for log messages</p>
@@ -2106,30 +2106,30 @@ adb logcat -g
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># The default is brief format</span>
-adb logcat -v &lt;format&gt;
-
-<span class="c1"># Display priority/tag and the PID of process issuing the message (the default format)</span>
-adb logcat -v brief
-
-<span class="c1"># Display PID with the log info </span>
-adb logcat -v process
-
-<span class="c1"># Display the raw log message, with no other metadata fields</span>
-adb logcat -v raw
-
-<span class="c1"># Display the date, invocation time, priority/tag, and PID of the process issuing the message</span>
-adb logcat -v <span class="nb">time</span>
-
-<span class="c1"># Display the priority, tag, and the PID and TID of the thread issuing the message</span>
-adb logcat -v thread
-
-<span class="c1"># Display the date, invocation time, priority, tag, and the PID and TID of the thread issuing the message</span>
-adb logcat -v threadtime
-
-<span class="c1"># Display all metadata fields and separate messages with a blank lines</span>
-adb logcat -v long
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># The default is brief format</span>
+</span></span><span class="line"><span class="cl">adb logcat -v &lt;format&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Display priority/tag and the PID of process issuing the message (the default format)</span>
+</span></span><span class="line"><span class="cl">adb logcat -v brief
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Display PID with the log info </span>
+</span></span><span class="line"><span class="cl">adb logcat -v process
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Display the raw log message, with no other metadata fields</span>
+</span></span><span class="line"><span class="cl">adb logcat -v raw
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Display the date, invocation time, priority/tag, and PID of the process issuing the message</span>
+</span></span><span class="line"><span class="cl">adb logcat -v <span class="nb">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Display the priority, tag, and the PID and TID of the thread issuing the message</span>
+</span></span><span class="line"><span class="cl">adb logcat -v thread
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Display the date, invocation time, priority, tag, and the PID and TID of the thread issuing the message</span>
+</span></span><span class="line"><span class="cl">adb logcat -v threadtime
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Display all metadata fields and separate messages with a blank lines</span>
+</span></span><span class="line"><span class="cl">adb logcat -v long
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>Filter your log data</strong></p>
 <p>A few people would say that we can always use <code>| grep &quot;filter_text&quot;</code> appended to the <code>adb logcat</code>. Well you are right you can , but there are some neat tricks hidden in the actual implementation of logcat and you should look at them too.</p>
@@ -2138,8 +2138,8 @@ adb logcat -v long
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb logcat &lt;options&gt; &lt;process-tag&gt;:&lt;priority-code&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb logcat &lt;options&gt; &lt;process-tag&gt;:&lt;priority-code&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>When filters are provided, the &ldquo;logcat&rdquo; command will dump log entries that are generated from specified processes with priorities higher than the specified code, plus all log entries that generated from unspecified processes.</p>
@@ -2179,24 +2179,24 @@ adb logcat -v long
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Remounts the /system partition on the device read-write</span>
-adb remount
-
-<span class="c1"># Reboots the device, optionally into the bootloader or recovery program</span>
-adb reboot <span class="o">[</span>bootloader<span class="p">|</span>recovery<span class="o">]</span>
-
-<span class="c1"># Reboots the device into the bootloader</span>
-adb reboot-bootloader
-
-<span class="c1"># Restarts the adbd daemon with root permissions</span>
-adb root
-
-<span class="c1"># Restarts the adbd daemon listening on USB</span>
-adb usb
-
-<span class="c1"># Restarts the adbd daemon listening on TCP on the specified port</span>
-adb tcpip &lt;port&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Remounts the /system partition on the device read-write</span>
+</span></span><span class="line"><span class="cl">adb remount
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Reboots the device, optionally into the bootloader or recovery program</span>
+</span></span><span class="line"><span class="cl">adb reboot <span class="o">[</span>bootloader<span class="p">|</span>recovery<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Reboots the device into the bootloader</span>
+</span></span><span class="line"><span class="cl">adb reboot-bootloader
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Restarts the adbd daemon with root permissions</span>
+</span></span><span class="line"><span class="cl">adb root
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Restarts the adbd daemon listening on USB</span>
+</span></span><span class="line"><span class="cl">adb usb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Restarts the adbd daemon listening on TCP on the specified port</span>
+</span></span><span class="line"><span class="cl">adb tcpip &lt;port&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><hr />
 <h3 id="some-other-base-functionality">Some other base functionality</h3>
@@ -2210,12 +2210,12 @@ adb tcpip &lt;port&gt;
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Show help about all commands for adb, check this to get info about more commands in adb</span>
-adb <span class="nb">help</span>
-
-<span class="c1"># Shows the version number for adb</span>
-adb version
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Show help about all commands for adb, check this to get info about more commands in adb</span>
+</span></span><span class="line"><span class="cl">adb <span class="nb">help</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Shows the version number for adb</span>
+</span></span><span class="line"><span class="cl">adb version
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Comment/Suggestions always welcome.</p>
 <p>If you would like to get more of such android tips and tricks, just hop onto my <strong><a href="https://github.com/nisrulz/android-tips-tricks">Android Tips &amp; Tricks</a></strong> github repository. I keep updating it constantly.</p>
@@ -2691,7 +2691,7 @@ adb version
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

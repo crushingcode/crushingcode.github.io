@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1768,8 +1768,8 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">pandoc integration_guide.md -s -o integration_guide.pdf
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">pandoc integration_guide.md -s -o integration_guide.pdf
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>As soon as I ran this command, it threw an error:</p>
 <div class="highlight"><div class="chroma">
@@ -1778,9 +1778,9 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">Error producing PDF.
-! Package inputenc Error: Unicode character 😅 <span class="o">(</span>U+1F605<span class="o">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">Error producing PDF.
+</span></span><span class="line"><span class="cl">! Package inputenc Error: Unicode character 😅 <span class="o">(</span>U+1F605<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>So it cannot handle emojis! Oh no 😕</p>
 <p>Anyways, I still wanted to confirm it works, so I got rid of all emojis in the markdown file and ran the command again.</p>
@@ -1806,8 +1806,8 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">grip integration_guide.md
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">grip integration_guide.md
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>&hellip; this will start a local server with a url, <code>http://localhost:6419/</code></p>
 <div class="highlight"><div class="chroma">
@@ -1820,13 +1820,13 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"> * Serving Flask app <span class="s2">&#34;grip.app&#34;</span> <span class="o">(</span>lazy loading<span class="o">)</span>
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on http://localhost:6419/ <span class="o">(</span>Press CTRL+C to quit<span class="o">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"> * Serving Flask app <span class="s2">&#34;grip.app&#34;</span> <span class="o">(</span>lazy loading<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> * Environment: production
+</span></span><span class="line"><span class="cl">   WARNING: This is a development server. Do not use it in a production deployment.
+</span></span><span class="line"><span class="cl">   Use a production WSGI server instead.
+</span></span><span class="line"><span class="cl"> * Debug mode: off
+</span></span><span class="line"><span class="cl"> * Running on http://localhost:6419/ <span class="o">(</span>Press CTRL+C to quit<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>On opening <code>http://localhost:6419/</code> in a browser of your choice (I use MS Edge), you are presented with a nice Github Flavored Markdown render of your file</p>
 <p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_2.png" alt="Local server-rendered markdown file in browser" /></p>
@@ -1840,8 +1840,8 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">cat integration_guide.md <span class="p">|</span> grip - --export integration_guide.html <span class="o">&amp;&amp;</span> open integration_guide.html
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">cat integration_guide.md <span class="p">|</span> grip - --export integration_guide.html <span class="o">&amp;&amp;</span> open integration_guide.html
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>which I converted into a bash function like below:</p>
 <div class="highlight"><div class="chroma">
@@ -1883,42 +1883,42 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Drop these in your ~/.bashrc or ~/.zshrc file</span>
-
-<span class="c1"># Single command to open a file in your OS</span>
-<span class="c1"># Use as: openFile filename.extension</span>
-<span class="k">function</span> openFile<span class="o">(){</span>
-    <span class="c1"># Open the generated output file</span>
-    <span class="k">if</span> <span class="o">[[</span> <span class="k">$(</span>uname -s<span class="k">)</span> <span class="o">==</span> <span class="s2">&#34;Darwin&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="c1"># macOS</span>
-        open <span class="nv">$1</span>
-    <span class="k">else</span>
-        <span class="c1"># Linux</span>
-        xdg-open <span class="nv">$1</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-
-<span class="c1"># Convert Markdown to HTML</span>
-<span class="c1"># Dependency: Install grip, https://github.com/joeyespo/grip</span>
-<span class="c1"># Use as: convertMarkdownToHtml your_markdown_file.md</span>
-<span class="c1"># Use as with open flag: convertMarkdownToHtml your_markdown_file.md --open</span>
-<span class="k">function</span> convertMarkdownToHtml<span class="o">(){</span>
-    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$1</span> <span class="o">==</span> *<span class="s2">&#34;.md&#34;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="c1"># Filename without extension</span>
-        <span class="nb">local</span> <span class="nv">FILE_NAME</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> .md<span class="k">)</span>
-        <span class="nb">local</span> <span class="nv">OUTPUT_FILE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$FILE_NAME</span><span class="s2">.html&#34;</span>
-        <span class="c1"># Read the markdown file and then convert it to an HTML file</span>
-        cat <span class="nv">$FILE_NAME</span>.md <span class="p">|</span> grip - --export <span class="nv">$OUTPUT_FILE</span>
-
-        <span class="k">if</span> <span class="o">[[</span> <span class="nv">$2</span> <span class="o">==</span> <span class="s2">&#34;--open&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-          <span class="c1"># Open the generated output file</span>
-          openFile <span class="nv">$OUTPUT_FILE</span>
-        <span class="k">fi</span>
-    <span class="k">else</span>
-        <span class="nb">echo</span> <span class="s2">&#34;Passed file is not of markdown type. Please pass a .md file&#34;</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Drop these in your ~/.bashrc or ~/.zshrc file</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Single command to open a file in your OS</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use as: openFile filename.extension</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> openFile<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Open the generated output file</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[[</span> <span class="k">$(</span>uname -s<span class="k">)</span> <span class="o">==</span> <span class="s2">&#34;Darwin&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># macOS</span>
+</span></span><span class="line"><span class="cl">        open <span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Linux</span>
+</span></span><span class="line"><span class="cl">        xdg-open <span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Convert Markdown to HTML</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Dependency: Install grip, https://github.com/joeyespo/grip</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use as: convertMarkdownToHtml your_markdown_file.md</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use as with open flag: convertMarkdownToHtml your_markdown_file.md --open</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> convertMarkdownToHtml<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$1</span> <span class="o">==</span> *<span class="s2">&#34;.md&#34;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Filename without extension</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">local</span> <span class="nv">FILE_NAME</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> .md<span class="k">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">local</span> <span class="nv">OUTPUT_FILE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$FILE_NAME</span><span class="s2">.html&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Read the markdown file and then convert it to an HTML file</span>
+</span></span><span class="line"><span class="cl">        cat <span class="nv">$FILE_NAME</span>.md <span class="p">|</span> grip - --export <span class="nv">$OUTPUT_FILE</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[[</span> <span class="nv">$2</span> <span class="o">==</span> <span class="s2">&#34;--open&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">          <span class="c1"># Open the generated output file</span>
+</span></span><span class="line"><span class="cl">          openFile <span class="nv">$OUTPUT_FILE</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Passed file is not of markdown type. Please pass a .md file&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Using the bash function, I simply need to call the below line of code:</p>
 <div class="highlight"><div class="chroma">
@@ -1926,8 +1926,8 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">convertMarkdownToHtml integration_guide.md
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">convertMarkdownToHtml integration_guide.md
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Aditionally if called with the command with <code>--open</code> flag:</p>
 <div class="highlight"><div class="chroma">
@@ -1935,8 +1935,8 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">convertMarkdownToHtml integration_guide.md --open
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">convertMarkdownToHtml integration_guide.md --open
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Then the generated HTML file is opened in the associated Browser window!</p>
 <p>At this point I can open the generated HTML file and utilize the <strong>Print</strong> functionality of the browser (<strong>CMD</strong> + <strong>P</strong>/ <strong>Ctrl</strong> + <strong>P</strong>) to save as PDF:</p>
@@ -1982,38 +1982,36 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </span><span class="lnt">25
 </span><span class="lnt">26
 </span><span class="lnt">27
-</span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">puppeteer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;puppeteer&#39;</span><span class="p">);</span>
-
-<span class="p">(</span><span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// Get the cmdline arguments
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">myArgs</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-    <span class="c1">// The first argument is the HTML file
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">inputHtmlFile</span> <span class="o">=</span> <span class="nx">myArgs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="c1">// Extract the filename from input file, to create the output filename
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">outputHtmlFileName</span> <span class="o">=</span> <span class="nx">inputHtmlFile</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\.[^/.]+$/</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.pdf&#39;</span>
-    <span class="c1">// Prepare the file path
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="s1">&#39;file:///&#39;</span> <span class="o">+</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nx">inputHtmlFile</span>
-
-    <span class="c1">// Launch the headless browser
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">browser</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">puppeteer</span><span class="p">.</span><span class="nx">launch</span><span class="p">();</span>
-    <span class="kr">const</span> <span class="nx">page</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">newPage</span><span class="p">();</span>
-    <span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="p">{</span> <span class="nx">waitUntil</span><span class="o">:</span> <span class="s1">&#39;networkidle0&#39;</span> <span class="p">});</span>
-     <span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">pdf</span><span class="p">({</span>
-        <span class="nx">path</span><span class="o">:</span> <span class="nx">outputHtmlFileName</span><span class="p">,</span>
-        <span class="nx">printBackground</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nx">format</span><span class="o">:</span> <span class="s1">&#39;A4&#39;</span><span class="p">,</span>
-        <span class="nx">margin</span><span class="o">:</span> <span class="p">{</span>
-            <span class="nx">left</span><span class="o">:</span> <span class="s2">&#34;40px&#34;</span><span class="p">,</span>
-            <span class="nx">right</span><span class="o">:</span> <span class="s2">&#34;40px&#34;</span><span class="p">,</span>
-        <span class="p">}</span>
-    <span class="p">});</span>
-    <span class="kr">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
-<span class="p">})();</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">puppeteer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;puppeteer&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Get the cmdline arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">myArgs</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// The first argument is the HTML file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">inputHtmlFile</span> <span class="o">=</span> <span class="nx">myArgs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Extract the filename from input file, to create the output filename
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">outputHtmlFileName</span> <span class="o">=</span> <span class="nx">inputHtmlFile</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\.[^/.]+$/</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.pdf&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Prepare the file path
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="s1">&#39;file:///&#39;</span> <span class="o">+</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nx">inputHtmlFile</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Launch the headless browser
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">browser</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">puppeteer</span><span class="p">.</span><span class="nx">launch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">page</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">newPage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span> <span class="p">{</span> <span class="nx">waitUntil</span><span class="o">:</span> <span class="s1">&#39;networkidle0&#39;</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">     <span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">pdf</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">path</span><span class="o">:</span> <span class="nx">outputHtmlFileName</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">printBackground</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">format</span><span class="o">:</span> <span class="s1">&#39;A4&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">margin</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">left</span><span class="o">:</span> <span class="s2">&#34;40px&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">right</span><span class="o">:</span> <span class="s2">&#34;40px&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">})();</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Now in order to execute my <code>renderToPdf.js</code> script I need to execute in terminal the below command:</p>
 <div class="highlight"><div class="chroma">
@@ -2021,8 +2019,8 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">node renderToPdf.js integration_guide.html
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">node renderToPdf.js integration_guide.html
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>Checkout the final generated <a href="/images/posts/how-to-convert-markdown-to-pdf/puppeteer_gen_integration_guide.pdf">integration_guide.pdf</a> file via Puppeteer.</p>
@@ -2055,30 +2053,30 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Convert Markdown to PDF</span>
-<span class="c1"># Use as: convertMarkdownToPdf your_markdown_file.md</span>
-<span class="c1"># Use as with open flag: convertMarkdownToPdf your_markdown_file.md --open</span>
-<span class="k">function</span> convertMarkdownToPdf<span class="o">(){</span>
-    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$1</span> <span class="o">==</span> *<span class="s2">&#34;.md&#34;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="c1"># Filename without extension</span>
-        <span class="nb">local</span> <span class="nv">FILE_NAME</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> .md<span class="k">)</span>
-        <span class="nb">local</span> <span class="nv">TEMP_FILE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$FILE_NAME</span><span class="s2">.html&#34;</span>
-        <span class="c1"># Read the markdown file and then convert it to an HTML file</span>
-        cat <span class="nv">$FILE_NAME</span>.md <span class="p">|</span> grip - --export <span class="nv">$TEMP_FILE</span>
-        <span class="c1"># Render HTML to PDF</span>
-        node renderToPdf.js <span class="nv">$TEMP_FILE</span>
-        <span class="c1"># Remove intermediate html file</span>
-        rm <span class="nv">$TEMP_FILE</span>
-
-        <span class="k">if</span> <span class="o">[[</span> <span class="nv">$2</span> <span class="o">==</span> <span class="s2">&#34;--open&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-          <span class="c1"># Open the generated output file</span>
-          openFile <span class="nv">$FILE_NAME</span>.pdf
-        <span class="k">fi</span>
-    <span class="k">else</span>
-        <span class="nb">echo</span> <span class="s2">&#34;Passed file is not of markdown type. Please pass a .md file&#34;</span>
-    <span class="k">fi</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Convert Markdown to PDF</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use as: convertMarkdownToPdf your_markdown_file.md</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use as with open flag: convertMarkdownToPdf your_markdown_file.md --open</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> convertMarkdownToPdf<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$1</span> <span class="o">==</span> *<span class="s2">&#34;.md&#34;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Filename without extension</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">local</span> <span class="nv">FILE_NAME</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> .md<span class="k">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">local</span> <span class="nv">TEMP_FILE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$FILE_NAME</span><span class="s2">.html&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Read the markdown file and then convert it to an HTML file</span>
+</span></span><span class="line"><span class="cl">        cat <span class="nv">$FILE_NAME</span>.md <span class="p">|</span> grip - --export <span class="nv">$TEMP_FILE</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Render HTML to PDF</span>
+</span></span><span class="line"><span class="cl">        node renderToPdf.js <span class="nv">$TEMP_FILE</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Remove intermediate html file</span>
+</span></span><span class="line"><span class="cl">        rm <span class="nv">$TEMP_FILE</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[[</span> <span class="nv">$2</span> <span class="o">==</span> <span class="s2">&#34;--open&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">          <span class="c1"># Open the generated output file</span>
+</span></span><span class="line"><span class="cl">          openFile <span class="nv">$FILE_NAME</span>.pdf
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Passed file is not of markdown type. Please pass a .md file&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Using the bash function, I simply need to call the below line of code:</p>
 <div class="highlight"><div class="chroma">
@@ -2086,8 +2084,8 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">convertMarkdownToPdf integration_guide.md
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">convertMarkdownToPdf integration_guide.md
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>NOTE: The bash function has been renamed from <code>convertMarkdownToHtml</code> to  <code>convertMarkdownToPdf</code></p>
@@ -2098,8 +2096,8 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">convertMarkdownToPdf integration_guide.md --open
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">convertMarkdownToPdf integration_guide.md --open
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Then the generated PDF file is opened in the associated PDF file reader!</p>
 <p>That&rsquo;s it! Everything works 😎 It is quick and solved my immediate requirement.</p>
@@ -2576,7 +2574,7 @@ There are possibly many other tools, which could have been useful too i.e <a hre
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

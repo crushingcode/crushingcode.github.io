@@ -56,7 +56,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 04 Apr 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/gdg_ahmedabad_apr_2020/</guid>
-        <description>GDG Ahmedabad Live Webinar, Ahmedabad, India Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        <description>GDG Ahmedabad Live Webinar, Ahmedabad, India Abstract Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -88,7 +88,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 09 Nov 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/devfest_berlin_2019/</guid>
-        <description>Devfest&#39;19, Berlin, Germany Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        <description>Devfest&#39;19, Berlin, Germany Abstract Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -120,7 +120,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 25 Sep 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/droidcon_greece_2019/</guid>
-        <description>Droidcon Greece &amp;lsquo;19, Heraklion, Greece Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        <description>Droidcon Greece &amp;lsquo;19, Heraklion, Greece Abstract Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -152,7 +152,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 19 Sep 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/droidcon_vienna_2019/</guid>
-        <description>Droidcon Vienna &amp;lsquo;19, Vienna, Austria Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        <description>Droidcon Vienna &amp;lsquo;19, Vienna, Austria Abstract Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -184,7 +184,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 24 Jun 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/devoxx_pl_2019/</guid>
-        <description>Devoxx Poland &amp;lsquo;19, Krakow, Poland Abstract   Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        <description>Devoxx Poland &amp;lsquo;19, Krakow, Poland Abstract Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -216,7 +216,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 28 Mar 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/automated-localization-using-gsheets/</guid>
-        <description>TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 🐼  So this started when I found the below tweet:</description>
+        <description>TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 🐼 So this started when I found the below tweet:</description>
         
         <dc:creator>Nishant</dc:creator>
         
@@ -316,7 +316,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 08 Oct 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/gdgnd_8_oct_2016/</guid>
-        <description>Google Developer Group New Delhi, New Delhi, India Abstract   Learn about how you can master various tools in Android to become an efficient and productive Android Dev,</description>
+        <description>Google Developer Group New Delhi, New Delhi, India Abstract Learn about how you can master various tools in Android to become an efficient and productive Android Dev,</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -401,7 +401,7 @@
         <atom:modified>Tue, 21 Jul 2015 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
         <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
- they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
+they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
         
         <dc:creator>Nishant</dc:creator>
         

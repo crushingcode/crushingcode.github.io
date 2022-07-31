@@ -122,7 +122,7 @@ That means if you have been using them in your project then you need to replace 
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 01 Mar 2022 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/reducing-mammoth-gradle-caches/</guid>
-        <description>Once in a while I notice disk used up in my developer machine, taking up considerable space. Since I am an Android Engineer, I mostly work with Gradle build tool.</description>
+        <description>Once in a while I notice space occupied in my dev machine to be considerable. Since I am an Android Engineer, I mostly work with Gradle build tool.</description>
         
         <dc:creator>Nishant</dc:creator>
         
@@ -255,7 +255,7 @@ Backstory It was built with a core idea and vision, to enable indie developers f
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Thu, 28 Mar 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/automated-localization-using-gsheets/</guid>
-        <description>TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 🐼  So this started when I found the below tweet:</description>
+        <description>TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 🐼 So this started when I found the below tweet:</description>
         
         <dc:creator>Nishant</dc:creator>
         
@@ -353,7 +353,7 @@ It has been a pain point for Android developers all over the world. It is no bra
         <atom:modified>Sat, 29 Jul 2017 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/</guid>
         <description>DISCLAIMER: If you consider yourself a beginner, intermediate, expert or a ninja in the Android realm, this secret sauce still applies to you.
- TL;DR: Build Something.</description>
+TL;DR: Build Something.</description>
         
         <dc:creator>Nishant</dc:creator>
         
@@ -683,7 +683,7 @@ You checkout the other guide: Guide to publishing your Android Library via Maven
         <atom:modified>Mon, 02 May 2016 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/the-curious-case-of-dependency-conflicts/</guid>
         <description>If I were to ask a question to a room filled with android developers
- &amp;ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?</description>
+&amp;ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?</description>
         
         <dc:creator>Nishant</dc:creator>
         
@@ -779,7 +779,7 @@ Do you want to host your artifacts in your own private repository?</description>
         <atom:modified>Tue, 21 Jul 2015 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
         <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
- they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
+they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
         
         <dc:creator>Nishant</dc:creator>
         

@@ -28,7 +28,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 21 Oct 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/codemotion_online_2020/</guid>
-        <description>Codemotion Online 2020, Online Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+        <description>Codemotion Online 2020, Online Abstract Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -56,7 +56,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Wed, 27 May 2020 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/codemotion_amsterdam_2020/</guid>
-        <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them.</description>
+        <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         
@@ -84,7 +84,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Sat, 26 Oct 2019 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/mobilization_ix_2019/</guid>
-        <description>Mobilization IX, Łódź, Poland Abstract   Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+        <description>Mobilization IX, Łódź, Poland Abstract Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         

@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1782,47 +1782,47 @@ Do you want to host your artifacts in your own private repository?</p>
 </span><span class="lnt">40
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1">### Create Maven Repository</span>
-<span class="c1"># Create a directory named mavenrepo</span>
-mkdir mavenrepo
-
-<span class="c1"># Move into the dir</span>
-<span class="nb">cd</span> mavenrepo
-
-<span class="c1"># Initialise with git</span>
-git init
-
-<span class="c1"># Add remote repo</span>
-git remote add origin git@github.com:&lt;username&gt;/&lt;mavenrepo&gt;.git
-
-<span class="c1"># Create releases and snapshots dir </span>
-mkdir releases snapshots
-
-<span class="c1"># Create README.md under each dir</span>
-touch releases/README.md
-touch snapshots/README.md
-
-<span class="c1"># Git add all files</span>
-git add .
-
-<span class="c1"># Git commit with a msg</span>
-git commit -m <span class="s2">&#34;Initial Setup&#34;</span>
-
-<span class="c1"># Push to remote</span>
-git push origin master
-
-<span class="c1">### Generating maven artifacts</span>
-mvn clean org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file <span class="se">\
-</span><span class="se"></span>-DgroupId<span class="o">=</span>com.company.id -DartifactId<span class="o">=</span>artificat-id -Dversion<span class="o">=</span>1.0.0 <span class="se">\
-</span><span class="se"></span>-DpomFile<span class="o">=</span>pom.xml -Dpackaging<span class="o">=</span>aar -Dfile<span class="o">=</span>artifact.aar  <span class="se">\
-</span><span class="se"></span>-DlocalRepositoryPath<span class="o">=</span>./mavenrepo/releases/aar <span class="se">\
-</span><span class="se"></span>-DgeneratePom<span class="o">=</span><span class="nb">true</span> -DcreateChecksum<span class="o">=</span><span class="nb">true</span>
-
-<span class="c1">### Adding and pushing artifacts to remote maven repo</span>
-git add .
-git commit -m <span class="s2">&#34;&lt;artifact&gt; v1.0.0 added&#34;</span>
-git push origin master
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1">### Create Maven Repository</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a directory named mavenrepo</span>
+</span></span><span class="line"><span class="cl">mkdir mavenrepo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Move into the dir</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> mavenrepo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Initialise with git</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add remote repo</span>
+</span></span><span class="line"><span class="cl">git remote add origin git@github.com:&lt;username&gt;/&lt;mavenrepo&gt;.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create releases and snapshots dir </span>
+</span></span><span class="line"><span class="cl">mkdir releases snapshots
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create README.md under each dir</span>
+</span></span><span class="line"><span class="cl">touch releases/README.md
+</span></span><span class="line"><span class="cl">touch snapshots/README.md
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Git add all files</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Git commit with a msg</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Initial Setup&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Push to remote</span>
+</span></span><span class="line"><span class="cl">git push origin master
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### Generating maven artifacts</span>
+</span></span><span class="line"><span class="cl">mvn clean org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-DgroupId<span class="o">=</span>com.company.id -DartifactId<span class="o">=</span>artificat-id -Dversion<span class="o">=</span>1.0.0 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-DpomFile<span class="o">=</span>pom.xml -Dpackaging<span class="o">=</span>aar -Dfile<span class="o">=</span>artifact.aar  <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-DlocalRepositoryPath<span class="o">=</span>./mavenrepo/releases/aar <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-DgeneratePom<span class="o">=</span><span class="nb">true</span> -DcreateChecksum<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### Adding and pushing artifacts to remote maven repo</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;&lt;artifact&gt; v1.0.0 added&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin master
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>For the rest of you who want a complete explanation, lets dive in</strong>..</p>
 <h2 id="terminology">Terminology</h2>
@@ -1872,7 +1872,7 @@ touch snapshots/README.md
 </code></pre><p><strong>Step 7</strong> : Stage all the changed files under git, using the below command</p>
 <pre tabindex="0"><code>git add .
 </code></pre><p><strong>Step 8</strong> : Commit with a message</p>
-<pre tabindex="0"><code>git commit -m &quot;Initial Setup&quot;
+<pre tabindex="0"><code>git commit -m &#34;Initial Setup&#34;
 </code></pre><p><strong>Step 9</strong> : Push to origin</p>
 <pre tabindex="0"><code>git push origin master
 </code></pre><p>Thats It!<br />
@@ -1906,7 +1906,7 @@ Simple,</p>
 </ul>
 <p><strong>Step 11</strong> : Once you are done generating the maven artifacts and they are deployed under the specific folder ( releases/snapshots), just stage them, commit and push it to your remote repo…</p>
 <pre tabindex="0"><code>git add .
-git commit -m &quot;&lt;artifact&gt; v1.0.0 added&quot;
+git commit -m &#34;&lt;artifact&gt; v1.0.0 added&#34;
 git push origin master
 </code></pre><p>Repeat <em><strong>Steps 10-11</strong></em> every time you want to publish a maven artifact to your own maven repository.</p>
 <h2 id="whats-next">Whats Next</h2>
@@ -2382,7 +2382,7 @@ git push origin master
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

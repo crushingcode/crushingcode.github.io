@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1386,7 +1386,7 @@
     "datePublished": "2022-03-01T00:00:00Z",
     "dateModified": "2022-03-01T00:00:00Z",
     "url" : "https://crushingcode.nisrulz.com/posts/reducing-mammoth-gradle-caches/",
-    "description": "Once in a while I notice disk used up in my developer machine, taking up considerable space. Since I am an Android Engineer, I mostly work with Gradle build tool.",
+    "description": "Once in a while I notice space occupied in my dev machine to be considerable. Since I am an Android Engineer, I mostly work with Gradle build tool.",
     "keywords": ["gradle"],
     "author": {
       "@type": "Person",
@@ -1716,7 +1716,7 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Mar 1, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;6&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Nishant</span>
   
@@ -1749,7 +1749,7 @@
   
 </figure>
 <br/>
-<p>Once in a while I notice disk used up in my developer machine, taking up considerable space. Since I am an Android Engineer, I mostly work with <a href="https://gradle.org/">Gradle build tool</a>.</p>
+<p>Once in a while I notice space occupied in my dev machine to be considerable. Since I am an Android Engineer, I mostly work with <a href="https://gradle.org/">Gradle build tool</a>.</p>
 <p>Gradle maintains a cache of all dependencies it downloads as well as other artifacts such as downloaded wrappers at the path <code>~/.gradle</code>. Now you&rsquo;ll be surprized to know how much space this <code>.gradle</code> directory occupies. Lets try to find out.</p>
 <p>I&rsquo;ll use a tool called <a href="https://ss64.com/bash/du.html"><code>du</code></a>. This is usually present on all unix systems (I am using macOS).</p>
 <p>To check the space occupied by <code>.gradle</code> directory, you need to run the below command in a terminal window:</p>
@@ -1758,13 +1758,13 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">du -sh ~/.gradle
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">du -sh ~/.gradle
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>here <code>-sh</code> just means the output will be total value in a human readable format with a size letter such as &lsquo;M&rsquo; for megabytes/&lsquo;G&rsquo; for gigabytes. Read the <a href="https://ss64.com/bash/du.html">docs</a> for more details.</p>
+</div><p>here <code>-sh</code> just means the output will be total value in a human readable format with a size letter such as <strong>M</strong> for megabytes/<strong>G</strong> for gigabytes. Read the <a href="https://ss64.com/bash/du.html">docs</a> for more details.</p>
 <p>When I ran this command in my machine this was the result:</p>
 <p><img src="/images/posts/reducing-mammoth-gradle-caches/img_1.png" alt="Size of .gradle dir" /></p>
-<p>Because I use this often, I have created an alias for this, shown below:</p>
+<p>Because I use this often, I have created an alias for this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1774,31 +1774,53 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Drop this aliases in your ~/.bashrc or ~/.zshrc file</span>
-
-<span class="c1"># Find the size of your .gradle directory</span>
-<span class="c1"># Usage: gradleCacheSize</span>
-<span class="nb">alias</span> <span class="nv">gradleCacheSize</span><span class="o">=</span><span class="s1">&#39;du -sh ~/.gradle&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Drop this aliases in your ~/.bashrc or ~/.zshrc file</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Find the size of your .gradle directory</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage: gradleDirSize</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">gradleDirSize</span><span class="o">=</span><span class="s1">&#39;du -sh ~/.gradle&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/reducing-mammoth-gradle-caches/meme.png" alt="Gradle meme, why not" /></p>
-<p>Now that is a lot of space occupied by just 1 directory that is just a directory for storing cache, 15 Gb!</p>
-<p>I need to free up some space, but I don&rsquo;t want to delete the whole directory because the cache is useful.</p>
-<p>To handle this case, I came up with a command that will only delete files that are were accessed more than 30 days ago. That way the most used cache files are kept intact and unused/rarely used files are deleted. Lets take a look at it now.</p>
+<p>Now that is a lot of space occupied by just 1 directory that is just a directory for storing caches and other artifacts, 15 Gb!</p>
+<p>I need to free up some space, but I cannot delete the whole directory because gradle build system uses the artifacts and caches inside this directory. Thanks to <a href="https://octyl.net/">Octavia Togami, Gradle Engineer</a> who reached out over email and pointed out this:</p>
+<blockquote>
+<p>&quot; The <code>~/.gradle</code> folder is not only home to caches, it also contains <code>~/.gradle/gradle.properties</code> which sometimes hold data that is not stored elsewhere (API keys) as well as <code>~/.gradle/init.d/</code> which can contain init scripts that run for all projects. These are not cached values, they are added by users.&quot;</p>
+</blockquote>
+<p>However, there is still some hope to free up some space (again pointed in the right direction by Octavia Togami). The subdirectory <code>caches</code> at the path <code>~/.gradle/caches</code> is a good candidate for freeing up space, while not messing up anything else. There are more subdirectories which I will mention towards the end of this post. For now lets focus on ``~/.gradle/caches` directory.</p>
+<p>First let&rsquo;s set up an alias to get the size of <code>~/.gradle/caches</code> directory like I did earlier for <code>~/.gradle</code> directory:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Drop this aliases in your ~/.bashrc or ~/.zshrc file</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Find the size of your ~/.gradle/caches directory</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage: gradleCacheSize</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">gradleCacheSize</span><span class="o">=</span><span class="s1">&#39;du -sh ~/.gradle/caches&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>I will use this later on in the post.</p>
+<p>Now, inside <code>~/.gradle/caches</code> directory, ideally everything is useful. Its a directory which all dependencies that my projects are using and thus are maintained as a quick accessible cache. So deleting them all doesn&rsquo;t make much sense. I came up with a command that will only delete files that are were accessed more than 30 days ago. That way the most used cache files are kept intact and unused/rarely used files are deleted. Lets take a look at it now.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Clean files inside .gradle directory that were accessed more than 30 days ago</span>
-find ~/.gradle -type f -atime +30 -delete
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Clean files inside ~/.gradle/caches directory that were accessed more than 30 days ago</span>
+</span></span><span class="line"><span class="cl">find ~/.gradle/caches -type f -atime +30 -delete
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>here</p>
 <ul>
 <li>
-<p><code>~/.gradle</code> = Path where <a href="https://ss64.com/bash/find.html"><code>find</code></a> will be executed.</p>
+<p><code>~/.gradle/caches</code> = Path where <a href="https://ss64.com/bash/find.html"><code>find</code></a> will be executed.</p>
 </li>
 <li>
 <p><code>-type f</code> =  Only look for files.</p>
@@ -1817,9 +1839,9 @@ find ~/.gradle -type f -atime +30 -delete
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Delete empty directories inside .gradle directory</span>
-find ~/.gradle -mindepth <span class="m">1</span> -type d -empty -delete
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Delete empty directories inside ~/.gradle/caches directory</span>
+</span></span><span class="line"><span class="cl">find ~/.gradle/caches -mindepth <span class="m">1</span> -type d -empty -delete
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>here</p>
 <ul>
@@ -1833,25 +1855,148 @@ find ~/.gradle -mindepth <span class="m">1</span> -type d -empty -delete
 <p><code>-empty</code> = File is empty and is either a regular file or a directory.</p>
 </li>
 </ul>
-<p>I then went ahead and combined the two commands into 1 alias as shown below. Copy and past the below alias in your <code>~/.bashrc</code> or <code>~/.zshrc</code> file:</p>
+<p>Next combine these 2 commands into 1 alias as shown below. Copy and paste the below alias in your <code>~/.bashrc</code> or <code>~/.zshrc</code> file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Clean your .gradle/caches that is older than 30 days</span>
-<span class="c1"># Usage: gradleCleanCache</span>
-<span class="nb">alias</span> <span class="nv">gradleCleanCache</span><span class="o">=</span><span class="s1">&#39;find ~/.gradle -type f -atime +30 -delete \
-</span><span class="s1">&amp;&amp; find ~/.gradle -mindepth 1 -type d -empty -delete&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Clean your ~/.gradle/caches directory of files </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># that were accessed more than 30 days ago and remove empty directories</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage: gradleCleanCache</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">gradleCleanCache</span><span class="o">=</span><span class="s1">&#39;find ~/.gradle/caches -type f -atime +30 -delete &amp;&amp; \
+</span></span></span><span class="line"><span class="cl"><span class="s1">find ~/.gradle/caches -mindepth 1 -type d -empty -delete&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Looks so much better! I executed this alias command to free up my disk space and checked for the occupied space again</p>
 <p><img src="/images/posts/reducing-mammoth-gradle-caches/img_2.png" alt="After deleting older cache files" /></p>
-<p>Nice! I was able to free up 5.7 Gb of disk space. Everything else is useful, thus shouldn&rsquo;t be deleted.</p>
-<p>Enjoy your free space 🎉</p>
+<p>Nice! I was able to free up 5.4 Gb of disk space. As pointed out by Octavia Togami, there are some more directories that are safe to run the above commands against:</p>
+<ul>
+<li><code>~/.gradle/wrapper</code> to clean up old wrappers.</li>
+<li><code>~/.gradle/daemon</code> to clean up old log files.</li>
+</ul>
+<p>To do so, simply replace <code>~/.gradle/caches</code> with <code>~/.gradle/wrapper</code> in the above alias, like so:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Clean your ~/.gradle/wrapper directory of files </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># that were accessed more than 30 days ago and remove empty directories</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage: gradleCleanWrapper</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">gradleCleanWrapper</span><span class="o">=</span><span class="s1">&#39;find ~/.gradle/wrapper -type f -atime +30 -delete &amp;&amp; \
+</span></span></span><span class="line"><span class="cl"><span class="s1">find ~/.gradle/wrapper -mindepth 1 -type d -empty -delete&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Similarly for <code>~/.gradle/daemon</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Clean your ~/.gradle/daemon directory of files </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># that were accessed more than 30 days ago and remove empty directories</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage: gradleCleanDaemon</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">gradleCleanDaemon</span><span class="o">=</span><span class="s1">&#39;find ~/.gradle/daemon -type f -atime +30 -delete &amp;&amp; \
+</span></span></span><span class="line"><span class="cl"><span class="s1">find ~/.gradle/daemon -mindepth 1 -type d -empty -delete&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>As an improvement I created a bash functions to get me total size occupied by all 3 directories mentioned above: <strong>caches</strong>, <strong>wrapper</strong> and <strong>daemon</strong>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Get the size of gradle caches, wrappers and daemons in human readable format</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Depends on: du, awk</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use as: gradleCacheWrapperDaemonsSize</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> gradleCacheWrapperDaemonsSize<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">DIR_TO_CHECK</span><span class="o">=(</span><span class="s2">&#34;caches&#34;</span>  <span class="s2">&#34;wrapper&#34;</span>  <span class="s2">&#34;daemon&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> dir in <span class="si">${</span><span class="nv">DIR_TO_CHECK</span><span class="p">[*]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">printf</span> <span class="s2">&#34;  👉 ~/.gradle/</span><span class="nv">$dir</span><span class="s2">: </span><span class="k">$(</span>du -sh ~/.gradle/<span class="nv">$dir</span> <span class="p">|</span> awk <span class="s1">&#39;{ print $1 }&#39;</span><span class="k">)</span><span class="s2">\n&#34;</span>        
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>and another one to clean files inside those 3 directories that were accessed 30 days ago or were empty:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Clean up the gradle caches, wrappers and daemons directory of files </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># that were accessed more than 30 days ago and remove empty directories</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Depends on: gradleCacheWrapperDaemonsSize</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use as: gradleFreeUpSpace</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> gradleFreeUpSpace<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34; [BEFORE Cleanup] Gradle caches size:&#34;</span>
+</span></span><span class="line"><span class="cl">    gradleCacheWrapperDaemonsSize
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;==========================================================&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34; Cleaning up gradle directories ...&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34; &#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34; Working in:&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">DIR_TO_CHECK</span><span class="o">=(</span><span class="s2">&#34;caches&#34;</span>  <span class="s2">&#34;wrapper&#34;</span>  <span class="s2">&#34;daemon&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> dir in <span class="si">${</span><span class="nv">DIR_TO_CHECK</span><span class="p">[*]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34; 👉 ~/.gradle/</span><span class="nv">$dir</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Delete all files accessed 30 days ago</span>
+</span></span><span class="line"><span class="cl">        find ~/.gradle/<span class="nv">$dir</span> -type f -atime +30 -delete
+</span></span><span class="line"><span class="cl">        <span class="c1"># Delete empty directories</span>
+</span></span><span class="line"><span class="cl">        find ~/.gradle/<span class="nv">$dir</span> -mindepth <span class="m">1</span> -type d -empty -delete
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;==========================================================&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34; [AFTER Cleanup] Gradle caches size:&#34;</span>
+</span></span><span class="line"><span class="cl">    gradleCacheWrapperDaemonsSize
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;==========================================================&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34; Done ✅&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>These bash functions have more logs and are exactly the same as what I use on my machine :)</p>
+<p>Thats it! Enjoy your free space 🎉</p>
 <h3 id="credits">Credits</h3>
 <center><a href="https://www.flaticon.com/free-icons/elephant" title="elephant icons">Elephant icons created by Freepik - Flaticon</a></center>
 
@@ -2316,7 +2461,7 @@ find ~/.gradle -mindepth <span class="m">1</span> -type d -empty -delete
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

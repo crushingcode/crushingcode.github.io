@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1377,7 +1377,7 @@
     "datePublished": "2016-05-02T00:00:00Z",
     "dateModified": "2016-05-02T00:00:00Z",
     "url" : "https://crushingcode.nisrulz.com/posts/the-curious-case-of-dependency-conflicts/",
-    "description": "If I were to ask a question to a room filled with android developers  \u0026ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle …",
+    "description": "If I were to ask a question to a room filled with android developers \u0026ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build …",
     "keywords": ["gradle","issue"],
     "author": {
       "@type": "Person",
@@ -1733,7 +1733,7 @@
       
       <p>If I were to ask a question to a room filled with android developers</p>
 <blockquote>
-<p><strong>&ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?&quot;</strong></p>
+<p><strong>&ldquo;How many of you have been in that place of sheer helplessness and panic when your gradle build fails because of a version conflict in dependencies?&rdquo;</strong></p>
 </blockquote>
 <p>..I am pretty sure a lot of them would raise their hand or agree to being in that state and the very first action would be to hop onto stackoverflow and search for possible solutions in this type of a situation.</p>
 <p><img src="/images/posts/depconflicts.jpg" alt="depconflicts" /></p>
@@ -1764,18 +1764,16 @@ You can&rsquo;t just ask all android library developers/team maintaining it to u
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle">
-<span class="n">dependencies</span> <span class="o">{</span>
-    <span class="n">compile</span> <span class="nf">fileTree</span><span class="o">(</span><span class="nl">dir:</span> <span class="s1">&#39;libs&#39;</span><span class="o">,</span> <span class="nl">include:</span> <span class="o">[</span><span class="s1">&#39;*.jar&#39;</span><span class="o">])</span>
-    <span class="n">compile</span> <span class="s1">&#39;com.company1.sdk:libA:1.0.2&#39;</span>
-    <span class="n">compile</span> <span class="s1">&#39;com.company2.sdk:libB:2.0.3&#39;</span>
-    <span class="n">compile</span> <span class="s1">&#39;com.company3.sdk:libC:3.0.4&#39;</span>
-<span class="o">}</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">compile</span> <span class="nf">fileTree</span><span class="o">(</span><span class="nl">dir:</span> <span class="s1">&#39;libs&#39;</span><span class="o">,</span> <span class="nl">include:</span> <span class="o">[</span><span class="s1">&#39;*.jar&#39;</span><span class="o">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">compile</span> <span class="s1">&#39;com.company1.sdk:libA:1.0.2&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">compile</span> <span class="s1">&#39;com.company2.sdk:libB:2.0.3&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">compile</span> <span class="s1">&#39;com.company3.sdk:libC:3.0.4&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Now for you as an android dev the only dependencies in view are <strong>libA</strong>, <strong>libB</strong> and <strong>libC</strong>. You have no idea what these android libraries furthur depend upon.</p>
 <p>The situation which might cause a conflict would be if <strong>libA</strong> depends on say <strong>libD</strong> (version 4.0.4) and <strong>libC</strong> depends on say <strong>libD</strong> (version 4.0.2).</p>
@@ -1790,8 +1788,8 @@ You can&rsquo;t just ask all android library developers/team maintaining it to u
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">./gradlew androidDependencies
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./gradlew androidDependencies
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>..you should get a graph like this</p>
 <div class="highlight"><div class="chroma">
@@ -1806,15 +1804,15 @@ You can&rsquo;t just ask all android library developers/team maintaining it to u
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">...
-release
-+--- com.company1.sdk:libA:1.0.2
-<span class="p">|</span>    +--- com.company4.sdk:libD:4.0.4
-+--- com.company2.sdk:libB:2.0.3
-<span class="p">|</span>
-+--- com.company3.sdk:libA:3.0.4
-     +--- com.company4.sdk:libD:4.0.2
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">release
+</span></span><span class="line"><span class="cl">+--- com.company1.sdk:libA:1.0.2
+</span></span><span class="line"><span class="cl"><span class="p">|</span>    +--- com.company4.sdk:libD:4.0.4
+</span></span><span class="line"><span class="cl">+--- com.company2.sdk:libB:2.0.3
+</span></span><span class="line"><span class="cl"><span class="p">|</span>
+</span></span><span class="line"><span class="cl">+--- com.company3.sdk:libA:3.0.4
+</span></span><span class="line"><span class="cl">     +--- com.company4.sdk:libD:4.0.2
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>..hmm..its becoming a bit more clear now. We can see which version of transitive dependencies are being pulled by which dependency.</p>
 <p>So what exactly happened here?</p>
@@ -1830,8 +1828,8 @@ release
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">./gradlew build --info --stacktrace
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./gradlew build --info --stacktrace
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This should give you a complete log of everything and where exactly the build failed.You can find out the version conflicts and a lot more details in this step.</p>
 <p>In my case this was the very case where I was having a conflict on annotations library introduced by the findbugs gradle plugin.</p>
@@ -1845,15 +1843,13 @@ release
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle">
-<span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
-  <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">failOnVersionConflict</span><span class="o">()</span>
-<span class="o">}</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">failOnVersionConflict</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This should give you more idea about where in your code are version conflicts occuring which were getting implicitly resolved by gradle.</p>
 <p>Secondly, you can force gradle to resolve to the lower version</p>
@@ -1862,14 +1858,12 @@ release
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
-  <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">force</span> <span class="s1">&#39;com.company4.sdk:libD:4.0.2&#39;</span>
-<span class="o">}</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">force</span> <span class="s1">&#39;com.company4.sdk:libD:4.0.2&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This changes the default behaviour of gradle.</p>
 <p>But wait! Resoltion strategy is still causing parts of the same dependency to conflict. HELP!</p>
@@ -1886,14 +1880,14 @@ release
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="c1">// add dependency substitution rules
-</span><span class="c1"></span><span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
-  <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">dependencySubstitution</span> <span class="o">{</span>
-    <span class="c1">// Substitute one module dependency for another
-</span><span class="c1"></span>    <span class="n">substitute</span> <span class="nf">module</span><span class="o">(</span><span class="s1">&#39;com.company4.sdk:libD:4.0.4&#39;</span><span class="o">)</span> <span class="n">with</span> <span class="n">module</span><span class="o">(</span><span class="s1">&#39;com.company4.sdk:libD:4.0.2&#39;</span><span class="o">)</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="c1">// add dependency substitution rules
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">dependencySubstitution</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Substitute one module dependency for another
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">substitute</span> <span class="nf">module</span><span class="o">(</span><span class="s1">&#39;com.company4.sdk:libD:4.0.4&#39;</span><span class="o">)</span> <span class="n">with</span> <span class="n">module</span><span class="o">(</span><span class="s1">&#39;com.company4.sdk:libD:4.0.2&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>NOTE : dependencySubstitution is an incubating functionality and may change in a future version of Gradle<br />
@@ -2343,7 +2337,7 @@ As of writting this post the latest Gradle Version is 2.13 in which this is avai
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

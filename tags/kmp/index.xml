@@ -28,7 +28,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Tue, 28 Sep 2021 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/talks/chicago_roboto_2021/</guid>
-        <description>Chicago Roboto Online Abstract   KMM or Kotlin Multiplatform Mobile is evolving rapidly. So much so that many companies already use it in production.</description>
+        <description>Chicago Roboto Online Abstract KMM or Kotlin Multiplatform Mobile is evolving rapidly. So much so that many companies already use it in production. KMM brings a paradigm shift in sharing code between mobile platforms in a way that allows for greater control over what is shared while leaving the native UI code to the platform.</description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
         

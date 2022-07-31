@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1753,8 +1753,8 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">compile</span> <span class="s1">&#39;com.github.nisrulz:sensey:1.6.0&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">compile</span> <span class="s1">&#39;com.github.nisrulz:sensey:1.6.0&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>..sync your gradle and then initialize Sensey in your activity</p>
 <div class="highlight"><div class="chroma">
@@ -1762,8 +1762,8 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">init</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">init</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>That’s it! Sensey at this point is integrated into your app. Now based on what kind of Gesture you want to detect, you will need to start and stop detectors provided by Sensey.</p>
 <p>Say for the sake of a simple example, if we wanted to detect a Shake Gesture. All you need to do is</p>
@@ -1782,15 +1782,15 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">ShakeDetector</span><span class="o">.</span><span class="na">ShakeListener</span> <span class="n">shakeListener</span><span class="o">=</span><span class="k">new</span> <span class="n">ShakeDetector</span><span class="o">.</span><span class="na">ShakeListener</span><span class="o">()</span> <span class="o">{</span>
-    <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onShakeDetected</span><span class="o">()</span> <span class="o">{</span>
-       <span class="c1">// Shake detected, do something
-</span><span class="c1"></span>   <span class="o">}</span>
-   <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onShakeStopped</span><span class="o">()</span> <span class="o">{</span>
-       <span class="c1">// Shake stopped, do something
-</span><span class="c1"></span>   <span class="o">}</span>
-<span class="o">};</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">ShakeDetector</span><span class="o">.</span><span class="na">ShakeListener</span> <span class="n">shakeListener</span><span class="o">=</span><span class="k">new</span> <span class="n">ShakeDetector</span><span class="o">.</span><span class="na">ShakeListener</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onShakeDetected</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">       <span class="c1">// Shake detected, do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="o">}</span>
+</span></span><span class="line"><span class="cl">   <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onShakeStopped</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">       <span class="c1">// Shake stopped, do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">};</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Now to start listening for Shake gesture, pass the instance <code>shakeListener</code> to <code>startShakeDetection()</code> function</p>
 <div class="highlight"><div class="chroma">
@@ -1798,8 +1798,8 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startShakeDetection</span><span class="o">(</span><span class="n">shakeListener</span><span class="o">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startShakeDetection</span><span class="o">(</span><span class="n">shakeListener</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>To stop listening for Shake gesture, pass the instance <code>shakeListener</code> to <code>stopShakeDetection()</code> function</p>
 <div class="highlight"><div class="chroma">
@@ -1807,8 +1807,8 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">stopShakeDetection</span><span class="o">(</span><span class="n">shakeListener</span><span class="o">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Sensey</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">stopShakeDetection</span><span class="o">(</span><span class="n">shakeListener</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Yup, that’s about all it takes to know if a shake gesture was performed and when it stopped.</p>
 <p>Let’s check out the complete list of gesture detectors Sensey provides</p>
@@ -2327,7 +2327,7 @@ When I first wrote Sensey, it wasn’t perfect. But it did the job well for me. 
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

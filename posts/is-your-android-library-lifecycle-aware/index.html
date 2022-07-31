@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1768,8 +1768,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="nf">project</span><span class="o">(</span><span class="s1">&#39;:awesomelib&#39;</span><span class="o">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">implementation</span> <span class="nf">project</span><span class="o">(</span><span class="s1">&#39;:awesomelib&#39;</span><span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Next you want to add a class to your <code>awesomelib</code> library module. I created mine named as <code>AwesomeMainLib</code> . This class is just to showcase the code for library which will be referenced in the <code>app</code> module later on. For simplicity sake, lets make <code>AwesomeMainLib</code> class a singleton. The code in that case would look like below</p>
 <div class="highlight"><div class="chroma">
@@ -1794,25 +1794,25 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AwesomeLibMain</span> <span class="o">{</span>
-  <span class="kd">static</span> <span class="kd">final</span> <span class="n">AwesomeLibMain</span> <span class="n">ourInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AwesomeLibMain</span><span class="o">();</span>
-
-  <span class="kd">public</span> <span class="kd">static</span> <span class="n">AwesomeLibMain</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">ourInstance</span><span class="o">;</span>
-  <span class="o">}</span>
-
-  <span class="kd">private</span> <span class="nf">AwesomeLibMain</span><span class="o">()</span> <span class="o">{</span>
-  <span class="o">}</span>
-  
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Called From AwesomeLibMain Class, init()&#34;</span><span class="o">);</span>
-  <span class="o">}</span>
-  
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cleanup</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Called From AwesomeLibMain Class, cleanup()&#34;</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AwesomeLibMain</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">static</span> <span class="kd">final</span> <span class="n">AwesomeLibMain</span> <span class="n">ourInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AwesomeLibMain</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kd">static</span> <span class="n">AwesomeLibMain</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ourInstance</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">private</span> <span class="nf">AwesomeLibMain</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Called From AwesomeLibMain Class, init()&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cleanup</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Called From AwesomeLibMain Class, cleanup()&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>and in your <code>app</code> module you would call <code>init()</code> method via <code>AwesomeLibMain.getInstance().init()</code> in <code>onCreate()</code> and <code>cleanup()</code> method via <code>AwesomeLibMain.getInstance().cleanup()</code> in <code>onDestroy()</code> respectively. Here is the code of <code>MainActivity.java</code> class in <code>app</code> module</p>
 <div class="highlight"><div class="chroma">
@@ -1838,26 +1838,26 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
-
-  <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
-    
-    <span class="c1">// Init
-</span><span class="c1"></span>    <span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">init</span><span class="o">();</span>
-  <span class="o">}</span>
-
-  <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
-    
-    <span class="c1">// Cleanup
-</span><span class="c1"></span>    <span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">cleanup</span><span class="o">();</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Init
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">init</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Cleanup
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">cleanup</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>But thats not the point here, right! We do not want the app developer to be calling these themselves. Also what happens if you want to trigger more methods at specific points in lifecycle of Activity/Fragment? The dependence on app developer increases by many folds and expecting them to do everything right is a like a chink in the armour.</p>
 <p>Well let us solve this situation by integrating with Lifecycle Arch Components.</p>
@@ -1869,9 +1869,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s2">&#34;android.arch.lifecycle:runtime:1.0.0&#34;</span>
-<span class="n">annotationProcessor</span> <span class="s2">&#34;android.arch.lifecycle:compiler:1.0.0-beta1&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">implementation</span> <span class="s2">&#34;android.arch.lifecycle:runtime:1.0.0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">annotationProcessor</span> <span class="s2">&#34;android.arch.lifecycle:compiler:1.0.0-beta1&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>and add the below to the <code>build.gradle</code> for <code>app</code> module</p>
 <div class="highlight"><div class="chroma">
@@ -1879,8 +1879,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s2">&#34;com.android.support:appcompat-v7:26.1.0&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">implementation</span> <span class="s2">&#34;com.android.support:appcompat-v7:26.1.0&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>Note: We are using the latest <a href="https://developer.android.com/topic/libraries/support-library/revisions.html#26-1-0">support lib v26.1.0</a> , which now has AppCompatActivity implementing <a href="https://developer.android.com/reference/android/arch/lifecycle/LifecycleOwner.html">LifecycleOwner</a> interface from <a href="https://developer.android.com/topic/libraries/architecture/index.html">Architecture Components</a>. More about this, later in the post. For now just know you need support lib <code>v26.1.0</code></p>
@@ -1900,11 +1900,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_CREATE</span><span class="o">)</span>
-<span class="n">or</span> 
-<span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_DESTROY</span><span class="o">)</span>
-<span class="o">...</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_CREATE</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">or</span> 
+</span></span><span class="line"><span class="cl"><span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_DESTROY</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Once you annotate the right method with the specific annotation, that method would be triggered at the specified lifecycle event state, during the execution of Activity/Fragment.</p>
 <p>Lets have a look at what our <code>AwesomeLibMain</code> class look, after we have annotated the methods</p>
@@ -1962,57 +1962,57 @@
 </span><span class="lnt">50
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">android.arch.lifecycle.Lifecycle</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.arch.lifecycle.LifecycleObserver</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.arch.lifecycle.OnLifecycleEvent</span><span class="o">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AwesomeLibMain</span> <span class="kd">implements</span> <span class="n">LifecycleObserver</span> <span class="o">{</span>
-  <span class="kd">static</span> <span class="kd">final</span> <span class="n">AwesomeLibMain</span> <span class="n">ourInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AwesomeLibMain</span><span class="o">();</span>
-
-  <span class="kd">public</span> <span class="kd">static</span> <span class="n">AwesomeLibMain</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">ourInstance</span><span class="o">;</span>
-  <span class="o">}</span>
-
-  <span class="kd">private</span> <span class="nf">AwesomeLibMain</span><span class="o">()</span> <span class="o">{</span>
-  <span class="o">}</span>
-
-  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_CREATE</span><span class="o">)</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
-        <span class="s">&#34;Called From AwesomeLibMain Class, called onCreate() of Activity &gt;&gt;&gt;&gt;&gt;&gt; init()&#34;</span><span class="o">);</span>
-  <span class="o">}</span>
-
-  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_START</span><span class="o">)</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">LibOnStart</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
-        <span class="s">&#34;Called From AwesomeLibMain Class, called onStart() of Activity &gt;&gt;&gt;&gt;&gt;&gt; LibOnStart()&#34;</span><span class="o">);</span>
-  <span class="o">}</span>
-
-  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_STOP</span><span class="o">)</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">LibOnStop</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
-        <span class="s">&#34;Called From AwesomeLibMain Class, called onStop() of Activity &gt;&gt;&gt;&gt;&gt;&gt; LibOnStop()&#34;</span><span class="o">);</span>
-  <span class="o">}</span>
-
-  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_RESUME</span><span class="o">)</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">LibOnResume</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
-        <span class="s">&#34;Called From AwesomeLibMain Class, called onResume() of Activity &gt;&gt;&gt;&gt;&gt;&gt; LibOnResume()&#34;</span><span class="o">);</span>
-  <span class="o">}</span>
-
-  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_PAUSE</span><span class="o">)</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">LibOnPause</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
-        <span class="s">&#34;Called From AwesomeLibMain Class, called onPause() of Activity &gt;&gt;&gt;&gt;&gt;&gt; LibOnPause()&#34;</span><span class="o">);</span>
-  <span class="o">}</span>
-
-  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_DESTROY</span><span class="o">)</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cleanup</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
-        <span class="s">&#34;Called From AwesomeLibMain Class, called onDestroy() of Activity &gt;&gt;&gt;&gt;&gt;&gt; cleanup()&#34;</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.arch.lifecycle.Lifecycle</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.arch.lifecycle.LifecycleObserver</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">android.arch.lifecycle.OnLifecycleEvent</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AwesomeLibMain</span> <span class="kd">implements</span> <span class="n">LifecycleObserver</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">static</span> <span class="kd">final</span> <span class="n">AwesomeLibMain</span> <span class="n">ourInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AwesomeLibMain</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kd">static</span> <span class="n">AwesomeLibMain</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ourInstance</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">private</span> <span class="nf">AwesomeLibMain</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_CREATE</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;Called From AwesomeLibMain Class, called onCreate() of Activity &gt;&gt;&gt;&gt;&gt;&gt; init()&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_START</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">LibOnStart</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;Called From AwesomeLibMain Class, called onStart() of Activity &gt;&gt;&gt;&gt;&gt;&gt; LibOnStart()&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_STOP</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">LibOnStop</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;Called From AwesomeLibMain Class, called onStop() of Activity &gt;&gt;&gt;&gt;&gt;&gt; LibOnStop()&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_RESUME</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">LibOnResume</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;Called From AwesomeLibMain Class, called onResume() of Activity &gt;&gt;&gt;&gt;&gt;&gt; LibOnResume()&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_PAUSE</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">LibOnPause</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;Called From AwesomeLibMain Class, called onPause() of Activity &gt;&gt;&gt;&gt;&gt;&gt; LibOnPause()&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@OnLifecycleEvent</span><span class="o">(</span><span class="n">Lifecycle</span><span class="o">.</span><span class="na">Event</span><span class="o">.</span><span class="na">ON_DESTROY</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">cleanup</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;Called From AwesomeLibMain Class, called onDestroy() of Activity &gt;&gt;&gt;&gt;&gt;&gt; cleanup()&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>as you can see I added more methods and annotated them to get triggered at specific lifecycle event state.</p>
 <p>But we are not done here yet. This just tells which method will be triggered when a specific lifecycle event state is reached for the Activity/Fragment. What is still required is to add our <code>AwesomeLibMain</code> class as an <strong>Observer</strong> for the lifecycle of the desired Activity. Turns out it is a really simple step, as can be seen below</p>
@@ -2045,26 +2045,26 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
-
-  <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
-
-    <span class="c1">// Add Lifecycle Observer
-</span><span class="c1"></span>    <span class="n">getLifecycle</span><span class="o">().</span><span class="na">addObserver</span><span class="o">(</span><span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
-  <span class="o">}</span>
-
-  <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
-
-    <span class="c1">// Remove Lifecycle Observer
-</span><span class="c1"></span>    <span class="n">getLifecycle</span><span class="o">().</span><span class="na">removeObserver</span><span class="o">(</span><span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Add Lifecycle Observer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">getLifecycle</span><span class="o">().</span><span class="na">addObserver</span><span class="o">(</span><span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Remove Lifecycle Observer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">getLifecycle</span><span class="o">().</span><span class="na">removeObserver</span><span class="o">(</span><span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>so you basically needed to add it as an <strong>Observer</strong> for lifecycle in <code>onCreate()</code> of Activity via</p>
 <div class="highlight"><div class="chroma">
@@ -2073,9 +2073,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Add Lifecycle Observer
-</span><span class="c1"></span><span class="n">getLifecycle</span><span class="o">().</span><span class="na">addObserver</span><span class="o">(</span><span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Add Lifecycle Observer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">getLifecycle</span><span class="o">().</span><span class="na">addObserver</span><span class="o">(</span><span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>…and then remove the Observer for lifecycle in onDestroy() of Activity via</p>
 <div class="highlight"><div class="chroma">
@@ -2084,9 +2084,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Remove Lifecycle Observer
-</span><span class="c1"></span><span class="n">getLifecycle</span><span class="o">().</span><span class="na">removeObserver</span><span class="o">(</span><span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Remove Lifecycle Observer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">getLifecycle</span><span class="o">().</span><span class="na">removeObserver</span><span class="o">(</span><span class="n">AwesomeLibMain</span><span class="o">.</span><span class="na">getInstance</span><span class="o">());</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Thats it! No, really thats all there is. You have successfully integrated lifecycle arch components in your <code>awesomelib</code> and now it is observing Activity Lifecycle events and triggering the right methods at the right time, without requiring the <code>app</code> developer to worry about anything.</p>
 <blockquote>
@@ -2577,7 +2577,7 @@
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.9d61b979db5cc2a1ff3a5d410e881547a61b9d28bc23e811c49061d47df07ef3.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
