@@ -1787,7 +1787,7 @@
 <blockquote>
 <p>&quot; The <code>~/.gradle</code> folder is not only home to caches, it also contains <code>~/.gradle/gradle.properties</code> which sometimes hold data that is not stored elsewhere (API keys) as well as <code>~/.gradle/init.d/</code> which can contain init scripts that run for all projects. These are not cached values, they are added by users.&quot;</p>
 </blockquote>
-<p>However, there is still some hope to free up some space (again pointed in the right direction by Octavia Togami). The subdirectory <code>caches</code> at the path <code>~/.gradle/caches</code> is a good candidate for freeing up space, while not messing up anything else. There are more subdirectories which I will mention towards the end of this post. For now lets focus on ``~/.gradle/caches` directory.</p>
+<p>However, there is still some hope to free up some space (again pointed in the right direction by Octavia Togami). The subdirectory <code>caches</code> at the path <code>~/.gradle/caches</code> is a good candidate for freeing up space, while not messing up anything else. There are more subdirectories which I will mention towards the end of this post. For now lets focus on <code>~/.gradle/caches</code> directory.</p>
 <p>First let&rsquo;s set up an alias to get the size of <code>~/.gradle/caches</code> directory like I did earlier for <code>~/.gradle</code> directory:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1805,7 +1805,7 @@
 </span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">gradleCacheSize</span><span class="o">=</span><span class="s1">&#39;du -sh ~/.gradle/caches&#39;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>I will use this later on in the post.</p>
+</div><p>I will use this later in the post.</p>
 <p>Now, inside <code>~/.gradle/caches</code> directory, ideally everything is useful. Its a directory which all dependencies that my projects are using and thus are maintained as a quick accessible cache. So deleting them all doesn&rsquo;t make much sense. I came up with a command that will only delete files that are were accessed more than 30 days ago. That way the most used cache files are kept intact and unused/rarely used files are deleted. Lets take a look at it now.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1827,6 +1827,9 @@
 </li>
 <li>
 <p><code>-atime +30</code> = File was last accessed more than 30 days ago (tweak this as per your requirement).</p>
+<blockquote>
+<p>WARNING:  Not all filesystems keep access times so this could delete files that are just old, rather than ones that aren&rsquo;t being used. My use-case is limited to macOS and its default filesystem for now where this is not an issue.</p>
+</blockquote>
 </li>
 <li>
 <p><code>-delete</code> = Delete files found by <code>find</code> based on set criteria.</p>
