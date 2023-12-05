@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>maestro on Crushing C.O.D.E</title>
+    <link>https://crushingcode.nisrulz.com/en/tags/maestro/</link>
+    <description>Recent content in maestro on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2023, All content is licensed under</copyright>
+    <lastBuildDate>Tue, 25 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    
+        <atom:link href="https://crushingcode.nisrulz.com/en/tags/maestro/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Maestro Magic: Creating UI Tests with Effortless Ease for Developers @Android Worldwide</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/android_worldwide_april_2023/</link>
+        <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 25 Apr 2023 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/android_worldwide_april_2023/</guid>
+        <description>Android Worldwide, Online Abstract Testing is an important part of making sure your app works well. Maestro makes it easier for you to test UI of your Android, iOS, Flutter, and React Native apps.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>maestro</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>testing</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

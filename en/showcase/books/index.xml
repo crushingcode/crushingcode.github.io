@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Books on Crushing C.O.D.E</title>
+    <link>https://crushingcode.nisrulz.com/en/showcase/books/</link>
+    <description>Recent content in Books on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2023, All content is licensed under</copyright>
+    <lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    
+        <atom:link href="https://crushingcode.nisrulz.com/en/showcase/books/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Kotlin Coroutines by Tutorials</title>
+        <link>https://crushingcode.nisrulz.com/en/showcase/books/kotlin_coroutines_by_tutorial/</link>
+        <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 21 Nov 2018 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/showcase/books/kotlin_coroutines_by_tutorial/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Beginning Android Game Development</title>
+        <link>https://crushingcode.nisrulz.com/en/showcase/books/beginning_android_game_dev/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/en/showcase/books/beginning_android_game_dev/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Seven Mobile Apps in Seven Weeks</title>
+        <link>https://crushingcode.nisrulz.com/en/showcase/books/seven_mobile_apps/</link>
+        <pubDate>Mon, 11 Jul 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 11 Jul 2016 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/showcase/books/seven_mobile_apps/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Learning Java by Building Android Games</title>
+        <link>https://crushingcode.nisrulz.com/en/showcase/books/learning_java_by_building_android_games/</link>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 26 Mar 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/showcase/books/learning_java_by_building_android_games/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Managing State in Flutter Pragmatically</title>
+        <link>https://crushingcode.nisrulz.com/en/showcase/books/managing_state_in_flutter_pragmatically/</link>
+        <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 25 Nov 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/showcase/books/managing_state_in_flutter_pragmatically/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

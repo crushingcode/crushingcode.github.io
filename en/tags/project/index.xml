@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>project on Crushing C.O.D.E</title>
+    <link>https://crushingcode.nisrulz.com/en/tags/project/</link>
+    <description>Recent content in project on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2023, All content is licensed under</copyright>
+    <lastBuildDate>Thu, 29 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    
+        <atom:link href="https://crushingcode.nisrulz.com/en/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>App Privacy Policy Generator is moving to AGPLv3 license 🙇🏻‍♂️🥳</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/app-privacy-policy-gen-change-license/</link>
+        <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 29 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/app-privacy-policy-gen-change-license/</guid>
+        <description>App Privacy Policy Generator is a simple web app to generate a generic privacy policy for your Android/iOS apps.
+Backstory It was built with a core idea and vision, to enable indie developers from having to jump through the weeds of legality around putting up a Privacy Policy or Terms &amp;amp; Conditions in their applications.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/app-privacy-policy-gen-change-license/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>project</category>
+            
+          
+            
+              <category>news</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

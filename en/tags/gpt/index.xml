@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>gpt on Crushing C.O.D.E</title>
+    <link>https://crushingcode.nisrulz.com/en/tags/gpt/</link>
+    <description>Recent content in gpt on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2023, All content is licensed under</copyright>
+    <lastBuildDate>Mon, 04 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    
+        <atom:link href="https://crushingcode.nisrulz.com/en/tags/gpt/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Local GPTs: Off the Grid, On Your Machine</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/local-gpts-off-the-grid-on-your-machine/</link>
+        <pubDate>Mon, 04 Dec 2023 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 04 Dec 2023 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/local-gpts-off-the-grid-on-your-machine/</guid>
+        <description>Are you tired of the tech giants having access to your personal data? Are you concerned about snooping and telemetry? Then it&amp;rsquo;s time to take matters into your own hands by running a fully offline GPT model on your own local machine!</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/local-gpts-off-the-grid-on-your-machine/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>gpt</category>
+            
+          
+            
+              <category>llm</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Talks on Crushing C.O.D.E</title>
+    <link>https://crushingcode.nisrulz.com/en/talks/</link>
+    <description>Recent content in Talks on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2023, All content is licensed under</copyright>
+    <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    
+        <atom:link href="https://crushingcode.nisrulz.com/en/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Maestro Magic: Creating UI Tests with Effortless Ease for Developers @Android Worldwide</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/android_worldwide_april_2023/</link>
+        <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 25 Apr 2023 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/android_worldwide_april_2023/</guid>
+        <description>Android Worldwide, Online Abstract Testing is an important part of making sure your app works well. Maestro makes it easier for you to test UI of your Android, iOS, Flutter, and React Native apps.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>maestro</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>testing</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Another Compose(it): Desktop @Droidcon Italy</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/droidcon_italy_2021/</link>
+        <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 12 Nov 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/droidcon_italy_2021/</guid>
+        <description>Droidcon Italy, Online Abstract Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+            
+              <category>desktop</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title> Birds of a Feather: Kotlin Multiplatform Mobile @Chicago Roboto</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/chicago_roboto_2021/</link>
+        <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 28 Sep 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/chicago_roboto_2021/</guid>
+        <description>Chicago Roboto Online Abstract KMM or Kotlin Multiplatform Mobile is evolving rapidly. So much so that many companies already use it in production. KMM brings a paradigm shift in sharing code between mobile platforms in a way that allows for greater control over what is shared while leaving the native UI code to the platform.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>kmp</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Ask Googlers about Jetpack Compose @Droidcon Online</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/panel_discussion_droidcon_online_july_2021/</link>
+        <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 29 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/panel_discussion_droidcon_online_july_2021/</guid>
+        <description>Droidcon, Online Abstract Panel Discussion with Googlers about Jetpack Compose.
+Video+ Event Click here to access the event website</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Another Compose(it): Desktop @Ya!vaConf</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/yava_conf_2021/</link>
+        <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 24 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/yava_conf_2021/</guid>
+        <description>Ya!vaConf, Online Abstract Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+            
+              <category>desktop</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Building Android Libraries @Android Chatter</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/clubhouse_jun_2021/</link>
+        <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 17 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/clubhouse_jun_2021/</guid>
+        <description>Android Chatter, Clubhouse/Online Abstract Live panel discussion with other Android devs to talk about building Android Libraries, tips n&amp;rsquo; tricks and Q&amp;amp;A from audience👨🏻‍💻</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>WWDC First Impressions Livecast @Raywenderlich.com</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/wwdc_livecast_2021/</link>
+        <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 07 Jun 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/wwdc_livecast_2021/</guid>
+        <description>Raywenderlich.com, Online Abstract In this Livecast, Dru Freeman, Nishant Srivastava, Ray Fix, Caroline Begbie, Audrey Tam and Ehab Amer livestream their reactions to Apple’s annual Worldwide Developers Conference (WWDC 2021) keynote event.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>apple</category>
+            
+          
+            
+              <category>ios</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Google I/O First Impressions Livecast @Raywenderlich.com</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/google_io_livecast_2021/</link>
+        <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 19 May 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/google_io_livecast_2021/</guid>
+        <description>Raywenderlich.com, Online Abstract In this Livecast, Dru Freeman, Nishant Srivastava, Victoria Gonda, Fuad Kamal and Subhrajyoti Sen sit down to share their thoughts on all the latest news and outcomes from Google I/O 2021.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>google</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Jet-Set-Compose 🚀@GDG London</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdg_london_jetpack_compose_may_2021/</link>
+        <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 12 May 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdg_london_jetpack_compose_may_2021/</guid>
+        <description>GDG London: Jetpack Compose, Online Abstract Since the time Android has existed, our workflow for designing a UI has been confined to XML. This has led to other issues and hacks to make UI work as per current times.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+            
+              <category>desktop</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Step it up: Compose for Desktop @FOSDEM</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/fosdem_2021/</link>
+        <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 07 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/fosdem_2021/</guid>
+        <description>FOSDEM 2021: Kotlin Devroom, Online Abstract Developing for multi-platform is picking up speed as the Kotlin Multi-Platform gets better with every release. That mostly means that shared logic is being written in Kotlin which can then be targeted to many target platforms.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>compose</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>And&#39; Libraries, Stop Starting up! @GDG Helwan</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/south_cairo_tech_talks_2021/</link>
+        <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 02 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/south_cairo_tech_talks_2021/</guid>
+        <description>South Cairo Tech Talks, GDG Helwan, Online Abstract A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>And&#39; Libraries, Stop Starting up! @Devfest DACH&#39;21</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/devfest_dach_2020/</link>
+        <pubDate>Sun, 24 Jan 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 24 Jan 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/devfest_dach_2020/</guid>
+        <description>Devfest DACH&#39;21, Online Abstract A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>And&#39; Libraries, Stop Starting up! @Android Worldwide</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/android_worldwide_jan_2021/</link>
+        <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 19 Jan 2021 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/android_worldwide_jan_2021/</guid>
+        <description>Android Worldwide, Online Abstract A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Demystifying Low Latency Audio on Android @Droidcon APAC</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/droidcon_apac_2020/</link>
+        <pubDate>Mon, 14 Dec 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 14 Dec 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/droidcon_apac_2020/</guid>
+        <description>Droidcon APAC &amp;lsquo;20, Online Abstract Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps. Android, however, holds dark secrets about low latency audio, thus making it harder for developers to build responsive audio apps and user experiences.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>audio</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>And&#39; Libraries, Stop Starting up! @Droidcon Americas</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/droidcon_americas_2020/</link>
+        <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 16 Nov 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/droidcon_americas_2020/</guid>
+        <description>Droidcon Americas &amp;lsquo;20, Online Abstract A lot of Android libraries are being built/shipped by indie devs and companies alike. Everyone wants to start working inside the host application as quickly as possible.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cooking with Coroutine Recipes @Codemotion Online</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/codemotion_online_2020/</link>
+        <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 21 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/codemotion_online_2020/</guid>
+        <description>Codemotion Online 2020, Online Abstract Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>coroutines</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Android 11 - THE GRAND FINALE! @GDG Kisumu</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdg_kisumu_4_sept_2020/</link>
+        <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 04 Sep 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdg_kisumu_4_sept_2020/</guid>
+        <description>GDG Kisumu, Kenya 2020, Online Abstract This is a panel discussion along with other awesome developers about Android with focus on upcoming Android 11 release.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Demystifying Low Latency Audio on Android @GDG Kisumu</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdg_kisumu_22_aug_2020/</link>
+        <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 22 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdg_kisumu_22_aug_2020/</guid>
+        <description>GDG Kisumu, Kenya 2020, Online Abstract Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>audio</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cooking with Coroutine Recipes @CodemotionAmsterdam [Cancelled]</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/codemotion_amsterdam_2020/</link>
+        <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 27 May 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/codemotion_amsterdam_2020/</guid>
+        <description>Codemotion Amsterdam 2020, Amsterdam, Netherlands Abstract Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>coroutines</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>The Future of Mobile: Android/iOS, Flutter and Native @Raywenderlich.com</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/future_of_mobile_2020/</link>
+        <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 14 May 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/future_of_mobile_2020/</guid>
+        <description>Raywenderlich.com, Online Abstract In this Roundtable Talk, Kevin Moore, Kevin Galligan, Nishant Srivastava and Joe Howard discuss the state of mobile and what platform you should use when starting a brand new project.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>kotlin-multiplatform</category>
+            
+          
+            
+              <category>flutter</category>
+            
+          
+            
+              <category>ios</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Demystifying Low Latency Audio on Android @Android Makers Paris</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/android_makers_paris_apr_2020/</link>
+        <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 21 Apr 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/android_makers_paris_apr_2020/</guid>
+        <description>Android Makers Paris 2020, Online Abstract Enabling an enhanced audio experience for your users is the topmost priority for developers who build audio processing apps.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>audio</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>My love-hate relationship with Android Studio @GDG Ahmedabad</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdg_ahmedabad_apr_2020/</link>
+        <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 04 Apr 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdg_ahmedabad_apr_2020/</guid>
+        <description>GDG Ahmedabad Live Webinar, Ahmedabad, India Abstract Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Kotlin MP: Into the Multi-Verse @FOSDEM</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/fosdem_2020/</link>
+        <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 02 Feb 2020 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/fosdem_2020/</guid>
+        <description>FOSDEM 2020: Kotlin Devroom, Brussels, Belgium Abstract Kotlin Multiplatform is the new kid on the cross-platform block. The approach although is very different from what you have seen in the past.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>kotlin-multiplatform</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>My love-hate relationship with Android Studio @Devfest&#39;19 Berlin</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/devfest_berlin_2019/</link>
+        <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 09 Nov 2019 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/devfest_berlin_2019/</guid>
+        <description>Devfest&#39;19, Berlin, Germany Abstract Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cooking with Coroutines Recipes @Mobilization IX</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/mobilization_ix_2019/</link>
+        <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 26 Oct 2019 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/mobilization_ix_2019/</guid>
+        <description>Mobilization IX, Łódź, Poland Abstract Kotlin Coroutines graduated to stable release just last year and are fairly new for everyone adopting them. That means a lot of the information is not quite straightforward when it comes to implementing them in current projects.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+            
+              <category>coroutines </category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>My love-hate relationship with Android Studio @Droidcon Greece</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/droidcon_greece_2019/</link>
+        <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 25 Sep 2019 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/droidcon_greece_2019/</guid>
+        <description>Droidcon Greece &amp;lsquo;19, Heraklion, Greece Abstract Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>My love-hate relationship with Android Studio @Droidcon Vienna</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/droidcon_vienna_2019/</link>
+        <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 19 Sep 2019 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/droidcon_vienna_2019/</guid>
+        <description>Droidcon Vienna &amp;lsquo;19, Vienna, Austria Abstract Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>My love-hate relationship with Android Studio @Devoxx Poland</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/devoxx_pl_2019/</link>
+        <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 24 Jun 2019 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/devoxx_pl_2019/</guid>
+        <description>Devoxx Poland &amp;lsquo;19, Krakow, Poland Abstract Android Studio is the tool of the trade hands down. When it comes to Android (app/library/IoT) development, the first thing that comes to mind is to install Android Studio and get going from there.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>adb </category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Demystifying Android Libraries @AppdevCon</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/appdevcon_2019/</link>
+        <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 15 Mar 2019 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/appdevcon_2019/</guid>
+        <description>AppdevCon &amp;lsquo;19, Amsterdam, Netherlands Abstract Building an Android library in the current times is way different than what it used to be earlier. Things have changed considerably and keeping up to date with them is now a necessity rather than just some acquirable knowledge.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Things I wish I knew when I started building Android libraries-Vol.2 @Berlindroid</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/berlindroid_feb_2019/</link>
+        <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 27 Feb 2019 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/berlindroid_feb_2019/</guid>
+        <description>Berlindroid &amp;lsquo;19, Berlin, Germany Abstract Building an Android library in the current times is way different than what it used to be earlier. Things have changed considerably and keeping up to date with them is a now a necessity than just some acquirable knowledge.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Things I wish I knew when I started building Android libraries-Vol.2 @Mobius Moscow</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/mobius_moscow_2018/</link>
+        <pubDate>Sat, 08 Dec 2018 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 08 Dec 2018 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/mobius_moscow_2018/</guid>
+        <description>Mobius Moscow &amp;lsquo;18, Moscow, Russia Abstract Building an Android library in the current times is way different than what it used to be earlier. Things have changed considerably and keeping up to date with them is now a necessity rather than just some acquirable knowledge.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Things I wish I knew when I started building Android libraries-Vol.2 @Devoxx Belgium</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/devoxx_be_2018/</link>
+        <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 15 Nov 2018 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/devoxx_be_2018/</guid>
+        <description>Devoxx Belgium &amp;lsquo;18, Antwerp, Belgium Abstract Building an Android library in the current times is way different than what it used to be earlier. Things have changed considerably and keeping up to date with them is a now a necessity than just some acquirable knowledge.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>The A, B and C of Lifecycle Components @Droidcon Berlin</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/droidcon_berlin_2018/</link>
+        <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 26 Jun 2018 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/droidcon_berlin_2018/</guid>
+        <description>Droidcon Berlin &amp;lsquo;18, Berlin, Germany Abstract If you&amp;rsquo;ve been developing Android applications for a while now, you know the pain of handling the lifecycle just right.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Architecture Components @Devfest&#39;17 Vancouver</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/devfest_vancouver_2017/</link>
+        <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 14 Oct 2017 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/devfest_vancouver_2017/</guid>
+        <description> Devfest&#39;17, Vancouver, Canada Abstract Get to know the new Architecture Components released by Google in I/O&#39;17
+Presentation Event </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Google Developer Days, Europe - Extended &#39;17 Recap: Android and Flutter @GDG CV</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdd_eu_ext_2017/</link>
+        <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 29 Sep 2017 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdd_eu_ext_2017/</guid>
+        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation Event </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>flutter </category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Things I wish I knew when I started building Android libraries @Droidcon Berlin</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/droidcon_berlin_2017/</link>
+        <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 05 Sep 2017 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/droidcon_berlin_2017/</guid>
+        <description>Droidcon Berlin &amp;lsquo;17, Berlin, Germany Abstract As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Delightful X-App Development with Flutter @Code &amp; Coffee</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/code_and_coffee_aug_2017/</link>
+        <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 17 Aug 2017 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/code_and_coffee_aug_2017/</guid>
+        <description> Code &amp;amp; Coffee, Vancouver, Canada Abstract A quick introduction of what Flutter is and what is required to start building apps with Flutter
+Presentation Video Event </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>flutter</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Google I/O &#39;17 Recap: Android, Kotlin and Firebase @GDG Cloud Vancouver</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdg_cv_2017/</link>
+        <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 17 Jul 2017 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdg_cv_2017/</guid>
+        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation Event </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>kotlin </category>
+            
+          
+            
+              <category>firebase</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Hello &#39;Kotlin&#39; World @Code &amp; Coffee</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/code_and_coffee_may_2017/</link>
+        <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 18 May 2017 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/code_and_coffee_may_2017/</guid>
+        <description>Code &amp;amp; Coffee, Vancouver, Canada Abstract Kotlin programming language is gaining popularity nowadays. It’s a modern language that gives more power in everyday routines.It’s a pragmatic language with a very low learning curve and can be quickly grasped by Java developers.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kotlin</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Build.Better.­Android.Libraries @VanDev</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/vandev_2017/</link>
+        <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 25 Apr 2017 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/vandev_2017/</guid>
+        <description>VanDev: Vancouver&amp;rsquo;s Software Developers Network, Vancouver, Canada Abstract As more and more people start building Android Libraries, the whole process of building a better API for developers is getting bloated and everyone is coming up with their own ideas.</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+            
+              <category>best-practices</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Mastering Tools for Android @GDG New Delhi</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdgnd_8_oct_2016/</link>
+        <pubDate>Sat, 08 Oct 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 08 Oct 2016 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdgnd_8_oct_2016/</guid>
+        <description>Google Developer Group New Delhi, New Delhi, India Abstract Learn about how you can master various tools in Android to become an efficient and productive Android Dev,</description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Jumpstart Firebase @GDG New Delhi</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdgnd_2_oct_2016/</link>
+        <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 02 Oct 2016 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdgnd_2_oct_2016/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract Overview and demonstration of firebase and its services.
+Presentation </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>firebase</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Building Apps for Billions @Udacity Community</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdgnd_aug_2016/</link>
+        <pubDate>Sun, 07 Aug 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 07 Aug 2016 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdgnd_aug_2016/</guid>
+        <description> Udacity Community Delhi NCR, New Delhi, India Abstract Deliver the best performance across a range of connections, data plans, and devices.
+Presentation Event </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Sipping on Battery Juice @Devfest&#39;16 New Delhi</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/devfest_newdelhi_2016/</link>
+        <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 18 May 2016 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/devfest_newdelhi_2016/</guid>
+        <description> Devfest&#39;16, New Delhi, India Abstract Learn about battery consumption on Android and how to avoid it when building your apps.
+Presentation Event </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>An-Droid 101 - Developing Libraries @GDG New Delhi</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdgnd_feb_2016/</link>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 14 Feb 2016 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdgnd_feb_2016/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract Learn about android libraries and how to build one for yourself.
+Presentation Event </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-library</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Materialized Instantly @GDG New Delhi</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdgnd_mar_2015/</link>
+        <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 19 Mar 2015 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdgnd_mar_2015/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract Materialized Instantly
+Presentation </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Kickstart Android App Development @GDG New Delhi</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdgnd_feb_2015/</link>
+        <pubDate>Sun, 15 Feb 2015 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 15 Feb 2015 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdgnd_feb_2015/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract Kickstart Android App Development
+Presentation </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Kickstart Android Wear @GDG New Delhi</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdgnd_oct_2014/</link>
+        <pubDate>Thu, 30 Oct 2014 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Thu, 30 Oct 2014 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdgnd_oct_2014/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract Kickstart into Android Wear World
+Presentation Event </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>android-wear</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Introduction to Node.JS @Mindfire Solutions</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdgnd_oct_2013/</link>
+        <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 16 Oct 2013 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdgnd_oct_2013/</guid>
+        <description> Google Developer Group New Delhi, New Delhi, India Abstract Basic intro of node.js
+Presentation </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>nodejs</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
