@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2023, All content is licensed under</copyright>
-    <lastBuildDate>Mon, 04 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/en/index.xml" rel="self" type="application/rss+xml" />
@@ -41,6 +41,38 @@
         
       
 
+      
+      <item>
+        <title>Cross Compilation Adventures with Nim Lang</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-nim/</link>
+        <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 08 Dec 2023 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-nim/</guid>
+        <description>I like working inside the Terminal app. So obviously I am using a lot of Terminal CLI (Command Line Interface) tools 🧰. To work with these CLI tools, for every usecase there is a small set of shell (bash/zsh) aliases/functions that I have created to work with for specific use cases and to simplify my life.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/cross-compilation-adventures-nim/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>nim</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Local GPTs: Off the Grid, On Your Machine</title>

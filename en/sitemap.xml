@@ -59,7 +59,25 @@
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/</loc>
-    <lastmod>2023-12-04T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/cli/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-nim/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/nim/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/posts/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/tools/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/tags/gpt/</loc>
     <lastmod>2023-12-04T00:00:00+00:00</lastmod>
@@ -68,12 +86,6 @@
     <lastmod>2023-12-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/posts/local-gpts-off-the-grid-on-your-machine/</loc>
-    <lastmod>2023-12-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/en/posts/</loc>
-    <lastmod>2023-12-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/en/tags/</loc>
     <lastmod>2023-12-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/tags/android/</loc>
@@ -167,9 +179,6 @@
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/tags/opensource/</loc>
-    <lastmod>2021-04-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/en/tags/tools/</loc>
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/talks/fosdem_2021/</loc>
