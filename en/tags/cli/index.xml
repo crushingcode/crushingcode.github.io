@@ -28,7 +28,7 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Mon, 11 Dec 2023 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-kotlin-native/</guid>
-        <description>This post is part of the series Code Compilation Adventures. Read the first part here to know about the premise of this series.
+        <description>This post is part of the series Cross Compilation Adventures. Read the first part here to know about the premise of this series.
 TLDR; I want to build cross platform CLI utility tools.</description>
         
         <dc:creator>Nishant</dc:creator>
