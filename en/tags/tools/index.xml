@@ -14,12 +14,45 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2023, All content is licensed under</copyright>
-    <lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Dec 2023 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/en/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Cross Compilation Adventures with Kotlin/Native</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-kotlin-native/</link>
+        <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 11 Dec 2023 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-kotlin-native/</guid>
+        <description>This post is part of the series Code Compilation Adventures. Read the first part here to know about the premise of this series.
+TLDR; I want to build cross platform CLI utility tools.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/cross-compilation-adventures-kotlin-native/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Cross Compilation Adventures with Nim Lang</title>
