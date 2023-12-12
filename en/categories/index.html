@@ -880,7 +880,7 @@
                   descDiv = document.createElement('div');
                   descDiv.setAttribute('class', 'menu-item__desc');
                   descDiv.innerHTML = result.item.description;
-                } else {
+                } else if (result.item.content){
                   descDiv = document.createElement('div');
                   descDiv.setAttribute('class', 'menu-item__desc');
                   descDiv.innerHTML = result.item.content.substring(0, 150);
@@ -976,7 +976,7 @@
                   descDiv = document.createElement('div');
                   descDiv.setAttribute('class', 'mobile-search__item--desc');
                   descDiv.innerHTML = result.item.description;
-                } else {
+                } else if (result.item.content){
                   descDiv = document.createElement('div');
                   descDiv.setAttribute('class', 'mobile-search__item--desc');
                   descDiv.innerHTML = result.item.content.substring(0, 150);
@@ -1333,8 +1333,6 @@
     
 <link rel="alternate" type="application/rss&#43;xml" title="rss" href="https://crushingcode.nisrulz.com/en/categories/index.xml">
 
-<link rel="alternate" type="application/rss&#43;xml" title="rss" href="https://crushingcode.nisrulz.com/en/categories/index.xml">
-
 <meta name="description" content="Blog by Nishant Srivastava" />
 
 
@@ -1390,7 +1388,6 @@
 </script>
 
     
-  
   
 
 
