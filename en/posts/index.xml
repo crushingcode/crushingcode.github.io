@@ -38,7 +38,15 @@ TLDR; I want to build cross platform CLI utility tools.</description>
         
           
             
-              <category>tag</category>
+              <category>tools</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>go</category>
             
           
         
