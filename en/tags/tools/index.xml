@@ -14,12 +14,51 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2024, All content is licensed under</copyright>
-    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/en/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Cross Compilation Adventures with Rust</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-rust/</link>
+        <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 17 Jan 2024 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-rust/</guid>
+        <description>This post is part of the series Cross Compilation Adventures. Read the first part here to know about the premise of this series.
+TLDR; I want to build cross platform CLI utility tools.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/cross-compilation-adventures-rust/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>rust</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Cross Compilation Adventures with Go</title>
@@ -51,6 +90,12 @@ TLDR; I want to build cross platform CLI utility tools.</description>
           
         
         
+        
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
         
       </item>
       
@@ -85,6 +130,12 @@ TLDR; I want to build cross platform CLI utility tools.</description>
         
         
         
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
+        
       </item>
       
       <item>
@@ -118,6 +169,12 @@ TLDR; I want to build cross platform CLI utility tools.</description>
         
         
         
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
+        
       </item>
       
       <item>
@@ -127,7 +184,8 @@ TLDR; I want to build cross platform CLI utility tools.</description>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 08 Dec 2023 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-nim/</guid>
-        <description>I like working inside the Terminal app. So obviously I am using a lot of Terminal CLI (Command Line Interface) tools 🧰. To work with these CLI tools, for every usecase there is a small set of shell (bash/zsh) aliases/functions that I have created to work with for specific use cases and to simplify my life.</description>
+        <description>This post is the first in the series Cross Compilation Adventures.
+I like working inside the Terminal app. So obviously I am using a lot of Terminal CLI (Command Line Interface) tools 🧰.</description>
         
         <dc:creator>Nishant</dc:creator>
         
@@ -149,6 +207,12 @@ TLDR; I want to build cross platform CLI utility tools.</description>
           
         
         
+        
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
         
       </item>
       

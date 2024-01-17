@@ -28,7 +28,8 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         <atom:modified>Fri, 08 Dec 2023 00:00:00 +0000</atom:modified>
         <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-nim/</guid>
-        <description>I like working inside the Terminal app. So obviously I am using a lot of Terminal CLI (Command Line Interface) tools 🧰. To work with these CLI tools, for every usecase there is a small set of shell (bash/zsh) aliases/functions that I have created to work with for specific use cases and to simplify my life.</description>
+        <description>This post is the first in the series Cross Compilation Adventures.
+I like working inside the Terminal app. So obviously I am using a lot of Terminal CLI (Command Line Interface) tools 🧰.</description>
         
         <dc:creator>Nishant</dc:creator>
         
@@ -50,6 +51,12 @@
           
         
         
+        
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
         
       </item>
       

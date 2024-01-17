@@ -59,24 +59,36 @@
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/</loc>
-    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/tags/cli/</loc>
-    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/series/cross-compilation-adventures/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-rust/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/posts/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/rust/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/series/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/tools/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-go/</loc>
     <lastmod>2024-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/tags/go/</loc>
-    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/en/posts/</loc>
-    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/en/tags/</loc>
-    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/en/tags/tools/</loc>
     <lastmod>2024-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-with-dart/</loc>
@@ -478,7 +490,5 @@
     <loc>https://crushingcode.nisrulz.com/en/about/</loc>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/categories/</loc>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/en/series/</loc>
   </url>
 </urlset>

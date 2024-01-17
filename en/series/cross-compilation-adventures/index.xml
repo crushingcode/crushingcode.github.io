@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Cross Compilation Adventures on Crushing C.O.D.E</title>
+    <link>https://crushingcode.nisrulz.com/en/series/cross-compilation-adventures/</link>
+    <description>Recent content in Cross Compilation Adventures on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2024, All content is licensed under</copyright>
+    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    
+        <atom:link href="https://crushingcode.nisrulz.com/en/series/cross-compilation-adventures/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Cross Compilation Adventures with Rust</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-rust/</link>
+        <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Wed, 17 Jan 2024 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-rust/</guid>
+        <description>This post is part of the series Cross Compilation Adventures. Read the first part here to know about the premise of this series.
+TLDR; I want to build cross platform CLI utility tools.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/cross-compilation-adventures-rust/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>rust</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Cross Compilation Adventures with Go</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-go/</link>
+        <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sat, 13 Jan 2024 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-go/</guid>
+        <description>This post is part of the series Cross Compilation Adventures. Read the first part here to know about the premise of this series.
+TLDR; I want to build cross platform CLI utility tools.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/cross-compilation-adventures-go/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>go</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Cross Compilation Adventures with Dart</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-with-dart/</link>
+        <pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Tue, 09 Jan 2024 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-with-dart/</guid>
+        <description>This post is part of the series Cross Compilation Adventures. Read the first part here to know about the premise of this series.
+TLDR; I want to build cross platform CLI utility tools.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/cross-compilation-adventures-with-dart/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>dart</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Cross Compilation Adventures with Kotlin/Native</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-kotlin-native/</link>
+        <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Mon, 11 Dec 2023 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-kotlin-native/</guid>
+        <description>This post is part of the series Cross Compilation Adventures. Read the first part here to know about the premise of this series.
+TLDR; I want to build cross platform CLI utility tools.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/cross-compilation-adventures-kotlin-native/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>kotlin</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Cross Compilation Adventures with Nim Lang</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-nim/</link>
+        <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 08 Dec 2023 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-nim/</guid>
+        <description>This post is the first in the series Cross Compilation Adventures.
+I like working inside the Terminal app. So obviously I am using a lot of Terminal CLI (Command Line Interface) tools 🧰.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/cross-compilation-adventures-nim/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>nim</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>Cross Compilation Adventures</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
