@@ -67,10 +67,16 @@
     <loc>https://crushingcode.nisrulz.com/en/tags/cli/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/series/cross-compilation-adventures/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-c/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/posts/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/series/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/tags/</loc>
@@ -79,16 +85,10 @@
     <loc>https://crushingcode.nisrulz.com/en/tags/tools/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crushingcode.nisrulz.com/en/series/cross-compilation-adventures/</loc>
-    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-rust/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/tags/rust/</loc>
-    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://crushingcode.nisrulz.com/en/series/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-go/</loc>
