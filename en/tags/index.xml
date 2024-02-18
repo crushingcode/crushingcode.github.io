@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2024, All content is licensed under</copyright>
-    <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -22,27 +22,9 @@
 
       
       <item>
-        <title>c</title>
-        <link>https://crushingcode.nisrulz.com/en/tags/c/</link>
-        <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        
-        <guid>https://crushingcode.nisrulz.com/en/tags/c/</guid>
-        <description></description>
-        
-        <dc:creator>Nishant Srivastava</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
         <title>cli</title>
         <link>https://crushingcode.nisrulz.com/en/tags/cli/</link>
-        <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/en/tags/cli/</guid>
@@ -58,12 +40,48 @@
       </item>
       
       <item>
+        <title>python</title>
+        <link>https://crushingcode.nisrulz.com/en/tags/python/</link>
+        <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/en/tags/python/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>tools</title>
         <link>https://crushingcode.nisrulz.com/en/tags/tools/</link>
-        <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/en/tags/tools/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>c</title>
+        <link>https://crushingcode.nisrulz.com/en/tags/c/</link>
+        <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/en/tags/c/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>

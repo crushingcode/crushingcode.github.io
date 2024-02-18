@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.121.2">
+<meta name="generator" content="Hugo 0.122.0">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1765,6 +1765,11 @@
 <p>Note: Github project for Ollama can be found <a href="https://github.com/jmorganca/ollama">here</a></p>
 </blockquote>
 <p>Ollama is a frontend built so you can easily get up and running with large language models on your local machine. You can run pre-trained models like Llama 2 and Code Llama, as well as customize and create your own models offline in a private and local environment. This allows you to have full control over your data and models, ensuring that they remain secure and confidential.</p>
+<blockquote>
+<p><strong>UPDATE</strong>: Now there is an easier way to setup everything i.e Ollama (App + CLI) and Docker Desktop. Simply run</p>
+<p><code>brew install --cask ollama docker</code><br />
+You can skip the setup instructions for these applications as mentioned below.</p>
+</blockquote>
 <p>To install it first download the <a href="https://formulae.brew.sh/formula/ollama#default">Ollama CLI</a> using homebrew</p>
 <p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_6.png" alt="Screenshot" /></p>
 <div class="highlight"><div class="chroma">
@@ -1843,7 +1848,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker run -d -p 3000:8080 --add-host<span class="o">=</span>host.docker.internal:host-gateway --name ollama-webui --restart always ghcr.io/ollama-webui/ollama-webui:main
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker run -d -p 3000:8080 --add-host<span class="o">=</span>host.docker.internal:host-gateway -v ollama-webui:/app/backend/data --name ollama-webui --restart always ghcr.io/ollama-webui/ollama-webui:main
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>This command starts the docker container and makes the Ollama Web UI available at port 3000 of localhost.</p>

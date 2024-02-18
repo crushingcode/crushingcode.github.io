@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2024, All content is licensed under</copyright>
-    <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/en/index.xml" rel="self" type="application/rss+xml" />
@@ -41,6 +41,39 @@
         
       
 
+      
+      <item>
+        <title>Cross Compilation Adventures with Python</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-python/</link>
+        <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 18 Feb 2024 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/cross-compilation-adventures-python/</guid>
+        <description>This post is part of the series Cross Compilation Adventures. Read the first part here to know about the premise of this series.
+TLDR; I want to build cross platform CLI utility tools.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/cross-compilation-adventures-python/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>tools</category>
+            
+          
+            
+              <category>cli</category>
+            
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Cross Compilation Adventures with C lang</title>
@@ -1054,35 +1087,6 @@ Do you want to host your artifacts in your own private repository?</description>
           
             
               <category>android-library</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Meet JACK &amp; JILL , Android’s experimental toolchain</title>
-        <link>https://crushingcode.nisrulz.com/en/posts/meet-jack-and-jill-androids-experimental-toolchain/</link>
-        <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Tue, 21 Jul 2015 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.nisrulz.com/en/posts/meet-jack-and-jill-androids-experimental-toolchain/</guid>
-        <description>JACK &amp;amp; JILL are part of the new tool chain for android and in the words of Android Developer Blog
-they are designed to improve build times and simplify development by reducing dependencies on other tools</description>
-        
-        <dc:creator>Nishant</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>tools</category>
-            
-          
-            
-              <category>android</category>
             
           
         
