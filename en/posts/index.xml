@@ -14,12 +14,36 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2024, All content is licensed under</copyright>
-    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Mar 2024 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Local Copilot: Your own off the grid and local code assistant</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/local-copilot-your-own-off-the-grid-and-local-code-assistant/</link>
+        <pubDate>Sun, 03 Mar 2024 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 03 Mar 2024 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/local-copilot-your-own-off-the-grid-and-local-code-assistant/</guid>
+        <description>Coding assistants are all the rage nowadays, all thanks to Github Copilot. Coding assistants as basically LLM models that help the developer in writing code.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/local-copilot-your-own-off-the-grid-and-local-code-assistant/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>llm</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Cross Compilation Adventures with Python</title>

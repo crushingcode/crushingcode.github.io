@@ -14,7 +14,7 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2024, All content is licensed under</copyright>
-    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Mar 2024 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/en/index.xml" rel="self" type="application/rss+xml" />
@@ -41,6 +41,30 @@
         
       
 
+      
+      <item>
+        <title>Local Copilot: Your own off the grid and local code assistant</title>
+        <link>https://crushingcode.nisrulz.com/en/posts/local-copilot-your-own-off-the-grid-and-local-code-assistant/</link>
+        <pubDate>Sun, 03 Mar 2024 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Sun, 03 Mar 2024 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/posts/local-copilot-your-own-off-the-grid-and-local-code-assistant/</guid>
+        <description>Coding assistants are all the rage nowadays, all thanks to Github Copilot. Coding assistants as basically LLM models that help the developer in writing code.</description>
+        
+        <dc:creator>Nishant</dc:creator>
+        
+        
+        <media:content url="https://crushingcode.nisrulz.com//images/posts/local-copilot-your-own-off-the-grid-and-local-code-assistant/banner.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>llm</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Cross Compilation Adventures with Python</title>
@@ -1042,40 +1066,6 @@ You checkout the other guide: Guide to publishing your Android Library via Maven
         <guid>https://crushingcode.nisrulz.com/en/posts/own-a-maven-repository-like-a-bosspart-2/</guid>
         <description>The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.
 For the same reason I have gone through a lot of good articles online, which explain how the whole process works.</description>
-        
-        <dc:creator>Nishant</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>maven</category>
-            
-          
-            
-              <category>android</category>
-            
-          
-            
-              <category>android-library</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Own a maven repository, like a boss! – Part 1</title>
-        <link>https://crushingcode.nisrulz.com/en/posts/own-a-maven-repository-like-a-bosspart-1/</link>
-        <pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Mon, 03 Aug 2015 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.nisrulz.com/en/posts/own-a-maven-repository-like-a-bosspart-1/</guid>
-        <description>Have you ever thought how the central repository works like Maven Central or JCenter?
-Is it possible to own one for yourself?
-Do you want to host your artifacts in your own private repository?</description>
         
         <dc:creator>Nishant</dc:creator>
         

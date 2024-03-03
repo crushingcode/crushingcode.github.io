@@ -14,12 +14,30 @@
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
     <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
     <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2024, All content is licensed under</copyright>
-    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Mar 2024 00:00:00 +0000</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://crushingcode.nisrulz.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Llm</title>
+        <link>https://crushingcode.nisrulz.com/en/tags/llm/</link>
+        <pubDate>Sun, 03 Mar 2024 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        
+        <guid>https://crushingcode.nisrulz.com/en/tags/llm/</guid>
+        <description></description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Cli</title>
@@ -190,24 +208,6 @@
         <author>nisrulz@gmail.com (Nishant Srivastava)</author>
         
         <guid>https://crushingcode.nisrulz.com/en/tags/gpt/</guid>
-        <description></description>
-        
-        <dc:creator>Nishant Srivastava</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Llm</title>
-        <link>https://crushingcode.nisrulz.com/en/tags/llm/</link>
-        <pubDate>Mon, 04 Dec 2023 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        
-        <guid>https://crushingcode.nisrulz.com/en/tags/llm/</guid>
         <description></description>
         
         <dc:creator>Nishant Srivastava</dc:creator>
