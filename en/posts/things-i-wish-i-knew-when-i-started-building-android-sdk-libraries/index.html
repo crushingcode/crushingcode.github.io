@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.123.7">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1731,11 +1731,11 @@
   🏷️
   
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/android/" class="single__tag" title="android">#android</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/android/" class="single__tag" title="Android">#Android</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/android-library/" class="single__tag" title="android-library">#android-library</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/android-library/" class="single__tag" title="Android-Library">#Android-Library</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/best-practices/" class="single__tag" title="best-practices">#best-practices</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/best-practices/" class="single__tag" title="Best-Practices">#Best-Practices</a></li>
 
 </ul>
 
@@ -1767,7 +1767,7 @@
 </blockquote>
 <p>Before we dive into anything let’s first answer the most basic questions that everyone would have regarding building Android SDK/Library. So here goes</p>
 <h3 id="why-would-you-create-an-android-sdklibrary">Why would you create an android SDK/Library?</h3>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/question.gif" alt="question" /></p>
+<p><img alt="question" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/question.gif"></p>
 <p>Sure it is&hellip;well, you do not have to create an SDK/library in all cases. It makes more sense to decide on building one based on the understanding of what value you bring to the table. Ask yourself the below</p>
 <p><strong><em>Is there some existing solution that would solve the problem?</em></strong><br />
 If your answer is Yes, then possible try and use that existing solution.<br />
@@ -1790,7 +1790,7 @@ In Maven terminology, the artifact is the resulting output of the maven build, g
 <li><strong>AAR</strong>: <strong>A</strong>ndroid <strong>AR</strong>chive is similar to JAR with added functionality. Unlike JAR files, AAR files can contain Android resources and a manifest file, which allows you to bundle in shared resources like layouts and drawable in addition to Java classes and methods.</li>
 </ul>
 <h3 id="we-have-the-artifact-now-what-where-does-one-host-these-artifacts">We have the artifact, Now what? Where does one host these artifacts?</h3>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/trickquestion.gif" alt="question" /></p>
+<p><img alt="question" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/trickquestion.gif"></p>
 <p>Not really&hellip;<br />
 Turns out you have a couple of options here too, each having its own pros and cons. Let’s take a look at each</p>
 <h5 id="local-aar">Local AAR</h5>
@@ -1872,7 +1872,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 </span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>You can read about how to publish your android library to JitPack <a href="/posts/publish-your-android-library-via-jitpack/">here</a>.</p>
+</div><p>You can read about how to publish your android library to JitPack <a href="/en/posts/publish-your-android-library-via-jitpack/">here</a>.</p>
 <p>The other option you have is of Maven Central or Jcenter.</p>
 <p>Personally <strong><em>I would suggest you to stick to Jcenter</em></strong> as it well documented and better managed. It is also the default repository that is looked up for dependencies in Android projects (…unless someone changed it).</p>
 <p>If you publish to Jcenter, bintray the company behind it gives you the option to sync with Maven Central from within their publishing platform. Once published its as simple as adding the below line to your build.gradle file to use the library in any android project</p>
@@ -1960,7 +1960,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 </li>
 </ul>
 <p>In short…</p>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/easy.gif" alt="easy" /></p>
+<p><img alt="easy" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/easy.gif"></p>
 <h3 id="minimize-permissions">Minimize Permissions</h3>
 <p>In the current times, when everyone just wants to jump the road and ask as many permissions, you should pause and think about do you really need that extra permission. Take care of these points especially</p>
 <ul>
@@ -2032,7 +2032,7 @@ However the issue at hand is same as the one for local/remote maven repositories
 </div><p>.. this way there is no entry in the manifest and once it merges into the app, it won’t let the app get filtered in the Play Store.</p>
 <p>As an added feature though if the feature is not available you can just disable the functionality in your library code and have some fallback functionality in place. It is a Win- Win for both the android dev who built the library and the dev who integrates the lib in their app.</p>
 <h3 id="support-different-versions">Support different versions</h3>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/howmany.gif" alt="how many" /></p>
+<p><img alt="how many" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/howmany.gif"></p>
 <center>_How many are out there exactly?_</center>
 <p>If you have a feature that’s available in a certain version of android, you should do the check for that in code and disable the feature if the version is lower than supported.<br />
 As a rule of thumb support the full spectrum of versions via defining in <code>minSdkVersion</code> and <code>targetSdkVersion</code>. What you should do internally to your library code is check for the android version at runtime and enable/disable the feature or use a fallback.</p>
@@ -2051,7 +2051,7 @@ As a rule of thumb support the full spectrum of versions via defining in <code>m
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="do-not-log-in-production">Do not log in production</h3>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/no.gif" alt="donot" /></p>
+<p><img alt="donot" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/no.gif"></p>
 <center>_Just DO NOT._</center>
 <p>Almost every time I am asked to test an app or an android library project the first thing that I have seen is that they log everything up in the open, in their release code.<br />
 As a rule of thumb, never log in production. You should use <a href="https://developer.android.com/studio/build/build-variants.html">build-variants</a> with <a href="https://github.com/JakeWharton/timber">timber</a> to help you in the process to separate logging info in production vs debug builds. A simple solution can be to provide a <code>debuggable</code> flag that the devs can flip to enable/disable logging from your android library</p>
@@ -2072,7 +2072,7 @@ As a rule of thumb, never log in production. You should use <a href="https://dev
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="do-not-crash-silently-and-fail-fast">Do not crash silently and fail fast</h3>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/crash.png" alt="crash" /></p>
+<p><img alt="crash" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/crash.png"></p>
 <p>I have seen this a lot of times now. Some of the devs would not log their errors and exception in logcat! Which basically adds a headache to the users of the android library when they are trying to debug the code. In tandem to the last tip about not logging in production, you must understand that exceptions and errors need to be logged irrespective of being in debug or production. If you do not want to log in production, at least provide a functionality of enabling logs via passing some flag when you initialize your library. i.e</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2110,7 +2110,7 @@ As a rule of thumb, never log in production. You should use <a href="https://dev
 <h3 id="catch-specific-exceptions">Catch specific exceptions</h3>
 <p>Continuing with the last tip, you might notice that in my last code snippet I am using a <code>try-catch</code> statement. Catch statement specifically catches all <code>Exception</code> as its a base class. There is no specific distinction between one exception vs the other one. So what one must do is define specific types of <code>Exception</code> as per the requirement at hand. i.e <code>NUllPointerException</code>, <code>SocketTimeoutException</code>, <code>IOException</code>, etc.</p>
 <h3 id="handle-poor-network-conditions">Handle poor network conditions</h3>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/loading.gif" alt="poor connections" /></p>
+<p><img alt="poor connections" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/loading.gif"></p>
 <center>_…this gets on my nerves, seriously!_</center>
 <p>If the android library you wrote deals with making network calls, a very simple thing that usually goes unnoticed is that you should always consider a case of what happens if the network is slow or non-responsive.</p>
 <p>What I have observed is that library code developers assume that the network calls being made will always go through. A good example will be if your android library fetches some config file from the server to initialize itself. Now when developing the library the devs assume that the config file will always get downloaded. What they forget is that on a flaky network, the library code will not be able to download the config file and hence would crash the whole codebase. If simple checks and a strategy to handle such situations are built right into the android library code, it saves quite a number of people the headaches they would have otherwise.</p>
@@ -2176,7 +2176,7 @@ How to achieve this ? Check in classpath</p>
 <p>A word of caution here, you can only use this functionality of requiring a dependency if its a complete java dependency. i.e if its an android library you want to include at compile time, you can not reference its transitive libs as well as resources which need to be present before compilation. A pure java dependency, on the other hand, has only java classes and they are the only ones that would be added to classpath during the compilation process.</p>
 </blockquote>
 <h3 id="try-not-to-hog-the-startup">Try not to hog the startup</h3>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/worst.gif" alt="worst" /></p>
+<p><img alt="worst" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/worst.gif"></p>
 <center>_no kidding…_</center>
 <p>What I mean by this is that, as soon as the app starts up try not to initialize your android library greedily. What that would tend to do is that it will increase the startup time for the App itself, even though the app does simply nothing at startup except off course initialize your android library.</p>
 <p>The solution to such a problem is to do all work of initializing off the main thread i.e in a new thread, async. Better if you use <code>Executors.newSingleThreadExecutor()</code> and keep the number of thread to just one.</p>
@@ -2189,7 +2189,7 @@ How to achieve this ? Check in classpath</p>
 <p>Test your library code by making use of Mocks, avoiding final classes, not having static methods, etc.</p>
 <p>Writing code with interfaces around your public API also makes your android library capable of swapping implementations easily and in turn makes the code more testable.i.e you can provide mock implementations easily when testing.</p>
 <h3 id="document-everything">Document Everything!</h3>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/davinci.gif" alt="document" /></p>
+<p><img alt="document" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/davinci.gif"></p>
 <p>Being the creator of the android library you would know about your code, but the people who are going to use it won’t know about it unless you expect them to figure out by reading your source code (you should never need that).</p>
 <p>Document your library well including every detail about how to use it and detailing every feature you have implemented.</p>
 <ol>
@@ -2205,7 +2205,7 @@ They should cover and explain
 <li>Bundle a sample app which demonstrates a working example of how the library and its features are used.</li>
 <li>Make sure you keep a detailed change log for your changes. A good place to do that would be to add the information right in your release section for the specific version tag.</li>
 </ol>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/changelog.jpeg" alt="changelog" /></p>
+<p><img alt="changelog" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/changelog.jpeg"></p>
 <center>_Screenshot of Github Releases section for Sensey android library_</center>
 <p>…and <a href="https://github.com/nisrulz/sensey/releases">here is the link to releases section</a> for <a href="https://github.com/nisrulz/sensey">Sensey</a></p>
 <h3 id="provide-a-most-minimalistic-sample-app">Provide a most minimalistic Sample App</h3>
@@ -2217,7 +2217,7 @@ They should cover and explain
 The solution to this is that you stick to more open licenses such as <strong>MIT</strong> or <strong>Apache 2</strong>.</p>
 <p>Read about licensing at this <a href="https://choosealicense.com/">simple site</a> and about need of <a href="http://jeroenmols.com/blog/2016/08/03/copyright/">copyright in your code here</a></p>
 <h3 id="last-but-not-the-least-get-feedback">Last but not the least, get feedback</h3>
-<p><img src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/feedback.gif" alt="feedback" /></p>
+<p><img alt="feedback" src="/images/posts/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/feedback.gif"></p>
 <p>Yeah, you heard that right! Your android library was built to cater to your needs initially. Once you put it out for others to use, you will come to know a lot of issues in it. Hear out your fellow devs and gather feedback. Act on it considering and weighing on the functionality to introduce or fix while maintaining the goals of the android library intact.</p>
 <h3 id="summary">Summary</h3>
 <p>In short, you need to take care of the below points while building</p>

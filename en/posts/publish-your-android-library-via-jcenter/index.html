@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.123.7">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1721,11 +1721,11 @@
   🏷️
   
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/android/" class="single__tag" title="android">#android</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/android/" class="single__tag" title="Android">#Android</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/android-library/" class="single__tag" title="android-library">#android-library</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/android-library/" class="single__tag" title="Android-Library">#Android-Library</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/maven/" class="single__tag" title="maven">#maven</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/maven/" class="single__tag" title="Maven">#Maven</a></li>
 
 </ul>
 
@@ -1734,7 +1734,7 @@
       
       <blockquote>
 <p><strong>NOTE</strong>: <a href="https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/">Jcenter has been sunset</a>. It is encouraged to publish to <a href="https://search.maven.org/">MavenCentral</a>.<br />
-You checkout the other guide: <a href="/posts/publish-your-android-library-via-mavencentral/">Guide to publishing your Android Library via MavenCentral</a></p>
+You checkout the other guide: <a href="/en/posts/publish-your-android-library-via-mavencentral/">Guide to publishing your Android Library via MavenCentral</a></p>
 </blockquote>
 <p>Developers are a different kind of people altogether. <strong>They tend to be lazy but strive to be super efficient at the same time</strong>.<br />
 A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or  to make the complex processes simpler.</p>
@@ -1776,9 +1776,9 @@ A lot of this can be seen in the Android world where a certain library pops up e
 </blockquote>
 </li>
 </ul>
-<p><img src="/images/posts/uploadtojcenter/newmodule.jpeg" alt="newmodule" /></p>
-<p><img src="/images/posts/uploadtojcenter/newlib.jpeg" alt="newlib" /></p>
-<p><img src="/images/posts/uploadtojcenter/newlibinfo.jpeg" alt="newlibinfo" /></p>
+<p><img alt="newmodule" src="/images/posts/uploadtojcenter/newmodule.jpeg"></p>
+<p><img alt="newlib" src="/images/posts/uploadtojcenter/newlib.jpeg"></p>
+<p><img alt="newlibinfo" src="/images/posts/uploadtojcenter/newlibinfo.jpeg"></p>
 <ul>
 <li>
 <p>Implement your library code inside the library module you created in the last step.</p>
@@ -1796,9 +1796,9 @@ A lot of this can be seen in the Android world where a certain library pops up e
 </blockquote>
 </li>
 </ul>
-<p><img src="/images/posts/uploadtojcenter/project.jpeg" alt="project" /></p>
-<p><img src="/images/posts/uploadtojcenter/prjstruct.jpeg" alt="prjstruct" /></p>
-<p><img src="/images/posts/uploadtojcenter/addmodule.jpeg" alt="addmodule" /></p>
+<p><img alt="project" src="/images/posts/uploadtojcenter/project.jpeg"></p>
+<p><img alt="prjstruct" src="/images/posts/uploadtojcenter/prjstruct.jpeg"></p>
+<p><img alt="addmodule" src="/images/posts/uploadtojcenter/addmodule.jpeg"></p>
 <h5 id="publishing-your-android-awesome-library">Publishing your Android &ldquo;Awesome&rdquo; Library</h5>
 <ul>
 <li>Once project is synced, add the required plugins to classpath in <code>build.gradle</code> file at root project level, as shown below</li>
@@ -1933,7 +1933,7 @@ No value has been specified for property &#39;user&#39;.
 <pre><code>![edit](/images/posts/uploadtojcenter/edit.jpeg)
 </code></pre>
 <p>and see that you have selected the option <code>GPG sign uploaded files using Bintray's public/private key pair.</code> and then click <strong>Update</strong>.</p>
-<p><img src="/images/posts/uploadtojcenter/gpg.jpeg" alt="gpg" /></p>
+<p><img alt="gpg" src="/images/posts/uploadtojcenter/gpg.jpeg"></p>
 </li>
 </ul>
 </li>
@@ -1952,7 +1952,7 @@ No value has been specified for property &#39;user&#39;.
 </div><ul>
 <li>
 <p>Now once your project is up on bintray, simply hit <strong>Add to Jcenter</strong> button to sync with JCenter.</p>
-<p><img src="/images/posts/uploadtojcenter/addtojcenter.jpeg" alt="addtojcenter" /></p>
+<p><img alt="addtojcenter" src="/images/posts/uploadtojcenter/addtojcenter.jpeg"></p>
 </li>
 </ul>
 <h5 id="using-your-android-awesome-library-in-other-projects">Using your Android &ldquo;Awesome&rdquo; Library in other projects</h5>
@@ -2003,22 +2003,22 @@ No value has been specified for property &#39;user&#39;.
 </div><ul>
 <li>
 <p>Your code is available through JCenter if you have received the mail with confirmation</p>
-<p><img src="/images/posts/uploadtojcenter/finalmail.jpeg" alt="finalmail" /></p>
+<p><img alt="finalmail" src="/images/posts/uploadtojcenter/finalmail.jpeg"></p>
 </li>
 </ul>
 <p>Few things to note when you received the final email.</p>
 <ul>
 <li>
 <p>Goto your maven repo at bintray and verify that you have Jcenter under the <strong>Linked to</strong> section</p>
-<p><img src="/images/posts/uploadtojcenter/linked.jpeg" alt="linked" /></p>
+<p><img alt="linked" src="/images/posts/uploadtojcenter/linked.jpeg"></p>
 </li>
 <li>
 <p>Now you would also want to sync the artifact to <a href="https://search.maven.org/">MavenCentral</a>, for that you need to hit the <strong>Maven Central</strong> tab and sync</p>
-<p><img src="/images/posts/uploadtojcenter/synctomaven.jpeg" alt="synctomaven" /></p>
+<p><img alt="synctomaven" src="/images/posts/uploadtojcenter/synctomaven.jpeg"></p>
 </li>
 <li>
 <p>Once you hit sync you would see as below. Wait for few hours for the sync to occur.</p>
-<p><img src="/images/posts/uploadtojcenter/syncstatus.jpeg" alt="syncstatus" /></p>
+<p><img alt="syncstatus" src="/images/posts/uploadtojcenter/syncstatus.jpeg"></p>
 </li>
 </ul>
 <p>You can use the lib now as follows</p>
@@ -2055,7 +2055,7 @@ No value has been specified for property &#39;user&#39;.
 <li>Add a readme that explains how to integrate and use your Awesome library</li>
 <li>Add a license block as in this repo</li>
 <li>Also include the Bintray badge provided by Bintray in your readme<br />
-<img src="/images/posts/uploadtojcenter/badge.jpeg" alt="badge" /></li>
+<img alt="badge" src="/images/posts/uploadtojcenter/badge.jpeg"></li>
 <li>Promote your lib on social media so that others can know about it.</li>
 <li>Always add a working sample app in your project that demonstrates your library in use.</li>
 <li>Add screenshots if possible in your readme.</li>
@@ -2068,9 +2068,9 @@ No value has been specified for property &#39;user&#39;.
 <p>Star it or just fork it to use it.</p>
 <p>This post is first in parts of a series</p>
 <ol>
-<li><a href="#">Guide to publishing your Android Library via Jcenter/Bintray</a></li>
-<li><a href="/posts/publish-your-android-library-via-mavencentral/">Guide to publishing your Android Library via MavenCentral</a></li>
-<li><a href="/posts/publish-your-android-library-via-jitpack/">Guide to publishing your Android Library via JitPack</a></li>
+<li><a href="/en/">Guide to publishing your Android Library via Jcenter/Bintray</a></li>
+<li><a href="/en/posts/publish-your-android-library-via-mavencentral/">Guide to publishing your Android Library via MavenCentral</a></li>
+<li><a href="/en/posts/publish-your-android-library-via-jitpack/">Guide to publishing your Android Library via JitPack</a></li>
 </ol>
 
     </article>

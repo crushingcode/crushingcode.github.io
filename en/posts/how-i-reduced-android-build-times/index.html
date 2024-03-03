@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Blog by Nishant Srivastava">
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.123.7">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1721,13 +1721,13 @@
   🏷️
   
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/android/" class="single__tag" title="android">#android</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/android/" class="single__tag" title="Android">#Android</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/tools/" class="single__tag" title="tools">#tools</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/tools/" class="single__tag" title="Tools">#Tools</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/gradle/" class="single__tag" title="gradle">#gradle</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/gradle/" class="single__tag" title="Gradle">#Gradle</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/shell/" class="single__tag" title="shell">#shell</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/shell/" class="single__tag" title="Shell">#Shell</a></li>
 
 </ul>
 
@@ -1744,10 +1744,10 @@ Also, make sure to check Bonus section at the end where I reduce the whole build
 <h3 id="first-the-problem">First, the Problem</h3>
 <p><strong>My Laptop</strong>: MacBook Air early 2014, 4GB Ram and 128 GB SSD.<br />
 My laptop does not pack much power, meaning when I would be coding on small-average android projects the build times would take 6–10 minutes.</p>
-<p><img src="/images/posts/how-i-reduced-android-build-times/img_1.webp" alt="img_1" /></p>
+<p><img alt="img_1" src="/images/posts/how-i-reduced-android-build-times/img_1.webp"></p>
 <p>I recently joined a new company, inherited a big Android code-base and …</p>
 <p><strong>My build time when generating a debug APK was 37 minutes. Yes, 37 MINUTES! Let that sink in.</strong></p>
-<p><img src="/images/posts/how-i-reduced-android-build-times/img_2.webp" alt="img_2" /></p>
+<p><img alt="img_2" src="/images/posts/how-i-reduced-android-build-times/img_2.webp"></p>
 <p>I was able to drop this to 28 minutes by using a couple of tricks (checkout more of those in my<a href="https://github.com/nisrulz/android-tips-tricks"> Android Tips &amp; Tricks repo</a>) and following the official Gradle performance suggestions such as enabling <a href="https://guides.gradle.org/performance/">Build Cache, Parallelize builds, Configure on demand, Offline builds, etc</a></p>
 <p>Updated my gradle config inside <code>~/.gradle/gradle.properties</code>  which now looks like:</p>
 <div class="highlight"><div class="chroma">
@@ -1791,7 +1791,7 @@ My laptop does not pack much power, meaning when I would be coding on small-aver
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>At 28 minutes build time, this wasn’t anywhere near acceptable.</p>
-<p><img src="/images/posts/how-i-reduced-android-build-times/img_3.webp" alt="img_3" /></p>
+<p><img alt="img_3" src="/images/posts/how-i-reduced-android-build-times/img_3.webp"></p>
 <h3 id="the-solution">The Solution</h3>
 <p>After 2 days of trying and failing to reduce the build time, I decided to ditch Android Studio in favor of a text editor to write code. The reasoning behind that was that I wanted to get rid of any bells and whistles Android Studio brings with it. To build/compile code I turned to one of the most common ways of building a project, TERMINAL!</p>
 <center><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today has been a bad day😑 <a href="https://twitter.com/androidstudio?ref_src=twsrc%5Etfw">@androidstudio</a> has been taking forever to build🧐 On the plus side, I finally decided to ditch <a href="https://twitter.com/hashtag/androidstudio?src=hash&amp;ref_src=twsrc%5Etfw">#androidstudio</a> &amp; switch to <a href="https://twitter.com/code?ref_src=twsrc%5Etfw">@code</a> and the <a href="https://twitter.com/hashtag/terminal?src=hash&amp;ref_src=twsrc%5Etfw">#terminal</a> to build/compile the project, assemble apk 👨‍💻1⃣1⃣ <a href="https://twitter.com/hashtag/yolo?src=hash&amp;ref_src=twsrc%5Etfw">#yolo</a>  <a href="https://twitter.com/hashtag/AndroidDev?src=hash&amp;ref_src=twsrc%5Etfw">#AndroidDev</a> <a href="https://twitter.com/hashtag/slow?src=hash&amp;ref_src=twsrc%5Etfw">#slow</a> <a href="https://twitter.com/hashtag/android?src=hash&amp;ref_src=twsrc%5Etfw">#android</a> <a href="https://twitter.com/hashtag/gradle?src=hash&amp;ref_src=twsrc%5Etfw">#gradle</a> <a href="https://twitter.com/hashtag/woes?src=hash&amp;ref_src=twsrc%5Etfw">#woes</a> <a href="https://t.co/mPWZFz38yd">pic.twitter.com/mPWZFz38yd</a></p>&mdash; NishFish (@nisrulz) <a href="https://twitter.com/nisrulz/status/981861207932977152?ref_src=twsrc%5Etfw">April 5, 2018</a></blockquote>
@@ -1811,7 +1811,7 @@ My laptop does not pack much power, meaning when I would be coding on small-aver
 </div>
 </div><p>I noticed Android Studio was particularly bad at only the Gradle builds, hence I switched back to <em>writing code in Android Studio but stuck to running builds via my terminal.</em></p>
 <p><strong>At almost 3 minutes build time down from 28 minutes, I had achieved 89% reduction in build times! That’s insane!</strong></p>
-<p><img src="/images/posts/how-i-reduced-android-build-times/img_4.png" alt="Final Comparison" /></p>
+<p><img alt="Final Comparison" src="/images/posts/how-i-reduced-android-build-times/img_4.png"></p>
 <h3 id="bonus">Bonus</h3>
 <p><strong>Edit 1:</strong> As pointed out by <a href="https://twitter.com/franklinharper">Frank Harper</a> you can effectively build and install the debug apk to your device using just a single command:</p>
 <div class="highlight"><div class="chroma">
@@ -1823,7 +1823,7 @@ My laptop does not pack much power, meaning when I would be coding on small-aver
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>This however will not launch the apk but only install it.<a href="https://developer.android.com/studio/build/building-cmdline.html#DebugMode">This is also mentioned here in official documentation.</a></p>
-<p><img src="/images/posts/how-i-reduced-android-build-times/img_5.png" alt="img_5" /></p>
+<p><img alt="img_5" src="/images/posts/how-i-reduced-android-build-times/img_5.png"></p>
 <blockquote>
 <p>If you would like to install as well as launch the apk on your connected device, read on…</p>
 </blockquote>
@@ -1905,7 +1905,7 @@ My laptop does not pack much power, meaning when I would be coding on small-aver
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>..the apk is built, pushed and installed to device. Here is the result</p>
-<p><img src="/images/posts/how-i-reduced-android-build-times/img_6.png" alt="img_6" /></p>
+<p><img alt="img_6" src="/images/posts/how-i-reduced-android-build-times/img_6.png"></p>
 <p>I would however like to inspect more about the Gradle build times in my Android Project, but only when time permits. For those who like to know how that is done,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

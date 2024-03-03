@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.123.7">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1730,11 +1730,11 @@
   🏷️
   
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/tools/" class="single__tag" title="tools">#tools</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/tools/" class="single__tag" title="Tools">#Tools</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/cli/" class="single__tag" title="cli">#cli</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/cli/" class="single__tag" title="Cli">#Cli</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/nim/" class="single__tag" title="nim">#nim</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/nim/" class="single__tag" title="Nim">#Nim</a></li>
 
 </ul>
 
@@ -1900,12 +1900,12 @@
 i.e <code>nim c run.nim</code>.</p>
 </blockquote>
 <p>You should now have a binary generated in the same directory with the same name as the nim file i.e run.</p>
-<p><img src="/images/posts/cross-compilation-adventures-nim/img_1.png" alt="run" /></p>
+<p><img alt="run" src="/images/posts/cross-compilation-adventures-nim/img_1.png"></p>
 <blockquote>
 <p><strong>NOTE</strong>: I use <a href="https://github.com/bootandy/dust"><code>dust</code></a> CLI tool to list files in directory with their sizes.<br />
 <strong>TIP</strong>: You can generate an optimized binary by passing <code>-d:release --opt:size</code> flags at the time of compilation. i.e <code>nim -d:release --opt:size c run.nim</code>. Result is just a smaller binary.</p>
 </blockquote>
-<p><img src="/images/posts/cross-compilation-adventures-nim/img_2.png" alt="run optimized" /></p>
+<p><img alt="run optimized" src="/images/posts/cross-compilation-adventures-nim/img_2.png"></p>
 </li>
 <li>
 <p>Time to execute our generated <code>run</code> binary file:</p>
@@ -2027,11 +2027,11 @@ i.e <code>nim c run.nim</code>.</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>You should now have a <code>.exe</code> binary generated in the same directory with the same name as the nim file i.e run.exe</p>
-<p><img src="/images/posts/cross-compilation-adventures-nim/img_3.png" alt="run.exe" /></p>
+<p><img alt="run.exe" src="/images/posts/cross-compilation-adventures-nim/img_3.png"></p>
 <blockquote>
 <p><strong>TIP</strong>: You can generate an optimized binary by passing <code>-d:release --opt:size</code> flags at the time of compilation. i.e <code>nim -d:release --opt:size c -d:mingw run.nim</code>. Result is just a smaller binary.</p>
 </blockquote>
-<p><img src="/images/posts/cross-compilation-adventures-nim/img_4.png" alt="run.exe optimized" /></p>
+<p><img alt="run.exe optimized" src="/images/posts/cross-compilation-adventures-nim/img_4.png"></p>
 <blockquote>
 <p><strong>NOTE</strong>: In order to run this .exe file, you need to either execute this on Windows directly or if on a *nix system then make use of <a href="https://www.winehq.org/">Wine</a>.</p>
 </blockquote>

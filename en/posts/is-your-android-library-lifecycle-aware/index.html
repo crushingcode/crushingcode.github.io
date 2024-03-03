@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.123.7">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1730,16 +1730,16 @@
   🏷️
   
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/android/" class="single__tag" title="android">#android</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/android/" class="single__tag" title="Android">#Android</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/android-library/" class="single__tag" title="android-library">#android-library</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/android-library/" class="single__tag" title="Android-Library">#Android-Library</a></li>
 
 </ul>
 
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="false">
       
-      <p><img src="/images/posts/is-your-android-library-lifecycle-aware/header.png" alt="header" /></p>
+      <p><img alt="header" src="/images/posts/is-your-android-library-lifecycle-aware/header.png"></p>
 <br/>
 <p><strong>Lifecycle events in Android.</strong></p>
 <p>It has been a pain point for Android developers all over the world. It is no brainer that, most of the times the main cause of a memory leak in the codebase is because an invalid state is accessed which is out of sync with the lifecycle of the activity/fragment of the app.</p>
@@ -1758,9 +1758,9 @@
 <p>Without taking much time, lets jump right into understanding how to wire these lifecycle components for your own android library…</p>
 <p>I will be using a simple example to demonstrate the wiring up process, which is available as a completely functional example app on github <a href="https://github.com/nisrulz/android-examples/tree/develop/LifeCycleCompForLib">here</a>.</p>
 <p>Lets start by creating a new app. Once done, you can add a new library module</p>
-<p><img src="/images/posts/is-your-android-library-lifecycle-aware/p1.jpeg" alt="p1" /></p>
+<p><img alt="p1" src="/images/posts/is-your-android-library-lifecycle-aware/p1.jpeg"></p>
 <p>Your folder structure should look like the below</p>
-<p><img src="/images/posts/is-your-android-library-lifecycle-aware/p2.jpeg" alt="p2" /></p>
+<p><img alt="p2" src="/images/posts/is-your-android-library-lifecycle-aware/p2.jpeg"></p>
 <p>Next add this <code>awesomelib</code> module as a dependency to the <code>app</code> module, so that the <code>app</code> module has access to the public classes contained by the <code>awesomelib</code> library module. To do that add the below to the <code>build.gradle</code> of the <code>app</code> module.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2093,7 +2093,7 @@
 </blockquote>
 <p>What I have tried to explain here is more like a proof of concept, I am sure one can very easily implement it in an existing android library code and make use of the benefits lifecycle arch components bring along.</p>
 <p>For people worried about adding a lot of method counts to their app, below is a snapshot of method counts (used <a href="https://github.com/google/android-classyshark">Classyshark</a> Tool) for the used arch component libs, <code>awesomelib</code> module and the sample app itself (from the sample <code>app</code> I have linked below)</p>
-<p><img src="/images/posts/is-your-android-library-lifecycle-aware/p3.jpeg" alt="p3" /></p>
+<p><img alt="p3" src="/images/posts/is-your-android-library-lifecycle-aware/p3.jpeg"></p>
 <p>Simple rundown shows the method count for</p>
 <ul>
 <li>arch component libs–<strong>122 methods</strong></li>

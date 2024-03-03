@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.123.7">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1730,7 +1730,7 @@
   🏷️
   
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/gradle/" class="single__tag" title="gradle">#gradle</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/gradle/" class="single__tag" title="Gradle">#Gradle</a></li>
 
 </ul>
 
@@ -1762,7 +1762,7 @@
 </div>
 </div><p>here <code>-sh</code> just means the output will be total value in a human readable format with a size letter such as <strong>M</strong> for megabytes/<strong>G</strong> for gigabytes. Read the <a href="https://ss64.com/bash/du.html">docs</a> for more details.</p>
 <p>When I ran this command in my machine this was the result:</p>
-<p><img src="/images/posts/reducing-mammoth-gradle-caches/img_1.png" alt="Size of .gradle dir" /></p>
+<p><img alt="Size of .gradle dir" src="/images/posts/reducing-mammoth-gradle-caches/img_1.png"></p>
 <p>Because I use this often, I have created an alias for this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1780,7 +1780,7 @@
 </span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">gradleDirSize</span><span class="o">=</span><span class="s1">&#39;du -sh ~/.gradle&#39;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/images/posts/reducing-mammoth-gradle-caches/meme.png" alt="Gradle meme, why not" /></p>
+</div><p><img alt="Gradle meme, why not" src="/images/posts/reducing-mammoth-gradle-caches/meme.png"></p>
 <p>Now that is a lot of space occupied by just 1 directory that is just a directory for storing caches and other artifacts, 15 Gb!</p>
 <p>I need to free up some space, but I cannot delete the whole directory because gradle build system uses the artifacts and caches inside this directory. Thanks to <a href="https://octyl.net/">Octavia Togami, Gradle Engineer</a> who reached out over email and pointed out this:</p>
 <blockquote>
@@ -1875,7 +1875,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Looks so much better! I executed this alias command to free up my disk space and checked for the occupied space again</p>
-<p><img src="/images/posts/reducing-mammoth-gradle-caches/img_2.png" alt="After deleting older cache files" /></p>
+<p><img alt="After deleting older cache files" src="/images/posts/reducing-mammoth-gradle-caches/img_2.png"></p>
 <p>Nice! I was able to free up 5.4 Gb of disk space. As pointed out by Octavia Togami, there are some more directories that are safe to run the above commands against:</p>
 <ul>
 <li><code>~/.gradle/wrapper</code> to clean up old wrappers.</li>

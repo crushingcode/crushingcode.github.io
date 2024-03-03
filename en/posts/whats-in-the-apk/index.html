@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.123.7">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1731,9 +1731,9 @@
   🏷️
   
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/android/" class="single__tag" title="android">#android</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/android/" class="single__tag" title="Android">#Android</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/tools/" class="single__tag" title="tools">#tools</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/tools/" class="single__tag" title="Tools">#Tools</a></li>
 
 </ul>
 
@@ -1761,15 +1761,15 @@
 <p><strong>Android application package (APK)</strong> is the package file format used by the Android operating system for distribution and installation of mobile apps and middleware.</p>
 <p>&hellip;<strong>APK</strong> files are a type of archive file, specifically in <strong>zip</strong> format packages based on the JAR file format, with .apk as the filename extension.</p>
 </blockquote>
-<p><img src="/images/posts/whatsintheapk/apk.jpg" alt="header" /></p>
+<p><img alt="header" src="/images/posts/whatsintheapk/apk.jpg"></p>
 <p>..hmm so its basically a <em><strong>ZIP</strong></em> format, so what I can do is rename the extension from <strong>.apk</strong> to <strong>.zip</strong> and I should be able extract the contents.</p>
-<p><img src="/images/posts/whatsintheapk/rename.jpg" alt="header" /></p>
-<p><img src="/images/posts/whatsintheapk/zip.jpg" alt="header" /></p>
+<p><img alt="header" src="/images/posts/whatsintheapk/rename.jpg"></p>
+<p><img alt="header" src="/images/posts/whatsintheapk/zip.jpg"></p>
 <p>Cool, so we now see what the zip file contain and they are all available for inspection.</p>
-<p><img src="/images/posts/whatsintheapk/contents.jpg" alt="header" /></p>
+<p><img alt="header" src="/images/posts/whatsintheapk/contents.jpg"></p>
 <p>Well at this point you would think that you have got access to all files so you can give me all the information right away. Well not so quick Mr.AndroidDev 😬</p>
 <p>Go ahead try and open up the <code>AndroidManifest.xml</code> in some text editor to check out its content. This is what you would get</p>
-<p><img src="/images/posts/whatsintheapk/androidmanifest.jpg" alt="header" /></p>
+<p><img alt="header" src="/images/posts/whatsintheapk/androidmanifest.jpg"></p>
 <p>..what it basically means is that the <code>AndroidManifest.xml</code> isn&rsquo;t in human readable format anymore. So your chances of reading basic information regarding the apk from the <code>AndroidManifest.xml</code> goes down the drain 😞</p>
 <p>&hellip;.</p>
 <p>&hellip;</p>

@@ -283,7 +283,7 @@
     <loc>https://crushingcode.nisrulz.com/en/talks/android_makers_paris_apr_2020/</loc>
     <lastmod>2020-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://crushingcode.nisrulz.com/en/tags/adb/</loc>
+    <loc>https://crushingcode.nisrulz.com/en/tags/adb-/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/talks/gdg_ahmedabad_apr_2020/</loc>
@@ -334,6 +334,9 @@
     <loc>https://crushingcode.nisrulz.com/en/talks/mobilization_ix_2019/</loc>
     <lastmod>2019-10-26T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/coroutines-/</loc>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://crushingcode.nisrulz.com/en/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
   </url><url>
@@ -382,6 +385,9 @@
     <loc>https://crushingcode.nisrulz.com/en/talks/devfest_vancouver_2017/</loc>
     <lastmod>2017-10-14T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/flutter-/</loc>
+    <lastmod>2017-09-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://crushingcode.nisrulz.com/en/talks/gdd_eu_ext_2017/</loc>
     <lastmod>2017-09-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -401,6 +407,9 @@
     <lastmod>2017-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/talks/gdg_cv_2017/</loc>
+    <lastmod>2017-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/kotlin-/</loc>
     <lastmod>2017-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/talks/code_and_coffee_may_2017/</loc>
@@ -423,6 +432,9 @@
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/posts/rewriting-the-history/</loc>
     <lastmod>2016-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://crushingcode.nisrulz.com/en/tags/adb/</loc>
+    <lastmod>2016-10-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://crushingcode.nisrulz.com/en/posts/do-you-like-to-adb/</loc>
     <lastmod>2016-10-14T00:00:00+00:00</lastmod>

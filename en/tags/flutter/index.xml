@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>flutter on Crushing C.O.D.E</title>
+    <title>Flutter on Crushing C.O.D.E</title>
     <link>https://crushingcode.nisrulz.com/en/tags/flutter/</link>
-    <description>Recent content in flutter on Crushing C.O.D.E</description>
+    <description>Recent content in Flutter on Crushing C.O.D.E</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
@@ -54,34 +54,6 @@
           
             
               <category>ios</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Google Developer Days, Europe - Extended &#39;17 Recap: Android and Flutter @GDG CV</title>
-        <link>https://crushingcode.nisrulz.com/en/talks/gdd_eu_ext_2017/</link>
-        <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
-        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
-        <atom:modified>Fri, 29 Sep 2017 00:00:00 +0000</atom:modified>
-        <guid>https://crushingcode.nisrulz.com/en/talks/gdd_eu_ext_2017/</guid>
-        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation Event </description>
-        
-        <dc:creator>Nishant Srivastava</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>android</category>
-            
-          
-            
-              <category>flutter </category>
             
           
         

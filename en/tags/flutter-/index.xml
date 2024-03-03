@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Flutter  on Crushing C.O.D.E</title>
+    <link>https://crushingcode.nisrulz.com/en/tags/flutter-/</link>
+    <description>Recent content in Flutter  on Crushing C.O.D.E</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nisrulz@gmail.com (Nishant Srivastava)</managingEditor>
+    <webMaster>nisrulz@gmail.com (Nishant Srivastava)</webMaster>
+    <copyright><a target='_blank' rel='external noopener' href='https://nisrulz.com'>Nishant Srivastava</a> - ©2015 - 2024, All content is licensed under</copyright>
+    <lastBuildDate>Fri, 29 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    
+        <atom:link href="https://crushingcode.nisrulz.com/en/tags/flutter-/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Google Developer Days, Europe - Extended &#39;17 Recap: Android and Flutter @GDG CV</title>
+        <link>https://crushingcode.nisrulz.com/en/talks/gdd_eu_ext_2017/</link>
+        <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+        <author>nisrulz@gmail.com (Nishant Srivastava)</author>
+        <atom:modified>Fri, 29 Sep 2017 00:00:00 +0000</atom:modified>
+        <guid>https://crushingcode.nisrulz.com/en/talks/gdd_eu_ext_2017/</guid>
+        <description> Google Developers Group - Cloud Vancouver, Vancouver, Canada Presentation Event </description>
+        
+        <dc:creator>Nishant Srivastava</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>android</category>
+            
+          
+            
+              <category>flutter </category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.123.7">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1730,9 +1730,9 @@
   🏷️
   
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/tools/" class="single__tag" title="tools">#tools</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/tools/" class="single__tag" title="Tools">#Tools</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/opensource/" class="single__tag" title="opensource">#opensource</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/opensource/" class="single__tag" title="Opensource">#Opensource</a></li>
 
 </ul>
 
@@ -1783,7 +1783,7 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </div>
 </div><p>So it cannot handle emojis! Oh no 😕</p>
 <p>Anyways, I still wanted to confirm it works, so I got rid of all emojis in the markdown file and ran the command again.</p>
-<p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_1.png" alt="Pandoc rendered markdown as pdf" /></p>
+<p><img alt="Pandoc rendered markdown as pdf" src="/images/posts/how-to-convert-markdown-to-pdf/img_1.png"></p>
 <blockquote>
 <p>Checkout the final generated <a href="/images/posts/how-to-convert-markdown-to-pdf/pandoc_gen_integration_guide.pdf">integration_guide.pdf</a> file.</p>
 </blockquote>
@@ -1828,10 +1828,10 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>On opening <code>http://localhost:6419/</code> in a browser of your choice (I use MS Edge), you are presented with a nice Github Flavored Markdown render of your file</p>
-<p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_2.png" alt="Local server-rendered markdown file in browser" /></p>
+<p><img alt="Local server-rendered markdown file in browser" src="/images/posts/how-to-convert-markdown-to-pdf/img_2.png"></p>
 <p>Sweet 😎</p>
 <p>But wait, what is this fake tab in the rendered webpage?</p>
-<p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_2a.png" alt="fake tab in the render" /></p>
+<p><img alt="fake tab in the render" src="/images/posts/how-to-convert-markdown-to-pdf/img_2a.png"></p>
 <p>In order to get rid of this <em>&ldquo;Fake Tab&rdquo;</em>, I checked the documentation of <strong>grip</strong>. Nothing stood out as a proper solution until I found this <a href="https://github.com/joeyespo/grip/issues/331#issuecomment-733925600">issue/comment</a>.</p>
 <p>Basically, the solution is to load the markdown via <strong>stdin</strong> and then export it as an <strong>HTML</strong> file. Sounds good. I did a bit of a mix and came up with the below oneliner command:</p>
 <div class="highlight"><div class="chroma">
@@ -1939,11 +1939,11 @@ NOTE: In order to render pdf, pandoc requires <a href="https://www.latex-project
 </div>
 </div><p>Then the generated HTML file is opened in the associated Browser window!</p>
 <p>At this point I can open the generated HTML file and utilize the <strong>Print</strong> functionality of the browser (<strong>CMD</strong> + <strong>P</strong>/ <strong>Ctrl</strong> + <strong>P</strong>) to save as PDF:</p>
-<p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_3.png" alt="Print dialog in browser" /></p>
+<p><img alt="Print dialog in browser" src="/images/posts/how-to-convert-markdown-to-pdf/img_3.png"></p>
 <p>&hellip;and hit <strong>Print</strong> or <strong>Save</strong>.</p>
-<p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_3a.png" alt="Save file" /></p>
+<p><img alt="Save file" src="/images/posts/how-to-convert-markdown-to-pdf/img_3a.png"></p>
 <p>On opening the generated PDF file I have:</p>
-<p><img src="/images/posts/how-to-convert-markdown-to-pdf/img_4.png" alt="PDF file" /></p>
+<p><img alt="PDF file" src="/images/posts/how-to-convert-markdown-to-pdf/img_4.png"></p>
 <blockquote>
 <p>Checkout the final generated <a href="/images/posts/how-to-convert-markdown-to-pdf/integration_guide.pdf">integration_guide.pdf</a> file.</p>
 </blockquote>

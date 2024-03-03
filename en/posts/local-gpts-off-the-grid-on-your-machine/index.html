@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.123.7">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1715,7 +1715,7 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Dec 4, 2023 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;4&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Nishant</span>
   
@@ -1730,9 +1730,9 @@
   🏷️
   
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/gpt/" class="single__tag" title="gpt">#gpt</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/gpt/" class="single__tag" title="Gpt">#Gpt</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/llm/" class="single__tag" title="llm">#llm</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/llm/" class="single__tag" title="Llm">#Llm</a></li>
 
 </ul>
 
@@ -1760,44 +1760,36 @@
 </ul>
 <p>Now, let us dive into setting up an offline, private and local GPT like <a href="https://chat.openai.com/">ChatGPT</a> but using an open source model.</p>
 <h3 id="oh-lama--setup-ollamahttpsollamaai">Oh Lama 🦙: Setup <a href="https://ollama.ai/">Ollama</a></h3>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_2.png" alt="Screenshot" /></p>
+<p><img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_2.png"></p>
 <blockquote>
 <p>Note: Github project for Ollama can be found <a href="https://github.com/jmorganca/ollama">here</a></p>
 </blockquote>
 <p>Ollama is a frontend built so you can easily get up and running with large language models on your local machine. You can run pre-trained models like Llama 2 and Code Llama, as well as customize and create your own models offline in a private and local environment. This allows you to have full control over your data and models, ensuring that they remain secure and confidential.</p>
-<blockquote>
-<p><strong>UPDATE</strong>: Now there is an easier way to setup everything i.e Ollama (App + CLI) and Docker Desktop. Simply run</p>
-<p><code>brew install --cask ollama docker</code><br />
-You can skip the setup instructions for these applications as mentioned below.</p>
-</blockquote>
-<p>To install it first download the <a href="https://formulae.brew.sh/formula/ollama#default">Ollama CLI</a> using homebrew</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_6.png" alt="Screenshot" /></p>
+<p>To begin with, install <a href="https://formulae.brew.sh/cask/ollama#default">Ollama App + CLI</a> using homebrew:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">brew install ollama
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">brew install --cask ollama
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Next download and install Ollama <a href="https://ollama.ai/download">application</a>.</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_3.png" alt="Screenshot" /></p>
-<p>Once downloaded, open the application</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_11.png" alt="Screenshot" /></p>
+</div><p>Once downloaded, open the application from Application Launchpad in macOS.</p>
 <blockquote>
-<p>When prompted, just select &ldquo;Open&rdquo;</p>
+<p>If prompted, just select &ldquo;Open&rdquo;<br />
+<img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_11.png"></p>
 </blockquote>
 <p>It will run a wizard to set everything up including running Ollama in the background. You can see Ollama running as an icon of lama in your menu bar 😄</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_12.png" alt="Screenshot" /></p>
+<p><img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_12.png"></p>
 <p>After installing Ollama, verify that Ollama is running by accessing the following link in your web browser: <a href="http://127.0.0.1:11434/">http://127.0.0.1:11434/</a></p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_10.png" alt="Screenshot" /></p>
+<p><img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_10.png"></p>
 <h3 id="pull-in-large-language-modelllm">Pull in Large Language Model(LLM)</h3>
-<p>Ollama is just the front end of talking to LLM models. You will need to download a model to work with.</p>
+<p>Ollama is just the front end for interfacing with LLM models. You will need to download a model to work with.</p>
 <blockquote>
-<p>Note: These models are usualy quite big ranging from 3 Gb to upwards of 60 Gb, based on trillions of tokens they are trained on. You would need to have free space to download the model.</p>
+<p>Note: These models are usualy quite big ranging from 3Gb to upwards of 60Gb, based on trillions of tokens they are trained on. You would need to have free disk space to download the model.</p>
 </blockquote>
 <p>Download one of the models mentioned <a href="https://ollama.ai/library">here</a>, by running the <code>pull</code> command in Terminal:</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_1.png" alt="Screenshot" /></p>
+<p><img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_1.png"></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1810,7 +1802,7 @@ You can skip the setup instructions for these applications as mentioned below.</
 <p>where <code>&lt;name_of_model&gt;</code> is to be replaced with a valid name of model picked from the <a href="https://ollama.ai/library">Ollama Model Library</a>.</p>
 </blockquote>
 <p>For demonstration purpose, let us download the <a href="https://ollama.ai/library/llama2"><code>llama2</code> model</a>.</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_4.png" alt="Screenshot" /></p>
+<p><img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_4.png"></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1828,37 +1820,96 @@ You can skip the setup instructions for these applications as mentioned below.</
 <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ollama run llama2
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_15.png" alt="Screenshot" /></p>
+</div><p><img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_15.png"></p>
 <p>However, it would be much nicer if you could use a UI like ChatGPT and not have to work with Terminal, right?</p>
 <p>That is what you will setup next 🤓</p>
 <h3 id="setup-docker-desktop">Setup Docker Desktop</h3>
-<p>Next download and install Docker Desktop <a href="https://www.docker.com/products/docker-desktop/">application</a>.</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_7.png" alt="Screenshot" /></p>
-<p>Once downloaded, open the application and it will run a wizard to set everything up including running Docker in background. You can see Docker running as an icon in your menu bar 😄</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_13.png" alt="Screenshot" /></p>
-<blockquote>
-<p>Note: You do not need to sign in/sign up anything for this post, unless you wish to.</p>
-</blockquote>
-<h3 id="setup-ollama-web-uihttpsgithubcomollama-webuiollama-webui">Setup <a href="https://github.com/ollama-webui/ollama-webui">Ollama Web UI</a></h3>
-<p>Ollama Web UI is a ChatGPT-Style Web Interface. This will make it easier for you to talk to your GPT like you are used to, ChatGPT-Style.</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_8.png" alt="Screenshot" /></p>
-<p>To start it up, open Terminal app and run the below command</p>
+<p>To begin with, install <a href="https://formulae.brew.sh/cask/docker#default">Docker</a> using homebrew:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker run -d -p 3000:8080 --add-host<span class="o">=</span>host.docker.internal:host-gateway -v ollama-webui:/app/backend/data --name ollama-webui --restart always ghcr.io/ollama-webui/ollama-webui:main
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">brew install --cask docker
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Once downloaded, open the application and it will run a wizard to set everything up including running Docker in background. You can see Docker running as an icon in your menu bar 😄</p>
+<p><img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_13.png"></p>
+<blockquote>
+<p>Note: You do not need to sign in/sign up anything for using any funtionality mentioned in this post.</p>
+</blockquote>
+<h3 id="setup-open-webuihttpsgithubcomopen-webuiopen-webui">Setup <a href="https://github.com/open-webui/open-webui">Open WebUI</a></h3>
+<p>Open WebUI is a user-friendly ChatGPT-Style Web Interface for LLMs (formerly known as Ollama WebUI). This will make it easier for you to talk to your GPT like you are used to, ChatGPT-Style.</p>
+<p><img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_8.png"></p>
+<p>To start it up, open Terminal app and run the below command</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker run -d -p 3000:8080 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--add-host<span class="o">=</span>host.docker.internal:host-gateway <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-v open-webui:/app/backend/data <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--name open-webui <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--restart always <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>ghcr.io/open-webui/open-webui:main
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>This command starts the docker container and makes the Ollama Web UI available at port 3000 of localhost.</p>
 <p>If you want to verify this, open Docker Desktop dashboard and you will see</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_14.png" alt="Screenshot" /></p>
-<p>At this point, you are done with the setup 😎</p>
+<p><img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_14.png"></p>
+<p><strong>Note</strong>: To upgrade your local docker image for <em><strong>open-webui</strong></em> to latest version, run</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker pull ghcr.io/open-webui/open-webui:main
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;✅ Pull the latest image tagged main of open webui&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker container stop open-webui
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;✅ Stop existing open webui container&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker container rm open-webui
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;✅ Remove existing open webui container&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker run -d -p 3000:8080 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--add-host<span class="o">=</span>host.docker.internal:host-gateway <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-v open-webui:/app/backend/data <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--name open-webui <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--restart always <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>ghcr.io/open-webui/open-webui:main
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;✅ Create and run the new container using the latest image of open webui&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>At this point, you are done with the setup 😎</p>
 <p>You can now access the Ollama Web UI Chat interface at <a href="http://localhost:3000/">http://localhost:3000</a>.</p>
+<blockquote>
+<p>You might need to sign up as an Admin user for your first run. Simply create a username and password.</p>
+</blockquote>
 <h3 id="bonus-adding-more-models">Bonus: Adding more models</h3>
 <p>Ollama Model Library provides more than one variation of each model. You can find the other variations under the <strong>Tags</strong> tab on the model&rsquo;s page. Also note the size of the model mentioned, to access if the model is not too big in size for your machine&rsquo;s storage space.</p>
-<p><img src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_5.png" alt="Screenshot" /></p>
+<p><img alt="Screenshot" src="/images/posts/local-gpts-off-the-grid-on-your-machine/sc_5.png"></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3332,7 +3383,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <li><a href="#oh-lama--setup-ollamahttpsollamaai">Oh Lama 🦙: Setup <a href="https://ollama.ai/">Ollama</a></a></li>
     <li><a href="#pull-in-large-language-modelllm">Pull in Large Language Model(LLM)</a></li>
     <li><a href="#setup-docker-desktop">Setup Docker Desktop</a></li>
-    <li><a href="#setup-ollama-web-uihttpsgithubcomollama-webuiollama-webui">Setup <a href="https://github.com/ollama-webui/ollama-webui">Ollama Web UI</a></a></li>
+    <li><a href="#setup-open-webuihttpsgithubcomopen-webuiopen-webui">Setup <a href="https://github.com/open-webui/open-webui">Open WebUI</a></a></li>
     <li><a href="#bonus-adding-more-models">Bonus: Adding more models</a></li>
     <li><a href="#how-to-use---walkthrough">How to Use - Walkthrough</a></li>
   </ul>

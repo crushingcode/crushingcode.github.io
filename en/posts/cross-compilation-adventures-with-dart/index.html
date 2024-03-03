@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Blog by Nishant Srivastava">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.123.7">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1730,11 +1730,11 @@
   🏷️
   
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/tools/" class="single__tag" title="tools">#tools</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/tools/" class="single__tag" title="Tools">#Tools</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/cli/" class="single__tag" title="cli">#cli</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/cli/" class="single__tag" title="Cli">#Cli</a></li>
 
-  <li><a href="https://crushingcode.nisrulz.com/en/tags/dart/" class="single__tag" title="dart">#dart</a></li>
+  <li><a href="https://crushingcode.nisrulz.com/en/tags/dart/" class="single__tag" title="Dart">#Dart</a></li>
 
 </ul>
 
@@ -1899,13 +1899,13 @@ The compiler can create machine code only for the operating system on which you�
 <blockquote>
 <p><strong>NOTE</strong>: This binary contains the Dart Runtime.</p>
 </blockquote>
-<p><img src="/images/posts/cross-compilation-adventures-with-dart/img_1.png" alt="run" /></p>
+<p><img alt="run" src="/images/posts/cross-compilation-adventures-with-dart/img_1.png"></p>
 <blockquote>
 <p><strong>NOTE</strong>: I use <a href="https://github.com/bootandy/dust"><code>dust</code></a> CLI tool to list files in directory with their sizes.<br />
 <strong>TIP</strong>: You can generate an optimized binary by passing <code>aot-snapshot</code> flags at the time of compilation. i.e <code>dart compile aot-snapshot run.dart</code>. Result is an <code>run.aot</code> executable that doesnot contain the Dart Runtime.<br />
 To run this AOT executable, execute <code>dartaotruntime ./run.aot</code></p>
 </blockquote>
-<p><img src="/images/posts/cross-compilation-adventures-with-dart/img_2.png" alt="run optimized" /></p>
+<p><img alt="run optimized" src="/images/posts/cross-compilation-adventures-with-dart/img_2.png"></p>
 </li>
 <li>
 <p>Time to execute our generated <code>run</code> binary file:</p>
