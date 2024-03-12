@@ -1715,7 +1715,7 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Mar 3, 2024 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;4&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Nishant</span>
   
@@ -1787,7 +1787,7 @@
 <h3 id="enter-tabby">Enter Tabby</h3>
 <p><img alt="Screenshot" src="/images/posts/local-copilot-your-own-off-the-grid-and-local-code-assistant/sc_1.png"></p>
 <blockquote>
-<p>Note: Github project for TabbyML can be found <a href="https://github.com/TabbyML/tabby">here</a></p>
+<p>Note: Github project for Tabby can be found <a href="https://github.com/TabbyML/tabby">here</a></p>
 </blockquote>
 <p><a href="https://tabby.tabbyml.com/">Tabby</a> is described as a self-hosted AI coding assistant. It is free and open source. It works with both VSCode and Jetbrains IDEs out of the box as well as has a language server which makes it work with Vim also. Everything you do with it stays private. It can work completely offline and does not require any internet connection. The server literally runs on your own machine. However it is versatile enough that if you want to host it on your own server, you can do so too.</p>
 <p>The setup is fairly simple. Lets start 🚀</p>
@@ -1826,6 +1826,39 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><img alt="Screenshot" src="/images/posts/local-copilot-your-own-off-the-grid-and-local-code-assistant/sc_2.png"></p>
+<blockquote>
+<p>NOTE: This terminal window needs to be open as the server is running in its process. If you close the Terminal window, the server will also shutdown.</p>
+</blockquote>
+<h4 id="bonus"><strong>BONUS</strong></h4>
+<p>If you would like to run the server all the time without having to keep the terminal window running, you can run the below command</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">nohup tabby serve --device metal --model TabbyML/StarCoder-1B 2&gt;<span class="p">&amp;</span><span class="m">1</span> &lt;/dev/null <span class="p">&amp;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Here</p>
+<ol>
+<li><code>nohup</code> keeps the command running no matter whether the terminal windows is closed or you logout.</li>
+<li><code>tabby serve --device metal --model TabbyML/StarCoder-1B</code> is the command that starts the Tabby server with a specific model.</li>
+<li><code>2&gt;&amp;1</code> redirects stderr to stdout.</li>
+<li><code>&lt;/dev/null</code> means that don&rsquo;t expect input.</li>
+<li><code>&amp;</code> runs the command in background.</li>
+</ol>
+<p>After running this command, you can close the terminal window and the server will be kept running in the background. This allows you to use it in VSCode and Jetbrain&rsquo;s IDEs all the time.</p>
+<p>In order to stop Tabby server, you first look for the process in your terminal and then use the <code>kill</code> command with the PID/Process ID. Open Terminal and run the below command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ps -e <span class="p">|</span> awk <span class="s1">&#39;!/awk/ &amp;&amp; /tabby serve --device/ { print $1 }&#39;</span> <span class="p">|</span> xargs <span class="nb">kill</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This is how it would look like:</p>
+<p><img alt="Screenshot" src="/images/posts/local-copilot-your-own-off-the-grid-and-local-code-assistant/sc_8.png"></p>
 <h3 id="step-3-install-vscode-extension">Step 3: Install VSCode Extension</h3>
 <ul>
 <li>
@@ -1860,8 +1893,8 @@
 </video>
 </li>
 </ul>
-<h3 id="bonus">Bonus</h3>
-<p>I used TabbyML code completion to help me write parts of this blog post itself 😎 Here is a sneak peek:</p>
+<h3 id="bonus-1">Bonus</h3>
+<p>I used Tabby code completion to help me write parts of this blog post itself 😎 Here is a sneak peek:</p>
 <video controls autoplay muted loop>
   <source src="/images/posts/local-copilot-your-own-off-the-grid-and-local-code-assistant/bonus.mp4" type="video/mp4">
 </video>
@@ -3331,10 +3364,14 @@ document.addEventListener('DOMContentLoaded', function () {
   <ul>
     <li><a href="#enter-tabby">Enter Tabby</a></li>
     <li><a href="#step-1-install-tabby-using-homebrew-on-macos">Step 1: Install Tabby using homebrew on macOS</a></li>
-    <li><a href="#step-2-start-tabby-server-using-a-model">Step 2: Start Tabby server using a model</a></li>
+    <li><a href="#step-2-start-tabby-server-using-a-model">Step 2: Start Tabby server using a model</a>
+      <ul>
+        <li><a href="#bonus"><strong>BONUS</strong></a></li>
+      </ul>
+    </li>
     <li><a href="#step-3-install-vscode-extension">Step 3: Install VSCode Extension</a></li>
     <li><a href="#step-4-install-android-studio-extension">Step 4: Install Android Studio Extension</a></li>
-    <li><a href="#bonus">Bonus</a></li>
+    <li><a href="#bonus-1">Bonus</a></li>
   </ul>
 </nav>
         </div>
