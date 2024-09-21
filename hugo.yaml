@@ -1,0 +1,107 @@
+# Hugo configuration file
+baseURL: "https://crushingcode.nisrulz.com/"
+title: Crushing C.O.D.E
+
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+enableInlineShortcodes: true
+
+outputs:
+  home: [HTML]
+  page: [HTML]
+  section: [HTML, RSS]
+
+# import hextra as module
+module:
+  imports:
+  - path: github.com/imfing/hextra
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: Blog
+      pageRef: /blog
+      weight: 1
+    - name: Talks
+      pageRef: /talks
+      weight: 2
+    - name: Showcase
+      pageRef: /showcase
+      weight: 3
+    - name: About
+      pageRef: /about
+      weight: 4
+    - name: Search
+      weight: 5
+      params:
+        type: search
+    - name: GitHub
+      weight: 6
+      url: "https://github.com/nisrulz"
+      params:
+        icon: github
+    - name: Mastodon
+      weight: 7
+      url: "https://androiddev.social/@nisrulz"
+      params:
+        icon: mastodon
+    - name: LinkedIn
+      weight: 8
+      url: "https://linkedin.com/in/nisrulz"
+      params:
+        icon: linkedin
+
+params:
+  description: Blog by Nishant Srivastava
+
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/logo/logo.png
+      dark: images/logo/logo.png
+    width: wide
+
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: wide
+
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+    width: wide
+
+  editURL:
+    enable: false
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  blog:
+    list:
+      displayTags: true
+      # date | lastmod | publishDate | title | weight
+      sortBy: date
+      sortOrder: desc # or "asc"
+
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: hover
