@@ -4,8 +4,7 @@ date: 2021-06-17
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Android Chatter, Clubhouse/Online

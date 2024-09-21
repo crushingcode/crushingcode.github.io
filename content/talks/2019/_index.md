@@ -1,5 +1,4 @@
 ---
 title: "2019"
-cascade:
-  type: docs
+type: blog
 ---

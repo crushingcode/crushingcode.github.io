@@ -1,5 +1,4 @@
 ---
 title: "2023"
-cascade:
-  type: docs
+type: blog
 ---

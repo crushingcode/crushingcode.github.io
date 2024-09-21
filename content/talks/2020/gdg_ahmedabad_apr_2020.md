@@ -4,8 +4,7 @@ date: 2020-04-04
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} GDG Ahmedabad Live Webinar, Ahmedabad, India

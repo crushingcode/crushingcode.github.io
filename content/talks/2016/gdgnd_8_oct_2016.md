@@ -4,8 +4,7 @@ date: 2016-10-08
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} GDG New Delhi, New Delhi, India

@@ -4,8 +4,7 @@ date: 2020-11-16
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Droidcon Americas, Online

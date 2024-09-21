@@ -4,8 +4,7 @@ date: 2018-12-08
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Mobius Moscow, Moscow, Russia

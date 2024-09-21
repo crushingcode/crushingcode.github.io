@@ -4,8 +4,7 @@ date: 2021-02-02
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} South Cairo Tech Talks, GDG Helwan, Online

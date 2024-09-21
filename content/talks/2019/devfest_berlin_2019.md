@@ -4,8 +4,7 @@ date: 2019-11-09
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Devfest Berlin, Berlin, Germany

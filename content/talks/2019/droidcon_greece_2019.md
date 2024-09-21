@@ -4,8 +4,7 @@ date: 2019-09-25
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Droidcon Greece, Heraklion, Greece

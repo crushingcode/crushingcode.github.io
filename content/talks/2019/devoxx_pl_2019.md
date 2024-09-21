@@ -4,8 +4,7 @@ date: 2019-06-24
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Devoxx Poland, Krakow, Poland

@@ -4,8 +4,7 @@ date: 2023-04-25
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Android Worldwide, Online

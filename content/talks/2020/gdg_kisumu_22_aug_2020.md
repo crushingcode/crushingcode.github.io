@@ -4,8 +4,7 @@ date: 2020-08-22
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} GDG Kisumu, Kenya, Online

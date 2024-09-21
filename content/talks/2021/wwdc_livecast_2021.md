@@ -4,8 +4,7 @@ date: 2021-06-07
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Raywenderlich.com, Online
