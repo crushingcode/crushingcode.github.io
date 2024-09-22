@@ -23,7 +23,7 @@ Basically what it is doing is that using Google Sheets you can specify a cell te
 
 I was curious so I just tried it out on my own Google Sheet:
 
-![](img/automated-localization-using-gsheets/img_2.png)
+![](img_2.png)
 
 <br/>
 
@@ -42,7 +42,7 @@ This was super cool and I was mostly done here. This was a cool feature. However
 
 One guy reached out to me about that end result and how to do that:
 
-![img](img/automated-localization-using-gsheets/img_1.png)
+![img](img_1.png)
 
 Interestingly that is what most people would like. The first thing that pops up in the head that one can use the Google App Script to parse the data in Google Sheets and then it is just a matter of formatting the data to be the right format of how strings.xml is.
 
@@ -55,13 +55,11 @@ What is missing, is that each of these needs to be in its own value-lang folder 
 
 Should be easy. So after fiddling a bit more I was able to end up generating the full folder structure inside my own Google Drive folder.
 
-![img](img/automated-localization-using-gsheets/img_3.png)
+![img](img_3.png)
 
 ##### Finally! 🎈
 
-![](img/automated-localization-using-gsheets/img_4.png)
-
-<br/>
+![](img_4.png)
 
 Everything was so quick to bootstrap and get running 🛴
 
