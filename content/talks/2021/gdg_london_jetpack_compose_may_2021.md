@@ -23,10 +23,6 @@ In this session, you will understand what exactly is this Jetpack Compose and wi
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTZgvUxWPdqPGdxWjFMJyp8g4ZVGXahdT7oXI6Ihac5zpSbkeyq5VyvVTByNPPNvwK_hApTYfVCxclW/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-## Video
-
-_To be added_
-
 ## Event
 
 <iframe src="https://web.archive.org/web/20210512190207/https://gdg.community.dev/events/details/google-gdg-london-presents-jetpack-compose/" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
