@@ -18,9 +18,8 @@ This post is part of a series.
 
 {{% details title="Large Language Model (LLM)" closed="true" %}}
 
-1. [Local GPTs: Off the Grid, On Your Machine](/posts/llm/local-gpts-off-the-grid-on-your-machine/)
+1. [Local GPTs: Off the Grid, On Your Machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/)
 2. **Local Copilot: Ollama + Tabby + Starcoder** {{< icon "arrow-left" >}} `This post`
-3. [Local Copilot: Ollama + Continue + CodeQwen](/posts/llm/local-copilot-ollama-continue-codeqwen/)
 
 {{% /details %}}
 
@@ -45,7 +44,7 @@ There are a few available options to do this, but I have found the following to 
 
 - [Llama Coder](https://github.com/ex3ndr/llama-coder?tab=readme-ov-file#llama-coder)
   > This one only works with VSCode and is a [VSCode extension](https://marketplace.visualstudio.com/items?itemName=ex3ndr.llama-coder).
-  - Prequisite is to have [Ollama](https://ollama.com/) installed. You can read about how to set it up Ollama from my earlier post [here](/posts/local-gpts-off-the-grid-on-your-machine/#oh-lama--setup-ollamahttpsollamaai).
+  - Prequisite is to have [Ollama](https://ollama.com/) installed. You can read about how to set it up Ollama from my earlier post [here](/blog/local-gpts-off-the-grid-on-your-machine/#oh-lama--setup-ollamahttpsollamaai).
   - Once installed in VSCode you can simply open a file and it will suggest you code when you start typing.
 - [Tabby](https://tabby.tabbyml.com/)
 - [Continue](https://continue.dev/)

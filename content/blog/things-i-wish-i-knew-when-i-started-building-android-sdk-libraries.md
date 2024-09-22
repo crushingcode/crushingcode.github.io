@@ -123,7 +123,7 @@ allprojects {
 }
 ```
 
-You can read about how to publish your android library to JitPack [here](/posts/publish-your-android-library-via-jitpack/).
+You can read about how to publish your android library to JitPack [here](/blog/publish-your-android-library-via-jitpack/).
 
 The other option you have is of Maven Central or Jcenter.
 

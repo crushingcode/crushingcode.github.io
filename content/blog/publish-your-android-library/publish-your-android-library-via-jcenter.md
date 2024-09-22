@@ -9,7 +9,7 @@ cascade:
 ---
 
 > **NOTE**: [Jcenter has been sunset](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/). It is encouraged to publish to [MavenCentral](https://search.maven.org/).
-> You checkout the other guide: [Guide to publishing your Android Library via MavenCentral](/posts/publish-your-android-library-via-mavencentral/)
+> You checkout the other guide: [Guide to publishing your Android Library via MavenCentral](/blog/publish-your-android-library-via-mavencentral/)
 
 Developers are a different kind of people altogether. **They tend to be lazy but strive to be super efficient at the same time**.
 A lot of this can be seen in the Android world where a certain library pops up everyday to solve a specific problem or to make the complex processes simpler.
@@ -235,5 +235,5 @@ Star it or just fork it to use it.
 This post is first in parts of a series
 
 1. [Guide to publishing your Android Library via Jcenter/Bintray](#)
-1. [Guide to publishing your Android Library via MavenCentral](/posts/publish-your-android-library-via-mavencentral/)
-1. [Guide to publishing your Android Library via JitPack](/posts/publish-your-android-library-via-jitpack/)
+1. [Guide to publishing your Android Library via MavenCentral](/blog/publish-your-android-library-via-mavencentral/)
+1. [Guide to publishing your Android Library via JitPack](/blog/publish-your-android-library-via-jitpack/)

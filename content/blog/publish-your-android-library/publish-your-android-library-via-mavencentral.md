@@ -12,9 +12,9 @@ If you come from the java world, you would already be knowing about MavenCentral
 
 This post is second in parts of a series. If you didnot read the others in series , go have a look
 
-1. [Guide to publishing your Android Library via Jcenter/Bintray](/posts/publish-your-android-library-via-jcenter/)
+1. [Guide to publishing your Android Library via Jcenter/Bintray](/blog/publish-your-android-library-via-jcenter/)
 2. [Guide to publishing your Android Library via MavenCentral](#)
-3. [Guide to publishing your Android Library via JitPack](/posts/publish-your-android-library-via-jitpack/)
+3. [Guide to publishing your Android Library via JitPack](/blog/publish-your-android-library-via-jitpack/)
 
 The first step need you to create and build your Android "Awesome" Library and can be read in the [first post of this series here](/publish-your-android-library-via-jcenter/). If you have not done so , then please go ahead and read it up.
 

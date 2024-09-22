@@ -12,8 +12,8 @@ Ok so you already know how to build your android library and publish it to JCent
 
 P.S. : If you dont know how to , go ahead and have a look
 
-1. [Guide to publishing your Android Library via Jcenter/Bintray](/posts/publish-your-android-library-via-jcenter/)
-2. [Guide to publishing your Android Library via MavenCentral](/posts/publish-your-android-library-via-mavencentral/)
+1. [Guide to publishing your Android Library via Jcenter/Bintray](/blog/publish-your-android-library-via-jcenter/)
+2. [Guide to publishing your Android Library via MavenCentral](/blog/publish-your-android-library-via-mavencentral/)
 3. [Guide to publishing your Android Library via JitPack](#)
 
 The very first question that people would have is
