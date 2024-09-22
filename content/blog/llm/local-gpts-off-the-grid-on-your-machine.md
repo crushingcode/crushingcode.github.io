@@ -177,4 +177,4 @@ Then go back to the Chat interface at [http://localhost:3000](http://localhost:3
 
 ### How to Use - Walkthrough
 
-![Walkthrough](img/local-gpts-off-the-grid-on-your-machine/walkthrough.mp4)
+![Walkthrough](img/local-gpts-off-the-grid-on-your-machine/walkthrough.gif)
