@@ -28,8 +28,8 @@ _To be added_
 ## Event
 
 <a href="https://yavaconf.com/" target="_blank">
-    <img src="/images/talks/yava_conf_2021/speaker.png" />
-    <img src="/images/talks/yava_conf_2021/sc_1.png" />
-    <img src="/images/talks/yava_conf_2021/sc_2.png" />
+    <img src="../img/yava_conf_2021/speaker.png" />
+    <img src="../img/yava_conf_2021/sc_1.png" />
+    <img src="../img/yava_conf_2021/sc_2.png" />
     <p>Click here to access the event website</p>
 </a>

@@ -18,6 +18,6 @@ In this Livecast, Dru Freeman, Nishant Srivastava, Ray Fix, Caroline Begbie, Aud
 ## Video
 
 <a href="https://www.raywenderlich.com/24751268-wwdc-2021-first-impressions-livecast" target="_blank">
-    <img src="/images/talks/wwdc_livecast_2021/thumb.jpg" />
+    <img src="../img/wwdc_livecast_2021/thumb.jpg" />
     <p>Click here to access the video</p>
 </a>

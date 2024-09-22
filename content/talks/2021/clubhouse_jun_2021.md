@@ -18,6 +18,6 @@ Live panel discussion with other Android devs to talk about building Android Lib
 ## Event
 
 <a href="https://web.archive.org/web/20211027110826/https://www.clubhouse.com/event/PAjVG8dA" target="_blank">
-    <img src="/images/talks/clubhouse_jun_2021/image.jpeg" />
+    <img src="../img/clubhouse_jun_2021/image.jpeg" />
     <p>Click here to access the event website</p>
 </a>

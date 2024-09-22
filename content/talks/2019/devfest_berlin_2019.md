@@ -22,6 +22,6 @@ Android Studio is the tool of the trade hands down. When it comes to Android (ap
 ## Event
 
 <a href="https://2019.devfest-berlin.de/schedule/2019-11-09?sessionId=1016" target="_blank">
-    <img src="/images/talks/devfest_berlin_2019/event.png" />
-    <p>Click here to access the event website</p>
+  <img src="../img/devfest_berlin_2019/event.png" />
+  <p>Click here to access the event website</p>
 </a>

@@ -19,8 +19,7 @@ In this Roundtable Talk, Kevin Moore, Kevin Galligan, Nishant Srivastava and Joe
 
 <a href="https://www.raywenderlich.com/10524005-the-future-of-mobile-android-ios-flutter-and-native" target="_blank">
 
-    <img src="/images/talks/future_of_mobile_2020/thumb.png" />
+  <img src="../img/future_of_mobile_2020/thumb.png" />
 
-    <p>Click here to access the video</p>
-
+  <p>Click here to access the video</p>
 </a>
