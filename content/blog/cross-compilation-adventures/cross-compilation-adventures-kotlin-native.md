@@ -18,13 +18,13 @@ This post is part of a series.
 
 {{% details title="Cross Compilation Adventures" closed="true" %}}
 
-1. [Nim Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-nim/)
+1. [Nim Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-nim/)
 2. **Kotlin Native Adventures** {{< icon "arrow-left" >}} `This post`
-3. [Dart Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
-4. [Go Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-go/)
-5. [Rust Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-rust/)
-6. [C Lang Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-c/)
-7. [Python Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-python/)
+3. [Dart Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
+4. [Go Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-go/)
+5. [Rust Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-rust/)
+6. [C Lang Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-c/)
+7. [Python Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-python/)
 
 > TLDR: I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms.
 
@@ -168,7 +168,7 @@ Thats it. I think **Kotlin/Native and Kotlin Language** pretty much does what I 
 
 All check boxes ticked is good 😊
 
-The only drawback that I saw was that the binary size (even after using the `-opt` flag) was considerably bigger than when [I generated the same using Nim Lang](/en/posts/cross-compilation-adventures-nim/). But this is not a big concern for my usecase. Being able to use a programming language that I am highly familiar with overshadows the size drawback for my usecase atleast.
+The only drawback that I saw was that the binary size (even after using the `-opt` flag) was considerably bigger than when [I generated the same using Nim Lang](/en/blog/cross-compilation-adventures-nim/). But this is not a big concern for my usecase. Being able to use a programming language that I am highly familiar with overshadows the size drawback for my usecase atleast.
 
 > **BONUS**: While my requirement isn't about compiling to other platforms, but Kotlin/Native is quite capable such as compiling for Android, iOS, watchOS, tvOS, etc.
 

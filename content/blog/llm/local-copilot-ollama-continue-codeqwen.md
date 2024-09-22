@@ -19,9 +19,8 @@ This post is part of a series.
 
 {{% details title="Large Language Model (LLM)" closed="true" %}}
 
-1. [Local GPTs: Off the Grid, On Your Machine](/posts/llm/local-gpts-off-the-grid-on-your-machine/)
-2. [Local Copilot: Ollama + Tabby + Starcoder](/posts/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/)
-3. **Local Copilot: Ollama + Continue + CodeQwen** {{< icon "arrow-left" >}} `This post`
+1. [Local GPTs: Off the Grid, On Your Machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/)
+2. [Local Copilot: Ollama + Tabby + Starcoder](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/)
 
 {{% /details %}}
 

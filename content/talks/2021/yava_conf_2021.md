@@ -21,10 +21,6 @@ In this session you will get to understand what is Compose for Desktop, how does
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRUqf-ZSj3-FBYlLL1Lhio4vZpT1UgaaeWmiBcfXPgkcxuICa3oBe0wP_RCS038BzBzaJhp3ozrZAya/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-## Video
-
-_To be added_
-
 ## Event
 
 <a href="https://yavaconf.com/" target="_blank">

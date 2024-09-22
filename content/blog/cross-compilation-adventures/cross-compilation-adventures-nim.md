@@ -19,12 +19,12 @@ cascade:
 {{% details title="Cross Compilation Adventures" closed="true" %}}
 
   1. **Nim Adventures**  {{< icon "arrow-left" >}} `This post`
-  2. [Kotlin Native Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-kotlin-native/)
-  3. [Dart Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
-  4. [Go Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-go/)
-  5. [Rust Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-rust/)
-  6. [C Lang Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-c/)
-  7. [Python Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-python/)
+  2. [Kotlin Native Adventures](../cross-compilation-adventures-kotlin-native/)
+  3. [Dart Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
+  4. [Go Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-go/)
+  5. [Rust Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-rust/)
+  6. [C Lang Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-c/)
+  7. [Python Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-python/)
 
 {{% /details %}}
 

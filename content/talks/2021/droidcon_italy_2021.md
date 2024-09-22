@@ -23,7 +23,7 @@ In this session you will get to understand what is Compose for Desktop, how does
 
 ## Video
 
-_To be added_
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/aON21ScnYgk?si=s_ulzy4vHiH9tDl2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Event
 

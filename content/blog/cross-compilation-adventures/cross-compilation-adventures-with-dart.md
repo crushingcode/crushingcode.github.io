@@ -18,13 +18,13 @@ This post is part of a series.
 
 {{% details title="Cross Compilation Adventures" closed="true" %}}
 
-1. [Nim Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-nim/)
-2. [Kotlin Native Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-kotlin-native/)
+1. [Nim Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-nim/)
+2. [Kotlin Native Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-kotlin-native/)
 3. **Dart Adventures** {{< icon "arrow-left" >}} `This post`
-4. [Go Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-go/)
-5. [Rust Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-rust/)
-6. [C Lang Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-c/)
-7. [Python Adventures](/posts/cross-compilation-adventures/cross-compilation-adventures-python/)
+4. [Go Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-go/)
+5. [Rust Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-rust/)
+6. [C Lang Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-c/)
+7. [Python Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-python/)
 
 > TLDR: I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms.
 

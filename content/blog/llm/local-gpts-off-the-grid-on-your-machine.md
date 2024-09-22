@@ -19,8 +19,7 @@ This post is part of a series.
 {{% details title="Large Language Model (LLM)" closed="true" %}}
 
 1. **Local GPTs: Off the Grid, On Your Machine** {{< icon "arrow-left" >}} `This post`
-2. [Local Copilot: Ollama + Tabby + Starcoder](/posts/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/)
-3. [Local Copilot: Ollama + Continue + CodeQwen](/posts/llm/local-copilot-ollama-continue-codeqwen/)
+2. [Local Copilot: Ollama + Tabby + Starcoder](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/)
 
 {{% /details %}}
 
@@ -178,4 +177,4 @@ Then go back to the Chat interface at [http://localhost:3000](http://localhost:3
 
 ### How to Use - Walkthrough
 
-![Walkthrough](img/local-gpts-off-the-grid-on-your-machine/walkthrough.mp4)
+![Walkthrough](img/local-gpts-off-the-grid-on-your-machine/walkthrough.gif)
