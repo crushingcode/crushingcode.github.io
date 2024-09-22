@@ -4,8 +4,7 @@ date: 2020-01-22
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 draft: true
 ---
 

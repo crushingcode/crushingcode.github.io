@@ -4,8 +4,7 @@ date: 2024-01-17
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/cross-compilation-adventures-rust/banner.png)

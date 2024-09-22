@@ -4,8 +4,7 @@ date: 2016-05-02
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 If I were to ask a question to a room filled with android developers

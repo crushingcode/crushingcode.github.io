@@ -4,8 +4,7 @@ date: 2022-08-06
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/upgrading-xiaomi-mi-a1-to-lineage-os/banner.png)

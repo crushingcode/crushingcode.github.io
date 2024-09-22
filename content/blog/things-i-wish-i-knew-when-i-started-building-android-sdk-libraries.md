@@ -4,8 +4,7 @@ date: 2017-03-05
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries/header.png)

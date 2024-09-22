@@ -4,8 +4,7 @@ date: 2020-07-05
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 I have been contributing to the tutorials/infographics/podcasts at [Kodeco.com (formerly known as Raywenderlich.com)](https://www.kodeco.com/) since 2018. I joined them initially as an Author on the Android team, but since then have now jumped into different roles such as being a Technical Editor, a Final Pass Editor, Co-Host for a season of Kodeco Podcast. I also had the opportunity to join and work as as Final Pass Editor in the Flutter team 🙂

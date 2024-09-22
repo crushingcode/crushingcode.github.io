@@ -4,8 +4,7 @@ date: 2020-10-29
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/app-privacy-policy-gen-change-license/banner.png)

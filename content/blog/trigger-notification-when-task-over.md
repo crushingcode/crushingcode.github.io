@@ -4,8 +4,7 @@ date: 2020-03-01
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/trigger-notification-when-task-over/header.jpg)

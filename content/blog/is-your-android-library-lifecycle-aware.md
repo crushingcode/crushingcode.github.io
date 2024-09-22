@@ -4,8 +4,7 @@ date: 2017-09-17
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/is-your-android-library-lifecycle-aware/header.png)

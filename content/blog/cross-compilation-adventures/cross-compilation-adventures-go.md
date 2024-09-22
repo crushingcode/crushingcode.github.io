@@ -4,8 +4,7 @@ date: 2024-01-13
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/cross-compilation-adventures-go/banner.png)

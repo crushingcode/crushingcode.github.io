@@ -4,8 +4,7 @@ date: 2023-12-04
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/local-gpts-off-the-grid-on-your-machine/banner.png)

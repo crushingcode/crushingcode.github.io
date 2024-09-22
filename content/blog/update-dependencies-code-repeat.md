@@ -4,8 +4,7 @@ date: 2016-09-03
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/updatedependency/header.jpg)

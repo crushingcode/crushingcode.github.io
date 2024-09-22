@@ -4,8 +4,7 @@ date: 2022-03-03
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/rainbow-console-logs-in-groovy/banner.png)

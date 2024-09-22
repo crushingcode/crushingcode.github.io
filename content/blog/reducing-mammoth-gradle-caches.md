@@ -4,8 +4,7 @@ date: 2022-03-01
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/reducing-mammoth-gradle-caches/banner.png)

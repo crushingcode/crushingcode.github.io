@@ -4,8 +4,7 @@ date: 2021-04-09
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/how-to-convert-markdown-to-pdf/banner.png)
@@ -29,7 +28,7 @@ The golden tool to pick for this would be [**pandoc**](https://pandoc.org/).
 > Read about how to install pandoc [here](https://pandoc.org/installing.html).
 > NOTE: In order to render pdf, pandoc requires [latex installed](https://www.latex-project.org/get/). Make sure it is installed before proceeding.
 
-Considering our markdown file is called [integration_guide.md](img/how-to-convert-markdown-to-pdf/integration_guide.md), below command would convert it to an `integration_guide.pdf`:
+Considering our markdown file is called [integration_guide.md](.././img/how-to-convert-markdown-to-pdf/integration_guide.txt), below command would convert it to an `integration_guide.pdf`:
 
 ```sh
 pandoc integration_guide.md -s -o integration_guide.pdf
@@ -48,7 +47,7 @@ Anyways, I still wanted to confirm it works, so I got rid of all emojis in the m
 
 ![Pandoc rendered markdown as pdf](img/how-to-convert-markdown-to-pdf/img_1.png)
 
-> Checkout the final generated [integration_guide.pdf](img/how-to-convert-markdown-to-pdf/pandoc_gen_integration_guide.pdf) file.
+> Checkout the final generated [integration_guide.pdf](../img/how-to-convert-markdown-to-pdf/pandoc_gen_integration_guide.pdf) file.
 
 Simple and fast!
 
@@ -167,7 +166,7 @@ On opening the generated PDF file I have:
 
 ![PDF file](img/how-to-convert-markdown-to-pdf/img_4.png)
 
-> Checkout the final generated [integration_guide.pdf](img/how-to-convert-markdown-to-pdf/integration_guide.pdf) file.
+> Checkout the final generated [integration_guide.pdf](../img/how-to-convert-markdown-to-pdf/integration_guide.pdf) file.
 
 However, I am not quite happy with this solution. It works, yes, but I really don't want to open a browser and then have a few keystrokes to print the final pdf file. Would be nice if I could skip this step and directly convert HTML file to PDF via some commandline tool. This gave me an idea 💡 What if I could open a browser window in headless mode and print the document programmitically 🧐? Kind of like emulating the current process we figured earlier 👀
 
@@ -211,7 +210,7 @@ Now in order to execute my `renderToPdf.js` script I need to execute in terminal
 node renderToPdf.js integration_guide.html
 ```
 
-> Checkout the final generated [integration_guide.pdf](img/how-to-convert-markdown-to-pdf/puppeteer_gen_integration_guide.pdf) file via Puppeteer.
+> Checkout the final generated [integration_guide.pdf](../img/how-to-convert-markdown-to-pdf/puppeteer_gen_integration_guide.pdf) file via Puppeteer.
 
 We can even incorporate this step as part of our bash function we created earlier. The updated function looks like below:
 

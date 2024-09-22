@@ -4,8 +4,7 @@ date: 2016-10-14
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/doyouliketoadb/header.jpg)
