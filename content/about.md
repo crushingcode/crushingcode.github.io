@@ -25,6 +25,8 @@ I'm Nishant, an Android Engineer with a passion for building mobile experiences 
   - [Android applications](http://localhost:1313/showcase/#ossandroid-apps)
   - [Web app to generate Mobile App's Privacy Policy/Terms & Conditions](https://app-privacy-policy-generator.nisrulz.com/)
 
+## Github Statistics
+
 {{% details title="Click me to reveal my Github Stats" closed="true" %}}
 
 👨🏻‍💻&nbsp;You can support me in maintaining my open source work by [buying me a coffee](https://ko-fi.com/nisrulz) or [sponsoring me on GitHub](https://github.com/sponsors/nisrulz)&nbsp;🤗
