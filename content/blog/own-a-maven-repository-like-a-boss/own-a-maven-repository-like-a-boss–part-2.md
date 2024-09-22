@@ -32,15 +32,15 @@ https://github.com/<username>/<mavenrepo>/tree/master/releases
 
   Now replace the `tree` word in the url with `raw`
 
-      ```
-      # From
-      https://github.com/<username>/<mavenrepo>/tree/master/releases
+  ```
+  # From
+  https://github.com/<username>/<mavenrepo>/tree/master/releases
 
-      # to
-      https://github.com/<username>/<mavenrepo>/raw/master/releases
+  # to
+  https://github.com/<username>/<mavenrepo>/raw/master/releases
 
-      # and copy this new url.
-      ```
+  # and copy this new url.
+  ```
 
 - ### **Step 4**
 
@@ -81,7 +81,7 @@ The developer is supposed to include your `maven url` under `repository` section
 
 As a developer we are all very lazy. We want to cut this extra work down to only compiling our artifact as a dependency with a single line of code
 
-```
+```sh
 compile 'com.github.<username>:<artifact_name>:<version>'
 ```
 
