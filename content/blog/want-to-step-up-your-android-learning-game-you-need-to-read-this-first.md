@@ -4,8 +4,7 @@ date: 2017-07-29
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/want-to-step-up-your-android-learning-game-you-need-to-read-this-first/header.gif)

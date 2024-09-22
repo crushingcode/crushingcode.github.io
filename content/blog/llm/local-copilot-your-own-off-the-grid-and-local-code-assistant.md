@@ -4,8 +4,7 @@ date: 2024-03-03
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/local-copilot-your-own-off-the-grid-and-local-code-assistant/banner.png)

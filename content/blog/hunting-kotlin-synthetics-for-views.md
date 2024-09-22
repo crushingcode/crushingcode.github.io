@@ -4,8 +4,7 @@ date: 2022-03-02
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/hunting-kotlin-synthetics-for-views/banner.png)
@@ -48,7 +47,7 @@ On executing the above command, the output is like below:
 
 ```sh
 ❯ grep -rwl . -e 'kotlinx.android.synthetic' | wc -l
-       1
+1
 ```
 
 That is all! Once you have found the places in your codebase where Kotlin Synthetics have been used, simply replace them with ViewBinding one by one. You could also completely switch to [Jetpack Compose](https://developer.android.com/jetpack/compose), if you want to switch to the next generation of UI development framework on Android.

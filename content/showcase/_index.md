@@ -1,6 +1,5 @@
 ---
 title: Showcase
-layout: full
 ---
 
 <div class="hx-mt-4"></div>

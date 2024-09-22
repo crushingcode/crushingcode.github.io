@@ -4,8 +4,7 @@ date: 2016-11-18
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/rewritingthehistory/header.jpg)

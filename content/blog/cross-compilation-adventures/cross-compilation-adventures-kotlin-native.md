@@ -4,8 +4,7 @@ date: 2023-12-11
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 ![Banner](img/cross-compilation-adventures-kotlin-native/banner.png)
