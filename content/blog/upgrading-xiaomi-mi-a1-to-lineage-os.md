@@ -32,105 +32,152 @@ I keep my [Xiaomi MiA1 updated](https://wiki.lineageos.org/devices/tissot/) up t
 
 In order to flash my device with Lineage OS, I always follow through the same steps. This post is about documenting those steps so my future self remembers it.
 
-> Note: There is a comprehensive guide published by Lineage OS itself [here](https://wiki.lineageos.org/devices/tissot/install). However I don't need all that extra info and honestly don't spend time reading it either. This post is my version of how I flash my device.
+{{< callout type="info" >}}
+Note: There is a comprehensive guide published by Lineage OS itself [here](https://wiki.lineageos.org/devices/tissot/install). However I don't need all that extra info and honestly don't spend time reading it either. This post is my version of how I flash my device.
 
-> WARNING: Flashing a device is unpredictable process and there is always a chance of bricking your device completely. When following instructions to flash a device always note that YOU are responsible for anything that goes wrong in the process. The process that worked on my device doesn't guarantee that it would work on yours too. Although if it is the same device down to hardware combination used to build it for a specific region (same brand of device can have region specific hardware combinations based on how the parts are sourced. i.e EU region, US region, India region, etc.), the chances of success can thus be roughly around 80%. This is my perception though, it is not quantitatively derived. Take this claim however you may.
+{{< /callout >}}
+
+{{< callout type="warning" >}}
+WARNING: Flashing a device is unpredictable process and there is always a chance of bricking your device completely. When following instructions to flash a device always note that YOU are responsible for anything that goes wrong in the process. The process that worked on my device doesn't guarantee that it would work on yours too. Although if it is the same device down to hardware combination used to build it for a specific region (same brand of device can have region specific hardware combinations based on how the parts are sourced. i.e EU region, US region, India region, etc.), the chances of success can thus be roughly around 80%. This is my perception though, it is not quantitatively derived. Take this claim however you may.
+{{< /callout >}}
 
 ## Steps
 
-1. [Download Lineage OS image for Xiaomi Mi A1](https://download.lineage.microg.org/tissot/). My device codename is `tissot`, so that is the one I need to find in Lineage OS directory. The name of the file would look like `lineage-19.1-20220626-microG-tissot.zip`.
+{{% steps %}}
 
-   > Note: The version of Lineage OS that I prefer is the one which doesn't come with Google Services. I download the one that has [microG](https://microg.org/) [pre-setup](https://lineage.microg.org/).
+### [Download Lineage OS image for Xiaomi Mi A1](https://download.lineage.microg.org/tissot/)
 
-   ![LineageOS + microG](img/upgrading-xiaomi-mi-a1-to-lineage-os/img_2.png)
+My device codename is `tissot`, so that is the one I need to find in Lineage OS directory. The name of the file would look like `lineage-19.1-20220626-microG-tissot.zip`.
 
-2. [Download a recovery image](https://dl.twrp.me/tissot/). I prefer [TWRP](https://twrp.me/about/). Download the one for `tissot` again. The name of file would look like `twrp-3.6.2_9-0-tissot.img`.
-3. Connect your device over USB.
-4. On your device, go into **Settings** -> **About** and find the **Build Number** and tap on it 7 times to enable developer settings.
-5. Press back and go into **Developer Options** and enable **USB debugging**.
-6. Next, fire up a terminal on your dev machine. (I am using macOS for this post)
-7. Check if the device is connected via `adb` and is debuggable by running the command
+> Note: The version of Lineage OS that I prefer is the one which doesn't come with Google Services. I download the one that has [microG](https://microg.org/) [pre-setup](https://lineage.microg.org/).
 
-   ```sh
-   adb devices
-   ```
+![LineageOS + microG](img/upgrading-xiaomi-mi-a1-to-lineage-os/img_2.png)
 
-   You should see a device with an id as the result if everything is functional:
+### [Download a recovery image](https://dl.twrp.me/tissot/).
 
-   ```sh
-   List of devices attached
-   56580e47	device
-   ```
+I prefer [TWRP](https://twrp.me/about/). Download the one for `tissot` again. The name of file would look like `twrp-3.6.2_9-0-tissot.img`.
 
-8. Now reboot the device into bootloader, using the command:
+### Connect your device over USB.
 
-   ```sh
-   adb reboot bootloader
-   ```
+### Enable Developer Settings
 
-   Your device would restart and end up on a screen that has an Android figure. This just means you are in the bootloader mode.
+On your device, go into **Settings** -> **About** and find the **Build Number** and tap on it 7 times to enable developer settings.
 
-   To verify the device is responsive in this mode, run the below command:
+### Enable USB Debugging
 
-   ```sh
-   fastboot devices
-   ```
+Press back and go into **Developer Options** and enable **USB debugging**.
 
-   You should see the same device id, if everything is functional:
+### Fire up a terminal on your dev machine. (I am using macOS for this post)
 
-   ```sh
-   56580e47	fastboot
-   ```
+### Check if device is connected
 
-9. Now before you start flashing anything, you need to unlock the bootloader. Use the below command:
+Check if the device is connected via `adb` and is debuggable by running the command
 
-   ```sh
-   fastboot oem unlock
-   ```
+```sh
+adb devices
+```
 
-10. Reboot the device, by executing the command:
+You should see a device with an id as the result if everything is functional:
 
-    ```sh
-    fastboot reboot
-    ```
+```sh
+List of devices attached
+56580e47	device
+```
 
-    Output should look like:
+### Reboot into Bootloader Mode
 
-    ```sh
-    Rebooting                                          OKAY [  0.001s]
-    Finished. Total time: 0.001s
-    ```
+Now reboot the device into bootloader, using the command:
 
-11. Since the device resets completely, you will need to re-enable USB debugging to continue. Repeat **Steps 4 and 5** mentioned earlier to do so.
+```sh
+adb reboot bootloader
+```
 
-12. Now that the bootloader is unlocked, you need to get into the bootloader mode again. Re-run the **Step 8** to get back into the bootloader mode.
+Your device would restart and end up on a screen that has an Android figure. This just means you are in the bootloader mode.
 
-13. Now you need to flash a temp. recovery into memory to get access to ADB Sideload feature. To do so, run the below command with TWRP recovery image file (`twrp-3.6.2_9-0-tissot.img`) as shown below:
+To verify the device is responsive in this mode, run the below command:
 
-    ```sh
-    fastboot flash boot twrp-3.6.2_9-0-tissot.img
-    ```
+```sh
+fastboot devices
+```
 
-14. Once the last process finishes successfully, you need to boot into the recovery. Run the below command:
+You should see the same device id, if everything is functional:
 
-    ```sh
-    fastboot reboot recovery
-    ```
+```sh
+56580e47	fastboot
+```
 
-15. At this point, TWRP would load up and you now need to sideload the Lineage OS `.zip` file. On the device, select **Advanced** -> **ADB Sideload**, then swipe to begin sideload.
+### Unlock Bootloader
 
-16. On the dev machine, sideload the Lineage OS package using: `adb sideload filename.zip`. Run the command like below:
+Now before you start flashing anything, you need to unlock the bootloader. Use the below command:
 
-    ```sh
-    adb sideload lineage-19.1-20220626-microG-tissot.zip
-    ```
+```sh
+fastboot oem unlock
+```
 
-17. Once you have installed everything successfully, click the back arrow in the top left of the screen, then **Reboot system now**.
+### Reboot device
 
-18. All done 🎉
-    Your device will take some time to load and start completely. The first boot is usually a bit of time taking process as everything is being setup. Simply setup your device as you would when you buy a new phone.
+Reboot the device, by executing the command:
 
-> Note: If you encounter error, please refer to their [FAQ page](https://wiki.lineageos.org/faq) to help debug some common issues.
+```sh
+fastboot reboot
+```
+
+Output should look like:
+
+```sh
+Rebooting                                          OKAY [  0.001s]
+Finished. Total time: 0.001s
+```
+
+### Enable USB Debugging
+
+Since the device resets completely, you will need to re-enable USB debugging to continue. Repeat **Steps 4 and 5** mentioned earlier to do so.
+
+### Reboot into Bootloader Mode
+
+Now that the bootloader is unlocked, you need to get into the bootloader mode again. Re-run the **Step 8** to get back into the bootloader mode.
+
+### Flash TWRP Recovery Image
+
+Now you need to flash a temp. recovery into memory to get access to ADB Sideload feature. To do so, run the below command with TWRP recovery image file (`twrp-3.6.2_9-0-tissot.img`) as shown below:
+
+```sh
+fastboot flash boot twrp-3.6.2_9-0-tissot.img
+```
+
+### Reboot into Recovery Mode
+
+Once the last process finishes successfully, you need to boot into the recovery. Run the below command:
+
+```sh
+fastboot reboot recovery
+```
+
+### Enable ADB Sideload
+
+At this point, TWRP would load up and you now need to sideload the Lineage OS `.zip` file. On the device, select **Advanced** -> **ADB Sideload**, then swipe to begin sideload.
+
+### Sideload Lineage OS
+
+On the dev machine, sideload the Lineage OS package using: `adb sideload filename.zip`. Run the command like below:
+
+```sh
+adb sideload lineage-19.1-20220626-microG-tissot.zip
+```
+
+### Reboot Device
+
+Once you have installed everything successfully, click the back arrow in the top left of the screen, then **Reboot system now**.
+
+### Final step
+
+Your device will take some time to load and start completely. The first boot is usually a bit of time taking process as everything is being setup. Simply setup your device as you would when you buy a new phone.
+
+{{< callout emoji="🆘" >}}
+  If you encounter error, please refer to their [FAQ page](https://wiki.lineageos.org/faq) to help debug some common issues.
+{{< /callout >}}
+
+{{% /steps %}}
 
 Thats all there is!
 
