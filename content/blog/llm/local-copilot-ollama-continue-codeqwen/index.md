@@ -1,5 +1,5 @@
 ---
-title: "Local Copilot: Ollama + Continue + CodeQwen"
+title: "[Local Copilot] Ollama + Continue + CodeQwen"
 date: 2024-09-05
 authors:
   - name: Nishant Srivastava
@@ -18,8 +18,8 @@ This post is part of a series.
 
 {{% details title="Posts in Series"  %}}
 
-1. [Local GPTs: Off the Grid, On Your Machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/)
-2. [Local Copilot: Ollama + Tabby + Starcoder](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/)
+1. [[Local GPTs] Off the Grid, On Your Machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/)
+2. [[Local Copilot] Ollama + Tabby + StarCoder](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/)
 
 {{% /details %}}
 

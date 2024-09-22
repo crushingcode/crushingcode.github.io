@@ -1,6 +1,8 @@
 ---
 title: "Cross Compilation Adventures"
-type: blog
+date: 2024-02-18
+cascade:
+  type: docs
 ---
 
 As someone who spends most of their time inside the Terminal app, I've come to appreciate the convenience of using custom CLI tools to streamline my workflow. However, I've always had one major gripe - remembering shell aliases and functions specific to each operating system ( macOS or Linux) is just not a good developer user experience. That's why I've been itching to build my own cross-platform CLI tools that can work seamlessly across different systems.

@@ -1,5 +1,5 @@
 ---
-title: "Local Copilot: Ollama + Tabby + StarCoder"
+title: "[Local Copilot] Ollama + Tabby + StarCoder"
 date: 2024-03-03
 authors:
   - name: Nishant Srivastava
@@ -17,8 +17,8 @@ This post is part of a series.
 
 {{% details title="Posts in Series"  %}}
 
-1. [Local GPTs: Off the Grid, On Your Machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/)
-2. **Local Copilot: Ollama + Tabby + Starcoder** {{< icon "arrow-left" >}} `This post`
+1. [[Local GPTs] Off the Grid, On Your Machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/)
+2. **[Local Copilot] Ollama + Tabby + StarCoder** {{< icon "arrow-left" >}} `This post`
 
 {{% /details %}}
 
