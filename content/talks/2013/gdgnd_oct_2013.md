@@ -4,8 +4,7 @@ date: 2013-10-16
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Mindfire Solutions, Bangalore, India

@@ -4,8 +4,7 @@ date: 2021-11-12
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Droidcon Italy, Italy, Online
@@ -29,6 +28,6 @@ _To be added_
 ## Event
 
 <a href="https://it.droidcon.com/2021/agenda/" target="_blank">
-    <img src="/images/talks/droidcon_italy_2021/speaker.jpeg" />
+    <img src="../img/droidcon_italy_2021/speaker.jpeg" />
     <p>Click here to access the event website</p>
 </a>

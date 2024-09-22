@@ -4,8 +4,7 @@ date: 2021-05-12
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} GDG London: Jetpack Compose, Online

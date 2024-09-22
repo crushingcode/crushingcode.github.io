@@ -4,8 +4,7 @@ date: 2021-02-07
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} FOSDEM 2021: Kotlin Devroom, Online

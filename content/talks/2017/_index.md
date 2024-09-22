@@ -1,5 +1,4 @@
 ---
 title: "2017"
-cascade:
-  type: docs
+type: blog
 ---

@@ -1,6 +1,6 @@
 # Crushing C.O.D.E
 
-[![Deploy Blog to Github Pages](https://github.com/crushingcode/crushingcode-source/actions/workflows/pages.yaml/badge.svg)](https://github.com/crushingcode/crushingcode-source/actions/workflows/pages.yaml)
+[![Deploy blog to Github Pages](https://github.com/crushingcode/crushingcode.github.io/actions/workflows/pages.yaml/badge.svg)](https://github.com/crushingcode/crushingcode.github.io/actions/workflows/pages.yaml)
 
 - Personal Blog by Nishant Srivastava
 - Uses [Hugo Static Site Generator](https://gohugo.io/).

@@ -4,8 +4,7 @@ date: 2017-09-05
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Droidcon Berlin, Berlin, Germany

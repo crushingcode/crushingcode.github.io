@@ -4,8 +4,7 @@ date: 2017-04-25
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} VanDev: Vancouver's Software Developers Network, Vancouver, Canada

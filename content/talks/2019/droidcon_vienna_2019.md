@@ -4,8 +4,7 @@ date: 2019-09-19
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Droidcon Vienna, Vienna, Austria

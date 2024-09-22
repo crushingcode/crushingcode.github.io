@@ -4,8 +4,7 @@ date: 2021-05-19
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Raywenderlich.com, Online
@@ -19,6 +18,6 @@ In this Livecast, Dru Freeman, Nishant Srivastava, Victoria Gonda, Fuad Kamal an
 ## Video
 
 <a href="https://www.raywenderlich.com/23841347-google-i-o-first-impressions-livecast" target="_blank">
-    <img src="/images/talks/google_io_livecast_2021/thumb.jpeg" />
+    <img src="../img/google_io_livecast_2021/thumb.jpeg" />
     <p>Click here to access the video</p>
 </a>

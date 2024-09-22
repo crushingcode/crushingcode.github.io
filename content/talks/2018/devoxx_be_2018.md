@@ -4,8 +4,7 @@ date: 2018-11-15
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Devoxx Belgium, Antwerp, Belgium

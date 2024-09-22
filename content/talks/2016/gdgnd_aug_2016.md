@@ -4,8 +4,7 @@ date: 2016-08-07
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Udacity Community Delhi NCR, New Delhi, India

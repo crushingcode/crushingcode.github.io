@@ -4,8 +4,7 @@ date: 2021-09-28
 authors:
   - name: Nishant Srivastava
     link: /about/
-cascade:
-  type: docs
+type: blog
 ---
 
 {{< icon "location-marker" >}} Chicago Roboto, Online
