@@ -11,6 +11,8 @@ type: blog
 
 Most of us are engineers and at the end of the day humans. So basically we all are bound to make mistakes. As an Engineer we make such mistakes in code quite often and even if we do not admit it , they do exist. How many times have you published your code to a public VCS such as Github/Bitbucket with the credentials and then pulled down the repository only to reset the whole history and re-publish the new repository with the credentials cleaned out.
 
+<!--more-->
+
 Pretty common, eh ? From what I have experienced it turns out, thats what most of the devs do. However if I told you that you can clean the credentials out and still keep the git history ! Sounds awesome right ? Thats coz it is !
 
 So how does one do it ? I will be demonstrating a very simple example of a scenario I recently came across and how I solved it.

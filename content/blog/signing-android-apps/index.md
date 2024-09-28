@@ -9,9 +9,9 @@ type: blog
 
 ![Banner](banner.png)
 
-<!--more-->
-
 As an Android Engineer, I have to sign Android apps whenever making a public release. The steps are quite simple and well [documented on the official website](https://developer.android.com/studio/publish/app-signing). However the one thing that always comes up how do you provide your signing credentials and keystore file. Lets find out!
+
+<!--more-->
 
 There 2 common ways this can be done:
 

@@ -1,5 +1,6 @@
 ---
 title: "My Projects: Behind the Scenes"
+date: 2020-10-29
 cascade:
   type: docs
 ---

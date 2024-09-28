@@ -1,5 +1,5 @@
 ---
-title: "Local GPTs: Off the Grid, On Your Machine"
+title: "[Local GPTs] Off the Grid, On Your Machine"
 date: 2023-12-04
 authors:
   - name: Nishant Srivastava
@@ -17,8 +17,8 @@ This post is part of a series.
 
 {{% details title="Posts in Series"  %}}
 
-1. **Local GPTs: Off the Grid, On Your Machine** {{< icon "arrow-left" >}} `This post`
-2. [Local Copilot: Ollama + Tabby + Starcoder](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/)
+1. **[Local GPTs] Off the Grid, On Your Machine** {{< icon "arrow-left" >}} `This post`
+2. [[Local Copilot] Ollama + Tabby + Starcoder](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/)
 
 {{% /details %}}
 

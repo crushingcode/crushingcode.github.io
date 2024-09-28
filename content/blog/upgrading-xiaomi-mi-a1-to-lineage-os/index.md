@@ -9,9 +9,9 @@ type: blog
 
 ![Banner](banner.png)
 
-<!--more-->
-
 Every few years I upgrade my personal device to the next Android phone in the market. Since I do not want to just throw the last device out, I usually keep them around. They are also useful for development purposes.[Back in 2017 one of the devices](https://en.wikipedia.org/wiki/Android_One#2017) to launch with Android One program was [Xiaomi Mi A1](<https://www.gsmarena.com/xiaomi_mi_a1_(mi_5x)-8776.php>), which was built with joint efforts from Google and Xiaomi.
+
+<!--more-->
 
 ![Xiaomi Mi A1](img_1.png)
 

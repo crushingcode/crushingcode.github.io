@@ -1,5 +1,6 @@
 ---
 title: "Empowering Personal AI: A journey with GPT, LLMs, and Beyond"
+date: 2024-03-03
 cascade:
   type: docs
 ---
