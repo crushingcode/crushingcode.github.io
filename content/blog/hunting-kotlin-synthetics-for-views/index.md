@@ -9,9 +9,9 @@ type: blog
 
 ![Banner](banner.png)
 
-<!--more-->
-
 Kotlin Synthetics for Views is deprecated! You can read about it [here](https://android-developers.googleblog.com/2022/02/discontinuing-kotlin-synthetics-for-views.html).
+
+<!--more-->
 
 That means if you have been using them in your project then you need to replace them with a more recommended approach i.e [ViewBindings](https://developer.android.com/topic/libraries/view-binding). There is a [migration guide](https://developer.android.com/topic/libraries/view-binding/migration) too.
 

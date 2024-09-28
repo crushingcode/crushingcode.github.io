@@ -9,9 +9,9 @@ type: blog
 
 ![Banner](banner.png)
 
-<!--more-->
-
 Writing documentation is part of almost all developer jobs. Although writing code is the primary focus for any developer, the core understanding/reasoning of the implementation can only be captured in a well-written **human-readable** documentation.
+
+<!--more-->
 
 I put emphasis on **human-readable** because this documentation needs to be understood by, well humans. If we throw in a lot of jargon words, acronyms and code without explaining it in a simple language then it is close to not usable by people.
 

@@ -9,11 +9,11 @@ type: blog
 
 ![Banner](banner.png)
 
-<!--more-->
-
 Once in a while I notice space occupied in my dev machine to be considerable. Since I am an Android Engineer, I mostly work with [Gradle build tool](https://gradle.org/).
 
 Gradle maintains a cache of all dependencies it downloads as well as other artifacts such as downloaded wrappers at the path `~/.gradle`. Now you'll be surprized to know how much space this `.gradle` directory occupies. Lets try to find out.
+
+<!--more-->
 
 I'll use a tool called [`du`](https://ss64.com/bash/du.html). This is usually present on all unix systems (I am using macOS).
 

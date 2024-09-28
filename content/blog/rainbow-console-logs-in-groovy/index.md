@@ -9,9 +9,9 @@ type: blog
 
 ![Banner](banner.png)
 
-<!--more-->
-
 Have you ever wanted to emphasize some console log output with colors? Well, I thought I never would have needed to, but while tinkering with some side project, I found a trick to colorize my console log output. The magic trick is using [ANSI Escape Codes](https://en.wikipedia.org/wiki/ANSI_escape_code). My use-case was to highlight some part of my Groovy task's output as a yellow colored warning and some errors as red, while working with my Android project. The code is quite simple, so lets dive into its implementation right away!
+
+<!--more-->
 
 First, create a `colored_console.gradle` file at the root of your project directory and populate it with content shown below. You can copy past it as it is:
 

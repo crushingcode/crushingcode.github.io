@@ -9,13 +9,13 @@ type: blog
 
 ![Banner](header.jpg)
 
-<!--more-->
-
 Executing tasks and processes is pretty common in the Terminal. Having them run and then pipe the output into another one, transforming the output, triggering a sub-process/task, etc. are some of the usual ways of working with them.
 
 That implies that they will most probably won't finish immediately. Now that is an not much of an issue, but more of an annoyance because you sometimes have to wait for the task to finish to start another one. Ofcourse you can open new terminal windows to execute multiple tasks, however the feedback loop is still missing.
 
 I wanted to personally fix this issue for myself. So I set out to find a solution for this.
+
+<!--more-->
 
 One of things that I find very useful is the Notifications in macOS and Ubuntu. Wouldn't it be nice if there was a notification that could be triggered when a task is finished?
 
