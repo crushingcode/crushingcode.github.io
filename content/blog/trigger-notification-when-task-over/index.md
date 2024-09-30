@@ -4,7 +4,7 @@ date: 2020-03-01
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
 ---
 
 ![Banner](header.jpg)

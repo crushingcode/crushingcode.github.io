@@ -70,11 +70,11 @@ params:
     logo:
       path: images/logo/logo.png
       dark: images/logo/logo.png
-    width: wide
+    width: full
 
   page:
     # full (100%), wide (90rem), normal (1280px)
-    width: wide
+    width: full
 
   theme:
     # light | dark | system

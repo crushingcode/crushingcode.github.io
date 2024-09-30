@@ -4,7 +4,7 @@ date: 2016-02-16
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
 ---
 
 The world of artifacts and the way they make the life of a developer simpler, fascinates me to a great extent.

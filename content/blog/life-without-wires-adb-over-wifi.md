@@ -4,7 +4,7 @@ date: 2015-07-09
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
 ---
 
 Tired of being tied to your laptop/desktop while debugging your android apps ?

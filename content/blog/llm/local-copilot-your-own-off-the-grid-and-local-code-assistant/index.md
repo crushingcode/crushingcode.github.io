@@ -4,7 +4,6 @@ date: 2024-03-03
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
 ---
 
 ![Banner](banner.png)

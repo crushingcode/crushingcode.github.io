@@ -4,7 +4,6 @@ date: 2024-02-18
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
 ---
 
 ![Banner](banner.png)
@@ -44,172 +43,184 @@ First we need to make sure we have access to **python3**. If you don't have acce
 
 Once installed, you should have access to `python3` in your Terminal. If not restart your session or open a new Terminal window so it is loaded in the PATH. Follow through next steps
 
-- Create a file named `run.py`.
+Create a file named `run.py`.
 
-  ```sh
-  touch run.py
-  ```
+```sh
+touch run.py
+```
 
-- Add the below code to the `run.py` file and save the file.
+Add the below code to the `run.py` file and save the file.
 
-  ```py
-  import sys
+```py {filename="run.py"}
+import sys
 
-  def celsius_to_fahrenheit(celsius):
-      return (celsius * 9 / 5) + 32
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9 / 5) + 32
 
-  def fahrenheit_to_celsius(fahrenheit):
-      return ((fahrenheit - 32) * 5 / 9)
+def fahrenheit_to_celsius(fahrenheit):
+    return ((fahrenheit - 32) * 5 / 9)
 
-  def main():
-      if len(sys.argv) != 3:
-          print("Usage: ./run <value> <unit_to_convert_to>")
-          return
+def main():
+    if len(sys.argv) != 3:
+        print("Usage: ./run <value> <unit_to_convert_to>")
+        return
 
-      value = float(sys.argv[1])
-      unit = sys.argv[2].upper()
+    value = float(sys.argv[1])
+    unit = sys.argv[2].upper()
 
-      if not value:
-          print("Invalid temperature value.")
-          return
+    if not value:
+        print("Invalid temperature value.")
+        return
 
-      converted_temperature = None
+    converted_temperature = None
 
-      if unit == "C":
-          converted_temperature = celsius_to_fahrenheit(value)
-      elif unit == "F":
-          converted_temperature = fahrenheit_to_celsius(value)
-      else:
-          print("Invalid unit. Please use C or F.")
-          return
+    if unit == "C":
+        converted_temperature = celsius_to_fahrenheit(value)
+    elif unit == "F":
+        converted_temperature = fahrenheit_to_celsius(value)
+    else:
+        print("Invalid unit. Please use C or F.")
+        return
 
-      if converted_temperature is not None:
-          print(f"Converted temperature: {converted_temperature}°{unit}")
+    if converted_temperature is not None:
+        print(f"Converted temperature: {converted_temperature}°{unit}")
 
-  if __name__ == "__main__":
-      main()
-  ```
+if __name__ == "__main__":
+    main()
+```
 
-  > I am not going to explain this code as it is simple and self explanatory.
-  >
-  > To understand and learn the language you can use [Learn X in Y minutes: Python](https://learnxinyminutes.com/docs/python/) 🚀
+> I am not going to explain this code as it is simple and self explanatory.
+>
+> To understand and learn the language you can use [Learn X in Y minutes: Python](https://learnxinyminutes.com/docs/python/) 🚀
 
-- Now to compile, you could execute the `python3` compiler with the `run.py` source file:
+Now to compile, you could execute the `python3` compiler with the `run.py` source file:
 
-  ```sh
-  python3 run.py
-  ```
+```sh
+python3 run.py
+```
 
-  This will compile and run your code. This itself is a cross platform approach. i.e you usually would have python come pre-installed in the common OS you use. This means you can effectively run your python code on all the OS that have python installed, by simply running `python3 run.py`.
+This will compile and run your code. This itself is a cross platform approach. i.e you usually would have python come pre-installed in the common OS you use. This means you can effectively run your python code on all the OS that have python installed, by simply running `python3 run.py`.
 
-  To make it **look** like that you have an executable, you can use a trick to wrap your command inside a bash (\*nix)/bat(windows) script and make it executable, as shown below
+To make it **look** like that you have an executable, you can use a trick to wrap your command inside a bash (\*nix)/bat(windows) script and make it executable, as shown below
 
-  ```sh
-  # Create the bash script
-  ❯ touch run
-  echo '#!/usr/bin/env bash' > run
-  echo 'python3 run.py $1 $2' >> run
+```sh
+# Create the bash script
+❯ touch run
+echo '#!/usr/bin/env bash' > run
+echo 'python3 run.py $1 $2' >> run
 
-  # Make the script executable
-  ❯ chmod +x run
+# Make the script executable
+❯ chmod +x run
 
-  # Execute the bash script
-  ❯ ./run
-  Usage: ./run <value> <unit_to_convert_to>
+# Execute the bash script
+❯ ./run
+Usage: ./run <value> <unit_to_convert_to>
 
-  # Pass args to your bash script
-  ❯ ./run 49 C
-  Converted temperature: 120.2°C
-  ```
+# Pass args to your bash script
+❯ ./run 49 C
+Converted temperature: 120.2°C
+```
 
-  From the outside it looks like we have achieved what we wanted, but that is not true. This is not the same as an executable binary. It has a dependency on the `python3` compiler to be available in the PATH. Also in order for this to work, the `run.py` file needs to be in the same directory as the `run` bash script.
-  So while this solution is a straight forward solution when using Python, it isn't a true cross compiled binary.
+From the outside it looks like we have achieved what we wanted, but that is not true. This is not the same as an executable binary. It has a dependency on the `python3` compiler to be available in the PATH. Also in order for this to work, the `run.py` file needs to be in the same directory as the `run` bash script.
+So while this solution is a straight forward solution when using Python, it isn't a true cross compiled binary.
 
-  That is not what I want. I would like to have an executable binary file that I can share around. I don't want to have a dependency on Python either. Once compiled it should require no dependencies.
-  Python doesn't directly compile to an executable, instead its code needs to be bundled into an executable binary. There are 2 commonly known bundlers to do this job.
+That is not what I want. I would like to have an executable binary file that I can share around. I don't want to have a dependency on Python either. Once compiled it should require no dependencies.
+Python doesn't directly compile to an executable, instead its code needs to be bundled into an executable binary. There are 2 commonly known bundlers to do this job.
 
-  1. [Nuitika](https://nuitka.net/index.html#what-is-nuitka)
-     > Nuitka is the optimizing Python compiler written in Python that creates executables that run without an need for a separate installer.
-  1. [PyInstaller](https://pyinstaller.org/en/stable/)
-     > PyInstaller bundles a Python application and all its dependencies into a single package. The user can run the packaged app without installing a Python interpreter or any modules
+1. [Nuitika](https://nuitka.net/index.html#what-is-nuitka)
+   > Nuitka is the optimizing Python compiler written in Python that creates executables that run without an need for a separate installer.
+1. [PyInstaller](https://pyinstaller.org/en/stable/)
+   > PyInstaller bundles a Python application and all its dependencies into a single package. The user can run the packaged app without installing a Python interpreter or any modules
 
-- Compile into executable binary using Nuitika
+### Compile into executable binary using Nuitika
 
-  - First step is to install [nuitika Standard](https://nuitka.net/doc/download.html#pypi)
+{{% steps %}}
 
-    ```sh
-    python3 -m pip install -U nuitka
-    ```
+### Install [nuitika Standard](https://nuitka.net/doc/download.html#pypi)
 
-    > There is also [Nuitka Commercial](https://nuitka.net/index.html#nuitka-commercial). It additionally protects your code, data and outputs, so that users of the executable cannot access these. This a private repository of plugins that you pay to get access to. Additionally, you can purchase priority support.
+```sh
+python3 -m pip install -U nuitka
+```
 
-  - To build an executable binary, execute the below command for your `run.py` file
+> There is also [Nuitka Commercial](https://nuitka.net/index.html#nuitka-commercial). It additionally protects your code, data and outputs, so that users of the executable cannot access these. This a private repository of plugins that you pay to get access to. Additionally, you can purchase priority support.
 
-    ```sh
-    python3 -m nuitka run.py \
-      --output-filename=run --onefile \
-      --remove-output --quiet
-    ```
+### Build an executable binary
 
-    > **NOTE**: This will prompt you to download a C caching tool (to speed up repeated compilation of generated C code). Say yes to the question, when prompted.
+Execute the below command for your `run.py` file
 
-  - To build an Optimized executable binary, execute the same build command above for your `run.py` file with `--lto=yes`:
+```sh
+python3 -m nuitka run.py \
+  --output-filename=run --onefile \
+  --remove-output --quiet
+```
 
-    ```sh
-    python3 -m nuitka run.py \
-      --output-filename=run --onefile \
-      --remove-output --quiet \
-      --lto=yes
-    ```
+> **NOTE**: This will prompt you to download a C caching tool (to speed up repeated compilation of generated C code). Say yes to the question, when prompted.
 
-  You should now have a binary generated in the same directory with the same name as the py file i.e run
+To build an Optimized executable binary, execute the same build command above for your `run.py` file with `--lto=yes`:
 
-  ![run](img_1.png)
+```sh
+python3 -m nuitka run.py \
+  --output-filename=run --onefile \
+  --remove-output --quiet \
+  --lto=yes
+```
 
-  > **NOTE**: I use [`dust`](https://github.com/bootandy/dust) CLI tool to list files in directory with their sizes.
+You should now have a binary generated in the same directory with the same name as the py file i.e run
 
-- Compile into executable binary using PyInstaller
+![run](img_1.png)
 
-  - First step is to install [PyInstaller](https://pyinstaller.org/en/stable/#quickstart)
+> **NOTE**: I use [`dust`](https://github.com/bootandy/dust) CLI tool to list files in directory with their sizes.
 
-    ```sh
-    python3 -m pip install -U pyinstaller
-    ```
+{{% /steps %}}
 
-  - To build an executable binary, execute the below command for your `run.py` file
+### Compile into executable binary using PyInstaller
 
-    ```sh
-    pyinstaller run.py \
-      --onefile --distpath . \
-      --log-level ERROR --clean --noconfirm
-    ```
+{{% steps %}}
 
-  - To build an Optimized executable binary, execute the same build command above for your `run.py` file with `--strip`:
+### Install [PyInstaller](https://pyinstaller.org/en/stable/#quickstart)
 
-    ```sh
-    pyinstaller run.py \
-      --onefile --distpath . \
-      --log-level ERROR --clean --noconfirm \
-      --strip
-    ```
+```sh
+python3 -m pip install -U pyinstaller
+```
 
-    You should now have a binary generated in the same directory with the same name as the py file i.e run
+### Build an executable binary
 
-    ![run](img_2.png)
+Execute the below command for your `run.py` file
 
-- Time to execute our generated `run` binary file:
+```sh
+pyinstaller run.py \
+  --onefile --distpath . \
+  --log-level ERROR --clean --noconfirm
+```
 
-  ```sh
-  ❯ ./run
-  Usage: ./run <value> <unit_to_convert_to>
-  ```
+To build an Optimized executable binary, execute the same build command above for your `run.py` file with `--strip`:
 
-  Didn't work 🙄, but we have a helpful message stating how to use the CLI tool 😊
+```sh
+pyinstaller run.py \
+  --onefile --distpath . \
+  --log-level ERROR --clean --noconfirm \
+  --strip
+```
 
-  ```sh
-  ❯ ./run 49 C
-  Converted temperature: 120.2°C
-  ```
+You should now have a binary generated in the same directory with the same name as the py file i.e run
+
+![run](img_2.png)
+
+{{% /steps %}}
+
+### Time to execute our generated `run` binary file:
+
+```sh
+❯ ./run
+Usage: ./run <value> <unit_to_convert_to>
+```
+
+Didn't work 🙄, but we have a helpful message stating how to use the CLI tool 😊
+
+```sh
+❯ ./run 49 C
+Converted temperature: 120.2°C
+```
 
 Done! That was a super quick intro to working with Python Compiler and Python Language in less than 5 mins 😅
 

@@ -4,7 +4,7 @@ date: 2015-08-03
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
 ---
 
 Have you ever thought how the central repository works like Maven Central or JCenter?
