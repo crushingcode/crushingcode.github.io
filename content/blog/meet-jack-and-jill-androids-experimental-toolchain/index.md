@@ -4,7 +4,7 @@ date: 2015-07-21
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
 ---
 
 JACK & JILL are part of the new tool chain for android and in the words of [Android Developer Blog](http://android-developers.blogspot.co.uk/2014/12/hello-world-meet-our-new-experimental.html)

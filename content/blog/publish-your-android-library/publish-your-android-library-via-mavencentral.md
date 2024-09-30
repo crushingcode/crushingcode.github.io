@@ -4,7 +4,7 @@ date: 2016-07-17
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
 ---
 
 If you come from the java world, you would already be knowing about MavenCentral in a big way. MavenCentral is the central repository which hosts all the maven artifacts and one can reference them from anywhere in the world. Android artifacts can also be hosted on MavenCentral in a similar manner. Here I am going to document the process to publish an android library to MavenCentral, as I followed it.
