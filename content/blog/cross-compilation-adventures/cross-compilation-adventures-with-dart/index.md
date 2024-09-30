@@ -4,7 +4,6 @@ date: 2024-01-09
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
 ---
 
 ![Banner](banner.png)
@@ -48,7 +47,7 @@ Sounds good! Let's dive into building a very basic CLI tool.
 
 First we need to install [**dart-sdk**](https://formulae.brew.sh/formula/dart-sdk#default)
 
-```sh
+```sh {linenos=table}
 brew install dart-sdk
 ```
 
