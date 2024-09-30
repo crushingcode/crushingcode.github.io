@@ -11,20 +11,10 @@ authors:
 <!--more-->
 
 {{< callout type="info" >}}
-  This post is part of a series.
+[This post is part of a series.](/blog/cross-compilation-adventures/)
+
+_TLDR; I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms._
 {{< /callout >}}
-
-{{% details title="Posts in Series"  %}}
-
-  1. **Nim Adventures**  {{< icon "arrow-left" >}} `This post`
-  2. [Kotlin Native Adventures](../cross-compilation-adventures-kotlin-native/)
-  3. [Dart Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
-  4. [Go Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-go/)
-  5. [Rust Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-rust/)
-  6. [C Lang Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-c/)
-  7. [Python Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-python/)
-
-{{% /details %}}
 
 I like working inside the Terminal app. So obviously I am using a lot of Terminal CLI (Command Line Interface) tools 🧰. To work with these CLI tools, for every usecase there is a small set of shell (bash/zsh) aliases/functions that I have created to work with for specific use cases and to simplify my life. These do differ based on the operating system I am working with (I mostly work with *nix systems i.e macOS and Linux). Remembering these aliases is, let's just say, not a good developer user experience or DevUX.
 

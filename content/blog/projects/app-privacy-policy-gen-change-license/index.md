@@ -13,6 +13,10 @@ authors:
 
 <!--more-->
 
+{{< callout type="info" >}}
+[This post is part of a series.](/blog/projects/)
+{{< /callout >}}
+
 ### Backstory
 
 It was built with a core idea and vision, to enable indie developers from having to jump through the weeds of legality around putting up a Privacy Policy or Terms & Conditions in their applications. I built this web app because I wanted to do the same and every other alternative out there was charging me money. At that time, I was not that well off to consider buying the services of such companies. So I built the app, used it in my apps and [open sourced](https://github.com/nisrulz/app-privacy-policy-generator) it hoping someone who would be in the same situation as me would benefit from it. Over the years this project has shown that it has helped many and that I was not the only one with this problem. Thus the core of all of this has led to me trying my best to keep this project always free and open-source.

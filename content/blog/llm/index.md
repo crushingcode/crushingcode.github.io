@@ -19,7 +19,7 @@ Join me as we embark on this exciting journey, where you'll be empowered to take
 
 {{% details title="Posts in Series"  %}}
 
-1. [[Local GPTs] Off the Grid, On Your Machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/)
-2. [[Local Copilot] Ollama + Tabby + StarCoder](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/)
+1. [[Local GPTs] Off the Grid, On Your Machine](local-gpts-off-the-grid-on-your-machine/)
+2. [[Local Copilot] Ollama + Tabby + StarCoder](local-copilot-your-own-off-the-grid-and-local-code-assistant/)
 
 {{% /details %}}

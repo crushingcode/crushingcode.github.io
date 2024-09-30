@@ -9,6 +9,10 @@ authors:
 
 <!--more-->
 
+{{< callout type="info" >}}
+[This post is part of a series.](/blog/projects/)
+{{< /callout >}}
+
 I am pretty sure you would agree to the fact that the usual javadoc is not a something everyone likes. The colors are what makes it superrrrrrr boring. Yeah , I actually despise those weird colors and the fact that its been around for so long , made me think how to solve this. Also if you try looking it up on the internet there aren't any solutions that basically solved this in a programmatic way.
 
 Well look no more.... TADAAAAAAA !!
