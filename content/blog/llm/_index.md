@@ -16,10 +16,3 @@ In this series of posts, we'll delve into the world of open-source Large Languag
 - Discover new ways to harness AI power while preserving your online anonymity
 
 Join me as we embark on this exciting journey, where you'll be empowered to take control of your data and make informed choices about how you interact with AI. Let's create a more transparent and secure future for personal AI!
-
-{{% details title="Posts in Series"  %}}
-
-1. [[Local GPTs] Off the Grid, On Your Machine](local-gpts-off-the-grid-on-your-machine/)
-2. [[Local Copilot] Ollama + Tabby + StarCoder](local-copilot-your-own-off-the-grid-and-local-code-assistant/)
-
-{{% /details %}}

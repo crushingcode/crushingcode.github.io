@@ -19,9 +19,3 @@ I believe that sharing the "how" behind building projects is just as important a
 
 Join me on this journey as we explore my projects together!
 
-{{% details title="Posts in Series"  %}}
-
-1. [Javadoc-Themer: Give your boring javadocs a splash of colors!](a-splash-of-colors-to-your-boring-javadocs/)
-2. [App Privacy Policy Generator is moving to AGPLv3 license](app-privacy-policy-gen-change-license/)
-
-{{% /details %}}
