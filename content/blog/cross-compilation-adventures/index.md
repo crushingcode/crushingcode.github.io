@@ -13,12 +13,12 @@ We'll explore various languages, discuss their trade-offs, and share our experie
 
 {{% details title="Posts in Series"  %}}
 
-1. [Nim Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-nim/)
-2. [Kotlin Native Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-kotlin-native/)
-3. [Dart Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
-4. [Go Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-go/)
-5. [Rust Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-rust/)
-6. [C Lang Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-c/)
-7. [Python Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-python/)
+1. [Nim Adventures](cross-compilation-adventures-nim/)
+2. [Kotlin Native Adventures](cross-compilation-adventures-kotlin-native/)
+3. [Dart Adventures](cross-compilation-adventures-with-dart/)
+4. [Go Adventures](cross-compilation-adventures-go/)
+5. [Rust Adventures](cross-compilation-adventures-rust/)
+6. [C Lang Adventures](cross-compilation-adventures-c/)
+7. [Python Adventures](cross-compilation-adventures-python/)
 
 {{% /details %}}

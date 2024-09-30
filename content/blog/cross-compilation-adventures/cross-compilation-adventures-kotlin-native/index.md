@@ -11,22 +11,10 @@ authors:
 <!--more-->
 
 {{< callout type="info" >}}
-This post is part of a series.
+[This post is part of a series.](/blog/cross-compilation-adventures/)
+
+_TLDR; I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms._
 {{< /callout >}}
-
-{{% details title="Posts in Series"  %}}
-
-1. [Nim Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-nim/)
-2. **Kotlin Native Adventures** {{< icon "arrow-left" >}} `This post`
-3. [Dart Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
-4. [Go Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-go/)
-5. [Rust Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-rust/)
-6. [C Lang Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-c/)
-7. [Python Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-python/)
-
-> TLDR: I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms.
-
-{{% /details %}}
 
 I am an Android Engineer by profession, so my goto language is [Kotlin](https://kotlinlang.org/). While looking at other programming languages, I also wanted to take a look at building a CLI tool using Kotlin. Thankfully, there exists [Kotlin/Native](https://kotlinlang.org/docs/native-command-line-compiler.html) that does exactly the same.
 

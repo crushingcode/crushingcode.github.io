@@ -11,22 +11,10 @@ authors:
 <!--more-->
 
 {{< callout type="info" >}}
-This post is part of a series.
+[This post is part of a series.](/blog/cross-compilation-adventures/)
+
+_TLDR; I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms._
 {{< /callout >}}
-
-{{% details title="Posts in Series"  %}}
-
-1. [Nim Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-nim/)
-2. [Kotlin Native Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-kotlin-native/)
-3. **Dart Adventures** {{< icon "arrow-left" >}} `This post`
-4. [Go Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-go/)
-5. [Rust Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-rust/)
-6. [C Lang Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-c/)
-7. [Python Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-python/)
-
-> TLDR: I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms.
-
-{{% /details %}}
 
 I have some experience working with Flutter, so I have been keeping track of Dart programming language for sometime. Dart in the initial days introduced something called Dart Native, which they eventually rolled back into the dart compiler. Dart can compile to the host platform where you run the compiler. But it cannot cross compile i.e it cannot compile binaries that are compatible with Windows and Linux if the code was compiled on macOS and so on.
 

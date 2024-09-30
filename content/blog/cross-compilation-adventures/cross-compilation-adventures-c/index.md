@@ -11,22 +11,10 @@ authors:
 <!--more-->
 
 {{< callout type="info" >}}
-This post is part of a series.
+[This post is part of a series.](/blog/cross-compilation-adventures/)
+
+_TLDR; I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms._
 {{< /callout >}}
-
-{{% details title="Posts in Series"  %}}
-
-1. [Nim Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-nim/)
-2. [Kotlin Native Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-kotlin-native/)
-3. [Dart Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
-4. [Go Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-go/)
-5. [Rust Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-rust/)
-6. **C Lang Adventures** {{< icon "arrow-left" >}} `This post`
-7. [Python Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-python/)
-
-> TLDR: I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms.
-
-{{% /details %}}
 
 It is well known that C is an excellent programming language for systems programming, particularly when working with low-level hardware interactions. Its efficiency and flexibility make it a popular choice for developing operating systems, embedded systems, and other system software. The language's close relationship with the machine makes it easy to optimize code for performance, which is crucial in these applications. More importantly it has stood the test of time. Because C code can be compiled for a wide range of platforms, you can write your CLI app once and run it on multiple operating systems without modification. Many legacy systems still run on older operating systems like DOS or Unix. C's low-level nature and compatibility with these older systems make it an ideal choice for developing CLI apps that can run on a wide range of hardware and software environments.
 

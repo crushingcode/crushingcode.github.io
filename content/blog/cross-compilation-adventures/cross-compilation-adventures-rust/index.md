@@ -11,22 +11,10 @@ authors:
 <!--more-->
 
 {{< callout type="info" >}}
-This post is part of a series.
+[This post is part of a series.](/blog/cross-compilation-adventures/)
+
+_TLDR; I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms._
 {{< /callout >}}
-
-{{% details title="Posts in Series"  %}}
-
-1. [Nim Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-nim/)
-2. [Kotlin Native Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-kotlin-native/)
-3. [Dart Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
-4. [Go Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-go/)
-5. **Rust Adventures** {{< icon "arrow-left" >}} `This post`
-6. [C Lang Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-c/)
-7. [Python Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-python/)
-
-> TLDR: I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms.
-
-{{% /details %}}
 
 Rust has been on my radar for picking up as a new programming language to learn for some time now. It is said to be comparable to C/C++ in memory footprint and performance while providing robust memory safety. Rust was initially written for a personal project and later to power the browser engine for Mozilla, named [Servo](https://servo.org/), but quickly became clearly that as a programming language it can be used to solve problems and build robust software outside of the original goal it was built for. This is why it looks quite promising to build a CLI utility tool.
 

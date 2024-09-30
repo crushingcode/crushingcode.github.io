@@ -11,15 +11,8 @@ authors:
 <!--more-->
 
 {{< callout type="info" >}}
-This post is part of a series.
+[This post is part of a series.](/blog/llm/)
 {{< /callout >}}
-
-{{% details title="Posts in Series"  %}}
-
-1. **[Local GPTs] Off the Grid, On Your Machine** {{< icon "arrow-left" >}} `This post`
-2. [[Local Copilot] Ollama + Tabby + Starcoder](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/)
-
-{{% /details %}}
 
 Are you tired of the tech giants having access to your personal data? Are you concerned about snooping and telemetry? Then it's time to take matters into your own hands by running a fully offline GPT model on your own local machine! By doing so, you can have privacy and security, as all processing will occur locally without any third-party involvement. Say goodbye to companies profiting from your personal information and take back control with a completely offline GPT model!
 

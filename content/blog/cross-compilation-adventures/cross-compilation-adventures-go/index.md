@@ -11,22 +11,10 @@ authors:
 <!--more-->
 
 {{< callout type="info" >}}
-This post is part of a series.
+[This post is part of a series.](/blog/cross-compilation-adventures/)
+
+_TLDR; I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms._
 {{< /callout >}}
-
-{{% details title="Posts in Series"  %}}
-
-1. [Nim Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-nim/)
-2. [Kotlin Native Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-kotlin-native/)
-3. [Dart Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
-4. **Go Adventures** {{< icon "arrow-left" >}} `This post`
-5. [Rust Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-rust/)
-6. [C Lang Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-c/)
-7. [Python Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-python/)
-
-> TLDR: I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms.
-
-{{% /details %}}
 
 It is quite obvious for someone reading the blog posts in this series, that the author (me) loves using a lot of CLI tools. Afterall I am going to extents of exploring programming languages that fit my usecase in the best possible manner. Many of them actually simplify my day to day dev-life in many ways.
 Interestingly, [many of them are built using Go lang](https://github.com/mantcz/awesome-go-cli?tab=readme-ov-file). Notable mention of [gh-cli](https://github.com/cli/cli), GitHub’s official command line tool. It is something I use quite often. It is natural that I wanted to explore Go lang for building CLI utility tool for myself.

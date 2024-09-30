@@ -11,15 +11,8 @@ authors:
 <!--more-->
 
 {{< callout type="info" >}}
-This post is part of a series.
+[This post is part of a series.](/blog/llm/)
 {{< /callout >}}
-
-{{% details title="Posts in Series"  %}}
-
-1. [[Local GPTs] Off the Grid, On Your Machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/)
-2. **[Local Copilot] Ollama + Tabby + StarCoder** {{< icon "arrow-left" >}} `This post`
-
-{{% /details %}}
 
 Coding assistants are all the rage nowadays, all thanks to [Github Copilot](https://github.com/features/copilot). Coding assistants as basically LLM models that help the developer in writing code. They are trained on code so can predict a lot of logic that developers write daily. Most code that developers write is quite similar, the only difference being business usecase and the programming language used.
 

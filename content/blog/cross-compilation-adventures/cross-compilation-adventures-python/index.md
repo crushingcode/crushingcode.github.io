@@ -11,22 +11,10 @@ authors:
 <!--more-->
 
 {{< callout type="info" >}}
-This post is part of a series.
+[This post is part of a series.](/blog/cross-compilation-adventures/)
+
+_TLDR; I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms._
 {{< /callout >}}
-
-{{% details title="Posts in Series" %}}
-
-1. [Nim Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-nim/)
-2. [Kotlin Native Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-kotlin-native/)
-3. [Dart Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-with-dart/)
-4. [Go Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-go/)
-5. [Rust Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-rust/)
-6. [C Lang Adventures](/blog/cross-compilation-adventures/cross-compilation-adventures-c/)
-7. **Python Adventures** {{< icon "arrow-left" >}} `This post`
-
-> TLDR: I want to build cross-platform CLI utility tools that can be compiled on my laptop and run seamlessly on other platforms.
-
-{{% /details %}}
 
 Ask anyone what progamming language should a beginner start with and the answer would almost certainly include [Python](https://www.python.org/). Python is a very popular programming language with a very mature ecosystem. It is also very easy to learn and to use. It has all the features that you would expect from a programming language. I dabble in Python often, whenever I want to build a quick processing tool. Considering it to a build a CLI app, is but natural step forward. Python can run on multiple platforms, including Windows, macOS, and Linux, without the need for any additional dependencies or libraries. However note that Python itself cannot build executables for other platforms.
 It works the same way Java does, where the installed Python executable on each platform can execute the same python file, so in that sense it is cross platform, but still it cannot cross-compile to other platforms. There are ways to create an executable binary using a Python file, which you will learn in this post and more.
