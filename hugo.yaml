@@ -50,11 +50,11 @@ menu:
       url: "https://github.com/nisrulz"
       params:
         icon: github
-    - name: Mastodon
+    - name: Bluesky
       weight: 7
-      url: "https://androiddev.social/@nisrulz"
+      url: "https://bsky.app/profile/nisrulz.com"
       params:
-        icon: mastodon
+        icon: bsky
     - name: LinkedIn
       weight: 8
       url: "https://linkedin.com/in/nisrulz"
