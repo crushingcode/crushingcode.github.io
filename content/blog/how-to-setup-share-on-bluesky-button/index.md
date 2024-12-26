@@ -12,7 +12,15 @@ Incase you wanted to setup a **Follow me on Bluesky** or a **Share on Bluesky** 
 
 <!--more-->
 
-> This post assumes you know how to work with Markdown.
+Example:
+
+![Readme](readme_sc.png "Readme.md")
+
+![Webapp](webapp_sc.png "Web App")
+
+{{< callout type="info" >}}
+This post assumes you know how to work with Markdown.
+{{< /callout >}}
 
 ## Follow me on Bluesky Badge
 
@@ -86,7 +94,9 @@ Share URL template is thus of the pattern:
 https://bsky.app/intent/compose?text=YOUR_URL_ENCODED_TEXT_HERE
 ```
 
-> NOTE: Here `YOUR_URL_ENCODED_TEXT_HERE` is the content that is prefilled in the bluesky post. It must be URL-encoded and should not exceed 300 Unicode Grapheme Clusters.
+{{< callout type="info" >}}
+Here `YOUR_URL_ENCODED_TEXT_HERE` is the content that is prefilled in the bluesky post. It must be URL-encoded and should not exceed 300 Unicode Grapheme Clusters.
+{{< /callout >}}
 
 To create your URL encoded text, you can use [UrlEncoder.io](https://www.urlencoder.io/).
 
@@ -128,4 +138,6 @@ Preview: [![Share on Bluesky](https://img.shields.io/badge/Bluesky-0285FF?logo=b
 
 ![Preview](preview.png)
 
-> Note: You are free to use the Share URL created in this post on some other HTML component such as `a` or `img` tags and everything would work the same way.
+{{< callout type="info" >}}
+You are free to use the Share URL created in this post on some other HTML component such as `a` or `img` tags and everything would work the same.
+{{< /callout >}}
