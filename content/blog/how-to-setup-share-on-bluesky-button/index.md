@@ -1,5 +1,5 @@
 ---
-title: "How to setup Share on Bluesky button"
+title: "How to setup Share/Follow on Bluesky badge"
 date: "2024-12-26"
 authors:
   - name: Nishant Srivastava
