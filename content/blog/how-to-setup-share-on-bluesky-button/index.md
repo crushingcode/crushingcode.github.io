@@ -37,12 +37,12 @@ You can setup badge's on-click action to open any url by following the template:
 i.e To open my own website url `www.nisrulz.com` when one clicks on the **Follow me on Bluesky** badge, I modify the 1-line code snippet to:
 
 ```md {filename="Markdown"}
-[![Follow me on Bluesky](https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff&label=Follow%20me%20on&color=0285FF)](https:www.nisrulz.com)
+[![Follow me on Bluesky](https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff&label=Follow%20me%20on&color=0285FF)](https://www.nisrulz.com)
 ```
 
 Preview:
 
-[![Follow me on Bluesky](https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff&label=Follow%20me%20on&color=0285FF)](https:www.nisrulz.com).
+[![Follow me on Bluesky](https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff&label=Follow%20me%20on&color=0285FF)](https://www.nisrulz.com).
 
 But usually, you would want to open the Bluesky profile as the on-click action on the badge.
 
