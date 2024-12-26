@@ -54,7 +54,7 @@ menu:
       weight: 7
       url: "https://bsky.app/profile/nisrulz.com"
       params:
-        icon: bsky
+        icon: bluesky
     - name: LinkedIn
       weight: 8
       url: "https://linkedin.com/in/nisrulz"
