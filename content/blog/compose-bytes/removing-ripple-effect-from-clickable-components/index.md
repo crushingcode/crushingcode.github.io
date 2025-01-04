@@ -10,7 +10,7 @@ authors:
 
 <!--Short abstract goes here-->
 
-I wanted to have the ripple effect gone from a composable clickable component. As it turns out the API has changed and often times the first solution that popups when you search for it, is deprecated 🤡
+I wanted to have the ripple effect gone from a composable clickable component. As it turns out the API has changed and often times the first solution that popups when you search for it, is deprecated 🤡 Lets figure out how to remove the ripple effect from a clickable component in 2025!
 
 <!--more-->
 
