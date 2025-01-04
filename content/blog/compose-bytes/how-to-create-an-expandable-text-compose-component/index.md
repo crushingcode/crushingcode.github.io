@@ -14,7 +14,9 @@ One of the requirements for an app I was working on, was to have a text field th
 
 <!--more-->
 
-Using a 3rd party library is always an option, but this is simple enough that one can create a custom Compose component. Let's just build one right away then 👨🏻‍💻
+Using a 3rd party library is always an option, but this is simple enough that one can create a custom Compose component. This is also just my take at creating such a compose component.
+
+Let's get to some code now 👨🏻‍💻
 
 ### ExpandableText Compose Component
 
