@@ -102,7 +102,9 @@ Box(  // Parent Composable
 
 This is how it looks when you run the app:
 
-> Notice how you can click outside the button and still see the Ripple effect.
+{{< callout type="info" >}}
+Notice how you can click outside the button and still see the Ripple effect.
+{{< /callout >}}
 
 <video controls autoplay muted width=600 src="parent_with_ripple_effect.webm"></video>
 
