@@ -6,7 +6,7 @@ authors:
     link: /about/
 ---
 
-![Banner](header.jpg)
+![Banner](../header.jpg)
 
 <!--Short abstract goes here-->
 
@@ -200,7 +200,7 @@ EnumJsonAdapter
 
 To use this you need to modify your `Moshi` instance to add the `EnumJsonAdapter` to the list of adapters, which handles the `Status` enum class by providing a fallback value:
 
-```kt {hl_lines=[2,3,4,5]}
+```kt {hl_lines=[2,3,4,5,6]}
 private val moshi = Moshi.Builder()
         .add(Status::class.java,
               EnumJsonAdapter.create(Status::class.java)
