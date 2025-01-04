@@ -6,7 +6,7 @@ authors:
     link: /about/
 ---
 
-![Banner](header.jpg)
+![Banner](../header.jpg)
 
 <!--Short abstract goes here-->
 
