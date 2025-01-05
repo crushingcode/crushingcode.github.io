@@ -1,6 +1,6 @@
 ---
 title: "How to create an Expandable Text compose component"
-date: "2025-01-05"
+date: 2025-01-05
 authors:
   - name: Nishant Srivastava
     link: /about/
