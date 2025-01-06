@@ -4,6 +4,7 @@ date: 2025-01-04
 authors:
   - name: Nishant Srivastava
     link: /about/
+tags: ["kotlin", "moshi"]
 ---
 
 ![Banner](../header.jpg)
