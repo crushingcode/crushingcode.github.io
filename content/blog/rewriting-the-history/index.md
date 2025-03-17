@@ -4,7 +4,7 @@ date: 2016-11-18
 authors:
   - name: Nishant Srivastava
     link: /about/
-
+tags: ["git", "tricks"]
 ---
 
 ![Banner](header.jpg)

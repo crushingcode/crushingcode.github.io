@@ -4,6 +4,7 @@ date: 2023-12-08
 authors:
   - name: Nishant Srivastava
     link: /about/
+tags: ["cross-compilation", "nim-lang"]
 ---
 
 ![Banner](banner.png)

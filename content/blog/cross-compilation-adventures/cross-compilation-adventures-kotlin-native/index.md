@@ -4,6 +4,7 @@ date: 2023-12-11
 authors:
   - name: Nishant Srivastava
     link: /about/
+tags: ["cross-compilation", "kotlin-native"]
 ---
 
 ![Banner](banner.png)

@@ -4,6 +4,7 @@ date: 2024-01-24
 authors:
   - name: Nishant Srivastava
     link: /about/
+tags: ["cross-compilation", "c-lang"]
 ---
 
 ![Banner](banner.png)

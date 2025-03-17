@@ -4,6 +4,7 @@ date: 2024-01-17
 authors:
   - name: Nishant Srivastava
     link: /about/
+tags: ["cross-compilation", "rust"]
 ---
 
 ![Banner](banner.png)

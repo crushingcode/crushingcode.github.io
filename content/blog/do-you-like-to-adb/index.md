@@ -4,7 +4,7 @@ date: 2016-10-14
 authors:
   - name: Nishant Srivastava
     link: /about/
-
+tags: ["android", "adb"]
 ---
 
 ![Banner](header.jpg)

@@ -4,6 +4,7 @@ date: 2024-02-18
 authors:
   - name: Nishant Srivastava
     link: /about/
+tags: ["cross-compilation", "python"]
 ---
 
 ![Banner](banner.png)

@@ -4,7 +4,7 @@ date: 2018-04-06
 authors:
   - name: Nishant Srivastava
     link: /about/
-
+tags: ["android", "gradle"]
 ---
 
 This isn’t a click-bait article! I will explain how to make your Android build time shorter than the reading time of this post (hopefully) 🏃🏻

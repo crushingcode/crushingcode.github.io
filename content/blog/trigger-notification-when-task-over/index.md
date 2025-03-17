@@ -4,7 +4,7 @@ date: 2020-03-01
 authors:
   - name: Nishant Srivastava
     link: /about/
-
+tags: ["terminal", "tricks"]
 ---
 
 ![Banner](header.jpg)

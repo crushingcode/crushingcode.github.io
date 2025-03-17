@@ -4,7 +4,7 @@ date: 2019-03-28
 authors:
   - name: Nishant Srivastava
     link: /about/
-
+tags: ["localization", "android"]
 ---
 
 > ##### TL;DR: I used Google Sheets + Translate + AppScript to build a completely free and robust Automated Android Localization Tool! 🐼

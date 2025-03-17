@@ -4,7 +4,7 @@ date: 2016-05-02
 authors:
   - name: Nishant Srivastava
     link: /about/
-
+tags: ["android", "gradle"]
 ---
 
 ![header](header.jpg)
