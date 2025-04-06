@@ -4,7 +4,7 @@ date: 2016-07-12
 authors:
   - name: Nishant Srivastava
     link: /about/
-
+tags: ["android", "android-library"]
 ---
 
 > **NOTE**: [Jcenter has been sunset](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/). It is encouraged to publish to [MavenCentral](https://search.maven.org/).

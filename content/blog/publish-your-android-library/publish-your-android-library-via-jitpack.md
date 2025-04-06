@@ -4,7 +4,7 @@ date: 2016-07-29
 authors:
   - name: Nishant Srivastava
     link: /about/
-
+tags: ["android", "android-library"]
 ---
 
 Ok so you already know how to build your android library and publish it to JCenter/MavenCentral. This post is third in parts of a series.

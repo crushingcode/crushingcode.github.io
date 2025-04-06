@@ -4,7 +4,7 @@ date: 2022-08-06
 authors:
   - name: Nishant Srivastava
     link: /about/
-
+tags: ["android", "custom-rom"]
 ---
 
 ![Banner](banner.png)

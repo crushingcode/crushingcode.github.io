@@ -64,6 +64,15 @@ menu:
       params:
         icon: linkedin
 
+  sidebar:
+    - name: More
+      params:
+        type: separator
+      weight: 1
+    - name: "🌏 nisrulz.com ↗"
+      url: "https://nisrulz.com/"
+      weight: 2
+
 params:
   description: Blog by Nishant Srivastava
 
@@ -100,8 +109,10 @@ params:
     list:
       displayTags: true
       # date | lastmod | publishDate | title | weight
-      sortBy: date
+      sortBy: publishDate
       sortOrder: desc # or "asc"
+    article:
+      displayPagination: true
 
   highlight:
     copy:

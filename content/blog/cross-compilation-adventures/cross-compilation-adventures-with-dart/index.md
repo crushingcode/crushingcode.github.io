@@ -4,6 +4,7 @@ date: 2024-01-09
 authors:
   - name: Nishant Srivastava
     link: /about/
+tags: ["cross-compilation", "dart-lang"]
 ---
 
 ![Banner](banner.png)
