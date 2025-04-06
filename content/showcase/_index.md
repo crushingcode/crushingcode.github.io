@@ -56,6 +56,13 @@ title: Showcase
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
+      {{< card
+        link="https://app-icon-badger.web.app/"
+        title="🦡 App Icon Badger"
+        image="img/oss/app_icon_badger.jpg"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
 {{< /cards >}}
 
 ### OSS/Android Apps
