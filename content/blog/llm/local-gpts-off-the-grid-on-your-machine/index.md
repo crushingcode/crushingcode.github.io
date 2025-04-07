@@ -58,7 +58,7 @@ Ollama is just the front end for interfacing with LLM models. You will need to d
 
 > Note: These models are usualy quite big ranging from 3Gb to upwards of 60Gb, based on trillions of tokens they are trained on. You would need to have free disk space to download the model.
 
-Download one of the models mentioned [here](https://ollama.ai/library), by running the `pull` command in Terminal:
+Download one of the models mentioned [here](https://ollama.com/search), by running the `pull` command in Terminal:
 
 ![Screenshot](sc_1.png)
 
@@ -125,7 +125,15 @@ If you want to verify this, open Docker Desktop dashboard and you will see
 
 ![Screenshot](sc_14.png)
 
-**Note**: To upgrade your local docker image for _**open-webui**_ to latest version, run
+At this point, you are done with the setup 😎
+
+You can now access the Ollama Web UI Chat interface at [http://localhost:3000](http://localhost:3000/).
+
+> You might need to sign up as an Admin user for your first run. Simply create a username and password.
+
+### Updating Open WebUI
+
+To upgrade your local docker image for _**open-webui**_ to latest version, run
 
 ```sh
 docker pull ghcr.io/open-webui/open-webui:main
@@ -146,13 +154,7 @@ ghcr.io/open-webui/open-webui:main
 echo "✅ Create and run the new container using the latest image of open webui"
 ```
 
-At this point, you are done with the setup 😎
-
-You can now access the Ollama Web UI Chat interface at [http://localhost:3000](http://localhost:3000/).
-
-> You might need to sign up as an Admin user for your first run. Simply create a username and password.
-
-### Bonus: Adding more models
+### Adding more models
 
 Ollama Model Library provides more than one variation of each model. You can find the other variations under the **Tags** tab on the model's page. Also note the size of the model mentioned, to access if the model is not too big in size for your machine's storage space.
 
