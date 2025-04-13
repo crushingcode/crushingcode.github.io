@@ -1,5 +1,5 @@
 ---
-title: "[Local Copilot] Ollama + Tabby + StarCoder"
+title: "[Local Copilot] Tabby + StarCoder"
 date: 2024-03-03
 authors:
   - name: Nishant Srivastava
