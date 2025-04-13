@@ -77,28 +77,49 @@ tabby serve --device metal --model <model_id>
 
 > where `<model_id>` is the id/name of the model Tabby supports. You can find the list of supported models [here](https://tabby.tabbyml.com/docs/models/).
 
-For example, to start the server with model `TabbyML/StarCoder-1B` you would execute:
+For example, to start the server with model `Qwen2.5-Coder-1.5B` you would execute:
 
 ```sh
-tabby serve --device metal --model TabbyML/StarCoder-1B
+tabby serve --device metal --model Qwen2.5-Coder-1.5B
 ```
 
-![Screenshot](sc_2.png)
+Output:
 
-> NOTE: This terminal window needs to be open as the server is running in its process. If you close the Terminal window, the server will also shutdown.
+```sh
+~/Desktop took 13s
+❯ tabby serve --device metal --model Qwen2.5-Coder-1.5B
+Writing to new file.
+🎯 Downloaded https://huggingface.co/ikw/Qwen2.5-Coder-1.5B-GGUF/resolve/main/qwen2.5-coder-1.5b-q8_0.gguf to /Users/<username>/.tabby/models/TabbyML/Qwen2.5-Coder-1.5B/ggml/model-00001-of-00001.gguf.tmp
 
-#### **BONUS**
+   00:00:30 ▕████████████████████▏ 1.53 GiB/1.53 GiB  52.03 MiB/s  ETA 0s.
+   ✅ Checksum OK.
+
+
+████████╗ █████╗ ██████╗ ██████╗ ██╗   ██╗
+╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝
+   ██║   ███████║██████╔╝██████╔╝ ╚████╔╝
+   ██║   ██╔══██║██╔══██╗██╔══██╗  ╚██╔╝
+   ██║   ██║  ██║██████╔╝██████╔╝   ██║
+   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═════╝    ╚═╝
+
+📄 Version 0.27.0
+🚀 Listening at http://0.0.0.0:8080
+```
+
+> NOTE: This terminal window needs to be open as the server is running in its process. If you close the Terminal window, the server will also shutdown. To stop Tabby server press `Ctrl+C`
+
+#### Keep Tabby Server Running
 
 If you would like to run the server all the time without having to keep the terminal window running, you can run the below command
 
 ```sh
-nohup tabby serve --device metal --model TabbyML/StarCoder-1B 2>&1 </dev/null &
+nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B 2>&1 </dev/null &
 ```
 
 Here
 
 1. `nohup` keeps the command running no matter whether the terminal windows is closed or you logout.
-2. `tabby serve --device metal --model TabbyML/StarCoder-1B` is the command that starts the Tabby server with a specific model.
+2. `tabby serve --device metal --model Qwen2.5-Coder-1.5B` is the command that starts the Tabby server with a specific model.
 3. `2>&1` redirects stderr to stdout.
 4. `</dev/null` means that don't expect input.
 5. `&` runs the command in background.
@@ -113,42 +134,51 @@ ps -e | awk '!/awk/ && /tabby serve --device/ { print $1 }' | xargs kill
 
 This is how it would look like:
 
-![Screenshot](sc_8.png)
+```sh
+~/Desktop took 5m2s
+❯ nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B 2>&1 </dev/null &
+[1] 26704
+appending output to nohup.out
+
+~/Desktop
+✦ ❯ ps -e | awk '!/awk/ && /tabby serve --device/ { print $1 }' | xargs kill
+[1]  + terminated  nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B 2>&1 < /dev/null
+```
 
 ### Step 3: Install VSCode Extension
 
-- Open VSCode and search for `TabbyML` in the extensions search bar. Install the extension.
+1. Open VSCode and search for `TabbyML` in the extensions search bar. Install the extension.
 
-  ![Screenshot](sc_3.png)
+   ![Screenshot](sc_3.png)
 
-- Once installed, restart VSCode. You should see the extension installed and functional on the bottom right of the screen.
+1. Once installed, restart VSCode. You should see the extension installed and functional on the bottom right of the screen.
 
-  ![Screenshot](sc_4.png)
+   ![Screenshot](sc_4.png)
 
-- Now you can already start using code completion using Tabby
+1. Now you can already start using code completion using Tabby
 
-  ![VSCode](vscode.gif)
+   ![VSCode](vscode.gif)
 
 ### Step 4: Install Android Studio Extension
 
-- Open Android Studio and search for `Tabby` in the plugins search bar. Install the plugin.
+1. Open Android Studio and search for `Tabby` in the plugins search bar. Install the plugin.
 
-  ![Screenshot](sc_5.png)
+   ![Screenshot](sc_5.png)
 
-- Once installed, restart Android Studio. You should see the plugin installed and functional on the bottom right of the screen.
+1. Once installed, restart Android Studio. You should see the plugin installed and functional on the bottom right of the screen.
 
-  ![Screenshot](sc_6.png)
+   ![Screenshot](sc_6.png)
 
-- Now you can already start using code completion using Tabby
+1. Now you can already start using code completion using Tabby
 
-  ![AndroidStudio](androidstudio.gif)
+   ![AndroidStudio](androidstudio.gif)
 
-### Bonus
+### FAQ: What model should I pick?
 
-I used Tabby code completion to help me write parts of this blog post itself 😎 Here is a sneak peek:
-
-![Bonus](bonus.gif)
-
-Also Tabby team maintains a leaderboard of models and their performance [here](https://leaderboard.tabbyml.com/).
+Tabby team maintains a leaderboard of models and their performance [here](https://leaderboard.tabbyml.com/).
 
 ![Screenshot](sc_7.png)
+
+Based on how much memory and processing power you have, you can pick the model that best suits your needs.
+
+I prefer to use really small models such as `Qwen2.5-Coder-1.5B` and `StarCoder-1B` for code completion as they are light and fast on my Macbook Pro (M2 Pro, 16 Gb) machine.
