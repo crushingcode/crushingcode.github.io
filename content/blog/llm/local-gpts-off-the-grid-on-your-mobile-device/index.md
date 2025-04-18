@@ -15,13 +15,13 @@ tags: ["llm"]
 [This post is part of a series.](/blog/llm/)
 {{< /callout >}}
 
-Another one in the series, this time we'll be looking at how to use local GPTs on your mobile device. I had this desire to extend using a local GPT on my mobile phone. I already talked about how one can [setup a local GPT on their machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/) and how to [setup a co-pilot alternative](blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/), everything running locally and offline.
+Another one in the series, this time we'll be looking at how to use local GPTs on your mobile device. I had this desire to extend using a local GPT on my mobile phone. I already talked about how one can [setup a local GPT on their machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/) and how to [setup a co-pilot alternative](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/), everything running locally and offline.
 
 If I could also do the same on my phone, that would be awesome 😎
 
 ## Exposing the OpenWeb UI Webapp to Internet
 
-In the first post in this series I showed how to [setup OpenWeb UI as a Web App](<(/blog/llm/local-gpts-off-the-grid-on-your-machine/)>) that can act as an alternative to ChatGPT, backed by local LLM via Ollama, running completely offline and private.
+In the first post in this series I showed how to [setup OpenWeb UI as a Web App](/blog/llm/local-gpts-off-the-grid-on-your-machine/) that can act as an alternative to ChatGPT, backed by local LLM via Ollama, running completely offline and private.
 
 This web app is exposed on the local machine at [`http://localhost:3000/`](http://localhost:3000/).
 
