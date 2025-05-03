@@ -106,12 +106,13 @@ function notify() {
 
 Here, if the function is being executed on macOS it will execute the `display notification` utility by setting the right params in order, otherwise it will execute the `notify-send` utility.
 
-> NOTE: A bash function can be called just like an alias
+> [!NOTE]
+> A bash function can be called just like an alias
 > Also note that I escaped the `"` in `\"$MSG\"` for the `display notification` utility so as to be able to pass in a variable.
 
 Here is a functional version of this, where I call `notify` after `./gradlew clean` task finishes:
 
-<img src="img_2.gif" >
+<img src="img_2.gif" />
 
 Nice! Set this up as you would like to and be more productive.
 

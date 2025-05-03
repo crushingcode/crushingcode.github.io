@@ -15,8 +15,6 @@ If I were to ask a question to a room filled with android developers
 
 ..I am pretty sure a lot of them would raise their hand or agree to being in that state and the very first action would be to hop onto stackoverflow and search for possible solutions in this type of a situation.
 
-
-
 <!-- Image taken from freepik.com and all credit goes to the creator of it -->
 
 We all have been there and we all have experienced it. The problem is a result of each library following a completely different development lifecycle and using a different version of a public api, which by far all means is not the problem which needs to be rectified.
@@ -159,7 +157,8 @@ configurations.all {
 }
 ```
 
-> NOTE : dependencySubstitution is an incubating functionality and may change in a future version of Gradle
+> [!NOTE]
+> `dependencySubstitution` is an incubating functionality and may change in a future version of Gradle
 > As of writting this post the latest Gradle Version is 2.13 in which this is available.
 
 Thats pretty neat , isn't it.

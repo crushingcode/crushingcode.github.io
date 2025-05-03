@@ -49,11 +49,11 @@ For now lets lookup the steps to publish your android library to JCenter/Bintray
 - Implement your library code inside the library module you created in the last step.
 - Next add the library module as a dependency to the app module.
 
-  > 1.  Goto `File>Project Structure..`
-  > 1.  Select `app` module in the sidebar
-  > 1.  Select the `Dependencies` tab
-  > 1.  At the bottom is a `+` icon, click that and select `Module dependency` and select your `library` module.
-  > 1.  Press `apply` or `ok`.
+  > 1. Goto `File>Project Structure..`
+  > 1. Select `app` module in the sidebar
+  > 1. Select the `Dependencies` tab
+  > 1. At the bottom is a `+` icon, click that and select `Module dependency` and select your `library` module.
+  > 1. Press `apply` or `ok`.
 
 ![project](img/uploadtojcenter/project.jpeg)
 
@@ -119,14 +119,14 @@ For now lets lookup the steps to publish your android library to JCenter/Bintray
 
 - Edit your `local.properties`
 
-```
+```txt
 bintray.user=<your_bintray_username>
 bintray.apikey=<your_bintray_apikey>
 ```
 
-> NOTE : `bintray.user` and `bintray.apikey` have to be in `local.properties` specifically or else you will get error later regarding the user and apikey values not available to the bintrayUpload gradle task as below
+> [!NOTE] > `bintray.user` and `bintray.apikey` have to be in `local.properties` specifically or else you will get error later regarding the user and apikey values not available to the bintrayUpload gradle task as below
 
-```
+```txt
 No value has been specified for property 'apiKey'.
 No value has been specified for property 'user'.
 ```

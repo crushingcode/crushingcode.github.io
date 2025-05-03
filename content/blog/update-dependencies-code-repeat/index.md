@@ -35,7 +35,8 @@ So what I have done here is basically
 - Defined a variable named `supportLibVer` with the value `24.2.0` using `def` keyword.
 - Next referenced it by using it in the `compile` statement as `$supportLibVer`
 
-  > Note that the surrounding quote is a double quote `"` and not a single quote.
+  > [!NOTE]
+  > that the surrounding quote is a double quote `"` and not a single quote.
 
 Now this approach is basically using a [Local Variable ](https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:local_variables), which means that this variable works in the scope of the `build.gradle` file it is defined in.
 
