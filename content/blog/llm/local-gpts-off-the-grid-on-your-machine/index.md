@@ -30,7 +30,8 @@ Now, let us dive into setting up an offline, private and local GPT like [ChatGPT
 
 ![Screenshot](sc_2.png)
 
-> Note: Github project for Ollama can be found [here](https://github.com/jmorganca/ollama)
+> [!NOTE]
+> Github project for Ollama can be found [here](https://github.com/jmorganca/ollama)
 
 [Ollama](https://ollama.com/) is a frontend built so you can easily get up and running with large language models on your local machine. You can run pre-trained models like Llama 2 and Code Llama, as well as customize and create your own models offline in a private and local environment. This allows you to have full control over your data and models, ensuring that they remain secure and confidential.
 
@@ -57,7 +58,8 @@ After installing Ollama, verify that Ollama is running by accessing the followin
 
 Ollama is just the front end for interfacing with LLM models. You will need to download a model to work with.
 
-> Note: These models are usualy quite big ranging from 3Gb to upwards of 60Gb, based on trillions of tokens they are trained on. You would need to have free disk space to download the model.
+> [!NOTE]
+> These models are usualy quite big ranging from 3Gb to upwards of 60Gb, based on trillions of tokens they are trained on. You would need to have free disk space to download the model.
 
 Download one of the models mentioned [here](https://ollama.com/search), by running the `pull` command in Terminal:
 
@@ -101,7 +103,8 @@ Once downloaded, open the application and it will run a wizard to set everything
 
 ![Screenshot](sc_13.png)
 
-> Note: You do not need to sign in/sign up anything for using any funtionality mentioned in this post.
+> [!NOTE]
+> You do not need to sign in/sign up anything for using any funtionality mentioned in this post.
 
 ### Setup [Open WebUI](https://github.com/open-webui/open-webui)
 

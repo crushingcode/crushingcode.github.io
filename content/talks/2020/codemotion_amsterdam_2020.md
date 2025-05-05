@@ -9,7 +9,8 @@ type: blog
 
 {{< icon "location-marker" >}} Codemotion Amsterdam 2020, Amsterdam, Netherlands [Cancelled]
 
-> NOTE: The event was cancelled due to the ongoing pandemic.
+> [!NOTE]
+> The event was cancelled due to the ongoing pandemic.
 
 <!--more-->
 

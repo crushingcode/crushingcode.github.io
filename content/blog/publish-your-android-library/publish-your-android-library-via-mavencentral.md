@@ -91,7 +91,8 @@ and Login
 
 ##### Add the plugin by Chris Banes to your library's `build.gradle`.
 
-> NOTE: Below is a [fork](https://github.com/nisrulz/gradle-mvn-push) of the [original script](https://github.com/chrisbanes/gradle-mvn-push) written by Chris Banes.
+> [!NOTE]
+> Below is a [fork](https://github.com/nisrulz/gradle-mvn-push) of the [original script](https://github.com/chrisbanes/gradle-mvn-push) written by Chris Banes.
 
 ```gradle
 apply from: 'https://raw.github.com/nisrulz/gradle-mvn-push/master/gradle-mvn-push.gradle'

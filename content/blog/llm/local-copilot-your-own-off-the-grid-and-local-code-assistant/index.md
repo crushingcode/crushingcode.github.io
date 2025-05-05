@@ -35,6 +35,7 @@ Goals that such an alternative needs to fulfill, for my usecase as a developer:
 There are a few available options to do this, but I have found the following to be the most promising:
 
 - [Llama Coder](https://github.com/ex3ndr/llama-coder?tab=readme-ov-file#llama-coder)
+  > [!NOTE]
   > This one only works with VSCode and is a [VSCode extension](https://marketplace.visualstudio.com/items?itemName=ex3ndr.llama-coder).
   - Prequisite is to have [Ollama](https://ollama.com/) installed. You can read about how to set it up Ollama from my earlier post [here](/blog/local-gpts-off-the-grid-on-your-machine/#oh-lama--setup-ollamahttpsollamaai).
   - Once installed in VSCode you can simply open a file and it will suggest you code when you start typing.
@@ -54,7 +55,8 @@ First things first, this post makes use of a configuration that I have access to
 
 ![Screenshot](sc_1.png)
 
-> Note: Github project for Tabby can be found [here](https://github.com/TabbyML/tabby)
+> [!NOTE]
+> Github project for Tabby can be found [here](https://github.com/TabbyML/tabby)
 
 [Tabby](https://tabby.tabbyml.com/) is described as a self-hosted AI coding assistant. It is free and open source. It works with both VSCode and Jetbrains IDEs out of the box as well as has a language server which makes it work with Vim also. Everything you do with it stays private. It can work completely offline and does not require any internet connection. The server literally runs on your own machine. However it is versatile enough that if you want to host it on your own server, you can do so too.
 
@@ -66,7 +68,8 @@ The setup is fairly simple. Lets start 🚀
 brew install tabbyml/tabby/tabby
 ```
 
-> NOTE: There are other ways to install Tabby too. You can read about it [here](https://tabby.tabbyml.com/docs/installation/).
+> [!NOTE]
+> There are other ways to install Tabby too. You can read about it [here](https://tabby.tabbyml.com/docs/installation/).
 
 ### Step 2: Start Tabby server using a model
 
@@ -76,7 +79,8 @@ The command looks like this:
 tabby serve --device metal --model <model_id>
 ```
 
-> where `<model_id>` is the id/name of the model Tabby supports. You can find the list of supported models [here](https://tabby.tabbyml.com/docs/models/).
+> [!NOTE]
+> Where `<model_id>` is the id/name of the model Tabby supports. You can find the list of supported models [here](https://tabby.tabbyml.com/docs/models/).
 
 For example, to start the server with model `Qwen2.5-Coder-1.5B` you would execute:
 
@@ -107,7 +111,8 @@ Writing to new file.
 🚀 Listening at http://0.0.0.0:8080
 ```
 
-> NOTE: This terminal window needs to be open as the server is running in its process. If you close the Terminal window, the server will also shutdown. To stop Tabby server press `Ctrl+C`
+> [!NOTE]
+> This terminal window needs to be open as the server is running in its process. If you close the Terminal window, the server will also shutdown. To stop Tabby server press `Ctrl+C`
 
 #### Keep Tabby Server Running
 

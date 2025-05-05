@@ -4,7 +4,6 @@ date: 2015-08-03
 authors:
   - name: Nishant Srivastava
     link: /about/
-
 ---
 
 Have you ever thought how the central repository works like Maven Central or JCenter?
@@ -88,61 +87,62 @@ Prerequisites
 **Step 1** : Fire up your terminal/command prompt
 **Step 2** : Create a directory where you will sync your maven artifacts to, lets say its called mavenrepo
 
-```
+```sh
 mkdir mavenrepo
 ```
 
 and change into the mavenrepo directory
 
-```
+```sh
 cd mavenrepo
 ```
 
 **Step 3** : Once inside the directory, initialize it with git
 
-```
+```sh
 git init
 ```
 
 **Step 4** : Create a repository named **mavenrepo (git remote)** at Github/Bitbucket and add it to your **mavenrepo (git local)** directory as a remote repository named **origin** ( here i am adding a github repo)
 
-```
+```sh
 git remote add origin https://github.com/<username>/mavenrepo.git
 ```
 
-> Note : you can get the url from Github under the settings tab when at your repository page
+> [!NOTE]
+> you can get the url from Github under the settings tab when at your repository page
 
 ![copygithuburl](copygithuburl.png)
 
 **Step 5** : Create 2 directories under mavenrepo, namely releases and snapshots
 
-```
+```sh
 mkdir releases snapshots
 ```
 
 **Step 6** : Create README.md under each sub directory, releases and snapshots
 Note: This step is required since git will not push empty directories, so we add empty README.md files :)
 
-```
+```sh
 touch releases/README.md
 touch snapshots/README.md
 ```
 
 **Step 7** : Stage all the changed files under git, using the below command
 
-```
+```sh
 git add .
 ```
 
 **Step 8** : Commit with a message
 
-```
+```sh
 git commit -m "Initial Setup"
 ```
 
 **Step 9** : Push to origin
 
-```
+```sh
 git push origin master
 ```
 
@@ -157,7 +157,7 @@ Simple,
 
 **Step 10** : Generate a maven artifact using the below command in terminal/command prompt (provided you already have the maven installed)
 
-```
+```sh
 mvn clean org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file \
 -DgroupId=com.company.id -DartifactId=artificatid -Dversion=1.0.0 \
 -Dpackaging=aar -Dfile=artifact.aar -DlocalRepositoryPath=./mavenrepo/releases/aar \
@@ -178,7 +178,7 @@ Lets break it down into parts:
 - **-Dfile** Specify here the specific name of the jar/aar/war you are pushing as a maven artifact
 - **-DlocalRepositoryPath** Specify the path to your mavenrepo (git local) i.e.
 
-```
+```sh
 ./mavenrepo/releases/aar
 ```
 
@@ -187,7 +187,7 @@ Lets break it down into parts:
 
 **Step 11** : Once you are done generating the maven artifacts and they are deployed under the specific folder ( releases/snapshots), just stage them, commit and push it to your remote repo…
 
-```
+```sh
 git add .
 git commit -m "<artifact> v1.0.0 added"
 git push origin master

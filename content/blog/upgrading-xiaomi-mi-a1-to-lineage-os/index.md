@@ -27,7 +27,8 @@ I keep my [Xiaomi MiA1 updated](https://wiki.lineageos.org/devices/tissot/) up t
 
 ![Xiaomi MiA1 Lineage OS 19.1](img_3.png)
 
-> Note: As of writing this post Android 13 is yet to be released and is in Beta phase. Android 12L is the last stable release of AOSP.
+> [!NOTE]
+> As of writing this post Android 13 is yet to be released and is in Beta phase. Android 12L is the last stable release of AOSP.
 
 In order to flash my device with Lineage OS, I always follow through the same steps. This post is about documenting those steps so my future self remembers it.
 
@@ -48,7 +49,8 @@ WARNING: Flashing a device is unpredictable process and there is always a chance
 
 My device codename is `tissot`, so that is the one I need to find in Lineage OS directory. The name of the file would look like `lineage-19.1-20220626-microG-tissot.zip`.
 
-> Note: The version of Lineage OS that I prefer is the one which doesn't come with Google Services. I download the one that has [microG](https://microg.org/) [pre-setup](https://lineage.microg.org/).
+> [!NOTE]
+> The version of Lineage OS that I prefer is the one which doesn't come with Google Services. I download the one that has [microG](https://microg.org/) [pre-setup](https://lineage.microg.org/).
 
 ![LineageOS + microG](img_2.png)
 
@@ -173,7 +175,7 @@ Once you have installed everything successfully, click the back arrow in the top
 Your device will take some time to load and start completely. The first boot is usually a bit of time taking process as everything is being setup. Simply setup your device as you would when you buy a new phone.
 
 {{< callout emoji="🆘" >}}
-  If you encounter error, please refer to their [FAQ page](https://wiki.lineageos.org/faq) to help debug some common issues.
+If you encounter error, please refer to their [FAQ page](https://wiki.lineageos.org/faq) to help debug some common issues.
 {{< /callout >}}
 
 {{% /steps %}}

@@ -4,7 +4,6 @@ date: 2017-09-17
 authors:
   - name: Nishant Srivastava
     link: /about/
-
 ---
 
 ![Banner](header.png)
@@ -119,7 +118,8 @@ and add the below to the `build.gradle` for `app` module
 implementation "com.android.support:appcompat-v7:26.1.0"
 ```
 
-> Note: We are using the latest [support lib v26.1.0](https://developer.android.com/topic/libraries/support-library/revisions.html#26-1-0) , which now has AppCompatActivity implementing [LifecycleOwner](https://developer.android.com/reference/android/arch/lifecycle/LifecycleOwner.html) interface from [Architecture Components](https://developer.android.com/topic/libraries/architecture/index.html). More about this, later in the post. For now just know you need support lib `v26.1.0`
+> [!NOTE]
+> We are using the latest [support lib v26.1.0](https://developer.android.com/topic/libraries/support-library/revisions.html#26-1-0) , which now has AppCompatActivity implementing [LifecycleOwner](https://developer.android.com/reference/android/arch/lifecycle/LifecycleOwner.html) interface from [Architecture Components](https://developer.android.com/topic/libraries/architecture/index.html). More about this, later in the post. For now just know you need support lib `v26.1.0`
 
 … that done, sync your project.
 
@@ -199,7 +199,8 @@ as you can see I added more methods and annotated them to get triggered at speci
 
 But we are not done here yet. This just tells which method will be triggered when a specific lifecycle event state is reached for the Activity/Fragment. What is still required is to add our `AwesomeLibMain` class as an **Observer** for the lifecycle of the desired Activity. Turns out it is a really simple step, as can be seen below
 
-> Note: `MainActivity` here extends `AppCompatActivity` because we are using the latest [support lib v26.1.0](https://developer.android.com/topic/libraries/support-library/revisions.html#26-1-0) , which now has `AppCompatActivity` implementing [LifecycleOwner](https://developer.android.com/reference/android/arch/lifecycle/LifecycleOwner.html) interface from [Architecture Components](https://developer.android.com/topic/libraries/architecture/index.html).
+> [!NOTE]
+> `MainActivity` here extends `AppCompatActivity` because we are using the latest [support lib v26.1.0](https://developer.android.com/topic/libraries/support-library/revisions.html#26-1-0) , which now has `AppCompatActivity` implementing [LifecycleOwner](https://developer.android.com/reference/android/arch/lifecycle/LifecycleOwner.html) interface from [Architecture Components](https://developer.android.com/topic/libraries/architecture/index.html).
 >
 > **From android official docs**: [LifecycleOwner](https://developer.android.com/reference/android/arch/lifecycle/LifecycleOwner.html) is a single method interface that denotes that the class has a [Lifecycle](https://developer.android.com/reference/android/arch/lifecycle/Lifecycle.html). It has one method, [`getLifecycle()`](https://developer.android.com/reference/android/arch/lifecycle/LifecycleOwner.html#getLifecycle%28%29), which must be implemented by the class.
 >
@@ -245,7 +246,8 @@ getLifecycle().removeObserver(AwesomeLibMain.getInstance());
 
 Thats it! No, really thats all there is. You have successfully integrated lifecycle arch components in your `awesomelib` and now it is observing Activity Lifecycle events and triggering the right methods at the right time, without requiring the `app` developer to worry about anything.
 
-> Note: This is the only step `app` developer needs to do when going to use your android library in terms of integrating your library code in the activity, apart from adding it in the `build.gradle` dependency section. All methods will be triggered automatically when a said lifecycle event state is reached during the execution of the Activity/Fragment.
+> [!NOTE]
+> This is the only step `app` developer needs to do when going to use your android library in terms of integrating your library code in the activity, apart from adding it in the `build.gradle` dependency section. All methods will be triggered automatically when a said lifecycle event state is reached during the execution of the Activity/Fragment.
 
 What I have tried to explain here is more like a proof of concept, I am sure one can very easily implement it in an existing android library code and make use of the benefits lifecycle arch components bring along.
 

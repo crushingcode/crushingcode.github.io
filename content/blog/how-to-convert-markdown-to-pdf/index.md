@@ -25,8 +25,9 @@ I needed to provide this file as a **PDF** file. So I started searching for poss
 
 The golden tool to pick for this would be [**pandoc**](https://pandoc.org/).
 
+> [!NOTE]
 > Read about how to install pandoc [here](https://pandoc.org/installing.html).
-> NOTE: In order to render pdf, pandoc requires [latex installed](https://www.latex-project.org/get/). Make sure it is installed before proceeding.
+> In order to render pdf, pandoc requires [latex installed](https://www.latex-project.org/get/). Make sure it is installed before proceeding.
 
 Considering our markdown file is called [integration_guide.md](./integration_guide.txt), below command would convert it to an `integration_guide.pdf`:
 
@@ -63,7 +64,8 @@ After an hour of trying out various tools, I stumbled upon [**grip**](https://gi
 >
 > Grip is a command-line server application written in Python that uses the GitHub markdown API to render a local readme file. The styles and rendering come directly from GitHub, so you'll know exactly how it will appear. Changes you make to the Readme will be instantly reflected in the browser without requiring a page refresh.
 
-> NOTE: Make sure **grip** is installed by executing `pip3 install grip` in your directory.
+> [!NOTE]
+> Make sure **grip** is installed by executing `pip3 install grip` in your directory.
 
 Using **grip** for my use-case was as simple as running
 
@@ -172,7 +174,8 @@ However, I am not quite happy with this solution. It works, yes, but I really do
 
 This is not new for me and I knew where to start for this part. The best tool out there for a headless and programmable browser is [Puppeteer](https://github.com/puppeteer/puppeteer). Reading through the docs quickly for my specific use case, I came up with the below script, which I saved as `renderToPdf.js`:
 
-> NOTE: Make sure **puppeteer** is installed by executing `npm i -g puppeteer` in your directory.
+> [!NOTE]
+> Make sure **puppeteer** is installed by executing `npm i -g puppeteer` in your directory.
 
 ```js
 const puppeteer = require("puppeteer");
@@ -246,7 +249,8 @@ Using the bash function, I simply need to call the below line of code:
 convertMarkdownToPdf integration_guide.md
 ```
 
-> NOTE: The bash function has been renamed from `convertMarkdownToHtml` to `convertMarkdownToPdf`
+> [!NOTE]
+> The bash function has been renamed from `convertMarkdownToHtml` to `convertMarkdownToPdf`
 
 ...and the markdown file is converted to HTML first, opened in Headless browser and printed as a PDF file. Aditionally if called with the command with `--open` flag:
 

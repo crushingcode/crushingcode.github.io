@@ -19,7 +19,8 @@ There 2 common ways this can be done:
 
 Inside your `~/.zshrc` or `~/.bashrc` file, declare the key value pairs as shown below:
 
-> Note: For CI, declare key-value pair under secrets section
+> [!NOTE]
+> For CI, declare key-value pair under secrets section
 
 ```sh
 export KEYSTORE_FILE_PATH = "/Users/your_user/App_Directory/keystore_file.keystore"
@@ -52,7 +53,7 @@ keyAlias=example
 keyPassword=example
 ```
 
-> Note: `keystore.jks` file is the Keystore file that is expected to be placed inside the root directory of your project.
+> [!NOTE] > `keystore.jks` file is the Keystore file that is expected to be placed inside the root directory of your project.
 
 Next create a `signing.gradle` file at the root of your project and add the below code in it:
 
@@ -60,33 +61,33 @@ Next create a `signing.gradle` file at the root of your project and add the belo
 def keystorePropertiesFile = rootProject.file("local.properties")
 
 if (keystorePropertiesFile.exists()) {
-	// Load the properties
-	def keystoreProperties = new Properties()
-	keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-	android {
-		signingConfigs {
-			if (keystorePropertiesFile.exists()) {
-				release {
-					keyAlias keystoreProperties['keyAlias']
-					keyPassword keystoreProperties['keyPassword']
-					storeFile file(keystoreProperties['storeFile'])
-					storePassword keystoreProperties['storePassword']
-				}
-			}
-		}
+ // Load the properties
+ def keystoreProperties = new Properties()
+ keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+ android {
+  signingConfigs {
+   if (keystorePropertiesFile.exists()) {
+    release {
+     keyAlias keystoreProperties['keyAlias']
+     keyPassword keystoreProperties['keyPassword']
+     storeFile file(keystoreProperties['storeFile'])
+     storePassword keystoreProperties['storePassword']
+    }
+   }
+  }
 
-		buildTypes {
-			release {
-				if (keystorePropertiesFile.exists()) {
-					signingConfig signingConfigs.release
-				}
-			}
-		}
-	}
+  buildTypes {
+   release {
+    if (keystorePropertiesFile.exists()) {
+     signingConfig signingConfigs.release
+    }
+   }
+  }
+ }
 } else {
-	println("Filename: keystore.properties")
-	println("Error: File does not exists")
-	println("Solution: Create a keystore.properties file with valid details under keystore directory at the root of your project")
+ println("Filename: keystore.properties")
+ println("Error: File does not exists")
+ println("Solution: Create a keystore.properties file with valid details under keystore directory at the root of your project")
 }
 ```
 
