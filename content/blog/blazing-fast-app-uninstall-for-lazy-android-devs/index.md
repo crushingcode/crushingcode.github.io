@@ -7,7 +7,7 @@ authors:
 tags: ["android", "adb"]
 ---
 
-![Banner](../header.jpg)
+![Banner](banner.jpg)
 
 <!--Short abstract goes here-->
 

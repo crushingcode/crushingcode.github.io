@@ -1,5 +1,5 @@
 ---
-title: "[Local Copilot] Ollama + Tabby"
+title: "Unlocking Local AI: Your Private AI Code Companion"
 date: 2024-03-03
 authors:
   - name: Nishant Srivastava
@@ -9,11 +9,11 @@ tags: ["llm"]
 
 ![Banner](banner.png)
 
-<!--more-->
+<!--Short abstract goes here-->
 
-{{< callout type="info" >}}
-[This post is part of a series.](/blog/llm/)
-{{< /callout >}}
+Looking for a private, local AI coding assistant? Tabby lets you run a powerful code completion tool entirely on your own machine, no sharing your code.
+
+<!--more-->
 
 Coding assistants are all the rage nowadays, all thanks to [Github Copilot](https://github.com/features/copilot). Coding assistants as basically LLM models that help the developer in writing code. They are trained on code so can predict a lot of logic that developers write daily. Most code that developers write is quite similar, the only difference being business usecase and the programming language used.
 
@@ -172,14 +172,14 @@ function tabby-stop() {
 When you run these, this is how it would look like:
 
 ```sh
-~/Desktop 
-❯ tabby-start 
+~/Desktop
+❯ tabby-start
 [2] 28164
 
 ✅ Tabby started
 
-~/Desktop 
-✦ ❯ tabby-stop 
+~/Desktop
+✦ ❯ tabby-stop
 
 ✅ Tabby stopped
 [2]  + terminated  nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B > /dev/null 2>&1

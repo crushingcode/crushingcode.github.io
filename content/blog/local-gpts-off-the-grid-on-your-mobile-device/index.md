@@ -1,5 +1,5 @@
 ---
-title: "[Local GPTs] Off the Grid, On Your Mobile Device"
+title: "Unlocking Local AI: Off the Grid, On Your Mobile Device"
 date: "2025-04-18"
 authors:
   - name: Nishant Srivastava
@@ -9,11 +9,11 @@ tags: ["llm"]
 
 ![Banner](banner.png)
 
-<!--more-->
+<!--Short abstract goes here-->
 
-{{< callout type="info" >}}
-[This post is part of a series.](/blog/llm/)
-{{< /callout >}}
+Want to use your local LLM on your phone? This post shows you how to easily share your local web app with the internet using LocalTunnel. Plus, we’ll look at running smaller LLMs directly on your device with PocketPal AI – all offline and private! 🎉
+
+<!--more-->
 
 Another one in the series, this time we'll be looking at how to use local GPTs on your mobile device. I had this desire to extend using a local GPT on my mobile phone. I already talked about how one can [setup a local GPT on their machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/) and how to [setup a co-pilot alternative](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/), everything running locally and offline.
 
@@ -126,7 +126,7 @@ echo "✅ LocalTunnel started successfully!"
 The output looks like below when you run this script in terminal:
 
 ```sh
-❯ ./expose_localhost.sh    
+❯ ./expose_localhost.sh
 🚀 Starting LocalTunnel...
 your url is: https://afraid-cars-fix.loca.lt
 🔐 Your tunnel password: 81.14.84.8
