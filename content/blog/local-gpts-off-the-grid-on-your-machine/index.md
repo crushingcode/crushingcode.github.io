@@ -11,10 +11,6 @@ tags: ["llm"]
 
 <!--more-->
 
-{{< callout type="info" >}}
-[This post is part of a series.](/blog/llm/)
-{{< /callout >}}
-
 Are you tired of the tech giants having access to your personal data? Are you concerned about snooping and telemetry? Then it's time to take matters into your own hands by running a fully offline GPT model on your own local machine! By doing so, you can have privacy and security, as all processing will occur locally without any third-party involvement. Say goodbye to companies profiting from your personal information and take back control with a completely offline GPT model!
 
 First things first, this post makes use of a configuration that I have access to (i.e. my laptop) but should work for anyone else too (with little tweaks). Below is my machine specs:

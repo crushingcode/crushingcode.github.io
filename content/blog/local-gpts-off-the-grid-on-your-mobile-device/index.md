@@ -11,10 +11,6 @@ tags: ["llm"]
 
 <!--more-->
 
-{{< callout type="info" >}}
-[This post is part of a series.](/blog/llm/)
-{{< /callout >}}
-
 Another one in the series, this time we'll be looking at how to use local GPTs on your mobile device. I had this desire to extend using a local GPT on my mobile phone. I already talked about how one can [setup a local GPT on their machine](/blog/llm/local-gpts-off-the-grid-on-your-machine/) and how to [setup a co-pilot alternative](/blog/llm/local-copilot-your-own-off-the-grid-and-local-code-assistant/), everything running locally and offline.
 
 If I could also do the same on my phone, that would be awesome 😎
