@@ -25,9 +25,9 @@ You do that by selecting "Select Multiple Devices..." option from the device sel
 
 ![Screenshot](sc_3.png)
 
-You can then just the "Run" icon to install the app on all the selected devices 👨🏻‍💻
+You can then just the click on the "Run" icon to install the app on all the selected devices in one go 👨🏻‍💻
 
-However, when you are working on a project and you have already deployed your app to multiple devices, then uninstalling the app from each device is a manual and tedious task. You have to manually go through each device and uninstall the app. This can be time-consuming if you are testing on more than 2 devices. As a result the feedback look suffers.
+However, when you are working on a project and you have already deployed your app to multiple devices, then uninstalling the app from each device is a manual and tedious task. You have to manually go through each device and uninstall the app. This can be time-consuming if you are testing on more than 2 devices. As a result the feedback loop suffers.
 
 This is where `adb` comes to the rescue. [`adb`(Android Debug Bridge)](https://developer.android.com/tools/adb) is a command-line tool that allows you to communicate with an Android device over a communication channel such as over USB or Wifi. It provides a way to list all connected devices, install and uninstall apps, and more.
 
@@ -36,7 +36,7 @@ This is where `adb` comes to the rescue. [`adb`(Android Debug Bridge)](https://d
 >
 > Also this blog post assumes you already know how bash programming works. If not, refer to learn more [here](https://learnxinyminutes.com/bash/).
 
-To automate that process and avoid doing it manually, I have created a some shell functions that can be used to automate the process of uninstalling apps that contain a matching string in the app's package name from multiple devices.
+To avoid doing it manually, I have created some shell functions that can be used to automate the process of uninstalling apps that contain a matching string in the app's package name from multiple devices.
 
 ### Step 1: Finding the Device IDs of connected devices
 
@@ -175,8 +175,8 @@ When you execute this in a new terminal window:
 
 ```sh
 ❯ uninstallPackages com.github.nisrulz.
-Device: ZY32FXRG54 - Searching for packages matching 'com.github.nisrulz.' for user 0...
-Uninstalling com.github.nisrulz.exampleapp from ZY32FXRG54
+Device: ZZ12EXRG14 - Searching for packages matching 'com.github.nisrulz.' for user 0...
+Uninstalling com.github.nisrulz.exampleapp from ZZ12EXRG14
 Success
 ------------------------
 Device: emulator-5554 - Searching for packages matching 'com.github.nisrulz.' for user 0...
