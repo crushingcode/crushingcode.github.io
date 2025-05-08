@@ -1,5 +1,5 @@
 ---
-title: "[Local GPTs] Off the Grid, On Your Machine"
+title: "Unlocking Local AI: Running a Private GPT Locally"
 date: 2023-12-04
 authors:
   - name: Nishant Srivastava
@@ -8,6 +8,10 @@ tags: ["llm"]
 ---
 
 ![Banner](banner.png)
+
+<!--Short abstract goes here-->
+
+Want to ditch the tech giants and control your own AI? This post guides you through running a private, offline GPT model on your local machine using Ollama and Docker. Take back your data and experience AI on your terms!
 
 <!--more-->
 

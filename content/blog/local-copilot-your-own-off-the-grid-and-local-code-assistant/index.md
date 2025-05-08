@@ -1,5 +1,5 @@
 ---
-title: "[Local Copilot] Ollama + Tabby"
+title: "Unlocking Local AI: Your Private AI Code Companion"
 date: 2024-03-03
 authors:
   - name: Nishant Srivastava
@@ -8,6 +8,10 @@ tags: ["llm"]
 ---
 
 ![Banner](banner.png)
+
+<!--Short abstract goes here-->
+
+Looking for a private, local AI coding assistant? Tabby lets you run a powerful code completion tool entirely on your own machine, no sharing your code.
 
 <!--more-->
 
@@ -168,14 +172,14 @@ function tabby-stop() {
 When you run these, this is how it would look like:
 
 ```sh
-~/Desktop 
-❯ tabby-start 
+~/Desktop
+❯ tabby-start
 [2] 28164
 
 ✅ Tabby started
 
-~/Desktop 
-✦ ❯ tabby-stop 
+~/Desktop
+✦ ❯ tabby-stop
 
 ✅ Tabby stopped
 [2]  + terminated  nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B > /dev/null 2>&1
