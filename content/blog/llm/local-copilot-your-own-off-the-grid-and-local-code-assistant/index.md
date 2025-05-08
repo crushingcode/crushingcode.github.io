@@ -119,7 +119,7 @@ Writing to new file.
 If you would like to run the server all the time without having to keep the terminal window running, you can run the below command
 
 ```sh
-nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B 2>&1 </dev/null &
+nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B >/dev/null 2>&1 &
 ```
 
 Here
@@ -138,17 +138,51 @@ In order to stop Tabby server, you first look for the process in your terminal a
 ps -e | awk '!/awk/ && /tabby serve --device/ { print $1 }' | xargs kill
 ```
 
-This is how it would look like:
+When you run these, this is how it would look like:
 
 ```sh
 ~/Desktop took 5m2s
-❯ nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B 2>&1 </dev/null &
+❯ nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B >/dev/null 2>&1 &
 [1] 26704
 appending output to nohup.out
 
 ~/Desktop
 ✦ ❯ ps -e | awk '!/awk/ && /tabby serve --device/ { print $1 }' | xargs kill
 [1]  + terminated  nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B 2>&1 < /dev/null
+```
+
+To make it easier to run these commands, you can create bash functions that you can append to your `.bashrc`/`.zshrc` file:
+
+```sh
+# Start Tabby Code Assistant
+# Usage: tabby-start
+function tabby-start() {
+    nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B >/dev/null 2>&1 &
+    echo "\n✅ Tabby started"
+}
+
+# Stop Tabby Code Assistant
+# Usage: tabby-stop
+function tabby-stop() {
+    ps -e | awk '!/awk/ && /tabby serve --device/ { print $1 }' | xargs kill
+    echo "\n✅ Tabby stopped"
+}
+```
+
+When you run these, this is how it would look like:
+
+```sh
+~/Desktop 
+❯ tabby-start 
+[2] 28164
+
+✅ Tabby started
+
+~/Desktop 
+✦ ❯ tabby-stop 
+
+✅ Tabby stopped
+[2]  + terminated  nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B > /dev/null 2>&1
 ```
 
 ### Step 3: Install VSCode Extension

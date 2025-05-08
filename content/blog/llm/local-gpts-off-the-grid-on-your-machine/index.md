@@ -158,6 +158,32 @@ ghcr.io/open-webui/open-webui:main
 echo "✅ Create and run the new container using the latest image of open webui"
 ```
 
+To make it easier to run these commands, you can create bash functions that you can append to your `.bashrc`/`.zshrc` file:
+
+```sh
+# Upgrade Open WebUI
+# Usgae: upgrade-openwebui
+function upgrade-openwebui() {
+    docker pull ghcr.io/open-webui/open-webui:main
+    echo "✅ Pull the latest image tagged main of open webui"
+
+    docker container stop open-webui
+    echo "✅ Stop existing open webui container"
+
+    docker container rm open-webui
+    echo "✅ Remove existing open webui container"
+
+    docker run -d -p 3000:8080 \
+        --add-host=host.docker.internal:host-gateway \
+        -v open-webui:/app/backend/data \
+        --name open-webui \
+        --restart always \
+        -e WEBUI_SECRET_KEY=t0p-s3cr3t \
+        ghcr.io/open-webui/open-webui:main
+    echo "✅ Create and run the new container using the latest image of open webui"
+}
+```
+
 ### Adding more models
 
 Ollama Model Library provides more than one variation of each model. You can find the other variations under the **Tags** tab on the model's page. Also note the size of the model mentioned, to access if the model is not too big in size for your machine's storage space.
