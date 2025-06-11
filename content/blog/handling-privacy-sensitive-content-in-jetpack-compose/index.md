@@ -11,23 +11,25 @@ tags: ["compose", "android"]
 
 <!--Short abstract goes here-->
 
-Read about how I found a nice privacySensitive modifier available under SwiftUI and went on to implement it in Jetpack Compose.
+Read about how I found a nice `privacySensitive()` modifier available under SwiftUI and went on to implement it in Jetpack Compose.
 
 <!--more-->
 
-I was casually scrolling through Linkedin when I came across this nice post by [Vincent Pradeilles](https://www.linkedin.com/in/vincentpradeilles/), that showcases how SwiftUI has this inbuilt modifier `.privacySensitive()` that lets you hide sensitive information by adding a single line of code.
+I was casually scrolling through Linkedin when I came across this nice post by [Vincent Pradeilles](https://www.linkedin.com/in/vincentpradeilles/). The post showcases how SwiftUI has this inbuilt modifier `.privacySensitive()` that lets you hide sensitive information by adding a single line of code.
+
+<br/>
 
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7336354362832605187" height="586" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
 This seems like a legit useful feature mostly for apps in domains such as Banking, Identity, Authorization, Payments, etc.
 
-This got me thinking if that could be made available for Jetpack Compose components too??🤔
+This got me thinking if that could be made available for Jetpack Compose components too??🤔 This would be a simple example of how to redact text when the activity goes into background and undo the redaction when the activity comes back to foreground.
 
-This would be a simple example of how to redact text when the activity goes into background and undo the redaction when the activity comes back to foreground.
+## Setting up the example
 
-To start create a new project with empty compose activity (named `MainActivity`) and have it setup like below:
+To start create a new project with empty compose activity and have it setup like below:
 
-```kt
+```kt {hl_lines=[26],filename="MainActivity.kt"}
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,13 +76,15 @@ fun Modifier.privacySensitive(): Modifier {
 
 The goal is to achieve the same behaviour as shown in example using SwiftUI. The Text composable above with text "This is sensitive information" is to be redacted when the app goes into background and the text is not redacted when the app comes back to foreground.
 
+## Figuring out the event triggered
+
 To do so first you need to find a way to know when the user has put their app in background. This should be easy via observing the events in the Activity lifecycle. When the activity goes into background, it triggers a `onPause` event and when the activity comes back to foreground, it triggers a `onResume` event.
 
 Inside a Composable function, you do so by observing on `lifecycleOwner.lifecycle.currentStateAsState()`, where `lifecycleOwner` is retreived from `LocalLifecycleOwner.current`.
 
 Implementing this inside the extension function `privacySensitive()`, looks like:
 
-```kt
+```kt {hl_lines=[3, 5, 8]}
 @Composable
 fun Modifier.privacySensitive(): Modifier {
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -99,17 +103,22 @@ fun Modifier.privacySensitive(): Modifier {
 }
 ```
 
-When you run the app and observe the logcat, you will notice that logs only show up when you put the app to background or foreground completely. They do not fire when say you click on the "Recent Apps" button on your Android device 🤔
+Now run the app and try to go into "Recent Apps" screen/Background/Foreground and observe logcat logs.
 
 <video autoplay muted loop src="vid_2.mov"></video>
 
+> [!NOTE]
+> On running the app, you will notice that logs only show up when you put the app to background or foreground completely. They do not fire when say you click on the "Recent Apps" button on your Android device 🤔
+
 Now, that is a problem 😭. In the example above using SwiftUI, it works perfectly fine when the app is put to background partially and the user didn't have to minimize the app completely to put it to background.
+
+Why won't this just work? What event is being triggered on tapping the "Recent Apps" button? 🧐
 
 ![Visible Confusion](confused_meme.jpg)
 
-On further digging and trying to figure out what event is triggered when entering the "Recent Apps" screen, I found out that the event that is triggered is [`onWindowFocusChanged`](<https://developer.android.com/reference/android/app/Activity#onWindowFocusChanged(boolean)>) with boolean parameter `hasFocus`. When one open the "Recent Apps" screen the method `onWindowFocusChanged()` is called with `hasFocus` equals `false`, and when the app is in focus `hasFocus` equals `true`. It is also `true` when user presses Back while in "Recent Apps" screen.
+On further digging, I stumbled upon [`onWindowFocusChanged`](<https://developer.android.com/reference/android/app/Activity#onWindowFocusChanged(boolean)>) with boolean parameter `hasFocus`, that is triggered when the user enters "Recent Apps" screen. When one open the "Recent Apps" screen the method `onWindowFocusChanged()` is called with `hasFocus = false`, and when the app is in focus `hasFocus = true`. It is also `true` when user presses Back while in "Recent Apps" screen.
 
-Inside a Composable function, you do so by observing on `windowInfo.isWindowFocused`, where `windowInfo` is retreived from `LocalWindowInfo.current`.
+Inside a Composable function, you can observe this event by observing on `windowInfo.isWindowFocused`, where `windowInfo` is retreived from `LocalWindowInfo.current`.
 
 Modifying the extension function `privacySensitive()` to use this logic:
 
@@ -135,6 +144,8 @@ fun Modifier.privacySensitive(): Modifier {
 After running the app and going in and out of Recent Apps screen one can see that it now works perfectly as expected.
 
 <video autoplay muted loop src="vid_3.mov"></video>
+
+## Redacting the text
 
 Now that the trigger is sorted. The next step is quite simple. You need to redact the text where the modifier is applied. This can be done by drawing over the text with solid color. You can use `drawWithContent` from the D[rawing modifiers](https://developer.android.com/reference/kotlin/androidx/compose/ui/draw/package-summary#drawing-modifiers) to draw over the text.
 
@@ -246,7 +257,9 @@ sealed class PrivacyEffect {
 }
 ````
 
-Demo with blur effect `.privacySensitive(PrivacyEffect.Blur(15.dp))`:
+## Demo with Blur effect
+
+Using `.privacySensitive(PrivacyEffect.Blur(15.dp))`
 
 <video autoplay muted loop src="vid_5.mov"></video>
 
