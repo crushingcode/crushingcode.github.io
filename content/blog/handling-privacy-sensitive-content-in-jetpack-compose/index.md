@@ -145,9 +145,12 @@ After running the app and going in and out of Recent Apps screen one can see tha
 
 <video autoplay muted loop src="vid_3.mov"></video>
 
+> [!NOTE]
+> This also works when you put the app in split screen mode or another app covers this app. The app will loose focus and thus trigger the `isWindowFocused` the same way it does when entering the "Recent Apps" screen.
+
 ## Redacting the text
 
-Now that the trigger is sorted. The next step is quite simple. You need to redact the text where the modifier is applied. This can be done by drawing over the text with solid color. You can use `drawWithContent` from the D[rawing modifiers](https://developer.android.com/reference/kotlin/androidx/compose/ui/draw/package-summary#drawing-modifiers) to draw over the text.
+Now that the trigger is sorted. The next step is quite simple. You need to redact the text where the modifier is applied. This can be done by drawing over the text with solid color. You can use `drawWithContent` from the [Drawing modifiers](https://developer.android.com/reference/kotlin/androidx/compose/ui/draw/package-summary#drawing-modifiers) to draw over the text.
 
 Here is a simple extension function that does that:
 
@@ -231,11 +234,20 @@ private fun Modifier.applyRedact(color: Color = Color.Black) = drawWithContent {
 }
 
 /**
- * Applies a blur effect to obscure content when the app loses focus.
+ * Applies a blur effect to obscure content when the app loses focus on Android 12+ (API 31+).
+ * On older Android versions, where blur is not supported, it falls back
+ * to redacting the content.
  *
  * @param blurRadius The radius of the blur effect in Dp. Default is 15.dp.
  */
-private fun Modifier.applyBlur(blurRadius: Dp) = this.blur(blurRadius)
+fun Modifier.applyBlur(blurRadius: Dp = 15.dp): Modifier = when {
+    // Android 12+ (API 31+)
+    Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+        this.blur(blurRadius)
+    }
+    // Older versions: Fallback to redacting the content
+    else -> this.applyRedact(Color.LightGray)
+}
 
 /**
  * Sealed class defining different privacy effects.
