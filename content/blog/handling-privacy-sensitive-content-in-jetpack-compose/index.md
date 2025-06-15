@@ -72,7 +72,7 @@ fun Modifier.privacySensitive(): Modifier {
 >
 > For now, it makes the api look the same as the example shown above using SwiftUI 😊
 
-<video autoplay muted loop src="vid_1.mov"></video>
+<video autoplay muted loop src="vid_1.mp4"></video>
 
 The goal is to achieve the same behaviour as shown in example using SwiftUI. The Text composable above with text "This is sensitive information" is to be redacted when the app goes into background and the text is not redacted when the app comes back to foreground.
 
@@ -105,7 +105,7 @@ fun Modifier.privacySensitive(): Modifier {
 
 Now run the app and try to go into "Recent Apps" screen/Background/Foreground and observe logcat logs.
 
-<video autoplay muted loop src="vid_2.mov"></video>
+<video autoplay muted loop src="vid_2.mp4"></video>
 
 > [!NOTE]
 > On running the app, you will notice that logs only show up when you put the app to background or foreground completely. They do not fire when say you click on the "Recent Apps" button on your Android device 🤔
@@ -143,7 +143,7 @@ fun Modifier.privacySensitive(): Modifier {
 
 After running the app and going in and out of Recent Apps screen one can see that it now works perfectly as expected.
 
-<video autoplay muted loop src="vid_3.mov"></video>
+<video autoplay muted loop src="vid_3.mp4"></video>
 
 > [!NOTE]
 > This also works when you put the app in split screen mode or another app covers this app. The app will loose focus and thus trigger the `isWindowFocused` the same way it does when entering the "Recent Apps" screen.
@@ -180,7 +180,7 @@ fun Modifier.privacySensitive(): Modifier {
 > [!NOTE]
 > You don't need the `LaunchedEffect` anymore as it was only used for logs.
 
-<video autoplay muted loop src="vid_4.mov"></video>
+<video autoplay muted loop src="vid_4.mp4"></video>
 
 That is more like it 🤘🏼
 
@@ -273,6 +273,6 @@ sealed class PrivacyEffect {
 
 Using `.privacySensitive(PrivacyEffect.Blur(15.dp))`
 
-<video autoplay muted loop src="vid_5.mov"></video>
+<video autoplay muted loop src="vid_5.mp4"></video>
 
 Thats all for this time. Share the blog post if you like it! 😎
