@@ -15,6 +15,9 @@ Read about how I found a nice `privacySensitive()` modifier available under Swif
 
 <!--more-->
 
+> [!NOTE]
+> As seen in <a href="https://jetc.dev/issues/269.html#handling-privacy-sensitive-content-in-jetpack-compose"><img src="https://img.shields.io/badge/jetc.dev-%23269-blue?logo=Jetpack+Compose&amp;logoColor=white" alt="jetc.dev Newsletter Issue #269" style="margin-left: 0; display:inline;"></a> <a href="https://androidweekly.net/issues/issue-679#:~:text=Handling%20Privacy%20Sensitive%20content%20in%20Jetpack%20Compose"><img src="https://img.shields.io/badge/Android_Weekly-%23679-34b5e5?logo=android&amp;logoColor=green" alt="Android Weekly Newsletter Issue #679" style="margin-left: 0; display:inline;"></a>
+
 I was casually scrolling through Linkedin when I came across this nice post by [Vincent Pradeilles](https://www.linkedin.com/in/vincentpradeilles/). The post showcases how SwiftUI has this inbuilt modifier `.privacySensitive()` that lets you hide sensitive information by adding a single line of code.
 
 <br/>
