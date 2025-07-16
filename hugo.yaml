@@ -82,11 +82,20 @@ params:
     logo:
       path: images/logo/logo.png
       dark: images/logo/logo.png
-    width: full
+    width: wide
+  
+  # Search
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: title
 
   page:
     # full (100%), wide (90rem), normal (1280px)
-    width: full
+    width: wide
 
   theme:
     # light | dark | system
