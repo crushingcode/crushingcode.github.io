@@ -71,30 +71,37 @@ brew install tabbyml/tabby/tabby
 > [!NOTE]
 > There are other ways to install Tabby too. You can read about it [here](https://tabby.tabbyml.com/docs/installation/).
 
-### Step 2: Start Tabby server using a model
+### Step 2: Start Tabby server using a model for chat and completion
 
 The command looks like this:
 
 ```sh
-tabby serve --device metal --model <model_id>
+tabby serve --device metal \
+   --chat-model <model_id> \
+   --model <model_id>
 ```
 
 > [!NOTE]
 > Where `<model_id>` is the id/name of the model Tabby supports. You can find the list of supported models [here](https://tabby.tabbyml.com/docs/models/).
 
-For example, to start the server with model `Qwen2.5-Coder-1.5B` you would execute:
+For example, to start the server with chat model `Qwen2.5-Coder-1.5B-Instruct` and completion model `StarCoder-1B` you would execute:
 
 ```sh
-tabby serve --device metal --model Qwen2.5-Coder-1.5B
+tabby serve --device metal \
+   --chat-model Qwen2.5-Coder-1.5B-Instruct \
+   --model StarCoder-1B
 ```
 
 Output:
 
 ```sh
 ~/Desktop took 13s
-❯ tabby serve --device metal --model Qwen2.5-Coder-1.5B
+❯ tabby serve --device metal \
+   --chat-model Qwen2.5-Coder-1.5B-Instruct \
+   --model StarCoder-1B
+
 Writing to new file.
-🎯 Downloaded https://huggingface.co/ikw/Qwen2.5-Coder-1.5B-GGUF/resolve/main/qwen2.5-coder-1.5b-q8_0.gguf to /Users/<username>/.tabby/models/TabbyML/Qwen2.5-Coder-1.5B/ggml/model-00001-of-00001.gguf.tmp
+🎯 Downloaded https://huggingface.co/ikw/Qwen2.5-Coder-1.5B-Instruct-GGUF/resolve/main/Qwen2.5-Coder-1.5B-Instruct-q8_0.gguf to /Users/<username>/.tabby/models/TabbyML/Qwen2.5-Coder-1.5B-Instruct/ggml/model-00001-of-00001.gguf.tmp
 
    00:00:30 ▕████████████████████▏ 1.53 GiB/1.53 GiB  52.03 MiB/s  ETA 0s.
    ✅ Checksum OK.
@@ -102,13 +109,14 @@ Writing to new file.
 
 ████████╗ █████╗ ██████╗ ██████╗ ██╗   ██╗
 ╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝
-   ██║   ███████║██████╔╝██████╔╝ ╚████╔╝
-   ██║   ██╔══██║██╔══██╗██╔══██╗  ╚██╔╝
-   ██║   ██║  ██║██████╔╝██████╔╝   ██║
-   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═════╝    ╚═╝
+   ██║   ███████║██████╔╝██████╔╝ ╚████╔╝ 
+   ██║   ██╔══██║██╔══██╗██╔══██╗  ╚██╔╝  
+   ██║   ██║  ██║██████╔╝██████╔╝   ██║   
+   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═════╝    ╚═╝   
 
-📄 Version 0.27.0
+📄 Version 0.29.0
 🚀 Listening at http://0.0.0.0:8080
+
 ```
 
 > [!NOTE]
@@ -119,13 +127,15 @@ Writing to new file.
 If you would like to run the server all the time without having to keep the terminal window running, you can run the below command
 
 ```sh
-nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B >/dev/null 2>&1 &
+nohup tabby serve --device metal \
+   --chat-model Qwen2.5-Coder-1.5B-Instruct \
+   --model StarCoder-1B >/dev/null 2>&1 &
 ```
 
 Here
 
 1. `nohup` keeps the command running no matter whether the terminal windows is closed or you logout.
-2. `tabby serve --device metal --model Qwen2.5-Coder-1.5B` is the command that starts the Tabby server with a specific model.
+2. `tabby serve --device metal --chat-model Qwen2.5-Coder-1.5B-Instruct --model StarCoder-1B` is the command that starts the Tabby server with the specific models.
 3. `2>&1` redirects stderr to stdout.
 4. `</dev/null` means that don't expect input.
 5. `&` runs the command in background.
@@ -142,13 +152,16 @@ When you run these, this is how it would look like:
 
 ```sh
 ~/Desktop took 5m2s
-❯ nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B >/dev/null 2>&1 &
+❯ nohup tabby serve --device metal\
+   --chat-model Qwen2.5-Coder-1.5B-Instruct \
+   --model StarCoder-1B >/dev/null 2>&1 &
+
 [1] 26704
 appending output to nohup.out
 
 ~/Desktop
 ✦ ❯ ps -e | awk '!/awk/ && /tabby serve --device/ { print $1 }' | xargs kill
-[1]  + terminated  nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B 2>&1 < /dev/null
+[1]  + terminated  nohup tabby serve --device metal --chat-model Qwen2.5-Coder-1.5B-Instruct --model StarCoder-1B 2>&1 < /dev/null
 ```
 
 To make it easier to run these commands, you can create bash functions that you can append to your `.bashrc`/`.zshrc` file:
@@ -157,7 +170,9 @@ To make it easier to run these commands, you can create bash functions that you 
 # Start Tabby Code Assistant
 # Usage: tabby-start
 function tabby-start() {
-    nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B >/dev/null 2>&1 &
+    nohup tabby serve --device metal \
+      --chat-model Qwen2.5-Coder-1.5B-Instruct \
+      --model StarCoder-1B >/dev/null 2>&1 &
     echo "\n✅ Tabby started"
 }
 
@@ -179,10 +194,10 @@ When you run these, this is how it would look like:
 ✅ Tabby started
 
 ~/Desktop
-✦ ❯ tabby-stop
+✦ ❯ tabby-stop 
 
 ✅ Tabby stopped
-[2]  + terminated  nohup tabby serve --device metal --model Qwen2.5-Coder-1.5B > /dev/null 2>&1
+[2]  + terminated  nohup tabby serve --device metal --chat-model Qwen2.5-Coder-1.5B-Instruct   >  
 ```
 
 ### Step 3: Install VSCode Extension
@@ -221,4 +236,4 @@ Tabby team maintains a leaderboard of models and their performance [here](https:
 
 Based on how much memory and processing power you have, you can pick the model that best suits your needs.
 
-I prefer to use really small models such as `Qwen2.5-Coder-1.5B` and `StarCoder-1B` for code completion as they are light and fast on my Macbook Pro (M2 Pro, 16 Gb) machine.
+> I prefer to use really small models such as `Qwen2.5-Coder-1.5B-Instruct` for chat and `StarCoder-1B` for code completion as they are light and fast on my Macbook Pro (M2 Pro, 16 Gb) machine.
