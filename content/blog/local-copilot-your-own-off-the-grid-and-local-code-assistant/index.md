@@ -109,10 +109,10 @@ Writing to new file.
 
 ████████╗ █████╗ ██████╗ ██████╗ ██╗   ██╗
 ╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝
-   ██║   ███████║██████╔╝██████╔╝ ╚████╔╝ 
-   ██║   ██╔══██║██╔══██╗██╔══██╗  ╚██╔╝  
-   ██║   ██║  ██║██████╔╝██████╔╝   ██║   
-   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═════╝    ╚═╝   
+   ██║   ███████║██████╔╝██████╔╝ ╚████╔╝
+   ██║   ██╔══██║██╔══██╗██╔══██╗  ╚██╔╝
+   ██║   ██║  ██║██████╔╝██████╔╝   ██║
+   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═════╝    ╚═╝
 
 📄 Version 0.29.0
 🚀 Listening at http://0.0.0.0:8080
@@ -161,7 +161,7 @@ appending output to nohup.out
 
 ~/Desktop
 ✦ ❯ ps -e | awk '!/awk/ && /tabby serve --device/ { print $1 }' | xargs kill
-[1]  + terminated  nohup tabby serve --device metal --chat-model Qwen2.5-Coder-1.5B-Instruct --model StarCoder-1B 2>&1 < /dev/null
+[1]  + terminated  nohup tabby serve --device metal --chat-model Qwen2.5-Coder-1.5B-Instruct   >
 ```
 
 To make it easier to run these commands, you can create bash functions that you can append to your `.bashrc`/`.zshrc` file:
@@ -194,10 +194,10 @@ When you run these, this is how it would look like:
 ✅ Tabby started
 
 ~/Desktop
-✦ ❯ tabby-stop 
+✦ ❯ tabby-stop
 
 ✅ Tabby stopped
-[2]  + terminated  nohup tabby serve --device metal --chat-model Qwen2.5-Coder-1.5B-Instruct   >  
+[2]  + terminated  nohup tabby serve --device metal --chat-model Qwen2.5-Coder-1.5B-Instruct   >
 ```
 
 ### Step 3: Install VSCode Extension
@@ -237,3 +237,176 @@ Tabby team maintains a leaderboard of models and their performance [here](https:
 Based on how much memory and processing power you have, you can pick the model that best suits your needs.
 
 > I prefer to use really small models such as `Qwen2.5-Coder-1.5B-Instruct` for chat and `StarCoder-1B` for code completion as they are light and fast on my Macbook Pro (M2 Pro, 16 Gb) machine.
+
+### Bonus - Integration with Ollama/LMStudio
+
+TabbyML team [maintains its own set of models](https://tabby.tabbyml.com/docs/models/), which it recommends people use. This means Tabby would download its own model to a directory in your machine: `~/.tabby/models/TabbyML/`.
+
+When I navigate to that directory on my machine and list the files in that directory, I see all the downloaded models:
+
+```sh
+❯ cd ~/.tabby/models/TabbyML/
+
+.tabby/models/TabbyML
+❯ ls
+DeepseekCoder-6.7B  Nomic-Embed-Text     Qwen2.5-Coder-1.5B           StarCoder-1B
+models.json         Qwen2-1.5B-Instruct  Qwen2.5-Coder-1.5B-Instruct  StarCoder2-3B
+```
+
+This is probably occupying a lot of disk space. I can check that by running the [`dust`](https://github.com/bootandy/dust) CLI tool.
+On running the command `dust --depth=1`, I get
+
+![Screenshot](sc_8.png)
+
+That is a lot of disk space taken. While this makes Tabby work, it would be nice to not download LLMs for every tool.
+
+If you already use [Ollama](https://ollama.com/) or [LMStudio](https://lmstudio.ai/), then you already some models downloaded through them. This set of models is just duplication/bloat and not worth downloading, if somehow you could make Tabby access the models through Ollama or LMStudio.
+
+Tabby allows you to configure the models it uses using a config file. The file is usually at path `~/.tabby/config.toml`
+
+The content of this file is:
+
+```toml {filename="config.toml"}
+[model.chat.http]
+kind = "openai/chat"
+model_name = "model_name"
+api_endpoint = "api_endpoint"
+api_key = ""
+
+[model.completion.http]
+kind = "openai/completion"
+model_name = "model_name"
+api_endpoint = "api_endpoint"
+api_key = ""
+prompt_template = "<PRE> {prefix} <SUF>{suffix} <MID>"
+
+[model.embedding.http]
+kind = "openai/embedding"
+model_name = "model_name"
+api_endpoint = "api_endpoint"
+api_key = ""
+```
+
+#### Updating the API Enpoint and Model Name in config
+
+Ollama and LMStudio both come with OpenAI compatible Rest API for accessing LLMs downloaded via their interface.
+
+To make Tabby work with those LLMs, all you need is the API endpoint. That is simple, default API endpoint for
+
+- Ollama is `http://localhost:11434/`
+- LMStudio is `http://localhost:1234/v1`
+
+> If you configured to run Ollama or LMStudio on a different port other than default, your url would be of the form:
+>
+> - Ollama is `http://localhost:port/`
+> - LMStudio is `http://localhost:port/v1`
+
+Now for model name, simply get the list of models you already have downloaded:
+
+- For Ollama, use `ollama list`
+
+  ```sh
+  ❯ ollama list
+   NAME                       ID              SIZE      MODIFIED
+   nomic-embed-text:latest    0a109f422b47    274 MB    10 days ago
+   gemma3:4b-it-qat           d01ad0579247    4.0 GB    3 months ago
+   gemma3:1b-it-qat           b491bd3989c6    1.0 GB    3 months ago
+
+  ```
+
+- For LMStudio, use `lms ls`
+
+  ```sh
+  ❯ lms ls
+
+   You have 5 models, taking up 10.00 GB of disk space.
+
+   LLMs (Large Language Models)         PARAMS      ARCHITECTURE         SIZE
+   qwen2.5-coder-1.5b-instruct-mlx                     Qwen2          1.66 GB
+   qwen/qwen3-1.7b                                     qwen3          1.84 GB      ✓ LOADED
+   microsoft/phi-4-mini-reasoning                      Phi-3          2.18 GB
+   google/gemma-3n-e4b                    6.9B        gemma3n         4.24 GB
+
+   Embedding Models                          PARAMS      ARCHITECTURE          SIZE
+   text-embedding-nomic-embed-text-v1.5                   Nomic BERT       84.11 MB
+
+  ```
+
+Thats it, the name of listed models are what you will be able to use in place of `model_name`.
+
+Update value for `api_endpoint` and `model_name` in the config.toml file using the above relevant value as shown below:
+
+> I use LMStudio, so I am using LMStudio api endpoint and model names listed by LMStudio.
+
+```toml {filename="config.toml"}
+[model.chat.http]
+kind = "openai/chat"
+model_name = "qwen2.5-coder-1.5b-instruct-mlx "
+api_endpoint = "http://localhost:1234/v1"
+api_key = ""
+
+[model.completion.http]
+kind = "openai/completion"
+model_name = "google/gemma-3n-e4b  "
+api_endpoint = "http://localhost:1234/v1"
+api_key = ""
+prompt_template = "<PRE> {prefix} <SUF>{suffix} <MID>"
+
+[model.embedding.http]
+kind = "openai/embedding"
+model_name = "text-embedding-nomic-embed-text-v1.5 "
+api_endpoint = "http://localhost:1234/v1"
+api_key = ""
+```
+
+Save the contents of this file.
+
+Now when you start Tabby, you can omit passing in model names. i.e
+
+```sh
+tabby serve --device metal
+```
+
+The output looks like:
+
+```sh
+❯ tabby serve --device metal
+
+
+████████╗ █████╗ ██████╗ ██████╗ ██╗   ██╗
+╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝
+   ██║   ███████║██████╔╝██████╔╝ ╚████╔╝
+   ██║   ██╔══██║██╔══██╗██╔══██╗  ╚██╔╝
+   ██║   ██║  ██║██████╔╝██████╔╝   ██║
+   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═════╝    ╚═╝
+
+📄 Version 0.29.0
+🚀 Listening at http://0.0.0.0:8080
+```
+
+You can now also update your helper bash function inside `.bashrc`/`.zshrc` file as below:
+
+```sh
+# Start Tabby Code Assistant
+# Usage: tabby-start
+function tabby-start() {
+    nohup tabby serve --device metal 2>&1 &
+    echo "\n✅ Tabby started"
+}
+```
+
+When you run the alias commands, the output should look like:
+
+```sh
+❯ tabby-start
+[2] 66497
+
+✅ Tabby started
+appending output to nohup.out
+
+.tabby/models/TabbyML
+✦ ❯ tabby-stop
+
+✅ Tabby stopped
+[2]  + terminated  nohup tabby serve --device metal 2>&1
+```
