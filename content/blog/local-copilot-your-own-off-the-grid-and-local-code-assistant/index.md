@@ -404,9 +404,10 @@ When you run the alias commands, the output should look like:
 ✅ Tabby started
 appending output to nohup.out
 
-.tabby/models/TabbyML
 ✦ ❯ tabby-stop
 
 ✅ Tabby stopped
 [2]  + terminated  nohup tabby serve --device metal 2>&1
 ```
+
+Thats all. Now, the user can run `tabby-start` to start Tabby and `tabby-stop` to stop it, while accessing models donwloaded by LMStudio/Ollama 😎
