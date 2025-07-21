@@ -15,7 +15,7 @@ outputs:
 # import hextra as module
 module:
   imports:
-  - path: github.com/imfing/hextra
+    - path: github.com/imfing/hextra
 
 markup:
   # allow raw html
@@ -29,17 +29,17 @@ markup:
 
 menu:
   main:
-    - name: Tags
-      pageRef: /tags
-      weight: 1
     - name: Blog
       pageRef: /blog
-      weight: 2
+      weight: 1
     - name: Talks
       pageRef: /talks
-      weight: 3
+      weight: 2
     - name: Showcase
       pageRef: /showcase
+      weight: 3
+    - name: Tags
+      pageRef: /tags
       weight: 4
     - name: About
       pageRef: /about
@@ -83,7 +83,7 @@ params:
       path: images/logo/logo.png
       dark: images/logo/logo.png
     width: wide
-  
+
   # Search
   search:
     enable: true
