@@ -120,6 +120,8 @@ params:
       # date | lastmod | publishDate | title | weight
       sortBy: publishDate
       sortOrder: desc # or "asc"
+      # Pagination
+      pagerSize: 5
     article:
       displayPagination: true
 
