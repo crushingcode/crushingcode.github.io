@@ -83,7 +83,7 @@ title: Showcase
 {{< cards >}}
 
       {{< card
-            link="https://apk-dl.com/instacartoon-for-instagram/com.onemanwithcamera.instacartoon"
+            link="https://insta-cartoon.en.uptodown.com/android"
             title="Instacartoon"
             image="img/android_apps/instacartoon.png"
             imageStyle="object-fit:cover; aspect-ratio:16/9;"
@@ -171,7 +171,7 @@ title: Showcase
 {{< cards >}}
 
       {{< card
-        link="https://www.amazon.com/dp/1942878958"
+        link="https://www.kodeco.com/books/kotlin-coroutines-by-tutorials/v2.0"
         title="Kotlin Coroutines by Tutorials"
         image="img/books/kotlin_coroutines_by_tutorial.png"
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
