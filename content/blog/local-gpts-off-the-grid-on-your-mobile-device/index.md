@@ -1,10 +1,10 @@
 ---
-title: "Unlocking Local AI: Off the Grid, On Your Mobile Device"
+title: "Unlocking Local AI: Your Private On Device ChatGPT"
 date: "2025-04-18"
 authors:
   - name: Nishant Srivastava
     link: /about/
-tags: ["llm"]
+tags: ["local-ai"]
 ---
 
 ![Banner](banner.png)

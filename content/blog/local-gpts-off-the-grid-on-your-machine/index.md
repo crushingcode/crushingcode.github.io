@@ -1,10 +1,10 @@
 ---
-title: "Unlocking Local AI: Running a Private GPT Locally"
+title: "Unlocking Local AI: Your Private ChatGPT"
 date: 2023-12-04
 authors:
   - name: Nishant Srivastava
     link: /about/
-tags: ["llm"]
+tags: ["local-ai"]
 ---
 
 ![Banner](banner.png)
