@@ -1,5 +1,5 @@
 ---
-title: "Unlocking Local AI: Your Private AI Code Companion"
+title: "Unlocking Local AI: Your Private Code Copilot"
 date: 2024-03-03
 authors:
   - name: Nishant Srivastava
