@@ -2,4 +2,4 @@ module github.com/imfing/hextra-starter-template
 
 go 1.21
 
-require github.com/imfing/hextra v0.9.8-0.20250811093637-30866e328cf6 // indirect
+require github.com/imfing/hextra v0.10.2-0.20250817132415-48bae073cb19 // indirect
