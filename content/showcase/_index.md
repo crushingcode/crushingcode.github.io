@@ -63,6 +63,13 @@ title: Showcase
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
+      {{< card
+        link="https://github.com/nisrulz/open-whisperscribe"
+        title="Open WhisperScribe"
+        image="img/oss/open_whisperscribe.jpg"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
 {{< /cards >}}
 
 ### OSS/Android Apps
