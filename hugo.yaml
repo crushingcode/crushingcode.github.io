@@ -75,7 +75,8 @@ menu:
 
 params:
   description: Blog by Nishant Srivastava
-
+  
+  externalLinkDecoration: true
   navbar:
     displayTitle: true
     displayLogo: true
