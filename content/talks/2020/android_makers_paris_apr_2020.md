@@ -4,7 +4,10 @@ date: 2020-04-21
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
+cascade:
+  params:
+    breadcrumbs: true
 ---
 
 {{< icon "location-marker" >}} Android Makers Paris 2020, Online

@@ -4,7 +4,10 @@ date: 2021-11-12
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
+cascade:
+  params:
+    breadcrumbs: true
 ---
 
 {{< icon "location-marker" >}} Droidcon Italy, Italy, Online
