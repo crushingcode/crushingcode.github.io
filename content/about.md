@@ -31,6 +31,6 @@ I'm Nishant, an Android Engineer with a passion for building mobile experiences 
 
 👨🏻‍💻&nbsp;You can support me in maintaining my open source work by [buying me a coffee](https://ko-fi.com/nisrulz) or [sponsoring me on GitHub](https://github.com/sponsors/nisrulz)&nbsp;🤗
 
-![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nisrulz&theme=2077)![nisrulz's Stats](https://github-readme-stats.vercel.app/api?username=nisrulz&theme=dark&show_icons=true&hide_border=true&count_private=true)![nisrulz's Streak](https://github-readme-streak-stats.herokuapp.com/?user=nisrulz&theme=dark&hide_border=true)![nisrulz's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=nisrulz&theme=dark&show_icons=true&hide_border=true&layout=compact)
+![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nisrulz&theme=2077)![nisrulz's Stats](https://github-readme-stats.vercel.app/api?username=nisrulz&theme=dark&show_icons=true&hide_border=true&count_private=true)![nisrulz's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=nisrulz&theme=dark&show_icons=true&hide_border=true&layout=compact)
 
 {{% /details %}}
