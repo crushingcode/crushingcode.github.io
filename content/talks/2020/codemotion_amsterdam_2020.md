@@ -4,7 +4,10 @@ date: 2020-05-27
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
+cascade:
+  params:
+    breadcrumbs: true
 ---
 
 {{< icon "location-marker" >}} Codemotion Amsterdam 2020, Amsterdam, Netherlands [Cancelled]

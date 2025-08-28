@@ -4,7 +4,10 @@ date: 2017-10-14
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
+cascade:
+  params:
+    breadcrumbs: true
 ---
 
 {{< icon "location-marker" >}} Devfest Vancouver, Vancouver, Canada

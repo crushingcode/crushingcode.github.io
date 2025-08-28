@@ -4,7 +4,10 @@ date: 2020-02-02
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
+cascade:
+  params:
+    breadcrumbs: true
 ---
 
 {{< icon "location-marker" >}} FOSDEM 2020: Kotlin Devroom, Brussels, Belgium

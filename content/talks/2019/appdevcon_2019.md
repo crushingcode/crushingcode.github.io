@@ -4,7 +4,10 @@ date: 2019-03-15
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
+cascade:
+  params:
+    breadcrumbs: true
 ---
 
 {{< icon "location-marker" >}} AppdevCon '19, Amsterdam, Netherlands

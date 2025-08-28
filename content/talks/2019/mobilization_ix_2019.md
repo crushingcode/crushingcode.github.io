@@ -6,7 +6,10 @@ authors:
     link: /about/
   - name: Filip Babić
 
-type: blog
+
+cascade:
+  params:
+    breadcrumbs: true
 ---
 
 {{< icon "location-marker" >}} Mobilization IX, Łódź, Poland

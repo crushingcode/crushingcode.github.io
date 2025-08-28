@@ -4,7 +4,10 @@ date: 2019-02-27
 authors:
   - name: Nishant Srivastava
     link: /about/
-type: blog
+
+cascade:
+  params:
+    breadcrumbs: true
 ---
 
 {{< icon "location-marker" >}} Berlindroid '19, Berlin, Germany
