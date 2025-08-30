@@ -13,7 +13,7 @@ tags: ["localization", "android"]
 
 So this started when I found the below tweet:
 
-<center>{{< tweet user="nisrulz" id="1110928436275699712" >}}</center>
+<center>{{< x user="nisrulz" id="1110928436275699712" >}}</center>
 
 Basically what it is doing is that using Google Sheets you can specify a cell text to be translated to another language using the very simple formula as below:
 
