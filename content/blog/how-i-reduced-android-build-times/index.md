@@ -61,7 +61,7 @@ At 28 minutes build time, this wasn’t anywhere near acceptable.
 
 After 2 days of trying and failing to reduce the build time, I decided to ditch Android Studio in favor of a text editor to write code. The reasoning behind that was that I wanted to get rid of any bells and whistles Android Studio brings with it. To build/compile code I turned to one of the most common ways of building a project, TERMINAL!
 
-<center>{{< tweet user="nisrulz" id="981861207932977152" >}}</center>
+<center>{{< x user="nisrulz" id="981861207932977152" >}}</center>
 
 Guess what, I was able to clock my builds at ~3 minutes via Terminal!
 
@@ -146,7 +146,7 @@ My work cycle is super fast now. I am able to iterate at 10x the speed than I wa
 
 **EDIT 2:** Created a twitter thread with all my terminal aliases for Android Development (at the end there is a link to a gist for easy copy pasting). If you would like to follow, you can do so at\*
 
-<center>{{< tweet user="nisrulz" id="985471738476572672" >}}</center>
+<center>{{< x user="nisrulz" id="985471738476572672" >}}</center>
 
 **Edit 3:** As pointed out by [Alejandro H. Cruz](https://twitter.com/AlejandroHCruz), in a reddit thread [Jake Wharton](https://twitter.com/JakeWharton) mentions that it is possible to speed up Android Studio by disabling a lot of plugins. In any case if you feel that you need the functionality they provide, one can just enable them. Most of these plugins aren’t used in day to day development work. I went ahead and disabled a bunch and saw a drastic change in builds run from Android Studio, a drop from 28 minutes to around 5 minutes.\* [Direct link](https://www.reddit.com/r/androiddev/comments/7sxhig/android_studio_slower_when_using_kotlin/dt88pgn/)
 
