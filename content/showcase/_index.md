@@ -35,7 +35,6 @@ title: Showcase
             imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
-
 {{< /cards >}}
 
 ### OSS/Misc Projects
@@ -74,6 +73,13 @@ title: Showcase
         link="https://nisrulz.com/urlscape/"
         title="URLscape"
         image="img/oss/urlscape.jpg"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
+      {{< card
+        link="https://github.com/nisrulz/adb-keep-screen-on"
+        title="ADB Keep Screen On"
+        image="img/oss/adbkeepscreenon.jpg"
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
