@@ -32,20 +32,26 @@ menu:
     - name: Blog
       pageRef: /blog
       weight: 1
-    - name: Talks
-      pageRef: /talks
-      weight: 2
     - name: Showcase
       pageRef: /showcase
+      weight: 2
+    - identifier: more
+      name: More
       weight: 3
-    - name: Tags
-      pageRef: /tags
-      weight: 4
+    - name: Archives
+      pageRef: /archives
+      parent: more
     - name: About
       pageRef: /about
-      weight: 5
+      parent: more
+    - name: Tags
+      pageRef: /tags
+      parent: more
+    - name: Talks
+      pageRef: /talks
+      parent: more
     - name: Search
-      weight: 6
+      weight: 7
       params:
         type: search
     - name: GitHub
@@ -75,7 +81,7 @@ menu:
 
 params:
   description: Blog by Nishant Srivastava
-  
+
   externalLinkDecoration: true
   navbar:
     displayTitle: true
@@ -103,6 +109,9 @@ params:
     default: system
     displayToggle: true
 
+  archives:
+    section: blog
+
   footer:
     enable: true
     displayCopyright: true
@@ -112,8 +121,11 @@ params:
   editURL:
     enable: false
 
+  # Display the last modification date
   displayUpdatedDate: true
   dateFormat: "January 2, 2006"
+  # Display the author of the last modification
+  displayUpdatedAuthor: true
 
   blog:
     list:
@@ -128,7 +140,6 @@ params:
 
   toc:
     displayTags: true
-
 
   highlight:
     copy:
