@@ -83,6 +83,13 @@ title: Showcase
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
+      {{< card
+        link="https://github.com/nisrulz/commit-pilot"
+        title="Commit Pilot"
+        image="img/oss/commit_pilot.webp"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
 {{< /cards >}}
 
 ### OSS/Android Apps
