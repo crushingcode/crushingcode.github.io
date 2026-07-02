@@ -116,6 +116,24 @@ Keep the structure flat. One skill per directory. One `SKILL.md` per skill. Keep
 
 One directory means one update reaches every agent at the same time. PRs touch one place instead of three. New team members install once. Reviews show one diff. No one has to guess which copy is current.
 
+### Where Does It Live
+
+`.agents/` works in two places.
+
+**Inside the project repo.** This is more straightforward. Drop `.agents/skills/` at the root alongside `.gitignore`, `build.gradle.kts`, everything else. Every contributor clones, runs one install command, and every agent reads the same skills. Team-wide rules (coding conventions, testing patterns, Compose guidelines) go here.
+
+**As its own standalone repo.** Some teams prefer a separate skills repo that spans all their projects. That works too. Publish it on GitHub (public or internal), install with `npx skills add your-org/your-skills-repo`. Update one place, every project pulls the same refresh. Cross-project standards (style guides, API conventions, review checklists) belong here.
+
+Both commit `.agents/` to git. The difference is scope.
+
+### Why You Only Commit This One
+
+`.agents/` holds portable skill instructions. Every agent reads `SKILL.md` the same way. The content is project knowledge, not user preference. It belongs in git.
+
+Every agent-specific directory (`.claude/`, `.codex/`, `.opencode/`, `.copilot/`, etc.) is user config. Local state, model preferences, agent metadata. All per developer, per machine, per agent version. Commit them and the repo carries every team member's personal settings. Noise, not signal.
+
+One directory to commit. Seven to ignore.
+
 ## How to Install Skills
 
 [Skills](https://www.skills.sh/docs) is a CLI from Vercel. Run `npx skills` and it places skill files into the right directory for whatever agent you are using.
@@ -183,6 +201,36 @@ npx skills update -p
 npx skills update -g -p
 ```
 
+## The `.gitignore` Rule
+
+Agent directories are user config, not project config. Just add them to `.gitignore`:
+
+```gitignore
+# Agent user config, developer specific
+.claude/
+.codex/
+.opencode/
+.copilot/
+.cursor/
+.windsurf/
+.gemini/
+.cline/
+```
+
+Only `.agents/` stays tracked. Keeps things clean. New contributors clone and install without inheriting someone else's editor config or model preferences.
+
+Migrating an existing repo? Check for stray agent dirs:
+
+```bash
+# What is tracked?
+git ls-files | grep -E '^\.(claude|codex|opencode|copilot|cursor|windsurf|gemini|cline)/'
+
+# Remove from tracking (keep on disk)
+git rm -r --cached .claude/ .codex/ .opencode/
+```
+
+Then update `.gitignore`, commit. Done ✅
+
 ## Telemetry
 
 The `npx skills` CLI sends anonymous telemetry by default (skill name, files, timestamp). No personal or device info. To opt out, add this to your `~/.zshrc` or `~/.bashrc`:
@@ -195,7 +243,7 @@ export DISABLE_TELEMETRY=1
 
 Hand this prompt to your coding agent:
 
-> Scan the repo for any agent-specific skill directories outside `.agents/skills/`. Look for `.claude/skills/`, `.codex/skills/`, `.opencode/skills/`, `.copilot/skills/`, and any other `.agentname/skills/` patterns. For each one, move the entire skill directory into `.agents/skills/<skill-name>/`, preserving all files (SKILL.md, scripts, examples, configs). Keep the content as is. Do not merge or edit. Then delete the old directories. Finally, create or update `.agents/README.md` with `npx skills add` install instructions. Moves first, deletions second, docs last.
+> Scan the repo for any agent-specific skill directories outside `.agents/skills/`. Look for `.claude/skills/`, `.codex/skills/`, `.opencode/skills/`, `.copilot/skills/`, and any other `.agentname/skills/` patterns. For each one, move the entire skill directory into `.agents/skills/<skill-name>/`, preserving all files (SKILL.md, scripts, examples, configs). Keep the content as is. Do not merge or edit. Then delete the old directories. After that, update `.gitignore` to block all agent-specific directories (`git rm --cached` any that are already tracked). Finally, create or update `.agents/README.md` with `npx skills add` install instructions. Moves first, deletions second, .gitignore third, docs last.
 
 ## That's It
 
