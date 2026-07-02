@@ -46,13 +46,23 @@ Here `.claude/skills/add-compose-preview/SKILL.md` holds the real content:
 ```markdown
 # Add Compose Preview
 
-Generate Jetpack Compose `@Preview` functions and
+Add Jetpack Compose `@Preview` functions and
 `PreviewParameterProvider` classes. Use whenever the user
-wants to add previews to a `@Composable`, set up multi-config
-previews (light/dark, screen sizes, font scale, locale,
-dynamic color), or needs a `PreviewParameterProvider` for
-composables that take complex parameters. Triggers include
-phrases "@Preview", "PreviewParameterProvider", "multi preview".
+wants to add previews to a `@Composable`.
+
+Create a `private` wrapper per variant that calls the target
+composable with sample data. Annotate the wrapper, not the original:
+
+- `@Preview(showBackground = true)` — baseline
+- `@PreviewLightDark` — light + dark mode
+- `@PreviewFontScale` — default + large font
+- `@PreviewScreenSizes` — phone + foldable + tablet
+- `@PreviewDynamicColors` — dynamic color on/off
+
+For custom configs pass `uiMode`, `fontScale`, `locale`,
+`device = Devices.*`, `showSystemUi`. Use `PreviewParameterProvider<T>`
+when the composable takes non-trivial inputs. Name each wrapper
+descriptively and keep it in the same file as the composable.
 ```
 
 The `.codex/skills/add-compose-preview/SKILL.md` wrapper stays thin. It just tells Codex where to look:
@@ -60,7 +70,7 @@ The `.codex/skills/add-compose-preview/SKILL.md` wrapper stays thin. It just tel
 ```markdown
 ---
 name: add-compose-preview
-description: Add Compose preview annotations to a Composable function.
+description: Add Jetpack Compose @Preview and PreviewParameterProvider code.
 ---
 
 # Add Compose Preview
