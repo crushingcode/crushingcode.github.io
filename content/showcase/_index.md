@@ -63,6 +63,13 @@ title: Showcase
       >}}
 
       {{< card
+        link="https://nisrulz.com/drawableforge/"
+        title="DrawableForge"
+        image="img/oss/drawableforge.jpg"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
+      {{< card
         link="https://github.com/nisrulz/open-whisperscribe"
         title="Open WhisperScribe"
         image="img/oss/open_whisperscribe.jpg"
