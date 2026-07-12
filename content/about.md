@@ -2,35 +2,23 @@
 type: about
 ---
 
-# Hi there 👋🏼, I'm Nishant Srivastava
+# Nishant Srivastava / Senior Engineer
 
-<img src="/images/authors/nisrulz.jpg" alt="Nishant Srivastava" loading="lazy" style="height: 25em;margin-left: 0;">
+<img src="/images/authors/nisrulz.jpg" alt="Nishant Srivastava" loading="lazy" style="height: 15em; float: right; margin-left: 1.5em; margin-bottom: 0.5em;">
 
-## 📃 About me
+Nishant Srivastava is an Android engineer with over a decade of experience. He's worked across real estate, audio, fintech, and ad-tech. Currently at [ImmoScout24](https://play.google.com/store/apps/details?id=de.is24.android) (Germany's leading real estate portal, 18M+ downloads, 110k+ reviews), shipping features across augmented reality, video feeds, voice input, and search.
 
-I'm Nishant, an Android Engineer with a passion for building mobile experiences that blend hardware and software in perfect harmony – I'm always wired to innovate! With years of experience under my belt, I've developed a knack for crafting innovative mobile apps and SDKs for Android devices. My goal is to merge cutting-edge technology with practicality to create experiences that are both impressive and usable – the 'app-lication' of perfection if you will! When I'm not geeking out over new ideas or tinkering with tech and engineering projects, you can find me giving back to the community through open-source projects or sharing my knowledge at conferences, blogs, and publications. My driving force is a relentless curiosity to solve problems, push boundaries, and collaborate with fellow developers who share this enthusiasm – after all, it's always 'game on' in the world of Android development!
+Before that, it was audio personalization at [Mimi Hearing Technologies](https://www.linkedin.com/company/mimihearing/), wearable firmware at [Soundbrenner](https://www.soundbrenner.com/), a founding engineer stint at [Omni Labs](https://www.linkedin.com/company/omni-inc-/) (where he grew Instacartoon to 5M downloads), and inventing [Silverpush](https://silverpush.co/)'s Unique Audio Beacon technology. That work got picked up by [TechCrunch](https://techcrunch.com/2014/07/24/silverpush-audio-beacons/), [Business Today](https://web.archive.org/web/20180315123959/https://www.businesstoday.in/magazine/features/silverpushs-technology-lets-advertisers-reach-the-consumer-on-multiple-devices/story/206815.html), and [Live Mint](https://web.archive.org/web/20180315124010/http://www.livemint.com/Opinion/3QXskshem9l6fcbfAkqmUO/New-ways-to-count-viewers.html). He's [listed inventor on 2 patents](/showcase/#published-patents) for audio fingerprinting and battery conservation.
 
-## ✨ What I've been dabbling in
+These days he's into developer productivity, agentic engineering, and AI-assisted tooling. He co-authored [Kotlin Coroutines by Tutorials](https://www.kodeco.com/books/kotlin-coroutines-by-tutorials/v2.0), contributes at [Kodeco.com](https://www.kodeco.com/), and is a former Intel Software Innovator. He co-hosted the [Raywenderlich.com podcast](/blog/raywederlich-com-tutorials/#as-co-host-of-podcast) and has been a [technical reviewer](/showcase/#bookstechnical-reviewer) for Android and Kotlin books.
 
-- [Giving talks/sessions](/talks/)
-- [Writing blog posts](/blog/) [at] [Crushing C.O.D.E](/) and [Kodeco.com (Raywenderlich.com)](/blog/raywederlich-com-tutorials/)
-- [Co host for a Podcast](/blog/raywederlich-com-tutorials/#as-co-host-of-podcast)
-- [Writing/reviewing books](/showcase/#bookstechnical-reviewer)
-- Developing/Writing code for
-  - [Wearable's Firmware](https://web.archive.org/web/20191221211425/http://web.archive.org/screenshot/https://www.kickstarter.com/projects/352439100/soundbrenner-core-the-4-in-1-smart-music-tool)
-  - Mobile SDK for enablintg DSP on device
-    - Technology featured in [Techcrunch](https://techcrunch.com/2014/07/24/silverpush-audio-beacons/), [Business Today](https://web.archive.org/web/20180315123959/https://www.businesstoday.in/magazine/features/silverpushs-technology-lets-advertisers-reach-the-consumer-on-multiple-devices/story/206815.html) and [Live Mint](https://web.archive.org/web/20180315124010/http://www.livemint.com/Opinion/3QXskshem9l6fcbfAkqmUO/New-ways-to-count-viewers.html).
-    - [Pulblished Patents](/showcase/#published-patents)
-  - [Multiple Mobile SDKs for solving problems on Android platform](/showcase/#ossandroid-libraries)
-  - [Android applications](http://localhost:1313/showcase/#ossandroid-apps)
-  - [Web app to generate Mobile App's Privacy Policy/Terms & Conditions](https://app-privacy-policy-generator.nisrulz.com/)
+Side projects include [Javadoc Themer](https://nisrulz.com/javadoc-themer/), [App Icon Badger](https://nisrulz.com/app-icon-badger/), [URLscape](https://nisrulz.com/urlscape/), [DrawableForge](https://nisrulz.com/drawableforge/), [Open WhisperScribe](https://github.com/nisrulz/open-whisperscribe), [Commit Pilot](https://github.com/nisrulz/commit-pilot), and an [App Privacy Policy Generator](https://app-privacy-policy-generator.nisrulz.com/). Find his [open-source work](https://github.com/nisrulz) on GitHub. Connect on [LinkedIn](https://www.linkedin.com/in/nisrulz/) or [Bluesky](https://bsky.app/profile/nisrulz.com). He blogs at [Crushing C.O.D.E](https://crushingcode.nisrulz.com) and has given [over 30 talks](/talks/) worldwide.
 
-## 📊 Github Statistics
+## 📊 GitHub Statistics
 
 {{% details title="Click me to reveal my Github Stats" closed="true" %}}
 
-👨🏻‍💻&nbsp;You can support me in maintaining my open source work by [buying me a coffee](https://ko-fi.com/nisrulz) or [sponsoring me on GitHub](https://github.com/sponsors/nisrulz)&nbsp;🤗
+👨🏻‍💻 You can support me in maintaining my open source work by [buying me a coffee](https://ko-fi.com/nisrulz) or [sponsoring me on GitHub](https://github.com/sponsors/nisrulz) 🤗
 
-![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nisrulz&theme=2077)![nisrulz's Stats](https://github-readme-stats.vercel.app/api?username=nisrulz&theme=dark&show_icons=true&hide_border=true&count_private=true)![nisrulz's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=nisrulz&theme=dark&show_icons=true&hide_border=true&layout=compact)
-
+![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nisrulz&theme=2077)
 {{% /details %}}
