@@ -56,7 +56,7 @@ title: Showcase
       >}}
 
       {{< card
-        link="https://app-icon-badger.web.app/"
+        link="https://nisrulz.com/app-icon-badger/"
         title="App Icon Badger"
         image="img/oss/app_icon_badger.jpg"
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
