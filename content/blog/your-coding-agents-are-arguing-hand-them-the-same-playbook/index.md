@@ -11,11 +11,11 @@ tags: ["coding-agent", "skills"]
 
 <!--Short abstract goes here-->
 
-Your coding agents are not on the same page. Claude Code got one version of the rules. Codex got another. Someone dropped a copy into `.opencode/` that is three months stale. Now one agent insists on the `v2` API and another keeps generating `v1` code. They are not arguing because they disagree. They are arguing because you handed them different playbooks.
+I was poking around my agent configs the other day and noticed something. Claude Code had one set of rules. Codex had another. There was a copy in `.opencode/` that was three months stale. One agent kept pushing the `v2` API and another kept generating `v1` code. They were not arguing because they disagreed. They were arguing because I handed them different playbooks.
 
 <!--more-->
 
-The fix is one directory and one install command. Put everything under `.agents/skills/` and every agent reads from the same sheet.
+The fix is straightforward. One directory, one install command. Put everything under `.agents/skills/` and every agent reads from the same sheet.
 
 ## The Problem: Skills Drift
 
@@ -25,7 +25,7 @@ Duplication is the naive approach. Write the skill once for Claude, copy it into
 
 ### The Workaround: A Skill Bridge
 
-Some teams try something smarter. Instead of copying, they create a symlink bridge. The real instructions live in one agent's directory and the other agent's skill points back to it through a symlink.
+Some teams get clever with it. Instead of copying, they create a symlink bridge. The real instructions live in one agent's directory and the other agent's skill points back to it through a symlink.
 
 ```text {hl_lines=[4,9,11]}
 .claude/
@@ -84,7 +84,7 @@ Codex discovers the wrapper, reads the reference, and follows the same instructi
 
 ### Why the Bridge Breaks Down
 
-On paper this is clever. In practice it is fragile.
+Looks clever on paper. Falls apart in practice.
 
 The symlink uses a relative path like `../../../../.claude/skills/add-compose-preview/SKILL.md`. Rename or move the Claude file and the symlink snaps silently. No error, no warning. Codex just stops finding the instructions.
 
@@ -110,7 +110,7 @@ Skill files are documentation that agents read, not per tool config. Documentati
       SKILL.md
 ```
 
-Point every agent at `.agents/skills/`. No mirrors, no duplicates to manage.
+Point every agent at `.agents/skills/`. No mirrors, no duplicates.
 
 Keep the structure flat. One skill per directory. One `SKILL.md` per skill. Keep the name stable and the instructions short. If a skill needs examples or scripts, put them next to the `SKILL.md`.
 
@@ -243,7 +243,16 @@ export DISABLE_TELEMETRY=1
 
 Hand this prompt to your coding agent:
 
-> Scan the repo for any agent-specific skill directories outside `.agents/skills/`. Look for `.claude/skills/`, `.codex/skills/`, `.opencode/skills/`, `.copilot/skills/`, and any other `.agentname/skills/` patterns. For each one, move the entire skill directory into `.agents/skills/<skill-name>/`, preserving all files (SKILL.md, scripts, examples, configs). Keep the content as is. Do not merge or edit. Then delete the old directories. After that, update `.gitignore` to block all agent-specific directories (`git rm --cached` any that are already tracked). Finally, create or update `.agents/README.md` with `npx skills add` install instructions. Moves first, deletions second, .gitignore third, docs last.
+```md
+Scan the repo for any agent-specific skill directories outside `.agents/skills/`. Look for 
+`.claude/skills/`, `.codex/skills/`, `.opencode/skills/`, `.copilot/skills/`, and any other 
+`.agentname/skills/` patterns. For each one, move the entire skill directory into 
+`.agents/skills/<skill-name>/`, preserving all files (SKILL.md, scripts, examples, configs). Keep 
+the content as is. Do not merge or edit. Then delete the old directories. After that, update 
+`.gitignore` to block all agent-specific directories (`git rm --cached` any that are already tracked). 
+Finally, create or update `.agents/README.md` with `npx skills add` install instructions. Moves 
+first, deletions second, .gitignore third, docs last.
+```
 
 ## That's It
 
