@@ -12,7 +12,10 @@ authors:
 
 You just gave your AI agent full bash access and watched it run `rm -rf` on your project directory. 🤡
 
-This isn't hypothetical. Matt Shumer's [GPT-5.6-Sol accidentally deleted almost all the files on his Mac](https://xcancel.com/mattshumer_/status/2075657271401390161). A subagent's cleanup command expanded `$HOME` incorrectly and wiped his dev directory. Stories like that make you wonder: what if it happens to you? Agents with unrestricted shell access can delete files, push broken code, or nuke your entire filesystem.
+This isn't hypothetical. Matt Shumer's [GPT-5.6-Sol accidentally deleted almost all the files on his Mac](https://x.com/mattshumer_/status/2075657271401390161). A subagent's cleanup command expanded `$HOME` incorrectly and wiped his dev directory.
+![Screenshot](screenshot.png)
+
+Stories like that make you wonder: what if it happens to you 🤔? Agents with unrestricted shell access can delete files, push broken code, or nuke your entire filesystem.
 
 This got me thinking: how do I lock this down before it happens to me?
 
