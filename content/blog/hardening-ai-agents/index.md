@@ -634,31 +634,50 @@ A few seconds confirming a command is nothing compared to recovering from a bad 
 
 Don't want to hand-copy every block above? Hand the job to your own agent. Paste this prompt in and let it read your config, fetch the post, and apply the hardening. Works for any of the three.
 
-```text
-Read this blog post and apply its recommendations to my setup:
+```md
+Audit the configuration of the coding agent that is currently invoking you
+(OpenCode, Claude Code, or Codex CLI). Do not modify anything.
+
+Reference for the hardening recommendations:
 https://crushingcode.nisrulz.com/blog/hardening-ai-agents/
 
 Steps:
-1. Detect which agent(s) I use by locating their config files:
+1. Identify your own agent and locate its config:
    OpenCode: ~/.config/opencode/opencode.json (or a project opencode.json)
    Claude Code: .claude/settings.json, ~/.claude/settings.json, .claude/settings.local.json
    Codex CLI: ~/.codex/config.toml and ~/.codex/rules/*.rules
-2. For each config found, apply the bash deny/ask patterns, the read deny
-   patterns, and the always-allow memory carveout exactly as the post
-   describes, using the syntax for that agent.
-3. Do not delete existing entries. Merge new rules in, keeping the catch-all
-   allow first so explicit denies win on last match.
-4. Back up each file to *.bak before editing.
-5. Print a summary of what you changed per file, then remind me to restart
-   the agent.
+   Only inspect the agent you are part of. Ignore configs belonging to other
+   agents.
+2. Read-only review each relevant config file. Check for:
+   - bash command deny/ask patterns
+   - read/path deny patterns
+   - an always-allow memory carveout
+   Compare what is present against what the post recommends.
+3. Do not edit, delete, create, or back up any files. Do not change settings.
+4. Print an audit report:
+   - which agent and config file(s) were inspected
+   - which recommended hardening controls are present and which are missing
+   - any risky gaps (e.g., broad allow rules, missing denies, no memory carveout)
+   - a numbered list of the missing hardening controls, each with a short
+     description of the rule to apply (described, not applied)
+5. After the report, ask me whether I want any of the listed items fixed.
+   If I do, ask me to reply with the number(s) of the fix(es) from the list
+   (e.g. "2" or "1,3,4"). Only after I confirm specific numbers, apply just
+   those fixes to the relevant config(s), merging new rules in without deleting
+   existing entries and keeping any catch-all allow rule first. Back up each
+   edited file to *.bak first.
+6. End by telling me to restart the agent after any changes are made.
 
-If you find no config, tell me which agent you think I'm using based on the
-tools installed on this machine, and ask before creating anything.
+If your own config cannot be found, say so and stop. Do not ask to create one.
 ```
 
 {{< callout type="warning" >}}
   Run it once per agent you use. Read the diff before restarting, and keep the `.bak` files until you're sure nothing broke.
 {{< /callout >}}
+
+This is what the output looks like for me (I gave the prompt to OpenCode):
+
+![outout](output.png)
 
 ## What's Next
 
