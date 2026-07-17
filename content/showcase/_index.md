@@ -97,6 +97,13 @@ title: Showcase
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
+      {{< card
+        link="https://nisrulz.com/tiny-vector-drawable/"
+        title="Tiny Vector Drawable"
+        image="img/oss/tiny_vector_drawable.jpg"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
 {{< /cards >}}
 
 ### OSS/Android Apps
