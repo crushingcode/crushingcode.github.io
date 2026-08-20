@@ -111,6 +111,13 @@ title: Showcase
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
+      {{< card
+        link="https://github.com/nisrulz/opencode-local-models"
+        title="OpenCode Local Models"
+        image="img/oss/opencode_local_models.jpg"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
 {{< /cards >}}
 
 ### OSS/Android Apps
