@@ -66,19 +66,18 @@ DCP creates its own config at `~/.config/opencode/dcp.jsonc`. Here are the setti
 ```json {filename="dcp.jsonc"}
 {
   "compress": {
-    "mode": "range",
     "permission": "allow",
     "maxContextLimit": "70%",
     "minContextLimit": "35%",
-    "nudgeFrequency": 5
+    "protectUserMessages": true,
+    "nudgeForce": "strong"
   },
   "turnProtection": {
     "enabled": true,
     "turns": 3
   },
   "strategies": {
-    "deduplication": { "enabled": true },
-    "purgeErrors": { "enabled": true, "turns": 3 }
+    "purgeErrors": { "turns": 3 }
   }
 }
 ```
@@ -87,9 +86,10 @@ The fields that matter most:
 
 - **`compress`**
   - **`permission: "allow"`** lets DCP compress silently in the background. Switch to `"ask"` if you want to approve each pass.
-  - **`maxContextLimit: "70%"`** kicks in early. You don't wait until you're at 99% and gasping for space.
-  - **`minContextLimit: "35%"`** is the off switch for nudge reminders. Each cycle buys you more runway.
-  - **`nudgeFrequency: 5`** controls how often DCP injects a reminder. Every 5th request, not every turn.
+  - **`maxContextLimit: "70%"`** starts the nudge while you still have headroom. You won't crawl to 99% and run dry.
+  - **`minContextLimit: "35%"`** switches the reminders off once you fall below it. No nagging when you have space.
+  - **`protectUserMessages: true`** keeps your prompts intact through compression. Paste a giant log and it stays, never trimmed.
+  - **`nudgeForce: "strong"`** tells the model to compress more after you reply.
 - **`turnProtection`**
   - **`turns: 3`** keeps the last 3 exchanges fully visible. No compression surprises on something you just discussed. You also need `enabled: true` to make this stick.
 - **`strategies`**
@@ -130,31 +130,38 @@ That's it. No more repeating yourself every session. Your AGENTS.md stays clean 
 
 ## Add safety rails
 
-Most tools are [allow by default](https://opencode.ai/docs/permissions/) in OpenCode. A couple of safety guards like `external_directory` and `doom_loop` default to `"ask"`. You can layer targeted `bash` rules on top to keep daily work smooth while catching the dangerous stuff:
+OpenCode [allows most tools by default](https://opencode.ai/docs/permissions/). A few guards like `external_directory` and `doom_loop` ask first instead. For `bash`, you only need a few rules: let the normal commands through and catch the dangerous ones.
 
 ```json {filename="opencode.json"}
 "permission": {
-    "*": "allow",
+    "read": {
+        "**/.env*": "deny",
+        "**/*.key": "deny"
+    },
+    "edit": {
+        "**/.env*": "deny",
+        "**/.ssh/**": "deny"
+    },
     "bash": {
-        "*": "ask",
-        "git *": "allow",
-        "grep *": "allow",
-        "ls *": "allow",
-        "./gradlew *": "allow"
+        "rm *": "deny",
+        "sudo *": "deny",
+        "git push --force*": "deny",
+        "git push*": "ask",
+        "curl*": "ask",
+        "wget*": "ask"
     },
     "external_directory": {
-        "~/.config/opencode/**": "allow"
+        "~/.config/opencode/memory/**": "allow"
     }
 }
 ```
 
-- **`"*": "allow"`** at the top level lets the model use most tools without approval prompts.
+- **`read`** and **`edit`** run by default, so you only list what to block. Think secrets and SSH keys.
 - **`bash`**
-  - **`"*": "ask"`** catches anything not explicitly listed. Unknown or risky commands trigger a prompt. The last matching rule wins, so specific rules below override this default.
-  - **`"git *": "allow"`** passes normal git operations through. Want to block destructive operations? Add explicit rules after it, like `"git push -f*": "ask"`.
-  - **`"grep *": "allow"`** and **`"ls *": "allow"`** stop search and listing from getting annoying.
-  - **`"./gradlew *": "allow"`** lets Android builds run without interruption.
-- **`external_directory`** gives the model access to your OpenCode config directory without asking. Otherwise it would prompt for every read of your rules or templates.
+  - **`"rm *": "deny"`** and **`"sudo *": "deny"`** stop destructive commands outright.
+  - **`"git push --force*": "deny"`** blocks forced pushes. Put it before **`"git push*": "ask"`** so force stays blocked while normal pushes ask you.
+  - **`"curl*": "ask"`** and **`"wget*": "ask"`** ask before any network call.
+- **`external_directory`** asks by default, so I allow `~/.config/opencode/memory/**`. That lets the agent use your memory files without pausing to ask.
 
 I wrote in detail about hardening agents against destructive commands in [Hardening Your AI Agent Before It Breaks Everything](/blog/hardening-ai-agents/).
 
@@ -273,16 +280,95 @@ Here is the full `~/.config/opencode/opencode.json`:
         "~/.config/opencode/rules/*.md"
     ],
     "permission": {
-        "*": "allow",
-        "bash": {
-            "*": "ask",
-            "git *": "allow",
-            "grep *": "allow",
-            "ls *": "allow",
-            "./gradlew *": "allow"
+        "read": {
+            "**/.env*": "deny",
+            "**/local.properties": "deny",
+            "**/secrets.local*": "deny",
+            "**/*.pem": "deny",
+            "**/*.key": "deny",
+            "**/*.p12": "deny",
+            "**/*.jks": "deny",
+            "**/*.p8": "deny",
+            "**/*.pgp": "deny",
+            "**/*.gpg": "deny",
+            "**/*.asc": "deny",
+            "**/*.crt": "deny",
+            "**/*.cer": "deny",
+            "**/*.cert": "deny",
+            "**/key.properties": "deny",
+            "**/keystore*": "deny",
+            "**/credentials*": "deny",
+            "**/*credentials*.json": "deny",
+            "**/*cred*.json": "deny",
+            "**/service-account*": "deny",
+            "**/.netrc": "deny",
+            "**/.ssh/**": "deny",
+            "**/id_*": "deny",
+            "**/.aws/**": "deny",
+            "**/.gcp/**": "deny",
+            "**/.azure/**": "deny",
+            "**/.kube/**": "deny",
+            "**/.npmrc": "deny",
+            "**/.yarnrc*": "deny",
+            "**/.gem/credentials": "deny",
+            "**/.git-credentials": "deny",
+            "**/.docker/config.json": "deny",
+            "**/google-services.json": "deny",
+            "**/GoogleService-Info.plist": "deny",
+            "**/sentry*.properties": "deny",
+            "**/secret*": "deny",
+            "**/Secret*": "deny",
+            "**/*token*": "deny",
+            "**/*.token": "deny",
+            "**/oauth*": "deny",
+            "**/database.yml": "deny",
+            "**/*keychain*": "deny",
+            "**/.zsh_history": "deny",
+            "**/.bash_history": "deny",
+            "**/.config/gh/hosts.yml": "deny",
+            "**/.gnupg/**": "deny",
+            "**/.envrc": "deny",
+            "**/.pgpass": "deny",
+            "**/*.pfx": "deny"
+        },
+        "edit": {
+            "**/.ssh/**": "deny",
+            "**/.aws/**": "deny",
+            "**/.gcp/**": "deny",
+            "**/.azure/**": "deny",
+            "**/.kube/**": "deny",
+            "**/.gnupg/**": "deny",
+            "**/.env*": "deny",
+            "**/id_*": "deny",
+            "**/*.pem": "deny",
+            "**/*.key": "deny",
+            "**/.zshrc": "deny",
+            "**/.bashrc": "deny",
+            "**/.zprofile": "deny",
+            "**/.bash_profile": "deny",
+            "**/.profile": "deny",
+            "**/.zsh_history": "deny",
+            "**/.bash_history": "deny",
+            "**/.gitconfig": "deny"
         },
         "external_directory": {
-            "~/.config/opencode/**": "allow"
+            "~/.config/opencode/memory/**": "allow"
+        },
+        "bash": {
+            "rm *": "deny",
+            "rmdir *": "deny",
+            "unlink *": "deny",
+            "shred *": "deny",
+            "mkfs *": "deny",
+            "fdisk *": "deny",
+            "dd *": "deny",
+            "sudo *": "deny",
+            "su *": "deny",
+            "nc *": "deny",
+            "git push --force*": "deny",
+            "git push*": "ask",
+            "curl*": "ask",
+            "wget*": "ask"
         }
     },
     "model": "openai/gpt-5.6-sol",
@@ -320,6 +406,8 @@ Here is the full `~/.config/opencode/opencode.json`:
     }
 }
 ```
+
+The `permission` block only lists `deny` and `ask` rules. That is because `read`, `edit`, and most tools already allow by default in OpenCode. `external_directory` is the odd one out: it asks by default, so I allow `~/.config/opencode/memory/**` to let the agent read and write your memory files without a prompt.
 
 {{< callout type="info" >}}
 This config was tested against OpenCode 1.18.3. The API surface evolves. Check the [docs](https://opencode.ai/docs/) if a field errors.
