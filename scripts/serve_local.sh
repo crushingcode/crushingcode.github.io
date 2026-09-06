@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
 
-
-# Check if Hugo is installed
-hugo version
-if [ $? -eq 0 ]; then
-    echo OK
-else
-    echo "Hugo is not installed/configured"
-    # Install Hugo
-    brew install hugo
-fi
+# Install Hugo if missing
+command -v hugo >/dev/null || brew install hugo
 
 # Serve locally while watching for file changes
 hugo mod tidy
-hugo server --logLevel debug --disableFastRender -p 1313
+hugo server --logLevel warn --disableFastRender -p 1313
