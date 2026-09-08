@@ -57,7 +57,6 @@ The plugin uses bundled sounds by default. The paths above show how to override 
   - **macOS** works out of the box.
   - **Linux** needs `libnotify-bin` + one of `paplay`/`aplay`/`mpv`/`ffplay`.
   
-
 ## Codex and Claude Code (same idea, manual hooks)
 
 If you use Codex or Claude Code, the pattern is simpler: paste a hook config that plays a sound on two lifecycle events. See [Codex hooks docs](https://developers.openai.com/codex/hooks) and [Claude Code hooks docs](https://code.claude.com/docs/en/hooks-guide) for the full reference.
@@ -112,4 +111,4 @@ Paste into `~/.claude/settings.json`:
 - **macOS**: `afplay` ships with macOS, nothing to install
 - **Linux**: swap `afplay` for `paplay` or `aplay`
 
-Pick the method that matches your agent. Two minutes of setup. Your agent will tell you when it needs you. That is more like it 🤘🏼
+Pick the method that matches your agent. Your agent will tell you when it needs you.
