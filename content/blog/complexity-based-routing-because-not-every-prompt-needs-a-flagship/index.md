@@ -11,7 +11,7 @@ authors:
 
 <!--Short abstract goes here-->
 
-I caught my coding agent paying flagship prices for a typo fix. LiteLLM's Auto Router v2 routes cheap prompts to cheap models and keeps the hard ones on the big guns. Here is how I set it up with opencode.
+I caught my coding agent paying flagship prices for a typo fix. LiteLLM's Auto Router v2 routes cheap prompts to cheap models and keeps the hard ones on the big guns. Here is how I set it up with OpenCode.
 
 <!--more-->
 
@@ -90,6 +90,10 @@ model_list:
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
+  # Forward client x-* headers to the provider. OpenCode Go demands
+  # x-opencode-session on every request:
+  # https://opencode.ai/docs/go/#where-can-i-use-it
+  forward_client_headers_to_llm_api: true
 ```
 
 Save this as `~/.config/litellm/config.yaml`. The LiteLLM Proxy picks it up in the next step.
@@ -214,16 +218,16 @@ On my run the router picked `mimo-v2.5`, the SIMPLE tier. Exactly what a grep qu
 
 {{< /details >}}
 
-## Connect opencode
+## Connect OpenCode
 
-The `lite` CLI wraps coding agents and routes their traffic through your proxy. Point it at your key and launch opencode:
+The `lite` CLI wraps coding agents and routes their traffic through your proxy. Point it at your key and launch OpenCode:
 
 ```bash
 export LITELLM_PROXY_API_KEY="$LITELLM_MASTER_KEY"
 lite opencode
 ```
 
-The wrapper exports `OPENAI_BASE_URL` and `OPENAI_API_KEY` for you, checks the key against the proxy, then launches opencode.
+The wrapper exports `OPENAI_BASE_URL` and `OPENAI_API_KEY` for you, checks the key against the proxy, then launches OpenCode.
 
 {{< callout type="info" >}}
 The defaults above assume your proxy runs at `http://localhost:4000`.
@@ -237,7 +241,7 @@ export LITELLM_PROXY_URL="http://your-proxy:4000"
 {{< /callout >}}
 
 {{< callout type="warning" >}}
-One catch: opencode reads its model list from config, not from the proxy. Add the router to `~/.config/opencode/opencode.json` so it shows up in `/models`:
+One catch: OpenCode reads its model list from config, not from the proxy. Add the router to `~/.config/opencode/opencode.json` so it shows up in `/models`:
 
 ```json opencode.json
 {
@@ -257,16 +261,17 @@ One catch: opencode reads its model list from config, not from the proxy. Add th
   }
 }
 ```
+
 {{< /callout >}}
 
-Launch `lite opencode`. Inside opencode, run `/models` and select Smart Router under the LiteLLM provider. That is the `smart-router` alias, and every request now routes by tier. Done 🚀
+Launch `lite opencode`. Inside OpenCode, run `/models` and select Smart Router under the LiteLLM provider. That is the `smart-router` alias, and every request now routes by tier. Done 🚀
 
 ![OpenCode Models](sc_1.png)
 
 ![OpenCode Smart Router](sc_2.png)
 
 {{< callout type="info" >}}
-opencode sends a `reasoningSummary` parameter that plain chat completions reject. The router entry handles it with `drop_params: true`. If you point opencode at a tier model directly, add `additional_drop_params: ["reasoningSummary"]` to that model's entry:
+OpenCode sends a `reasoningSummary` parameter that plain chat completions reject. The router entry handles it with `drop_params: true`. If you point OpenCode at a tier model directly, add `additional_drop_params: ["reasoningSummary"]` to that model's entry:
 
 ```yaml {hl_lines=[6]}
 - model_name: cheap/mimo-v2.5
@@ -278,6 +283,51 @@ opencode sends a `reasoningSummary` parameter that plain chat completions reject
 ```
 
 The [OpenCode integration guide](https://docs.litellm.ai/docs/tutorials/opencode_integration#dropping-opencode-specific-parameters) covers this and more.
+{{< /callout >}}
+
+### The Session Header
+
+OpenCode Go wants `x-opencode-session` on every request, one stable id per conversation. It uses the id for provider routing and prompt caching. LiteLLM strips client headers by default, so the id never reaches the OpenCode Go backend and the router fails with this error:
+
+```text
+litellm.BadRequestError: OpenAIException - Error from provider (Console Go): Request is missing 
+x-opencode-session and cannot be routed efficiently.
+```
+
+Two changes are needed to fix it.
+
+1. Add a line in the proxy config under `general_settings`:
+
+   ```yaml {hl_lines=[2]}
+   general_settings:
+     forward_client_headers_to_llm_api: true
+   ```
+
+   OpenCode already sends the session id on every request. With this line, the proxy passes it through to the OpenCode Go backend.
+
+2. Add a tiny plugin that puts the id on the wire. Save it as `~/.config/opencode/plugins/opencode-session-header.ts`:
+
+```ts {filename="~/.config/opencode/plugins/opencode-session-header.ts"}
+import type { Plugin } from "@opencode-ai/plugin"
+
+// Injects x-opencode-session on every LLM request so OpenCode Go
+// gets a stable session id per conversation.
+const OpencodeSessionHeader: Plugin = async () => {
+  return {
+    "chat.headers": async (input, output) => {
+      output.headers["x-opencode-session"] = input.sessionID
+    },
+  }
+}
+
+export default OpencodeSessionHeader
+export { OpencodeSessionHeader }
+```
+
+The plugin sets the header through OpenCode's `chat.headers` hook, which runs on every request and merges the returned headers into the HTTP call to the provider. OpenCode loads global plugins at startup.
+
+{{< callout type="warning" >}}
+The proxy reads its config at startup, not per request. An edit to `config.yaml` while the proxy runs changes nothing. I burned time on this: the config had the right line, the proxy had been up for 3 days, and OpenCode Go kept rejecting the header. **Restart the proxy after any config change.**
 {{< /callout >}}
 
 ## Picking a Classifier
@@ -360,6 +410,8 @@ The production case study points both SIMPLE and MEDIUM at the cheapest model, a
 
 Watch your proxy logs for a day, then adjust `tier_boundaries` if requests overshoot their tier. The default logs already show what matters: tier fallbacks, classifier failures, and errors. For the full picture, including classifier decisions and full error tracebacks, start the proxy with `--detailed_debug`.
 
+### Watch the Router Live
+
 Here is a slice from my proxy. The LLM classifier timed out once, the proxy fell back to the free heuristic scorer, and traffic kept flowing. Watch the `selected model` lines: one request routes to `longcat-2.0`, the next to `mimo-v2.5`.
 
 {{< details title="Click to expand: detailed_debug log sample" closed="true" >}}
@@ -380,6 +432,34 @@ Available Model Group Fallbacks=None LiteLLM Retried: 2 times, LiteLLM Max Retri
 ```
 
 {{< /details >}}
+
+The raw `detailed_debug` output is mostly noise. The line you want, the picked model, sits between startup banner and stack trace noise, so scanning it is far from obvious. I pipe the proxy output through `awk` to keep the useful lines only: timestamp and picked model for routing lines, matching error lines for failures:
+
+```zsh {filename="~/.zshrc"}
+litellm-autorouter-watch() {
+  litellm --config ~/.config/litellm/config.yaml --detailed_debug 2>&1 \
+    | awk '
+      /selected model name/ {print $1, "→", $NF; fflush(); next}
+      /Uvicorn running on/ {sub(/.*Uvicorn running on /, "Proxy URL: "); print; fflush(); next}
+      /BadRequestError|RateLimitError|APIError|Error from provider|Received Model Group/ {print; fflush()}'
+}
+```
+
+- `2>&1` merges stderr into the pipe, so the debug lines reach `awk`
+- `awk` slices the router lines to two fields and flushes each line immediately
+- the Uvicorn startup line reprints as `Proxy URL: http://0.0.0.0:4000 (Press CTRL+C to quit)`
+- matching error lines print unchanged, so the message and the model group stay visible
+
+Run `litellm-autorouter-watch` in one terminal, OpenCode in another.
+
+Here is the `detailed_debug` sample from above through `litellm-autorouter-watch`. The model lines collapse, and the matching classifier error line stays visible:
+
+```text
+Proxy URL: http://0.0.0.0:4000 (Press CTRL+C to quit)
+timeout: None. Received Model Group=cheap/mimo-v2.5
+14:00:25 → openai/longcat-2.0
+14:00:46 → openai/mimo-v2.5
+```
 
 ## Find Models and Generate the Config
 

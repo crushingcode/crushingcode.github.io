@@ -19,6 +19,7 @@ def say_hello():
 - `hl_lines=[1,3]` to highlight specific lines
 - `base_url="..."` with `filename` creates a link to the file
 - Copy button is on by default; configure in `hugo.yaml` under `params.highlight.copy`
+- Do not put terminal prompt characters such as `❯` inside code blocks.
 
 ## Diagrams
 
