@@ -13,11 +13,11 @@ authors:
 
 You know that feeling when your AI agent has read 14 files and still has not touched the one you actually needed? Token maxxing is everywhere nowadays because everyone is vibe coding. You only see the cost when the bill arrives. This post is about getting your context window back.
 
+<!--more-->
+
 ![Vibe Code](sc_1.png)
 
 I use [OpenCode](https://github.com/anomalyco/opencode), and these tips cut my token usage. The goal is simple: fewer tokens in, fewer tokens out. Do not expect the results right away. The savings add up over time :eyes:
-
-<!--more-->
 
 {{< callout type="info" >}}
 This post covers habits and prompt patterns. For the full OpenCode config (compaction, permissions, providers, plugins) see my earlier post: [The OpenCode Config That Actually Works (and Ships)](/blog/the-opencode-config-that-actually-works-and-ships/).
