@@ -7,6 +7,7 @@ Personal blog for Nishant Srivastava. Built with Hugo using the [Hextra](https:/
 ## Rules
 
 - `.config/opencode/rules/hextra-components.md` — load this rule when adding any UI component (callouts, cards, tabs, code blocks, diagrams, badges, etc.) to a blog post. Always use Hextra shortcodes first before writing custom HTML/CSS.
+- Never modify or remove the abstract placeholder `<!--Short abstract goes here-->` in a blog post. It is part of the theme.
 
 ## Style
 

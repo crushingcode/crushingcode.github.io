@@ -3,7 +3,6 @@ baseURL: "https://crushingcode.nisrulz.com/"
 title: Crushing C.O.D.E
 
 enableRobotsTXT: true
-enableGitInfo: true
 enableEmoji: true
 enableInlineShortcodes: true
 
