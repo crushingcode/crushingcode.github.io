@@ -24,7 +24,7 @@ Your coding agent sends every request to the same model. "Rename this variable" 
 ![LiteLLM](sc_3.png)
 
 {{< callout type="info" >}}
-Auto Router v2 is in beta. It ships in LiteLLM v1.94.x, and config keys can still change between releases.
+Auto Router v2 is in beta, and config keys can change between releases. I verified this setup on LiteLLM 1.101.0 and OpenCode 1.18.31.
 {{< /callout >}}
 
 LiteLLM shared [numbers from a live production deployment](https://docs.litellm.ai/blog/auto-router-production-savings): 450+ users, 272,876 requests, 7B tokens over four months.
@@ -41,13 +41,13 @@ That is more like it 🤘🏼
 
 ## The Router Config
 
-Four tiers and one router entry, all served by [OpenCode Go](https://opencode.ai/docs/go). LiteLLM has no dedicated `opencode-go` provider yet, so each model uses the generic `openai/` prefix pointed at the Go endpoint. Prices come from the [OpenCode Go pricing table](https://opencode.ai/docs/go#usage-limits):
+Four tiers and one router entry, all served by [OpenCode Go](https://opencode.ai/docs/go). LiteLLM has no dedicated `opencode-go` provider yet, so each model uses the generic `openai/` prefix pointed at the OpenCode Go endpoint. Prices come from the [OpenCode Go pricing table](https://opencode.ai/docs/go#usage-limits):
 
 ```yaml
 model_list:
   - model_name: cheap/mimo-v2.5
     litellm_params:
-      model: openai/mimo-v2.5                          # Go serves it on /chat/completions
+      model: openai/mimo-v2.5                          # OpenCode Go serves it on /chat/completions
       api_base: https://opencode.ai/zen/go/v1
       api_key: os.environ/OPENCODE_GO_API_KEY          # $0.14/$0.28 per 1M tokens
 
@@ -90,8 +90,8 @@ model_list:
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
-  # Forward client x-* headers to the provider. OpenCode Go demands
-  # x-opencode-session on every request:
+  # Forward client x-* headers to the provider. The OpenCode plugin below
+  # adds x-opencode-session; without this line the proxy strips it:
   # https://opencode.ai/docs/go/#where-can-i-use-it
   forward_client_headers_to_llm_api: true
 ```
@@ -287,47 +287,94 @@ The [OpenCode integration guide](https://docs.litellm.ai/docs/tutorials/opencode
 
 ### The Session Header
 
-OpenCode Go wants `x-opencode-session` on every request, one stable id per conversation. It uses the id for provider routing and prompt caching. LiteLLM strips client headers by default, so the id never reaches the OpenCode Go backend and the router fails with this error:
+OpenCode Go wants `x-opencode-session` on every request, one stable id per conversation. It uses the id for provider routing and prompt caching. Get this wrong and every call fails with a `400`:
 
 ```text
 litellm.BadRequestError: OpenAIException - Error from provider (Console Go): Request is missing 
 x-opencode-session and cannot be routed efficiently.
 ```
 
-Two changes are needed to fix it.
+The root cause is the provider name. OpenCode sends `x-opencode-session` only when the provider ID starts with `opencode`. My provider is named `litellm`, so OpenCode never sends the header, and OpenCode Go rejects the request with `MissingSessionID`. The proxy cannot forward a header that never arrived. Two changes fix it.
 
-1. Add a line in the proxy config under `general_settings`:
+1. Make OpenCode send the header. Add a `chat.headers` plugin that injects `x-opencode-session` with the current session id. Save it as `~/.config/opencode/plugins/opencode-session-header.ts`:
+
+   ```ts {filename="~/.config/opencode/plugins/opencode-session-header.ts"}
+   import type { Plugin } from "@opencode-ai/plugin"
+
+   // Injects x-opencode-session on every LLM request so OpenCode Go
+   // gets a stable session id per conversation.
+   const OpencodeSessionHeader: Plugin = async () => {
+     return {
+       "chat.headers": async (input, output) => {
+         output.headers["x-opencode-session"] = input.sessionID
+       },
+     }
+   }
+
+   export default OpencodeSessionHeader
+   export { OpencodeSessionHeader }
+   ```
+
+   The `chat.headers` hook runs on every request and merges the returned headers into the HTTP call to the provider. OpenCode loads global plugins at startup.
+
+2. Make the proxy forward it. LiteLLM strips client headers by default. Add this line under `general_settings` in `config.yaml`:
 
    ```yaml {hl_lines=[2]}
    general_settings:
      forward_client_headers_to_llm_api: true
    ```
 
-   OpenCode already sends the session id on every request. With this line, the proxy passes it through to the OpenCode Go backend.
-
-2. Add a tiny plugin that puts the id on the wire. Save it as `~/.config/opencode/plugins/opencode-session-header.ts`:
-
-```ts {filename="~/.config/opencode/plugins/opencode-session-header.ts"}
-import type { Plugin } from "@opencode-ai/plugin"
-
-// Injects x-opencode-session on every LLM request so OpenCode Go
-// gets a stable session id per conversation.
-const OpencodeSessionHeader: Plugin = async () => {
-  return {
-    "chat.headers": async (input, output) => {
-      output.headers["x-opencode-session"] = input.sessionID
-    },
-  }
-}
-
-export default OpencodeSessionHeader
-export { OpencodeSessionHeader }
-```
-
-The plugin sets the header through OpenCode's `chat.headers` hook, which runs on every request and merges the returned headers into the HTTP call to the provider. OpenCode loads global plugins at startup.
+   With this line, the proxy passes the plugin's header through to the OpenCode Go backend. The [OpenCode Go docs](https://opencode.ai/docs/go) describe the header and its use for provider routing.
 
 {{< callout type="warning" >}}
 The proxy reads its config at startup, not per request. An edit to `config.yaml` while the proxy runs changes nothing. I burned time on this: the config had the right line, the proxy had been up for 3 days, and OpenCode Go kept rejecting the header. **Restart the proxy after any config change.**
+{{< /callout >}}
+
+### Silent Failures
+
+Two LiteLLM internal calls do not inherit the client's headers. They go out without `x-opencode-session` and fail. Neither failure stops the proxy, so both are easy to miss.
+
+1. **Background health checks.** The proxy probes each deployment on a timer. The probe carries no session header, so OpenCode Go returns `400 MissingSessionID` every 300 seconds. Disable the probe per model, then tell the proxy to skip the models you disabled:
+
+   ```yaml
+   - model_name: cheap/mimo-v2.5
+     litellm_params:
+       model: openai/mimo-v2.5
+       api_base: https://opencode.ai/zen/go/v1
+       api_key: os.environ/OPENCODE_GO_API_KEY
+     model_info:
+       disable_background_health_check: true
+
+   general_settings:
+     health_check_skip_disabled_background_models: true
+   ```
+
+   Repeat `model_info.disable_background_health_check: true` on every model entry pointed at the OpenCode Go endpoint, not just the one above. With `health_check_skip_disabled_background_models: true`, the proxy skips those disabled models in its health checks.
+
+2. **The LLM classifier.** With `classifier_type: heuristic_first`, ambiguous prompts escalate to the LLM classifier. That call also leaves without the session header. It fails, the router silently falls back to the free heuristic scorer, and routing still works. A working router does not prove the classifier ran. To check, look for `cause=llm_classifier` on the routing decision line in the logs. If you only see `cause=heuristic`, the classifier never ran.
+
+   Fix it with a dedicated classifier deployment that carries a static `x-opencode-session`:
+
+   ```yaml
+   - model_name: classifier/opencode-go
+     litellm_params:
+       model: openai/mimo-v2.5
+       api_base: https://opencode.ai/zen/go/v1
+       api_key: os.environ/OPENCODE_GO_API_KEY
+       extra_headers:
+         x-opencode-session: litellm-classifier
+   ```
+
+   Then point the [classifier](https://docs.litellm.ai/docs/proxy/auto_routing#classification) at that deployment:
+
+   ```yaml
+   classifier_llm_config:
+     model: classifier/opencode-go
+     timeout_ms: 5000
+   ```
+
+{{< callout type="warning" >}}
+LiteLLM's config model allows extra fields, so it silently ignores unknown keys. A typo, or a key from a newer release than the one you installed, does not raise an error: the proxy starts clean and the feature simply does not run. Verify a feature by its behavior and its log lines, never by a clean startup.
 {{< /callout >}}
 
 ## Picking a Classifier
@@ -347,7 +394,7 @@ The router needs to decide which tier a prompt belongs to. [Four classifiers in 
 classifier_type: heuristic_first
 heuristic_first_max_tier: SIMPLE
 classifier_llm_config:
-  model: cheap/mimo-v2.5        # the classifier prompt is tiny, use the fast cheap tier
+  model: classifier/opencode-go  # dedicated deployment with a static session header
   timeout_ms: 5000
 classifier_fallback: heuristic  # if the LLM classifier fails, fall back to the free scorer
 ```
@@ -358,26 +405,22 @@ The LLM classifier call is tracked as `classifier_cost` and deducted from report
 
 ## Why It Saves Tokens
 
-**Tier selection**: Input tokens cost the same on any model. Output tokens on the cheap tier cost 5-10x less than the flagship. Most coding work does not need flagship reasoning.
+- **Tier selection.** Input tokens cost the same on any model. Output tokens on the cheap tier cost 5-10x less than the flagship. Most coding work does not need flagship reasoning.
+- **Heuristic-first classification.** The free scorer handles most traffic with no LLM call. The LLM classifier only runs on ambiguous prompts, and its cost comes off the reported savings.
+- **Context escalation**, on by default. If a simple question arrives deep into a long session and the chosen tier cannot hold the prompt, the router bumps it to a tier that fits. No failed calls. No retry tokens.
+- **Session pinning** (`session_affinity: true`). A multi-turn session stays on one model. No prompt-cache invalidation from tier switching mid-conversation. The trade: the whole session inherits the first turn's tier.
+- **Keyword rules**, hard overrides for known patterns. Multiple matches escalate to the highest matched tier, so rule order does not matter:
 
-**Heuristic-first classification**: The free scorer handles most traffic with no LLM call. The LLM classifier only runs on ambiguous prompts, and its cost comes off the reported savings.
-
-**Context escalation** (on by default): If a simple question arrives deep into a long session and the chosen tier cannot hold the prompt, the router bumps it to a tier that fits. No failed calls. No retry tokens.
-
-**Session pinning** (`session_affinity: true`): A multi-turn session stays on one model. No prompt-cache invalidation from tier switching mid-conversation. The trade: the whole session inherits the first turn's tier.
-
-**Keyword rules**: Hard overrides for known patterns. Multiple matches escalate to the highest matched tier, so rule order does not matter:
-
-```yaml
-keyword_tier_rules:
-  - keywords: ["rename", "format", "comment", "typo", "whitespace", "lint"]
-    tier: SIMPLE
-  - keywords: ["refactor", "architecture", "race condition", "deadlock", "memory leak", "concurrency", "thread safety", "migration"]
-    tier: REASONING
-semantic_keyword_matching: true   # match paraphrases via embeddings, not just literal keywords
-embedding_model: voyage-3-5
-match_threshold: 0.5
-```
+  ```yaml
+  keyword_tier_rules:
+    - keywords: ["rename", "format", "comment", "typo", "whitespace", "lint"]
+      tier: SIMPLE
+    - keywords: ["refactor", "architecture", "race condition", "deadlock", "memory leak", "concurrency", "thread safety", "migration"]
+      tier: REASONING
+  semantic_keyword_matching: true   # match paraphrases via embeddings, not just literal keywords
+  embedding_model: voyage-3-5
+  match_threshold: 0.5
+  ```
 
 ## Stuck-Task Escalation
 
@@ -396,7 +439,19 @@ stall_escalation_window: 6
 stall_escalation_repeat_threshold: 3
 ```
 
-It cannot combine with `session_affinity` or `classification_mode: user_turn`. Both replay a held routing decision, so detection would never see the tool calls it needs.
+It cannot combine with `session_affinity: true` or `classification_mode: user_turn`. Both replay a held routing decision, so detection would never see the tool calls it needs.
+
+To see it fire, send the same follow-up twice: once alone, once with 3 identical failing tool calls ahead of it. Alone it stays SIMPLE. With the history the router bumps one tier and tags the decision:
+
+```text
+tier=SIMPLE, signals=('short (8 tokens)', 'code (try)'), routed_model=cheap/mimo-v2.5
+tier=MEDIUM, signals=('short (8 tokens)', 'code (try)', 'stall_escalation'), routed_model=mid/longcat-2.0
+```
+
+| Run | Tier | stall signal | Routed model |
+| --- | --- | --- | --- |
+| 3 identical failing tool calls, then the follow-up | MEDIUM | `stall_escalation` | mid/longcat-2.0 |
+| The follow-up alone | SIMPLE | none | cheap/mimo-v2.5 |
 
 ## Tune Your Tiers
 
@@ -408,32 +463,26 @@ The production case study points both SIMPLE and MEDIUM at the cheapest model, a
 | COMPLEX | ~15% | ~30% |
 | REASONING | ~5% | ~50% |
 
-Watch your proxy logs for a day, then adjust `tier_boundaries` if requests overshoot their tier. The default logs already show what matters: tier fallbacks, classifier failures, and errors. For the full picture, including classifier decisions and full error tracebacks, start the proxy with `--detailed_debug`.
+Watch your proxy logs for a day, then adjust `tier_boundaries` if requests overshoot their tier.
+
+- Default logs show tier fallbacks, classifier failures, and errors.
+- `--detailed_debug` adds classifier decisions and full error tracebacks.
 
 ### Watch the Router Live
 
-Here is a slice from my proxy. The LLM classifier timed out once, the proxy fell back to the free heuristic scorer, and traffic kept flowing. Watch the `selected model` lines: one request routes to `longcat-2.0`, the next to `mimo-v2.5`.
+Here is a slice from my proxy. Watch the `selected model` lines: one request routes to `longcat-2.0`, the next to `mimo-v2.5`.
 
 {{< details title="Click to expand: detailed_debug log sample" closed="true" >}}
 
 ```sh
 ❯ litellm --config ~/.config/litellm/config.yaml --detailed_debug | grep "selected model"
-INFO:     Started server process [54773]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:4000 (Press CTRL+C to quit)
-14:00:18 - LiteLLM Router:WARNING: complexity_router.py:1354 - ComplexityRouter: LLM classifier failed (litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out. - timeout value=5.0, time taken=5.38 seconds
-
-Deployment Info: request_timeout: None
-timeout: None. Received Model Group=cheap/mimo-v2.5
-Available Model Group Fallbacks=None LiteLLM Retried: 2 times, LiteLLM Max Retries: 2), falling back to heuristic
-14:00:25 - LiteLLM:DEBUG: cost_calculator.py:1286 - selected model name for cost calculation: openai/longcat-2.0
-14:00:46 - LiteLLM:DEBUG: cost_calculator.py:1286 - selected model name for cost calculation: openai/mimo-v2.5
+00:08:25 - LiteLLM:DEBUG: cost_calculator.py:1296 - selected model name for cost calculation: openai/longcat-2.0
+00:08:30 - LiteLLM:DEBUG: cost_calculator.py:1296 - selected model name for cost calculation: openai/mimo-v2.5
 ```
 
 {{< /details >}}
 
-The raw `detailed_debug` output is mostly noise. The line you want, the picked model, sits between startup banner and stack trace noise, so scanning it is far from obvious. I pipe the proxy output through `awk` to keep the useful lines only: timestamp and picked model for routing lines, matching error lines for failures:
+The raw `detailed_debug` output is mostly noise. I pipe it through `awk` to keep only the picked model and any failures:
 
 ```zsh {filename="~/.zshrc"}
 litellm-autorouter-watch() {
@@ -441,25 +490,32 @@ litellm-autorouter-watch() {
     | awk '
       /selected model name/ {print $1, "→", $NF; fflush(); next}
       /Uvicorn running on/ {sub(/.*Uvicorn running on /, "Proxy URL: "); print; fflush(); next}
-      /BadRequestError|RateLimitError|APIError|Error from provider|Received Model Group/ {print; fflush()}'
+      /LiteLLM Proxy:ERROR:/ {print; fflush()}'
 }
 ```
 
-- `2>&1` merges stderr into the pipe, so the debug lines reach `awk`
-- `awk` slices the router lines to two fields and flushes each line immediately
-- the Uvicorn startup line reprints as `Proxy URL: http://0.0.0.0:4000 (Press CTRL+C to quit)`
-- matching error lines print unchanged, so the message and the model group stay visible
+- `2>&1` sends the debug lines to `awk`
+- picked models print as `time → model`
+- the startup line becomes `Proxy URL: ...`, and failures print as-is
 
 Run `litellm-autorouter-watch` in one terminal, OpenCode in another.
 
-Here is the `detailed_debug` sample from above through `litellm-autorouter-watch`. The model lines collapse, and the matching classifier error line stays visible:
+Here is the sample from above through `litellm-autorouter-watch`:
 
 ```text
 Proxy URL: http://0.0.0.0:4000 (Press CTRL+C to quit)
-timeout: None. Received Model Group=cheap/mimo-v2.5
-14:00:25 → openai/longcat-2.0
-14:00:46 → openai/mimo-v2.5
+00:08:25 → openai/longcat-2.0
+00:08:30 → openai/mimo-v2.5
 ```
+
+The classifier can fail without stopping the router. Here it did not answer within its timeout, so the router fell back to the free scorer and still routed the request:
+
+```text
+00:38:19 - LiteLLM Router:WARNING: complexity_router.py:1760 - ComplexityRouter: LLM classifier failed (), falling back to heuristic
+00:38:19 - LiteLLM Router:INFO: complexity_router.py:3681 - ComplexityRouter: routing decision cause=heuristic_scorer, tier=SIMPLE, score=0.000, signals=(), routed_model=cheap/mimo-v2.5
+```
+
+`cause=heuristic_scorer` is the tell: the free scorer classified the request. The empty parentheses are verbatim; a timeout logs no detail.
 
 ## Find Models and Generate the Config
 
@@ -478,233 +534,287 @@ uv run group_models.py --cheap-max 0.6 --mid-max 2.0 --strong-max 5.0
 - `--cheap-max`, `--mid-max`, `--strong-max`: output cost ceilings per 1M tokens for the cheap, mid, and strong tiers (defaults 1.0 / 3.0 / 6.0)
 - `--format table` prints grouped models with pricing, `--format yaml` prints a full proxy `model_list`
 
-The script filters out models that do not offer [Zero Data Retention](https://opencode.ai/docs/go#privacy). `grok-4.6` and `gpt-5.6-luna` keep data for 30 days, and the Muse Spark Contributor tiers use traffic for model training. It also skips models served on the [Anthropic-style `/messages` endpoint](https://opencode.ai/docs/go#endpoints), since the `openai/` prefix cannot drive those. Everything the script emits is 0 days retention.
+The script keeps only models that offer [Zero Data Retention](https://opencode.ai/docs/go#privacy) and that the `openai/` prefix can drive:
+
+- Drops `grok-4.6` and `gpt-5.6-luna` (30-day retention) and the Muse Spark Contributor tiers (traffic used for training)
+- Drops models not served on `/chat/completions`, the `/messages` and `/responses` [endpoints](https://opencode.ai/docs/go#endpoints)
+
+Everything it emits is 0 days retention.
 
 ```python {filename="group_models.py"}
 #!/usr/bin/env python3
+"""Group OpenCode Go chat models by output cost and emit a LiteLLM router config."""
 import argparse
 import json
 import urllib.request
 from html.parser import HTMLParser
+from typing import NamedTuple
 
 MODELS_URL = "https://opencode.ai/zen/go/v1/models"
-PRICING_URL = "https://opencode.ai/docs/go"
+DOCS_URL = "https://opencode.ai/docs/go"
+CHAT_ENDPOINT = "/chat/completions"
+TIERS = ("cheap", "mid", "strong", "ultra")
 
 
-def fetch_models():
-    req = urllib.request.Request(MODELS_URL, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        data = json.loads(resp.read())
-    return {m["id"] for m in data["data"]}
+class _Model(NamedTuple):
+    model_id: str
+    input_cost: float
+    output_cost: float
+    cache_cost: float
 
 
-class TableParser(HTMLParser):
-    """Parse all tables from HTML. Returns list of tables, each a list of rows."""
+def _fetch(url):
+    request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(request, timeout=10) as response:
+        return response.read()
+
+
+def _fetch_models():
+    """Set of model IDs the OpenCode Go API currently serves."""
+    return {model["id"] for model in json.loads(_fetch(MODELS_URL))["data"]}
+
+
+class _TableParser(HTMLParser):
+    """Collect HTML tables as a list of tables, each a list of cell-string rows."""
 
     def __init__(self):
         super().__init__()
         self._table_depth = 0
-        self._in_row = False
-        self._in_cell = False
-        self._cell_text = ""
-        self._current_row = []
-        self._current_table = []
+        self._row = None
+        self._cell = None
         self.tables = []
 
     def handle_starttag(self, tag, attrs):
         if tag == "table":
             self._table_depth += 1
-            self._current_table = []
-        elif tag == "tr" and self._table_depth > 0:
-            self._in_row = True
-            self._current_row = []
-        elif tag in ("td", "th") and self._in_row:
-            self._in_cell = True
-            self._cell_text = ""
+            self.tables.append([])
+        elif tag == "tr" and self._table_depth:
+            self._row = []
+        elif tag in ("td", "th") and self._row is not None:
+            self._cell = []
 
     def handle_endtag(self, tag):
-        if tag in ("td", "th") and self._in_cell:
-            self._in_cell = False
-            self._current_row.append(self._cell_text.strip())
-        elif tag == "tr" and self._in_row:
-            self._in_row = False
-            if self._current_row:
-                self._current_table.append(self._current_row)
+        if tag in ("td", "th") and self._cell is not None:
+            self._row.append("".join(self._cell).strip())
+            self._cell = None
+        elif tag == "tr" and self._row is not None:
+            if self._row:
+                self.tables[-1].append(self._row)
+            self._row = None
         elif tag == "table":
             self._table_depth -= 1
-            if self._current_table:
-                self.tables.append(self._current_table)
-                self._current_table = []
 
     def handle_data(self, data):
-        if self._in_cell:
-            self._cell_text += data
+        if self._cell is not None:
+            self._cell.append(data)
 
 
-def parse_price(value):
-    if not value or value == "-":
-        return 0.0
-    cleaned = value.replace("$", "").replace(",", "").strip()
+def _docs_tables():
+    parser = _TableParser()
+    parser.feed(_fetch(DOCS_URL).decode("utf-8"))
+    return parser.tables
+
+
+def _table(tables, required_columns):
+    """Find a table by its header, so new sections cannot shift the index."""
+    for table in tables:
+        if table and all(column in table[0] for column in required_columns):
+            return table[1:]
+    raise SystemExit(f"Docs page has no table with columns: {required_columns}")
+
+
+def _model_id(label):
+    """Normalize a display name to a model ID and drop variants like '(Off-Peak)'."""
+    return label.split("(")[0].strip().lower().replace(" ", "-")
+
+
+def _price(cell):
     try:
-        return float(cleaned)
+        return float(cell.replace("$", "").replace(",", "").strip())
     except ValueError:
         return 0.0
 
 
-def display_to_model_id(name):
-    """Convert display name to model ID. Handles '(Off-Peak)', '(≤ 200K tokens)' variants."""
-    clean = name.split("(")[0].strip()
-    return clean.lower().replace(" ", "-")
-
-
-def fetch_pricing():
-    """Scrape pricing from the docs page. Returns dict: model_id -> (input, output, cached_read)."""
-    req = urllib.request.Request(PRICING_URL, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        html = resp.read().decode("utf-8")
-
-    parser = TableParser()
-    parser.feed(html)
-
-    # Table 0 = request counts, table 1 = pricing
-    if len(parser.tables) < 2:
-        print("ERROR: Could not find pricing table")
-        return {}
-
+def _load_pricing(tables):
+    """model ID -> (input, output, cache). Keep the cheapest variant."""
     pricing = {}
-    for row in parser.tables[1]:
-        if len(row) < 4 or row[0] == "Model":
-            continue
-        model_id = display_to_model_id(row[0])
-        input_cost = parse_price(row[1])
-        output_cost = parse_price(row[2])
-        cached_read = parse_price(row[3]) if len(row) > 3 else 0.0
-        # Keep the lowest price across variants (Off-Peak vs Peak, etc.)
-        if model_id in pricing:
-            if output_cost < pricing[model_id][1]:
-                pricing[model_id] = (input_cost, output_cost, cached_read)
-        else:
-            pricing[model_id] = (input_cost, output_cost, cached_read)
-
+    for model, input_cell, output_cell, cache_cell, *_ in _table(
+        tables, ["Model", "Input", "Output", "Cached Read"]
+    ):
+        costs = (_price(input_cell), _price(output_cell), _price(cache_cell))
+        model_id = _model_id(model)
+        if model_id not in pricing or costs[1] < pricing[model_id][1]:
+            pricing[model_id] = costs
     return pricing
 
 
-# Models served on the Anthropic-style /messages endpoint.
-# LiteLLM's openai/ prefix cannot drive these.
-# https://opencode.ai/docs/go#endpoints
-NON_OPENAI_SHAPE_MODELS = {
-    "minimax-m2.5", "minimax-m2.7", "minimax-m3",
-    "qwen3.6-plus", "qwen3.7-plus", "qwen3.7-max", "qwen3.8-max", "qwen3.8-flash",
-}
-
-# Models that do NOT offer Zero Data Retention (ZDR).
-# Data is retained 30 days or used for model training.
-# https://opencode.ai/docs/go#privacy
-NON_ZDR_MODELS = {
-    "grok-4.6",                    # 30 days retention
-    "gpt-5.6-luna",                # 30 days retention
-    "muse-spark-1.2-contributor",  # used for training
-    "muse-spark-1.3-contributor",  # used for training
-}
-
-
-def group_models(pricing, thresholds=(1.0, 3.0, 6.0)):
-    cheap, mid, strong, ultra = [], [], [], []
-    available = fetch_models()
-    for model_id in available:
-        if model_id not in pricing:
-            continue
-        if model_id in NON_ZDR_MODELS or model_id in NON_OPENAI_SHAPE_MODELS:
-            continue
-        _, output_cost, _ = pricing[model_id]
-        if output_cost < thresholds[0]:
-            cheap.append((model_id, output_cost))
-        elif output_cost < thresholds[1]:
-            mid.append((model_id, output_cost))
-        elif output_cost < thresholds[2]:
-            strong.append((model_id, output_cost))
-        else:
-            ultra.append((model_id, output_cost))
+def _load_endpoints(tables):
+    """model ID -> serving endpoint."""
     return {
-        "cheap": sorted(cheap, key=lambda x: (x[1], x[0])),
-        "mid": sorted(mid, key=lambda x: (x[1], x[0])),
-        "strong": sorted(strong, key=lambda x: (x[1], x[0])),
-        "ultra": sorted(ultra, key=lambda x: (x[1], x[0])),
+        model_id: endpoint
+        for _name, model_id, endpoint, *_ in _table(tables, ["Model", "Model ID", "Endpoint"])
     }
 
 
-def print_table(pricing, groups):
-    for tier, models in groups.items():
+def _load_unusable(tables, endpoints):
+    """Model IDs the openai/ prefix cannot drive, or that are not Zero Data Retention."""
+    unusable = {model_id for model_id, endpoint in endpoints.items() if CHAT_ENDPOINT not in endpoint}
+    for model, training, retention, *_ in _table(
+        tables, ["Model", "Model training", "Data retention"]
+    ):
+        if training != "Not used" or not retention.startswith("0 days"):
+            unusable.add(_model_id(model))
+    return unusable
+
+
+def _load_catalog(tables):
+    """model ID -> _Model, keeping only available chat models with ZDR and pricing."""
+    pricing = _load_pricing(tables)
+    endpoints = _load_endpoints(tables)
+    unusable = _load_unusable(tables, endpoints)
+    available = _fetch_models()
+
+    catalog = {}
+    for model_id in endpoints:
+        if model_id in available and model_id in pricing and model_id not in unusable:
+            input_cost, output_cost, cache_cost = pricing[model_id]
+            catalog[model_id] = _Model(model_id, input_cost, output_cost, cache_cost)
+    return catalog
+
+
+def _tier(output_cost, thresholds):
+    for name, ceiling in zip(TIERS, thresholds):
+        if output_cost < ceiling:
+            return name
+    return TIERS[-1]
+
+
+def _group(catalog, thresholds):
+    """Group models into cost tiers, cheapest first within each tier."""
+    groups = {tier: [] for tier in TIERS}
+    for model in catalog.values():
+        groups[_tier(model.output_cost, thresholds)].append(model)
+    for models in groups.values():
+        models.sort(key=lambda model: (model.output_cost, model.model_id))
+    return groups
+
+
+def _alias(groups, tier):
+    """First model alias for a tier, or None when the tier is empty."""
+    return f"{tier}/{groups[tier][0].model_id}" if groups[tier] else None
+
+
+def _cheapest_model(groups):
+    for tier in TIERS:
+        if groups[tier]:
+            return tier, groups[tier][0]
+    raise SystemExit("No chat-completions models with pricing and ZDR found")
+
+
+def _print_table(groups):
+    for tier in TIERS:
         print(f"\n{tier.upper()} (output cost per 1M tokens)")
         print("-" * 55)
-        for model_id, cost in models:
-            input_c, _, cache_c = pricing[model_id]
-            print(f"  {model_id:<42} in=${input_c:.2f}  out=${cost:.2f}  cache=${cache_c:.3f}")
+        for model in groups[tier]:
+            print(
+                f"  {model.model_id:<42} in=${model.input_cost:.2f}  "
+                f"out=${model.output_cost:.2f}  cache=${model.cache_cost:.3f}"
+            )
 
 
-def print_yaml(pricing, groups):
-    print("model_list:")
-    for tier, models in groups.items():
-        for model_id, _ in models:
-            print(f"  - model_name: {tier}/{model_id}")
-            print(f"    litellm_params:")
-            print(f"      model: openai/{model_id}")
-            print(f"      api_base: https://opencode.ai/zen/go/v1")
-            print(f"      api_key: os.environ/OPENCODE_GO_API_KEY")
-    # Pick default and classifier models from mid tier (or cheap if no mid)
-    default_model = f"mid/{groups['mid'][0][0]}" if groups["mid"] else f"cheap/{groups['cheap'][0][0]}"
-    classifier_model = default_model
-    print("")
-    print("  - model_name: smart-router")
-    print("    litellm_params:")
-    print("      model: auto_router/complexity_router")
-    print("      drop_params: true")
-    print("      complexity_router_config:")
-    print("        tiers:")
-    labels = {"cheap": "SIMPLE", "mid": "MEDIUM", "strong": "COMPLEX"}
-    for tier, label in labels.items():
-        if groups[tier]:
-            print(f"          {label}: {tier}/{groups[tier][0][0]}")
-    reasoning = groups["strong"][0][0] if groups["strong"] else groups["mid"][0][0]
-    print(f"          REASONING: strong/{reasoning}")
-    print("        classifier_type: heuristic_first")
-    print("        heuristic_first_max_tier: SIMPLE")
-    print("        classifier_llm_config:")
-    print(f"          model: {classifier_model}")
-    print("          timeout_ms: 2000")
-    print("        classifier_fallback: heuristic")
-    print(f"        complexity_router_default_model: {default_model}")
-    print("        keyword_tier_rules:")
-    print("          - keywords: [\"hi\", \"hello\", \"thanks\"]")
-    print("            tier: SIMPLE")
-    print("          - keywords: [\"kubernetes\", \"race condition\"]")
-    print("            tier: REASONING")
-    print("        session_affinity: false")
-    print("        return_raw_model_name: true")
+def _deployment_lines(alias, model_id, extra_headers=None):
+    lines = [
+        f"  - model_name: {alias}",
+        "    litellm_params:",
+        f"      model: openai/{model_id}",
+        "      api_base: https://opencode.ai/zen/go/v1",
+        "      api_key: os.environ/OPENCODE_GO_API_KEY",
+    ]
+    if extra_headers:
+        lines.append("      extra_headers:")
+        lines += [f"        {name}: {value}" for name, value in extra_headers.items()]
+    lines += ["    model_info:", "      disable_background_health_check: true"]
+    return lines
+
+
+def _smart_router_lines(groups, default_model):
+    lines = [
+        "  - model_name: smart-router",
+        "    litellm_params:",
+        "      model: auto_router/complexity_router",
+        "      drop_params: true",
+        "      complexity_router_config:",
+        "        tiers:",
+    ]
+    for tier, label in (("cheap", "SIMPLE"), ("mid", "MEDIUM"), ("strong", "COMPLEX")):
+        alias = _alias(groups, tier)
+        if alias:
+            lines.append(f"          {label}: {alias}")
+    lines.append(f"          REASONING: {_alias(groups, 'strong') or default_model}")
+    lines += [
+        "        classifier_type: heuristic_first",
+        "        heuristic_first_max_tier: SIMPLE",
+        "        classifier_llm_config:",
+        "          model: classifier/opencode-go",
+        "          timeout_ms: 2000",
+        "        classifier_fallback: heuristic",
+        f"        complexity_router_default_model: {default_model}",
+        "        keyword_tier_rules:",
+        '          - keywords: ["hi", "hello", "thanks"]',
+        "            tier: SIMPLE",
+        '          - keywords: ["kubernetes", "race condition"]',
+        "            tier: REASONING",
+        "        session_affinity: false",
+        "        return_raw_model_name: true",
+    ]
+    return lines
+
+
+def _router_config(groups):
+    cheapest_tier, cheapest = _cheapest_model(groups)
+    default_model = _alias(groups, "mid") or f"{cheapest_tier}/{cheapest.model_id}"
+
+    lines = ["model_list:"]
+    for tier in TIERS:
+        for model in groups[tier]:
+            lines += _deployment_lines(f"{tier}/{model.model_id}", model.model_id)
+    lines.append("")
+    lines += _deployment_lines(
+        "classifier/opencode-go", cheapest.model_id, {"x-opencode-session": "litellm-classifier"}
+    )
+    lines.append("")
+    lines += _smart_router_lines(groups, default_model)
+    lines += [
+        "",
+        "general_settings:",
+        "  forward_client_headers_to_llm_api: true",
+        "  health_check_skip_disabled_background_models: true",
+    ]
+    return "\n".join(lines)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Group opencode-go models by cost tier")
+    parser = argparse.ArgumentParser(description="Group OpenCode Go models by cost tier")
     parser.add_argument("--format", choices=["table", "yaml"], default="table")
     parser.add_argument("--cheap-max", type=float, default=1.0)
     parser.add_argument("--mid-max", type=float, default=3.0)
     parser.add_argument("--strong-max", type=float, default=6.0)
     args = parser.parse_args()
 
-    pricing = fetch_pricing()
-    groups = group_models(pricing, (args.cheap_max, args.mid_max, args.strong_max))
+    catalog = _load_catalog(_docs_tables())
+    groups = _group(catalog, (args.cheap_max, args.mid_max, args.strong_max))
 
     if args.format == "yaml":
-        print_yaml(pricing, groups)
+        print(_router_config(groups))
     else:
-        print_table(pricing, groups)
+        _print_table(groups)
 
 
 if __name__ == "__main__":
     main()
 ```
 
-**Live output** (2026-09-06, chat-completions and ZDR only):
+**Live output** (2026-09-14, chat-completions and ZDR only):
 
 ```sh
 
@@ -713,9 +823,9 @@ CHEAP (output cost per 1M tokens)
   mimo-v2.5                                  in=$0.14  out=$0.28  cache=$0.003
   glm-5.3-flash                              in=$0.15  out=$0.50  cache=$0.030
   hy3                                        in=$0.14  out=$0.58  cache=$0.035
-  deepseek-v4-flash                          in=$0.22  out=$0.66  cache=$0.007
-  deepseek-v4-flash-vision-exp               in=$0.22  out=$0.66  cache=$0.007
-  omen-alpha                                 in=$0.20  out=$0.66  cache=$0.040
+  deepseek-v4-flash                          in=$0.15  out=$0.60  cache=$0.003
+  deepseek-v4-flash-vision-exp               in=$0.15  out=$0.60  cache=$0.003
+  deepseek-v4.1-flash                        in=$0.15  out=$0.60  cache=$0.003
   mimo-v2.5-pro                              in=$0.43  out=$0.87  cache=$0.004
 
 MID (output cost per 1M tokens)
