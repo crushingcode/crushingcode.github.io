@@ -13,3 +13,4 @@ Personal blog for Nishant Srivastava. Built with Hugo using the [Hextra](https:/
 
 - Blog posts use Nishant's voice: short, direct, no em dashes, no AI vocabulary. See `~/.config/opencode/rules/lazy-senior-dev.md` and `~/.config/opencode/rules/language.md`.
 - Code blocks must include `filename` attribute when showing a file.
+- Write the product name as "OpenCode", never "opencode".

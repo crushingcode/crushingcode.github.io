@@ -20,6 +20,7 @@ def say_hello():
 - `base_url="..."` with `filename` creates a link to the file
 - Copy button is on by default; configure in `hugo.yaml` under `params.highlight.copy`
 - Do not put terminal prompt characters such as `❯` inside code blocks.
+- In before/after examples, highlight the comment lines with `hl_lines` so the intent of each block stands out.
 
 ## Diagrams
 
