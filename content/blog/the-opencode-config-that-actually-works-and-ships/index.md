@@ -222,7 +222,7 @@ Common OpenAI variants are `none`, `low`, `medium`, `high`, and `xhigh`. Anthrop
 
 A few extras that polish the developer experience. Add these to your `opencode.json`:
 
-- **[Formatter](https://opencode.ai/docs/formatters/)** auto-formats code blocks in the AI's response. Removes the copy-paste-format cycle:
+- **[Formatter](https://opencode.ai/docs/formatters/)** formats files after OpenCode writes or edits them. It does not format code blocks in the response:
 
     ```json {filename="opencode.json"}
     "formatter": true
@@ -234,7 +234,7 @@ A few extras that polish the developer experience. Add these to your `opencode.j
     "lsp": true
     ```
 
-- **[Watcher](https://opencode.ai/docs/config/#watcher)** monitors file changes for auto-context refresh. Ignore the noisy directories so builds and dependency installs don't trigger re-analysis:
+- **[Watcher](https://opencode.ai/docs/config/#watcher)** controls which paths OpenCode watches. Ignore noisy directories so builds and dependency installs do not trigger file-watcher work:
 
     ```json {filename="opencode.json"}
     "watcher": {
@@ -410,7 +410,7 @@ Here is the full `~/.config/opencode/opencode.json`:
 The `permission` block only lists `deny` and `ask` rules. That is because `read`, `edit`, and most tools already allow by default in OpenCode. `external_directory` is the odd one out: it asks by default, so I allow `~/.config/opencode/memory/**` to let the agent read and write your memory files without a prompt.
 
 {{< callout type="info" >}}
-This config was tested against OpenCode 1.18.3. The API surface evolves. Check the [docs](https://opencode.ai/docs/) if a field errors.
+This config shape was checked against OpenCode 1.18.31. The API surface evolves. Check the [docs](https://opencode.ai/docs/) if a field errors.
 {{< /callout >}}
 
 That's it! Use the full config above as your starting point, tweak what doesn't fit, and you're good to go.
