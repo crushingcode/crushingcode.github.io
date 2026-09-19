@@ -1,6 +1,7 @@
 ---
 title: "Hardening Your AI Agent Before It Breaks Everything"
 date: "2026-07-13"
+tags: ["ai-engineering"]
 authors:
   - name: Nishant Srivastava
     link: /about/

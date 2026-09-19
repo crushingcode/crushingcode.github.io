@@ -4,7 +4,7 @@ date: 2025-01-04
 authors:
   - name: Nishant Srivastava
     link: /about/
-tags: ["compose", "android"]
+tags: ["compose"]
 ---
 
 ![Banner](banner.jpg)

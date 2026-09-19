@@ -1,7 +1,7 @@
 ---
 title: "Ding! Ding! Your Agent Needs You (Or Just Finished)"
 date: "2026-09-08"
-tags: ["codex", "claude", "opencode"]
+tags: ["ai-engineering"]
 authors:
   - name: Nishant Srivastava
     link: /about/

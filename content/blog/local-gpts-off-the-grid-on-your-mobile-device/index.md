@@ -4,7 +4,7 @@ date: "2025-04-18"
 authors:
   - name: Nishant Srivastava
     link: /about/
-tags: ["local-ai"]
+tags: ["local-ai", "ai-engineering"]
 ---
 
 ![Banner](banner.png)

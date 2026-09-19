@@ -4,7 +4,7 @@ date: "2026-06-18"
 authors:
   - name: Nishant Srivastava
     link: /about/
-tags: ["local-ai", "git"]
+tags: ["local-ai", "git", "ai-engineering"]
 ---
 
 ![Banner](header.webp)

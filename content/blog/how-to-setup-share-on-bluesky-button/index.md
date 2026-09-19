@@ -4,7 +4,7 @@ date: "2024-12-26"
 authors:
   - name: Nishant Srivastava
     link: /about/
-tags: ["markdown", "tricks"]
+tags: ["markdown"]
 ---
 
 ![Banner](header.jpg)

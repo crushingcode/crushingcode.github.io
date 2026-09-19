@@ -5,7 +5,7 @@ authors:
   - name: Nishant Srivastava
     link: /about/
 
-tags: ["android", "android-library", "sdk-development"]
+tags: ["android-library"]
 ---
 
 ![Banner](header.png)

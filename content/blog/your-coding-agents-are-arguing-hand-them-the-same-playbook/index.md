@@ -4,7 +4,7 @@ date: "2026-07-01"
 authors:
   - name: Nishant Srivastava
     link: /about/
-tags: ["coding-agent", "skills"]
+tags: ["ai-engineering", "coding-agent", "skills"]
 ---
 
 ![Banner](header.jpg)

@@ -1,7 +1,7 @@
 ---
 title: "The OpenCode Config That Actually Works (and Ships)"
 date: "2026-07-28"
-tags: ["opencode", "coding-agent"]
+tags: ["ai-engineering", "coding-agent"]
 authors:
   - name: Nishant Srivastava
     link: /about/

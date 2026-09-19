@@ -1,7 +1,7 @@
 ---
 title: "Stop Token Maxxing: A Lazy Developer's Guide to Token Efficiency"
 date: "2026-09-12"
-tags: ["opencode", "coding-agent", "cost-optimization"]
+tags: ["ai-engineering", "cost-optimization"]
 authors:
   - name: Nishant Srivastava
     link: /about/

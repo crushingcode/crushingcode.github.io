@@ -1,7 +1,7 @@
 ---
 title: "Complexity-Based Routing: Because Not Every Prompt Needs a Flagship"
 date: "2026-09-06"
-tags: ["llm", "litellm", "opencode", "cost-optimization"]
+tags: ["ai-engineering", "cost-optimization"]
 authors:
   - name: Nishant Srivastava
     link: /about/
