@@ -118,6 +118,13 @@ title: Showcase
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
+      {{< card
+        link="https://notes-cabin.web.app/"
+        title="Notes Cabin"
+        image="img/oss/notes_cabin.jpg"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
 {{< /cards >}}
 
 ### OSS/Android Apps
