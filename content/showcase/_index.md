@@ -118,6 +118,12 @@ title: Showcase
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
+{{< /cards >}}
+
+### Web Apps
+
+{{< cards >}}
+
       {{< card
         link="https://notes-cabin.web.app/"
         title="Notes Cabin"
