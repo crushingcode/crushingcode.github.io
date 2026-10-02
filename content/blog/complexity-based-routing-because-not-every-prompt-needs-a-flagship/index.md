@@ -11,7 +11,7 @@ authors:
 
 <!--Short abstract goes here-->
 
-I caught my coding agent paying flagship prices for a typo fix. LiteLLM's Auto Router v2 routes cheap prompts to cheap models and keeps the hard ones on the big guns. Here is how I set it up with OpenCode.
+I caught my coding agent paying flagship prices for a typo fix. LiteLLM's Auto Router routes cheap prompts to cheap models and keeps the hard ones on the big guns. Here is how I set it up with OpenCode.
 
 <!--more-->
 
@@ -19,15 +19,15 @@ I caught my coding agent paying flagship prices for a typo fix. LiteLLM's Auto R
 
 Your coding agent sends every request to the same model. "Rename this variable" and "debug this race condition" cost the same. They shouldn't.
 
-[LiteLLM's Auto Router v2](https://docs.litellm.ai/docs/proxy/auto_routing) classifies each prompt by complexity and routes it to a matching tier. Cheap requests go to cheap models. Hard requests go to the flagship.
+[LiteLLM's Auto Router](https://docs.litellm.ai/docs/proxy/auto_routing) classifies each prompt by complexity and routes it to a matching tier. Cheap requests go to cheap models. Hard requests go to the flagship.
 
 ![LiteLLM](sc_3.png)
 
 {{< callout type="info" >}}
-Auto Router v2 is in beta, and config keys can change between releases. I verified this setup on LiteLLM 1.101.0 and OpenCode 1.18.31.
+Auto Routing is still in beta, so config keys move between releases. Check your installed LiteLLM version before you copy a key from here.
 {{< /callout >}}
 
-LiteLLM shared [numbers from a live production deployment](https://docs.litellm.ai/blog/auto-router-production-savings): 450+ users, 272,876 requests, 7B tokens over four months.
+LiteLLM shared [numbers from a live production deployment](https://docs.litellm.ai/blog/auto-router-production-savings): 450+ users, 272,876 requests, and 7.08B tokens over four months.
 
 - 51% saved. $12,249 on $23,985 of would-be flagship spend
 - 95% of requests never needed the flagship tier
@@ -41,7 +41,7 @@ That is more like it 🤘🏼
 
 ## The Router Config
 
-Four tiers and one router entry, all served by [OpenCode Go](https://opencode.ai/docs/go). LiteLLM has no dedicated `opencode-go` provider yet, so each model uses the generic `openai/` prefix pointed at the OpenCode Go endpoint. Prices come from the [OpenCode Go pricing table](https://opencode.ai/docs/go#usage-limits):
+Four tiers and one router entry, all served by [OpenCode Go](https://opencode.ai/docs/go). Each model uses LiteLLM's generic `openai/` prefix pointed at the OpenCode Go chat-completions endpoint. Prices come from the [OpenCode Go pricing table](https://opencode.ai/docs/go#usage-limits):
 
 ```yaml
 model_list:
@@ -50,18 +50,21 @@ model_list:
       model: openai/mimo-v2.5                          # OpenCode Go serves it on /chat/completions
       api_base: https://opencode.ai/zen/go/v1
       api_key: os.environ/OPENCODE_GO_API_KEY          # $0.14/$0.28 per 1M tokens
+      additional_drop_params: ["reasoningSummary"]
 
   - model_name: mid/longcat-2.0
     litellm_params:
       model: openai/longcat-2.0
       api_base: https://opencode.ai/zen/go/v1
       api_key: os.environ/OPENCODE_GO_API_KEY          # $0.30/$1.20 per 1M tokens
+      additional_drop_params: ["reasoningSummary"]
 
   - model_name: strong/kimi-k2.7-code
     litellm_params:
       model: openai/kimi-k2.7-code
       api_base: https://opencode.ai/zen/go/v1
       api_key: os.environ/OPENCODE_GO_API_KEY          # $0.95/$4.00 per 1M tokens
+      additional_drop_params: ["reasoningSummary"]
 
   - model_name: smart-router
     litellm_params:
@@ -100,7 +103,7 @@ Save this as `~/.config/litellm/config.yaml`. The LiteLLM Proxy picks it up in t
 
 ## Run the Proxy
 
-One command installs the [`lite` CLI](https://docs.litellm.ai/docs/proxy/management_cli) and the proxy runtime, proxy extras included:
+One command from the [proxy quick start](https://docs.litellm.ai/docs/proxy/quick_start) pulls in the proxy runtime with the extras. It also gives you the [`lite` CLI](https://docs.litellm.ai/docs/proxy/management_cli), which is used later to wrap coding agents:
 
 ```bash
 uv tool install 'litellm[proxy]'
@@ -332,9 +335,9 @@ The proxy reads its config at startup, not per request. An edit to `config.yaml`
 
 ### Silent Failures
 
-Two LiteLLM internal calls do not inherit the client's headers. They go out without `x-opencode-session` and fail. Neither failure stops the proxy, so both are easy to miss.
+Two LiteLLM internal calls do not inherit the client's headers. They go out without `x-opencode-session` and can fail. The proxy keeps serving either way, so neither one is loud about it.
 
-1. **Background health checks.** The proxy probes each deployment on a timer. The probe carries no session header, so OpenCode Go returns `400 MissingSessionID` every 300 seconds. Disable the probe per model, then tell the proxy to skip the models you disabled:
+1. **Background health checks.** LiteLLM keeps background health checks off by default. If you enable them, the probe carries no session header, so OpenCode Go can return `400 MissingSessionID`. Disable the probe per model, then tell the proxy to skip the models you disabled:
 
    ```yaml
    - model_name: cheap/mimo-v2.5
@@ -351,7 +354,7 @@ Two LiteLLM internal calls do not inherit the client's headers. They go out with
 
    Repeat `model_info.disable_background_health_check: true` on every model entry pointed at the OpenCode Go endpoint, not just the one above. With `health_check_skip_disabled_background_models: true`, the proxy skips those disabled models in its health checks.
 
-2. **The LLM classifier.** With `classifier_type: heuristic_first`, ambiguous prompts escalate to the LLM classifier. That call also leaves without the session header. It fails, the router silently falls back to the free heuristic scorer, and routing still works. A working router does not prove the classifier ran. To check, look for `cause=llm_classifier` on the routing decision line in the logs. If you only see `cause=heuristic`, the classifier never ran.
+2. **The LLM classifier.** With `classifier_type: heuristic_first`, ambiguous prompts escalate to the LLM classifier. That call also leaves without the session header. It fails, the router falls back to the free heuristic scorer, and routing still works. A working router does not prove the classifier ran. To check, look for `cause=llm_classifier` on the routing decision line in the logs. A clear local decision logs `cause=heuristic_first_short_circuit` in newer LiteLLM builds.
 
    Fix it with a dedicated classifier deployment that carries a static `x-opencode-session`:
 
@@ -379,12 +382,12 @@ LiteLLM's config model allows extra fields, so it silently ignores unknown keys.
 
 ## Picking a Classifier
 
-The router needs to decide which tier a prompt belongs to. [Four classifiers in v2](https://docs.litellm.ai/docs/proxy/auto_routing#classification):
+The router needs to decide which tier a prompt belongs to. [Four classifiers](https://docs.litellm.ai/docs/proxy/auto_routing#classification):
 
 | Classifier | Cost | Latency | Notes |
 | ----------- | ------ | --------- | ------- |
 | `heuristic` | free | sub-ms | Weighted scorer, the default |
-| [`trained_heuristic`](https://docs.litellm.ai/blog/heuristic-v2) | free | sub-ms | Calibrated model, better out of the box |
+| [`heuristic_v2`](https://docs.litellm.ai/blog/heuristic-v2) | free | sub-ms | Calibrated model, better out of the box |
 | `heuristic_first` | free for most traffic | sub-ms, LLM only when unsure | Recommended |
 | `llm` | one small model call | 1-2s | Most accurate |
 
@@ -515,7 +518,7 @@ The classifier can fail without stopping the router. Here it did not answer with
 00:38:19 - LiteLLM Router:INFO: complexity_router.py:3681 - ComplexityRouter: routing decision cause=heuristic_scorer, tier=SIMPLE, score=0.000, signals=(), routed_model=cheap/mimo-v2.5
 ```
 
-`cause=heuristic_scorer` is the tell: the free scorer classified the request. The empty parentheses are verbatim; a timeout logs no detail.
+`cause=heuristic_first_short_circuit` or `cause=heuristic_scorer` tells you that the free scorer classified the request. The exact cause name depends on the LiteLLM release. The empty parentheses are verbatim; a timeout logs no detail.
 
 ## Find Models and Generate the Config
 
@@ -838,7 +841,6 @@ STRONG (output cost per 1M tokens)
 -------------------------------------------------------
   kimi-k2.6                                  in=$0.95  out=$4.00  cache=$0.160
   kimi-k2.7-code                             in=$0.95  out=$4.00  cache=$0.190
-  glm-5.1                                    in=$1.40  out=$4.40  cache=$0.260
   glm-5.2                                    in=$1.40  out=$4.40  cache=$0.260
   glm-5.3                                    in=$1.40  out=$4.40  cache=$0.260
 
