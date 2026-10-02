@@ -120,14 +120,20 @@ When your agent needs to understand the codebase, it reads files one by one. Tha
 
 ### CodeGraph
 
-[CodeGraph](https://github.com/colbymchenry/codegraph) builds a local, pre-indexed knowledge graph of your code. `codegraph_explore` returns relevant symbols, call paths, and blast radius in one call instead of many. Set it up with two commands:
+[CodeGraph](https://github.com/colbymchenry/codegraph) builds a local, pre-indexed knowledge graph of your code. `codegraph_explore` returns relevant symbols, call paths, and blast radius in one call instead of many. Set it up with these commands:
 
 ```bash
+# Install the CLI
+curl -fsSL https://raw.githubusercontent.com/colbymchenry/codegraph/main/install.sh | sh
+
+# Wire it into your agent
 codegraph install
+
+# Build the graph for this project
 codegraph init
 ```
 
-`codegraph install` wires in the MCP server and adds a CodeGraph section to your `AGENTS.md`, so the agent knows to use the graph. Run `codegraph init` inside each project to build the graph. Setup details in the [CodeGraph README](https://github.com/colbymchenry/codegraph).
+Install the CLI first. Then `codegraph install` wires the MCP server into OpenCode and drops a CodeGraph section into your `AGENTS.md`. It does not index anything, so run `codegraph init` inside each project too. Setup details in the [CodeGraph README](https://github.com/colbymchenry/codegraph).
 
 {{< callout type="warning" >}}
 One caveat from its own benchmark: CodeGraph cuts tokens processed, but each answer is one dense payload that stays resident in your context window. Long sessions can end with more resident context than a grep-and-read agent. Ask direct questions so the agent queries the graph instead of crawling files, and budget for that footprint in long sessions.
@@ -135,7 +141,7 @@ One caveat from its own benchmark: CodeGraph cuts tokens processed, but each ans
 
 ### Headroom
 
-[Headroom](https://github.com/headroomlabs-ai/headroom) compresses tool outputs, logs, files, and conversation history. Wire it as an MCP server for the same benefit. For OpenCode, set up the MCP like this:
+[Headroom](https://github.com/headroomlabs-ai/headroom) compresses tool outputs, logs, files, and conversation history. The CLI wraps OpenCode with `headroom wrap opencode`. If you would rather wire the MCP server yourself, use this config:
 
 ```json {filename="opencode.json"}
 {
@@ -151,7 +157,7 @@ One caveat from its own benchmark: CodeGraph cuts tokens processed, but each ans
 
 ### OpenWiki
 
-[OpenWiki](https://github.com/langchain-ai/openwiki) auto-generates a wiki for your repo and keeps it updated as the code changes. The wiki offloads codebase understanding: the agent reads one page instead of exploring files, then makes a surgical edit. [Add it as an MCP server.](https://github.com/langchain-ai/openwiki#coding-agent-integrations) Doc generation runs as a resumable page-job lifecycle, so the doc-writing context stays out of your main session.
+[OpenWiki](https://github.com/langchain-ai/openwiki) auto-generates a wiki for your repo and keeps it updated as the code changes. The wiki offloads codebase understanding: the agent reads one page instead of exploring files, then makes a surgical edit. Install the OpenCode integration with `openwiki integrations install opencode`. The [coding-agent integration docs](https://github.com/langchain-ai/openwiki#coding-agent-integrations) cover the setup. Doc generation runs as a resumable page-job lifecycle, so the doc-writing context stays out of your main session.
 
 ![MCP](sc_3.png)
 
@@ -271,12 +277,12 @@ Not every task needs the most expensive model. Route simple tasks to cheap model
 
 | Task tier | Model class | Model |
 | - | - | - |
-| Simple | cheap | `opencode/mimo-v2.5-free` |
-| Medium | mid | `opencode/longcat-2.0` |
-| Complex | strong | `opencode/kimi-k2.7-code` |
-| Reasoning | strong | `opencode/kimi-k2.7-code` |
+| Simple | cheap | `opencode-go/mimo-v2.5` |
+| Medium | mid | `opencode-go/longcat-2.0` |
+| Complex | strong | `opencode-go/kimi-k2.7-code` |
+| Reasoning | strong | `opencode-go/kimi-k2.7-code` |
 
-Model IDs are examples. Run `/models` in OpenCode to see what your setup offers today.
+I pull these from [OpenCode Go](https://opencode.ai/docs/go/). Run `/models` to see what your own setup offers today.
 
 Subagents inherit the parent session's model by default. So your cheap orchestrator silently runs its whole subagent fleet on the flagship model 🤔 Pin a model per subagent role in the subagent definition. Otherwise your routing config never applies where it matters most.
 
@@ -286,7 +292,7 @@ In OpenCode, add a `model` field to the agent file's front matter. I pinned my a
 ---
 description: Plans changes and reviews architecture, writes no code
 mode: subagent
-model: opencode/longcat-2.0
+model: opencode-go/longcat-2.0
 permission:
   edit: deny
   bash: deny
@@ -299,11 +305,11 @@ If you want to pin your own, run `/models` in OpenCode to see the IDs your provi
 
 Configure a `small_model` for lightweight internal tasks such as title generation. It is not a general task router. [I cover the setup in the config post](/blog/the-opencode-config-that-actually-works-and-ships/).
 
-You can extend this further with auto routers that pick the model for you. I wrote an earlier post on this: [Complexity-Based Routing](/blog/complexity-based-routing-because-not-every-prompt-needs-a-flagship/). It walks through the [LiteLLM](https://docs.litellm.ai/) auto router, which matches each prompt to the right model for its complexity. Want a router that learns over time? Try [Switchyard](https://github.com/NVIDIA-NeMo/Switchyard), a pre-alpha router from NVIDIA NeMo. NVIDIA's [Aug 2026 developer blog](https://developer.nvidia.com/blog/route-ai-agent-workloads-across-models-with-nvidia-nemo-switchyard) reports benchmarks: 74% cost reduction with escalation routing, 28% on Devin with staged routing.
+You can extend this further with auto routers that pick the model for you. I wrote an earlier post on this: [Complexity-Based Routing](/blog/complexity-based-routing-because-not-every-prompt-needs-a-flagship/). It walks through the [LiteLLM](https://docs.litellm.ai/) auto router, which matches each prompt to the right model for its complexity. Want a router that learns over time? Try [Switchyard](https://github.com/NVIDIA-NeMo/Switchyard), a Pre-1.0 routing library from NVIDIA NeMo. NVIDIA's [Aug 2026 developer blog](https://developer.nvidia.com/blog/route-ai-agent-workloads-across-models-with-nvidia-nemo-switchyard) reports 74% cost reduction with escalation routing, though that run gave up about 6 accuracy points. Staged routing landed roughly 28% lower mean cost on Devin.
 
 A more expensive model can also burn more reasoning tokens on the same task. Switch to a non-reasoning model once the hard part is done.
 
-Turn off extended thinking for routine work. In OpenCode, press Ctrl+T in the TUI to cycle thinking variants. Switch it back on when the problem is hard. Want a permanent default? Configure it per model in your opencode config.
+Turn off extended thinking for routine work. In OpenCode, press Ctrl+T in the TUI to cycle model variants, such as a lower reasoning effort variant when your provider exposes one. Switch it back on when the problem is hard. Want a permanent default? Configure the variant or provider option in your OpenCode config.
 
 Run local providers for tasks that do not need a hosted model. Wire [Ollama](https://ollama.com), [LM Studio](https://lmstudio.ai), or [Unsloth Studio](https://unsloth.ai) as providers in your `opencode.json` and route simple edits or test runs to them. You avoid a per-token API charge, but local hardware still has power, setup, and latency costs.
 
@@ -313,7 +319,7 @@ I built [opencode-local-models](https://github.com/nisrulz/opencode-local-models
 
 ## 10. Offload file processing and watch your MCP servers
 
-Do not feed a 50-page PDF or an audio file directly into context. The agent is ingesting, not reasoning. The whole file enters the window as raw tokens, headers and metadata included. Extract the text first with a CLI tool such as [pdftotext](https://poppler.freedesktop.org/) or [markitdown](https://github.com/microsoft/markitdown), which converts PDFs, Office files, and audio to Markdown. Do not dump a whole document when you only need a part: extract a summary or a smaller section and work from that. Less input means lower cost and a sharper answer.
+Do not feed a 50-page PDF or an audio file directly into context. The agent is ingesting, not reasoning. The whole file enters the window as raw tokens, headers and metadata included. Extract the text first with a CLI tool such as [pdftotext](https://poppler.freedesktop.org/) or [markitdown](https://github.com/microsoft/markitdown), which converts PDFs, Office files, and audio to Markdown. MarkItDown needs optional dependencies for some formats, including audio transcription. Do not dump a whole document when you only need a part: extract a summary or a smaller section and work from that. Less input means lower cost and a sharper answer.
 
 ```text {hl_lines=[1,4,7,10]}
 # Extract the text
@@ -329,7 +335,7 @@ Summarize report.txt in 5 bullet points.
 Summarize [Pasted ~3 lines] in 5 bullet points.
 ```
 
-For heavy sessions, try [pxpipe](https://github.com/teamchong/pxpipe). It is a smart hack: a local proxy that repurposes image tokens as text tokens. It renders bulky context (system prompt, tool docs, older history) as compact PNGs before it leaves your machine. Image tokens pack about 3x more characters per token than text, so the same context costs fewer tokens. It is lossy for exact strings, so test it first for your own use case. I use it sparingly, but it does work. More details in the [pxpipe README](https://github.com/teamchong/pxpipe).
+For heavy sessions, try [pxpipe](https://github.com/teamchong/pxpipe). It is a smart hack: a local proxy that repurposes image tokens as text tokens. It renders bulky context (system prompt, tool docs, older history) as compact PNGs before it leaves your machine. Image tokens pack about 4.7x more characters per token than text on current models, so the same context costs fewer tokens. It is lossy for exact strings, so test it first for your own use case. I use it sparingly, but it does work. More details in the [pxpipe README](https://github.com/teamchong/pxpipe).
 
 Every MCP server dumps its tool definitions into your context. Disable the ones you are not using. Kill any autopilot loop that polls with a full system prompt.
 
@@ -393,9 +399,9 @@ Memory is the raw material. Rules are the refined output, loaded on demand ([Sec
 
 Do not let context rot in silence. Performance degrades as the context grows, and Context Rot documents the drop across tested models and tasks[^8]. So when a coherent unit of work is done (a feature, a module, a passing test, or a clear subtask), have the agent compact and confirm before moving on. You keep what matters and drop the rest. The signal is a finished piece of work, not "every 15 messages."
 
-Compacting before you need it produces better summaries than waiting until the window is nearly full. Cache expiry is the second reason. [Anthropic](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) keeps a cache entry for 5 minutes by default and refreshes it on each use. [OpenAI](https://platform.openai.com/docs/guides/prompt-caching) clears its in-memory cache after 5 to 10 minutes without use. When the cache expires, the next request re-processes the whole context at full price. A bloated context makes that bill big. Compact, and the re-processed part is small.
+Compacting before you need it produces better summaries than waiting until the window is nearly full. Cache expiry is the second reason. [Anthropic](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) keeps a cache entry for 5 minutes by default and refreshes it on each use. [OpenAI](https://platform.openai.com/docs/guides/prompt-caching) documents model-dependent retention: earlier models using in-memory retention typically keep entries for about 5 to 10 minutes of inactivity, while GPT-5.6 and later use a 30-minute default. When the cache expires, the next request re-processes the whole context at full price. A bloated context makes that bill big. Compact, and the re-processed part is small.
 
-In OpenCode, keep native auto-compaction on, and install the [DCP (dynamic context pruning) plugin](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning) for aggressive pruning. [Both are detailed in the config post](/blog/the-opencode-config-that-actually-works-and-ships/). When DCP runs, the TUI in OpenCode shows how much of context was pruned:
+In OpenCode, keep native auto-compaction on, and install the [DCP (dynamic context pruning) plugin](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning) for aggressive pruning. [Both are detailed in the config post](/blog/the-opencode-config-that-actually-works-and-ships/). DCP still works, but the README says new context-management work moved to Sleev. I would treat it as optional and check where it stands before you commit to it. When DCP runs, the TUI in OpenCode shows how much of context was pruned:
 
 ```text
 ▣ DCP | -90.8K removed, +1.7K summary
@@ -429,9 +435,9 @@ Give each workflow its own API key: per-key usage shows which workflow eats the 
 
 ### Cache the prompt prefix
 
-Every request re-sends the conversation, but the front of it rarely changes. Providers cache that stable front: they store the work already done on the first tokens of your prompt and reuse it whenever a later request starts with the same tokens. A cache read costs far less, often 50 to 90% below fresh input price. The match is exact: same tokens, same order. Change one token at position 2,001, and only the first 2,000 hit the cache.
+Every request re-sends the conversation, but the front of it rarely changes. Providers cache that stable front: they store the work already done on the first tokens of your prompt and reuse it whenever a later request starts with the same tokens. A cache read costs far less, but the exact discount and cache lifetime depend on the provider and model. Anthropic and GPT-5.6, for example, document cached reads at 10% of the uncached input rate. The match is exact: same tokens, same order. Change one token at position 2,001, and only the first 2,000 hit the cache.
 
-So order the context by stability. Agent definition, rules, and tool list go first; the conversation grows behind them. Keep timestamps, random IDs, and fresh tool output out of the front, because each rewrite busts the cache and you pay full input price again. The cache also invalidates as a hierarchy: tools first, then system, then messages. Add one tool definition mid-session and the whole cached prefix re-bills at full price. No error, just a bigger invoice 🙄 So fix your config before the session starts, not mid-session. Compaction and context tools rewrite the prefix too, so expect one full-price request after each. That is why compacting too often is not a good idea. Compact at real boundaries, like the checkpoints in [Section 12](#12-compact-at-the-boundaries).
+So order the context by stability. Agent definition, rules, and tool list go first; the conversation grows behind them. Keep timestamps, random IDs, and fresh tool output out of the front, because each rewrite can break the cache match and you pay more input cost again. Anthropic documents a cache hierarchy of tools, then system, then messages. Adding or changing a tool can invalidate the later cached prefix. Other providers use different rules, so check their documentation. No error, just a bigger invoice 🙄 Fix your config before the session starts, not mid-session. Compaction and context tools can rewrite the prefix too, so expect a cache miss after each. That is why compacting too often is not a good idea. Compact at real boundaries, like the checkpoints in [Section 12](#12-compact-at-the-boundaries).
 
 ### Measure the savings
 
@@ -443,14 +449,14 @@ Optimize blind and you optimize nothing. For a cross-tool view, run [CodeBurn](h
 
 Most agents write too much by default. A three-line answer becomes a three-paragraph essay because nothing told it to stop. Output tokens often have different prices from input tokens, but the ratio depends on the provider and cache state. A shorter default can reduce cost when it does not truncate the work. Research on output length constraints shows that the best model and prompt can change when the token budget changes[^9].
 
-In OpenCode, `limit.output` sets the per-model output limit in your config. It caps how many tokens the model may emit per step. Set it low so the agent cannot ramble:
+In OpenCode, `limit.output` sets the per-model output limit in your config. It caps how many tokens the model may emit per step. Set it low so the agent cannot ramble. The schema requires `context` alongside `output`, so set both:
 
 ```json {filename="opencode.json"}
 {
   "provider": {
-    "opencode": {
+    "opencode-go": {
       "models": {
-        "mimo-v2.5-free": { "limit": { "output": 2000 } }
+        "mimo-v2.5": { "limit": { "context": 1000000, "output": 2000 } }
       }
     }
   }
