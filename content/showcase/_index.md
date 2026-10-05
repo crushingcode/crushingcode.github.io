@@ -134,7 +134,7 @@ title: Showcase
       {{< card
         link="https://notes-cabin.web.app/"
         title="Notes Cabin"
-        image="img/oss/notes_cabin.jpg"
+        image="img/webapps/notes_cabin.jpg"
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
