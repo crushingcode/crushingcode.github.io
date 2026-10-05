@@ -118,6 +118,13 @@ title: Showcase
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
+      {{< card
+        link="https://github.com/nisrulz/side-eye"
+        title="Side Eye"
+        image="img/oss/side_eye.png"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
 {{< /cards >}}
 
 ### Web Apps
