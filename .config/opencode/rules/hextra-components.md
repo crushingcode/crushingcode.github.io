@@ -32,7 +32,6 @@ graph TD;
     A-->B;
     A-->C;
 ```
-
 ````
 
 ## Callouts
@@ -56,13 +55,21 @@ Supported alert types: `NOTE`, `TIP`, `IMPORTANT`, `WARNING`, `CAUTION`.
 
 ## Collapsible Details
 
+For Markdown content (tables, lists), use percent delimiters so Hugo renders the inner Markdown. Angle brackets only for plain content:
+
 ```markdown
-{{< details title="Click to reveal" >}}
-Hidden content (Markdown supported).
-{{< /details >}}
+{{% details title="Click to reveal" closed="true" %}}
+| What it tried | The command | Verdict |
+| --- | --- | --- |
+| SSH keys | `cat ~/.ssh/id_ed25519` | `Operation not permitted` |
+
+{{% /details %}}
 ```
 
-Add `closed="true"` to start collapsed.
+Gotchas:
+
+- Details render OPEN by default. Start collapsed with `closed="true"` — it must be a quoted string. A bare `closed=true` is a boolean in Hugo, fails the theme's `eq` check silently, and the block renders open.
+- Long table rows and code blocks both work inside; verify the built HTML drops the `open` attribute when you want it collapsed.
 
 ## Cards
 

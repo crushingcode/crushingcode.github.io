@@ -687,3 +687,9 @@ Deny patterns are good, but they're still just config. The agent can read it, ig
 [dcg (Destructive Command Guard)](https://github.com/Dicklesworthstone/destructive_command_guard) intercepts destructive commands across Claude Code, Codex CLI, Gemini CLI, Copilot CLI, Cursor, and more. It uses a SIMD-accelerated Rust pipeline (under 10µs for 95% of commands) and ships with 50+ security packs for databases, Kubernetes, cloud providers, and more. No false positives either. It won't block `grep "rm -rf" file.txt` but will block `rm -rf /`. It integrates as a PreToolUse hook for Claude Code and Codex CLI, giving you the same protection we built manually above with zero config. I haven't used it yet, but it looks promising as a layer above bare deny patterns and below kernel-level sandboxing.
 
 Your agents can still do their job. They just can't destroy your project or quietly read your secrets into context. Less dangerous, still useful 🚀
+
+## Read Next
+
+Everything in this post is an agent-level policy. The agent can read it, ignore it, or find a workaround.
+
+[Coding Agents Need Trust Boundaries Not Full Machine Access](/blog/coding-agents-need-trust-boundaries-not-full-machine-access/) picks up from here. It uses [Agent Safehouse](https://agent-safehouse.dev/) to put the boundary in the kernel with macOS Seatbelt, so the agent can edit your project and nothing else.
