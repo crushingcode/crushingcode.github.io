@@ -38,7 +38,7 @@ brew install eugene1g/safehouse/agent-safehouse
 safehouse --version
 ```
 
-Flags and defaults move between releases. I work and test with [Agent Safehouse 0.13.1](https://github.com/eugene1g/agent-safehouse/releases/tag/v0.13.1) and OpenCode v2. Check your version before you write a policy file.
+Flags and defaults move between releases. I work and test with [Agent Safehouse 0.13.1](https://github.com/eugene1g/agent-safehouse/releases/tag/v0.13.1) and OpenCode v2.3.2. Check your version before you write a policy file.
 
 ## Run OpenCode inside Safehouse
 
@@ -182,11 +182,11 @@ By default, the workdir, your installed toolchains, and network access stay avai
 
 _*Outbound connections are open by default.*_
 
-The rules check whether a connection can happen, not what it carries. A `curl -X POST -d "payload"` to a remote host returns 200 from inside Safehouse. This keeps commands like `npm install`, `go mod download`, and `hugo mod` working.
+The rules check whether a connection can happen, not what it carries. An outbound request to a remote host returns 200 from inside Safehouse. This keeps commands like `npm install`, `go mod download`, and `hugo mod` working.
 
 #### Optional: close egress
 
-If you want to block network access, add these five rules to `local-overrides.sb`. The three denies close network operations. The two allows keep name lookups and TCP connections on port 443:
+If you want to block network access, add these 6 rules to `local-overrides.sb`. The three denies close network operations. The three allows cover name lookups, TLS trust, and TCP connections on port 443:
 
 ```scheme {filename="local-overrides.sb (excerpt)"}
 ;; Network closed. Name the operation: a wildcard deny, (deny network*),
@@ -197,6 +197,12 @@ If you want to block network access, add these five rules to `local-overrides.sb
 
 ;; The resolver socket, so hostnames still resolve.
 (allow network-outbound (literal "/private/var/run/mDNSResponder"))
+
+;; TLS trust evaluation. Base policy allows com.apple.trustd.agent, but
+;; SecureTransport on macOS 26 asks for TrustEvaluationAgent instead.
+;; Without it curl fails with "unable to get local issuer certificate"
+;; for roots that live only in the keychain trust store (e.g. SSL.com).
+(allow mach-lookup (global-name "com.apple.TrustEvaluationAgent"))
 
 ;; TCP on port 443 only. A later matching rule wins, so this allow
 ;; reopens that port. Other TCP ports, UDP, ICMP, and direct-IP DNS
@@ -214,8 +220,7 @@ Once these rules land, TCP on ports 22 and 80, UDP, `ping`, and `dig @8.8.8.8` a
   Closing the network breaks things that look unrelated. Match what you see to the cause:
 
 - Your dev server will not start. The bind deny blocks every listener.
-- `dig` fails but `curl` works. `dig` binds its own UDP socket before it sends, and the bind deny catches it. Lookups through the system resolver still work.
-- A site loads outside Safehouse but fails inside. The process inside trusts `/etc/ssl/cert.pem` only, so a site whose root is missing from that bundle fails here and works outside. `example.com` did when I tested.
+- `dig` fails but an HTTPS request works. `dig` binds its own UDP socket before it sends, and the bind deny catches it. Lookups through the system resolver still work.
   One trap to know: an allow for `localhost:*` matches every bind address, including `0.0.0.0`, so it cancels the bind deny. There is no loopback-only allow.
 {{< /callout >}}
 
@@ -315,16 +320,90 @@ Set the server up first, while egress still works, then close the sandbox around
 5. Run OpenCode with the proxy in the environment:
 
     ```bash {filename="terminal"}
-    HTTPS_PROXY=http://127.0.0.1:18090 safehouse \
-      --append-profile="$HOME/.config/agent-safehouse/local-overrides.sb" \
+    HTTPS_PROXY=http://127.0.0.1:18090 NO_PROXY=127.0.0.1,localhost,::1 \
+      safehouse --append-profile="$HOME/.config/agent-safehouse/local-overrides.sb" \
       opencode --standalone
     ```
 
-    Safehouse preserves `HTTPS_PROXY` by default, so no `--env-pass` is needed. The proxy must be running whenever a session needs the network. If it stops, every session loses egress until you start it again. The wrapper block in [Make it the default](#make-it-the-default) adds a `safehouse-proxy` function that starts it and prints every decision to the terminal.
+    Safehouse's sanitized environment already forwards `HTTP_PROXY`, `HTTPS_PROXY`, `NO_PROXY`, and their lowercase forms from the host, so `--env-pass` is not needed for them. `--env-pass` is for other names, like `OPENCODE_API_KEY`. If the proxy is not running, every request fails. The wrapper in [Make it the default](#make-it-the-default) checks the port and refuses to launch without it.
 
 The proxy reads the host name from the CONNECT request and nothing deeper. It cannot check what flows inside the tunnel. The full probe results live in the [agent-safehouse-eval](https://github.com/nisrulz/agent-safehouse-eval) repo.
 
 I asked the Safehouse maintainer about this shape in [issue 214](https://github.com/eugene1g/agent-safehouse/issues/214). He confirmed it: block IP-based networking, run the proxy outside the sandbox, and reach it through one narrow channel. A built-in host lockdown is something he wants too, and he floated a UNIX socket variant as another channel. Until that ships, the proxy is the way.
+
+### Give the agent a browser
+
+Some work needs a browser: check a page you just built, confirm a layout, read a doc that fails without JS. The default policy keeps every browser closed. The browser to grant is playwright-cli's bundled Chromium in `~/Library/Caches/ms-playwright`.
+
+Two fixes in Safehouse, plus one flag in Chromium, make it work.
+
+#### The profile grants
+
+The policy blocks the browser cache, and Chromium binds a unix socket in the temp dir. Append this to `local-overrides.sb`:
+
+```scheme {filename="local-overrides.sb (browser section)"}
+;; Real browser tests: playwright-cli with its bundled Chromium.
+(allow file-read* (home-literal "/Library/Caches"))
+(allow file-read* file-write* (home-subpath "/Library/Caches/ms-playwright"))
+(allow process-exec* (home-subpath "/Library/Caches/ms-playwright"))
+
+;; Unix domain sockets: Chromium's ProcessSingleton binds one in the temp
+;; dir. Local IPC only - the TCP egress deny and proxy rules still apply.
+(allow system-socket (socket-domain AF_UNIX))
+(allow network-bind (local unix-socket))
+(allow network-outbound (remote unix-socket))
+```
+
+#### The Safehouse flag
+
+Safehouse ships a tested profile for the browser. Spawn with it:
+
+```bash {filename="terminal"}
+safehouse --enable=agent-browser \
+  --append-profile="$HOME/.config/agent-safehouse/local-overrides.sb" \
+  opencode
+```
+
+> The `safe()` wrapper in [Make it the default](#make-it-the-default) carries the flag. Flags apply only when Safehouse spawns the session.
+
+#### Chromium without its own sandbox
+
+Chromium starts its own sandbox, and Seatbelt forbids a nested one. Pass `--no-sandbox`. The outer profile stays fully enforced.
+
+Save this launch config, with the flag inside:
+
+```json {filename="~/.config/agent-safehouse/playwright.json"}
+{
+  "browser": {
+    "browserName": "chromium",
+    "launchOptions": {
+      "headless": true,
+      "args": ["--no-sandbox"]
+    }
+  }
+}
+```
+
+Run it inside the Safehouse session, or tell OpenCode to run it:
+
+```bash {filename="terminal"}
+playwright-cli open --config=~/.config/agent-safehouse/playwright.json --browser=chromium
+```
+
+From there, playwright-cli works as normal: `goto`, `snapshot`, `click`. The wrapper block in [Make it the default](#make-it-the-default) carries the same command as a `test-browser` function.
+
+#### Allow the browser through the proxy
+
+With the closed-network setup from [Allowlist hosts with a loopback proxy](#allowlist-hosts-with-a-loopback-proxy), the download goes through the proxy. Add the three hosts to `allowlist.txt`:
+
+```text {filename="~/.config/agent-safehouse/allowlist.txt (excerpt)"}
+# Playwright browser downloads.
+cdn.playwright.dev
+playwright.download.prss.microsoft.com
+
+# chrome-for-testing zips.
+storage.googleapis.com
+```
 
 ### Small leaks that remain
 
@@ -345,9 +424,8 @@ Safehouse uses the same kernel as the rest of macOS. It limits file and service 
 Typing `safehouse opencode` every time gets old. These functions make Safehouse the default for OpenCode in zsh:
 
 ```zsh {filename="~/.zshrc"}
-# Optional: with the closed-network setup, egress goes through the
-# loopback proxy. Leave these lines out if you run the default open network.
-export HTTPS_PROXY=http://127.0.0.1:18090
+# Safehouse wiring: opencode runs with egress closed and reaches the
+# internet only through the hostname-allowlist proxy on 18090.
 
 safehouse-proxy() {
   # Start the allowlist proxy. Every decision prints to the terminal.
@@ -355,31 +433,63 @@ safehouse-proxy() {
     --allow-file ~/.config/agent-safehouse/allowlist.txt
 }
 
-# Machine-local rules from the section above. Safehouse exits on a missing path.
+# Machine-local rules. Safehouse refuses to run when this path is missing.
 local_overrides="$HOME/.config/agent-safehouse/local-overrides.sb"
 
 safe() {
-  # Your denies are the point of this wrapper. Do not run without them.
+  # The denies are the point of this wrapper. Do not run without them.
   [[ -f $local_overrides ]] \
     || { print -u2 "Missing $local_overrides"; return 1 }
   # Safehouse flags go before the agent name. Everything after it passes through.
-  safehouse --append-profile="$local_overrides" "$@"
+  safehouse --enable=agent-browser --append-profile="$local_overrides" "$@"
 }
 
 # Type opencode, get Safehouse. Prompts stay on.
 # auth.json is denied, so the key rides through the environment.
 # --standalone keeps the session out of the shared background server.
-opencode() { safe --env-pass=OPENCODE_API_KEY opencode --standalone "$@"; }
+opencode() {
+  # Egress is closed inside the sandbox, so the proxy is the only way out.
+  # -x matters: a plain `local` is not exported and never reaches the child.
+  local -x HTTPS_PROXY=http://127.0.0.1:18090
+  local -x NO_PROXY=127.0.0.1,localhost,::1
+
+  # Fail fast with a clear message instead of a wall of network errors.
+  if ! _safehouse_proxy_up 18090; then
+    print -u2 "No allowlist proxy on 127.0.0.1:18090. Run safehouse-proxy first."
+    return 1
+  fi
+
+  safe --env-pass=OPENCODE_API_KEY opencode --standalone "$@"
+}
+
+# Loopback probe with no external binaries: the zsh/net/tcp builtin.
+_safehouse_proxy_up() {
+  local port=${1:-18090}
+  zmodload -F zsh/net/tcp b:ztcp 2>/dev/null || return 1
+  ztcp 127.0.0.1 "$port" 2>/dev/null || return 1
+  ztcp -c "$REPLY" 2>/dev/null
+}
 
 # Print every denial as it lands. Run this in a second terminal.
+# Pass a process name. Without one, system daemons flood the output:
+# safehouse-logs opencode
 safehouse-logs() {
-  /usr/bin/log stream --style compact \
-    --predicate 'eventMessage CONTAINS "Sandbox:" AND eventMessage CONTAINS "deny("'
+  local pred='eventMessage CONTAINS "Sandbox:" AND eventMessage CONTAINS "deny("'
+  if [[ -n $1 ]]; then
+    pred="$pred AND process CONTAINS[c] \"$1\""
+  fi
+  /usr/bin/log stream --style compact --predicate "$pred"
+}
+
+# The agent browser: bundled Chromium, no nested sandbox, every time.
+test-browser() {
+  playwright-cli open --config=~/.config/agent-safehouse/playwright.json \
+    --browser=chromium
 }
 ```
 
 {{< callout type="warning" >}}
-  In OpenCode v2.2.7, a new session can join the shared background server instead of starting fresh. It inherits the server's workdir, not the directory you launched from, which sidesteps the Safehouse workdir grant. I tested this from a temp directory; the session landed on the server's directory. `--standalone` runs a private server that starts in your launch directory. Keep it on the `opencode` wrapper. The full story is in [issue 207](https://github.com/eugene1g/agent-safehouse/issues/207).
+  Since OpenCode v2.2.7, a new session can join the shared background server instead of starting fresh. It inherits the server's workdir, not the directory you launched from, which sidesteps the Safehouse workdir grant. I tested this from a temp directory; the session landed on the server's directory. `--standalone` runs a private server that starts in your launch directory. Keep it on the `opencode` wrapper. The full story is in [issue 207](https://github.com/eugene1g/agent-safehouse/issues/207).
 {{< /callout >}}
 
 What do you give up with this flag? Session history still lands in the same database, so resume and `opencode run -c` keep working. Terminal sessions lose live attachment from the web UI and desktop app. On my machine, the shared server idled at 629 MB. `--standalone` keeps these sessions out of it, but does not stop the shared server or free that memory. I run a terminal-only workflow, so I do not need live attachment. To reclaim the memory, stop the service with `command opencode service stop`.
@@ -421,7 +531,7 @@ The `safe()` check refuses to start when the override file is missing. A wrapper
 
 ### When something gets denied
 
-You will hit denials. Each one prints a line like `deny(<pid>) <operation> <path-or-name>`, and the [debugging guide](https://agent-safehouse.dev/docs/debugging.html) shows how to turn one into an allow rule. `safehouse --explain --stdout` prints the effective workdir, grants, and profiles. Note: a non-zero exit does not prove Safehouse caused it.
+You will hit denials. Each one prints a line like `deny(<pid>) <operation> <path-or-name>`, and the [debugging guide](https://agent-safehouse.dev/docs/debugging.html) shows how to turn one into an allow rule. `safehouse --explain --stdout` prints the effective workdir, grants, and profiles. The `safehouse-logs` helper accepts a process name, like `safehouse-logs opencode`. An unfiltered stream floods with system daemon denials, so pass the name and read the line that matters.
 
 ## When it gets in the way
 
