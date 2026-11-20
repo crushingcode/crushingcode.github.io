@@ -125,6 +125,13 @@ title: Showcase
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
+      {{< card
+        link="http://nisrulz.com/markdown-press/"
+        title="Markdown Press"
+        image="img/oss/markdown_press.jpg"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
 {{< /cards >}}
 
 ### Web Apps
@@ -135,6 +142,13 @@ title: Showcase
         link="https://notes-cabin.web.app/"
         title="Notes Cabin"
         image="img/webapps/notes_cabin.jpg"
+        imageStyle="object-fit:cover; aspect-ratio:16/9;"
+      >}}
+
+      {{< card
+        link="https://transcripta.web.app/"
+        title="Transcripta"
+        image="img/webapps/transcripta.png"
         imageStyle="object-fit:cover; aspect-ratio:16/9;"
       >}}
 
